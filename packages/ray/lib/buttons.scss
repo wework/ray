@@ -1,0 +1,40 @@
+$font-size: 1rem !default;
+
+@mixin btn($bgColor, $focusedColor) {
+  font-family: inherit;
+  font-size: $font-size;
+  font-weight: 800;
+  line-height: 1.5;
+  display: inline-block;
+  background-color: $bgColor;
+  border-color: $bgColor;
+  border-width: 0.125rem;
+  border-radius: 0.3125rem;
+  border-style: solid;
+  cursor: pointer;
+  padding: 0.5625rem 1.5625rem;
+  min-width: 120px;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $focusedColor;
+    border-color: $focusedColor;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray50;
+    border-color: $gray50;
+    color: #fff;
+  }
+}
+
+.btn--primary {
+  @include btn($blue50, $blue60);
+}
+
+.btn--secondary {
+  @include btn($yellow50, $yellow60);
+}
