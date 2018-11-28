@@ -762,6 +762,19 @@
     prop-types "^15.6.2"
     util-deprecate "^1.0.2"
 
+"@storybook/addon-viewport@4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-4.0.9.tgz#b983e4f679ecac7fc5a4380e3a3aec6c81dfd1b0"
+  integrity sha512-bg+H5OLQsb5ltREaXWOYD8uLBbG9Sblq7CFFAy74dqurG9EiLRGISC8FUhLhUzGkYkx2Hvew/em8K2XFH5ixiw==
+  dependencies:
+    "@emotion/styled" "^0.10.6"
+    "@storybook/addons" "4.0.9"
+    "@storybook/components" "4.0.9"
+    "@storybook/core-events" "4.0.8"
+    global "^4.3.2"
+    prop-types "^15.6.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/addons@4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.4.tgz#133609c527435aba1149ead53ca91f694db1a490"
@@ -769,6 +782,16 @@
   dependencies:
     "@storybook/channels" "4.0.4"
     "@storybook/components" "4.0.4"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.9.tgz#cfa18fe10ddda454dbbc3aae17562e46d04d3955"
+  integrity sha512-D+RsN1fNywgk46UxG6Lue+p9Egf7/DpgEJtQb6RS+UoyOF24p3FlwWMh36kpRfSSgGqFZ+a0jIKhXuRSr31UNQ==
+  dependencies:
+    "@storybook/channels" "4.0.8"
+    "@storybook/components" "4.0.9"
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
@@ -785,6 +808,11 @@
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.4.tgz#fdf717cd726d15508ac80ff93a3893b75d3ab8b8"
   integrity sha512-EeRby5oCyyYBkBrxI7Cg8F65FkYJjVK0jbGWpIugcjtnfOeP57xLcZuukcjhLjl/oaC/RYw7A/6c0nFW4kV0GQ==
+
+"@storybook/channels@4.0.8":
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.8.tgz#36d96ad714c685f144fd1f1e5394faf0e0291032"
+  integrity sha512-nGMVPN4eOJlAXxS2u3a5aj7YJ4ChhlLx0+4HC6xaU5Uv+PaL6ba0gh84Zd9K73JnTSPPMq/4Mg3oncZumyeN9Q==
 
 "@storybook/client-logger@4.0.4":
   version "4.0.4"
@@ -807,10 +835,31 @@
     react-textarea-autosize "^7.0.4"
     render-fragment "^0.1.1"
 
+"@storybook/components@4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.9.tgz#c5cc9f52768fd7a6078d9601cecacd0e357dc130"
+  integrity sha512-EoPJitDUBkNdg4UiWyrmU6IkpLmJTjJO6KD382isHXA7qCxBJQTPb2m3GXy35KKF510NtJ9H0l4k5x7yg5Wzng==
+  dependencies:
+    "@emotion/core" "^0.13.1"
+    "@emotion/provider" "^0.11.2"
+    "@emotion/styled" "^0.10.6"
+    global "^4.3.2"
+    lodash "^4.17.11"
+    prop-types "^15.6.2"
+    react-inspector "^2.3.0"
+    react-split-pane "^0.1.84"
+    react-textarea-autosize "^7.0.4"
+    render-fragment "^0.1.1"
+
 "@storybook/core-events@4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.4.tgz#bf457afe9aec3fb2cd66d7cad3fa5e5821e01503"
   integrity sha512-+OFFYTVSZd6zjZQMCUF2HQ0hIPfel9NyBBABbPxEtbvWEx/cp4RMfk5VFVISpwYJQMhnqCUU0/t3VoLTKFtm1g==
+
+"@storybook/core-events@4.0.8":
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.8.tgz#7af80f1c3eb32ae0eafe789be651c684dcfefd7b"
+  integrity sha512-S7g2oGnJKvLDpwcHFJ+efXww6zS7W3krimsqApf3foBfi3CVPLNJ9hrag30UGtnxQ3LDpkMj/aU4bkCWY7NRYA==
 
 "@storybook/core@4.0.4":
   version "4.0.4"

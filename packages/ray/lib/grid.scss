@@ -1,3 +1,8 @@
 .container {
   @include grid-container;
+  max-width: 1024px;
+}
+
+.col-12 {
+  @include grid-column(12);
 }

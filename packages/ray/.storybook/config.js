@@ -1,6 +1,7 @@
 import { configure, addDecorator } from '@storybook/html';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
+import { configureViewport } from '@storybook/addon-viewport';
 
 addDecorator(checkA11y);
 
@@ -18,3 +19,7 @@ configure(loadStories, module);
 //     { name: 'facebook', value: '#3b5998' },
 //   ])
 // );
+
+// configureViewport({
+//   defaultViewport: 'iphonex'
+// });

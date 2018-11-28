@@ -1,11 +1,11 @@
-$font-stack: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
+$font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif;
+$font-stack-mono: 'Apercu Mono', monospace;
 
 $mobile-px: 400px;
-$phablet-px: 550px;
-$tablet-px: 750px;
-$desktop-px: 1000px;
-$desktophd-px: 1200px;
+$tablet-px: 600px;
+$desktop-px: 840px;
+$desktop-large-px: 1024px;
 
 $black70: #000;
 $black60: #0d0e0e;
@@ -28,13 +28,16 @@ $yellow60: #ffc13a;
 $yellow50: #ffd16d;
 $yellow40: #ffe1a0;
 $yellow30: #fff1d3;
-$blue80: #21465d;
-$blue70: #2e6383;
-$blue60: #3b7fa9;
-$blue50: #5499c3;
-$blue40: #7ab0d0;
-$blue30: #a0c6dd;
-$blue20: #c5ddeb;
+
+$blue: #0000ff;
+$blue80: darken($blue, 30%);
+$blue70: darken($blue, 20%);
+$blue60: darken($blue, 10%);
+$blue50: $blue;
+$blue40: lighten($blue, 10%);
+$blue30: lighten($blue, 20%);
+$blue20: lighten($blue, 30%);
+
 $red80: #812020;
 $red70: #aa2a2a;
 $red60: #ce3939;

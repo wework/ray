@@ -3,28 +3,42 @@ import { storiesOf } from '@storybook/html';
 
 import '../lib/application.scss';
 
+const withContainer = html => `
+  <div class="container" style="margin: 100px auto;">
+    <div class="col-12">
+      ${html}
+    </div>
+  </div>
+`;
+
 storiesOf('Typography', module)
-  .add(
-    'All',
-    () => `
-      <h1 class="title0">Hello World</h1>
-      <h2 class="title1">Hello World</h2>
-      <h3 class="title2">Hello World</h3>
-      <h4 class="title3">Hello World</h4>
-      <h5 class="title4">Hello World</h5>
-      <p class="copy1">Lorem ipsum dolor amet williamsburg poke migas raw denim, 8-bit jean shorts gentrify. Jianbing craft beer lo-fi man bun everyday carry flexitarian. Humblebrag jean shorts intelligentsia, freegan everyday carry shaman bespoke. Fam hashtag keffiyeh helvetica squid bitters humblebrag hell of vaporware celiac glossier chillwave.</p>
-      <p class="copy2">This is the default text across the site, and <a href="javascript:;">this</a> is a link.</p>
-      <p class="copy3">Lorem ipsum dolor amet williamsburg poke migas raw denim, 8-bit jean shorts gentrify. Jianbing craft beer lo-fi man bun everyday carry flexitarian. Humblebrag jean shorts intelligentsia, freegan everyday carry shaman bespoke. Fam hashtag keffiyeh helvetica squid bitters humblebrag hell of vaporware celiac glossier chillwave.</p>
-      <p class="copy4">Lorem ipsum dolor amet williamsburg poke migas raw denim, 8-bit jean shorts gentrify. Jianbing craft beer lo-fi man bun everyday carry flexitarian. Humblebrag jean shorts intelligentsia, freegan everyday carry shaman bespoke. Fam hashtag keffiyeh helvetica squid bitters humblebrag hell of vaporware celiac glossier chillwave.</p>
-      `
+  .add('All', () =>
+    withContainer(
+      ['p1', 'p2', 'p3', 'h1', 'h2', 'h3', 'h4']
+        .map(type => {
+          const tag = type[0] === 'h' ? type : 'p';
+          return `
+          <h4 class="h4">${type}</h4>
+          <${tag} class="${type}">You have the opportunity to try new things, but also to make mistakes and fail without the pressure of being judged.</ ${tag}>
+          <hr style="opacity: 0.5; margin: 20px 0;" />
+        `;
+        })
+        .join('')
+    )
   )
-  .add(
-    'heading + copy',
-    () => `
-      <h1 class="title0">Hello World</h1>
-      <p class="copy1">Lorem ipsum dolor amet williamsburg poke migas raw denim, 8-bit jean shorts gentrify. Jianbing craft beer lo-fi man bun everyday carry flexitarian. Humblebrag jean shorts intelligentsia, freegan everyday carry shaman bespoke. Fam hashtag keffiyeh helvetica squid bitters humblebrag hell of vaporware celiac glossier chillwave.</p>
-    `
+  .add('h1 + p1', () =>
+    withContainer(`
+      <h1 class="h1">Hello World</h1>
+      <p class="p1">Lorem ipsum dolor amet williamsburg poke migas raw denim, 8-bit jean shorts gentrify. Jianbing craft beer lo-fi man bun everyday carry flexitarian. Humblebrag jean shorts intelligentsia, freegan everyday carry shaman bespoke. Fam hashtag keffiyeh helvetica squid bitters humblebrag hell of vaporware celiac glossier chillwave.</p>
+    `)
+  )
+  .add('h2 + p2', () =>
+    withContainer(`
+      <h1 class="h2">Hello World</h1>
+      <p class="p2">Lorem ipsum dolor amet williamsburg poke migas raw denim, 8-bit jean shorts gentrify. Jianbing craft beer lo-fi man bun everyday carry flexitarian. Humblebrag jean shorts intelligentsia, freegan everyday carry shaman bespoke. Fam hashtag keffiyeh helvetica squid bitters humblebrag hell of vaporware celiac glossier chillwave.</p>
+    `)
   );
+
 storiesOf('Buttons', module)
   .add(
     'primary',
@@ -37,12 +51,6 @@ storiesOf('Buttons', module)
     () => `
       <button class="btn--secondary">Hello World</button>
     `
-  )
-  .add(
-    'secondary, link',
-    () => `
-      <a href="javascript:;" class="btn--secondary">Hello World</a>
-    `
   );
 
 storiesOf('Grid', module).add(
@@ -52,13 +60,30 @@ storiesOf('Grid', module).add(
   `
 );
 
-storiesOf('Forms', module).add(
-  'primary',
-  () => `
-    <fieldset>
-      <label for="email">Email address</label>
-      <input id="email" type="text" placeholder="arya.stark@winterfell.com" />
-      <div class="hint">Helpful instruction about this field</div>
-    </fieldset>
-  `
-);
+storiesOf('Forms', module)
+  .add(
+    'single fieldset',
+    () => `
+      <fieldset>
+        <label for="email">Email address</label>
+        <input id="email" type="text" placeholder="arya.stark@winterfell.com" />
+      </fieldset>
+    `
+  )
+  .add('example form', () =>
+    withContainer(`
+        <h2 class="h2">Sign up</h2>
+        <fieldset>
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Arya Stark" />
+        </fieldset>
+        <fieldset>
+          <label for="email">Email address</label>
+          <input id="email" type="text" placeholder="arya.stark@winterfell.com" />
+        </fieldset>
+        <fieldset>
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="the.north.remembers" />
+        </fieldset>
+      `)
+  );
