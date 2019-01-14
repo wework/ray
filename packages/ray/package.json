@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out",
     "watch": "NODE_ENV=development webpack --watch",
     "build": "NODE_ENV=production webpack"
   },
