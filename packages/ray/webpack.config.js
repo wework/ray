@@ -34,6 +34,15 @@ module.exports = {
           { loader: 'postcss-loader', options: { sourceMap: true } },
           { loader: 'sass-loader', options: { sourceMap: true } }
         ]
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|otf|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]'
+          }
+        }
       }
     ]
   },
