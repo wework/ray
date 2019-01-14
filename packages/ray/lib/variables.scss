@@ -7,6 +7,8 @@ $breakpoint-tablet-px: 600px !default;
 $breakpoint-desktop-px: 840px !default;
 $breakpoint-desktop-large-px: 1024px !default;
 
+$border-radius: 0.25rem !default;
+
 $black70: #000 !default;
 $black60: #0d0e0e !default;
 $black50: #252729 !default;
@@ -22,12 +24,14 @@ $gray35: #e7e7e9 !default;
 $gray30: #f4f4f5 !default;
 $white: #fff !default;
 
-$yellow80: #d39100 !default;
-$yellow70: #ffb107 !default;
-$yellow60: #ffc13a !default;
-$yellow50: #ffd16d !default;
-$yellow40: #ffe1a0 !default;
-$yellow30: #fff1d3 !default;
+$yellow: #ffd500 !default;
+$yellow80: darken($yellow, 30%) !default;
+$yellow70: darken($yellow, 20%) !default;
+$yellow60: darken($yellow, 10%) !default;
+$yellow50: $yellow !default;
+$yellow40: lighten($yellow, 10%) !default;
+$yellow30: lighten($yellow, 20%) !default;
+$yellow20: lighten($yellow, 30%) !default;
 
 $blue: #0000ff !default;
 $blue80: darken($blue, 30%) !default;
@@ -48,3 +52,5 @@ $red20: #f6dddd !default;
 
 $primary-color: $blue50 !default;
 $secondary-color: $yellow50 !default;
+
+$field-height: 54px !default;

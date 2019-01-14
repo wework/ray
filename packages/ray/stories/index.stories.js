@@ -53,12 +53,25 @@ storiesOf('Buttons', module)
     `
   );
 
-storiesOf('Grid', module).add(
-  'primary',
-  () => `
-    <div class="container">lol</div>
+storiesOf('Grid', module)
+  .add(
+    'primary',
+    () => `
+    <div class="container--visual" style="min-height: 100vh"></div>
   `
-);
+  )
+  .add(
+    'container',
+    () => `
+    <div class="container" style="min-height: 100vh">asd</div>
+  `
+  )
+  .add(
+    'container2',
+    () => `
+    <div class="container--visual" style="min-height: 100vh"></div>
+  `
+  );
 
 storiesOf('Forms', module)
   .add(
@@ -73,17 +86,20 @@ storiesOf('Forms', module)
   .add('example form', () =>
     withContainer(`
         <h2 class="h2">Sign up</h2>
-        <fieldset>
-          <label for="name">Name</label>
+        <p>You have the opportunity to try new things, but also to make mistakes and fail without the pressure of being judged.</p>
+        <div class="field">
           <input id="name" type="text" placeholder="Arya Stark" />
-        </fieldset>
-        <fieldset>
-          <label for="email">Email address</label>
+          <label for="name">Name</label>
+        </div class="field">
+        <div class="field">
           <input id="email" type="text" placeholder="arya.stark@winterfell.com" />
-        </fieldset>
-        <fieldset>
-          <label for="password">Password</label>
+          <label for="email">Email address</label>
+        </div class="field">
+        <div class="field">
           <input id="password" type="password" placeholder="the.north.remembers" />
-        </fieldset>
+          <label for="password">Password</label>
+        </div>
+      
+        <button class="btn--primary">Submit</button>
       `)
   );
