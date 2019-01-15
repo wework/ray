@@ -89,3 +89,8 @@ p {
   font-size: 12px;
   line-height: 20px;
 }
+
+.label {
+  font-family: $font-stack-mono;
+  text-transform: uppercase;
+}

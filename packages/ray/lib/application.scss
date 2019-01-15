@@ -1,12 +1,12 @@
 @import 'variables';
 
-@import '../node_modules/normalize.css';
-@import '../node_modules/bourbon-neat/core/neat';
+@import '~normalize.css/normalize';
+// @import '~bourbon-neat/core/_neat';
 
 @import 'fonts';
 @import 'responsive';
 @import 'base';
-@import 'grid';
+// @import 'grid';
 @import 'typography';
 @import 'forms';
 

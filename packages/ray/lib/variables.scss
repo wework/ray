@@ -54,3 +54,9 @@ $primary-color: $blue50 !default;
 $secondary-color: $yellow50 !default;
 
 $field-height: 54px !default;
+$gutter: 24px;
+
+$neat-grid: (
+  columns: 12,
+  gutter: $gutter
+);

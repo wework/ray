@@ -32,6 +32,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { sourceMap: true } },
           { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader', options: { sourceMap: true } }
         ]
       },
@@ -45,6 +46,12 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'lib'),
+      node_modules: path.resolve(__dirname, 'node_modules')
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
