@@ -1,6 +1,6 @@
 {
-  "name": "www-wework-css-system",
-  "version": "1.0.0",
+  "name": "@wework/ray",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
