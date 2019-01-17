@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "storybook": "start-storybook -s ./stories/static -p 6006",
     "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out -s ./stories/static",
     "watch": "NODE_ENV=development webpack --watch",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "release": "semantic-release"
   },
   "engines": {
     "node": "10.13.0"
@@ -39,9 +40,17 @@
     "@storybook/addon-backgrounds": "4.1.7",
     "@storybook/addon-viewport": "4.0.9",
     "@storybook/react": "4.1.6",
-    "storybook-addon-jsx": "6.0.0"
+    "storybook-addon-jsx": "6.0.0",
+    "semantic-release": "^15.13.3"
   },
   "peerDependencies": {
     "bourbon-neat": "3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:WeConnect/ray.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
