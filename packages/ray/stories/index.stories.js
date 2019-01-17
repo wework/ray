@@ -17,7 +17,7 @@ storiesOf('Typography', module)
         const Tag = type[0] === 'h' ? type : 'p';
         return (
           <React.Fragment>
-            <h4 className="h4">{type}</h4>
+            <h4 className="label">className: .{type}</h4>
             <Tag className={type}>
               You have the opportunity to try new things, but also to make
               mistakes and fail without the pressure of being judged.
