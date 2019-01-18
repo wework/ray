@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:10.13.0
     steps:
       # Configure your test steps here (checkout, npm install, cache management, tests etc...)
-      - run: echo "replace with test command"
+      - run: yarn test
 
   release:
     docker:

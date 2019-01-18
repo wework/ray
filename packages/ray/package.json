@@ -1,11 +1,13 @@
 {
   "name": "@wework/ray",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Resources for building interfaces with WeWork's design system",
   "main": "index.js",
+  "author": "Adam Raider <adam.raider@wework.com>",
+  "private": true,
   "scripts": {
     "commit": "git-cz",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "storybook": "start-storybook -s ./stories/static -p 6006",
     "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out -s ./stories/static",
     "watch": "NODE_ENV=development webpack --watch",
@@ -15,7 +17,6 @@
   "engines": {
     "node": "10.13.0"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "7.2.2",
