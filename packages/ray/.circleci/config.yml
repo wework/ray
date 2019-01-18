@@ -5,7 +5,8 @@ jobs:
     docker:
       - image: circleci/node:10.13.0
     steps:
-      # Configure your test steps here (checkout, npm install, cache management, tests etc...)
+      - checkout
+      - run: yarn install
       - run: yarn test
 
   release:
@@ -14,8 +15,7 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      # Run optional required steps before releasing
-      # - run: npm run build-script
+      # - run: yarn build
       - run: npx semantic-release
 
 workflows:
