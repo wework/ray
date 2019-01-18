@@ -26,7 +26,7 @@ This project uses [semantic-release](https://github.com/semantic-release/semanti
 When commiting, please use following command and follow the prompts:
 
 ```bash
-yarn git-cz
+yarn commit
 ```
 
 ## Release
