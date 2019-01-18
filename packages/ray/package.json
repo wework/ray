@@ -37,7 +37,6 @@
     "webpack-cli": "3.2.1"
   },
   "devDependencies": {
-    "@semantic-release/git": "7.0.8",
     "@storybook/addon-a11y": "4.1.7",
     "@storybook/addon-backgrounds": "4.1.7",
     "@storybook/addon-viewport": "4.0.9",
