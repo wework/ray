@@ -1,6 +1,5 @@
 {
   "name": "@wework/ray",
-  "version": "0.0.0-development",
   "description": "Resources for building interfaces with WeWork's design system",
   "main": "index.js",
   "author": "Adam Raider <adam.raider@wework.com>",
