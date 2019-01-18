@@ -1140,20 +1140,6 @@
     global "^4.3.2"
     prop-types "^15.6.2"
 
-"@storybook/addon-backgrounds@4.1.7":
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-4.1.7.tgz#a11112d2a3d81956cfc253295b4dcdd159da7991"
-  integrity sha512-aH9WMIpQzxMU6IFYdOXrqRZqbNDmOdCYLwJj/nYjN3XI4a3Q6r6M6cqBfblaSzCU7JNr4ejEgjQdoOUSu99MOw==
-  dependencies:
-    "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.7"
-    "@storybook/core-events" "4.1.7"
-    core-js "^2.5.7"
-    eventemitter3 "^3.1.0"
-    global "^4.3.2"
-    prop-types "^15.6.2"
-    util-deprecate "^1.0.2"
-
 "@storybook/addon-viewport@4.0.9":
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-4.0.9.tgz#b983e4f679ecac7fc5a4380e3a3aec6c81dfd1b0"

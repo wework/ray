@@ -1,6 +1,5 @@
 import { configure, addDecorator, setAddon } from '@storybook/react';
 import { checkA11y } from '@storybook/addon-a11y';
-import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { configureViewport } from '@storybook/addon-viewport';
 import JSXAddon from 'storybook-addon-jsx';
 import '../lib/application.scss';
@@ -15,14 +14,3 @@ function loadStories() {
 }
 
 configure(loadStories, module);
-
-// addDecorator(
-//   withBackgrounds([
-//     { name: 'twitter', value: '#00aced', default: true },
-//     { name: 'facebook', value: '#3b5998' },
-//   ])
-// );
-
-// configureViewport({
-//   defaultViewport: 'iphonex'
-// });
