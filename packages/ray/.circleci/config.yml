@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:8
     steps:
       # Configure your test steps here (checkout, npm install, cache management, tests etc...)
+      - run: echo "replace with test command"
 
   release:
     docker:
