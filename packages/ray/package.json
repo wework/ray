@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -s ./stories/static -p 6006",
     "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out -s ./stories/static",
@@ -40,8 +41,9 @@
     "@storybook/addon-backgrounds": "4.1.7",
     "@storybook/addon-viewport": "4.0.9",
     "@storybook/react": "4.1.6",
-    "storybook-addon-jsx": "6.0.0",
-    "semantic-release": "^15.13.3"
+    "cz-conventional-changelog": "2.1.0",
+    "semantic-release": "^15.13.3",
+    "storybook-addon-jsx": "6.0.0"
   },
   "peerDependencies": {
     "bourbon-neat": "3.0.1"
@@ -52,5 +54,10 @@
   },
   "publishConfig": {
     "access": "restricted"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
