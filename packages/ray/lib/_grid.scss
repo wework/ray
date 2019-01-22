@@ -1,15 +1,9 @@
-// @import '~bourbon-neat/core/_neat';
+/*
+* https://getbootstrap.com/docs/4.0/layout/grid/#mixins 
+*/
+@import '~bootstrap/scss/bootstrap-grid';
 
-// .container {
-//   @include grid-container;
-//   max-width: 1320px;
-//   margin: 0 auto;
-// }
-
-// .col-12 {
-//   @include grid-column(12);
-// }
-
-// .container--visual {
-//   @include grid-visual;
-// }
+.container {
+  width: 800px;
+  @include make-container();
+}
