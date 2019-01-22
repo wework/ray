@@ -65,33 +65,23 @@ storiesOf('Buttons', module)
     <button className="btn--secondary">Hello World</button>
   ));
 
-storiesOf('Grid', module)
-  .addWithJSX('primary', () => (
-    <div className="container container--visual" style={{ minHeight: '100vh' }}>
-      <div className="col-6">
-        <Image src="/hero1.png" />
-      </div>
+storiesOf('Grid', module).addWithJSX('example', () => (
+  <div className="container container--visual" style={{ minHeight: '100vh' }}>
+    <div className="col-6">
+      <Image src="/hero1.png" />
     </div>
-  ))
-  .addWithJSX('container', () => (
-    <div className="container" style={{ minHeight: '100vh' }}>
-      asd
-    </div>
-  ))
-  .addWithJSX('container2', () => (
-    <div
-      className="container container--visual"
-      style={{ minHeight: '100vh' }}
-    />
-  ));
+  </div>
+));
 
 storiesOf('Forms', module)
-  .addWithJSX('single fieldset', () => (
-    <fieldset>
-      <label for="email">Email address</label>
-      <input id="email" type="text" placeholder="arya.stark@winterfell.com" />
-    </fieldset>
-  ))
+  .addWithJSX('single field', () =>
+    withContainer(
+      <div className="field">
+        <input id="email" type="text" placeholder="arya.stark@winterfell.com" />
+        <label for="email">Email address</label>
+      </div>
+    )
+  )
   .addWithJSX('example form', () =>
     withContainer(
       <React.Fragment>
@@ -124,5 +114,4 @@ storiesOf('Forms', module)
         <button className="btn--primary">Submit</button>
       </React.Fragment>
     )
-  )
-  .addWithJSX('example form2 ', () => <Image src="/hero1.png" />);
+  );

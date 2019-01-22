@@ -19,11 +19,12 @@ label {
   text-transform: uppercase;
   position: absolute;
   left: 1rem;
-  top: 16px;
+  top: 15px;
   display: flex;
   align-items: center;
   color: $gray80;
   transition: all 0.125s ease;
+  pointer-events: none;
 }
 
 input {
