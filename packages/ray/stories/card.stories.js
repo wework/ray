@@ -5,7 +5,7 @@ storiesOf('Card', module).addWithJSX('All', () => (
   <div
     style={{
       padding: '1rem',
-      maxWidth: '600px'
+      maxWidth: '400px'
     }}
   >
     <div className="card">
@@ -15,14 +15,10 @@ storiesOf('Card', module).addWithJSX('All', () => (
       />
 
       <div className="card__content">
-        <h2 className="h3" style={{ marginTop: 0 }}>
-          Spacetravel guidelines
-        </h2>
-        <p className="copy2">
+        <h2 className="h5">Spacetravel guidelines</h2>
+        <p className="copy5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          atque minima itaque sint! Doloremque odio quia saepe unde sunt neque
-          quam quibusdam in, nihil beatae, consequatur cumque? Cupiditate, quia
-          facilis.
+          atque minima itaque sint! Doloremque odio quia saepe.
         </p>
       </div>
     </div>

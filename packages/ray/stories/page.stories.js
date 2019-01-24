@@ -1,11 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import './styles.scss';
-
-const Image = props => {
-  return <img {...props} style={{ width: '100%' }} />;
-};
+import './styles/styles.scss';
 
 storiesOf('Page', module).addWithJSX('example', () => (
   <div className="container" style={{ padding: '4rem 0', minHeight: '100vh' }}>
