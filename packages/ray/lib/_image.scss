@@ -1,0 +1,48 @@
+@mixin ImgContainer {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background-color: $gray30;
+
+  img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.ImgContainer--16by9 {
+  @include ImgContainer;
+  padding-bottom: calc(100% / (16 / 9));
+}
+
+.ImgContainer--3by4 {
+  @include ImgContainer;
+  padding-bottom: calc(100% / (3 / 4));
+}
+
+@mixin Background {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: $gray30;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Background--16by9 {
+  @include Background;
+  padding-bottom: calc(100% / (16 / 9));
+}
+
+.Background--3by4 {
+  @include Background;
+  padding-bottom: calc(100% / (3 / 4));
+}
