@@ -3,7 +3,6 @@
   "description": "Resources for building interfaces with WeWork's design system",
   "main": "index.js",
   "author": "Adam Raider <adam.raider@wework.com>",
-  "private": true,
   "scripts": {
     "commit": "git-cz",
     "test": "echo \"Error: no test specified\"",
