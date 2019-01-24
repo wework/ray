@@ -1,0 +1,14 @@
+$card-padding: 1rem;
+$card-border-color: #e6e6e6;
+
+.card {
+  width: 100%;
+  border: 1px solid $card-border-color;
+  border-radius: $border-radius;
+  background-color: $white;
+  overflow: hidden;
+
+  &__content {
+    padding: $card-padding;
+  }
+}

@@ -13,13 +13,13 @@ p {
   margin-bottom: 5px;
 
   @include tablet {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 
 .h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 28px;
   margin-bottom: 10px;
