@@ -1,0 +1,28 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      border-bottom: 1px solid $black70;
+    }
+  }
+
+  th {
+    font-size: 12px;
+    font-family: $font-stack-mono;
+    color: $gray70;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 1rem 0;
+  }
+
+  tr {
+    border-bottom: 1px solid $gray35;
+  }
+
+  td {
+    padding: 1rem 0;
+    white-space: nowrap;
+  }
+}

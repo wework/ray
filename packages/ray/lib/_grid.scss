@@ -2,8 +2,3 @@
 * https://getbootstrap.com/docs/4.0/layout/grid/#mixins 
 */
 @import '~bootstrap/scss/bootstrap-grid';
-
-.container {
-  width: 800px;
-  @include make-container();
-}
