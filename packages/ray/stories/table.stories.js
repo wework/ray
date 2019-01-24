@@ -36,7 +36,7 @@ const SAMPLE_DATA = [
 
 const KEYS = Object.keys(SAMPLE_DATA[0]);
 
-storiesOf('Table', module).addWithJSX('All', () =>
+storiesOf('Table', module).addWithJSX('default', () =>
   withPadding(
     <table className="table">
       <thead>
