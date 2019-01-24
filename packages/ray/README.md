@@ -12,6 +12,12 @@ yarn add @wework/ray
 npm install --save @wework/ray
 ```
 
+Then import the library in your sass file:
+
+```scss
+@import '@wework/ray';
+```
+
 ## Development
 
 ```bash

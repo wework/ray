@@ -55,5 +55,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "style": {
+    "scss": "lib/application.scss"
   }
 }
