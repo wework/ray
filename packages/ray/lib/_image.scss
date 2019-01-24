@@ -27,6 +27,11 @@
   padding-bottom: calc(100% / (3 / 4));
 }
 
+.ImgContainer--4By3 {
+  @include ImgContainer;
+  padding-bottom: calc(100% / (4 / 3));
+}
+
 @mixin Background {
   display: block;
   width: 100%;
@@ -45,4 +50,9 @@
 .Background--3by4 {
   @include Background;
   padding-bottom: calc(100% / (3 / 4));
+}
+
+.Background--4by3 {
+  @include Background;
+  padding-bottom: calc(100% / (4 / 3));
 }
