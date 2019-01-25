@@ -6,8 +6,12 @@ $card-border-color: $gray35;
   border-radius: $border-radius;
   background-color: $white;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__content {
+    flex-grow: 1;
     padding: $card-padding;
     border: 1px solid $card-border-color;
 
