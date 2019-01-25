@@ -38,6 +38,8 @@ $color-blue60: darken($color-blue, 10%) !default;
 $color-blue50: $color-blue !default;
 $color-blue30: lighten($color-blue, 20%) !default;
 $color-blue20: lighten($color-blue, 30%) !default;
+$color-blue10: lighten($color-blue, 40%) !default;
+$color-blue01: lighten($color-blue, 49%) !default;
 
 $color-text-light: #b0b0b0;
 $color-text-medium: #666666;
