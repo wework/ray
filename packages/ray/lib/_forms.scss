@@ -1,6 +1,6 @@
 .FormControl {
-  border: 1px solid $blue;
-  background-color: $white;
+  border: 1px solid $color-blue;
+  background-color: $color-white;
   border-radius: $border-radius;
   position: relative;
   height: $field-height;
@@ -22,7 +22,7 @@
     top: 15px;
     display: flex;
     align-items: center;
-    color: $gray80;
+    color: $color-text-medium;
     transition: all 0.125s ease;
     pointer-events: none;
   }
@@ -43,7 +43,7 @@
 
     &:focus,
     &:not(:placeholder-shown) {
-      border-color: $blue20;
+      border-color: $color-blue20;
 
       + label {
         font-size: 12px;
@@ -59,7 +59,7 @@
   &__hint {
     @extend .p4;
     display: block;
-    color: $gray80;
+    color: $color-text-light;
     font-weight: 400;
     margin-top: 0.25rem;
   }

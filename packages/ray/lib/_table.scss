@@ -4,21 +4,21 @@
 
   thead {
     tr {
-      border-bottom: 1px solid $black70;
+      border-bottom: 1px solid $color-black70;
     }
   }
 
   th {
     font-size: 12px;
     font-family: $font-stack-mono;
-    color: $gray70;
+    color: $color-gray70;
     text-align: left;
     text-transform: uppercase;
     padding: 1rem 0;
   }
 
   tr {
-    border-bottom: 1px solid $gray35;
+    border-bottom: 1px solid $color-gray35;
   }
 
   td {

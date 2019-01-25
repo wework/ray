@@ -14,7 +14,7 @@ $font-size: 1rem !default;
   cursor: pointer;
   padding: 0.5625rem 1.5625rem;
   min-width: 120px;
-  color: $white;
+  color: $color-white;
   height: $field-height;
 
   &:hover,
@@ -26,16 +26,16 @@ $font-size: 1rem !default;
 
   &:disabled {
     cursor: not-allowed;
-    background-color: $gray50;
-    border-color: $gray50;
-    color: $white;
+    background-color: $color-gray50;
+    border-color: $color-gray50;
+    color: $color-white;
   }
 }
 
 .btn--primary {
-  @include btn($blue50, $blue60);
+  @include btn($color-blue50, $color-blue60);
 }
 
 .btn--secondary {
-  @include btn($yellow50, $yellow60);
+  @include btn($color-yellow50, $color-yellow60);
 }

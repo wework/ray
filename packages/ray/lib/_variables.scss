@@ -9,49 +9,42 @@ $breakpoint-desktop-large-px: 1024px !default;
 
 $border-radius: 0.25rem !default;
 
-$black70: #000 !default;
-$black60: #0d0e0e !default;
-$black50: #252729 !default;
-$black40: #3d4144 !default;
-$black30: #555a5f !default;
-$black20: #6e7479 !default;
-$gray80: #747476 !default;
-$gray70: #8e8e8f !default;
-$gray60: #a7a7a9 !default;
-$gray50: #c1c1c2 !default;
-$gray40: #dbdbdb !default;
-$gray35: #e6e6e6 !default;
-$gray30: #f4f4f5 !default;
-$white: #fff !default;
+$color-black70: #000 !default;
+$color-black60: #0d0e0e !default;
+$color-black50: #252729 !default;
+$color-black40: #3d4144 !default;
+$color-black30: #555a5f !default;
+$color-black20: #6e7479 !default;
+$color-gray80: #747476 !default;
+$color-gray70: #8e8e8f !default;
+$color-gray60: #a7a7a9 !default;
+$color-gray50: #c1c1c2 !default;
+$color-gray40: #dbdbdb !default;
+$color-gray35: #e6e6e6 !default;
+$color-gray30: #f4f4f5 !default;
+$color-white: #fff !default;
 
-$yellow: #ffd500 !default;
-$yellow80: darken($yellow, 30%) !default;
-$yellow70: darken($yellow, 20%) !default;
-$yellow60: darken($yellow, 10%) !default;
-$yellow50: $yellow !default;
-$yellow40: lighten($yellow, 10%) !default;
-$yellow30: lighten($yellow, 20%) !default;
-$yellow20: lighten($yellow, 30%) !default;
+$color-yellow: #ffd500 !default;
+$color-yellow80: darken($color-yellow, 30%) !default;
+$color-yellow70: darken($color-yellow, 20%) !default;
+$color-yellow60: darken($color-yellow, 10%) !default;
+$color-yellow50: $color-yellow !default;
+$color-yellow40: lighten($color-yellow, 10%) !default;
+$color-yellow30: lighten($color-yellow, 20%) !default;
+$color-yellow20: lighten($color-yellow, 30%) !default;
 
-$blue: #0000ff !default;
-$blue80: darken($blue, 30%) !default;
-$blue70: darken($blue, 20%) !default;
-$blue60: darken($blue, 10%) !default;
-$blue50: $blue !default;
-$blue40: lighten($blue, 10%) !default;
-$blue30: lighten($blue, 20%) !default;
-$blue20: lighten($blue, 30%) !default;
+$color-blue: #0000ff !default;
+$color-blue60: darken($color-blue, 10%) !default;
+$color-blue50: $color-blue !default;
+$color-blue30: lighten($color-blue, 20%) !default;
+$color-blue20: lighten($color-blue, 30%) !default;
 
-$red80: #812020 !default;
-$red70: #aa2a2a !default;
-$red60: #ce3939 !default;
-$red50: #d86262 !default;
-$red40: #e28b8b !default;
-$red30: #ecb4b4 !default;
-$red20: #f6dddd !default;
+$color-text-light: #b0b0b0;
+$color-text-medium: #666666;
+$color-text-dark: #000000;
 
-$primary-color: $blue50 !default;
-$secondary-color: $yellow50 !default;
+$color-primary: $color-blue50 !default;
+$color-secondary: $color-yellow50 !default;
 
 $field-height: 54px !default;
 

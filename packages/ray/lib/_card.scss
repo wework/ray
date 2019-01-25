@@ -1,10 +1,10 @@
 $card-padding: 1rem;
-$card-border-color: $gray35;
+$card-border-color: $color-gray35;
 
 .card {
   width: 100%;
   border-radius: $border-radius;
-  background-color: $white;
+  background-color: $color-white;
   overflow: hidden;
   height: 100%;
   display: flex;
