@@ -12,7 +12,15 @@ storiesOf('Forms', module)
       </div>
     )
   )
-  .addWithJSX('example form', () =>
+  .addWithJSX('FormControl FormControl--active', () =>
+    withPadding(
+      <div className="FormControl FormControl--active">
+        <input id="email" type="text" placeholder="arya.stark@winterfell.com" />
+        <label for="email">Email address</label>
+      </div>
+    )
+  )
+  .addWithJSX('Example form', () =>
     withPadding(
       <div className="container">
         <div className="row">

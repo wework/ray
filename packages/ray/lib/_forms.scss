@@ -1,5 +1,5 @@
 .FormControl {
-  border: 1px solid $color-blue;
+  border: 1px solid $color-gray35;
   background-color: $color-white;
   border-radius: $border-radius;
   position: relative;
@@ -7,6 +7,10 @@
 
   &:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  &--active {
+    border-color: $color-blue50;
   }
 
   label,
@@ -43,7 +47,7 @@
 
     &:focus,
     &:not(:placeholder-shown) {
-      border-color: $color-blue20;
+      border-color: $color-blue50;
 
       + label {
         font-size: 12px;
