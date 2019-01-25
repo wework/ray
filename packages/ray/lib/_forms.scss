@@ -1,4 +1,4 @@
-.field {
+.FormControl {
   border: 1px solid $blue;
   background-color: $white;
   border-radius: $border-radius;
@@ -8,57 +8,59 @@
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
-}
 
-label {
-  font-family: $font-stack-mono;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  display: block;
-  text-transform: uppercase;
-  position: absolute;
-  left: 1rem;
-  top: 15px;
-  display: flex;
-  align-items: center;
-  color: $gray80;
-  transition: all 0.125s ease;
-  pointer-events: none;
-}
+  label,
+  &__label {
+    font-family: $font-stack-mono;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    display: block;
+    text-transform: uppercase;
+    position: absolute;
+    left: 1rem;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    color: $gray80;
+    transition: all 0.125s ease;
+    pointer-events: none;
+  }
 
-input {
-  font-family: inherit;
-  font-size: 1rem;
-  line-height: 1;
-  height: 56px;
-  display: block;
-  background-color: transparent;
-  padding: 1rem 1rem 0;
-  width: 100%;
-  height: 100%;
-  outline: 0;
-  border: 0;
+  input,
+  &__input {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1;
+    height: 56px;
+    display: block;
+    background-color: transparent;
+    padding: 1rem 1rem 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border: 0;
 
-  &:focus,
-  &:not(:placeholder-shown) {
-    border-color: $blue20;
+    &:focus,
+    &:not(:placeholder-shown) {
+      border-color: $blue20;
 
-    + label {
-      font-size: 12px;
-      top: 4px;
+      + label {
+        font-size: 12px;
+        top: 4px;
+      }
+    }
+
+    &::placeholder {
+      color: transparent;
     }
   }
 
-  &::placeholder {
-    color: transparent;
+  &__hint {
+    @extend .p4;
+    display: block;
+    color: $gray80;
+    font-weight: 400;
+    margin-top: 0.25rem;
   }
-}
-
-.hint {
-  @extend .p4;
-  display: block;
-  color: $gray80;
-  font-weight: 400;
-  margin-top: 0.25rem;
 }
