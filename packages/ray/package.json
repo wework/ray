@@ -38,6 +38,8 @@
   },
   "devDependencies": {
     "@storybook/addon-a11y": "4.1.7",
+    "@storybook/addon-backgrounds": "4.1.11",
+    "@storybook/addon-options": "4.1.11",
     "@storybook/addon-viewport": "4.0.9",
     "@storybook/react": "4.1.6",
     "cz-conventional-changelog": "2.1.0",
