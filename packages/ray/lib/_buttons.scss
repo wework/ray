@@ -1,41 +1,72 @@
-$font-size: 1rem !default;
+$btn-border-radius: $border-radius;
 
-@mixin btn($bgColor, $focusedColor) {
+.#{$prefix}btn {
   font-family: inherit;
-  font-size: $font-size;
-  font-weight: 800;
-  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
   display: inline-block;
-  background-color: $bgColor;
-  border-color: $bgColor;
-  border-width: 0.125rem;
-  border-radius: $border-radius;
+  border-width: 1px;
+  border-radius: $btn-border-radius;
   border-style: solid;
   cursor: pointer;
-  padding: 0.5625rem 1.5625rem;
+  padding: 20px 24px;
   min-width: 120px;
-  color: $color-white;
-  height: $field-height;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: bottom;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    background-color: $focusedColor;
-    border-color: $focusedColor;
+    outline: 0;
   }
 
   &:disabled {
     cursor: not-allowed;
-    background-color: $color-gray50;
-    border-color: $color-gray50;
-    color: $color-white;
   }
 }
 
-.btn--primary {
-  @include btn($color-blue50, $color-blue60);
+.#{$prefix}btn--primary {
+  background-color: $color-blue50;
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-blue60;
+  }
+
+  &:focus {
+    background-color: $color-blue70;
+  }
+
+  &[disabled] {
+    background-color: $color-blue30;
+    color: rgba($white, 0.4);
+  }
 }
 
-.btn--secondary {
-  @include btn($color-yellow50, $color-yellow60);
+.#{$prefix}btn--secondary {
+  color: $color-blue50;
+  background-color: $white;
+  border-color: $color-blue50;
+
+  &:hover {
+    background-color: $color-blue10;
+  }
+
+  &:focus {
+    background-color: $color-blue20;
+  }
+
+  &[disabled] {
+    background-color: $white;
+    border-color: rgba($color-blue50, 0.4);
+    color: rgba($color-blue50, 0.4);
+  }
+}
+
+.#{$prefix}btn--compact {
+  padding: 0.75rem;
+  line-height: 1;
+  height: auto;
 }

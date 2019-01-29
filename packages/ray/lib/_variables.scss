@@ -1,3 +1,4 @@
+$prefix: 'ray--';
 $font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif !default;
 $font-stack-mono: 'Apercu Mono', monospace !default;
@@ -34,8 +35,12 @@ $color-yellow30: lighten($color-yellow, 20%) !default;
 $color-yellow20: lighten($color-yellow, 30%) !default;
 
 $color-blue: #0000ff !default;
+$color-blue90: darken($color-blue, 40%) !default;
+$color-blue80: darken($color-blue, 30%) !default;
+$color-blue70: darken($color-blue, 20%) !default;
 $color-blue60: darken($color-blue, 10%) !default;
 $color-blue50: $color-blue !default;
+$color-blue40: lighten($color-blue, 10%) !default;
 $color-blue30: lighten($color-blue, 20%) !default;
 $color-blue20: lighten($color-blue, 30%) !default;
 $color-blue10: lighten($color-blue, 40%) !default;
