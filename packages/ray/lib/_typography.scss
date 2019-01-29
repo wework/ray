@@ -59,7 +59,9 @@ p,
 .p6 {
   font-weight: 400;
   margin: 0;
+}
 
+p {
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
