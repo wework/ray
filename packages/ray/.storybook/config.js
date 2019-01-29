@@ -6,7 +6,10 @@ import { withBackgrounds } from '@storybook/addon-backgrounds';
 import '../lib/application.scss';
 
 addDecorator(
-  withBackgrounds([{ name: 'checkers', value: 'url(/bg.svg)', default: true }])
+  withBackgrounds([
+    { name: 'checkers', value: 'url(/bg.svg)', default: true },
+    { name: 'white', value: '#fff', default: true }
+  ])
 );
 
 setAddon(JSXAddon);
