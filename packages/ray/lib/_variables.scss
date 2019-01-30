@@ -46,6 +46,18 @@ $color-blue20: lighten($color-blue, 30%) !default;
 $color-blue10: lighten($color-blue, 40%) !default;
 $color-blue01: lighten($color-blue, 49%) !default;
 
+$color-red: #ff0000;
+$color-red90: darken($color-red, 40%) !default;
+$color-red80: darken($color-red, 30%) !default;
+$color-red70: darken($color-red, 20%) !default;
+$color-red60: darken($color-red, 10%) !default;
+$color-red50: $color-red !default;
+$color-red40: lighten($color-red, 10%) !default;
+$color-red30: lighten($color-red, 20%) !default;
+$color-red20: lighten($color-red, 30%) !default;
+$color-red10: lighten($color-red, 40%) !default;
+$color-red01: lighten($color-red, 49%) !default;
+
 $color-text-light: #b0b0b0;
 $color-text-medium: #666666;
 $color-text-dark: #000000;
