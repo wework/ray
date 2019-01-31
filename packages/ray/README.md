@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/428119e4-0053-4c50-8bb5-9aae1b689bec/deploy-status)](https://app.netlify.com/sites/wework-ray/deploys) [![CircleCI](https://circleci.com/gh/WeConnect/ray.svg?style=svg&circle-token=99fe6d74b0b60e0113df0e37df0009ba77793b1d)](https://circleci.com/gh/WeConnect/ray) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-Resources for building interfaces with WeWork's design system
+Resources for building interfaces with WeWork's design system. [npm package](https://www.npmjs.com/package/@wework/ray)
 
 ## Installation
 
