@@ -13,6 +13,15 @@ yarn-error.log*
 *.sublime*
 
 stats.json
-.cache
-storybook-static
-.out
+
+# built files
+/es
+/umd
+/scripts
+/css
+/scss
+/html
+/docs/js
+/.out
+/storybook-static
+/.cache
