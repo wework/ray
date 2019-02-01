@@ -1,3 +1,4 @@
+@import './functions';
 $prefix: 'ray--';
 $font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif !default;
@@ -11,11 +12,11 @@ $breakpoint-desktop-large-px: 1024px !default;
 $border-radius: 0.25rem !default;
 
 $color-black70: #000 !default;
-$color-black60: #0d0e0e !default;
+$color-black60: #384d4d !default;
 $color-black50: #252729 !default;
 $color-black40: #3d4144 !default;
 $color-black30: #555a5f !default;
-$color-black20: #6e7479 !default;
+$color-black20: #0a0f13 !default;
 $color-gray80: #747476 !default;
 $color-gray70: #8e8e8f !default;
 $color-gray60: #a7a7a9 !default;
@@ -86,21 +87,35 @@ $field-border-width: 1px;
 $field-height: calc((#{$field-v-spacing} * 2) + 1rem);
 $field-height-compact: calc((#{$field-v-spacing-compact} * 2) + 1rem);
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 768px,
-  lg: 1024px
-);
+$padding-5: 5rem;
 
-$container-max-widths: (
-  sm: 420px,
-  md: 720px,
-  lg: 1320px,
-  xl: 1320px
-);
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
 
 $grid-columns: 12;
 $grid-gutter-width: 24px;
 
-$padding-5: 5rem;
+$grid-breakpoints: (
+  sm: 0px,
+  md: 600px,
+  lg: 1195px
+) !default;
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 1320px
+) !default;
+
+$container-gutters: (
+  sm: 1rem,
+  md: 3rem,
+  lg: 3.75rem
+) !default;
+
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints);
+
+$enable-grid-classes: true !default;

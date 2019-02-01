@@ -43,7 +43,7 @@ $btn-border-radius: $border-radius;
   &[disabled] {
     background-color: $color-blue30;
     border-color: $color-blue30;
-    color: rgba($white, 0.4);
+    color: rgba($color-white, 0.4);
   }
 
   &Danger {
@@ -64,7 +64,7 @@ $btn-border-radius: $border-radius;
 
 .#{$prefix}btn--secondary {
   color: $color-blue50;
-  background-color: $white;
+  background-color: $color-white;
 
   &:hover {
     background-color: $color-blue10;
@@ -75,7 +75,7 @@ $btn-border-radius: $border-radius;
   }
 
   &[disabled] {
-    background-color: $white;
+    background-color: $color-white;
     border-color: rgba($color-blue50, 0.4);
     color: rgba($color-blue50, 0.4);
   }

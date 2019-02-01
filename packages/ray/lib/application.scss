@@ -1,11 +1,11 @@
-@import 'variables';
+@import './global/variables';
 
 @import '../node_modules/normalize.css/normalize.css';
 
 // @import 'fonts';
 @import 'responsive';
 @import 'base';
-@import 'grid';
+@import './components/grid/bootstrap-grid';
 @import 'typography';
 @import 'forms';
 @import 'card';
