@@ -32,7 +32,6 @@
     "gulp-util": "3.0.8",
     "mini-css-extract-plugin": "0.4.4",
     "node-sass": "4.11.0",
-    "normalize.css": "8.0.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "postcss-loader": "3.0.0",
     "react": "16.7.0",
