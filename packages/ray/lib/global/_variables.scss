@@ -10,6 +10,7 @@ $breakpoint-desktop-px: 840px !default;
 $breakpoint-desktop-large-px: 1024px !default;
 
 $border-radius: 0.25rem !default;
+$border-width: 1px !default;
 
 $color-black70: #000 !default;
 $color-black60: #384d4d !default;
@@ -83,11 +84,15 @@ $field-v-spacing-compact: 12px;
 $field-h-spacing: 12px;
 $field-label-size: 1rem;
 $field-label-size-focus: 12px;
-$field-border-width: 1px;
 $field-height: calc((#{$field-v-spacing} * 2) + 1rem);
 $field-height-compact: calc((#{$field-v-spacing-compact} * 2) + 1rem);
 
 $padding-5: 5rem;
+
+$btn-v-spacing: 20px - $border-width;
+$btn-v-spacing-compact: 12px - $border-width;
+$btn-h-spacing: 24px - $border-width;
+$btn-h-spacing-compact: 12px - $border-width;
 
 // Grid breakpoints
 //

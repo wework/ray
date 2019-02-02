@@ -6,10 +6,10 @@ $btn-border-radius: $border-radius;
   font-weight: 400;
   line-height: 1;
   display: inline-block;
-  border: 1px solid $color-blue50;
+  border: $border-width solid $color-blue50;
   border-radius: $btn-border-radius;
   cursor: pointer;
-  padding: 20px 24px;
+  padding: $btn-v-spacing $btn-h-spacing;
   min-width: 120px;
   white-space: nowrap;
   text-align: center;
@@ -95,7 +95,7 @@ $btn-border-radius: $border-radius;
 }
 
 .#{$prefix}btn--compact {
-  padding: 0.75rem;
+  padding: $btn-v-spacing-compact $btn-h-spacing-compact;
   line-height: 1;
   height: auto;
 }
