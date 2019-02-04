@@ -106,19 +106,19 @@ $grid-breakpoints: (
   sm: 0px,
   md: 600px,
   lg: 1195px
-) !default;
+);
 
 $container-max-widths: (
   sm: 100%,
   md: 100%,
   lg: 1320px
-) !default;
+);
 
 $container-gutters: (
   sm: 1rem,
   md: 3rem,
   lg: 3.75rem
-) !default;
+);
 
 @include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
 @include _assert-starts-at-zero($grid-breakpoints);
