@@ -57,7 +57,10 @@
     "url": "git@github.com:WeConnect/ray.git"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "restricted",
+    "publishConfig": {
+      "tag": "dev"
+    }
   },
   "config": {
     "commitizen": {
