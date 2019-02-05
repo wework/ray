@@ -1,10 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import withPadding from './util/withPadding';
-
 const Divider = () => (
-  <span style={{ width: '30px', display: 'inline-block' }} />
+  <div style={{ marginBottom: '1rem', display: 'block' }} />
 );
 
 storiesOf('Buttons', module)
@@ -24,12 +22,19 @@ storiesOf('Buttons', module)
         Compact Disabled
       </button>
       <Divider />
-      <button className="ray--btn ray--btn--primary ray--btn--primaryDanger">
+      <button className="ray--btn ray--btn--primary ray--btn--danger">
         Click me danger
       </button>
       <Divider />
-      <button className="ray--btn ray--btn--primary ray--btn--compact ray--btn--primaryDanger">
+      <button className="ray--btn ray--btn--primary ray--btn--compact ray--btn--danger">
         Compact click me danger
+      </button>
+      <Divider />
+      <button
+        className="ray--btn ray--btn--primary ray--btn--compact ray--btn--danger"
+        disabled
+      >
+        Compact click me danger disabled
       </button>
     </>
   ))
@@ -52,14 +57,20 @@ storiesOf('Buttons', module)
         Compact Disabled
       </button>
       <Divider />
-      <button className="ray--btn ray--btn--secondary ray--btn--secondaryDanger">
+      <button className="ray--btn ray--btn--secondary ray--btn--danger">
         Click me danger
       </button>
       <Divider />
-      <button className="ray--btn ray--btn--secondary ray--btn--compact ray--btn--secondaryDanger">
+      <button className="ray--btn ray--btn--secondary ray--btn--compact ray--btn--danger">
         Compact click me danger
       </button>
       <Divider />
+      <button
+        className="ray--btn ray--btn--secondary ray--btn--compact ray--btn--danger"
+        disabled
+      >
+        Compact click me danger disabled
+      </button>
     </>
   ))
   .addWithJSX('tertiary', () => (
@@ -81,13 +92,19 @@ storiesOf('Buttons', module)
         Compact disabled
       </button>
       <Divider />
-      <button className="ray--btn ray--btn--tertiary ray--btn--tertiaryDanger">
+      <button className="ray--btn ray--btn--tertiary ray--btn--danger">
         Click me danger
       </button>
       <Divider />
-      <button className="ray--btn ray--btn--tertiary ray--btn--compact ray--btn--tertiaryDanger">
+      <button className="ray--btn ray--btn--tertiary ray--btn--compact ray--btn--danger">
         Compact click me danger
       </button>
       <Divider />
+      <button
+        className="ray--btn ray--btn--tertiary ray--btn--compact ray--btn--danger"
+        disabled
+      >
+        Compact click me danger disabled
+      </button>
     </>
   ));

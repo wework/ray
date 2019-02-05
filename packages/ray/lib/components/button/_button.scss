@@ -40,13 +40,7 @@ $btn-border-radius: $border-radius;
     border-color: $color-blue70;
   }
 
-  &[disabled] {
-    background-color: $color-blue30;
-    border-color: $color-blue30;
-    color: rgba($color-white, 0.4);
-  }
-
-  &Danger {
+  &.#{$prefix}btn--danger {
     background-color: $color-red;
     border-color: $color-red;
 
@@ -59,6 +53,18 @@ $btn-border-radius: $border-radius;
       background-color: $color-red70;
       border-color: $color-red70;
     }
+
+    &[disabled] {
+      background-color: $color-red30;
+      border-color: $color-red30;
+      color: rgba($color-white, 0.4);
+    }
+  }
+
+  &[disabled] {
+    background-color: $color-blue30;
+    border-color: $color-blue30;
+    color: rgba($color-white, 0.4);
   }
 }
 
@@ -74,13 +80,7 @@ $btn-border-radius: $border-radius;
     background-color: $color-blue20;
   }
 
-  &[disabled] {
-    background-color: $color-white;
-    border-color: rgba($color-blue50, 0.4);
-    color: rgba($color-blue50, 0.4);
-  }
-
-  &Danger {
+  &.#{$prefix}btn--danger {
     border-color: $color-red;
     color: $color-red;
 
@@ -91,6 +91,18 @@ $btn-border-radius: $border-radius;
     &:focus {
       background-color: $color-red20;
     }
+
+    &[disabled] {
+      background-color: $color-white;
+      border-color: rgba($color-red50, 0.4);
+      color: rgba($color-red50, 0.4);
+    }
+  }
+
+  &[disabled] {
+    background-color: $color-white;
+    border-color: rgba($color-blue50, 0.4);
+    color: rgba($color-blue50, 0.4);
   }
 }
 
@@ -113,11 +125,7 @@ $btn-border-radius: $border-radius;
     color: $color-blue70;
   }
 
-  &[disabled] {
-    color: rgba($color-blue50, 0.4);
-  }
-
-  &Danger {
+  &.#{$prefix}btn--danger {
     color: $color-red;
 
     &:hover {
@@ -127,5 +135,13 @@ $btn-border-radius: $border-radius;
     &:focus {
       color: $color-red70;
     }
+
+    &[disabled] {
+      color: rgba($color-red50, 0.4);
+    }
+  }
+
+  &[disabled] {
+    color: rgba($color-blue50, 0.4);
   }
 }
