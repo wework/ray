@@ -16,10 +16,17 @@
     "node": "10.13.0"
   },
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@babel/core": "7.2.2",
+    "@storybook/addon-a11y": "4.1.7",
+    "@storybook/addon-backgrounds": "4.1.11",
+    "@storybook/addon-options": "4.1.11",
+    "@storybook/addon-viewport": "4.0.9",
+    "@storybook/react": "4.1.6",
     "babel-loader": "8.0.5",
     "css-loader": "1.0.1",
+    "cz-conventional-changelog": "2.1.0",
     "del": "3.0.0",
     "file-loader": "3.0.1",
     "gulp": "4.0.0",
@@ -30,6 +37,7 @@
     "gulp-sourcemaps": "2.6.4",
     "gulp-uglify": "3.0.1",
     "gulp-util": "3.0.8",
+    "lodash": "4.17.11",
     "mini-css-extract-plugin": "0.4.4",
     "node-sass": "4.11.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
@@ -38,19 +46,10 @@
     "react-dom": "16.7.0",
     "resolve-url-loader": "3.0.0",
     "sass-loader": "7.1.0",
+    "semantic-release": "^15.13.3",
+    "storybook-addon-jsx": "6.0.0",
     "style-loader": "0.23.1",
     "url-loader": "1.1.2"
-  },
-  "devDependencies": {
-    "@storybook/addon-a11y": "4.1.7",
-    "@storybook/addon-backgrounds": "4.1.11",
-    "@storybook/addon-options": "4.1.11",
-    "@storybook/addon-viewport": "4.0.9",
-    "@storybook/react": "4.1.6",
-    "cz-conventional-changelog": "2.1.0",
-    "lodash": "4.17.11",
-    "semantic-release": "^15.13.3",
-    "storybook-addon-jsx": "6.0.0"
   },
   "repository": {
     "type": "git",
