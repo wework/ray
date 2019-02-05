@@ -1,15 +1,17 @@
 @import './global/variables';
 @import './global/normalize';
+@import './global/base';
+@import './global/typography';
 
-// @import 'fonts';
-@import 'responsive';
-@import 'base';
+// TODO: Need a better way to handle fonts
+// @import './global/fonts';
+
 @import './components/grid/bootstrap-grid';
-@import 'typography';
-@import 'forms';
-@import 'card';
-@import 'image';
+@import './components/card/card';
 @import './components/button/button';
+@import 'responsive';
+@import 'forms';
+@import 'image';
 @import 'table';
 @import 'section';
 @import 'tabs';
