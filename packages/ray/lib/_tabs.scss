@@ -5,7 +5,7 @@ $tabs-border-size: 1px;
   display: flex;
 
   &__item {
-    @extend .p3;
+    @extend .#{$prefix}p3;
     display: block;
     cursor: pointer;
     color: $color-blue50;

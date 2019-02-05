@@ -4,65 +4,65 @@ h3,
 h4,
 h5,
 h6,
-.#{$prefix}--h1,
-.#{$prefix}--h2,
-.#{$prefix}--h3,
-.#{$prefix}--h4,
-.#{$prefix}--h5,
-.#{$prefix}--h6 {
+.#{$prefix}h1,
+.#{$prefix}h2,
+.#{$prefix}h3,
+.#{$prefix}h4,
+.#{$prefix}h5,
+.#{$prefix}h6 {
   font-weight: bold;
   margin: 0;
 }
 
 .h1,
-.#{$prefix}--h1 {
+.#{$prefix}h1 {
   font-size: 4rem;
   line-height: 96px;
   margin-bottom: 1.5rem;
 }
 
 .h2,
-.#{$prefix}--h2 {
+.#{$prefix}h2 {
   font-size: 3rem;
   line-height: 72px;
   margin-bottom: 1rem;
 }
 
 .h3,
-.#{$prefix}--h3 {
+.#{$prefix}h3 {
   font-size: 2.5rem;
   line-height: 60px;
   margin-bottom: 1rem;
 }
 
 .h4,
-.#{$prefix}--h4 {
+.#{$prefix}h4 {
   font-size: 2rem;
   line-height: 56px;
   margin-bottom: 1rem;
 }
 
 .h5,
-.#{$prefix}--h5 {
+.#{$prefix}h5 {
   font-size: 1.5rem;
   line-height: 40px;
   margin-bottom: 0.5rem;
 }
 
 .h6,
-.#{$prefix}--h6 {
+.#{$prefix}h6 {
   font-size: 1.25rem;
   line-height: 40px;
   margin-bottom: 0.5rem;
 }
 
 p,
-.p1,
-.p2,
-.p3,
-.p4,
-.p5,
-.p6 {
+.#{$prefix}p1,
+.#{$prefix}p2,
+.#{$prefix}p3,
+.#{$prefix}p4,
+.#{$prefix}p5,
+.#{$prefix}p6 {
   font-weight: 400;
   margin: 0;
 }
@@ -73,32 +73,32 @@ p {
   }
 }
 
-.p1 {
+.#{$prefix}p1 {
   font-size: 2rem;
   line-height: 48px;
 }
 
-.p2 {
+.#{$prefix}p2 {
   font-size: 1.5rem;
   line-height: 40px;
 }
 
-.p3 {
+.#{$prefix}p3 {
   font-size: 1.25rem;
   line-height: 32px;
 }
 
-.p4 {
+.#{$prefix}p4 {
   font-size: 1rem;
   line-height: 28px;
 }
 
-.p5 {
+.#{$prefix}p5 {
   font-size: 0.875rem;
   line-height: 24px;
 }
 
-.p6 {
+.#{$prefix}p6 {
   font-size: 0.75rem;
   line-height: 12px;
 }
