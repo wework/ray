@@ -102,6 +102,7 @@
   margin: 0 auto;
   padding: 0 $margin;
   padding: 0 var(--mdc-layout-grid-margin-#{$size}, #{$margin});
+  width: 100%;
 
   @if $max-width {
     max-width: $max-width;

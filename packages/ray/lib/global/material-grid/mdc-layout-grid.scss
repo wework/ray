@@ -43,12 +43,9 @@
   @each $size in map-keys($mdc-layout-grid-columns) {
     @include mdc-layout-grid-media-query_($size) {
       $margin: map-get($mdc-layout-grid-default-margin, $size);
+      $max-width: map-get($mdc-layout-grid-max-width, $size);
 
-      @include mdc-layout-grid(
-        $size,
-        $margin,
-        map-get($mdc-layout-grid-max-width, $size)
-      );
+      @include mdc-layout-grid($size, $margin, $max-width);
     }
   }
 }
