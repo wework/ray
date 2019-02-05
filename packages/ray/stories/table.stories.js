@@ -38,7 +38,7 @@ const KEYS = Object.keys(SAMPLE_DATA[0]);
 
 storiesOf('Table', module).addWithJSX('default', () =>
   withPadding(
-    <table className="table">
+    <table className="ray-table">
       <thead>
         <tr>
           {KEYS.map(key => (

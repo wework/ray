@@ -1,4 +1,4 @@
-.#{$prefix}fieldWrapper {
+.#{$prefix}field-wrapper {
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
@@ -61,7 +61,8 @@
       color: transparent;
     }
 
-    &:focus::placeholder, [placeholder] {
+    &:focus::placeholder,
+    [placeholder] {
       text-overflow: ellipsis;
       color: $color-text-light;
     }
@@ -72,7 +73,8 @@
   }
 
   // :focus-within is only supported in modern browsers (https://caniuse.com/#search=focus-within), --active should be used as a backup
-  &--active, &:focus-within {
+  &--active,
+  &:focus-within {
     border-color: $color-blue50;
 
     label {

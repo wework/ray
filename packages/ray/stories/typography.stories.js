@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import withPadding from './util/withPadding';
 
 storiesOf('Typography', module)
-  .addWithJSX('All', () =>
+  .addWithJSX('all', () =>
     withPadding(
       [
         'h1',
@@ -23,7 +23,7 @@ storiesOf('Typography', module)
         const Tag = type[0] === 'h' ? type : 'p';
         return (
           <React.Fragment>
-            <Tag className={type}>{type}</Tag>
+            <Tag className={`ray-${type}`}>ray-{type}</Tag>
           </React.Fragment>
         );
       })
@@ -32,8 +32,8 @@ storiesOf('Typography', module)
   .addWithJSX('h1 + p1', () =>
     withPadding(
       <React.Fragment>
-        <h1 className="h1">Keeping It Fresh</h1>
-        <p className="p1">
+        <h1 className="ray-h1">Keeping It Fresh</h1>
+        <p className="ray-p1">
           This is a living system that needs to be maintained, so we’re focusing
           on ease of use and keeping things up-to-date. Feel free to leave us
           feedback too!
@@ -44,8 +44,8 @@ storiesOf('Typography', module)
   .addWithJSX('h2 + p2', () =>
     withPadding(
       <React.Fragment>
-        <h1 className="h2">Keeping It Fresh</h1>
-        <p className="p2">
+        <h1 className="ray-h2">Keeping It Fresh</h1>
+        <p className="ray-p2">
           This is a living system that needs to be maintained, so we’re focusing
           on ease of use and keeping things up-to-date. Feel free to leave us
           feedback too!
@@ -56,8 +56,8 @@ storiesOf('Typography', module)
   .addWithJSX('h3 + p3', () =>
     withPadding(
       <React.Fragment>
-        <h1 className="h3">Keeping It Fresh</h1>
-        <p className="p3">
+        <h1 className="ray-h3">Keeping It Fresh</h1>
+        <p className="ray-p3">
           This is a living system that needs to be maintained, so we’re focusing
           on ease of use and keeping things up-to-date. Feel free to leave us
           feedback too!

@@ -1,6 +1,6 @@
 $tabs-border-size: 1px;
 
-.Tabs {
+.#{$prefix}tabs {
   border-bottom: $tabs-border-size solid $color-blue10;
   display: flex;
 

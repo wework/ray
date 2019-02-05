@@ -1,4 +1,4 @@
-@mixin ImgContainer {
+@mixin image {
   display: block;
   width: 100%;
   height: auto;
@@ -17,22 +17,25 @@
   }
 }
 
-.ImgContainer--16by9 {
-  @include ImgContainer;
-  padding-bottom: calc(100% / (16 / 9));
+.#{$prefix}image {
+  @include image;
+
+  &--16by9 {
+    padding-bottom: calc(100% / (16 / 9));
+  }
+
+  &--3by4 {
+    @include image;
+    padding-bottom: calc(100% / (3 / 4));
+  }
+
+  &--4By3 {
+    @include image;
+    padding-bottom: calc(100% / (4 / 3));
+  }
 }
 
-.ImgContainer--3by4 {
-  @include ImgContainer;
-  padding-bottom: calc(100% / (3 / 4));
-}
-
-.ImgContainer--4By3 {
-  @include ImgContainer;
-  padding-bottom: calc(100% / (4 / 3));
-}
-
-@mixin Background {
+@mixin background {
   display: block;
   width: 100%;
   height: auto;
@@ -42,17 +45,20 @@
   background-repeat: no-repeat;
 }
 
-.Background--16by9 {
-  @include Background;
-  padding-bottom: calc(100% / (16 / 9));
-}
+.#{$prefix}bg {
+  @include background;
 
-.Background--3by4 {
-  @include Background;
-  padding-bottom: calc(100% / (3 / 4));
-}
+  &--16by9 {
+    padding-bottom: calc(100% / (16 / 9));
+  }
 
-.Background--4by3 {
-  @include Background;
-  padding-bottom: calc(100% / (4 / 3));
+  &--3by4 {
+    @include background;
+    padding-bottom: calc(100% / (3 / 4));
+  }
+
+  &--4by3 {
+    @include background;
+    padding-bottom: calc(100% / (4 / 3));
+  }
 }
