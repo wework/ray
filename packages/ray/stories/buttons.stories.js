@@ -33,7 +33,7 @@ storiesOf('Buttons', module)
       </button>
     </>
   ))
-  .addWithJSX('primary', () => (
+  .addWithJSX('secondary', () => (
     <>
       <button className="ray--btn ray--btn--secondary">Click me</button>
       <Divider />
