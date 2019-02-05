@@ -2,11 +2,11 @@
 @import './global/normalize';
 @import './global/base';
 @import './global/typography';
+@import './global/material-grid/mdc-layout-grid';
 
 // TODO: Need a better way to handle fonts
 // @import './global/fonts';
 
-@import './components/grid/bootstrap-grid';
 @import './components/card/card';
 @import './components/button/button';
 @import 'responsive';
