@@ -1,10 +1,10 @@
 $card-padding: 1rem;
-$card-border-color: $color-gray35;
+$card-border-color: $ray-color-gray-10;
 
 .#{$prefix}card {
   width: 100%;
   border-radius: $border-radius;
-  background-color: $color-white;
+  background-color: $ray-color-white;
   overflow: hidden;
   height: 100%;
   display: flex;

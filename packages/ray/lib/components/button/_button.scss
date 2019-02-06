@@ -6,7 +6,7 @@ $btn-border-radius: $border-radius;
   font-weight: 400;
   line-height: 1;
   display: inline-block;
-  border: $border-width solid $color-blue50;
+  border: $border-width solid $ray-color-blue-50;
   border-radius: $btn-border-radius;
   cursor: pointer;
   padding: $btn-v-spacing $btn-h-spacing;
@@ -27,82 +27,82 @@ $btn-border-radius: $border-radius;
 }
 
 .#{$prefix}btn--primary {
-  background-color: $color-blue50;
-  color: $color-white;
+  background-color: $ray-color-blue-50;
+  color: $ray-color-white;
 
   &:hover {
-    background-color: $color-blue60;
-    border-color: $color-blue60;
+    background-color: $ray-color-blue-60;
+    border-color: $ray-color-blue-60;
   }
 
   &:focus {
-    background-color: $color-blue70;
-    border-color: $color-blue70;
+    background-color: $ray-color-blue-70;
+    border-color: $ray-color-blue-70;
   }
 
   &.#{$prefix}btn--danger {
-    background-color: $color-red;
-    border-color: $color-red;
+    background-color: $ray-color-red-50;
+    border-color: $ray-color-red-50;
 
     &:hover {
-      background-color: $color-red60;
-      border-color: $color-red60;
+      background-color: $ray-color-red-60;
+      border-color: $ray-color-red-60;
     }
 
     &:focus {
-      background-color: $color-red70;
-      border-color: $color-red70;
+      background-color: $ray-color-red-70;
+      border-color: $ray-color-red-70;
     }
 
     &[disabled] {
-      background-color: $color-red30;
-      border-color: $color-red30;
-      color: rgba($color-white, 0.4);
+      background-color: $ray-color-red-20;
+      border-color: $ray-color-red-20;
+      color: rgba($ray-color-white, 0.4);
     }
   }
 
   &[disabled] {
-    background-color: $color-blue30;
-    border-color: $color-blue30;
-    color: rgba($color-white, 0.4);
+    background-color: $ray-color-blue-20;
+    border-color: $ray-color-blue-20;
+    color: rgba($ray-color-white, 0.4);
   }
 }
 
 .#{$prefix}btn--secondary {
-  color: $color-blue50;
-  background-color: $color-white;
+  color: $ray-color-blue-50;
+  background-color: $ray-color-white;
 
   &:hover {
-    background-color: $color-blue10;
+    background-color: $ray-color-blue-10;
   }
 
   &:focus {
-    background-color: $color-blue20;
+    background-color: $ray-color-blue-20;
   }
 
   &.#{$prefix}btn--danger {
-    border-color: $color-red;
-    color: $color-red;
+    border-color: $ray-color-red-50;
+    color: $ray-color-red-50;
 
     &:hover {
-      background-color: $color-red10;
+      background-color: $ray-color-red-10;
     }
 
     &:focus {
-      background-color: $color-red20;
+      background-color: $ray-color-red-20;
     }
 
     &[disabled] {
-      background-color: $color-white;
-      border-color: rgba($color-red50, 0.4);
-      color: rgba($color-red50, 0.4);
+      background-color: $ray-color-white;
+      border-color: rgba($ray-color-red-50, 0.4);
+      color: rgba($ray-color-red-50, 0.4);
     }
   }
 
   &[disabled] {
-    background-color: $color-white;
-    border-color: rgba($color-blue50, 0.4);
-    color: rgba($color-blue50, 0.4);
+    background-color: $ray-color-white;
+    border-color: rgba($ray-color-blue-50, 0.4);
+    color: rgba($ray-color-blue-50, 0.4);
   }
 }
 
@@ -113,35 +113,35 @@ $btn-border-radius: $border-radius;
 }
 
 .#{$prefix}btn--tertiary {
-  color: $color-blue50;
+  color: $ray-color-blue-50;
   background-color: transparent;
   border-color: transparent;
 
   &:hover {
-    color: $color-blue60;
+    color: $ray-color-blue-60;
   }
 
   &:focus {
-    color: $color-blue70;
+    color: $ray-color-blue-70;
   }
 
   &.#{$prefix}btn--danger {
-    color: $color-red;
+    color: $ray-color-red-50;
 
     &:hover {
-      color: $color-red60;
+      color: $ray-color-red-60;
     }
 
     &:focus {
-      color: $color-red70;
+      color: $ray-color-red-70;
     }
 
     &[disabled] {
-      color: rgba($color-red50, 0.4);
+      color: rgba($ray-color-red-50, 0.4);
     }
   }
 
   &[disabled] {
-    color: rgba($color-blue50, 0.4);
+    color: rgba($ray-color-blue-50, 0.4);
   }
 }

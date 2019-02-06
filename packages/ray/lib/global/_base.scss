@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: $font-stack-sans-serif;
-  color: $color-text-dark;
+  color: $ray-color-text-dark;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $color-blue50;
+  color: $ray-color-blue-50;
 
   &:hover,
   &:focus {

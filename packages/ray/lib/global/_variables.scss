@@ -12,72 +12,9 @@ $breakpoint-desktop-large-px: 1024px !default;
 $border-radius: 0.25rem !default;
 $border-width: 1px !default;
 
-$color-black70: #000 !default;
-$color-black60: #384d4d !default;
-$color-black50: #252729 !default;
-$color-black40: #3d4144 !default;
-$color-black30: #555a5f !default;
-$color-black20: #0a0f13 !default;
-$color-gray80: #747476 !default;
-$color-gray70: #8e8e8f !default;
-$color-gray60: #a7a7a9 !default;
-$color-gray50: #c1c1c2 !default;
-$color-gray40: #dbdbdb !default;
-$color-gray35: #e6e6e6 !default;
-$color-gray30: #f4f4f5 !default;
-$color-white: #fff !default;
-
-$color-yellow: #ffd500 !default;
-$color-yellow80: darken($color-yellow, 30%) !default;
-$color-yellow70: darken($color-yellow, 20%) !default;
-$color-yellow60: darken($color-yellow, 10%) !default;
-$color-yellow50: $color-yellow !default;
-$color-yellow40: lighten($color-yellow, 10%) !default;
-$color-yellow30: lighten($color-yellow, 20%) !default;
-$color-yellow20: lighten($color-yellow, 30%) !default;
-
-$color-blue: #0000ff !default;
-$color-blue90: darken($color-blue, 40%) !default;
-$color-blue80: darken($color-blue, 30%) !default;
-$color-blue70: darken($color-blue, 20%) !default;
-$color-blue60: darken($color-blue, 10%) !default;
-$color-blue50: $color-blue !default;
-$color-blue40: lighten($color-blue, 10%) !default;
-$color-blue30: lighten($color-blue, 20%) !default;
-$color-blue20: lighten($color-blue, 30%) !default;
-$color-blue10: lighten($color-blue, 40%) !default;
-$color-blue01: lighten($color-blue, 49%) !default;
-
-$color-red: #ff0000;
-$color-red90: darken($color-red, 40%) !default;
-$color-red80: darken($color-red, 30%) !default;
-$color-red70: darken($color-red, 20%) !default;
-$color-red60: darken($color-red, 10%) !default;
-$color-red50: $color-red !default;
-$color-red40: lighten($color-red, 10%) !default;
-$color-red30: lighten($color-red, 20%) !default;
-$color-red20: lighten($color-red, 30%) !default;
-$color-red10: lighten($color-red, 40%) !default;
-$color-red01: lighten($color-red, 49%) !default;
-
-$color-green: #00cc00;
-$color-green90: darken($color-green, 40%) !default;
-$color-green80: darken($color-green, 30%) !default;
-$color-green70: darken($color-green, 20%) !default;
-$color-green60: darken($color-green, 10%) !default;
-$color-green50: $color-green !default;
-$color-green40: lighten($color-green, 10%) !default;
-$color-green30: lighten($color-green, 20%) !default;
-$color-green20: lighten($color-green, 30%) !default;
-$color-green10: lighten($color-green, 40%) !default;
-$color-green01: lighten($color-green, 49%) !default;
-
-$color-text-light: #b0b0b0;
-$color-text-medium: #666666;
-$color-text-dark: #000000;
-
-$color-primary: $color-blue50 !default;
-$color-secondary: $color-yellow50 !default;
+$ray-color-text-light: $ray-color-gray-30;
+$ray-color-text-medium: $ray-color-gray-60;
+$ray-color-text-dark: $ray-color-black;
 
 $field-v-spacing: 20px;
 $field-v-spacing-compact: 12px;

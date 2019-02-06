@@ -1,14 +1,14 @@
 $tabs-border-size: 1px;
 
 .#{$prefix}tabs {
-  border-bottom: $tabs-border-size solid $color-blue10;
+  border-bottom: $tabs-border-size solid $ray-color-blue-50;
   display: flex;
 
   &__item {
     @extend .#{$prefix}p3;
     display: block;
     cursor: pointer;
-    color: $color-blue50;
+    color: $ray-color-blue-50;
     text-align: center;
     min-width: 200px;
     padding-top: 1rem;
@@ -16,12 +16,12 @@ $tabs-border-size: 1px;
     margin-bottom: -$tabs-border-size !important;
 
     &:hover {
-      background-color: $color-blue01;
-      border-bottom: 1px solid $color-blue50;
+      background-color: $ray-color-blue-50;
+      border-bottom: 1px solid $ray-color-blue-50;
     }
 
     &--active {
-      border-bottom: 1px solid $color-blue50;
+      border-bottom: 1px solid $ray-color-blue-50;
     }
   }
 }
