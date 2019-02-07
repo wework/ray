@@ -42,15 +42,15 @@ storiesOf('Table', module).addWithJSX('default', () =>
       <thead>
         <tr>
           {KEYS.map(key => (
-            <th>{key}</th>
+            <th key={key}>{key}</th>
           ))}
         </tr>
       </thead>
       <tbody>
         {SAMPLE_DATA.map(item => (
-          <tr>
+          <tr key={item.email}>
             {KEYS.map(key => (
-              <td>{item[key]}</td>
+              <td key={key}>{item[key]}</td>
             ))}
           </tr>
         ))}

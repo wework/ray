@@ -19,20 +19,24 @@
     font-weight: 400;
     display: block;
     position: absolute;
-    left: $field-h-spacing;
-    top: $field-v-spacing;
+    top: 0;
+    left: 0;
+    padding-left: $field-h-spacing;
+    padding-right: $field-h-spacing;
+    padding-top: $field-v-spacing;
     color: $ray-color-text-medium;
     transition: all 0.125s ease;
-    pointer-events: none;
+    height: 100%;
+    width: 100%;
 
     // handle truncating label
-    width: calc(100% - (2 * #{$field-h-spacing}));
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   input,
+  textarea,
   &__input {
     font-family: inherit;
     line-height: 1;
@@ -49,12 +53,12 @@
     &:not(:placeholder-shown) {
       + label {
         font-size: $field-label-size-focus;
-        top: $field-h-spacing - $border-width;
+        padding-top: $field-h-spacing - $border-width;
       }
     }
 
     &::placeholder {
-      transition: all 0.125s ease;
+      transition: color 0.125s ease-in;
     }
 
     &:not(:focus)::placeholder {
@@ -79,11 +83,17 @@
 
     label {
       font-size: $field-label-size-focus;
-      top: $field-h-spacing - $border-width;
+      padding-top: $field-h-spacing - $border-width;
     }
 
-    input::placeholder {
+    input::placeholder, textarea::placeholder {
       color: $ray-color-text-light !important;
+    }
+
+    &.#{$prefix}field--compact {
+      label {
+        opacity: 0;
+      }
     }
   }
 
@@ -132,11 +142,12 @@
 
   label,
   &--label {
-    top: $field-v-spacing-compact;
+    padding-top: $field-v-spacing-compact;
     transition: none;
   }
 
   input,
+  textarea,
   &--input {
     padding-top: 0;
 
@@ -145,6 +156,47 @@
       + label {
         opacity: 0;
       }
+    }
+  }
+}
+
+.#{$prefix}field__textarea {
+  height: auto;
+  min-height: $field-height;
+  position: relative;
+
+  textarea {
+    padding: 0 $field-h-spacing;
+    resize: vertical;
+    line-height: 28px;
+
+    &::placeholder {
+      transition: none;
+    }
+  }
+
+  &.#{$prefix}field--compact {
+    padding-top: $field-v-spacing-compact / 2;
+    min-height: $field-height-compact;
+
+    textarea {
+      height: 2rem;
+      min-height: 2rem;
+    }
+  }
+
+  &.#{$prefix}field--active,
+  &:focus-within,
+  &:not(:placeholder-shown) {
+    padding-top: $field-v-spacing + 2 * $border-width;
+
+    textarea {
+      height: 2rem;
+      min-height: 2rem;
+    }
+
+    &.#{$prefix}field--compact {
+      padding-top: $field-v-spacing-compact / 2;
     }
   }
 }

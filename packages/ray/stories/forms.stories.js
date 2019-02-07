@@ -12,7 +12,7 @@ storiesOf('Forms', module)
           type="email"
           placeholder="arya.stark@winterfell.org"
         />
-        <label for="email">Email address</label>
+        <label htmlFor="email">Email address</label>
       </div>
     )
   )
@@ -24,7 +24,31 @@ storiesOf('Forms', module)
           type="email"
           placeholder="arya.stark@winterfell.org"
         />
-        <label for="email">Email address</label>
+        <label htmlFor="email">Email address</label>
+      </div>
+    )
+  )
+  .addWithJSX('Text field, textarea', () =>
+    withPadding(
+      <div className="ray-field ray-field__textarea">
+        <textarea id="textarea" placeholder="Few people are aware..." />
+        <label htmlFor="textarea">Fun fact about Ray Eames</label>
+      </div>
+    )
+  )
+  .addWithJSX('Text field, multi-row textarea', () =>
+    withPadding(
+      <div className="ray-field ray-field__textarea">
+        <textarea row="4" id="textarea" placeholder="Few people are aware..." />
+        <label htmlFor="textarea">Fun fact about Ray Eames</label>
+      </div>
+    )
+  )
+  .addWithJSX('Text field, active, textarea', () =>
+    withPadding(
+      <div className="ray-field ray-field--active ray-field__textarea">
+        <textarea id="textarea" placeholder="Few people are aware..." />
+        <label htmlFor="textarea">Fun fact about Ray Eames</label>
       </div>
     )
   )
@@ -37,7 +61,7 @@ storiesOf('Forms', module)
           placeholder="arya.stark@winterfell.org"
           disabled
         />
-        <label for="email">Email address</label>
+        <label htmlFor="email">Email address</label>
       </div>
     )
   )
@@ -50,11 +74,11 @@ storiesOf('Forms', module)
           placeholder="arya.stark@winterfell.org"
           disabled
         />
-        <label for="email">Email address</label>
+        <label htmlFor="email">Email address</label>
       </div>
     )
   )
-  .addWithJSX('Example form', () =>
+  .addWithJSX('Example Form', () =>
     withPadding(
       <div className="container">
         <div className="row">
@@ -63,7 +87,7 @@ storiesOf('Forms', module)
             <div className="ray-field-wrapper">
               <div className="ray-field">
                 <input id="name" type="text" placeholder="Arya Stark" />
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
               </div>
             </div>
             <div className="ray-field-wrapper">
@@ -73,14 +97,14 @@ storiesOf('Forms', module)
                   type="text"
                   placeholder="arya.stark@winterfell.org"
                 />
-                <label for="email">Email address</label>
+                <label htmlFor="email">Email address</label>
               </div>
               <div className="ray-field__hint">We want your emails</div>
             </div>
             <div className="ray-field-wrapper">
               <div className="ray-field">
                 <input id="password" type="password" placeholder="*********" />
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
             </div>
             <div className="ray-field-wrapper">
@@ -90,7 +114,7 @@ storiesOf('Forms', module)
                   type="text"
                   placeholder="Super soopah soup or super long placeholder"
                 />
-                <label for="long-label">
+                <label htmlFor="long-label">
                   Label Empty State That Overflows quickly and is very long
                 </label>
               </div>
@@ -110,7 +134,7 @@ storiesOf('Forms', module)
             <div className="ray-field-wrapper">
               <div className="ray-field">
                 <input id="name" type="text" placeholder="Arya Stark" />
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
               </div>
               <div className="ray-field__hint">Nuetral hint</div>
             </div>
@@ -121,7 +145,7 @@ storiesOf('Forms', module)
                   type="text"
                   placeholder="arya.stark@winterfell.org"
                 />
-                <label for="email">Email address</label>
+                <label htmlFor="email">Email address</label>
               </div>
               <div className="ray-field__hint ray-field__hint--success">
                 Success hint
@@ -130,7 +154,7 @@ storiesOf('Forms', module)
             <div className="ray-field-wrapper">
               <div className="ray-field ray-field--error">
                 <input id="password" type="password" placeholder="*********" />
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
               <div className="ray-field__hint ray-field__hint--error">
                 Error hint
@@ -144,16 +168,36 @@ storiesOf('Forms', module)
   .addWithJSX('Text field - compact', () =>
     withPadding(
       <div className="ray-field ray-field--compact">
-        <input
-          id="email"
-          type="email"
-          placeholder="arya.stark@winterfell.org"
-        />
-        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="arya.stark@winterfell.org" />
+        <label htmlFor="email">Email address</label>
       </div>
     )
   )
-  .addWithJSX('Example form - compact', () =>
+  .addWithJSX('Text field, active - compact', () =>
+    withPadding(
+      <div className="ray-field ray-field--active ray-field--compact">
+        <input id="email" type="email" placeholder="arya.stark@winterfell.org" />
+        <label htmlFor="email">Email address</label>
+      </div>
+    )
+  )
+  .addWithJSX('Text field, textarea - compact', () =>
+    withPadding(
+      <div className="ray-field ray-field--compact ray-field__textarea">
+        <textarea id="textarea" placeholder="Few people are aware..." />
+        <label htmlFor="textarea">Fun fact about Ray Eames</label>
+      </div>
+    )
+  )
+  .addWithJSX('Text field, active, textarea - compact', () =>
+    withPadding(
+      <div className="ray-field ray-field--active ray-field--compact ray-field__textarea">
+        <textarea id="textarea" placeholder="Few people are aware..." />
+        <label htmlFor="textarea">Fun fact about Ray Eames</label>
+      </div>
+    )
+  )
+  .addWithJSX('Example Form - compact', () =>
     withPadding(
       <div className="container">
         <div className="row">
@@ -162,7 +206,7 @@ storiesOf('Forms', module)
             <div className="ray-field-wrapper">
               <div className="ray-field ray-field--compact">
                 <input id="name" type="text" placeholder="Arya Stark" />
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
               </div>
             </div>
             <div className="ray-field-wrapper">
@@ -172,14 +216,14 @@ storiesOf('Forms', module)
                   type="text"
                   placeholder="arya.stark@winterfell.org"
                 />
-                <label for="email">Email address</label>
+                <label htmlFor="email">Email address</label>
               </div>
               <div className="ray-field__hint">We want your emails</div>
             </div>
             <div className="ray-field-wrapper">
               <div className="ray-field ray-field--compact">
                 <input id="password" type="password" placeholder="*********" />
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
             </div>
             <div className="ray-field-wrapper">
@@ -189,9 +233,15 @@ storiesOf('Forms', module)
                   type="text"
                   placeholder="Super soopah soup or super long placeholder"
                 />
-                <label for="long-label">
+                <label htmlFor="long-label">
                   Label Empty State That Overflows quickly and is very long
                 </label>
+              </div>
+            </div>
+            <div className="ray-field-wrapper">
+              <div className="ray-field ray-field__textarea ray-field--compact">
+                <textarea id="textarea" placeholder="Tell me, uh, something about yourself" />
+                <label htmlFor="textarea">Notes</label>
               </div>
             </div>
 
@@ -211,7 +261,7 @@ storiesOf('Forms', module)
             <div className="ray-field-wrapper">
               <div className="ray-field ray-field--compact">
                 <input id="name" type="text" placeholder="Arya Stark" />
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
               </div>
               <div className="ray-field__hint">Nuetral hint</div>
             </div>
@@ -222,7 +272,7 @@ storiesOf('Forms', module)
                   type="text"
                   placeholder="arya.stark@winterfell.org"
                 />
-                <label for="email">Email address</label>
+                <label htmlFor="email">Email address</label>
               </div>
               <div className="ray-field__hint ray-field__hint--success">
                 Success hint
@@ -231,7 +281,7 @@ storiesOf('Forms', module)
             <div className="ray-field-wrapper">
               <div className="ray-field ray-field--error ray-field--compact">
                 <input id="password" type="password" placeholder="*********" />
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
               <div className="ray-field__hint ray-field__hint--error">
                 Error hint
