@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import withPadding from './util/withPadding';
 
-storiesOf('Forms', module)
+storiesOf('Forms - Text Fields', module)
   .addWithJSX('Text field', () =>
     withPadding(
       <div className="ray-field">

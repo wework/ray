@@ -4,6 +4,8 @@ $font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif !default;
 $font-stack-mono: 'Apercu Mono', monospace !default;
 
+$transition: all 0.125s ease;
+
 $breakpoint-mobile-px: 400px !default;
 $breakpoint-tablet-px: 600px !default;
 $breakpoint-desktop-px: 840px !default;
