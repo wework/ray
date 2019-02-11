@@ -54,6 +54,7 @@
       + label {
         font-size: $field-label-size-focus;
         padding-top: $field-h-spacing - $border-width;
+        pointer-events: none;
       }
     }
 
@@ -84,6 +85,7 @@
     label {
       font-size: $field-label-size-focus;
       padding-top: $field-h-spacing - $border-width;
+      pointer-events: none;
     }
 
     input::placeholder, textarea::placeholder {
@@ -155,6 +157,7 @@
     &:not(:placeholder-shown) {
       + label {
         opacity: 0;
+        pointer-events: none;
       }
     }
   }
@@ -164,11 +167,14 @@
   height: auto;
   min-height: $field-height;
   position: relative;
+  padding-top: $field-v-spacing + 2 * $border-width;
 
   textarea {
     padding: 0 $field-h-spacing;
     resize: vertical;
     line-height: 28px;
+    height: 2rem;
+    min-height: 2rem;
 
     &::placeholder {
       transition: none;
@@ -182,21 +188,6 @@
     textarea {
       height: 2rem;
       min-height: 2rem;
-    }
-  }
-
-  &.#{$prefix}field--active,
-  &:focus-within,
-  &:not(:placeholder-shown) {
-    padding-top: $field-v-spacing + 2 * $border-width;
-
-    textarea {
-      height: 2rem;
-      min-height: 2rem;
-    }
-
-    &.#{$prefix}field--compact {
-      padding-top: $field-v-spacing-compact / 2;
     }
   }
 }
