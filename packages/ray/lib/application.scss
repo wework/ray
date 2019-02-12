@@ -11,9 +11,9 @@
 @import './components/card/card';
 @import './components/button/button';
 @import './components/radio-checkbox/radio-checkbox';
-@import 'responsive';
-@import 'forms';
-@import 'image';
-@import 'table';
-@import 'section';
-@import 'tabs';
+@import './components/text-field/text-field';
+@import './components/image/image';
+@import './components/table/table';
+@import './components/tabs/tabs';
+
+// @import 'section';
