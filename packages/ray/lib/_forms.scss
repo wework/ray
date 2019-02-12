@@ -28,6 +28,7 @@
     transition: all 0.125s ease;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 
     // handle truncating label
     white-space: nowrap;
@@ -48,6 +49,7 @@
     padding: $field-v-spacing $field-h-spacing 0;
     outline: 0;
     border: 0;
+    cursor: pointer;
 
     &:focus,
     &:not(:placeholder-shown) {
@@ -88,7 +90,8 @@
       pointer-events: none;
     }
 
-    input::placeholder, textarea::placeholder {
+    input::placeholder,
+    textarea::placeholder {
       color: $ray-color-text-light !important;
     }
 

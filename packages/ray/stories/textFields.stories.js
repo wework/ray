@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import withPadding from './util/withPadding';
 
-storiesOf('Forms - Text Fields', module)
+storiesOf('Text Field', module)
   .addWithJSX('Text field', () =>
     withPadding(
       <div className="ray-field">
@@ -168,7 +168,11 @@ storiesOf('Forms - Text Fields', module)
   .addWithJSX('Text field - compact', () =>
     withPadding(
       <div className="ray-field ray-field--compact">
-        <input id="email" type="email" placeholder="arya.stark@winterfell.org" />
+        <input
+          id="email"
+          type="email"
+          placeholder="arya.stark@winterfell.org"
+        />
         <label htmlFor="email">Email address</label>
       </div>
     )
@@ -176,7 +180,11 @@ storiesOf('Forms - Text Fields', module)
   .addWithJSX('Text field, active - compact', () =>
     withPadding(
       <div className="ray-field ray-field--active ray-field--compact">
-        <input id="email" type="email" placeholder="arya.stark@winterfell.org" />
+        <input
+          id="email"
+          type="email"
+          placeholder="arya.stark@winterfell.org"
+        />
         <label htmlFor="email">Email address</label>
       </div>
     )
@@ -240,7 +248,10 @@ storiesOf('Forms - Text Fields', module)
             </div>
             <div className="ray-field-wrapper">
               <div className="ray-field ray-field__textarea ray-field--compact">
-                <textarea id="textarea" placeholder="Tell me, uh, something about yourself" />
+                <textarea
+                  id="textarea"
+                  placeholder="Tell me, uh, something about yourself"
+                />
                 <label htmlFor="textarea">Notes</label>
               </div>
             </div>
