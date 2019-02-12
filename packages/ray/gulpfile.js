@@ -5,7 +5,9 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 
-gulp.task('clean', () => del(['scss', 'css', 'scripts', 'html', 'dist']));
+gulp.task('clean', () =>
+  del(['scss', 'css', 'scripts', 'html', 'dist', 'storybook-static'])
+);
 
 gulp.task('sass:compiled', () => {
   function buildStyles(prod) {
