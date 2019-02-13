@@ -13,6 +13,8 @@
 
   label,
   &__label {
+    @include no-select;
+
     font-family: $font-stack-mono;
     font-size: $field-label-size;
     line-height: 1;
@@ -62,6 +64,7 @@
 
     &::placeholder {
       transition: color 0.125s ease-in;
+      @include no-select;
     }
 
     &:not(:focus)::placeholder {
