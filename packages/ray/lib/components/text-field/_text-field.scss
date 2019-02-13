@@ -1,11 +1,6 @@
-.#{$prefix}field-wrapper {
-  &:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.#{$prefix}field {
-  border: $border-width solid $ray-color-gray-10;
+.#{$prefix}text-field,
+.#{$prefix}text-area {
+  border: $border-width solid $ray-color-gray-60;
   background-color: $ray-color-white;
   border-radius: $border-radius;
   position: relative;
@@ -115,7 +110,8 @@
       color: $ray-color-text-light !important;
     }
 
-    &.#{$prefix}field--compact {
+    &.#{$prefix}text-field--compact,
+    &.#{$prefix}text-area--compact {
       label {
         opacity: 0;
       }
@@ -123,7 +119,7 @@
   }
 
   &--disabled {
-    border-color: $ray-color-gray-10;
+    border-color: rgba($ray-color-gray-60, 0.4);
   }
 
   &--success {
@@ -132,28 +128,6 @@
 
   &--error {
     border-color: $ray-color-red-50;
-  }
-
-  &__hint {
-    display: block;
-    color: $ray-color-text-medium;
-    font-weight: 400;
-    font-size: $field-label-size-focus;
-    margin-top: 0.25rem;
-    margin-left: $field-h-spacing;
-    line-height: 1;
-    width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-
-    &--success {
-      color: $ray-color-green-70;
-    }
-
-    &--error {
-      color: $ray-color-red-50;
-    }
   }
 
   [disabled] {
@@ -166,34 +140,33 @@
       color: rgba($ray-color-gray-60, 0.4);
     }
   }
-}
 
-.#{$prefix}field--compact {
-  height: $field-height-compact;
+  &--compact {
+    height: $field-height-compact;
 
-  label,
-  &--label {
-    padding-top: $field-v-spacing-compact;
-    transition: none;
-  }
+    label,
+    &__label {
+      padding-top: $field-v-spacing-compact;
+      transition: none;
+    }
 
-  input,
-  textarea,
-  &--input {
-    padding-top: 0;
+    input,
+    textarea,
+    &__input {
+      padding-top: 0;
 
-    &:focus,
-    &:not(:placeholder-shown) {
-      + label {
-        opacity: 0;
-        pointer-events: none;
+      &:focus,
+      &:not(:placeholder-shown) {
+        + label {
+          opacity: 0;
+          pointer-events: none;
+        }
       }
     }
   }
 }
 
-// @Todo: Move this into its own file
-.#{$prefix}field__textarea {
+.#{$prefix}text-area {
   height: auto;
   min-height: $field-height;
   position: relative;
@@ -210,7 +183,7 @@
     }
   }
 
-  &.#{$prefix}field--compact {
+  &--compact {
     min-height: $field-height-compact;
 
     textarea {
