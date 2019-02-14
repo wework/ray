@@ -1,3 +1,5 @@
+@import '../../global/mixins/form-items';
+
 .#{$prefix}text-field,
 .#{$prefix}text-area {
   border: $border-width solid $ray-color-gray-60;
@@ -8,30 +10,8 @@
 
   label,
   &__label {
-    @include no-select;
-
-    font-family: $font-stack-mono;
-    font-size: $field-label-size;
-    line-height: 1;
-    font-weight: 400;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-left: $field-h-spacing;
-    padding-right: $field-h-spacing;
-    padding-top: $field-v-spacing;
-    color: $ray-color-text-medium;
-    transition: padding 0.125s ease;
-    height: 100%;
-    width: 100%;
-    max-width: calc(100% - 12px);
-    cursor: pointer;
-
-    // handle truncating label
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @include label;
+    z-index: 2;
   }
 
   input,
@@ -53,17 +33,7 @@
     &:focus,
     &:not(:placeholder-shown) {
       + label {
-        font-size: $field-label-size-focus;
-        padding-top: 0;
-        pointer-events: none;
-
-        top: -$field-h-spacing / 2;
-        left: $field-h-spacing / 2;
-        padding-left: $field-h-spacing / 2;
-        padding-right: $field-h-spacing / 2;
-        width: auto;
-        height: auto;
-        background: $ray-color-white;
+        @include label--active;
       }
     }
 
@@ -93,22 +63,14 @@
     border-color: $ray-color-blue-50;
 
     label {
-      font-size: $field-label-size-focus;
-      padding-top: 0;
-      pointer-events: none;
-
-      top: -$field-h-spacing / 2;
-      left: $field-h-spacing / 2;
-      padding-left: $field-h-spacing / 2;
-      padding-right: $field-h-spacing / 2;
-      width: auto;
-      height: auto;
-      background: $ray-color-white;
+      @include label--active;
     }
 
-    input::placeholder,
-    textarea::placeholder {
-      color: $ray-color-text-light !important;
+    input,
+    textarea {
+      &::placeholder {
+        color: $ray-color-text-light !important;
+      }
     }
 
     &.#{$prefix}text-field--compact,

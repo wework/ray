@@ -1,13 +1,15 @@
+@import '../../global/mixins/form-items';
+
 .#{$prefix}select {
-  border: $border-width solid $ray-color-gray-50;
+  border: $border-width solid $ray-color-gray-60;
   background-color: $ray-color-white;
   border-radius: $border-radius;
   position: relative;
   height: $field-height;
 
   &::after {
-    pointer-events: none;
     content: '';
+    pointer-events: none;
     position: absolute;
     right: $field-h-spacing;
     top: 0px;
@@ -17,8 +19,14 @@
     margin: auto;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 8px solid $ray-color-gray-50;
+    border-top: 8px solid $ray-color-gray-60;
     border-radius: 2px;
+  }
+
+  &__label {
+    @include label;
+    pointer-events: none;
+    z-index: 2;
   }
 
   &__input {
@@ -35,5 +43,72 @@
     outline: 0;
     border: 0;
     cursor: pointer;
+    color: transparent;
+  }
+
+  &--placeholder-mode {
+    .#{$prefix}select__label {
+      @include label--active;
+    }
+
+    .#{$prefix}select__input {
+      color: $ray-color-text-light;
+    }
+  }
+
+  &--has-value {
+    .#{$prefix}select__label {
+      @include label--active;
+    }
+
+    .#{$prefix}select__input {
+      color: $ray-color-black;
+    }
+  }
+
+  &--active {
+    border-color: $ray-color-blue-50;
+
+    .#{$prefix}select__label {
+      @include label--active;
+      color: $ray-color-blue-50;
+    }
+
+    .#{$prefix}select__input {
+      color: $ray-color-blue-50;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      border-top-color: $ray-color-blue-50;
+    }
+  }
+
+  &--compact {
+    height: $field-height-compact;
+
+    .#{$prefix}select__label {
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &--disabled {
+    border-color: rgba($ray-color-gray-60, 0.4);
+
+    &::after {
+      border-top-color: rgba($ray-color-gray-60, 0.4);
+    }
+
+    .#{$prefix}select__input {
+      color: rgba($ray-color-gray-60, 0.4);
+      cursor: not-allowed;
+    }
+
+    .#{$prefix}select__label {
+      color: rgba($ray-color-gray-60, 0.4);
+    }
   }
 }
