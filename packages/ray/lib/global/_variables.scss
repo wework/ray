@@ -23,8 +23,9 @@ $field-v-spacing-compact: 12px;
 $field-h-spacing: 12px;
 $field-label-size: 1rem;
 $field-label-size-focus: 12px;
-$field-height: calc((#{$field-v-spacing} * 2) + 1rem);
-$field-height-compact: calc((#{$field-v-spacing-compact} * 2) + 1rem);
+$field-height: 56px;
+$field-height-compact: 40px;
+$field-line-height: 28px;
 
 $padding-5: 5rem;
 

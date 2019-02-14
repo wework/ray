@@ -192,6 +192,19 @@ storiesOf('Text Field', module)
       </div>
     )
   )
+  .addWithJSX('Text field - compact - disabled', () =>
+    withPadding(
+      <div className="ray-text-field ray-text-field--compact ray-text-field--disabled">
+        <input
+          id="email"
+          type="email"
+          placeholder="arya.stark@winterfell.org"
+          disabled
+        />
+        <label htmlFor="email">Email address</label>
+      </div>
+    )
+  )
   .addWithJSX('Text field, textarea - compact', () =>
     withPadding(
       <div className="ray-text-area ray-text-area--compact">
