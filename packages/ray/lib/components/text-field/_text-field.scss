@@ -8,14 +8,11 @@
   position: relative;
   height: $field-height;
 
-  label,
   &__label {
     @include label;
     z-index: 2;
   }
 
-  input,
-  textarea,
   &__input {
     font-family: inherit;
     border-radius: $border-radius;
@@ -62,13 +59,14 @@
   &:focus-within {
     border-color: $ray-color-blue-50;
 
-    label {
+    .#{$prefix}text-field__label,
+    .#{$prefix}text-area__label {
       @include label--active;
       color: $ray-color-blue-50;
     }
 
-    input,
-    textarea {
+    .#{$prefix}text-field__input,
+    .#{$prefix}text-area__input {
       &::placeholder {
         color: $ray-color-text-light !important;
       }
@@ -76,7 +74,8 @@
 
     &.#{$prefix}text-field--compact,
     &.#{$prefix}text-area--compact {
-      label {
+      .#{$prefix}text-field__label,
+      .#{$prefix}text-area__label {
         padding-top: 0;
       }
     }
@@ -99,7 +98,8 @@
     @include no-select;
 
     &,
-    + label {
+    + .#{$prefix}text-field__label,
+    + .#{$prefix}text-area__label {
       cursor: not-allowed;
       color: rgba($ray-color-gray-60, 0.4);
     }
@@ -108,14 +108,13 @@
   &--compact {
     height: $field-height-compact;
 
-    label,
-    &__label {
+    .#{$prefix}text-field__label,
+    .#{$prefix}text-area__label {
       padding-top: $field-v-spacing-compact;
     }
 
-    input,
-    textarea,
-    &__input {
+    .#{$prefix}text-field__input,
+    .#{$prefix}text-area__input {
       padding-top: 0;
 
       &:focus,
@@ -133,12 +132,12 @@
   line-height: 0;
 
   &,
-  textarea {
+  &__input {
     height: auto;
     min-height: $field-height - 2 * $border-width;
   }
 
-  textarea {
+  &__input {
     display: inline-block;
     padding-top: 1rem;
     resize: vertical;
@@ -150,7 +149,7 @@
     min-height: $field-height-compact;
     line-height: 0;
 
-    textarea {
+    .#{$prefix}text-area__input {
       padding-top: $field-v-spacing-compact / 2;
       height: $field-height-compact - 2 * $border-width;
       min-height: $field-height-compact - 2 * $border-width;
