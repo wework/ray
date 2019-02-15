@@ -46,16 +46,6 @@
     color: transparent;
   }
 
-  &--placeholder-mode {
-    .#{$prefix}select__label {
-      @include label--active;
-    }
-
-    .#{$prefix}select__input {
-      color: $ray-color-text-light;
-    }
-  }
-
   &--has-value {
     .#{$prefix}select__label {
       @include label--active;
@@ -63,6 +53,18 @@
 
     .#{$prefix}select__input {
       color: $ray-color-black;
+    }
+  }
+
+  &--error {
+    border-color: $ray-color-red-50;
+
+    &::after {
+      border-top-color: $ray-color-red-50;
+    }
+
+    .#{$prefix}select__label {
+      color: $ray-color-red-50;
     }
   }
 
@@ -74,8 +76,16 @@
       color: $ray-color-blue-50;
     }
 
-    .#{$prefix}select__input {
-      color: $ray-color-blue-50;
+    &.#{$prefix}select--placeholder-mode {
+      .#{$prefix}select__input {
+        color: $ray-color-text-light;
+      }
+    }
+
+    &.#{$prefix}select--has-value {
+      .#{$prefix}select__input {
+        color: $ray-color-blue-50;
+      }
     }
 
     &::after {

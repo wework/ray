@@ -6,154 +6,184 @@ import { Select } from '../lib/components/select';
 
 let idNumber = 0;
 
-storiesOf('Select', module).addWithJSX('all', () => {
-  function init() {
-    const selects = document.querySelectorAll('.ray-select');
-    selects.forEach(select => new Select(select));
-  }
+function init() {
+  const selects = document.querySelectorAll('.ray-select');
+  selects.forEach(select => new Select(select));
+}
 
-  setTimeout(init);
+storiesOf('Select', module)
+  .addWithJSX('select, no placeholder', () => {
+    setTimeout(init);
 
-  return withPadding(
-    <>
-      <div className="ray-form-item">
-        <div className="ray-select">
-          <select className="ray-select__input">
-            <option value="" disabled selected />
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
-        </div>
+    return withPadding(
+      <div className="ray-select">
+        <select className="ray-select__input">
+          <option value="" disabled selected data-ray-placeholder />
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Squirtle">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          What's your favorite Pokémon?
+        </label>
       </div>
+    );
+  })
+  .addWithJSX('select, with placeholder', () => {
+    setTimeout(init);
 
-      <div className="ray-form-item">
-        <div className="ray-select">
-          <select className="ray-select__input">
-            <option value="" selected disabled data-ray-placeholder>
-              This one has a placeholder
-            </option>
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
-
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
-        </div>
-        <div className="ray-form-item__hint">Pick Squirtle...Hint hint</div>
+    return withPadding(
+      <div className="ray-select">
+        <select className="ray-select__input">
+          <option value="" disabled selected data-ray-placeholder>
+            Hi, I'm a placeholder
+          </option>
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Squirtle">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          What's your favorite Pokémon?
+        </label>
       </div>
+    );
+  })
+  .addWithJSX('select, default value', () => {
+    setTimeout(init);
 
-      <div className="ray-form-item">
-        <div className="ray-select ray-select--error">
-          <select className="ray-select__input">
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
-
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
-        </div>
-        <div className="ray-form-item__hint">Pick Squirtle...Hint hint</div>
+    return withPadding(
+      <div className="ray-select">
+        <select className="ray-select__input">
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle" selected>
+            Squirtle
+          </option>
+          <option value="Squirtle">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          What's your favorite Pokémon?
+        </label>
       </div>
+    );
+  })
+  .addWithJSX('select, error', () => {
+    setTimeout(init);
 
-      <div className="ray-form-item">
-        <div className="ray-select ray-select--disabled">
-          <select className="ray-select__input" disabled>
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
-
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
-        </div>
-        <div className="ray-form-item__hint">Pick Squirtle...Hint hint</div>
+    return withPadding(
+      <div className="ray-select ray-select--error">
+        <select className="ray-select__input">
+          <option value="" disabled selected data-ray-placeholder />
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Squirtle">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          What's your favorite Pokémon?
+        </label>
       </div>
+    );
+  })
+  .addWithJSX('select, disabled', () => {
+    setTimeout(init);
 
-      <div className="ray-form-item">
-        <div className="ray-select ray-select--compact">
-          <select className="ray-select__input">
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
-        </div>
+    return withPadding(
+      <div className="ray-select ray-select--disabled">
+        <select className="ray-select__input" disabled>
+          <option value="" disabled selected data-ray-placeholder />
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Squirtle">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          What's your favorite Pokémon?
+        </label>
       </div>
+    );
+  })
+  .addWithJSX('select, compact', () => {
+    setTimeout(init);
 
-      <div className="ray-form-item">
-        <div className="ray-select ray-select--compact">
-          <select className="ray-select__input">
-            <option value="" selected disabled data-ray-placeholder>
-              This one has a placeholder
-            </option>
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
-
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
-        </div>
-        <div className="ray-form-item__hint">Pick Squirtle...Hint hint</div>
+    return withPadding(
+      <div className="ray-select ray-select--compact">
+        <select className="ray-select__input">
+          <option value="" disabled selected data-ray-placeholder />
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Squirtle">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          What's your favorite Pokémon?
+        </label>
       </div>
+    );
+  })
+  .addWithJSX('select, with hints', () => {
+    setTimeout(init);
 
-      <div className="ray-form-item">
-        <div className="ray-select ray-select--compact ray-select--error">
-          <select className="ray-select__input">
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
+    return withPadding(
+      <>
+        <div className="ray-form-item">
+          <div className="ray-select">
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikatchu">Pikatchu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Squirtle">Charmander</option>
+            </select>
+            <label className="ray-select__label">
+              What's your favorite Pokémon?
+            </label>
+          </div>
 
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
+          <div className="ray-form-item__hint">I'm a hint</div>
         </div>
-        <div className="ray-form-item__hint">Pick Squirtle...Hint hint</div>
-      </div>
 
-      <div className="ray-form-item">
-        <div className="ray-select ray-select--compact ray-select--disabled">
-          <select className="ray-select__input" disabled>
-            <option value="Pikatchu">Pikatchu</option>
-            <option value="Squirtle">Squirtle</option>
-            <option value="Pug" disabled>
-              Pug
-            </option>
-          </select>
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--error">
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikatchu">Pikatchu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Squirtle">Charmander</option>
+            </select>
+            <label className="ray-select__label">
+              What's your favorite Pokémon?
+            </label>
+          </div>
 
-          <label className="ray-select__label">
-            What's your favorite Pokémon?
-          </label>
+          <div className="ray-form-item__hint">I'm a hint</div>
         </div>
-        <div className="ray-form-item__hint">Pick Squirtle...Hint hint</div>
-      </div>
-    </>
-  );
-});
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--compact">
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikatchu">Pikatchu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Squirtle">Charmander</option>
+            </select>
+            <label className="ray-select__label">
+              What's your favorite Pokémon?
+            </label>
+          </div>
+
+          <div className="ray-form-item__hint">I'm a hint</div>
+        </div>
+
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--compact ray-select--error">
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikatchu">Pikatchu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Squirtle">Charmander</option>
+            </select>
+            <label className="ray-select__label">
+              What's your favorite Pokémon?
+            </label>
+          </div>
+
+          <div className="ray-form-item__hint">I'm a hint</div>
+        </div>
+      </>
+    );
+  });
