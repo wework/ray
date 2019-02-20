@@ -21,14 +21,14 @@ h6,
   line-height: 40px;
   margin-bottom: 0.5rem;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     // h3
     font-size: 2.5rem;
     line-height: 60px;
     margin-bottom: 1rem;
   }
 
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     font-size: 4rem;
     line-height: 96px;
     margin-bottom: 1.5rem;
@@ -42,14 +42,14 @@ h6,
   line-height: 40px;
   margin-bottom: 0.5rem;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     // h4
     font-size: 2rem;
     line-height: 56px;
     margin-bottom: 1rem;
   }
 
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     font-size: 3rem;
     line-height: 72px;
     margin-bottom: 1rem;
@@ -63,14 +63,14 @@ h6,
   line-height: 40px;
   margin-bottom: 0.5rem;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     // h4
     font-size: 2rem;
     line-height: 56px;
     margin-bottom: 1rem;
   }
 
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     font-size: 2.5rem;
     line-height: 60px;
     margin-bottom: 1rem;
@@ -84,14 +84,14 @@ h6,
   line-height: 40px;
   margin-bottom: 0.5rem;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     // h5
     font-size: 1.5rem;
     line-height: 40px;
     margin-bottom: 0.5rem;
   }
 
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     font-size: 2rem;
     line-height: 56px;
     margin-bottom: 1rem;
@@ -105,7 +105,7 @@ h6,
   line-height: 40px;
   margin-bottom: 0.5rem;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     font-size: 1.5rem;
     line-height: 40px;
     margin-bottom: 0.5rem;
@@ -141,13 +141,13 @@ p {
   font-size: 1.25rem;
   line-height: 32px;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     // p2
     font-size: 1.5rem;
     line-height: 40px;
   }
 
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     font-size: 2rem;
     line-height: 48px;
   }
@@ -158,13 +158,13 @@ p {
   font-size: 1rem;
   line-height: 28px;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     // p3
     font-size: 1.25rem;
     line-height: 32px;
   }
 
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     font-size: 1.5rem;
     line-height: 40px;
   }
@@ -175,7 +175,7 @@ p {
   font-size: 1rem;
   line-height: 28px;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     font-size: 1.25rem;
     line-height: 32px;
   }
@@ -186,7 +186,7 @@ p {
   font-size: 0.875rem;
   line-height: 24px;
 
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @media (min-width: map-get($ray-grid-breakpoints, md)) {
     font-size: 1rem;
     line-height: 28px;
   }
