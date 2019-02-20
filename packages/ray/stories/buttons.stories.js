@@ -10,6 +10,15 @@ storiesOf('Buttons', module)
     <>
       <button className="ray-btn ray-btn--primary">Click me</button>
       <Divider />
+      <a
+        href="https://wework.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ray-btn ray-btn--primary"
+      >
+        Click me anchor
+      </a>
+      <Divider />
       <button className="ray-btn ray-btn--primary" disabled>
         Click me disabled
       </button>
@@ -42,6 +51,15 @@ storiesOf('Buttons', module)
     <>
       <button className="ray-btn ray-btn--secondary">Click me</button>
       <Divider />
+      <a
+        href="https://wework.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ray-btn ray-btn--secondary"
+      >
+        Click me anchor
+      </a>
+      <Divider />
       <button className="ray-btn ray-btn--secondary" disabled>
         Click me disabled
       </button>
@@ -73,6 +91,15 @@ storiesOf('Buttons', module)
   .addWithJSX('tertiary', () => (
     <>
       <button className="ray-btn ray-btn--tertiary">Click me</button>
+      <Divider />
+      <a
+        href="https://wework.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ray-btn ray-btn--tertiary"
+      >
+        Click me anchor
+      </a>
       <Divider />
       <button className="ray-btn ray-btn--tertiary ray-btn--compact">
         Compact click me

@@ -6,19 +6,49 @@ $card-border-color: $ray-color-gray-10;
   border-radius: $ray-border-radius;
   background-color: $ray-color-white;
   overflow: hidden;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &--link {
+    cursor: pointer;
+
+    &:hover {
+      &::after {
+        border-color: $ray-color-blue-50;
+      }
+    }
+
+    &::after {
+      content: '';
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: $ray-border-radius;
+      pointer-events: none;
+    }
+  }
 
   &__content {
     flex-grow: 1;
     padding: $card-padding;
-    border: 1px solid $card-border-color;
+    border-left: 1px solid $ray-color-gray-10;
+    border-right: 1px solid $ray-color-gray-10;
 
-    &:not(:first-child) {
+    &:first-child {
+      border-top: 1px solid $ray-color-gray-10;
+      border-top-left-radius: $ray-border-radius;
+      border-top-right-radius: $ray-border-radius;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $ray-color-gray-10;
       border-bottom-left-radius: $ray-border-radius;
       border-bottom-right-radius: $ray-border-radius;
-      border-top: 0;
     }
   }
 

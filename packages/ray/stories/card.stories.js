@@ -3,26 +3,118 @@ import { storiesOf } from '@storybook/react';
 
 import withPadding from './util/withPadding';
 
-storiesOf('Card', module).addWithJSX('default', () =>
-  withPadding(
-    <div
-      style={{
-        maxWidth: '400px'
-      }}
-    >
-      <div className="ray-card">
+storiesOf('Card', module)
+  .addWithJSX('card, link, image on top', () =>
+    withPadding(
+      <div
+        className="ray-card ray-card--link"
+        style={{
+          maxWidth: '480px'
+        }}
+      >
         <div className="ray-card__image ray-image ray-image--16by9">
-          <img src="https://source.unsplash.com/random/800x450" />
+          <img src="https://source.unsplash.com/random/800x450?minimalist" />
         </div>
 
         <div className="ray-card__content">
-          <h2 className="ray-h5">Spacetravel guidelines</h2>
+          <h2 className="ray-h6">Nicolas Boer 399</h2>
           <p className="ray-copy5">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
             atque minima itaque sint! Doloremque odio quia saepe.
           </p>
         </div>
       </div>
-    </div>
+    )
   )
-);
+  .addWithJSX('card, link, image on bottom', () =>
+    withPadding(
+      <div
+        className="ray-card ray-card--link"
+        style={{
+          maxWidth: '480px'
+        }}
+      >
+        <div className="ray-card__content">
+          <h2 className="ray-h6">Nicolas Boer 399</h2>
+          <p className="ray-copy5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+            atque minima itaque sint! Doloremque odio quia saepe.
+          </p>
+        </div>
+
+        <div className="ray-card__image ray-image ray-image--16by9">
+          <img src="https://source.unsplash.com/random/800x450?minimalist" />
+        </div>
+      </div>
+    )
+  )
+  .addWithJSX('card, link, no image', () =>
+    withPadding(
+      <div
+        className="ray-card ray-card--link"
+        style={{
+          maxWidth: '480px'
+        }}
+      >
+        <div className="ray-card__content">
+          <h2 className="ray-h6">Nicolas Boer 399</h2>
+          <p className="ray-copy5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+            atque minima itaque sint! Doloremque odio quia saepe.
+          </p>
+        </div>
+      </div>
+    )
+  )
+  .addWithJSX('card, image on top, with buttons', () =>
+    withPadding(
+      <div
+        className="ray-card"
+        style={{
+          maxWidth: '480px'
+        }}
+      >
+        <div className="ray-card__image ray-image ray-image--16by9">
+          <img src="https://source.unsplash.com/random/800x450?minimalist" />
+        </div>
+
+        <div className="ray-card__content">
+          <h2 className="ray-h6">Nicolas Boer 399</h2>
+          <p className="ray-copy5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+            atque minima itaque sint! Doloremque odio quia saepe.
+          </p>
+          <button className="ray-btn ray-btn--primary ray-btn--compact">
+            Sign Up Now
+          </button>
+          <button className="ray-btn ray-btn--secondary ray-btn--compact">
+            Learn More
+          </button>
+          <button className="ray-btn ray-btn--tertiary ray-btn--compact">
+            Share
+          </button>
+        </div>
+      </div>
+    )
+  )
+  .addWithJSX('card, tertiary button', () =>
+    withPadding(
+      <div
+        className="ray-card"
+        style={{
+          maxWidth: '480px'
+        }}
+      >
+        <div className="ray-card__content">
+          <h2 className="ray-h6">Nicolas Boer 399</h2>
+          <p className="ray-copy5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+            atque minima itaque sint! Doloremque odio quia saepe.
+          </p>
+          <button className="ray-btn ray-btn--tertiary ray-btn--pull-left ray-btn--compact">
+            Share
+          </button>
+        </div>
+      </div>
+    )
+  );

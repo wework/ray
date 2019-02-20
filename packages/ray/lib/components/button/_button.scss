@@ -10,7 +10,6 @@ $ray-btn-border-radius: $ray-border-radius;
   border-radius: $ray-btn-border-radius;
   cursor: pointer;
   padding: $ray-btn-v-spacing $ray-btn-h-spacing;
-  min-width: 120px;
   white-space: nowrap;
   text-align: center;
   vertical-align: bottom;
@@ -23,6 +22,18 @@ $ray-btn-border-radius: $ray-border-radius;
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+
+  &--pull-left {
+    margin-left: -($ray-btn-h-spacing + $ray-border-width);
+  }
+
+  &--pull-right {
+    margin-right: -($ray-btn-h-spacing + $ray-border-width);
   }
 }
 
@@ -110,6 +121,14 @@ $ray-btn-border-radius: $ray-border-radius;
   padding: $ray-btn-v-spacing-compact $ray-btn-h-spacing-compact;
   line-height: 1;
   height: auto;
+
+  &.#{$ray-class-prefix}btn--pull-left {
+    margin-left: -($ray-btn-h-spacing-compact + $ray-border-width);
+  }
+
+  &.#{$ray-class-prefix}btn--pull-right {
+    margin-right: -($ray-btn-h-spacing-compact + $ray-border-width);
+  }
 }
 
 .#{$ray-class-prefix}btn--tertiary {
