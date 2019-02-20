@@ -29,11 +29,11 @@ class Select {
       this.create(target, options);
     } else {
       const selects = [...target.querySelectorAll(options.initSelector)];
-      return selects.forEach(select => this.create(select, options));
+      selects.forEach(select => this.create(select, options));
     }
   }
 
-  constructor(root, options) {
+  constructor(root) {
     this._root = root;
     this._inputElement = this._root.querySelector(
       `.${this.constructor.cssClasses.EL__INPUT}`

@@ -3,10 +3,20 @@ const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
 const del = require('del');
 
 gulp.task('clean', () =>
-  del(['scss', 'css', 'scripts', 'html', 'dist', 'storybook-static'])
+  del([
+    'scss',
+    'css',
+    'scripts',
+    'html',
+    'dist',
+    'es',
+    'umd',
+    'storybook-static'
+  ])
 );
 
 gulp.task('sass:compiled', () => {
@@ -27,6 +37,7 @@ gulp.task('sass:compiled', () => {
       .pipe(
         rename(filePath => {
           if (prod) {
+            // eslint-disable-next-line no-param-reassign
             filePath.extname = `.min${filePath.extname}`;
           }
         })
@@ -53,4 +64,47 @@ gulp.task('html:source', () => {
   const srcFiles = './lib/**/*.html';
 
   return gulp.src(srcFiles).pipe(gulp.dest('html'));
+});
+
+/**
+ * JavaScript Tasks
+ */
+
+gulp.task('scripts:umd', () => {
+  const srcFiles = ['./lib/**/*.js'];
+  const babelOpts = {
+    presets: [
+      [
+        '@babel/preset-env',
+        {
+          modules: false
+        }
+      ]
+    ],
+    plugins: ['@babel/plugin-transform-modules-umd']
+  };
+
+  return gulp
+    .src(srcFiles)
+    .pipe(babel(babelOpts))
+    .pipe(gulp.dest('umd/'));
+});
+
+gulp.task('scripts:es', () => {
+  const srcFiles = ['./lib/**/*.js'];
+  const babelOpts = {
+    presets: [
+      [
+        '@babel/preset-env',
+        {
+          modules: false
+        }
+      ]
+    ]
+  };
+
+  return gulp
+    .src(srcFiles)
+    .pipe(babel(babelOpts))
+    .pipe(gulp.dest('es/'));
 });
