@@ -1,6 +1,6 @@
 @import '../../global/mixins/form-items';
 
-.#{$prefix}select {
+.#{$ray-class-prefix}select {
   border: $ray-border-width solid $ray-color-gray-60;
   background-color: $ray-color-white;
   border-radius: $ray-border-radius;
@@ -47,11 +47,11 @@
   }
 
   &--has-value {
-    .#{$prefix}select__label {
+    .#{$ray-class-prefix}select__label {
       @include label--active;
     }
 
-    .#{$prefix}select__input {
+    .#{$ray-class-prefix}select__input {
       color: $ray-color-black;
     }
   }
@@ -63,7 +63,7 @@
       border-top-color: $ray-color-red-50;
     }
 
-    .#{$prefix}select__label {
+    .#{$ray-class-prefix}select__label {
       color: $ray-color-red-50;
     }
   }
@@ -71,19 +71,19 @@
   &--active {
     border-color: $ray-color-blue-50;
 
-    .#{$prefix}select__label {
+    .#{$ray-class-prefix}select__label {
       @include label--active;
       color: $ray-color-blue-50;
     }
 
-    &.#{$prefix}select--placeholder-mode {
-      .#{$prefix}select__input {
+    &.#{$ray-class-prefix}select--placeholder-mode {
+      .#{$ray-class-prefix}select__input {
         color: $ray-color-text-light;
       }
     }
 
-    &.#{$prefix}select--has-value {
-      .#{$prefix}select__input {
+    &.#{$ray-class-prefix}select--has-value {
+      .#{$ray-class-prefix}select__input {
         color: $ray-color-blue-50;
       }
     }
@@ -97,7 +97,7 @@
   &--compact {
     height: $ray-field-height-compact;
 
-    .#{$prefix}select__label {
+    .#{$ray-class-prefix}select__label {
       display: flex;
       align-items: center;
       padding-top: 0;
@@ -112,12 +112,12 @@
       border-top-color: rgba($ray-color-gray-60, 0.4);
     }
 
-    .#{$prefix}select__input {
+    .#{$ray-class-prefix}select__input {
       color: rgba($ray-color-gray-60, 0.4);
       cursor: not-allowed;
     }
 
-    .#{$prefix}select__label {
+    .#{$ray-class-prefix}select__label {
       color: rgba($ray-color-gray-60, 0.4);
     }
   }

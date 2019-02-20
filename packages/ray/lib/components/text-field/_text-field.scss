@@ -1,7 +1,7 @@
 @import '../../global/mixins/form-items';
 
-.#{$prefix}text-field,
-.#{$prefix}text-area {
+.#{$ray-class-prefix}text-field,
+.#{$ray-class-prefix}text-area {
   border: $ray-border-width solid $ray-color-gray-60;
   background-color: $ray-color-white;
   border-radius: $ray-border-radius;
@@ -59,23 +59,23 @@
   &:focus-within {
     border-color: $ray-color-blue-50;
 
-    .#{$prefix}text-field__label,
-    .#{$prefix}text-area__label {
+    .#{$ray-class-prefix}text-field__label,
+    .#{$ray-class-prefix}text-area__label {
       @include label--active;
       color: $ray-color-blue-50;
     }
 
-    .#{$prefix}text-field__input,
-    .#{$prefix}text-area__input {
+    .#{$ray-class-prefix}text-field__input,
+    .#{$ray-class-prefix}text-area__input {
       &::placeholder {
         color: $ray-color-text-light !important;
       }
     }
 
-    &.#{$prefix}text-field--compact,
-    &.#{$prefix}text-area--compact {
-      .#{$prefix}text-field__label,
-      .#{$prefix}text-area__label {
+    &.#{$ray-class-prefix}text-field--compact,
+    &.#{$ray-class-prefix}text-area--compact {
+      .#{$ray-class-prefix}text-field__label,
+      .#{$ray-class-prefix}text-area__label {
         padding-top: 0;
       }
     }
@@ -98,8 +98,8 @@
     @include no-select;
 
     &,
-    + .#{$prefix}text-field__label,
-    + .#{$prefix}text-area__label {
+    + .#{$ray-class-prefix}text-field__label,
+    + .#{$ray-class-prefix}text-area__label {
       cursor: not-allowed;
       color: rgba($ray-color-gray-60, 0.4);
     }
@@ -108,13 +108,13 @@
   &--compact {
     height: $ray-field-height-compact;
 
-    .#{$prefix}text-field__label,
-    .#{$prefix}text-area__label {
+    .#{$ray-class-prefix}text-field__label,
+    .#{$ray-class-prefix}text-area__label {
       padding-top: $ray-field-v-spacing-compact;
     }
 
-    .#{$prefix}text-field__input,
-    .#{$prefix}text-area__input {
+    .#{$ray-class-prefix}text-field__input,
+    .#{$ray-class-prefix}text-area__input {
       padding-top: 0;
 
       &:focus,
@@ -128,7 +128,7 @@
   }
 }
 
-.#{$prefix}text-area {
+.#{$ray-class-prefix}text-area {
   line-height: 0;
 
   &,
@@ -149,7 +149,7 @@
     min-height: $ray-field-height-compact;
     line-height: 0;
 
-    .#{$prefix}text-area__input {
+    .#{$ray-class-prefix}text-area__input {
       padding-top: $ray-field-v-spacing-compact / 2;
       height: $ray-field-height-compact - 2 * $ray-border-width;
       min-height: $ray-field-height-compact - 2 * $ray-border-width;

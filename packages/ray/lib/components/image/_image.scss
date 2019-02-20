@@ -17,7 +17,7 @@
   }
 }
 
-.#{$prefix}image {
+.#{$ray-class-prefix}image {
   @include image;
 
   &--16by9 {
@@ -45,7 +45,7 @@
   background-repeat: no-repeat;
 }
 
-.#{$prefix}bg {
+.#{$ray-class-prefix}bg {
   @include background;
 
   &--16by9 {

@@ -1,8 +1,8 @@
 $ray-radio-checkbox-border-width: 3px;
 $ray-radio-checkbox-width: 1rem;
 
-.#{$prefix}radio,
-.#{$prefix}checkbox {
+.#{$ray-class-prefix}radio,
+.#{$ray-class-prefix}checkbox {
   @include no-select;
 
   label {
@@ -19,8 +19,12 @@ $ray-radio-checkbox-width: 1rem;
 
     &::after {
       content: '';
-      width: calc(#{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width});
-      height: calc(#{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width});
+      width: calc(
+        #{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width}
+      );
+      height: calc(
+        #{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width}
+      );
       background: $ray-color-white;
       display: block;
       transition: $ray-transition;
@@ -51,7 +55,7 @@ $ray-radio-checkbox-width: 1rem;
     }
 
     &[disabled] {
-      border-color: #B0B0B0;
+      border-color: #b0b0b0;
 
       &:hover {
         &::after {
@@ -61,13 +65,13 @@ $ray-radio-checkbox-width: 1rem;
 
       + label {
         cursor: not-allowed;
-        color: #B0B0B0;
+        color: #b0b0b0;
       }
     }
   }
 }
 
-.#{$prefix}radio__input {
+.#{$ray-class-prefix}radio__input {
   border-radius: 50%;
 
   &::after {
@@ -75,6 +79,6 @@ $ray-radio-checkbox-width: 1rem;
   }
 }
 
-.#{$prefix}checkbox__input {
+.#{$ray-class-prefix}checkbox__input {
   border-radius: $ray-border-radius;
 }

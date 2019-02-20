@@ -4,18 +4,18 @@ h3,
 h4,
 h5,
 h6,
-.#{$prefix}h1,
-.#{$prefix}h2,
-.#{$prefix}h3,
-.#{$prefix}h4,
-.#{$prefix}h5,
-.#{$prefix}h6 {
+.#{$ray-class-prefix}h1,
+.#{$ray-class-prefix}h2,
+.#{$ray-class-prefix}h3,
+.#{$ray-class-prefix}h4,
+.#{$ray-class-prefix}h5,
+.#{$ray-class-prefix}h6 {
   font-weight: bold;
   margin: 0;
 }
 
 .h1,
-.#{$prefix}h1 {
+.#{$ray-class-prefix}h1 {
   // h5
   font-size: 1.5rem;
   line-height: 40px;
@@ -36,7 +36,7 @@ h6,
 }
 
 .h2,
-.#{$prefix}h2 {
+.#{$ray-class-prefix}h2 {
   // h6
   font-size: 1.25rem;
   line-height: 40px;
@@ -57,7 +57,7 @@ h6,
 }
 
 .h3,
-.#{$prefix}h3 {
+.#{$ray-class-prefix}h3 {
   // h6
   font-size: 1.25rem;
   line-height: 40px;
@@ -78,7 +78,7 @@ h6,
 }
 
 .h4,
-.#{$prefix}h4 {
+.#{$ray-class-prefix}h4 {
   // h6
   font-size: 1.25rem;
   line-height: 40px;
@@ -99,7 +99,7 @@ h6,
 }
 
 .h5,
-.#{$prefix}h5 {
+.#{$ray-class-prefix}h5 {
   // h6
   font-size: 1.25rem;
   line-height: 40px;
@@ -113,19 +113,19 @@ h6,
 }
 
 .h6,
-.#{$prefix}h6 {
+.#{$ray-class-prefix}h6 {
   font-size: 1.25rem;
   line-height: 40px;
   margin-bottom: 0.5rem;
 }
 
 p,
-.#{$prefix}p1,
-.#{$prefix}p2,
-.#{$prefix}p3,
-.#{$prefix}p4,
-.#{$prefix}p5,
-.#{$prefix}p6 {
+.#{$ray-class-prefix}p1,
+.#{$ray-class-prefix}p2,
+.#{$ray-class-prefix}p3,
+.#{$ray-class-prefix}p4,
+.#{$ray-class-prefix}p5,
+.#{$ray-class-prefix}p6 {
   font-weight: 400;
   margin: 0;
 }
@@ -136,7 +136,7 @@ p {
   }
 }
 
-.#{$prefix}p1 {
+.#{$ray-class-prefix}p1 {
   // p3
   font-size: 1.25rem;
   line-height: 32px;
@@ -153,7 +153,7 @@ p {
   }
 }
 
-.#{$prefix}p2 {
+.#{$ray-class-prefix}p2 {
   // p4
   font-size: 1rem;
   line-height: 28px;
@@ -170,7 +170,7 @@ p {
   }
 }
 
-.#{$prefix}p3 {
+.#{$ray-class-prefix}p3 {
   // p4
   font-size: 1rem;
   line-height: 28px;
@@ -181,7 +181,7 @@ p {
   }
 }
 
-.#{$prefix}p4 {
+.#{$ray-class-prefix}p4 {
   // p5
   font-size: 0.875rem;
   line-height: 24px;
@@ -192,12 +192,12 @@ p {
   }
 }
 
-.#{$prefix}p5 {
+.#{$ray-class-prefix}p5 {
   font-size: 0.875rem;
   line-height: 24px;
 }
 
-.#{$prefix}p6 {
+.#{$ray-class-prefix}p6 {
   font-size: 0.75rem;
   line-height: 12px;
 }

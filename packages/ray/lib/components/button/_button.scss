@@ -1,6 +1,6 @@
 $ray-btn-border-radius: $ray-border-radius;
 
-.#{$prefix}btn {
+.#{$ray-class-prefix}btn {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 400;
@@ -26,7 +26,7 @@ $ray-btn-border-radius: $ray-border-radius;
   }
 }
 
-.#{$prefix}btn--primary {
+.#{$ray-class-prefix}btn--primary {
   background-color: $ray-color-blue-50;
   color: $ray-color-white;
 
@@ -40,7 +40,7 @@ $ray-btn-border-radius: $ray-border-radius;
     border-color: $ray-color-blue-70;
   }
 
-  &.#{$prefix}btn--danger {
+  &.#{$ray-class-prefix}btn--danger {
     background-color: $ray-color-red-50;
     border-color: $ray-color-red-50;
 
@@ -68,7 +68,7 @@ $ray-btn-border-radius: $ray-border-radius;
   }
 }
 
-.#{$prefix}btn--secondary {
+.#{$ray-class-prefix}btn--secondary {
   color: $ray-color-blue-50;
   background-color: $ray-color-white;
 
@@ -80,7 +80,7 @@ $ray-btn-border-radius: $ray-border-radius;
     background-color: $ray-color-blue-20;
   }
 
-  &.#{$prefix}btn--danger {
+  &.#{$ray-class-prefix}btn--danger {
     border-color: $ray-color-red-50;
     color: $ray-color-red-50;
 
@@ -106,13 +106,13 @@ $ray-btn-border-radius: $ray-border-radius;
   }
 }
 
-.#{$prefix}btn--compact {
+.#{$ray-class-prefix}btn--compact {
   padding: $ray-btn-v-spacing-compact $ray-btn-h-spacing-compact;
   line-height: 1;
   height: auto;
 }
 
-.#{$prefix}btn--tertiary {
+.#{$ray-class-prefix}btn--tertiary {
   color: $ray-color-blue-50;
   background-color: transparent;
   border-color: transparent;
@@ -125,7 +125,7 @@ $ray-btn-border-radius: $ray-border-radius;
     color: $ray-color-blue-70;
   }
 
-  &.#{$prefix}btn--danger {
+  &.#{$ray-class-prefix}btn--danger {
     color: $ray-color-red-50;
 
     &:hover {

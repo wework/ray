@@ -1,7 +1,7 @@
 $card-padding: 1rem;
 $card-border-color: $ray-color-gray-10;
 
-.#{$prefix}card {
+.#{$ray-class-prefix}card {
   width: 100%;
   border-radius: $ray-border-radius;
   background-color: $ray-color-white;
