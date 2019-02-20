@@ -2,13 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import withPadding from './util/withPadding';
-import { Select } from '../lib/components/select';
+import Select from '../lib/components/select';
 
 let idNumber = 0;
 
 function init() {
-  const selects = document.querySelectorAll('.ray-select');
-  selects.forEach(select => new Select(select));
+  Select.createAll(document, {
+    initSelector: '.ray-select'
+  });
 }
 
 storiesOf('Select', module)

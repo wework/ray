@@ -1,67 +1,125 @@
-const SELECT_MODIFIER_ACTIVE = 'ray-select--active';
-const SELECT_EL_INPUT = 'ray-select__input';
-const SELECT_MODIFIER_HAS_VALUE = 'ray-select--has-value';
-const SELECT_MODIFIER_PLACEHOLDER_MODE = 'ray-select--placeholder-mode';
+import { CSS_CLASSES, STRINGS } from './constants';
+import { validateNodeType, isTargetingItself } from './util';
 
 class Select {
-  constructor(element, options) {
-    this.element = element;
-    this.inputElement = element.querySelector(`.${SELECT_EL_INPUT}`);
-    this.bindEventListeners();
+  static instances = new WeakMap();
 
-    const option = this.getCurrentValueOptionElement();
+  static get cssClasses() {
+    return CSS_CLASSES;
+  }
 
-    if (option && option.innerHTML) {
-      if (option.dataset.rayPlaceholder) {
-        this.element.classList.add(SELECT_MODIFIER_PLACEHOLDER_MODE);
-      } else {
-        this.element.classList.add(SELECT_MODIFIER_HAS_VALUE);
-      }
+  static get strings() {
+    return STRINGS;
+  }
+
+  static create(element, options) {
+    return this.instances.get(element) || new this(element, options);
+  }
+
+  static createAll(target = document, _options = {}) {
+    // Finds all instances of select on the document or within a given element and instantiates them.
+    const options = {
+      initSelector: this.strings.INIT_SELECTOR,
+      ..._options
+    };
+
+    validateNodeType(target);
+
+    if (isTargetingItself(target, options)) {
+      this.create(target, options);
+    } else {
+      const selects = [...target.querySelectorAll(options.initSelector)];
+      return selects.forEach(select => this.create(select, options));
     }
   }
 
-  bindEventListeners() {
-    this.inputElement.addEventListener('focus', this.onFocus);
-    this.inputElement.addEventListener('blur', this.onBlur);
-    this.inputElement.addEventListener('change', this.onChange);
+  constructor(root, options) {
+    this._root = root;
+    this._inputElement = this._root.querySelector(
+      `.${this.constructor.cssClasses.EL__INPUT}`
+    );
+
+    if (!this._inputElement) {
+      throw new Error(
+        `Select must have an input element with a class of .${
+          this.constructor.cssClasses.EL__INPUT
+        }`
+      );
+    }
+
+    this._bindEventListeners();
+
+    const option = this._getCurrentValueOptionElement();
+
+    if (option && option.innerHTML) {
+      if (option.dataset.rayPlaceholder) {
+        this._root.classList.add(this.constructor.cssClasses.PLACEHOLDER_MODE);
+      } else {
+        this._root.classList.add(this.constructor.cssClasses.HAS_VALUE);
+      }
+    }
+
+    this.constructor.instances.set(this._root, this);
+  }
+
+  _bindEventListeners() {
+    this._inputElement.addEventListener('focus', this.onFocus);
+    this._inputElement.addEventListener('blur', this.onBlur);
+    this._inputElement.addEventListener('change', this.onChange);
   }
 
   value() {
-    return this.element.value;
+    // Current value of the Select
+    return this._inputElement.value;
+  }
+
+  set(value) {
+    this._inputElement.value = value;
+    this._inputElement.dispatchEvent(new Event('change'));
   }
 
   onFocus = () => {
-    this.element.classList.add(SELECT_MODIFIER_ACTIVE);
+    this._root.classList.add(this.constructor.cssClasses.ACTIVE);
   };
 
   onBlur = () => {
-    this.element.classList.remove(SELECT_MODIFIER_ACTIVE);
+    this._root.classList.remove(this.constructor.cssClasses.ACTIVE);
   };
 
   onChange = () => {
-    const option = this.getCurrentValueOptionElement();
+    const option = this._getCurrentValueOptionElement();
 
     if (option) {
       if (option.dataset.rayPlaceholder) {
-        this.element.classList.add(SELECT_MODIFIER_PLACEHOLDER_MODE);
-        this.element.classList.remove(SELECT_MODIFIER_HAS_VALUE);
+        this._root.classList.add(this.constructor.cssClasses.PLACEHOLDER_MODE);
+        this._root.classList.remove(this.constructor.cssClasses.HAS_VALUE);
       } else {
-        this.element.classList.add(SELECT_MODIFIER_HAS_VALUE);
-        this.element.classList.remove(SELECT_MODIFIER_PLACEHOLDER_MODE);
+        this._root.classList.add(this.constructor.cssClasses.HAS_VALUE);
+        this._root.classList.remove(
+          this.constructor.cssClasses.PLACEHOLDER_MODE
+        );
       }
     } else {
-      this.element.classList.remove(
-        SELECT_MODIFIER_PLACEHOLDER_MODE,
-        SELECT_MODIFIER_HAS_VALUE
+      this._root.classList.remove(
+        this.constructor.cssClasses.PLACEHOLDER_MODE,
+        this.constructor.cssClasses.HAS_VALUE
       );
     }
   };
 
-  getCurrentValueOptionElement = () => {
-    return this.inputElement.options[this.inputElement.selectedIndex];
+  _getCurrentValueOptionElement = () => {
+    return this._inputElement.options[this._inputElement.selectedIndex];
   };
 
-  teardownEventListeners() {}
+  destroy() {
+    // Implement this method to release any resources / deregister any listeners they have
+    // attached. An example of this might be deregistering a resize event from the window object.
+    this._inputElement.removeEventListener('focus', this.onFocus);
+    this._inputElement.removeEventListener('blur', this.onBlur);
+    this._inputElement.removeEventListener('change', this.onChange);
+
+    this.constructor.instances.delete(this._root);
+  }
 }
 
-export { Select };
+export default Select;
