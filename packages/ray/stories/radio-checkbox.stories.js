@@ -14,8 +14,11 @@ storiesOf('Radio & Checkbox', module)
             type="radio"
             className="ray-radio__input"
           />
-          <label htmlFor="radio-1">Choose me</label>
+          <label className="ray-radio__label" htmlFor="radio-1">
+            Choose me
+          </label>
         </div>
+
         <div className="ray-radio">
           <input
             id="radio-2"
@@ -23,8 +26,13 @@ storiesOf('Radio & Checkbox', module)
             type="radio"
             className="ray-radio__input"
           />
-          <label htmlFor="radio-2">Choose me</label>
+          <label className="ray-radio__label" htmlFor="radio-2">
+            Choose me
+            <br />
+            multi line label
+          </label>
         </div>
+
         <div className="ray-radio">
           <input
             id="radio-3"
@@ -33,7 +41,9 @@ storiesOf('Radio & Checkbox', module)
             className="ray-radio__input"
             disabled
           />
-          <label htmlFor="radio-3">Choose me</label>
+          <label className="ray-radio__label" htmlFor="radio-3">
+            Choose me
+          </label>
         </div>
       </React.Fragment>
     )
@@ -42,8 +52,42 @@ storiesOf('Radio & Checkbox', module)
     withPadding(
       <div className="ray-checkbox">
         <input id="check" type="checkbox" className="ray-checkbox__input" />
-        <label htmlFor="check">Check me out</label>
+        <label className="ray-checkbox__label" htmlFor="check">
+          Check me out
+        </label>
       </div>
+    )
+  )
+  .addWithJSX('Checkbox, multiple', () =>
+    withPadding(
+      <>
+        <div className="ray-checkbox">
+          <input id="check" type="checkbox" className="ray-checkbox__input" />
+          <label className="ray-checkbox__label" htmlFor="check">
+            Check me out
+          </label>
+        </div>
+        <div className="ray-checkbox">
+          <input id="check-2" type="checkbox" className="ray-checkbox__input" />
+          <label className="ray-checkbox__label" htmlFor="check-2">
+            Check me out
+          </label>
+        </div>
+        <div className="ray-checkbox">
+          <input id="check-3" type="checkbox" className="ray-checkbox__input" />
+          <label className="ray-checkbox__label" htmlFor="check-3">
+            Check me out
+            <br />
+            multi lines
+          </label>
+        </div>
+        <div className="ray-checkbox">
+          <input id="check-4" type="checkbox" className="ray-checkbox__input" />
+          <label className="ray-checkbox__label" htmlFor="check-4">
+            Check me out
+          </label>
+        </div>
+      </>
     )
   )
   .addWithJSX('Checkbox - disabled', () =>
@@ -55,7 +99,9 @@ storiesOf('Radio & Checkbox', module)
           className="ray-checkbox__input"
           disabled
         />
-        <label htmlFor="check">Check me out</label>
+        <label className="ray-checkbox__label" htmlFor="check">
+          Check me out
+        </label>
       </div>
     )
   );

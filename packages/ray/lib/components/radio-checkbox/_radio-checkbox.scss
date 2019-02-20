@@ -4,9 +4,11 @@ $ray-radio-checkbox-width: 1rem;
 .#{$ray-class-prefix}radio,
 .#{$ray-class-prefix}checkbox {
   @include no-select;
+  display: flex;
 
-  label {
-    padding-left: 1rem;
+  &__label {
+    margin-left: 1rem;
+    line-height: $ray-field-line-height;
   }
 
   &__input {
@@ -15,7 +17,8 @@ $ray-radio-checkbox-width: 1rem;
     border: $ray-radio-checkbox-border-width double $ray-color-black;
     width: $ray-radio-checkbox-width;
     height: $ray-radio-checkbox-width;
-    transform: translateY(16%);
+    position: relative;
+    top: ($ray-field-line-height - $ray-field-font-size) / 2;
 
     &::after {
       content: '';
@@ -55,7 +58,7 @@ $ray-radio-checkbox-width: 1rem;
     }
 
     &[disabled] {
-      border-color: #b0b0b0;
+      border-color: $ray-color-gray-30;
 
       &:hover {
         &::after {
@@ -63,9 +66,10 @@ $ray-radio-checkbox-width: 1rem;
         }
       }
 
-      + label {
+      + .#{$ray-class-prefix}radio__label,
+      + .#{$ray-class-prefix}checkbox__label {
         cursor: not-allowed;
-        color: #b0b0b0;
+        color: $ray-color-gray-30;
       }
     }
   }
