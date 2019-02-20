@@ -4,12 +4,8 @@ import { storiesOf } from '@storybook/react';
 import withPadding from './util/withPadding';
 import Select from '../lib/components/select';
 
-let idNumber = 0;
-
 function init() {
-  Select.createAll(document, {
-    initSelector: '.ray-select'
-  });
+  Select.createAll();
 }
 
 storiesOf('Select', module)
@@ -22,10 +18,10 @@ storiesOf('Select', module)
           <option value="" disabled selected data-ray-placeholder />
           <option value="Pikatchu">Pikatchu</option>
           <option value="Squirtle">Squirtle</option>
-          <option value="Squirtle">Charmander</option>
+          <option value="Charmander">Charmander</option>
         </select>
         <label className="ray-select__label">
-          What's your favorite Pokémon?
+          {"What's your favorite Pokémon?"}
         </label>
       </div>
     );
@@ -37,14 +33,14 @@ storiesOf('Select', module)
       <div className="ray-select">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder>
-            Hi, I'm a placeholder
+            {"Hi, I'm a placeholder"}
           </option>
           <option value="Pikatchu">Pikatchu</option>
           <option value="Squirtle">Squirtle</option>
-          <option value="Squirtle">Charmander</option>
+          <option value="Charmander">Charmander</option>
         </select>
         <label className="ray-select__label">
-          What's your favorite Pokémon?
+          {"What's your favorite Pokémon?"}
         </label>
       </div>
     );
@@ -59,10 +55,10 @@ storiesOf('Select', module)
           <option value="Squirtle" selected>
             Squirtle
           </option>
-          <option value="Squirtle">Charmander</option>
+          <option value="Charmander">Charmander</option>
         </select>
         <label className="ray-select__label">
-          What's your favorite Pokémon?
+          {"What's your favorite Pokémon?"}
         </label>
       </div>
     );
@@ -76,10 +72,10 @@ storiesOf('Select', module)
           <option value="" disabled selected data-ray-placeholder />
           <option value="Pikatchu">Pikatchu</option>
           <option value="Squirtle">Squirtle</option>
-          <option value="Squirtle">Charmander</option>
+          <option value="Charmander">Charmander</option>
         </select>
         <label className="ray-select__label">
-          What's your favorite Pokémon?
+          {"What's your favorite Pokémon?"}
         </label>
       </div>
     );
@@ -93,10 +89,10 @@ storiesOf('Select', module)
           <option value="" disabled selected data-ray-placeholder />
           <option value="Pikatchu">Pikatchu</option>
           <option value="Squirtle">Squirtle</option>
-          <option value="Squirtle">Charmander</option>
+          <option value="Charmander">Charmander</option>
         </select>
         <label className="ray-select__label">
-          What's your favorite Pokémon?
+          {"What's your favorite Pokémon?"}
         </label>
       </div>
     );
@@ -110,10 +106,10 @@ storiesOf('Select', module)
           <option value="" disabled selected data-ray-placeholder />
           <option value="Pikatchu">Pikatchu</option>
           <option value="Squirtle">Squirtle</option>
-          <option value="Squirtle">Charmander</option>
+          <option value="Charmander">Charmander</option>
         </select>
         <label className="ray-select__label">
-          What's your favorite Pokémon?
+          {"What's your favorite Pokémon?"}
         </label>
       </div>
     );
@@ -129,14 +125,14 @@ storiesOf('Select', module)
               <option value="" disabled selected data-ray-placeholder />
               <option value="Pikatchu">Pikatchu</option>
               <option value="Squirtle">Squirtle</option>
-              <option value="Squirtle">Charmander</option>
+              <option value="Charmander">Charmander</option>
             </select>
             <label className="ray-select__label">
-              What's your favorite Pokémon?
+              {"What's your favorite Pokémon?"}
             </label>
           </div>
 
-          <div className="ray-form-item__hint">I'm a hint</div>
+          <div className="ray-form-item__hint">{"I'm a hint"}</div>
         </div>
 
         <div className="ray-form-item">
@@ -145,14 +141,14 @@ storiesOf('Select', module)
               <option value="" disabled selected data-ray-placeholder />
               <option value="Pikatchu">Pikatchu</option>
               <option value="Squirtle">Squirtle</option>
-              <option value="Squirtle">Charmander</option>
+              <option value="Charmander">Charmander</option>
             </select>
             <label className="ray-select__label">
-              What's your favorite Pokémon?
+              {"What's your favorite Pokémon?"}
             </label>
           </div>
 
-          <div className="ray-form-item__hint">I'm a hint</div>
+          <div className="ray-form-item__hint">{"I'm a hint"}</div>
         </div>
         <div className="ray-form-item">
           <div className="ray-select ray-select--compact">
@@ -160,14 +156,14 @@ storiesOf('Select', module)
               <option value="" disabled selected data-ray-placeholder />
               <option value="Pikatchu">Pikatchu</option>
               <option value="Squirtle">Squirtle</option>
-              <option value="Squirtle">Charmander</option>
+              <option value="Charmander">Charmander</option>
             </select>
             <label className="ray-select__label">
-              What's your favorite Pokémon?
+              {"What's your favorite Pokémon?"}
             </label>
           </div>
 
-          <div className="ray-form-item__hint">I'm a hint</div>
+          <div className="ray-form-item__hint">{"I'm a hint"}</div>
         </div>
 
         <div className="ray-form-item">
@@ -176,14 +172,14 @@ storiesOf('Select', module)
               <option value="" disabled selected data-ray-placeholder />
               <option value="Pikatchu">Pikatchu</option>
               <option value="Squirtle">Squirtle</option>
-              <option value="Squirtle">Charmander</option>
+              <option value="Charmander">Charmander</option>
             </select>
             <label className="ray-select__label">
-              What's your favorite Pokémon?
+              {"What's your favorite Pokémon?"}
             </label>
           </div>
 
-          <div className="ray-form-item__hint">I'm a hint</div>
+          <div className="ray-form-item__hint">{"I'm a hint"}</div>
         </div>
       </>
     );
