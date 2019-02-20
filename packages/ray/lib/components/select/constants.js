@@ -6,5 +6,5 @@ export const CSS_CLASSES = {
 };
 
 export const STRINGS = {
-  INIT_SELECTOR: 'ray-select'
+  INIT_SELECTOR: '.ray-select'
 };
