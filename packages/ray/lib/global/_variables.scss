@@ -1,66 +1,56 @@
 @import './functions';
 $prefix: 'ray-';
-$font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
+$ray-font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif !default;
-$font-stack-mono: 'Apercu Mono', monospace !default;
+$ray-font-stack-mono: 'Apercu Mono', monospace !default;
 
-$transition: all 0.125s ease;
+$ray-transition: all 0.125s ease;
 
-$breakpoint-mobile-px: 400px !default;
-$breakpoint-tablet-px: 600px !default;
-$breakpoint-desktop-px: 840px !default;
-$breakpoint-desktop-large-px: 1024px !default;
-
-$border-radius: 0.25rem !default;
-$border-width: 1px !default;
+$ray-border-radius: 0.25rem !default;
+$ray-border-width: 1px !default;
 
 $ray-color-text-light: $ray-color-gray-30;
 $ray-color-text-medium: $ray-color-gray-60;
 $ray-color-text-dark: $ray-color-black;
 
-$field-v-spacing: 20px;
-$field-v-spacing-compact: 12px;
-$field-h-spacing: 12px;
-$field-label-size: 1rem;
-$field-label-size-focus: 12px;
-$field-height: 56px;
-$field-height-compact: 40px;
-$field-line-height: 28px;
+$ray-field-v-spacing: 20px;
+$ray-field-v-spacing-compact: 12px;
+$ray-field-h-spacing: 12px;
+$ray-field-label-size: 1rem;
+$ray-field-label-size-focus: 12px;
+$ray-field-height: 56px;
+$ray-field-height-compact: 40px;
+$ray-field-line-height: 28px;
 
-$padding-5: 5rem;
-
-$btn-v-spacing: 20px - $border-width;
-$btn-v-spacing-compact: 12px - $border-width;
-$btn-h-spacing: 24px - $border-width;
-$btn-h-spacing-compact: 12px - $border-width;
+$ray-btn-v-spacing: 20px - $ray-border-width;
+$ray-btn-v-spacing-compact: 12px - $ray-border-width;
+$ray-btn-h-spacing: 24px - $ray-border-width;
+$ray-btn-h-spacing-compact: 12px - $ray-border-width;
 
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-$grid-columns: 12;
-$grid-gutter-width: 24px;
-
-$grid-breakpoints: (
+$ray-grid-breakpoints: (
   sm: 0px,
   md: 600px,
   lg: 1195px
 );
 
-$container-max-widths: (
+$ray-container-max-widths: (
   sm: 100%,
   md: 100%,
   lg: 1320px
 );
 
-$container-gutters: (
+$ray-container-gutters: (
   sm: 1rem,
   md: 3rem,
   lg: 3.75rem
 );
 
-@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
-@include _assert-starts-at-zero($grid-breakpoints);
+@include _assert-ascending($ray-grid-breakpoints, '$ray-grid-breakpoints');
+@include _assert-starts-at-zero($ray-grid-breakpoints);
 
-$enable-grid-classes: true !default;
+$ray-enable-grid-classes: true !default;

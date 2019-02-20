@@ -1,4 +1,4 @@
-$btn-border-radius: $border-radius;
+$ray-btn-border-radius: $ray-border-radius;
 
 .#{$prefix}btn {
   font-family: inherit;
@@ -6,10 +6,10 @@ $btn-border-radius: $border-radius;
   font-weight: 400;
   line-height: 1;
   display: inline-block;
-  border: $border-width solid $ray-color-blue-50;
-  border-radius: $btn-border-radius;
+  border: $ray-border-width solid $ray-color-blue-50;
+  border-radius: $ray-btn-border-radius;
   cursor: pointer;
-  padding: $btn-v-spacing $btn-h-spacing;
+  padding: $ray-btn-v-spacing $ray-btn-h-spacing;
   min-width: 120px;
   white-space: nowrap;
   text-align: center;
@@ -107,7 +107,7 @@ $btn-border-radius: $border-radius;
 }
 
 .#{$prefix}btn--compact {
-  padding: $btn-v-spacing-compact $btn-h-spacing-compact;
+  padding: $ray-btn-v-spacing-compact $ray-btn-h-spacing-compact;
   line-height: 1;
   height: auto;
 }

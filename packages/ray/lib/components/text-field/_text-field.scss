@@ -2,11 +2,11 @@
 
 .#{$prefix}text-field,
 .#{$prefix}text-area {
-  border: $border-width solid $ray-color-gray-60;
+  border: $ray-border-width solid $ray-color-gray-60;
   background-color: $ray-color-white;
-  border-radius: $border-radius;
+  border-radius: $ray-border-radius;
   position: relative;
-  height: $field-height;
+  height: $ray-field-height;
 
   &__label {
     @include label;
@@ -15,14 +15,14 @@
 
   &__input {
     font-family: inherit;
-    border-radius: $border-radius;
+    border-radius: $ray-border-radius;
     line-height: 1;
     width: 100%;
     height: 100%;
-    font-size: $field-label-size;
+    font-size: $ray-field-label-size;
     display: block;
     background-color: transparent;
-    padding: 0 $field-h-spacing;
+    padding: 0 $ray-field-h-spacing;
     outline: 0;
     border: 0;
     cursor: pointer;
@@ -106,11 +106,11 @@
   }
 
   &--compact {
-    height: $field-height-compact;
+    height: $ray-field-height-compact;
 
     .#{$prefix}text-field__label,
     .#{$prefix}text-area__label {
-      padding-top: $field-v-spacing-compact;
+      padding-top: $ray-field-v-spacing-compact;
     }
 
     .#{$prefix}text-field__input,
@@ -134,25 +134,25 @@
   &,
   &__input {
     height: auto;
-    min-height: $field-height - 2 * $border-width;
+    min-height: $ray-field-height - 2 * $ray-border-width;
   }
 
   &__input {
     display: inline-block;
     padding-top: 1rem;
     resize: vertical;
-    line-height: $field-line-height;
-    height: $field-height - 2 * $border-width;
+    line-height: $ray-field-line-height;
+    height: $ray-field-height - 2 * $ray-border-width;
   }
 
   &--compact {
-    min-height: $field-height-compact;
+    min-height: $ray-field-height-compact;
     line-height: 0;
 
     .#{$prefix}text-area__input {
-      padding-top: $field-v-spacing-compact / 2;
-      height: $field-height-compact - 2 * $border-width;
-      min-height: $field-height-compact - 2 * $border-width;
+      padding-top: $ray-field-v-spacing-compact / 2;
+      height: $ray-field-height-compact - 2 * $ray-border-width;
+      min-height: $ray-field-height-compact - 2 * $ray-border-width;
     }
   }
 }

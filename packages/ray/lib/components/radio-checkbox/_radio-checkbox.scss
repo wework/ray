@@ -1,5 +1,5 @@
-$radio-checkbox-border-width: 3px;
-$radio-checkbox-width: 1rem;
+$ray-radio-checkbox-border-width: 3px;
+$ray-radio-checkbox-width: 1rem;
 
 .#{$prefix}radio,
 .#{$prefix}checkbox {
@@ -12,18 +12,18 @@ $radio-checkbox-width: 1rem;
   &__input {
     appearance: none;
     background-color: $ray-color-white;
-    border: $radio-checkbox-border-width double $ray-color-black;
-    width: $radio-checkbox-width;
-    height: $radio-checkbox-width;
+    border: $ray-radio-checkbox-border-width double $ray-color-black;
+    width: $ray-radio-checkbox-width;
+    height: $ray-radio-checkbox-width;
     transform: translateY(16%);
 
     &::after {
       content: '';
-      width: calc(#{$radio-checkbox-width} - 2 * #{$radio-checkbox-border-width});
-      height: calc(#{$radio-checkbox-width} - 2 * #{$radio-checkbox-border-width});
+      width: calc(#{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width});
+      height: calc(#{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width});
       background: $ray-color-white;
       display: block;
-      transition: $transition;
+      transition: $ray-transition;
     }
 
     &:checked {
@@ -76,5 +76,5 @@ $radio-checkbox-width: 1rem;
 }
 
 .#{$prefix}checkbox__input {
-  border-radius: $border-radius;
+  border-radius: $ray-border-radius;
 }
