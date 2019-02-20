@@ -9,9 +9,9 @@ Resources for building interfaces with WeWork's design system. [npm package](htt
 ## Installation
 
 ```bash
-yarn add @wework/ray
+$ yarn add @wework/ray
 # or
-npm install --save @wework/ray
+$ npm install --save @wework/ray
 ```
 
 Then import the library in your sass file:
@@ -23,8 +23,8 @@ Then import the library in your sass file:
 ## Development
 
 ```bash
-yarn install # to install dependencies
-yarn storybook # to start storybook dev server
+$ yarn install # to install dependencies
+$ yarn storybook # to start storybook dev server
 ```
 
 ## Contributing
@@ -34,7 +34,7 @@ This project uses [semantic-release](https://github.com/semantic-release/semanti
 When commiting, please use following command and follow the prompts:
 
 ```bash
-yarn commit
+$ yarn commit
 ```
 
 ## [Release](https://github.com/WeConnect/ray/releases)
@@ -51,7 +51,7 @@ If a manual release needs to be made, make sure you have the following environme
 Run:
 
 ```bash
-npx semantic-release
+$ npx semantic-release
 ```
 
 ![](https://media.giphy.com/media/NXWYyKAHim63u/giphy.gif)
