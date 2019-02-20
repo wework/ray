@@ -12,6 +12,12 @@ $card-border-color: $ray-color-gray-10;
 
   &--link {
     cursor: pointer;
+    color: $ray-color-text-dark;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
 
     &:hover {
       &::after {

@@ -6,7 +6,10 @@ import withPadding from './util/withPadding';
 storiesOf('Card', module)
   .addWithJSX('card, link, image on top', () =>
     withPadding(
-      <div
+      <a
+        href="https://wework.com"
+        target="_blank"
+        rel="noopener noreferrer"
         className="ray-card ray-card--link"
         style={{
           maxWidth: '480px'
@@ -23,12 +26,15 @@ storiesOf('Card', module)
             atque minima itaque sint! Doloremque odio quia saepe.
           </p>
         </div>
-      </div>
+      </a>
     )
   )
   .addWithJSX('card, link, image on bottom', () =>
     withPadding(
-      <div
+      <a
+        href="https://wework.com"
+        target="_blank"
+        rel="noopener noreferrer"
         className="ray-card ray-card--link"
         style={{
           maxWidth: '480px'
@@ -45,12 +51,15 @@ storiesOf('Card', module)
         <div className="ray-card__image ray-image ray-image--16by9">
           <img src="https://source.unsplash.com/random/800x450?minimalist" />
         </div>
-      </div>
+      </a>
     )
   )
   .addWithJSX('card, link, no image', () =>
     withPadding(
-      <div
+      <a
+        href="https://wework.com"
+        target="_blank"
+        rel="noopener noreferrer"
         className="ray-card ray-card--link"
         style={{
           maxWidth: '480px'
@@ -63,7 +72,7 @@ storiesOf('Card', module)
             atque minima itaque sint! Doloremque odio quia saepe.
           </p>
         </div>
-      </div>
+      </a>
     )
   )
   .addWithJSX('card, image on top, with buttons', () =>
