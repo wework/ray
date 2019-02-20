@@ -4,6 +4,7 @@
   height: auto;
   position: relative;
   overflow: hidden;
+  border-radius: $ray-border-radius;
   background-color: $ray-color-gray-10;
 
   img {
@@ -43,6 +44,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: $ray-border-radius;
 }
 
 .#{$ray-class-prefix}bg {

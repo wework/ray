@@ -11,7 +11,7 @@ storiesOf('Card', module).addWithJSX('default', () =>
       }}
     >
       <div className="ray-card">
-        <div className="ray-image ray-image--16by9">
+        <div className="ray-card__image ray-image ray-image--16by9">
           <img src="https://source.unsplash.com/random/800x450" />
         </div>
 

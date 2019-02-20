@@ -21,4 +21,16 @@ $card-border-color: $ray-color-gray-10;
       border-top: 0;
     }
   }
+
+  &__image {
+    &:first-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
 }
