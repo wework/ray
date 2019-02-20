@@ -37,7 +37,7 @@ When commiting, please use following command and follow the prompts:
 yarn commit
 ```
 
-## Release
+## [Release](https://github.com/WeConnect/ray/releases)
 
 Releases are automatically created when a commit is merged into master. Circle CI will kick off a job, bump the version and publish to the npm registry.
 
