@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { throttle, range } from 'lodash';
-import withPadding from './util/withPadding';
-import { relative } from 'upath';
+import { range } from 'lodash';
 
 storiesOf('Grid', module)
   .addWithJSX('default', () => (
@@ -13,7 +11,7 @@ storiesOf('Grid', module)
           style={{ backgroundColor: 'hsl(0, 100%, 75%)' }}
         >
           {range(12).map(n => (
-            <div className="ray-grid__cell--span-1">
+            <div className="ray-grid__cell--span-1" key={n}>
               <div
                 style={{
                   minHeight: '4vh',

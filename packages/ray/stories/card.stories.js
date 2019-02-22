@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import withPadding from './util/withPadding';
+import getPlaceholderURL from './util/placeholder';
 
 storiesOf('Card', module)
   .addWithJSX('card, link, image on top', () =>
@@ -16,7 +17,7 @@ storiesOf('Card', module)
         }}
       >
         <div className="ray-card__image ray-image ray-image--16by9">
-          <img src="https://source.unsplash.com/random/800x450?minimalist" />
+          <img src={getPlaceholderURL('800x450')} />
         </div>
 
         <div className="ray-card__content">
@@ -49,7 +50,7 @@ storiesOf('Card', module)
         </div>
 
         <div className="ray-card__image ray-image ray-image--16by9">
-          <img src="https://source.unsplash.com/random/800x450?minimalist" />
+          <img src={getPlaceholderURL('800x450')} />
         </div>
       </a>
     )
@@ -84,7 +85,7 @@ storiesOf('Card', module)
         }}
       >
         <div className="ray-card__image ray-image ray-image--16by9">
-          <img src="https://source.unsplash.com/random/800x450?minimalist" />
+          <img src={getPlaceholderURL('800x450')} />
         </div>
 
         <div className="ray-card__content">

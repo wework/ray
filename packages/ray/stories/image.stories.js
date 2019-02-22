@@ -2,13 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import withPadding from './util/withPadding';
+import getPlaceholderURL from './util/placeholder';
 
 storiesOf('Image', module)
   .addWithJSX('16/9 img', () =>
     withPadding(
       <div style={{ maxWidth: '500px' }}>
         <div className="ray-image ray-image--16by9">
-          <img src="https://source.unsplash.com/random/800x800" />
+          <img src={getPlaceholderURL('800x800')} />
         </div>
       </div>
     )
@@ -17,7 +18,7 @@ storiesOf('Image', module)
     withPadding(
       <div style={{ maxWidth: '400px' }}>
         <div className="ray-image ray-image--3by4">
-          <img src="https://source.unsplash.com/random/800x1200" />
+          <img src={getPlaceholderURL('800x1200')} />
         </div>
       </div>
     )
@@ -28,7 +29,7 @@ storiesOf('Image', module)
         <div
           className="ray-bg ray-bg--16by9"
           style={{
-            backgroundImage: `url(https://source.unsplash.com/random/800x800)`
+            backgroundImage: `url(${getPlaceholderURL('800x800')})`
           }}
         />
       </div>
@@ -40,7 +41,7 @@ storiesOf('Image', module)
         <div
           className="ray-bg ray-bg--3by4"
           style={{
-            backgroundImage: `url(https://source.unsplash.com/random/800x1200)`
+            backgroundImage: `url(${getPlaceholderURL('800x1200')})`
           }}
         />
       </div>
