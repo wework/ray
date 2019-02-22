@@ -7,8 +7,12 @@ $ray-radio-checkbox-width: 1rem;
   display: flex;
   cursor: pointer;
 
+  &:not(:last-of-type) {
+    margin-bottom: $ray-spacing-md;
+  }
+
   &__label {
-    margin-left: 1rem;
+    margin-left: $ray-spacing-md;
     line-height: $ray-field-line-height;
     cursor: pointer;
   }
