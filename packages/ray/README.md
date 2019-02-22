@@ -14,17 +14,46 @@ $ yarn add @wework/ray
 $ npm install --save @wework/ray
 ```
 
-Then import the library in your sass file:
-
-```scss
-@import '@wework/ray';
-```
-
 ## Development
 
 ```bash
 $ yarn install # to install dependencies
 $ yarn storybook # to start storybook dev server
+```
+
+## Usage
+
+```
+.
+├── html
+│   ├── components
+├── es
+│   ├── index.js
+│   ├── global
+│   ├── components
+├── umd
+│   ├── index.js
+│   ├── global
+│   ├── components
+├── scss
+│   ├── application.scss
+│   ├── global
+│   ├── components
+├── css
+│   ├── application.css
+│   ├── application.css.map
+│   ├── application.min.css
+│   ├── application.min.css.map
+├── LICENSE
+└── README.md
+```
+
+```scss
+@import '@wework/ray';
+```
+
+```js
+import { Select } from '@wework/ray';
 ```
 
 ## Contributing
