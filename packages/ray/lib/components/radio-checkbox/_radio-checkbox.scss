@@ -5,10 +5,12 @@ $ray-radio-checkbox-width: 1rem;
 .#{$ray-class-prefix}checkbox {
   @include no-select;
   display: flex;
+  cursor: pointer;
 
   &__label {
     margin-left: 1rem;
     line-height: $ray-field-line-height;
+    cursor: pointer;
   }
 
   &__input {
