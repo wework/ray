@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-console': 'error',
     'no-underscore-dangle': [
       'error',
       {

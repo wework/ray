@@ -1,7 +1,54 @@
 {
   "name": "root",
+  "description": "Resources for building interfaces with WeWork's design system",
   "private": true,
+  "contributors": [
+    "Adam Raider <adam.raider@wework.com>",
+    "Celeste Glavin <celeste.glavin@wework.com>"
+  ],
   "devDependencies": {
-    "lerna": "^3.13.1"
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "eslint": "5.14.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "husky": "1.3.1",
+    "jest": "24.1.0",
+    "lerna": "3.13.1",
+    "lint-staged": "8.1.4",
+    "prettier": "1.16.4"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "bootstrap": "lerna bootstrap --hoist",
+    "pretest": "eslint packages",
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-eslint": "10.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,scss,css,md,html}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

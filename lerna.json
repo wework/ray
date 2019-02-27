@@ -1,6 +1,10 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    }
+  },
+  "packages": ["packages/*"],
+  "version": "independent",
+  "npmClient": "yarn"
 }
