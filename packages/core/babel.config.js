@@ -1,13 +1,1 @@
-module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current'
-        }
-      }
-    ]
-  ],
-  plugins: ['@babel/plugin-proposal-class-properties']
-};
+module.exports = require('../../babel.config.js');

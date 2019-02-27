@@ -2,6 +2,12 @@
   "command": {
     "publish": {
       "conventionalCommits": true
+    },
+    "version": {
+      "message": "chore(release): publish",
+      "conventionalCommits": true,
+      "gitHubRelease": true,
+      "allowBranch": "master"
     }
   },
   "packages": ["packages/*"],

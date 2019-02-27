@@ -7,8 +7,11 @@
     "Celeste Glavin <celeste.glavin@wework.com>"
   ],
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "7.3.4",
+    "@babel/preset-env": "7.3.4",
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
+    "babel-eslint": "10.0.1",
     "eslint": "5.14.1",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-prettier": "4.1.0",
@@ -24,12 +27,13 @@
   "scripts": {
     "commit": "git-cz",
     "bootstrap": "lerna bootstrap --hoist",
-    "pretest": "eslint packages",
-    "test": "jest"
+    "test": "jest",
+    "lerna:publish": "lerna publish --yes",
+    "lerna:version": "lerna version --yes",
+    "#": "used to authenticate in ci for lerna:publish",
+    "make-npmrc": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > ~/.npmrc"
   },
-  "dependencies": {
-    "babel-eslint": "10.0.1"
-  },
+  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",

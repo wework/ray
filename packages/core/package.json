@@ -1,5 +1,6 @@
 {
-  "name": "@wework/ray",
+  "name": "@wework/ray-core",
+  "version": "0.0.0",
   "main": "es/index.js",
   "scripts": {
     "storybook": "start-storybook -s ./stories/static -p 6006",
@@ -11,10 +12,8 @@
     "node": "10.13.0"
   },
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.2.2",
-    "@babel/plugin-proposal-class-properties": "7.3.0",
     "@babel/plugin-transform-modules-umd": "7.2.0",
     "@storybook/addon-backgrounds": "4.1.11",
     "@storybook/addon-options": "4.1.11",
@@ -64,5 +63,6 @@
     "scss/**/*",
     "src/**/*",
     "umd/**/*"
-  ]
+  ],
+  "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc"
 }

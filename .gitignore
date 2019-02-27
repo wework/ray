@@ -14,14 +14,15 @@ yarn-error.log*
 
 stats.json
 
-# built files
-/es
-/umd
-/scripts
-/css
-/scss
-/html
-/docs/js
-/.out
-/storybook-static
 /.cache
+/docs/js
+
+# built files
+packages/core/es
+packages/core/umd
+packages/core/scripts
+packages/core/css
+packages/core/scss
+packages/core/html
+packages/core/.out
+packages/core/storybook-static
