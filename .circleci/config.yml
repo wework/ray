@@ -1,5 +1,17 @@
 version: 2
 
+machine:
+  pre:
+    - mkdir ~/.yarn-cache
+
+dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  cache_directories:
+    - ~/.yarn-cache
+  override:
+    - yarn install
+
 jobs:
   test:
     docker:
@@ -20,16 +32,15 @@ jobs:
   release:
     docker:
       - image: circleci/node:10.13.0
-    branches:
-      only:
-        - master
     steps:
       - checkout
-      - yarn lerna:publish
+      - run: yarn install
+      - run: yarn make-npmrc
+      - run: yarn lerna:publish
 
 workflows:
   version: 2
-  test_and_release:
+  'continuously integrate':
     # Run the test jobs first, then the release only when all the test jobs are successful
     jobs:
       - test
@@ -37,5 +48,9 @@ workflows:
           requires:
             - test
       - release:
+          filters:
+            branches:
+              only:
+                - master
           requires:
             - build

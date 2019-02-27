@@ -6,6 +6,9 @@
     "Adam Raider <adam.raider@wework.com>",
     "Celeste Glavin <celeste.glavin@wework.com>"
   ],
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "7.3.4",
     "@babel/preset-env": "7.3.4",
@@ -26,12 +29,14 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "test": "jest",
+    "build": "npx lerna run build",
     "lerna:publish": "lerna publish --yes",
     "lerna:version": "lerna version --yes",
     "#": "used to authenticate in ci for lerna:publish",
-    "make-npmrc": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > ~/.npmrc"
+    "make-npmrc": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > ~/.npmrc",
+    "postinstall": "yarn bootstrap"
   },
   "dependencies": {},
   "husky": {
