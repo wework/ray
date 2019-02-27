@@ -9,7 +9,7 @@ jobs:
       - run: yarn install
       - run: yarn test
 
-  release:
+  build:
     docker:
       - image: circleci/node:10.13.0
     steps:
@@ -17,20 +17,25 @@ jobs:
       - run: yarn install
       - run: yarn build
 
+  release:
+    docker:
+      - image: circleci/node:10.13.0
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+      - yarn lerna:publish
+
 workflows:
   version: 2
   test_and_release:
     # Run the test jobs first, then the release only when all the test jobs are successful
     jobs:
       - test
-      - release:
+      - build:
           requires:
             - test
-
-deployment:
-  production:
-    branch: master
-    commands:
-      - git config --global user.email $GITHUB_EMAIL
-      - git config --global user.name $GITHUB_USER
-      - yarn lerna:publish
+      - release:
+          requires:
+            - build
