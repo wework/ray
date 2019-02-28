@@ -29,12 +29,13 @@ jobs:
       - run: yarn install
       - run: yarn build
 
-  release:
+  'build and release':
     docker:
       - image: circleci/node:10.13.0
     steps:
       - checkout
       - run: yarn install
+      - run: yarn build
       - run: yarn make-npmrc
       - run: yarn lerna:publish
 
@@ -47,10 +48,12 @@ workflows:
       - build:
           requires:
             - test
-      - release:
+          filters:
+            branches:
+              ignore:
+                - master
+      - 'build and release':
           filters:
             branches:
               only:
                 - master
-          requires:
-            - build
