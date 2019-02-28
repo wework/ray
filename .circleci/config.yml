@@ -53,6 +53,8 @@ workflows:
               ignore:
                 - master
       - 'build and release':
+          requires:
+            - test
           filters:
             branches:
               only:
