@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "es/index.js",
   "scripts": {
     "storybook": "start-storybook -s ./stories/static -p 6006",
