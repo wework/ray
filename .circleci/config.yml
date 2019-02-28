@@ -37,6 +37,8 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: yarn make-npmrc
+      - run: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
+      - run: echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > ~/.npmrc
       - run: yarn lerna:publish
 
 workflows:

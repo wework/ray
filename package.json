@@ -34,8 +34,6 @@
     "build": "npx lerna run build",
     "lerna:publish": "lerna publish --yes",
     "lerna:version": "lerna version --yes",
-    "#": "used to authenticate in ci for lerna:publish",
-    "make-npmrc": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > ~/.npmrc",
     "postinstall": "yarn bootstrap"
   },
   "dependencies": {},
