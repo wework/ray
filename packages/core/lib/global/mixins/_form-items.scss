@@ -30,13 +30,77 @@
   padding-top: 0;
   pointer-events: none;
 
-  top: -$ray-field-h-spacing / 2;
+  top: -1 * $ray-field-h-spacing / 2;
   left: $ray-field-h-spacing / 2;
   padding-left: $ray-field-h-spacing / 2;
   padding-right: $ray-field-h-spacing / 2;
   width: auto;
   height: auto;
   background: $ray-color-white;
+}
+
+@mixin text-field--has-value {
+  .#{$ray-class-prefix}text-field__label,
+  .#{$ray-class-prefix}text-area__label {
+    @include label--active;
+  }
+
+  .#{$ray-class-prefix}text-field__input,
+  .#{$ray-class-prefix}text-area__input {
+    &::placeholder {
+      color: $ray-color-text-light !important;
+    }
+  }
+
+  &.#{$ray-class-prefix}text-field--compact,
+  &.#{$ray-class-prefix}text-area--compact {
+    .#{$ray-class-prefix}text-field__label,
+    .#{$ray-class-prefix}text-area__label {
+      padding-top: 0;
+    }
+  }
+}
+
+@mixin text-field--focus {
+  border-color: $ray-color-blue-50;
+
+  .#{$ray-class-prefix}text-field__label,
+  .#{$ray-class-prefix}text-area__label {
+    color: $ray-color-blue-50;
+  }
+}
+
+@mixin compact-label--active {
+  + .#{$ray-class-prefix}text-field__label,
+  + .#{$ray-class-prefix}text-area__label {
+    padding-top: 0;
+    pointer-events: none;
+  }
+}
+
+@mixin input--active {
+  + .#{$ray-class-prefix}text-field__label,
+  + .#{$ray-class-prefix}text-area__label {
+    @include label--active;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
 }
 
 @keyframes wipe-in {

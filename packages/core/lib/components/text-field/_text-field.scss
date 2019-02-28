@@ -22,31 +22,39 @@
     font-size: $ray-field-label-size;
     display: block;
     background-color: transparent;
-    padding: 0 $ray-field-h-spacing;
+    padding: 0 $ray-field-h-spacing - $ray-border-width;
     outline: 0;
     border: 0;
     cursor: pointer;
 
-    &:focus,
-    &:not(:placeholder-shown) {
-      + label {
-        @include label--active;
+    &::-ms-clear {
+      display: none;
+    }
+
+    &:not(:focus) {
+      @include placeholder {
+        color: transparent;
       }
     }
 
-    &::placeholder {
-      transition: color 0.125s ease-in;
-      @include no-select;
+    // separate selector from :not(:placeholder-shown) to support IE11
+    &:focus {
+      @include input--active;
+
+      @include placeholder {
+        transition: color 0.125s ease-in;
+        @include no-select;
+        text-overflow: ellipsis;
+        color: $ray-color-text-medium !important;
+      }
     }
 
-    &:not(:focus)::placeholder {
-      color: transparent;
+    &:not(:placeholder-shown) {
+      @include input--active;
     }
 
-    &:focus::placeholder,
     [placeholder] {
       text-overflow: ellipsis;
-      color: $ray-color-text-medium;
     }
   }
 
@@ -55,30 +63,18 @@
   }
 
   // :focus-within is only supported in modern browsers (https://caniuse.com/#search=focus-within), --active should be used as a backup
-  &--active,
   &:focus-within {
-    border-color: $ray-color-blue-50;
+    @include text-field--has-value;
+    @include text-field--focus;
+  }
 
-    .#{$ray-class-prefix}text-field__label,
-    .#{$ray-class-prefix}text-area__label {
-      @include label--active;
-      color: $ray-color-blue-50;
-    }
+  &--active,
+  &--has-value {
+    @include text-field--has-value;
+  }
 
-    .#{$ray-class-prefix}text-field__input,
-    .#{$ray-class-prefix}text-area__input {
-      &::placeholder {
-        color: $ray-color-text-light !important;
-      }
-    }
-
-    &.#{$ray-class-prefix}text-field--compact,
-    &.#{$ray-class-prefix}text-area--compact {
-      .#{$ray-class-prefix}text-field__label,
-      .#{$ray-class-prefix}text-area__label {
-        padding-top: 0;
-      }
-    }
+  &--active {
+    @include text-field--focus;
   }
 
   &--disabled {
@@ -117,12 +113,13 @@
     .#{$ray-class-prefix}text-area__input {
       padding-top: 0;
 
-      &:focus,
+      // separate selector to support IE11
+      &:focus {
+        @include compact-label--active;
+      }
+
       &:not(:placeholder-shown) {
-        + label {
-          padding-top: 0;
-          pointer-events: none;
-        }
+        @include compact-label--active;
       }
     }
   }
@@ -138,6 +135,7 @@
   }
 
   &__input {
+    overflow-y: scroll;
     display: inline-block;
     padding-top: 1rem;
     resize: vertical;

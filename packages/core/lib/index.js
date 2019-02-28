@@ -1,3 +1,4 @@
 import Select from './components/select';
+import { TextField, TextArea } from './components/text-field';
 
-export { Select }; // eslint-disable-line import/prefer-default-export
+export { Select, TextField, TextArea };

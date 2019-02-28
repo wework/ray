@@ -2,10 +2,21 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import withPadding from './util/withPadding';
+import { TextField, TextArea } from '../lib/components/text-field';
+
+function initTextField() {
+  TextField.createAll();
+}
+
+function initTextArea() {
+  TextArea.createAll();
+}
 
 storiesOf('Text Field', module)
-  .addWithJSX('Text field', () =>
-    withPadding(
+  .addWithJSX('Text field', () => {
+    setTimeout(initTextField);
+
+    return withPadding(
       <div className="ray-text-field">
         <input
           className="ray-text-field__input"
@@ -17,8 +28,8 @@ storiesOf('Text Field', module)
           Email address
         </label>
       </div>
-    )
-  )
+    );
+  })
   .addWithJSX('Text field, active', () =>
     withPadding(
       <div className="ray-text-field ray-text-field--active">
@@ -34,8 +45,10 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Text field, textarea', () =>
-    withPadding(
+  .addWithJSX('Text field, textarea', () => {
+    setTimeout(initTextArea);
+
+    return withPadding(
       <div className="ray-text-area">
         <textarea
           className="ray-text-area__input"
@@ -46,10 +59,12 @@ storiesOf('Text Field', module)
           Fun fact about Ray Eames
         </label>
       </div>
-    )
-  )
-  .addWithJSX('Text field, multi-row textarea', () =>
-    withPadding(
+    );
+  })
+  .addWithJSX('Text field, multi-row textarea', () => {
+    setTimeout(initTextArea);
+
+    return withPadding(
       <div className="ray-text-area">
         <textarea
           className="ray-text-area__input"
@@ -61,8 +76,8 @@ storiesOf('Text Field', module)
           Fun fact about Ray Eames
         </label>
       </div>
-    )
-  )
+    );
+  })
   .addWithJSX('Text field, active, textarea', () =>
     withPadding(
       <div className="ray-text-area ray-text-area--active">
@@ -77,8 +92,10 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Text field, disabled', () =>
-    withPadding(
+  .addWithJSX('Text field, disabled', () => {
+    setTimeout(initTextField);
+
+    return withPadding(
       <div className="ray-text-field ray-text-field--disabled">
         <input
           className="ray-text-field__input"
@@ -91,8 +108,8 @@ storiesOf('Text Field', module)
           Email address
         </label>
       </div>
-    )
-  )
+    );
+  })
   .addWithJSX('Text field, active disabled', () =>
     withPadding(
       <div className="ray-text-field ray-text-field--active ray-text-field--disabled">
@@ -109,8 +126,11 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Example Form', () =>
-    withPadding(
+  .addWithJSX('Example Form', () => {
+    setTimeout(initTextField);
+    setTimeout(initTextArea);
+
+    return withPadding(
       <div className="container">
         <div className="row">
           <div className="offset-3 col-6">
@@ -176,10 +196,12 @@ storiesOf('Text Field', module)
           </div>
         </div>
       </div>
-    )
-  )
-  .addWithJSX('Hint states', () =>
-    withPadding(
+    );
+  })
+  .addWithJSX('Hint states', () => {
+    setTimeout(initTextField);
+
+    return withPadding(
       <div className="container">
         <div className="row">
           <div className="offset-3 col-6">
@@ -232,10 +254,12 @@ storiesOf('Text Field', module)
           </div>
         </div>
       </div>
-    )
-  )
-  .addWithJSX('Text field - compact', () =>
-    withPadding(
+    );
+  })
+  .addWithJSX('Text field - compact', () => {
+    setTimeout(initTextField);
+
+    return withPadding(
       <div className="ray-text-field ray-text-field--compact">
         <input
           className="ray-text-field__input"
@@ -247,8 +271,8 @@ storiesOf('Text Field', module)
           Email address
         </label>
       </div>
-    )
-  )
+    );
+  })
   .addWithJSX('Text field, active - compact', () =>
     withPadding(
       <div className="ray-text-field ray-text-field--active ray-text-field--compact">
@@ -264,8 +288,10 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Text field - compact - disabled', () =>
-    withPadding(
+  .addWithJSX('Text field - compact - disabled', () => {
+    setTimeout(initTextField);
+
+    return withPadding(
       <div className="ray-text-field ray-text-field--compact ray-text-field--disabled">
         <input
           className="ray-text-field__input"
@@ -278,10 +304,12 @@ storiesOf('Text Field', module)
           Email address
         </label>
       </div>
-    )
-  )
-  .addWithJSX('Text field, textarea - compact', () =>
-    withPadding(
+    );
+  })
+  .addWithJSX('Text field, textarea - compact', () => {
+    setTimeout(initTextArea);
+
+    return withPadding(
       <div className="ray-text-area ray-text-area--compact">
         <textarea
           className="ray-text-area__input"
@@ -292,8 +320,8 @@ storiesOf('Text Field', module)
           Fun fact about Ray Eames
         </label>
       </div>
-    )
-  )
+    );
+  })
   .addWithJSX('Text field, active, textarea - compact', () =>
     withPadding(
       <div className="ray-text-area ray-text-area--active ray-text-area--compact">
@@ -308,8 +336,11 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Example Form - compact', () =>
-    withPadding(
+  .addWithJSX('Example Form - compact', () => {
+    setTimeout(initTextField);
+    setTimeout(initTextArea);
+
+    return withPadding(
       <div className="container">
         <div className="row">
           <div className="offset-3 col-6">
@@ -386,10 +417,12 @@ storiesOf('Text Field', module)
           </div>
         </div>
       </div>
-    )
-  )
-  .addWithJSX('Hint states - compact', () =>
-    withPadding(
+    );
+  })
+  .addWithJSX('Hint states - compact', () => {
+    setTimeout(initTextField);
+
+    return withPadding(
       <div className="container">
         <div className="row">
           <div className="offset-3 col-6">
@@ -442,5 +475,5 @@ storiesOf('Text Field', module)
           </div>
         </div>
       </div>
-    )
-  );
+    );
+  });

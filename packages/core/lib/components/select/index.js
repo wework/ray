@@ -1,5 +1,5 @@
 import { CSS_CLASSES, STRINGS } from './constants';
-import { validateNodeType, isTargetingItself } from './util';
+import { validateNodeType, isTargetingItself } from '../../global/js/util';
 
 class Select {
   static instances = new WeakMap();

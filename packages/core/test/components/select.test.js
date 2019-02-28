@@ -46,6 +46,11 @@ function setupTest(fixture = getFixture()) {
 }
 
 describe('Select', () => {
+  afterEach(() => {
+    Select.instances = new WeakMap();
+    document.body.innerHTML = null;
+  });
+
   test('#create can instantiate a select', () => {
     const { select, selectEl } = setupTest();
 
@@ -53,8 +58,8 @@ describe('Select', () => {
     select.destroy();
   });
 
-  test('#set sets value of select and triggers', () => {
-    const { select, selectEl } = setupTest();
+  test('#set sets value of select and triggers change event', () => {
+    const { select } = setupTest();
 
     select.set('Charmander');
 
@@ -72,8 +77,7 @@ describe('Select', () => {
     expect(Select.instances.get(selectEl)).not.toBeDefined();
   });
 
-  // @todo: Fix this test, createAll works on storybook, not sure why we cant fetch the element
-  test.skip('#createAll can instantiate many selects', () => {
+  test('#createAll can instantiate many selects', () => {
     document.body.appendChild(getFixture());
     document.body.appendChild(getFixture());
     document.body.appendChild(getFixture());
