@@ -9,16 +9,19 @@ Resources for building interfaces with WeWork's design system. [npm package](htt
 ## Installation
 
 ```bash
-$ yarn add @wework/ray
+$ yarn add @wework/ray-core
 # or
-$ npm install --save @wework/ray
+$ npm install --save @wework/ray-core
 ```
 
 ## Development
 
 ```bash
-$ yarn install # to install dependencies
-$ yarn storybook # to start storybook dev server
+# to install dependencies, this will also bootstrap lerna
+$ yarn install
+
+# to start storybook dev server
+$ npx lerna run storybook --scope="@wework/ray-core"
 ```
 
 ## Usage
@@ -49,18 +52,18 @@ $ yarn storybook # to start storybook dev server
 ```
 
 ```scss
-@import '@wework/ray';
+@import '@wework/ray-core';
 ```
 
 ```js
-import { Select } from '@wework/ray';
+import { Select } from '@wework/ray-core';
 ```
 
 ## Contributing
 
-This project uses [semantic-release](https://github.com/semantic-release/semantic-release) and [commitzen](https://github.com/commitizen/cz-cli).
+This project uses [commitzen](https://github.com/commitizen/cz-cli).
 
-When commiting, please use following command and follow the prompts:
+When commiting, please use the following command and follow the prompts:
 
 ```bash
 $ yarn commit
@@ -70,17 +73,12 @@ $ yarn commit
 
 Releases are automatically created when a commit is merged into master. Circle CI will kick off a job, bump the version and publish to the npm registry.
 
-If a manual release needs to be made, make sure you have the following environment variables available:
-
-| Environment variable | Description                                                          |
-| -------------------- | -------------------------------------------------------------------- |
-| `GH_TOKEN`           | GitHub access token, make sure it has push-access to this repo       |
-| `NPM_TOKEN`          | NPM access token, make sure it has access to the WeWork organization |
-
-Run:
+If a manual release needs to be made, make sure you have a `GH_TOKEN`, a GitHub personal access token with write acccess to WeConnect/ray. Also, you will need an `.npmrc` with the contents `//registry.npmjs.org/:_authToken=${NPM_TOKEN}`, where `NPM_TOKEN` is an NPM access token with write access to the WeWork organization. Then run:
 
 ```bash
-$ npx semantic-release
+$ yarn install
+$ yarn build
+$ yarn lerna:publish
 ```
 
 ![](https://media.giphy.com/media/NXWYyKAHim63u/giphy.gif)
