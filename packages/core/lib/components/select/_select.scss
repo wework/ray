@@ -43,7 +43,11 @@
     outline: 0;
     border: 0;
     cursor: pointer;
-    color: transparent;
+    color: rgba(0, 0, 0, 0);
+
+    &::-ms-expand {
+      display: none;
+    }
   }
 
   &--has-value {
