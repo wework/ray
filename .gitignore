@@ -16,6 +16,7 @@ stats.json
 
 /.cache
 /docs/js
+coverage/
 
 # built files
 packages/core/es
@@ -26,4 +27,5 @@ packages/core/scss
 packages/core/html
 packages/core/.out
 packages/core/storybook-static
-coverage/
+packages/docs-app/public
+packages/docs-app/.cache

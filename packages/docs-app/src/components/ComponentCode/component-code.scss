@@ -1,0 +1,128 @@
+.component-example .page-h2:first-child {
+  margin-top: $ray-spacing-3xl;
+}
+
+.component-example {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  color: $ray-color-white;
+  margin-bottom: 6rem;
+  line-height: 1;
+
+  &__live {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: rem(200px);
+    position: relative;
+    padding: 2rem 2rem 2.5rem;
+    margin: 1.5rem 0 0;
+    background-color: #f5f7fa;
+    color: $ray-color-text-dark;
+    border: 1px solid $code-border;
+    border-top-left-radius: $ray-border-radius;
+    border-top-right-radius: $ray-border-radius;
+
+    &--light {
+      background-color: $ray-color-white;
+    }
+
+    &--rendered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .#{$ray-class-prefix}grid {
+      background-color: rgb(128, 255, 179);
+
+      &__inner {
+        background-color: rgb(255, 128, 128);
+      }
+
+      &__cell--span-4 {
+        background-color: rgb(159, 128, 255);
+        min-height: 10vh;
+      }
+    }
+  }
+
+  &__view-full-render {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: $ray-color-text-medium;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    z-index: 9999;
+  }
+
+  p {
+    padding: 0;
+  }
+
+  button {
+    margin: 3px;
+  }
+}
+
+.component-toolbar {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  border-left: 1px solid $code-border;
+  border-right: 1px solid $code-border;
+}
+
+.component-toolbar__current {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid $code-border;
+
+  p {
+    color: $ray-color-text-medium;
+    padding: 0 1rem;
+  }
+}
+
+.component-toolbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 2;
+
+  a {
+    padding-left: 1rem;
+  }
+}
+
+.component-toolbar__switcher {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid $code-border;
+  height: 100%;
+  padding-left: 1rem;
+
+  .bx--form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .bx--radio-button__label {
+    color: $ray-color-text-medium;
+  }
+
+  .bx--radio-button-group {
+    margin-top: 0;
+  }
+
+  .radioButtonWrapper:last-child {
+    padding-left: 1rem;
+    border-left: 1px solid $code-border;
+  }
+}

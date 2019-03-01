@@ -1,0 +1,13 @@
+{
+  "components": {
+    "title": "Components",
+    "sub-nav": {
+      "button": {
+        "title": "Button"
+      },
+      "select": {
+        "title": "Select"
+      }
+    }
+  }
+}

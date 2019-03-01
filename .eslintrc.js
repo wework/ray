@@ -19,6 +19,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-console': 'error',
+    'class-methods-use-this': 'off',
     'no-underscore-dangle': [
       'error',
       {

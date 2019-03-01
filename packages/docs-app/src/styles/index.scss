@@ -1,0 +1,23 @@
+@import '../../../core/lib/application.scss';
+
+$font-family: 'Apercu', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+$transition--base: 0.3s;
+$code-bg: #fff;
+$code-border: $ray-color-gray-10;
+
+@import 'mixins';
+@import 'page';
+
+@import '../components/404/404.scss';
+@import '../components/markdown/markdown.scss';
+@import '../components/markdown/image-grid.scss';
+@import '../components/PageHeader/page-header.scss';
+@import '../components/PageTable/page-table.scss';
+@import '../components/SideNav/side-nav.scss';
+@import '../components/Footer/footer.scss';
+@import '../components/ComponentCode/component-code.scss';
+@import '../components/CodeExample/code-example.scss';
+@import '../components/ComponentDocs/component-docs.scss';
+@import '../components/ComponentOverview/component-overview.scss';
+@import '../components/CodeSnippet/code-snippet.scss';
+@import 'syntax';

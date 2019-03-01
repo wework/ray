@@ -1,0 +1,108 @@
+//---------------------------------------
+// Global styles
+//---------------------------------------
+
+body {
+  background: $ray-color-white;
+  line-height: 1.5;
+  font-family: $font-family;
+}
+
+//---------------------------------------
+// Page styles
+//---------------------------------------
+
+button,
+.side-nav .bx--btn {
+  font-family: $font-family;
+}
+
+.page-content {
+  margin-bottom: 7rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  // All paragraphs on Markdown pages
+  // And divs when markdown doesn't wrap text in paragraphs (when you have to use html for links to open in a new window)
+  p {
+    max-width: 38rem;
+    line-height: 1.5;
+    margin: 0 0 $ray-spacing-md;
+  }
+
+  // All em on Markdown pages after images and image grid
+  .gatsby-resp-image-link + em,
+  .image-grid + p > em,
+  .image-component + p > em {
+    font-size: 0.875em;
+    color: $ray-color-text-medium;
+  }
+
+  // Images on component pages
+  .image-component {
+    background: $ray-color-gray-10;
+    max-width: 38rem;
+    display: flex;
+    justify-content: center;
+    padding: $ray-spacing-md 0;
+
+    .gatsby-resp-image-link,
+    > img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  // No padding when a paragraph is followed by certain elements
+  p + .bx--snippet,
+  p + ul {
+    margin-top: 0;
+  }
+
+  // All links on Markdown pages but not inside component examples
+  & > div > * > a,
+  .page-table td a,
+  .page-ul a {
+    color: $ray-color-blue-50;
+    font-weight: 600;
+  }
+
+  // No padding between h2 and h3
+  .page-h2 + .page-h3 {
+    padding-top: 0;
+  }
+
+  // Inline code
+  p > code,
+  li > code,
+  td > code {
+    font-family: $ray-font-stack-mono;
+    position: relative;
+    display: inline;
+    padding: rem(1px) $ray-spacing-xs;
+    background: transparent;
+    font-size: inherit;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: $ray-color-gray-10;
+    font-size: 85%;
+  }
+
+  // HR dividers
+  hr.divider {
+    display: block;
+    margin: 3rem 0;
+    max-width: 38rem;
+    height: 1px;
+    background: $ray-color-gray-30;
+    border: 0px transparent;
+  }
+}

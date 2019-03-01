@@ -6,10 +6,8 @@
     "storybook": "start-storybook -s ./stories/static -p 6006",
     "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out -s ./stories/static",
     "build": "yarn prebuild && gulp html:source sass:source sass:compiled scripts:es scripts:umd",
-    "prebuild": "gulp clean"
-  },
-  "engines": {
-    "node": "10.13.0"
+    "clean": "gulp clean",
+    "prebuild": "yarn clean"
   },
   "license": "ISC",
   "devDependencies": {

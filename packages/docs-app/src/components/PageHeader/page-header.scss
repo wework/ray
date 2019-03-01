@@ -1,0 +1,26 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.page-header__label {
+  color: $ray-color-text-medium;
+  font-weight: 400;
+  margin: 5rem 0 0;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.page-header__title {
+  color: $ray-color-text-dark;
+  font-weight: 300;
+  margin: -1.15rem 0 0 -3px;
+  line-height: 1.25;
+  letter-spacing: 0;
+  padding: 0;
+  transition: $transition--base ease;
+}

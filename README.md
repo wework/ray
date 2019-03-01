@@ -22,6 +22,9 @@ $ yarn install
 
 # to start storybook dev server
 $ npx lerna run storybook --scope="@wework/ray-core"
+
+# to start docs site dev server
+$ npx lerna run dev --scope="ray-website-gatsby"
 ```
 
 ## Usage

@@ -36,6 +36,7 @@
     "bootstrap": "lerna bootstrap",
     "test": "jest",
     "build": "npx lerna run build",
+    "lerna:clean": "lerna run clean",
     "lerna:publish": "lerna publish --yes",
     "lerna:version": "lerna version --yes",
     "postinstall": "yarn bootstrap"

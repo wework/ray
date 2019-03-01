@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "item": "Button",
+      "added": "1.0.0",
+      "vanilla": "ready",
+      "react": false,
+      "experimental": "ready"
+    }
+  ]
+}
