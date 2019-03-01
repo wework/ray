@@ -26,3 +26,4 @@ packages/core/scss
 packages/core/html
 packages/core/.out
 packages/core/storybook-static
+coverage/
