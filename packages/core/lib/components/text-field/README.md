@@ -1,3 +1,24 @@
+---
+label: Component
+title: Text Field
+---
+
+<page-intro>Text fields allow users to interact with the side with text input</page-intro>
+
+<component 
+    name="Text field"
+    component="text-field"
+    variation="text-field" 
+    >
+</component>
+
+<component 
+    name="Text area"
+    component="text-area"
+    variation="text-area" 
+    >
+</component>
+
 ## Modifiers
 
 Use these modifiers with `.ray-text-field` or `.ray-text-area` class.
@@ -16,7 +37,7 @@ Use these modifiers with `.ray-text-field` or `.ray-text-area` class.
 Text fields:
 
 ```javascript
-import { TextField } from '@wework/ray';
+import { TextField } from '@wework/ray-core';
 TextField.createAll();
 // or
 TextField.create(document.querySelector('.ray-text-field'));
@@ -25,7 +46,7 @@ TextField.create(document.querySelector('.ray-text-field'));
 Textareas:
 
 ```javascript
-import { TextArea } from '@wework/ray';
+import { TextArea } from '@wework/ray-core';
 TextArea.createAll();
 // or
 TextArea.create(document.querySelector('.ray-text-area'));
