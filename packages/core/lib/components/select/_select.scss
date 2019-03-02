@@ -1,11 +1,14 @@
 @import '../../global/mixins/form-items';
 
+$ray-icon-width: 1rem;
+
 .#{$ray-class-prefix}select {
   border: $ray-border-width solid $ray-color-gray-60;
   background-color: $ray-color-white;
   border-radius: $ray-border-radius;
   position: relative;
   height: $ray-field-height;
+  display: flex;
 
   &::after {
     content: '';
@@ -47,6 +50,40 @@
 
     &::-ms-expand {
       display: none;
+    }
+  }
+
+  @mixin icon {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    line-height: 1;
+    top: 20px;
+    border-radius: 2px;
+  }
+
+  &__icon--left {
+    @include icon;
+    left: $ray-field-h-spacing;
+  }
+
+  &__icon--right {
+    @include icon;
+    // add spacing to compensate for the
+    right: calc(#{$ray-field-h-spacing} * 2 + 12px);
+  }
+
+  &--with-icon-left {
+    .#{$ray-class-prefix}select__input,
+    .#{$ray-class-prefix}select__label {
+      padding-left: calc(#{$ray-field-h-spacing} * 2 + #{$ray-icon-width});
+    }
+  }
+
+  &--with-icon-right {
+    .#{$ray-class-prefix}select__input,
+    .#{$ray-class-prefix}select__label {
+      padding-right: calc(#{$ray-field-h-spacing} * 2 + #{$ray-icon-width});
     }
   }
 
@@ -106,6 +143,11 @@
       align-items: center;
       padding-top: 0;
       padding-bottom: 0;
+    }
+
+    .#{$ray-class-prefix}select__icon--left,
+    .#{$ray-class-prefix}select__icon--right {
+      top: $ray-field-v-spacing-compact;
     }
   }
 
