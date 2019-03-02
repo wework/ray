@@ -1,5 +1,5 @@
 import { CSS_CLASSES, STRINGS } from './constants';
-import { validateNodeType, isTargetingItself } from '../../global/js/util';
+import { validateNodeType } from '../../global/js/util';
 
 class _InputComponent {
   static create(element, options) {
@@ -15,12 +15,8 @@ class _InputComponent {
 
     validateNodeType(target);
 
-    if (isTargetingItself(target, options)) {
-      this.create(target, options);
-    } else {
-      const textFields = [...target.querySelectorAll(options.initSelector)];
-      textFields.forEach(textField => this.create(textField, options));
-    }
+    const textFields = [...target.querySelectorAll(options.initSelector)];
+    textFields.forEach(textField => this.create(textField, options));
   }
 
   constructor(root) {

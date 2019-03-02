@@ -9,11 +9,4 @@ function validateNodeType(target) {
   }
 }
 
-function isTargetingItself(target, options) {
-  return (
-    target.nodeType === Node.ELEMENT_NODE &&
-    target.matches(options.selectorInit)
-  );
-}
-
-export { validateNodeType, isTargetingItself };
+export { validateNodeType }; // eslint-disable-line import/prefer-default-export

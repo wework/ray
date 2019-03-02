@@ -1,5 +1,5 @@
 import { CSS_CLASSES, STRINGS } from './constants';
-import { validateNodeType, isTargetingItself } from '../../global/js/util';
+import { validateNodeType } from '../../global/js/util';
 
 class Select {
   static instances = new WeakMap();
@@ -25,12 +25,8 @@ class Select {
 
     validateNodeType(target);
 
-    if (isTargetingItself(target, options)) {
-      this.create(target, options);
-    } else {
-      const selects = [...target.querySelectorAll(options.initSelector)];
-      selects.forEach(select => this.create(select, options));
-    }
+    const selects = [...target.querySelectorAll(options.initSelector)];
+    selects.forEach(select => this.create(select, options));
   }
 
   constructor(root) {
@@ -48,16 +44,7 @@ class Select {
     }
 
     this._bindEventListeners();
-
-    const option = this._getCurrentValueOptionElement();
-
-    if (option && option.innerHTML) {
-      if (option.dataset.rayPlaceholder) {
-        this._root.classList.add(this.constructor.cssClasses.PLACEHOLDER_MODE);
-      } else {
-        this._root.classList.add(this.constructor.cssClasses.HAS_VALUE);
-      }
-    }
+    this.assignClasses();
 
     this.constructor.instances.set(this._root, this);
   }
@@ -87,9 +74,13 @@ class Select {
   };
 
   onChange = () => {
+    this.assignClasses();
+  };
+
+  assignClasses() {
     const option = this._getCurrentValueOptionElement();
 
-    if (option) {
+    if (option && option.innerHTML) {
       if (option.dataset.rayPlaceholder) {
         this._root.classList.add(this.constructor.cssClasses.PLACEHOLDER_MODE);
         this._root.classList.remove(this.constructor.cssClasses.HAS_VALUE);
@@ -105,7 +96,7 @@ class Select {
         this.constructor.cssClasses.HAS_VALUE
       );
     }
-  };
+  }
 
   _getCurrentValueOptionElement = () => {
     return this._inputElement.options[this._inputElement.selectedIndex];

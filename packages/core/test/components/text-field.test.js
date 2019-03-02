@@ -1,31 +1,16 @@
-import html from 'nanohtml';
 import { TextField } from '../../lib/components/text-field';
 import {
   CSS_CLASSES,
   STRINGS
 } from '../../lib/components/text-field/constants';
+import {
+  textFieldFixture,
+  textFieldFixtureNoInput
+} from '../fixtures/text-field';
 
-const baseClass = CSS_CLASSES.TEXT_FIELD.BASE;
-const activeClass = CSS_CLASSES.TEXT_FIELD.ACTIVE;
 const initSelectorString = STRINGS.TEXT_FIELD.INIT_SELECTOR;
 
-function getFixture() {
-  return html`
-    <div class="${baseClass}">
-      <input
-        class="${baseClass}__input"
-        id="email"
-        type="email"
-        placeholder="arya.stark@winterfell.org"
-      />
-      <label class="${baseClass}__label" for="email">
-        Email address
-      </label>
-    </div>
-  `;
-}
-
-function setupTest(fixture = getFixture()) {
+function setupTest(fixture = textFieldFixture()) {
   document.body.innerHTML = null;
   document.body.appendChild(fixture);
   const textFieldEl = document.querySelector(initSelectorString);
@@ -44,6 +29,12 @@ describe('TextField', () => {
 
     expect(TextField.instances.get(textFieldEl)).toBeDefined();
     textField.destroy();
+  });
+
+  test('#constructor throws an error if text-field contains no text input', () => {
+    expect(() => setupTest(textFieldFixtureNoInput())).toThrow(
+      `TextField must have an input element with a class of `
+    );
   });
 
   test('#set sets value of textField', () => {
@@ -66,9 +57,9 @@ describe('TextField', () => {
   });
 
   test('#createAll can instantiate many textFields', () => {
-    document.body.appendChild(getFixture());
-    document.body.appendChild(getFixture());
-    document.body.appendChild(getFixture());
+    document.body.appendChild(textFieldFixture());
+    document.body.appendChild(textFieldFixture());
+    document.body.appendChild(textFieldFixture());
 
     TextField.createAll();
 
@@ -80,7 +71,7 @@ describe('TextField', () => {
     const { textField, textFieldEl } = setupTest();
 
     textFieldEl.querySelector(`${initSelectorString}__input`).focus();
-    expect(textFieldEl.classList).toContain(activeClass);
+    expect(textFieldEl.classList).toContain(CSS_CLASSES.TEXT_FIELD.ACTIVE);
     textField.destroy();
   });
 
@@ -89,7 +80,17 @@ describe('TextField', () => {
 
     textFieldEl.querySelector(`${initSelectorString}__input`).focus();
     textFieldEl.querySelector(`${initSelectorString}__input`).blur();
-    expect(textFieldEl.classList).not.toContain(activeClass);
+    expect(textFieldEl.classList).not.toContain(CSS_CLASSES.TEXT_FIELD.ACTIVE);
+    textField.destroy();
+  });
+
+  test('it removes active class on blur', () => {
+    const { textField, textFieldEl } = setupTest();
+
+    textFieldEl.querySelector(`${initSelectorString}__input`).focus();
+    textField.set('some value');
+    textFieldEl.querySelector(`${initSelectorString}__input`).blur();
+    expect(textFieldEl.classList).toContain(CSS_CLASSES.TEXT_FIELD.HAS_VALUE);
     textField.destroy();
   });
 });
