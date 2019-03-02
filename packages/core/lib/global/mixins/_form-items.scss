@@ -137,3 +137,49 @@
   animation-fill-mode: forwards;
   animation-delay: 0.075s;
 }
+
+@mixin icon {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  line-height: 1;
+  top: 20px;
+  border-radius: 2px;
+}
+@mixin icon-support($class) {
+  &__icon--left {
+    @include icon;
+    left: $ray-field-h-spacing;
+  }
+
+  &__icon--right {
+    @include icon;
+    // add spacing to compensate for the
+    right: calc(#{$ray-field-h-spacing} * 2 + 12px);
+  }
+
+  &--with-icon-left {
+    .#{$ray-class-prefix}#{$class}__input,
+    .#{$ray-class-prefix}#{$class}__label {
+      padding-left: calc(
+        #{$ray-field-h-spacing} * 2 + #{$ray-field-icon-width}
+      );
+    }
+  }
+
+  &--with-icon-right {
+    .#{$ray-class-prefix}#{$class}__input,
+    .#{$ray-class-prefix}#{$class}__label {
+      padding-right: calc(
+        #{$ray-field-h-spacing} * 2 + #{$ray-field-icon-width}
+      );
+    }
+  }
+
+  &--compact {
+    .#{$ray-class-prefix}#{$class}__icon--left,
+    .#{$ray-class-prefix}#{$class}__icon--right {
+      top: $ray-field-v-spacing-compact;
+    }
+  }
+}

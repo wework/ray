@@ -1,5 +1,13 @@
 @import '../../global/mixins/form-items';
 
+.#{$ray-class-prefix}text-field {
+  @include icon-support('text-field');
+}
+
+.#{$ray-class-prefix}text-area {
+  @include icon-support('text-area');
+}
+
 .#{$ray-class-prefix}text-field,
 .#{$ray-class-prefix}text-area {
   border: $ray-border-width solid $ray-color-gray-60;

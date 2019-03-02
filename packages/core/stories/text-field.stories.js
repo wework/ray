@@ -336,6 +336,23 @@ storiesOf('Text Field', module)
       </div>
     )
   )
+  .addWithJSX('Text field, with icon', () =>
+    withPadding(
+      <div className="ray-text-field ray-text-field--with-icon-left">
+        <div className="ray-text-field__icon--left">👐</div>
+
+        <input
+          type="text"
+          className="ray-text-field__input"
+          id="input"
+          placeholder="Few people are aware..."
+        />
+        <label className="ray-text-field__label" htmlFor="input">
+          Fun fact about Ray Eames
+        </label>
+      </div>
+    )
+  )
   .addWithJSX('Example Form - compact', () => {
     setTimeout(initTextField);
     setTimeout(initTextArea);
