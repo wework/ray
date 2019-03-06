@@ -16,7 +16,7 @@ Apercu and Apercu Mono are used by default in the design system, to extend their
 
 a) Use Ray's `$font-stack-sans-serif` variable
 
-```scss
+```css
 .my-custom-element {
   font-family: $font-stack-sans-serif;
 }
@@ -24,7 +24,7 @@ a) Use Ray's `$font-stack-sans-serif` variable
 
 b) Manually select the font
 
-```scss
+```css
 .my-bold-element {
   font-family: 'Apercu';
   font-weight: 600;

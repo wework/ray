@@ -5,16 +5,17 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 // Method that creates nodes based on the file system that we can use in our templates
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
+
   // If the node type (file) is a markdown file
   if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: `content`,
-      trailingSlash: false
+      trailingSlash: true
     });
 
-    const currentPage = slug.split('/').pop();
+    // slice out filename from slug
+    const currentPage = slug.split('/').slice(-2, -1)[0];
 
     createNodeField({
       node,
@@ -43,6 +44,10 @@ exports.createPages = ({ actions, graphql }) => {
               slug
               currentPage
             }
+            frontmatter {
+              title
+              label
+            }
           }
         }
       }
@@ -51,14 +56,18 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const { slug } = node.fields;
       const { currentPage } = node.fields;
-      const currentPath = slug.slice(0, slug.lastIndexOf(currentPage));
+      const currentPath =
+        currentPage === 'README'
+          ? slug.slice(0, slug.lastIndexOf(currentPage))
+          : slug;
 
       createPage({
         path: currentPath,
         component: path.resolve(`./src/templates/page.js`),
         context: {
           slug,
-          currentPage
+          currentPage,
+          frontmatter: node.frontmatter
         }
       });
     });

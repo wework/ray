@@ -7,6 +7,12 @@
       },
       "select": {
         "title": "Select"
+      },
+      "text-field": {
+        "title": "Text Field"
+      },
+      "card": {
+        "title": "Card"
       }
     }
   }

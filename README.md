@@ -54,7 +54,7 @@ $ npx lerna run dev --scope="ray-website-gatsby"
 └── README.md
 ```
 
-```scss
+```css
 @import '@wework/ray-core';
 ```
 
