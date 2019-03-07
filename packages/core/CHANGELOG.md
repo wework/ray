@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.0.8...@wework/ray-core@0.0.9) (2019-03-07)
+
+**Note:** Version bump only for package @wework/ray-core
+
+
+
+
+
 ## [0.0.8](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.0.7...@wework/ray-core@0.0.8) (2019-03-02)
 
 **Note:** Version bump only for package @wework/ray-core

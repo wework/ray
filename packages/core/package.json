@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "es/index.js",
   "scripts": {
     "storybook": "npx start-storybook -p 6006",
@@ -63,6 +63,5 @@
     "src/**/*",
     "umd/**/*"
   ],
-  "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc",
-  "dependencies": {}
+  "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc"
 }
