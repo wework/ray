@@ -3,8 +3,8 @@
   "version": "0.0.8",
   "main": "es/index.js",
   "scripts": {
-    "storybook": "start-storybook -s ./stories/static -p 6006",
-    "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out -s ./stories/static",
+    "storybook": "npx start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "build": "yarn prebuild && gulp html:source sass:source sass:compiled scripts:es scripts:umd",
     "clean": "gulp clean",
     "prebuild": "yarn clean"
@@ -13,10 +13,12 @@
   "devDependencies": {
     "@babel/core": "7.2.2",
     "@babel/plugin-transform-modules-umd": "7.2.0",
-    "@storybook/addon-backgrounds": "4.1.11",
-    "@storybook/addon-options": "4.1.11",
-    "@storybook/addon-viewport": "4.0.9",
-    "@storybook/react": "4.1.12",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-links": "^5.0.0",
+    "@storybook/addon-options": "5.0.0",
+    "@storybook/addon-viewport": "5.0.0",
+    "@storybook/addons": "^5.0.0",
+    "@storybook/react": "^5.0.0",
     "babel-loader": "8.0.5",
     "css-loader": "1.0.1",
     "del": "3.0.0",
@@ -39,7 +41,6 @@
     "react-dom": "16.7.0",
     "resolve-url-loader": "3.0.0",
     "sass-loader": "7.1.0",
-    "storybook-addon-jsx": "6.0.0",
     "style-loader": "0.23.1",
     "url-loader": "1.1.2",
     "webpack": "4.29.1"
@@ -62,5 +63,6 @@
     "src/**/*",
     "umd/**/*"
   ],
-  "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc"
+  "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc",
+  "dependencies": {}
 }

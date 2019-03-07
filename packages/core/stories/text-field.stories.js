@@ -13,7 +13,7 @@ function initTextArea() {
 }
 
 storiesOf('Text Field', module)
-  .addWithJSX('Text field', () => {
+  .add('Text field', () => {
     setTimeout(initTextField);
 
     return withPadding(
@@ -30,7 +30,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field, active', () =>
+  .add('Text field, active', () =>
     withPadding(
       <div className="ray-text-field ray-text-field--active">
         <input
@@ -45,7 +45,7 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Text field, textarea', () => {
+  .add('Text field, textarea', () => {
     setTimeout(initTextArea);
 
     return withPadding(
@@ -61,7 +61,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field, multi-row textarea', () => {
+  .add('Text field, multi-row textarea', () => {
     setTimeout(initTextArea);
 
     return withPadding(
@@ -78,7 +78,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field, active, textarea', () =>
+  .add('Text field, active, textarea', () =>
     withPadding(
       <div className="ray-text-area ray-text-area--active">
         <textarea
@@ -92,7 +92,7 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Text field, disabled', () => {
+  .add('Text field, disabled', () => {
     setTimeout(initTextField);
 
     return withPadding(
@@ -110,7 +110,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field, active disabled', () =>
+  .add('Text field, active disabled', () =>
     withPadding(
       <div className="ray-text-field ray-text-field--active ray-text-field--disabled">
         <input
@@ -126,7 +126,7 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Example Form', () => {
+  .add('Example Form', () => {
     setTimeout(initTextField);
     setTimeout(initTextArea);
 
@@ -198,7 +198,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Hint states', () => {
+  .add('Hint states', () => {
     setTimeout(initTextField);
 
     return withPadding(
@@ -256,7 +256,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field - compact', () => {
+  .add('Text field - compact', () => {
     setTimeout(initTextField);
 
     return withPadding(
@@ -273,7 +273,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field, active - compact', () =>
+  .add('Text field, active - compact', () =>
     withPadding(
       <div className="ray-text-field ray-text-field--active ray-text-field--compact">
         <input
@@ -288,7 +288,7 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Text field - compact - disabled', () => {
+  .add('Text field - compact - disabled', () => {
     setTimeout(initTextField);
 
     return withPadding(
@@ -306,7 +306,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field, textarea - compact', () => {
+  .add('Text field, textarea - compact', () => {
     setTimeout(initTextArea);
 
     return withPadding(
@@ -322,7 +322,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Text field, active, textarea - compact', () =>
+  .add('Text field, active, textarea - compact', () =>
     withPadding(
       <div className="ray-text-area ray-text-area--active ray-text-area--compact">
         <textarea
@@ -336,7 +336,7 @@ storiesOf('Text Field', module)
       </div>
     )
   )
-  .addWithJSX('Example Form - compact', () => {
+  .add('Example Form - compact', () => {
     setTimeout(initTextField);
     setTimeout(initTextArea);
 
@@ -419,7 +419,7 @@ storiesOf('Text Field', module)
       </div>
     );
   })
-  .addWithJSX('Hint states - compact', () => {
+  .add('Hint states - compact', () => {
     setTimeout(initTextField);
 
     return withPadding(

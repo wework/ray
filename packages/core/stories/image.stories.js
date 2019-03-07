@@ -5,7 +5,7 @@ import withPadding from './util/withPadding';
 import getPlaceholderURL from './util/placeholder';
 
 storiesOf('Image', module)
-  .addWithJSX('16/9 img', () =>
+  .add('16/9 img', () =>
     withPadding(
       <div style={{ maxWidth: '500px' }}>
         <div className="ray-image ray-image--16by9">
@@ -14,7 +14,7 @@ storiesOf('Image', module)
       </div>
     )
   )
-  .addWithJSX('3/4 img', () =>
+  .add('3/4 img', () =>
     withPadding(
       <div style={{ maxWidth: '400px' }}>
         <div className="ray-image ray-image--3by4">
@@ -23,7 +23,7 @@ storiesOf('Image', module)
       </div>
     )
   )
-  .addWithJSX('16/9 background', () =>
+  .add('16/9 background', () =>
     withPadding(
       <div style={{ maxWidth: '500px' }}>
         <div
@@ -35,7 +35,7 @@ storiesOf('Image', module)
       </div>
     )
   )
-  .addWithJSX('3/4 background', () =>
+  .add('3/4 background', () =>
     withPadding(
       <div style={{ maxWidth: '400px' }}>
         <div

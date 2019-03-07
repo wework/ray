@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import withPadding from './util/withPadding';
 
 storiesOf('Radio & Checkbox', module)
-  .addWithJSX('Radio button', () =>
+  .add('Radio button', () =>
     withPadding(
       <React.Fragment>
         <div className="ray-radio">
@@ -48,7 +48,7 @@ storiesOf('Radio & Checkbox', module)
       </React.Fragment>
     )
   )
-  .addWithJSX('Checkbox', () =>
+  .add('Checkbox', () =>
     withPadding(
       <div className="ray-checkbox">
         <input id="check" type="checkbox" className="ray-checkbox__input" />
@@ -58,7 +58,7 @@ storiesOf('Radio & Checkbox', module)
       </div>
     )
   )
-  .addWithJSX('Checkbox, multiple', () =>
+  .add('Checkbox, multiple', () =>
     withPadding(
       <>
         <div className="ray-checkbox">
@@ -90,7 +90,7 @@ storiesOf('Radio & Checkbox', module)
       </>
     )
   )
-  .addWithJSX('Checkbox - disabled', () =>
+  .add('Checkbox - disabled', () =>
     withPadding(
       <div className="ray-checkbox">
         <input

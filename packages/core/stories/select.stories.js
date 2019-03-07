@@ -9,7 +9,7 @@ function init() {
 }
 
 storiesOf('Select', module)
-  .addWithJSX('select, no placeholder', () => {
+  .add('select, no placeholder', () => {
     setTimeout(init);
 
     return withPadding(
@@ -26,7 +26,7 @@ storiesOf('Select', module)
       </div>
     );
   })
-  .addWithJSX('select, with placeholder', () => {
+  .add('select, with placeholder', () => {
     setTimeout(init);
 
     return withPadding(
@@ -45,7 +45,7 @@ storiesOf('Select', module)
       </div>
     );
   })
-  .addWithJSX('select, default value', () => {
+  .add('select, default value', () => {
     setTimeout(init);
 
     return withPadding(
@@ -63,7 +63,7 @@ storiesOf('Select', module)
       </div>
     );
   })
-  .addWithJSX('select, error', () => {
+  .add('select, error', () => {
     setTimeout(init);
 
     return withPadding(
@@ -80,7 +80,7 @@ storiesOf('Select', module)
       </div>
     );
   })
-  .addWithJSX('select, disabled', () => {
+  .add('select, disabled', () => {
     setTimeout(init);
 
     return withPadding(
@@ -97,7 +97,7 @@ storiesOf('Select', module)
       </div>
     );
   })
-  .addWithJSX('select, compact', () => {
+  .add('select, compact', () => {
     setTimeout(init);
 
     return withPadding(
@@ -114,7 +114,7 @@ storiesOf('Select', module)
       </div>
     );
   })
-  .addWithJSX('select, with hints', () => {
+  .add('select, with hints', () => {
     setTimeout(init);
 
     return withPadding(

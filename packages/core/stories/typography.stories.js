@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import withPadding from './util/withPadding';
 
 storiesOf('Typography', module)
-  .addWithJSX('all', () =>
+  .add('all', () =>
     withPadding(
       [
         'h1',
@@ -22,14 +22,14 @@ storiesOf('Typography', module)
       ].map(type => {
         const Tag = type[0] === 'h' ? type : 'p';
         return (
-          <React.Fragment>
+          <React.Fragment key={type}>
             <Tag className={`ray-${type}`}>ray-{type}</Tag>
           </React.Fragment>
         );
       })
     )
   )
-  .addWithJSX('h1 + p1', () =>
+  .add('h1 + p1', () =>
     withPadding(
       <React.Fragment>
         <h1 className="ray-h1">Keeping It Fresh</h1>
@@ -41,7 +41,7 @@ storiesOf('Typography', module)
       </React.Fragment>
     )
   )
-  .addWithJSX('h2 + p2', () =>
+  .add('h2 + p2', () =>
     withPadding(
       <React.Fragment>
         <h1 className="ray-h2">Keeping It Fresh</h1>
@@ -53,7 +53,7 @@ storiesOf('Typography', module)
       </React.Fragment>
     )
   )
-  .addWithJSX('h3 + p3', () =>
+  .add('h3 + p3', () =>
     withPadding(
       <React.Fragment>
         <h1 className="ray-h3">Keeping It Fresh</h1>

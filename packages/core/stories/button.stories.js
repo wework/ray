@@ -5,8 +5,8 @@ const Divider = () => (
   <div style={{ marginBottom: '1rem', display: 'block' }} />
 );
 
-storiesOf('Buttons', module)
-  .addWithJSX('primary', () => (
+storiesOf('Button', module)
+  .add('primary', () => (
     <>
       <button className="ray-btn ray-btn--primary">Click me</button>
       <Divider />
@@ -47,7 +47,7 @@ storiesOf('Buttons', module)
       </button>
     </>
   ))
-  .addWithJSX('secondary', () => (
+  .add('secondary', () => (
     <>
       <button className="ray-btn ray-btn--secondary">Click me</button>
       <Divider />
@@ -88,7 +88,7 @@ storiesOf('Buttons', module)
       </button>
     </>
   ))
-  .addWithJSX('tertiary', () => (
+  .add('tertiary', () => (
     <>
       <button className="ray-btn ray-btn--tertiary">Click me</button>
       <Divider />

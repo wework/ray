@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import withPadding from './util/withPadding';
 
 if (process.env.NODE_ENV === 'development') {
-  storiesOf('Tabs', module).addWithJSX('default', () =>
+  storiesOf('Tabs', module).add('default', () =>
     withPadding(
       <ul className="ray-tabs">
         <li className="ray-tabs__item">Desktop</li>

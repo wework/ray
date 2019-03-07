@@ -37,7 +37,7 @@ const SAMPLE_DATA = [
 const KEYS = Object.keys(SAMPLE_DATA[0]);
 
 if (process.env.NODE_ENV === 'development') {
-  storiesOf('Table', module).addWithJSX('default', () =>
+  storiesOf('Table', module).add('default', () =>
     withPadding(
       <table className="ray-table">
         <thead>

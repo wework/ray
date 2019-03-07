@@ -5,7 +5,7 @@ import withPadding from './util/withPadding';
 import getPlaceholderURL from './util/placeholder';
 
 storiesOf('Card', module)
-  .addWithJSX('card, link, image on top', () =>
+  .add('card, link, image on top', () =>
     withPadding(
       <a
         href="https://wework.com"
@@ -30,7 +30,7 @@ storiesOf('Card', module)
       </a>
     )
   )
-  .addWithJSX('card, link, image on bottom', () =>
+  .add('card, link, image on bottom', () =>
     withPadding(
       <a
         href="https://wework.com"
@@ -55,7 +55,7 @@ storiesOf('Card', module)
       </a>
     )
   )
-  .addWithJSX('card, link, no image', () =>
+  .add('card, link, no image', () =>
     withPadding(
       <a
         href="https://wework.com"
@@ -76,7 +76,7 @@ storiesOf('Card', module)
       </a>
     )
   )
-  .addWithJSX('card, image on top, with buttons', () =>
+  .add('card, image on top, with buttons', () =>
     withPadding(
       <div
         className="ray-card"
@@ -107,7 +107,7 @@ storiesOf('Card', module)
       </div>
     )
   )
-  .addWithJSX('card, tertiary button', () =>
+  .add('card, tertiary button', () =>
     withPadding(
       <div
         className="ray-card"

@@ -1,26 +1,15 @@
-import { configure, addDecorator, setAddon } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
-import JSXAddon from 'storybook-addon-jsx';
-import { withBackgrounds } from '@storybook/addon-backgrounds';
+import { configure, addParameters } from '@storybook/react';
 import '../stories/styles/index.scss';
 
-// automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /.stories.js$/);
 
-addDecorator(
-  withBackgrounds([
-    { name: 'checkers', value: 'url(/bg.svg)', default: true },
-    { name: 'white', value: '#fff', default: true }
-  ])
-);
-
-setAddon(JSXAddon);
-
-addDecorator(
-  withOptions({
-    name: 'Ray'
-  })
-);
+addParameters({
+  options: {
+    name: 'Ray',
+    showPanel: false,
+    sortStoriesByKind: true
+  }
+});
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
