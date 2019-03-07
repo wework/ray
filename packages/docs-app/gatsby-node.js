@@ -25,6 +25,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     createNodeField({
       node,
+      name: `sourcePath`,
+      value: `/${node.fileAbsolutePath.split('/ray/')[1]}`
+    });
+
+    createNodeField({
+      node,
       name: `currentPage`,
       value: currentPage
     });
@@ -56,16 +62,16 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const { slug } = node.fields;
       const { currentPage } = node.fields;
-      const currentPath =
+
+      const pagePath =
         currentPage === 'README'
           ? slug.slice(0, slug.lastIndexOf(currentPage))
           : slug;
 
       createPage({
-        path: currentPath,
+        path: pagePath,
         component: path.resolve(`./src/templates/page.js`),
         context: {
-          slug,
           currentPage,
           frontmatter: node.frontmatter
         }

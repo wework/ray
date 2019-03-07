@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 export default class PageHeader extends React.Component {
   static propTypes = {
     label: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    githubPath: PropTypes.string
   };
 
   render() {
-    const { label, title } = this.props;
+    const { label, title, githubPath } = this.props;
     const labelContent =
       label !== title ? (
         <h4 className="page-header__label">{label}</h4>
@@ -22,7 +23,23 @@ export default class PageHeader extends React.Component {
           <div className="ray-grid__inner">
             <div className="ray-grid__cell--span-12">
               {labelContent}
-              <h1 className="ray-h2">{title}</h1>
+              <div
+                style={{
+                  display: 'flex'
+                }}
+              >
+                <h1 className="ray-h2">{title}</h1>
+                <a
+                  className="ray-btn ray-btn--tertiary ray-btn--pull-right"
+                  href={githubPath}
+                  target="_blank"
+                  style={{
+                    marginLeft: 'auto'
+                  }}
+                >
+                  Edit this page
+                </a>
+              </div>
             </div>
           </div>
         </div>

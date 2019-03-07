@@ -14,6 +14,8 @@ import ComponentDocs from '../components/ComponentDocs';
 import ComponentOverview from '../components/ComponentOverview';
 import CodeSnippet from '../components/CodeSnippet';
 
+const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
+
 // Custom Markdown
 import {
   h4,
@@ -43,16 +45,21 @@ const renderAst = new RehypeReact({
 export default ({ data }) => {
   const post = data.markdownRemark;
 
+  console.log(data);
+
   const classNames = classnames('page-content ray-grid', {
     'page-content--component': post.frontmatter.label === 'Component'
   });
 
   return (
     <Layout>
-      <PageHeader
-        title={post.frontmatter.title}
-        label={post.frontmatter.label}
-      />
+      {post.frontmatter.title && (
+        <PageHeader
+          title={post.frontmatter.title}
+          label={post.frontmatter.label}
+          githubPath={`${GITHUB_SOURCE_URL}${post.fields.sourcePath}`}
+        />
+      )}
 
       <div className={classNames}>
         <div className="ray-grid__inner">
@@ -66,12 +73,13 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
+  query Query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       fields {
         slug
         currentPage
+        sourcePath
       }
       frontmatter {
         title

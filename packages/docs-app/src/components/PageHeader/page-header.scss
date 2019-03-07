@@ -5,12 +5,12 @@
   justify-content: flex-start;
   padding-bottom: 0;
   width: 100%;
+  margin: $ray-spacing-2xl 0 0;
 }
 
 .page-header__label {
   color: $ray-color-text-medium;
   font-weight: 400;
-  margin: 5rem 0 0;
   white-space: nowrap;
   text-transform: capitalize;
 }

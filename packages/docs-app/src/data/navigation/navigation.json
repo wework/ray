@@ -15,5 +15,19 @@
         "title": "Card"
       }
     }
+  },
+  "global": {
+    "title": "Guidelines",
+    "sub-nav": {
+      "animation": {
+        "title": "Animation"
+      },
+      "color": {
+        "title": "Color"
+      },
+      "fonts": {
+        "title": "fonts"
+      }
+    }
   }
 }
