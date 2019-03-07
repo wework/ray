@@ -6,8 +6,11 @@ const req = require.context('../stories', true, /.stories.js$/);
 
 addParameters({
   options: {
-    brandTitle: 'WeWork Ray',
-    brandUrl: 'https://wework.com',
+    theme: {
+      brandTitle: 'Ray',
+      brandUrl: 'https://wework.com',
+      brandImage: './logo.svg'
+    },
     showPanel: false,
     panelPosition: 'right',
     sortStoriesByKind: true
