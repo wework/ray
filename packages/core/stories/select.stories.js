@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import withPadding from './util/withPadding';
 import Select from '../lib/components/select';
 
 function init() {
@@ -12,7 +11,7 @@ storiesOf('Select', module)
   .add('select, no placeholder', () => {
     setTimeout(init);
 
-    return withPadding(
+    return (
       <div className="ray-select">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
@@ -29,7 +28,7 @@ storiesOf('Select', module)
   .add('select, with placeholder', () => {
     setTimeout(init);
 
-    return withPadding(
+    return (
       <div className="ray-select">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder>
@@ -48,7 +47,7 @@ storiesOf('Select', module)
   .add('select, default value', () => {
     setTimeout(init);
 
-    return withPadding(
+    return (
       <div className="ray-select">
         <select className="ray-select__input">
           <option value="Pikatchu">Pikatchu</option>
@@ -66,7 +65,7 @@ storiesOf('Select', module)
   .add('select, error', () => {
     setTimeout(init);
 
-    return withPadding(
+    return (
       <div className="ray-select ray-select--error">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
@@ -83,7 +82,7 @@ storiesOf('Select', module)
   .add('select, disabled', () => {
     setTimeout(init);
 
-    return withPadding(
+    return (
       <div className="ray-select ray-select--disabled">
         <select className="ray-select__input" disabled>
           <option value="" disabled selected data-ray-placeholder />
@@ -100,7 +99,7 @@ storiesOf('Select', module)
   .add('select, compact', () => {
     setTimeout(init);
 
-    return withPadding(
+    return (
       <div className="ray-select ray-select--compact">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
@@ -117,7 +116,7 @@ storiesOf('Select', module)
   .add('select, with hints', () => {
     setTimeout(init);
 
-    return withPadding(
+    return (
       <>
         <div className="ray-form-item">
           <div className="ray-select">
