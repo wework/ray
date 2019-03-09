@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import * as components from '../../../../core/lib';
+import * as components from '../../../../core/src';
 import CodeExample from '../CodeExample/CodeExample';
 import bg from '../../content/global/images/bg.svg';
 

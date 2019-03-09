@@ -2,8 +2,8 @@
   "name": "@wework/ray-core",
   "version": "0.0.11",
   "main": "es/index.js",
-  "style": "css/application.min.css",
-  "sass": "scss/application.scss",
+  "style": "css/ray.min.css",
+  "sass": "scss/ray.scss",
   "scripts": {
     "storybook": "start-storybook -p 6006  -s ./stories/static",
     "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out -s ./stories/static",

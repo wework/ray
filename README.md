@@ -42,14 +42,14 @@ $ npx lerna run dev --scope="ray-website-gatsby"
 │   ├── global
 │   ├── components
 ├── scss
-│   ├── application.scss
+│   ├── ray.scss
 │   ├── global
 │   ├── components
 ├── css
-│   ├── application.css
-│   ├── application.css.map
-│   ├── application.min.css
-│   ├── application.min.css.map
+│   ├── ray.css
+│   ├── ray.css.map
+│   ├── ray.min.css
+│   ├── ray.min.css.map
 ├── LICENSE
 └── README.md
 ```

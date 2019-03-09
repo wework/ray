@@ -1,4 +1,4 @@
-import { validateNodeType } from '../../lib/global/js/util';
+import { validateNodeType } from '../../src/global/js/util';
 
 describe('util', () => {
   describe('validateNodeType', () => {

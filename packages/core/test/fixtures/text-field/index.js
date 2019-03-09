@@ -1,5 +1,5 @@
 import html from 'nanohtml';
-import { CSS_CLASSES } from '../../../lib/components/text-field/constants';
+import { CSS_CLASSES } from '../../../src/components/text-field/constants';
 
 const baseClass = CSS_CLASSES.TEXT_FIELD.BASE;
 

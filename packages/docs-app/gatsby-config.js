@@ -41,7 +41,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'ray-core',
-        path: path.join(__dirname, '../core/lib')
+        path: path.join(__dirname, '../core/src')
       }
     },
     {

@@ -30,7 +30,7 @@ export default class ComponentCode extends React.Component {
     if (!htmlFile) {
       try {
         // eslint-disable-next-line global-require, import/no-dynamic-require
-        htmlFile = require(`../../../../core/lib/components/${component}/${variation}.html`);
+        htmlFile = require(`../../../../core/src/components/${component}/${variation}.html`);
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error(err);

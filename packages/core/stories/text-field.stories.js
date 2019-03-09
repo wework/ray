@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { TextField, TextArea } from '../lib/components/text-field';
+import { TextField, TextArea } from '../src/components/text-field';
 
 function initTextField() {
   TextField.createAll();

@@ -9,7 +9,7 @@ export default class ComponentDocs extends React.Component {
   render() {
     const componentDocUrl = '';
     // Loading README.md causes Storybook build failure as of now
-    // componentDocUrl = require(`@wework/ray/lib/components/${component}/README.md`);
+    // componentDocUrl = require(`@wework/ray/src/components/${component}/README.md`);
 
     return (
       <div className="page_md component-docs">

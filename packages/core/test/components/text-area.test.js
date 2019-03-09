@@ -1,9 +1,9 @@
 import html from 'nanohtml';
-import { TextArea } from '../../lib/components/text-field';
+import { TextArea } from '../../src/components/text-field';
 import {
   CSS_CLASSES,
   STRINGS
-} from '../../lib/components/text-field/constants';
+} from '../../src/components/text-field/constants';
 
 const baseClass = CSS_CLASSES.TEXT_AREA.BASE;
 const activeClass = CSS_CLASSES.TEXT_AREA.ACTIVE;

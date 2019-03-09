@@ -1,4 +1,4 @@
-import Select from '../../lib/components/select';
+import Select from '../../src/components/select';
 import {
   selectFixture,
   selectFixtureWithPlaceholder,

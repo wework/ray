@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Select from '../lib/components/select';
+import Select from '../src/components/select';
 
 function init() {
   Select.createAll();

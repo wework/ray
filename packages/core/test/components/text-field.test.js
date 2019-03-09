@@ -1,8 +1,8 @@
-import { TextField } from '../../lib/components/text-field';
+import { TextField } from '../../src/components/text-field';
 import {
   CSS_CLASSES,
   STRINGS
-} from '../../lib/components/text-field/constants';
+} from '../../src/components/text-field/constants';
 import {
   textFieldFixture,
   textFieldFixtureNoInput
