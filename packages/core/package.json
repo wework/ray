@@ -2,6 +2,8 @@
   "name": "@wework/ray-core",
   "version": "0.0.11",
   "main": "es/index.js",
+  "style": "css/application.min.css",
+  "sass": "scss/application.scss",
   "scripts": {
     "storybook": "start-storybook -p 6006  -s ./stories/static",
     "build-storybook": "NODE_ENV=production build-storybook -c .storybook -o .out -s ./stories/static",
@@ -9,7 +11,7 @@
     "clean": "gulp clean",
     "prebuild": "yarn clean"
   },
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@babel/core": "7.2.2",
     "@babel/plugin-transform-modules-umd": "7.2.0",
@@ -53,9 +55,6 @@
     "publishConfig": {
       "tag": "dev"
     }
-  },
-  "style": {
-    "scss": "lib/application.scss"
   },
   "files": [
     "css/**/*",
