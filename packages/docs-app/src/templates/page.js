@@ -10,7 +10,6 @@ import Layout from '../components/Layouts';
 import PageHeader from '../components/PageHeader';
 import PageTable from '../components/PageTable';
 import ComponentCode from '../components/ComponentCode';
-import ComponentDocs from '../components/ComponentDocs';
 import ComponentOverview from '../components/ComponentOverview';
 import CodeSnippet from '../components/CodeSnippet';
 
@@ -36,7 +35,6 @@ const renderAst = new RehypeReact({
     'page-intro': PageIntro,
     'flex-group': FlexGroup,
     component: ComponentCode,
-    'component-docs': ComponentDocs,
     'component-overview': ComponentOverview
   }
 }).Compiler;
