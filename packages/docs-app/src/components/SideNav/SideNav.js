@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Location } from '@reach/router';
 import { Link } from 'gatsby';
 import navigation from '../../data/navigation/navigation.json';
+import { version } from '@wework/ray-core/package.json';
 
 export default class SideNav extends React.Component {
   renderNavItems(slug, nav, level = 0) {
@@ -56,6 +57,7 @@ export default class SideNav extends React.Component {
                     {this.renderNavItems('/', navigation)}
                   </ul>
                 </div>
+                <div className="side-nav__version">ray-core@{version}</div>
               </nav>
             </>
           );
