@@ -63,15 +63,24 @@ exports.createPages = ({ actions, graphql }) => {
       const { slug } = node.fields;
       const { currentPage } = node.fields;
 
-      const pagePath =
+      const currentPath =
         currentPage === 'README'
           ? slug.slice(0, slug.lastIndexOf(currentPage))
           : slug;
 
+      console.log(slug);
+      console.log(currentPath);
+      console.log(
+        `/${(node.frontmatter.label || '').toLowerCase()}/${currentPath}`
+      );
+      if (node.frontmatter.label) {
+      }
+
       createPage({
-        path: pagePath,
+        path: currentPath,
         component: path.resolve(`./src/templates/page.js`),
         context: {
+          slug,
           currentPage,
           frontmatter: node.frontmatter
         }

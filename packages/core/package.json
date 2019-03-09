@@ -51,10 +51,7 @@
     "webpack": "4.29.1"
   },
   "publishConfig": {
-    "access": "restricted",
-    "publishConfig": {
-      "tag": "dev"
-    }
+    "access": "restricted"
   },
   "files": [
     "css/**/*",

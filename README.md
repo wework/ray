@@ -2,19 +2,15 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1fc61cc7-d0e8-4424-977e-8fa3f3a237b2/deploy-status)](https://app.netlify.com/sites/wework-ray/deploys) [![CircleCI](https://circleci.com/gh/WeConnect/ray.svg?style=svg&circle-token=99fe6d74b0b60e0113df0e37df0009ba77793b1d)](https://circleci.com/gh/WeConnect/ray) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Coverage Status](https://coveralls.io/repos/github/WeConnect/ray/badge.svg?t=cuEPSr)](https://coveralls.io/github/WeConnect/ray)
 
-## 🚧 **Warning**: Work-in-progress, do not use on production
+### 🚧 **Warning**: Work-in-progress, do not use on production
 
-Resources for building interfaces with WeWork's design system. [npm package](https://www.npmjs.com/package/@wework/ray)
+<page-intro>Resources for building interfaces with WeWork's design system. [npm package](https://www.npmjs.com/package/@wework/ray)</page-intro>
 
-## Installation
+## 🐥 Getting Started
 
-```bash
-$ yarn add @wework/ray-core
-# or
-$ npm install --save @wework/ray-core
-```
+See the [getting started docs](/getting-started).
 
-## Development
+## 👩🏻‍💻 Development
 
 ```bash
 # to install dependencies, this will also bootstrap lerna
@@ -27,44 +23,9 @@ $ npx lerna run storybook --scope="@wework/ray-core"
 $ npx lerna run dev --scope="ray-website-gatsby"
 ```
 
-## Usage
+## 🤖 Contributing
 
-```
-.
-├── html
-│   ├── components
-├── es
-│   ├── index.js
-│   ├── global
-│   ├── components
-├── umd
-│   ├── index.js
-│   ├── global
-│   ├── components
-├── scss
-│   ├── ray.scss
-│   ├── global
-│   ├── components
-├── css
-│   ├── ray.css
-│   ├── ray.css.map
-│   ├── ray.min.css
-│   ├── ray.min.css.map
-├── LICENSE
-└── README.md
-```
-
-```css
-@import '@wework/ray-core';
-```
-
-```js
-import { Select } from '@wework/ray-core';
-```
-
-## Contributing
-
-This project uses [commitzen](https://github.com/commitizen/cz-cli).
+This project uses [commitizen](https://github.com/commitizen/cz-cli).
 
 When commiting, please use the following command and follow the prompts:
 
@@ -72,7 +33,7 @@ When commiting, please use the following command and follow the prompts:
 $ yarn commit
 ```
 
-## [Release](https://github.com/WeConnect/ray/releases)
+## 🚀 [Release](https://github.com/WeConnect/ray/releases)
 
 Releases are automatically created when a commit is merged into master. Circle CI will kick off a job, bump the version and publish to the npm registry.
 
@@ -84,4 +45,8 @@ $ yarn build
 $ yarn lerna:publish
 ```
 
-![](https://media.giphy.com/media/NXWYyKAHim63u/giphy.gif)
+## 👷🏻‍ Ownership
+
+This repository is maintained by Demand Generation of Product Offerings & Growth at WeWork.
+
+It's lead maintainer is [Adam Raider](https://github.com/adamraider), please either [submit an issue](https://github.com/issues) or reach out to Adam at [adam.raider@wework.com](mailto:adam.raider@wework.com) for questions or concerns.

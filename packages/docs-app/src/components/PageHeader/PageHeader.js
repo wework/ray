@@ -21,7 +21,7 @@ export default class PageHeader extends React.Component {
       <div className="page-header">
         <div className="ray-grid">
           <div className="ray-grid__inner">
-            <div className="ray-grid__cell--span-12">
+            <div className="ray-grid__cell--span-12 ray-grid__cell--span-8-desktop">
               {labelContent}
               <div
                 style={{

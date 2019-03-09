@@ -5,6 +5,11 @@ import * as components from '../../../../core/src';
 import CodeExample from '../CodeExample/CodeExample';
 import bg from '../../content/global/images/bg.svg';
 
+const nameMap = {
+  'text-field': 'TextField',
+  'text-area': 'TextField'
+};
+
 class ComponentExample extends Component {
   static propTypes = {
     htmlFile: PropTypes.string,
@@ -53,15 +58,15 @@ class ComponentExample extends Component {
         .replace(/^([a-z])/, (match, token) => token.toUpperCase());
 
       [currentComponent].forEach(name => {
-        const TheComponent = components[name];
+        const TheComponent = components[nameMap[name] || name];
         if (TheComponent) {
           const options = {};
           const { INIT_SELECTOR } = TheComponent.strings;
           // Gatsby's setup seems to use `.concat()` for [...arraylike], which does not work for `NodeList`
           handles.push(
-            ...Array.from(ref.querySelectorAll(INIT_SELECTOR)).map(elem =>
-              TheComponent.create(elem, options)
-            )
+            ...Array.from(ref.querySelectorAll(INIT_SELECTOR)).map(elem => {
+              return TheComponent.create(elem, options);
+            })
           );
         }
       });

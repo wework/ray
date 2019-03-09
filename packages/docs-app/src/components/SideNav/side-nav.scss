@@ -1,8 +1,3 @@
-//===================
-// SIDE NAV
-//===================
-
-// Skip content
 .skip-to-content {
   display: none;
 
@@ -20,13 +15,16 @@
   flex-direction: column;
   height: 100vh;
   z-index: 7000;
-  margin-left: -999px;
-  padding-left: 999px;
-  padding-top: $ray-spacing-2xl;
   overflow-y: auto;
   background-color: hsla(240, 17%, 98%, 1);
-  position: fixed;
-  width: calc(312px - 24px + 999px);
+  position: sticky;
+  left: 0;
+  top: 0;
+  min-width: 200px;
+  max-width: 300px;
+  width: 100%;
+  padding: $ray-spacing-2xl 1rem;
+  border-right: 1px solid $ray-color-gray-10;
 }
 
 .side-nav__closed {
@@ -38,14 +36,22 @@
   display: none;
 }
 
+.side-nav__item {
+  padding: 1px 0;
+
+  ul {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// .side-nav__item--level-0 {
+//   margin: 0.5rem 0;
+// }
+
 .side-nav--items {
   overflow-y: scroll;
   width: 100%;
 }
-
-//===================
-// SIDE NAV click to close
-//===================
 
 .side-nav-click-to-close {
   display: block;
@@ -69,21 +75,18 @@
 
 .side-nav--header {
   margin-bottom: $ray-spacing-md;
+  display: flex;
+  flex-direction: column;
 }
 
-//===================
-// SIDE NAV LOGO
-//===================
-.side-nav__logo {
+.side-nav__heading {
+  @extend .ray-h5;
   display: inline-block;
   color: $ray-color-text-dark;
   text-decoration: none;
-  font-weight: 400;
   line-height: 1.2;
-  margin: 0 $ray-spacing-md 0 20px;
+  margin: 0 0 0.25rem;
   white-space: nowrap;
-  padding: 0 $ray-spacing-md 0 0;
-
   &:hover {
     color: $ray-color-blue-50;
   }
@@ -95,19 +98,12 @@
   }
 }
 
-.side-nav__logo span {
-  font-weight: 600;
-}
-
 .side-nav__version {
   padding: 0 $ray-spacing-md 0 0;
   margin: 0 $ray-spacing-md 0 20px;
   opacity: 0.75;
 }
 
-//===================
-// NAV ITEMS
-//===================
 .side-nav__nav-items {
   width: 100%;
   padding: 0;
@@ -171,9 +167,6 @@
   max-height: 100rem;
 }
 
-//===================
-// SUB NAV ITEMS
-//===================
 .side-nav__sub-nav {
   overflow: hidden;
   max-height: 0;
@@ -205,9 +198,6 @@
   color: $ray-color-black;
 }
 
-//===================
-// SIDE NAV LINKS
-//===================
 .side-nav__links {
   width: 100%;
   padding: 0 $ray-spacing-md;

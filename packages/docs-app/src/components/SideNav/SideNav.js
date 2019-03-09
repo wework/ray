@@ -1,62 +1,66 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Location } from '@reach/router';
-import { Link, StaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
+import navigation from '../../data/navigation/navigation.json';
 
 export default class SideNav extends React.Component {
+  renderNavItems(slug, nav, level = 0) {
+    return Object.keys(nav).map(key => {
+      const item = nav[key];
+      const path = `${slug}${key}/`;
+
+      return (
+        <li
+          key={key}
+          className={`side-nav__item side-nav__item--level-${level}`}
+        >
+          {!item.children && <Link to={path}>{item.title}</Link>}
+          {item.children && (
+            <>
+              <div
+                className="ray-p4"
+                style={{
+                  margin: '0.5rem 0 0 0',
+                  fontWeight: 600
+                }}
+              >
+                {item.title}
+              </div>
+              <ul style={{ paddingLeft: '1rem' }}>
+                {this.renderNavItems(path, item.children, level + 1)}
+              </ul>
+            </>
+          )}
+        </li>
+      );
+    });
+  }
   render() {
     return (
-      <StaticQuery
-        query={graphql`
-          query {
-            allSitePage {
-              edges {
-                node {
-                  id
-                  path
-                  context {
-                    slug
-                    currentPage
-                  }
-                }
-              }
-            }
-          }
-        `}
-      >
-        {data =>
-          console.log(data) || (
-            <Location>
-              {({ location }) => {
-                return (
-                  <>
-                    <nav className="side-nav">
-                      <div className="side-nav--header">
-                        <Link to="/" className="side-nav__logo">
-                          <span>Ray</span> Design System
-                        </Link>
-                      </div>
-                      <div className="side-nav--items">
-                        <ul role="menu" className="side-nav__nav-items">
-                          {data.allSitePage.edges.map(edge => {
-                            return (
-                              <li key={edge.node.id}>
-                                <Link to={edge.node.path}>
-                                  {edge.node.path}
-                                </Link>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    </nav>
-                  </>
-                );
-              }}
-            </Location>
-          )
-        }
-      </StaticQuery>
+      <Location>
+        {({ location }) => {
+          return (
+            <>
+              <nav className="side-nav">
+                <div className="side-nav--header">
+                  <Link to="/" className="side-nav__heading">
+                    Ray
+                  </Link>
+                  <a href="https://github.com/WeConnect/ray" target="_blank">
+                    View on GitHub
+                  </a>
+                </div>
+                <div className="side-nav--items">
+                  <ul role="menu" className="side-nav__nav-items">
+                    {this.renderNavItems('/', navigation)}
+                  </ul>
+                </div>
+              </nav>
+            </>
+          );
+        }}
+      </Location>
     );
   }
 }

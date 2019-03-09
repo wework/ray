@@ -3,7 +3,7 @@ label: Component
 title: Card
 ---
 
-<page-intro>Cards are a unit of content, they typically have an image, a heading, and a small amount of copy. They are often usesd as links.</page-intro>
+<page-intro>Cards are a unit of content, they typically have an image, a heading, and a small amount of copy. They are often used as links.</page-intro>
 
 <component 
     name="Card"

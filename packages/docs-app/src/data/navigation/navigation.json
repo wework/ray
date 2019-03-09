@@ -1,7 +1,13 @@
 {
+  "getting-started": {
+    "title": "Getting Started"
+  },
+  "principles": {
+    "title": "Principles"
+  },
   "components": {
     "title": "Components",
-    "sub-nav": {
+    "children": {
       "button": {
         "title": "Button"
       },
@@ -13,20 +19,35 @@
       },
       "card": {
         "title": "Card"
+      },
+      "image": {
+        "title": "Image"
+      },
+      "image": {
+        "title": "Image"
+      },
+      "radio": {
+        "title": "Radio"
+      },
+      "checkbox": {
+        "title": "Checkbox"
       }
     }
   },
-  "global": {
+  "guidelines": {
     "title": "Guidelines",
-    "sub-nav": {
-      "animation": {
-        "title": "Animation"
+    "children": {
+      "animations": {
+        "title": "Animations"
       },
       "color": {
         "title": "Color"
       },
       "fonts": {
-        "title": "fonts"
+        "title": "Fonts"
+      },
+      "typography": {
+        "title": "Typography"
       }
     }
   }
