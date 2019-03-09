@@ -10,7 +10,6 @@ import Layout from '../components/Layouts';
 import PageHeader from '../components/PageHeader';
 import PageTable from '../components/PageTable';
 import ComponentCode from '../components/ComponentCode';
-import ComponentOverview from '../components/ComponentOverview';
 import CodeSnippet from '../components/CodeSnippet';
 
 const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
@@ -34,8 +33,7 @@ const renderAst = new RehypeReact({
     pre: CodeSnippet,
     'page-intro': PageIntro,
     'flex-group': FlexGroup,
-    component: ComponentCode,
-    'component-overview': ComponentOverview
+    component: ComponentCode
   }
 }).Compiler;
 
