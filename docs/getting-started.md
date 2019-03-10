@@ -4,7 +4,7 @@ title: Getting Started
 
 <page-intro>Ray is a CSS and JavaScript framework [available on npm](https://github.com/WeConnect/ray).</page-intro>
 
-## Installation
+## 🏖 Installation
 
 We encourage consumers of Ray to install via npm or yarn and interface with package via the package manager.
 
@@ -54,7 +54,7 @@ import { Select } from '@wework/ray-core';
 </body>
 ```
 
-## Structure
+## 📁 Structure
 
 `@wework/ray-core` is structured as follows:
 
