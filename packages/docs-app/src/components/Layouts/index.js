@@ -51,28 +51,13 @@ class Layout extends React.Component {
             >
               <html lang="en" />
             </Helmet>
+            <div className="page">
+              <SideNav
+                location={this.props.location}
+                clickToClose={this.clickToClose}
+              />
 
-            <div
-              style={{
-                maxWidth: '1320px',
-                margin: '0 auto',
-                display: 'flex',
-                padding: '0 1rem'
-              }}
-            >
-              <div
-                style={{
-                  marginRight: '24px',
-                  width: '312px'
-                }}
-              >
-                <SideNav
-                  location={this.props.location}
-                  clickToClose={this.clickToClose}
-                />
-              </div>
-
-              <div style={{ width: '100%' }}>{children}</div>
+              <main className="main-content">{children}</main>
             </div>
           </>
         )}

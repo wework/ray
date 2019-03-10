@@ -22,7 +22,7 @@ gulp.task('clean', () =>
 gulp.task('sass:compiled', () => {
   function buildStyles(prod) {
     return gulp
-      .src('lib/application.scss')
+      .src('src/ray.scss')
       .pipe(sourcemaps.init())
       .pipe(
         sass({
@@ -55,13 +55,13 @@ gulp.task('sass:compiled', () => {
 });
 
 gulp.task('sass:source', () => {
-  const srcFiles = './lib/**/*.scss';
+  const srcFiles = './src/**/*.scss';
 
   return gulp.src(srcFiles).pipe(gulp.dest('scss'));
 });
 
 gulp.task('html:source', () => {
-  const srcFiles = './lib/**/*.html';
+  const srcFiles = './src/**/*.html';
 
   return gulp.src(srcFiles).pipe(gulp.dest('html'));
 });
@@ -71,7 +71,7 @@ gulp.task('html:source', () => {
  */
 
 gulp.task('scripts:umd', () => {
-  const srcFiles = ['./lib/**/*.js'];
+  const srcFiles = ['./src/**/*.js'];
   const babelOpts = {
     presets: [
       [
@@ -91,7 +91,7 @@ gulp.task('scripts:umd', () => {
 });
 
 gulp.task('scripts:es', () => {
-  const srcFiles = ['./lib/**/*.js'];
+  const srcFiles = ['./src/**/*.js'];
   const babelOpts = {
     presets: [
       [

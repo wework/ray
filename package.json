@@ -2,12 +2,20 @@
   "name": "root",
   "description": "Resources for building interfaces with WeWork's design system",
   "private": true,
+  "author": "WeWork Companies Inc.",
+  "repository": "https://github.com/WeConnect/ray",
   "contributors": [
     "Adam Raider <adam.raider@wework.com>",
     "Celeste Glavin <celeste.glavin@wework.com>"
   ],
   "workspaces": [
     "packages/*"
+  ],
+  "keywords": [
+    "wework",
+    "css",
+    "js",
+    "design-system"
   ],
   "devDependencies": {
     "@babel/core": "7.3.4",
