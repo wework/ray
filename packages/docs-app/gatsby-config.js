@@ -38,13 +38,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'primary-readme',
-        path: path.join(__dirname, '../../README.md')
-      }
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

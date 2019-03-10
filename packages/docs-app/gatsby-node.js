@@ -23,6 +23,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug
     });
 
+    createNodeField({
+      node,
+      name: `path`,
+      value: node.frontmatter.path || slug
+    });
+
     // this is used for linking to file on github
     createNodeField({
       node,
@@ -40,7 +46,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 // Method that creates the pages for our website
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   return graphql(`
     {
@@ -49,6 +55,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             fields {
               slug
+              path
               currentPage
             }
             frontmatter {
@@ -60,13 +67,18 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const { slug } = node.fields;
+    createRedirect({
+      fromPath: '/',
+      toPath: '/getting-started/',
+      statusCode: 200,
+      redirectInBrowser: true
+    });
 
-      const path = node.frontmatter.path || slug;
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const { path: _path } = node.fields;
 
       createPage({
-        path,
+        path: _path,
         component: path.resolve(`./src/templates/page.js`),
         context: {
           frontmatter: node.frontmatter

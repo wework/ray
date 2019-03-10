@@ -67,11 +67,12 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query Query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query Query($path: String!) {
+    markdownRemark(fields: { path: { eq: $path } }) {
       htmlAst
       fields {
         slug
+        path
         currentPage
         sourcePath
       }
