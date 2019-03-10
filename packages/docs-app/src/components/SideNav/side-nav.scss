@@ -29,7 +29,7 @@
 }
 
 .side-nav--header {
-  margin-bottom: $ray-spacing-md;
+  margin-bottom: $ray-spacing-lg;
   display: flex;
   flex-direction: column;
 }
@@ -51,6 +51,10 @@
     outline: none;
     color: $ray-color-blue-50;
   }
+}
+
+.side-nav__github {
+  @extend .ray-p5;
 }
 
 .side-nav__version {

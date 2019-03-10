@@ -48,7 +48,11 @@ export default class SideNav extends React.Component {
                   <Link to="/" className="side-nav__heading">
                     Ray
                   </Link>
-                  <a href="https://github.com/WeConnect/ray" target="_blank">
+                  <a
+                    className="side-nav__github"
+                    href="https://github.com/WeConnect/ray"
+                    target="_blank"
+                  >
                     View on GitHub
                   </a>
                 </div>

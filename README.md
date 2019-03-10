@@ -49,4 +49,4 @@ $ yarn lerna:publish
 
 This repository is maintained by Demand Generation of Product Offerings & Growth at WeWork.
 
-It's lead maintainer is [Adam Raider](https://github.com/adamraider), please either [submit an issue](https://github.com/issues) or reach out to Adam at [adam.raider@wework.com](mailto:adam.raider@wework.com) for questions or concerns.
+It's lead maintainer is [Adam Raider](https://github.com/adamraider), please either [submit an issue](https://github.com/WeConnect/ray/issues/new) or reach out to Adam at [adam.raider@wework.com](mailto:adam.raider@wework.com) for questions or concerns.
