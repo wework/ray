@@ -12,8 +12,6 @@ import PageTable from '../components/PageTable';
 import ComponentCode from '../components/ComponentCode';
 import CodeSnippet from '../components/CodeSnippet';
 
-const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
-
 // Custom Markdown
 import {
   h4,
@@ -22,6 +20,8 @@ import {
   PageIntro,
   FlexGroup
 } from '../components/markdown/Markdown';
+
+const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -45,13 +45,17 @@ export default ({ data }) => {
     'page-content--component': post.frontmatter.label === 'Component'
   });
 
+  const githubPath = post.fields.sourcePath
+    ? `${GITHUB_SOURCE_URL}/${post.fields.sourcePath}`
+    : null;
+
   return (
     <Layout>
       {post.frontmatter.title && (
         <PageHeader
           title={post.frontmatter.title}
           label={post.frontmatter.label}
-          githubPath={`${GITHUB_SOURCE_URL}${post.fields.sourcePath}`}
+          githubPath={githubPath}
         />
       )}
 

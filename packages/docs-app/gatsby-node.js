@@ -2,6 +2,8 @@ const path = require('path');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const ROOT_ABSOLUTE_PATH = path.join(__dirname, '../../');
+
 // Method that creates nodes based on the file system that we can use in our templates
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -29,11 +31,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: node.frontmatter.path || slug
     });
 
+    const sourcePath = node.fileAbsolutePath.replace(ROOT_ABSOLUTE_PATH, '');
+
     // this is used for linking to file on github
     createNodeField({
       node,
       name: `sourcePath`,
-      value: `/${node.fileAbsolutePath.split('/ray/')[1]}`
+      value: sourcePath
     });
 
     createNodeField({

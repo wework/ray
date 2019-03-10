@@ -29,16 +29,19 @@ export default class PageHeader extends React.Component {
                 }}
               >
                 <h1 className="ray-h2">{title}</h1>
-                <a
-                  className="ray-btn ray-btn--tertiary ray-btn--pull-right"
-                  href={githubPath}
-                  target="_blank"
-                  style={{
-                    marginLeft: 'auto'
-                  }}
-                >
-                  Edit this page
-                </a>
+                {githubPath && (
+                  <a
+                    className="ray-btn ray-btn--tertiary ray-btn--pull-right"
+                    href={githubPath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      marginLeft: 'auto'
+                    }}
+                  >
+                    Edit this page
+                  </a>
+                )}
               </div>
             </div>
           </div>
