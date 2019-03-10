@@ -2,9 +2,6 @@
   "getting-started": {
     "title": "Getting Started"
   },
-  "principles": {
-    "title": "Principles"
-  },
   "components": {
     "title": "Components",
     "children": {
@@ -23,9 +20,6 @@
       "image": {
         "title": "Image"
       },
-      "image": {
-        "title": "Image"
-      },
       "radio": {
         "title": "Radio"
       },
@@ -34,14 +28,14 @@
       }
     }
   },
-  "guidelines": {
-    "title": "Guidelines",
+  "principles": {
+    "title": "Principles",
     "children": {
       "animations": {
         "title": "Animations"
       },
-      "color": {
-        "title": "Color"
+      "colors": {
+        "title": "Colors"
       },
       "fonts": {
         "title": "Fonts"

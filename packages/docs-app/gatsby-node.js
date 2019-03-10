@@ -23,6 +23,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug
     });
 
+    // this is used for linking to file on github
     createNodeField({
       node,
       name: `sourcePath`,
@@ -61,27 +62,13 @@ exports.createPages = ({ actions, graphql }) => {
   `).then(result => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const { slug } = node.fields;
-      const { currentPage } = node.fields;
 
-      const currentPath =
-        currentPage === 'README'
-          ? slug.slice(0, slug.lastIndexOf(currentPage))
-          : slug;
-
-      console.log(slug);
-      console.log(currentPath);
-      console.log(
-        `/${(node.frontmatter.label || '').toLowerCase()}/${currentPath}`
-      );
-      if (node.frontmatter.label) {
-      }
+      const path = node.frontmatter.path || slug;
 
       createPage({
-        path: currentPath,
+        path,
         component: path.resolve(`./src/templates/page.js`),
         context: {
-          slug,
-          currentPage,
           frontmatter: node.frontmatter
         }
       });
