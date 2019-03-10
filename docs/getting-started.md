@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+label: Guide
 ---
 
 <page-intro>Ray is a CSS and JavaScript framework [available on npm](https://github.com/WeConnect/ray).</page-intro>
