@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "es/index.js",
   "style": "css/ray.min.css",
   "sass": "scss/ray.scss",
