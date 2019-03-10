@@ -7,7 +7,9 @@ import { version } from '@wework/ray-core/package.json';
 
 export default class SideNav extends React.Component {
   renderNavItems(slug, nav, level = 0) {
-    return Object.keys(nav).map(key => {
+    const keys = level === 0 ? Object.keys(nav) : Object.keys(nav).sort();
+
+    return keys.map(key => {
       const item = nav[key];
       const path = `${slug}${key}/`;
 
