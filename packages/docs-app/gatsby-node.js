@@ -46,7 +46,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 // Method that creates the pages for our website
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage, createRedirect } = actions;
+  const { createPage } = actions;
 
   return graphql(`
     {
@@ -67,13 +67,6 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `).then(result => {
-    createRedirect({
-      fromPath: '/',
-      toPath: '/getting-started/',
-      statusCode: 200,
-      redirectInBrowser: true
-    });
-
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const { path: _path } = node.fields;
 
