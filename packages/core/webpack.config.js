@@ -9,7 +9,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
   devtool: isProduction ? 'cheap-source-map' : 'source-map',
   entry: {
-    ray: resolve('./src/ray.scss')
+    ray: resolve('./src/ray-core.scss')
   },
   output: {
     path: resolve('./dist')
