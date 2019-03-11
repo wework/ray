@@ -7,7 +7,7 @@ const { PATH_PREFIX = '/' } = process.env;
 module.exports = {
   pathPrefix: PATH_PREFIX,
   siteMetadata: {
-    title: 'Ray | Design System'
+    title: 'Ray — Documentation'
   },
   plugins: [
     {
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ray | Design System`,
+        name: `Ray — Documentation`,
         short_name: `Ray`,
         start_url: `/`,
         background_color: `#fff`,
