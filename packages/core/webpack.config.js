@@ -9,7 +9,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
   devtool: isProduction ? 'cheap-source-map' : 'source-map',
   entry: {
-    ray: resolve('./lib/application.scss')
+    ray: resolve('./src/ray.scss')
   },
   output: {
     path: resolve('./dist')
@@ -17,6 +17,8 @@ module.exports = {
   optimization: {
     minimizer: [
       new OptimizeCSSAssetsPlugin({
+        // @todo: add this dep to package.json
+        // eslint-disable-next-line import/no-extraneous-dependencies, global-require
         cssProcessor: require('cssnano'),
         cssProcessorPluginOptions: {
           preset: ['default', { discardComments: { removeAll: true } }]
@@ -49,7 +51,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'lib'),
+      '@': path.resolve(__dirname, 'src'),
       node_modules: path.resolve(__dirname, 'node_modules')
     }
   },

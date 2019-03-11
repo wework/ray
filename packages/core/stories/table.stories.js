@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import withPadding from './util/withPadding';
-
 const SAMPLE_DATA = [
   {
     first_name: 'Jeanette',
@@ -37,26 +35,24 @@ const SAMPLE_DATA = [
 const KEYS = Object.keys(SAMPLE_DATA[0]);
 
 if (process.env.NODE_ENV === 'development') {
-  storiesOf('Table', module).addWithJSX('default', () =>
-    withPadding(
-      <table className="ray-table">
-        <thead>
-          <tr>
+  storiesOf('Table', module).add('default', () => (
+    <table className="ray-table">
+      <thead>
+        <tr>
+          {KEYS.map(key => (
+            <th key={key}>{key}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {SAMPLE_DATA.map(item => (
+          <tr key={item.email}>
             {KEYS.map(key => (
-              <th key={key}>{key}</th>
+              <td key={key}>{item[key]}</td>
             ))}
           </tr>
-        </thead>
-        <tbody>
-          {SAMPLE_DATA.map(item => (
-            <tr key={item.email}>
-              {KEYS.map(key => (
-                <td key={key}>{item[key]}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    )
-  );
+        ))}
+      </tbody>
+    </table>
+  ));
 }

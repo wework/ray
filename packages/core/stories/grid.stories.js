@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { range } from 'lodash';
 
 storiesOf('Grid', module)
-  .addWithJSX('default', () => (
+  .add('default', () => (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
       <div className="ray-grid">
         <div
@@ -26,7 +26,7 @@ storiesOf('Grid', module)
       </div>
     </div>
   ))
-  .addWithJSX('overlap', () => (
+  .add('overlap', () => (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
       <div className="ray-grid">
         <div

@@ -1,43 +1,11 @@
-import html from 'nanohtml';
-import Select from '../../lib/components/select';
+import Select from '../../src/components/select';
+import {
+  selectFixture,
+  selectFixtureWithPlaceholder,
+  selectFixtureNoInput
+} from '../fixtures/select';
 
-function getFixture() {
-  return html`
-    <div class="ray-select">
-      <select class="ray-select__input">
-        <option value="" disabled selected data-ray-placeholder></option>
-        <option value="Pikatchu">Pikatchu</option>
-        <option value="Squirtle">Squirtle</option>
-        <option value="Charmander">Charmander</option>
-      </select>
-
-      <label class="ray-select__label">
-        What's your favorite Pokémon?
-      </label>
-    </div>
-  `;
-}
-
-function getFixtureWithPlaceholder() {
-  return html`
-    <div class="ray-select">
-      <select class="ray-select__input">
-        <option value="" disabled selected data-ray-placeholder
-          >Hi im a placeholder</option
-        >
-        <option value="Pikatchu">Pikatchu</option>
-        <option value="Squirtle">Squirtle</option>
-        <option value="Charmander">Charmander</option>
-      </select>
-
-      <label class="ray-select__label">
-        What's your favorite Pokémon?
-      </label>
-    </div>
-  `;
-}
-
-function setupTest(fixture = getFixture()) {
+function setupTest(fixture = selectFixture()) {
   document.body.innerHTML = null;
   document.body.appendChild(fixture);
   const selectEl = document.querySelector('.ray-select');
@@ -49,6 +17,20 @@ describe('Select', () => {
   afterEach(() => {
     Select.instances = new WeakMap();
     document.body.innerHTML = null;
+  });
+
+  test('cssClasses exist', () => {
+    expect(Select.cssClasses).toBeTruthy();
+  });
+
+  test('strings exist', () => {
+    expect(Select.strings).toBeTruthy();
+  });
+
+  test('#constructor throws error if select contains no input', () => {
+    expect(() => setupTest(selectFixtureNoInput())).toThrow(
+      `Select must have an input element with a class of .ray-select__input`
+    );
   });
 
   test('#create can instantiate a select', () => {
@@ -69,6 +51,16 @@ describe('Select', () => {
     select.destroy();
   });
 
+  test('#value gets value of select', () => {
+    const { select } = setupTest();
+
+    select.set('Charmander');
+
+    expect(select.value()).toBe('Charmander');
+
+    select.destroy();
+  });
+
   test('#destroy removes instance', () => {
     const { select, selectEl } = setupTest();
 
@@ -78,9 +70,9 @@ describe('Select', () => {
   });
 
   test('#createAll can instantiate many selects', () => {
-    document.body.appendChild(getFixture());
-    document.body.appendChild(getFixture());
-    document.body.appendChild(getFixture());
+    document.body.appendChild(selectFixture());
+    document.body.appendChild(selectFixture());
+    document.body.appendChild(selectFixture());
 
     Select.createAll();
 
@@ -106,14 +98,14 @@ describe('Select', () => {
   });
 
   test('it has placeholder class if placeholder exists', () => {
-    const { select, selectEl } = setupTest(getFixtureWithPlaceholder());
+    const { select, selectEl } = setupTest(selectFixtureWithPlaceholder());
 
     expect(selectEl.classList).toContain('ray-select--placeholder-mode');
     select.destroy();
   });
 
   test('it removes placeholder class if placeholder exists but a selection is made', () => {
-    const { select, selectEl } = setupTest(getFixtureWithPlaceholder());
+    const { select, selectEl } = setupTest(selectFixtureWithPlaceholder());
 
     expect(selectEl.classList).toContain('ray-select--placeholder-mode');
     expect(selectEl.classList).not.toContain('ray-select--has-value');

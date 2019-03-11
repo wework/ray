@@ -7,7 +7,7 @@ const { PATH_PREFIX = '/' } = process.env;
 module.exports = {
   pathPrefix: PATH_PREFIX,
   siteMetadata: {
-    title: 'Ray Design System'
+    title: 'Ray | Design System'
   },
   plugins: [
     {
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ray Design System`,
+        name: `Ray | Design System`,
         short_name: `Ray`,
         start_url: `/`,
         background_color: `#fff`,
@@ -33,21 +33,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'content',
-        path: `${__dirname}/src/content/`
+        name: 'docs',
+        path: path.join(__dirname, '../../docs')
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'ray-core',
-        path: path.join(__dirname, '../core/lib')
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'primary-readme',
+        name: 'readme',
         path: path.join(__dirname, '../../README.md')
       }
     },

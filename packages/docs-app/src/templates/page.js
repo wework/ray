@@ -10,8 +10,6 @@ import Layout from '../components/Layouts';
 import PageHeader from '../components/PageHeader';
 import PageTable from '../components/PageTable';
 import ComponentCode from '../components/ComponentCode';
-import ComponentDocs from '../components/ComponentDocs';
-import ComponentOverview from '../components/ComponentOverview';
 import CodeSnippet from '../components/CodeSnippet';
 
 // Custom Markdown
@@ -23,6 +21,8 @@ import {
   FlexGroup
 } from '../components/markdown/Markdown';
 
+const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
+
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
@@ -33,9 +33,7 @@ const renderAst = new RehypeReact({
     pre: CodeSnippet,
     'page-intro': PageIntro,
     'flex-group': FlexGroup,
-    component: ComponentCode,
-    'component-docs': ComponentDocs,
-    'component-overview': ComponentOverview
+    component: ComponentCode
   }
 }).Compiler;
 
@@ -47,16 +45,23 @@ export default ({ data }) => {
     'page-content--component': post.frontmatter.label === 'Component'
   });
 
+  const githubPath = post.fields.sourcePath
+    ? `${GITHUB_SOURCE_URL}/${post.fields.sourcePath}`
+    : null;
+
   return (
     <Layout>
-      <PageHeader
-        title={post.frontmatter.title}
-        label={post.frontmatter.label}
-      />
+      {post.frontmatter.title && (
+        <PageHeader
+          title={post.frontmatter.title}
+          label={post.frontmatter.label}
+          githubPath={githubPath}
+        />
+      )}
 
       <div className={classNames}>
         <div className="ray-grid__inner">
-          <div className="ray-grid__cell--span-12">
+          <div className="ray-grid__cell--span-12 ray-grid__cell--span-8-desktop">
             {renderAst(post.htmlAst)}
           </div>
         </div>
@@ -66,12 +71,14 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query Query($path: String!) {
+    markdownRemark(fields: { path: { eq: $path } }) {
       htmlAst
       fields {
         slug
+        path
         currentPage
+        sourcePath
       }
       frontmatter {
         title

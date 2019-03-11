@@ -1,76 +1,66 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Location } from '@reach/router';
-import classnames from 'classnames';
 import { Link } from 'gatsby';
-
-import SideNavItem from './SideNavItem';
+import { version } from '@wework/ray-core/package.json';
 import navigation from '../../data/navigation/navigation.json';
 
 export default class SideNav extends React.Component {
-  static propTypes = {
-    isOpen: PropTypes.bool,
-    isFinal: PropTypes.bool
-  };
+  renderNavItems(slug, nav, level = 0) {
+    const keys = level === 0 ? Object.keys(nav) : Object.keys(nav).sort();
 
-  renderNavItems = (nav, loc) =>
-    Object.keys(nav).map(item => {
+    return keys.map(key => {
+      const item = nav[key];
+      const path = `${slug}${key}/`;
+
       return (
-        <SideNavItem
-          itemSlug={item}
-          item={nav[item]}
-          key={item}
-          location={loc}
-        />
+        <li
+          key={key}
+          className={`side-nav__item side-nav__item--level-${level}`}
+        >
+          {!item.children && <Link to={path}>{item.title}</Link>}
+          {item.children && (
+            <>
+              <div
+                className="ray-p4"
+                style={{
+                  margin: '0.5rem 0 0 0',
+                  fontWeight: 600
+                }}
+              >
+                {item.title}
+              </div>
+              <ul style={{ paddingLeft: '1rem' }}>
+                {this.renderNavItems(path, item.children, level + 1)}
+              </ul>
+            </>
+          )}
+        </li>
       );
     });
-
-  handleSkip = evt => {
-    if (evt.which === 13) {
-      document.activeElement.blur();
-      document.querySelector('#maincontent').focus();
-    }
-  };
+  }
 
   render() {
-    const { isOpen = true, isFinal } = this.props;
-
-    const classNames = classnames({
-      'side-nav': true,
-      'side-nav__closed': !isOpen,
-      'side-nav__closed--final': isFinal && !isOpen
-    });
-
     return (
-      <Location>
-        {({ location }) => {
-          const navItems = this.renderNavItems(navigation, location);
-          return (
-            <>
-              <a
-                id="skip-to-content"
-                href="#maincontent"
-                className="skip-to-content"
-                onKeyDown={this.handleSkip}
-              >
-                Skip to main content
-              </a>
-              <nav className={classNames}>
-                <div className="side-nav--header">
-                  <Link to="/" className="side-nav__logo">
-                    <span>Ray</span> Design System
-                  </Link>
-                </div>
-                <div className="side-nav--items">
-                  <ul role="menu" className="side-nav__nav-items">
-                    {navItems}
-                  </ul>
-                </div>
-              </nav>
-            </>
-          );
-        }}
-      </Location>
+      <nav className="side-nav">
+        <div className="side-nav--header">
+          <Link to="/" className="side-nav__heading">
+            Ray
+          </Link>
+          <a
+            className="side-nav__github"
+            href="https://github.com/WeConnect/ray"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            View on GitHub
+          </a>
+        </div>
+        <div className="side-nav--items">
+          <ul role="menu" className="side-nav__nav-items">
+            {this.renderNavItems('/', navigation)}
+          </ul>
+        </div>
+        <div className="side-nav__version">ray-core@{version}</div>
+      </nav>
     );
   }
 }

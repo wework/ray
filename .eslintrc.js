@@ -25,6 +25,7 @@ module.exports = {
       {
         allowAfterThis: true
       }
-    ]
+    ],
+    'no-use-before-define': 'off'
   }
 };

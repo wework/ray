@@ -1,41 +1,26 @@
-//===================
-// SIDE NAV
-//===================
-
-// Skip content
-.skip-to-content {
-  display: none;
-
-  &:focus {
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip: initial;
-    z-index: 8000;
-  }
-}
-
 .side-nav {
   display: flex;
   flex-direction: column;
   height: 100vh;
   z-index: 7000;
-  margin-left: -999px;
-  padding-left: 999px;
-  padding-top: 5rem;
   overflow-y: auto;
   background-color: hsla(240, 17%, 98%, 1);
-  position: fixed;
-  width: calc(312px - 24px + 999px);
+  position: sticky;
+  left: 0;
+  top: 0;
+  min-width: 200px;
+  max-width: 300px;
+  width: 100%;
+  padding: $ray-spacing-2xl 1rem;
+  border-right: 1px solid $ray-color-gray-10;
 }
 
-.side-nav__closed {
-  transform: translateX(-100%);
-  overflow: inherit;
-}
+.side-nav__item {
+  padding: 1px 0;
 
-.side-nav__closed--final {
-  display: none;
+  ul {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .side-nav--items {
@@ -43,47 +28,20 @@
   width: 100%;
 }
 
-//===================
-// SIDE NAV click to close
-//===================
-
-.side-nav-click-to-close {
-  display: block;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 500;
-}
-
-@media screen and (min-width: 840px) {
-  .side-nav-click-to-close {
-    display: none;
-  }
-}
-
-.side-nav-click-to-close__closed {
-  display: none;
-}
-
 .side-nav--header {
-  margin-bottom: $ray-spacing-md;
+  margin-bottom: $ray-spacing-lg;
+  display: flex;
+  flex-direction: column;
 }
 
-//===================
-// SIDE NAV LOGO
-//===================
-.side-nav__logo {
+.side-nav__heading {
+  @extend .ray-h5;
   display: inline-block;
   color: $ray-color-text-dark;
   text-decoration: none;
-  font-weight: 400;
   line-height: 1.2;
-  margin: 0 $ray-spacing-md 0 20px;
+  margin: 0 0 0.25rem;
   white-space: nowrap;
-  padding: 0 $ray-spacing-md 0 0;
-
   &:hover {
     color: $ray-color-blue-50;
   }
@@ -95,137 +53,19 @@
   }
 }
 
-.side-nav__logo span {
-  font-weight: 600;
+.side-nav__github {
+  @extend .ray-p5;
 }
 
 .side-nav__version {
-  padding: 0 $ray-spacing-md 0 0;
-  margin: 0 $ray-spacing-md 0 20px;
+  @extend .ray-p5;
+  padding: $ray-spacing-md 0;
   opacity: 0.75;
 }
 
-//===================
-// NAV ITEMS
-//===================
 .side-nav__nav-items {
   width: 100%;
   padding: 0;
   list-style: none;
   margin-bottom: $ray-spacing-2xl;
-}
-
-.side-nav__nav-item a,
-.side-nav__nav-item button {
-  cursor: pointer;
-  padding: $ray-spacing-2xs $ray-spacing-md $ray-spacing-2xs $ray-spacing-md;
-  height: rem(32px);
-  color: $ray-color-gray-50;
-  border: none;
-  background: transparent;
-  line-height: 1.5;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  text-decoration: none;
-  border-left: 4px solid transparent;
-  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
-    Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace !important;
-  text-transform: uppercase;
-  font-size: 0.73rem;
-
-  &:focus {
-    color: $ray-color-black;
-    text-decoration: underline;
-    outline: none;
-  }
-
-  &:hover {
-    color: $ray-color-black;
-  }
-
-  @media all and (max-width: 620px) {
-    padding-bottom: $ray-spacing-md;
-  }
-}
-
-.side-nav__nav-item--arrow {
-  height: rem(10px);
-  width: rem(10px);
-  fill: $ray-color-gray-50;
-  transition: 0.3s;
-  margin-left: 0.5rem;
-}
-
-.side-nav__nav-item--active > a {
-  color: $ray-color-black;
-}
-
-.side-nav__nav-item--open .side-nav__nav-item--arrow {
-  transform: rotate(-180deg);
-}
-
-.side-nav__nav-item--open .side-nav__sub-nav {
-  margin-top: 0;
-  max-height: 100rem;
-}
-
-//===================
-// SUB NAV ITEMS
-//===================
-.side-nav__sub-nav {
-  overflow: hidden;
-  max-height: 0;
-  transition: 0.3s;
-}
-
-.side-nav__sub-nav-item {
-  border-left: 4px solid transparent;
-  padding: 0 $ray-spacing-lg;
-  text-transform: initial;
-  font-family: $ray-font-stack-sans-serif !important;
-}
-
-.side-nav__sub-nav-item a {
-  font-weight: 400;
-  padding: $ray-spacing-2xs $ray-spacing-2xs $ray-spacing-2xs 0;
-  text-decoration: none;
-  text-transform: initial;
-  font-size: 1rem;
-  font-family: $ray-font-stack-sans-serif !important;
-
-  @media all and (max-width: 620px) {
-    padding-bottom: $ray-spacing-sm;
-  }
-}
-
-.side-nav__sub-nav-item--active a {
-  font-weight: 600;
-  color: $ray-color-black;
-}
-
-//===================
-// SIDE NAV LINKS
-//===================
-.side-nav__links {
-  width: 100%;
-  padding: 0 $ray-spacing-md;
-}
-
-.side-nav__link {
-  width: 100%;
-  margin-bottom: $ray-spacing-md;
-  display: flex;
-  border-color: $ray-color-blue-50;
-  color: $ray-color-blue-50;
-
-  &:hover,
-  &:focus {
-    background: $ray-color-blue-50;
-  }
-
-  &:focus {
-    outline-color: $ray-color-blue-50;
-  }
 }
