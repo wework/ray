@@ -183,7 +183,7 @@ storiesOf('Select', module)
       </>
     );
   })
-  .addWithJSX('select, with icon', () => {
+  .add('select, with icon', () => {
     setTimeout(init);
 
     return (
