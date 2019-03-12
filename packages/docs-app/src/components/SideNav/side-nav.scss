@@ -11,12 +11,12 @@
   min-width: 200px;
   max-width: 300px;
   width: 100%;
-  padding: $ray-spacing-2xl 1rem;
+  padding: $ray-spacing-2xl $ray-spacing-xl;
   border-right: 1px solid $ray-color-gray-10;
 }
 
 .side-nav__item {
-  padding: 1px 0;
+  padding: 2px 0;
 
   ul {
     margin-bottom: 0.5rem;
@@ -29,13 +29,15 @@
 }
 
 .side-nav--header {
+  border-bottom: 1px solid $ray-color-gray-10;
+  padding-bottom: $ray-spacing-lg;
   margin-bottom: $ray-spacing-lg;
   display: flex;
   flex-direction: column;
 }
 
 .side-nav__heading {
-  @extend .ray-h5;
+  @extend .ray-h6;
   display: inline-block;
   color: $ray-color-text-dark;
   text-decoration: none;

@@ -22,15 +22,13 @@ export default class SideNav extends React.Component {
               <div
                 className="ray-p4"
                 style={{
-                  margin: '0.5rem 0 0 0',
+                  margin: '1rem 0 0 0',
                   fontWeight: 600
                 }}
               >
                 {item.title}
               </div>
-              <ul style={{ paddingLeft: '1rem' }}>
-                {this.renderNavItems(path, item.children, level + 1)}
-              </ul>
+              <ul>{this.renderNavItems(path, item.children, level + 1)}</ul>
             </>
           )}
         </li>
@@ -51,7 +49,7 @@ export default class SideNav extends React.Component {
             rel="noopener noreferrer"
             target="_blank"
           >
-            View on GitHub
+            View on GitHub →
           </a>
         </div>
         <div className="side-nav--items">
