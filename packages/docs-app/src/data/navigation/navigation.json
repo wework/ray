@@ -2,6 +2,9 @@
   "getting-started": {
     "title": "Getting Started"
   },
+  "about": {
+    "title": "About"
+  },
   "components": {
     "title": "Components",
     "children": {
