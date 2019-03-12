@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.0...@wework/ray-core@0.1.1) (2019-03-12)
+
+
+### Bug Fixes
+
+* **select:** options should be visible on windows ([#20](https://github.com/WeConnect/ray/issues/20)) ([6efd051](https://github.com/WeConnect/ray/commit/6efd051))
+
+
+
+
+
 # [0.1.0](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.0.15...@wework/ray-core@0.1.0) (2019-03-11)
 
 
