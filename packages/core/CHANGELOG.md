@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.2...@wework/ray-core@0.1.3) (2019-03-12)
+
+
+### Bug Fixes
+
+* **select:** add icon support to select ([49a2359](https://github.com/WeConnect/ray/commit/49a2359))
+* adds icon support to text-field and text-area ([3c7048a](https://github.com/WeConnect/ray/commit/3c7048a))
+* revert changelog prettier changes ([fad12cc](https://github.com/WeConnect/ray/commit/fad12cc))
+
+
+
+
+
 ## [0.1.2](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.1...@wework/ray-core@0.1.2) (2019-03-12)
 
 
