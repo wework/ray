@@ -39,7 +39,7 @@ export default class PageHeader extends React.Component {
                       marginLeft: 'auto'
                     }}
                   >
-                    Edit this page
+                    ✍ Edit this page
                   </a>
                 )}
               </div>
