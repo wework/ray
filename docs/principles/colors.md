@@ -9,7 +9,7 @@ title: Color
 | `$ray-color-black`    | #000000             |
 | `$ray-color-blue-10`  | hsl(240, 100%, 90%) |
 | `$ray-color-blue-20`  | hsl(240, 100%, 80%) |
-| `$ray-color-blue-50`  | hsl(240, 100%, 70%) |
+| `$ray-color-blue-50`  | hsl(240, 100%, 50%) |
 | `$ray-color-blue-60`  | hsl(240, 100%, 40%) |
 | `$ray-color-blue-70`  | hsl(240, 100%, 30%) |
 | `$ray-color-red-10`   | hsl(0, 100%, 90%)   |
