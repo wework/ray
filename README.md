@@ -2,9 +2,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1fc61cc7-d0e8-4424-977e-8fa3f3a237b2/deploy-status)](https://app.netlify.com/sites/ray-docs/deploys) [![CircleCI](https://circleci.com/gh/WeConnect/ray.svg?style=svg&circle-token=99fe6d74b0b60e0113df0e37df0009ba77793b1d)](https://circleci.com/gh/WeConnect/ray) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Coverage Status](https://coveralls.io/repos/github/WeConnect/ray/badge.svg?t=cuEPSr)](https://coveralls.io/github/WeConnect/ray)
 
-### 🚧 **Warning**: Work-in-progress, do not use on production
-
 <page-intro>Resources for building interfaces with WeWork's design system. [npm package](https://www.npmjs.com/package/@wework/ray)</page-intro>
+
+🚧 **Warning**: Work-in-progress, do not use on production.
 
 ## 🐥 Getting Started
 
