@@ -31,11 +31,6 @@
     z-index: 2;
   }
 
-  &__icon--right {
-    // add spacing to compensate for the arrow
-    right: calc(#{$ray-field-h-spacing} * 2 + 12px);
-  }
-
   &__input {
     appearance: none;
     font-family: inherit;
