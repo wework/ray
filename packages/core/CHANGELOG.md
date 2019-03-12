@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.3...@wework/ray-core@0.1.4) (2019-03-12)
+
+
+### Bug Fixes
+
+* add caption element for media ([6f9dea8](https://github.com/WeConnect/ray/commit/6f9dea8))
+* add caption element for media ([#24](https://github.com/WeConnect/ray/issues/24)) ([99330e3](https://github.com/WeConnect/ray/commit/99330e3))
+
+
+
+
+
 ## [0.1.3](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.2...@wework/ray-core@0.1.3) (2019-03-12)
 
 
