@@ -37,4 +37,39 @@ storiesOf('Image', module)
         }}
       />
     </div>
+  ))
+  .add('img with caption', () => (
+    <div style={{ maxWidth: '500px' }}>
+      <div className="ray-image ray-image--16by9">
+        <img src={getPlaceholderURL('800x800')} />
+      </div>
+      <div className="ray-caption">
+        12pt apercu mono caption relating to this image
+      </div>
+    </div>
+  ))
+  .add('img with long caption', () => (
+    <div style={{ maxWidth: '500px' }}>
+      <div className="ray-image ray-image--16by9">
+        <img src={getPlaceholderURL('800x800')} />
+      </div>
+      <div className="ray-caption">
+        12pt apercu mono caption relating to this image but the caption is
+        longer than something ideal and maybe it has for some reason scaled
+      </div>
+    </div>
+  ))
+  .add('bg with caption', () => (
+    <div style={{ maxWidth: '400px' }}>
+      <div
+        className="ray-bg ray-bg--3by4"
+        style={{
+          backgroundImage: `url(${getPlaceholderURL('800x1200')})`
+        }}
+      />
+      <div className="ray-caption">
+        12pt apercu mono caption relating to this image but the caption is
+        longer than something ideal and maybe it has for some reason scaled
+      </div>
+    </div>
   ));
