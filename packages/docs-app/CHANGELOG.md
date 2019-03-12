@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.1.2...ray-website-gatsby@0.1.3) (2019-03-12)
+
+
+### Bug Fixes
+
+* **docs:** reduce page padding ([1fa4631](https://github.com/weconnect/ray-website/commit/1fa4631))
+
+
+
+
+
 ## [0.1.2](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.1.1...ray-website-gatsby@0.1.2) (2019-03-12)
 
 
