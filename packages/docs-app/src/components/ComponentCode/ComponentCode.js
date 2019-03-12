@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import path from 'path';
 
 import ComponentExample from '../ComponentExample/ComponentExample';
 

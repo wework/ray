@@ -1,11 +1,13 @@
 @import '../../global/mixins/form-items';
 
 .#{$ray-class-prefix}select {
+  @include icon-support('select');
   border: $ray-border-width solid $ray-color-gray-60;
   background-color: $ray-color-white;
   border-radius: $ray-border-radius;
   position: relative;
   height: $ray-field-height;
+  display: flex;
 
   &::after {
     content: '';

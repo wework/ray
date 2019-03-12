@@ -182,4 +182,84 @@ storiesOf('Select', module)
         </div>
       </>
     );
+  })
+  .add('select, with icon', () => {
+    setTimeout(init);
+
+    return (
+      <>
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--with-icon-left">
+            <div className="ray-select__icon--left">😜</div>
+
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikachu">Pikachu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Bulbasaur">Bulbasaur</option>
+              <option value="Charmander">Charmander</option>
+            </select>
+
+            <label className="ray-select__label">
+              {"What's your starter Pokémon?"}
+            </label>
+          </div>
+        </div>
+
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--with-icon-left ray-select--with-icon-right">
+            <div className="ray-select__icon--left">🤖</div>
+            <div className="ray-select__icon--right">👽</div>
+
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikachu">Pikachu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Bulbasaur">Bulbasaur</option>
+              <option value="Charmander">Charmander</option>
+            </select>
+
+            <label className="ray-select__label">
+              {"What's your starter Pokémon?"}
+            </label>
+          </div>
+        </div>
+
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--with-icon-right">
+            <div className="ray-select__icon--right">🙏</div>
+
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikachu">Pikachu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Bulbasaur">Bulbasaur</option>
+              <option value="Charmander">Charmander</option>
+            </select>
+
+            <label className="ray-select__label">
+              {"What's your starter Pokémon?"}
+            </label>
+          </div>
+        </div>
+
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--compact ray-select--with-icon-left">
+            <div className="ray-select__icon--left">🏂</div>
+
+            <select className="ray-select__input">
+              <option value="" disabled selected data-ray-placeholder />
+              <option value="Pikachu">Pikachu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Bulbasaur">Bulbasaur</option>
+              <option value="Charmander">Charmander</option>
+            </select>
+
+            <label className="ray-select__label">
+              {"What's your starter Pokémon?"}
+            </label>
+          </div>
+        </div>
+      </>
+    );
   });

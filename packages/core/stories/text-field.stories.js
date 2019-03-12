@@ -313,6 +313,21 @@ storiesOf('Text Field', module)
       </div>
     );
   })
+  .add('Text field, with icon', () => (
+    <div className="ray-text-field ray-text-field--with-icon-left">
+      <div className="ray-text-field__icon--left">👐</div>
+
+      <input
+        type="text"
+        className="ray-text-field__input"
+        id="input"
+        placeholder="Few people are aware..."
+      />
+      <label className="ray-text-field__label" htmlFor="input">
+        Fun fact about Ray Eames
+      </label>
+    </div>
+  ))
   .add('Text field, active, textarea - compact', () => (
     <div className="ray-text-area ray-text-area--active ray-text-area--compact">
       <textarea

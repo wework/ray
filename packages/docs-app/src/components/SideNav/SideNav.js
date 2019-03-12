@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Location } from '@reach/router';
 import { Link } from 'gatsby';
-import navigation from '../../data/navigation/navigation.json';
 import { version } from '@wework/ray-core/package.json';
+import navigation from '../../data/navigation/navigation.json';
 
 export default class SideNav extends React.Component {
   renderNavItems(slug, nav, level = 0) {
@@ -39,36 +37,30 @@ export default class SideNav extends React.Component {
       );
     });
   }
+
   render() {
     return (
-      <Location>
-        {({ location }) => {
-          return (
-            <>
-              <nav className="side-nav">
-                <div className="side-nav--header">
-                  <Link to="/" className="side-nav__heading">
-                    Ray
-                  </Link>
-                  <a
-                    className="side-nav__github"
-                    href="https://github.com/WeConnect/ray"
-                    target="_blank"
-                  >
-                    View on GitHub
-                  </a>
-                </div>
-                <div className="side-nav--items">
-                  <ul role="menu" className="side-nav__nav-items">
-                    {this.renderNavItems('/', navigation)}
-                  </ul>
-                </div>
-                <div className="side-nav__version">ray-core@{version}</div>
-              </nav>
-            </>
-          );
-        }}
-      </Location>
+      <nav className="side-nav">
+        <div className="side-nav--header">
+          <Link to="/" className="side-nav__heading">
+            Ray
+          </Link>
+          <a
+            className="side-nav__github"
+            href="https://github.com/WeConnect/ray"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            View on GitHub
+          </a>
+        </div>
+        <div className="side-nav--items">
+          <ul role="menu" className="side-nav__nav-items">
+            {this.renderNavItems('/', navigation)}
+          </ul>
+        </div>
+        <div className="side-nav__version">ray-core@{version}</div>
+      </nav>
     );
   }
 }
