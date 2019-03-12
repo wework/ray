@@ -13,7 +13,7 @@ title: Image
 </component>
 
 <component 
-    name="Image 4x3"
+    name="Image 4x3 with caption"
     component="image"
     variation="image--4by3" 
     >
