@@ -2,7 +2,7 @@
   "name": "ray-website-gatsby",
   "description": "Ray Design System website",
   "private": true,
-  "version": "0.0.12",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -12,14 +12,14 @@
     "gatsby"
   ],
   "scripts": {
-    "build": "yarn clean && gatsby build && cp static/* public/",
-    "clean": "rm -rf public",
+    "build": "echo \"Error: no build specified\" && exit 0",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o public/docs"
+    "storybook:build": "build-storybook -c .storybook -o public/docs",
+    "netlify:build": "gatsby build && cp -r static/* ../../.out && cp -r public/* ../../.out"
   },
   "dependencies": {
     "@babel/core": "7.3.4",

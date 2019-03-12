@@ -2,9 +2,12 @@ const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const del = require('del');
+const rollup = require('rollup');
+const rollupConfig = require('./config/rollup.config');
 
 gulp.task('clean', () =>
   del([
@@ -22,7 +25,7 @@ gulp.task('clean', () =>
 gulp.task('sass:compiled', () => {
   function buildStyles(prod) {
     return gulp
-      .src('src/ray.scss')
+      .src('src/ray-core.scss')
       .pipe(sourcemaps.init())
       .pipe(
         sass({
@@ -108,3 +111,24 @@ gulp.task('scripts:es', () => {
     .pipe(babel(babelOpts))
     .pipe(gulp.dest('es/'));
 });
+
+gulp.task('scripts:rollup', () => {
+  return rollup.rollup(rollupConfig).then(bundle => {
+    return bundle.write(rollupConfig.output);
+  });
+});
+
+gulp.task(
+  'scripts:compiled',
+  gulp.series('scripts:rollup', () => {
+    const srcFile = './scripts/ray-core.js';
+
+    return gulp
+      .src(srcFile)
+      .pipe(sourcemaps.init())
+      .pipe(rename('ray-core.min.js'))
+      .pipe(uglify())
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest('scripts'));
+  })
+);

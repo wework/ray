@@ -29,3 +29,4 @@ packages/core/.out
 packages/core/storybook-static
 packages/docs-app/public
 packages/docs-app/.cache
+.out/

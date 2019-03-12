@@ -45,10 +45,12 @@
     "bootstrap": "lerna bootstrap",
     "test": "jest",
     "build": "npx lerna run build",
+    "clean": "rm -rf .out",
     "lerna:clean": "lerna run clean",
     "lerna:publish": "lerna publish --yes",
     "lerna:version": "lerna version --yes",
-    "postinstall": "yarn bootstrap"
+    "postinstall": "yarn bootstrap",
+    "netlify:build": "yarn clean && npx lerna run netlify:build"
   },
   "dependencies": {},
   "husky": {

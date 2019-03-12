@@ -34,11 +34,11 @@ class Layout extends React.Component {
               meta={[
                 {
                   name: 'description',
-                  content: 'Replace me with meta description'
+                  content: `Resources for building interfaces with WeWork's design system.`
                 },
                 {
                   name: 'keywords',
-                  content: 'Replace me with meta keywords'
+                  content: 'design system, wework, ray'
                 }
               ]}
               link={[

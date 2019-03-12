@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.1.0...ray-website-gatsby@0.1.1) (2019-03-12)
+
+**Note:** Version bump only for package ray-website-gatsby
+
+
+
+
+
+# [0.1.0](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.0.16...ray-website-gatsby@0.1.0) (2019-03-11)
+
+
+### Features
+
+* standardize build naming convention and add js compiled versions ([9c06534](https://github.com/weconnect/ray-website/commit/9c06534))
+
+
+
+
+
+## [0.0.16](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.0.15...ray-website-gatsby@0.0.16) (2019-03-11)
+
+**Note:** Version bump only for package ray-website-gatsby
+
+
+
+
+
+## [0.0.15](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.0.14...ray-website-gatsby@0.0.15) (2019-03-11)
+
+**Note:** Version bump only for package ray-website-gatsby
+
+
+
+
+
+## [0.0.14](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.0.13...ray-website-gatsby@0.0.14) (2019-03-11)
+
+**Note:** Version bump only for package ray-website-gatsby
+
+
+
+
+
+## [0.0.13](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.0.12...ray-website-gatsby@0.0.13) (2019-03-11)
+
+**Note:** Version bump only for package ray-website-gatsby
+
+
+
+
+
 ## [0.0.12](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.0.11...ray-website-gatsby@0.0.12) (2019-03-10)
 
 **Note:** Version bump only for package ray-website-gatsby
