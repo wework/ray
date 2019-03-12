@@ -18,8 +18,6 @@ button,
 }
 
 .page-content {
-  margin-bottom: 7rem;
-
   h1,
   h2,
   h3,
@@ -109,6 +107,7 @@ button,
 
 .main-content {
   width: 100%;
+  margin: $ray-spacing-3xl 0;
 }
 
 .page {
