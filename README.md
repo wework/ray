@@ -16,11 +16,16 @@ See the [getting started docs](/getting-started).
 # to install dependencies, this will also bootstrap lerna
 $ yarn install
 
-# to start storybook dev server
-$ npx lerna run storybook --scope="@wework/ray-core"
+# to start all dev servers
+$ yarn dev
 
-# to start docs site dev server
-$ npx lerna run dev --scope="ray-website-gatsby"
+# to only start storybook dev server
+$ npx lerna run storybook --scope="@wework/ray-core" --parallel
+
+# to only start docs site dev server
+$ npx lerna run dev --scope="ray-website-gatsby"  --parallel
+
+
 ```
 
 ## 🤖 Contributing
