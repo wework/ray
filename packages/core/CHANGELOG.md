@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.7...@wework/ray-core@0.1.8) (2019-03-13)
+
+
+### Bug Fixes
+
+* **image:** programmatically generate image classes and adds new ratios ([#29](https://github.com/WeConnect/ray/issues/29)) ([5f96f76](https://github.com/WeConnect/ray/commit/5f96f76))
+
+
+
+
+
 ## [0.1.7](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.6...@wework/ray-core@0.1.7) (2019-03-13)
 
 
