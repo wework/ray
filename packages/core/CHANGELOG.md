@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.9](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.8...@wework/ray-core@0.1.9) (2019-03-13)
+
+
+### Bug Fixes
+
+* **radio-checkbox:** cursor dead area ([#35](https://github.com/WeConnect/ray/issues/35)) ([152a7a4](https://github.com/WeConnect/ray/commit/152a7a4))
+
+
+
+
+
 ## [0.1.8](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.7...@wework/ray-core@0.1.8) (2019-03-13)
 
 
