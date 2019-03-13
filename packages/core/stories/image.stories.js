@@ -18,6 +18,13 @@ storiesOf('Image', module)
       </div>
     </div>
   ))
+  .add('4/3 img', () => (
+    <div style={{ maxWidth: '400px' }}>
+      <div className="ray-image ray-image--4by3">
+        <img src={getPlaceholderURL('1200x800')} />
+      </div>
+    </div>
+  ))
   .add('16/9 background', () => (
     <div style={{ maxWidth: '500px' }}>
       <div
@@ -34,6 +41,16 @@ storiesOf('Image', module)
         className="ray-bg ray-bg--3by4"
         style={{
           backgroundImage: `url(${getPlaceholderURL('800x1200')})`
+        }}
+      />
+    </div>
+  ))
+  .add('4/3 background', () => (
+    <div style={{ maxWidth: '400px' }}>
+      <div
+        className="ray-bg ray-bg--4by3"
+        style={{
+          backgroundImage: `url(${getPlaceholderURL('1200x800')})`
         }}
       />
     </div>

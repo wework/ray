@@ -46,7 +46,7 @@
     padding-bottom: calc(100% / (3 / 4));
   }
 
-  &--4By3 {
+  &--4by3 {
     @include image;
     padding-bottom: calc(100% / (4 / 3));
   }
