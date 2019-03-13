@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.5...@wework/ray-core@0.1.6) (2019-03-13)
+
+
+### Bug Fixes
+
+* **image:** 4by3 ([#28](https://github.com/WeConnect/ray/issues/28)) ([1955c5c](https://github.com/WeConnect/ray/commit/1955c5c))
+
+
+
+
+
 ## [0.1.5](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.4...@wework/ray-core@0.1.5) (2019-03-13)
 
 **Note:** Version bump only for package @wework/ray-core
