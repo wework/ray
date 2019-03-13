@@ -1,0 +1,16 @@
+.#{$ray-class-prefix}fieldset {
+  border: 0;
+  padding: 0;
+  margin: $ray-spacing-2xl 0 $ray-spacing-lg;
+}
+
+.#{$ray-class-prefix}fieldset__legend {
+  font-family: $ray-font-stack-mono;
+  font-size: 0.875rem;
+  margin-bottom: $ray-spacing-xl;
+  text-transform: uppercase;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

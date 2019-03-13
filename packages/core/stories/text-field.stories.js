@@ -340,6 +340,44 @@ storiesOf('Text Field', module)
       </label>
     </div>
   ))
+  .add('Text field, fieldset', () => {
+    setTimeout(initTextField);
+
+    return (
+      <fieldset className="ray-fieldset">
+        <legend className="ray-fieldset__legend">User Information</legend>
+
+        <div className="ray-form-item">
+          <div className="ray-text-field">
+            <input
+              className="ray-text-field__input"
+              id="name"
+              type="text"
+              placeholder="Arya"
+            />
+            <label className="ray-text-field__label" htmlFor="name">
+              Name
+            </label>
+          </div>
+          <div className="ray-form-item__hint">What should we call you?</div>
+        </div>
+        <div className="ray-form-item">
+          <div className="ray-text-field">
+            <input
+              className="ray-text-field__input"
+              id="email"
+              type="email"
+              placeholder="arya.stark@winterfell.org"
+            />
+            <label className="ray-text-field__label" htmlFor="email">
+              Email address
+            </label>
+          </div>
+          <div className="ray-form-item__hint">How can we reach you?</div>
+        </div>
+      </fieldset>
+    );
+  })
   .add('Example Form - compact', () => {
     setTimeout(initTextField);
     setTimeout(initTextArea);

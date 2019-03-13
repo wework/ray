@@ -28,6 +28,9 @@
       },
       "checkbox": {
         "title": "Checkbox"
+      },
+      "fieldset": {
+        "title": "Fieldset"
       }
     }
   },
