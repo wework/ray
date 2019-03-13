@@ -5,10 +5,9 @@ $ray-radio-checkbox-width: 1rem;
 .#{$ray-class-prefix}checkbox {
   @include no-select;
   display: flex;
-  cursor: pointer;
 
   &__label {
-    margin-left: $ray-spacing-md;
+    padding-left: $ray-spacing-md;
     line-height: $ray-field-line-height;
     cursor: pointer;
   }
@@ -21,6 +20,7 @@ $ray-radio-checkbox-width: 1rem;
     height: $ray-radio-checkbox-width;
     position: relative;
     top: ($ray-field-line-height - $ray-field-font-size) / 2;
+    cursor: pointer;
 
     &::after {
       content: '';
