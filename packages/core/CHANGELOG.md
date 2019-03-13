@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.6...@wework/ray-core@0.1.7) (2019-03-13)
+
+
+### Bug Fixes
+
+* fieldset styles and docs ([#27](https://github.com/WeConnect/ray/issues/27)) ([e45d4f0](https://github.com/WeConnect/ray/commit/e45d4f0))
+
+
+
+
+
 ## [0.1.6](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.5...@wework/ray-core@0.1.6) (2019-03-13)
 
 

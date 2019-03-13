@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.14](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.1.13...ray-website-gatsby@0.1.14) (2019-03-13)
+
+
+### Bug Fixes
+
+* fieldset styles and docs ([#27](https://github.com/weconnect/ray-website/issues/27)) ([e45d4f0](https://github.com/weconnect/ray-website/commit/e45d4f0))
+
+
+
+
+
 ## [0.1.13](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.1.12...ray-website-gatsby@0.1.13) (2019-03-13)
 
 **Note:** Version bump only for package ray-website-gatsby
