@@ -24,8 +24,6 @@ $ npx lerna run storybook --scope="@wework/ray-core" --parallel
 
 # to only start docs site dev server
 $ npx lerna run dev --scope="ray-website-gatsby"  --parallel
-
-
 ```
 
 ## 🤖 Contributing
