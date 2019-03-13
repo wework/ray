@@ -40,6 +40,7 @@
     "prettier": "1.16.4"
   },
   "scripts": {
+    "dev": "lerna run dev --parallel",
     "commit": "git-cz",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "bootstrap": "lerna bootstrap",

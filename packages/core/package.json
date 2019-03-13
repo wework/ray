@@ -6,6 +6,7 @@
   "style": "css/ray-core.min.css",
   "sass": "scss/ray-core.scss",
   "scripts": {
+    "dev": "yarn storybook",
     "storybook": "start-storybook -p 6006  -s ./stories/static",
     "build": "yarn prebuild && gulp html:source sass:source sass:compiled scripts:es scripts:umd scripts:compiled",
     "clean": "gulp clean",
