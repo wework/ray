@@ -1,19 +1,19 @@
 import React from 'react';
-import ditto from '../../content/404/images/ditto.png';
 
 class FourOhFour extends React.Component {
   render() {
     return (
       <div className="page-container fourohfour-container">
-        <img
-          src={ditto}
-          alt="Ditto paradise"
-          style={{
-            maxWidth: '400px',
-            borderRadius: '4px'
-          }}
-        />
-        <h1 className="ray-h4">404</h1>
+        <div style={{ maxWidth: '300px', width: '100%' }}>
+          <div
+            className="ray-bg ray-bg--16by9"
+            style={{
+              backgroundImage: `url(https://media.giphy.com/media/l1J9EdzfOSgfyueLm/giphy.gif)`
+            }}
+          />
+
+          <div className="ray-caption">404: Page not found</div>
+        </div>
       </div>
     );
   }
