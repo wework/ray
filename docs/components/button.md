@@ -4,7 +4,7 @@ title: Button
 status: Experimental
 ---
 
-<page-intro>Buttons within the system have a Standard Size and a Compact Size to match the text inputs. Primary buttons have a solid affordance fill, and secondary buttons use a 1pt outline of the affordance color. Tertiary buttons have no affordance container. </page-intro>
+<page-intro>Buttons within the system have a standard size and a compact size to match the text inputs. Primary buttons have a solid affordance fill, and secondary buttons use a 1pt outline of the affordance color. Tertiary buttons have no affordance container. </page-intro>
 
 <component 
     name="Primary button"

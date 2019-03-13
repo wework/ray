@@ -14,7 +14,7 @@ title: Typography
 
 ## Pairings
 
-<p class="ray-p3">Headings and paragraph styles can often be paired with their respective "levels" for an aesthetically pleasing hirarchy.</p>
+<p class="ray-p3">Headings and paragraph styles can often be paired with their respective "levels" for an aesthetically pleasing hierarchy.</p>
 
 <component
     name=".ray-h3 + .ray-p3"
