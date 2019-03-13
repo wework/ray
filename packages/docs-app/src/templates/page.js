@@ -11,6 +11,7 @@ import PageHeader from '../components/PageHeader';
 import PageTable from '../components/PageTable';
 import ComponentCode from '../components/ComponentCode';
 import CodeSnippet from '../components/CodeSnippet';
+import ColorTable from '../components/ColorTable';
 
 // Custom Markdown
 import {
@@ -33,6 +34,7 @@ const renderAst = new RehypeReact({
     pre: CodeSnippet,
     'page-intro': PageIntro,
     'flex-group': FlexGroup,
+    'color-table': ColorTable,
     component: ComponentCode
   }
 }).Compiler;
