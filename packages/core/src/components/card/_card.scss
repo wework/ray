@@ -1,72 +1,76 @@
-$card-padding: 1rem;
-$card-border-color: $ray-color-gray-10;
+@import '../../global/mixins/exports';
 
-.#{$ray-class-prefix}card {
-  width: 100%;
-  border-radius: $ray-border-radius;
-  background-color: $ray-color-white;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+@include exports('ray-card') {
+  $card-padding: 1rem;
+  $card-border-color: $ray-color-gray-10;
 
-  &--link {
-    cursor: pointer;
-    color: $ray-color-text-dark;
+  .#{$ray-class-prefix}card {
+    width: 100%;
+    border-radius: $ray-border-radius;
+    background-color: $ray-color-white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
+    &--link {
+      cursor: pointer;
+      color: $ray-color-text-dark;
 
-    &:hover {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:hover {
+        &::after {
+          border-color: $ray-color-blue-50;
+        }
+      }
+
       &::after {
-        border-color: $ray-color-blue-50;
+        content: '';
+        border: 1px solid transparent;
+        transition: border-color 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: $ray-border-radius;
+        pointer-events: none;
       }
     }
 
-    &::after {
-      content: '';
-      border: 1px solid transparent;
-      transition: border-color 0.3s ease;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: $ray-border-radius;
-      pointer-events: none;
-    }
-  }
+    &__content {
+      flex-grow: 1;
+      padding: $card-padding;
+      border-left: 1px solid $ray-color-gray-10;
+      border-right: 1px solid $ray-color-gray-10;
 
-  &__content {
-    flex-grow: 1;
-    padding: $card-padding;
-    border-left: 1px solid $ray-color-gray-10;
-    border-right: 1px solid $ray-color-gray-10;
+      &:first-child {
+        border-top: 1px solid $ray-color-gray-10;
+        border-top-left-radius: $ray-border-radius;
+        border-top-right-radius: $ray-border-radius;
+      }
 
-    &:first-child {
-      border-top: 1px solid $ray-color-gray-10;
-      border-top-left-radius: $ray-border-radius;
-      border-top-right-radius: $ray-border-radius;
+      &:last-child {
+        border-bottom: 1px solid $ray-color-gray-10;
+        border-bottom-left-radius: $ray-border-radius;
+        border-bottom-right-radius: $ray-border-radius;
+      }
     }
 
-    &:last-child {
-      border-bottom: 1px solid $ray-color-gray-10;
-      border-bottom-left-radius: $ray-border-radius;
-      border-bottom-right-radius: $ray-border-radius;
-    }
-  }
+    &__image {
+      &:first-child {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
 
-  &__image {
-    &:first-child {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    &:last-child {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      &:last-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
     }
   }
 }

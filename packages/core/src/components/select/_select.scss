@@ -1,134 +1,137 @@
 @import '../../global/mixins/form-items';
+@import '../../global/mixins/exports';
 
-.#{$ray-class-prefix}select {
-  @include icon-support('select');
-  border: $ray-border-width solid $ray-color-gray-60;
-  background-color: $ray-color-white;
-  border-radius: $ray-border-radius;
-  position: relative;
-  height: $ray-field-height;
-  display: flex;
-
-  &::after {
-    content: '';
-    pointer-events: none;
-    position: absolute;
-    right: $ray-field-h-spacing;
-    top: 0px;
-    bottom: 0px;
-    width: 0px;
-    height: 0px;
-    margin: auto;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 8px solid $ray-color-gray-60;
-    border-radius: 2px;
-  }
-
-  &__label {
-    @include label;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  &__input {
-    appearance: none;
-    font-family: inherit;
+@include exports('ray-select') {
+  .#{$ray-class-prefix}select {
+    @include icon-support('select');
+    border: $ray-border-width solid $ray-color-gray-60;
+    background-color: $ray-color-white;
     border-radius: $ray-border-radius;
-    line-height: 1;
-    width: 100%;
-    height: 100%;
-    font-size: $ray-field-label-size;
-    display: block;
-    background-color: transparent;
-    padding: 0 $ray-field-h-spacing;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0);
-
-    &::-ms-expand {
-      display: none;
-    }
-  }
-
-  &--has-value {
-    .#{$ray-class-prefix}select__label {
-      @include label--active;
-    }
-
-    .#{$ray-class-prefix}select__input {
-      color: $ray-color-black;
-    }
-  }
-
-  &--error {
-    border-color: $ray-color-red-50;
+    position: relative;
+    height: $ray-field-height;
+    display: flex;
 
     &::after {
-      border-top-color: $ray-color-red-50;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      right: $ray-field-h-spacing;
+      top: 0px;
+      bottom: 0px;
+      width: 0px;
+      height: 0px;
+      margin: auto;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid $ray-color-gray-60;
+      border-radius: 2px;
     }
 
-    .#{$ray-class-prefix}select__label {
-      color: $ray-color-red-50;
-    }
-  }
-
-  &--active {
-    border-color: $ray-color-blue-50;
-
-    .#{$ray-class-prefix}select__input {
-      color: $ray-color-black;
+    &__label {
+      @include label;
+      pointer-events: none;
+      z-index: 2;
     }
 
-    .#{$ray-class-prefix}select__label {
-      @include label--active;
-      color: $ray-color-blue-50;
-    }
+    &__input {
+      appearance: none;
+      font-family: inherit;
+      border-radius: $ray-border-radius;
+      line-height: 1;
+      width: 100%;
+      height: 100%;
+      font-size: $ray-field-label-size;
+      display: block;
+      background-color: transparent;
+      padding: 0 $ray-field-h-spacing;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0);
 
-    &.#{$ray-class-prefix}select--placeholder-mode {
-      .#{$ray-class-prefix}select__input {
-        color: $ray-color-text-light;
+      &::-ms-expand {
+        display: none;
       }
     }
 
-    &.#{$ray-class-prefix}select--has-value {
+    &--has-value {
+      .#{$ray-class-prefix}select__label {
+        @include label--active;
+      }
+
       .#{$ray-class-prefix}select__input {
+        color: $ray-color-black;
+      }
+    }
+
+    &--error {
+      border-color: $ray-color-red-50;
+
+      &::after {
+        border-top-color: $ray-color-red-50;
+      }
+
+      .#{$ray-class-prefix}select__label {
+        color: $ray-color-red-50;
+      }
+    }
+
+    &--active {
+      border-color: $ray-color-blue-50;
+
+      .#{$ray-class-prefix}select__input {
+        color: $ray-color-black;
+      }
+
+      .#{$ray-class-prefix}select__label {
+        @include label--active;
         color: $ray-color-blue-50;
       }
+
+      &.#{$ray-class-prefix}select--placeholder-mode {
+        .#{$ray-class-prefix}select__input {
+          color: $ray-color-text-light;
+        }
+      }
+
+      &.#{$ray-class-prefix}select--has-value {
+        .#{$ray-class-prefix}select__input {
+          color: $ray-color-blue-50;
+        }
+      }
+
+      &::after {
+        transform: rotate(180deg);
+        border-top-color: $ray-color-blue-50;
+      }
     }
 
-    &::after {
-      transform: rotate(180deg);
-      border-top-color: $ray-color-blue-50;
-    }
-  }
+    &--compact {
+      height: $ray-field-height-compact;
 
-  &--compact {
-    height: $ray-field-height-compact;
-
-    .#{$ray-class-prefix}select__label {
-      display: flex;
-      align-items: center;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
-  &--disabled {
-    border-color: rgba($ray-color-gray-60, 0.4);
-
-    &::after {
-      border-top-color: rgba($ray-color-gray-60, 0.4);
+      .#{$ray-class-prefix}select__label {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
 
-    .#{$ray-class-prefix}select__input {
-      color: rgba($ray-color-gray-60, 0.4);
-      cursor: not-allowed;
-    }
+    &--disabled {
+      border-color: rgba($ray-color-gray-60, 0.4);
 
-    .#{$ray-class-prefix}select__label {
-      color: rgba($ray-color-gray-60, 0.4);
+      &::after {
+        border-top-color: rgba($ray-color-gray-60, 0.4);
+      }
+
+      .#{$ray-class-prefix}select__input {
+        color: rgba($ray-color-gray-60, 0.4);
+        cursor: not-allowed;
+      }
+
+      .#{$ray-class-prefix}select__label {
+        color: rgba($ray-color-gray-60, 0.4);
+      }
     }
   }
 }

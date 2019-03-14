@@ -1,166 +1,170 @@
-$ray-btn-border-radius: $ray-border-radius;
+@import '../../global/mixins/exports';
 
-.#{$ray-class-prefix}btn {
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
-  display: inline-block;
-  border: $ray-border-width solid $ray-color-blue-50;
-  border-radius: $ray-btn-border-radius;
-  cursor: pointer;
-  padding: $ray-btn-v-spacing $ray-btn-h-spacing;
-  white-space: nowrap;
-  text-align: center;
-  vertical-align: bottom;
+@include exports('ray-button') {
+  $ray-btn-border-radius: $ray-border-radius;
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    outline: 0;
+  .#{$ray-class-prefix}btn {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    display: inline-block;
+    border: $ray-border-width solid $ray-color-blue-50;
+    border-radius: $ray-btn-border-radius;
+    cursor: pointer;
+    padding: $ray-btn-v-spacing $ray-btn-h-spacing;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: bottom;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      outline: 0;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+
+    &--pull-left {
+      margin-left: -($ray-btn-h-spacing + $ray-border-width);
+    }
+
+    &--pull-right {
+      margin-right: -($ray-btn-h-spacing + $ray-border-width);
+    }
   }
 
-  &:disabled {
-    cursor: not-allowed;
-  }
-
-  &:not(:last-of-type) {
-    margin-right: 1rem;
-  }
-
-  &--pull-left {
-    margin-left: -($ray-btn-h-spacing + $ray-border-width);
-  }
-
-  &--pull-right {
-    margin-right: -($ray-btn-h-spacing + $ray-border-width);
-  }
-}
-
-.#{$ray-class-prefix}btn--primary {
-  background-color: $ray-color-blue-50;
-  color: $ray-color-white;
-
-  &:hover {
-    background-color: $ray-color-blue-60;
-    border-color: $ray-color-blue-60;
-  }
-
-  &:focus {
-    background-color: $ray-color-blue-70;
-    border-color: $ray-color-blue-70;
-  }
-
-  &.#{$ray-class-prefix}btn--danger {
-    background-color: $ray-color-red-50;
-    border-color: $ray-color-red-50;
+  .#{$ray-class-prefix}btn--primary {
+    background-color: $ray-color-blue-50;
+    color: $ray-color-white;
 
     &:hover {
-      background-color: $ray-color-red-60;
-      border-color: $ray-color-red-60;
+      background-color: $ray-color-blue-60;
+      border-color: $ray-color-blue-60;
     }
 
     &:focus {
-      background-color: $ray-color-red-70;
-      border-color: $ray-color-red-70;
+      background-color: $ray-color-blue-70;
+      border-color: $ray-color-blue-70;
+    }
+
+    &.#{$ray-class-prefix}btn--danger {
+      background-color: $ray-color-red-50;
+      border-color: $ray-color-red-50;
+
+      &:hover {
+        background-color: $ray-color-red-60;
+        border-color: $ray-color-red-60;
+      }
+
+      &:focus {
+        background-color: $ray-color-red-70;
+        border-color: $ray-color-red-70;
+      }
+
+      &[disabled] {
+        background-color: $ray-color-red-20;
+        border-color: $ray-color-red-20;
+        color: rgba($ray-color-white, 0.4);
+      }
     }
 
     &[disabled] {
-      background-color: $ray-color-red-20;
-      border-color: $ray-color-red-20;
+      background-color: $ray-color-blue-20;
+      border-color: $ray-color-blue-20;
       color: rgba($ray-color-white, 0.4);
     }
   }
 
-  &[disabled] {
-    background-color: $ray-color-blue-20;
-    border-color: $ray-color-blue-20;
-    color: rgba($ray-color-white, 0.4);
-  }
-}
-
-.#{$ray-class-prefix}btn--secondary {
-  color: $ray-color-blue-50;
-  background-color: $ray-color-white;
-
-  &:hover {
-    background-color: $ray-color-blue-10;
-  }
-
-  &:focus {
-    background-color: $ray-color-blue-20;
-  }
-
-  &.#{$ray-class-prefix}btn--danger {
-    border-color: $ray-color-red-50;
-    color: $ray-color-red-50;
+  .#{$ray-class-prefix}btn--secondary {
+    color: $ray-color-blue-50;
+    background-color: $ray-color-white;
 
     &:hover {
-      background-color: $ray-color-red-10;
+      background-color: $ray-color-blue-10;
     }
 
     &:focus {
-      background-color: $ray-color-red-20;
+      background-color: $ray-color-blue-20;
+    }
+
+    &.#{$ray-class-prefix}btn--danger {
+      border-color: $ray-color-red-50;
+      color: $ray-color-red-50;
+
+      &:hover {
+        background-color: $ray-color-red-10;
+      }
+
+      &:focus {
+        background-color: $ray-color-red-20;
+      }
+
+      &[disabled] {
+        background-color: $ray-color-white;
+        border-color: rgba($ray-color-red-50, 0.4);
+        color: rgba($ray-color-red-50, 0.4);
+      }
     }
 
     &[disabled] {
       background-color: $ray-color-white;
-      border-color: rgba($ray-color-red-50, 0.4);
-      color: rgba($ray-color-red-50, 0.4);
+      border-color: rgba($ray-color-blue-50, 0.4);
+      color: rgba($ray-color-blue-50, 0.4);
     }
   }
 
-  &[disabled] {
-    background-color: $ray-color-white;
-    border-color: rgba($ray-color-blue-50, 0.4);
-    color: rgba($ray-color-blue-50, 0.4);
-  }
-}
+  .#{$ray-class-prefix}btn--compact {
+    padding: $ray-btn-v-spacing-compact $ray-btn-h-spacing-compact;
+    line-height: 1;
+    height: auto;
 
-.#{$ray-class-prefix}btn--compact {
-  padding: $ray-btn-v-spacing-compact $ray-btn-h-spacing-compact;
-  line-height: 1;
-  height: auto;
+    &.#{$ray-class-prefix}btn--pull-left {
+      margin-left: -($ray-btn-h-spacing-compact + $ray-border-width);
+    }
 
-  &.#{$ray-class-prefix}btn--pull-left {
-    margin-left: -($ray-btn-h-spacing-compact + $ray-border-width);
+    &.#{$ray-class-prefix}btn--pull-right {
+      margin-right: -($ray-btn-h-spacing-compact + $ray-border-width);
+    }
   }
 
-  &.#{$ray-class-prefix}btn--pull-right {
-    margin-right: -($ray-btn-h-spacing-compact + $ray-border-width);
-  }
-}
-
-.#{$ray-class-prefix}btn--tertiary {
-  color: $ray-color-blue-50;
-  background-color: transparent;
-  border-color: transparent;
-
-  &:hover {
-    color: $ray-color-blue-60;
-  }
-
-  &:focus {
-    color: $ray-color-blue-70;
-  }
-
-  &.#{$ray-class-prefix}btn--danger {
-    color: $ray-color-red-50;
+  .#{$ray-class-prefix}btn--tertiary {
+    color: $ray-color-blue-50;
+    background-color: transparent;
+    border-color: transparent;
 
     &:hover {
-      color: $ray-color-red-60;
+      color: $ray-color-blue-60;
     }
 
     &:focus {
-      color: $ray-color-red-70;
+      color: $ray-color-blue-70;
+    }
+
+    &.#{$ray-class-prefix}btn--danger {
+      color: $ray-color-red-50;
+
+      &:hover {
+        color: $ray-color-red-60;
+      }
+
+      &:focus {
+        color: $ray-color-red-70;
+      }
+
+      &[disabled] {
+        color: rgba($ray-color-red-50, 0.4);
+      }
     }
 
     &[disabled] {
-      color: rgba($ray-color-red-50, 0.4);
+      color: rgba($ray-color-blue-50, 0.4);
     }
-  }
-
-  &[disabled] {
-    color: rgba($ray-color-blue-50, 0.4);
   }
 }

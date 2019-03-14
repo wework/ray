@@ -1,97 +1,99 @@
-$ray-radio-checkbox-border-width: 3px;
-$ray-radio-checkbox-width: 1rem;
+@include exports('ray-radio-checkbox') {
+  $ray-radio-checkbox-border-width: 3px;
+  $ray-radio-checkbox-width: 1rem;
 
-.#{$ray-class-prefix}radio,
-.#{$ray-class-prefix}checkbox {
-  @include no-select;
-  display: flex;
+  .#{$ray-class-prefix}radio,
+  .#{$ray-class-prefix}checkbox {
+    @include no-select;
+    display: flex;
 
-  &__label {
-    padding-left: $ray-spacing-md;
-    line-height: $ray-field-line-height;
-    cursor: pointer;
-  }
-
-  &__input {
-    appearance: none;
-    background-color: $ray-color-white;
-    border: $ray-radio-checkbox-border-width double $ray-color-black;
-    width: $ray-radio-checkbox-width;
-    height: $ray-radio-checkbox-width;
-    position: relative;
-    top: ($ray-field-line-height - $ray-field-font-size) / 2;
-    cursor: pointer;
-
-    &::after {
-      content: '';
-      width: calc(
-        #{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width}
-      );
-      height: calc(
-        #{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width}
-      );
-      background: $ray-color-white;
-      display: block;
-      transition: $ray-transition;
+    &__label {
+      padding-left: $ray-spacing-md;
+      line-height: $ray-field-line-height;
+      cursor: pointer;
     }
 
-    &:checked {
-      border-color: $ray-color-blue-50;
+    &__input {
+      appearance: none;
+      background-color: $ray-color-white;
+      border: $ray-radio-checkbox-border-width double $ray-color-black;
+      width: $ray-radio-checkbox-width;
+      height: $ray-radio-checkbox-width;
+      position: relative;
+      top: ($ray-field-line-height - $ray-field-font-size) / 2;
+      cursor: pointer;
 
       &::after {
-        background: $ray-color-blue-50;
+        content: '';
+        width: calc(
+          #{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width}
+        );
+        height: calc(
+          #{$ray-radio-checkbox-width} - 2 * #{$ray-radio-checkbox-border-width}
+        );
+        background: $ray-color-white;
+        display: block;
+        transition: $ray-transition;
       }
 
-      &:hover {
-        border-color: $ray-color-blue-70;
+      &:checked {
+        border-color: $ray-color-blue-50;
 
         &::after {
-          background: $ray-color-blue-70;
+          background: $ray-color-blue-50;
         }
-      }
-    }
 
-    &:not(:checked) {
-      &:hover {
-        &::after {
-          background: $ray-color-blue-10;
-        }
-      }
-    }
+        &:hover {
+          border-color: $ray-color-blue-70;
 
-    &[disabled] {
-      border-color: $ray-color-gray-30;
-
-      &:hover {
-        &::after {
-          background: $ray-color-white;
+          &::after {
+            background: $ray-color-blue-70;
+          }
         }
       }
 
-      + .#{$ray-class-prefix}radio__label,
-      + .#{$ray-class-prefix}checkbox__label {
-        cursor: not-allowed;
-        color: $ray-color-gray-30;
+      &:not(:checked) {
+        &:hover {
+          &::after {
+            background: $ray-color-blue-10;
+          }
+        }
+      }
+
+      &[disabled] {
+        border-color: $ray-color-gray-30;
+
+        &:hover {
+          &::after {
+            background: $ray-color-white;
+          }
+        }
+
+        + .#{$ray-class-prefix}radio__label,
+        + .#{$ray-class-prefix}checkbox__label {
+          cursor: not-allowed;
+          color: $ray-color-gray-30;
+        }
       }
     }
   }
-}
 
-.#{$ray-class-prefix}radio__input {
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  transition: box-shadow 0.15s ease;
-
-  &:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem $ray-color-blue-20;
-  }
-
-  &::after {
+  .#{$ray-class-prefix}radio__input {
     border-radius: 50%;
-  }
-}
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.15s ease;
 
-.#{$ray-class-prefix}checkbox__input {
-  border-radius: $ray-border-radius;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem $ray-color-blue-20;
+    }
+
+    &::after {
+      border-radius: 50%;
+    }
+  }
+
+  .#{$ray-class-prefix}checkbox__input {
+    border-radius: $ray-border-radius;
+  }
 }

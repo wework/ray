@@ -1,3 +1,5 @@
+@import '../../global/mixins/exports';
+
 $ray-image-ratio-map: (
   4by3: calc(100% / (4 / 3)),
   3by4: calc(100% / (3 / 4)),
@@ -26,6 +28,18 @@ $ray-image-ratio-map: (
   }
 }
 
+@mixin background {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: $ray-color-gray-10;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: $ray-border-radius;
+}
+
 .#{$ray-class-prefix}caption {
   font-size: 0.75rem;
   line-height: 1.25rem;
@@ -50,18 +64,6 @@ $ray-image-ratio-map: (
       padding-bottom: $value;
     }
   }
-}
-
-@mixin background {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: $ray-color-gray-10;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border-radius: $ray-border-radius;
 }
 
 .#{$ray-class-prefix}bg {

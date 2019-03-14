@@ -1,203 +1,207 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.#{$ray-class-prefix}h1,
-.#{$ray-class-prefix}h2,
-.#{$ray-class-prefix}h3,
-.#{$ray-class-prefix}h4,
-.#{$ray-class-prefix}h5,
-.#{$ray-class-prefix}h6 {
-  font-weight: bold;
-  margin: 0;
-}
+@import './mixins/exports';
 
-.h1,
-.#{$ray-class-prefix}h1 {
-  // h5
-  font-size: 1.5rem;
-  line-height: 40px;
-  margin-bottom: 0.5rem;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
-    // h3
-    font-size: 2.5rem;
-    line-height: 60px;
-    margin-bottom: 1rem;
+@include exports('ray-typography') {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .#{$ray-class-prefix}h1,
+  .#{$ray-class-prefix}h2,
+  .#{$ray-class-prefix}h3,
+  .#{$ray-class-prefix}h4,
+  .#{$ray-class-prefix}h5,
+  .#{$ray-class-prefix}h6 {
+    font-weight: bold;
+    margin: 0;
   }
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-    font-size: 4rem;
-    line-height: 96px;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.h2,
-.#{$ray-class-prefix}h2 {
-  // h6
-  font-size: 1.25rem;
-  line-height: 40px;
-  margin-bottom: 0.5rem;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
-    // h4
-    font-size: 2rem;
-    line-height: 56px;
-    margin-bottom: 1rem;
-  }
-
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-    font-size: 3rem;
-    line-height: 72px;
-    margin-bottom: 1rem;
-  }
-}
-
-.h3,
-.#{$ray-class-prefix}h3 {
-  // h6
-  font-size: 1.25rem;
-  line-height: 40px;
-  margin-bottom: 0.5rem;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
-    // h4
-    font-size: 2rem;
-    line-height: 56px;
-    margin-bottom: 1rem;
-  }
-
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-    font-size: 2.5rem;
-    line-height: 60px;
-    margin-bottom: 1rem;
-  }
-}
-
-.h4,
-.#{$ray-class-prefix}h4 {
-  // h6
-  font-size: 1.25rem;
-  line-height: 40px;
-  margin-bottom: 0.5rem;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
+  .h1,
+  .#{$ray-class-prefix}h1 {
     // h5
     font-size: 1.5rem;
     line-height: 40px;
     margin-bottom: 0.5rem;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      // h3
+      font-size: 2.5rem;
+      line-height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      font-size: 4rem;
+      line-height: 96px;
+      margin-bottom: 1.5rem;
+    }
   }
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-    font-size: 2rem;
-    line-height: 56px;
-    margin-bottom: 1rem;
+  .h2,
+  .#{$ray-class-prefix}h2 {
+    // h6
+    font-size: 1.25rem;
+    line-height: 40px;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      // h4
+      font-size: 2rem;
+      line-height: 56px;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      font-size: 3rem;
+      line-height: 72px;
+      margin-bottom: 1rem;
+    }
   }
-}
 
-.h5,
-.#{$ray-class-prefix}h5 {
-  // h6
-  font-size: 1.25rem;
-  line-height: 40px;
-  margin-bottom: 0.5rem;
+  .h3,
+  .#{$ray-class-prefix}h3 {
+    // h6
+    font-size: 1.25rem;
+    line-height: 40px;
+    margin-bottom: 0.5rem;
 
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
-    font-size: 1.5rem;
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      // h4
+      font-size: 2rem;
+      line-height: 56px;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      font-size: 2.5rem;
+      line-height: 60px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .h4,
+  .#{$ray-class-prefix}h4 {
+    // h6
+    font-size: 1.25rem;
+    line-height: 40px;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      // h5
+      font-size: 1.5rem;
+      line-height: 40px;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      font-size: 2rem;
+      line-height: 56px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .h5,
+  .#{$ray-class-prefix}h5 {
+    // h6
+    font-size: 1.25rem;
+    line-height: 40px;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      font-size: 1.5rem;
+      line-height: 40px;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .h6,
+  .#{$ray-class-prefix}h6 {
+    font-size: 1.25rem;
     line-height: 40px;
     margin-bottom: 0.5rem;
   }
-}
 
-.h6,
-.#{$ray-class-prefix}h6 {
-  font-size: 1.25rem;
-  line-height: 40px;
-  margin-bottom: 0.5rem;
-}
-
-p,
-.#{$ray-class-prefix}p1,
-.#{$ray-class-prefix}p2,
-.#{$ray-class-prefix}p3,
-.#{$ray-class-prefix}p4,
-.#{$ray-class-prefix}p5,
-.#{$ray-class-prefix}p6 {
-  font-weight: 400;
-  margin: 0;
-}
-
-p {
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-}
-
-.#{$ray-class-prefix}p1 {
-  // p3
-  font-size: 1.25rem;
-  line-height: 32px;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
-    // p2
-    font-size: 1.5rem;
-    line-height: 40px;
+  p,
+  .#{$ray-class-prefix}p1,
+  .#{$ray-class-prefix}p2,
+  .#{$ray-class-prefix}p3,
+  .#{$ray-class-prefix}p4,
+  .#{$ray-class-prefix}p5,
+  .#{$ray-class-prefix}p6 {
+    font-weight: 400;
+    margin: 0;
   }
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-    font-size: 2rem;
-    line-height: 48px;
+  p {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
-}
 
-.#{$ray-class-prefix}p2 {
-  // p4
-  font-size: 1rem;
-  line-height: 28px;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
+  .#{$ray-class-prefix}p1 {
     // p3
     font-size: 1.25rem;
     line-height: 32px;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      // p2
+      font-size: 1.5rem;
+      line-height: 40px;
+    }
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      font-size: 2rem;
+      line-height: 48px;
+    }
   }
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-    font-size: 1.5rem;
-    line-height: 40px;
-  }
-}
-
-.#{$ray-class-prefix}p3 {
-  // p4
-  font-size: 1rem;
-  line-height: 28px;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
-    font-size: 1.25rem;
-    line-height: 32px;
-  }
-}
-
-.#{$ray-class-prefix}p4 {
-  // p5
-  font-size: 0.875rem;
-  line-height: 24px;
-
-  @media (min-width: map-get($ray-grid-breakpoints, md)) {
+  .#{$ray-class-prefix}p2 {
+    // p4
     font-size: 1rem;
     line-height: 28px;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      // p3
+      font-size: 1.25rem;
+      line-height: 32px;
+    }
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      font-size: 1.5rem;
+      line-height: 40px;
+    }
   }
-}
 
-.#{$ray-class-prefix}p5 {
-  font-size: 0.875rem;
-  line-height: 24px;
-}
+  .#{$ray-class-prefix}p3 {
+    // p4
+    font-size: 1rem;
+    line-height: 28px;
 
-.#{$ray-class-prefix}p6 {
-  font-size: 0.75rem;
-  line-height: 12px;
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      font-size: 1.25rem;
+      line-height: 32px;
+    }
+  }
+
+  .#{$ray-class-prefix}p4 {
+    // p5
+    font-size: 0.875rem;
+    line-height: 24px;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      font-size: 1rem;
+      line-height: 28px;
+    }
+  }
+
+  .#{$ray-class-prefix}p5 {
+    font-size: 0.875rem;
+    line-height: 24px;
+  }
+
+  .#{$ray-class-prefix}p6 {
+    font-size: 0.75rem;
+    line-height: 12px;
+  }
 }

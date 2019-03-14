@@ -1,164 +1,167 @@
 @import '../../global/mixins/form-items';
+@import '../../global/mixins/exports';
 
-.#{$ray-class-prefix}text-field {
-  @include icon-support('text-field');
-}
-
-.#{$ray-class-prefix}text-area {
-  @include icon-support('text-area');
-}
-
-.#{$ray-class-prefix}text-field,
-.#{$ray-class-prefix}text-area {
-  border: $ray-border-width solid $ray-color-gray-60;
-  background-color: $ray-color-white;
-  border-radius: $ray-border-radius;
-  position: relative;
-  height: $ray-field-height;
-
-  &__label {
-    @include label;
-    z-index: 2;
+@include exports('ray-text-field') {
+  .#{$ray-class-prefix}text-field {
+    @include icon-support('text-field');
   }
 
-  &__input {
-    font-family: inherit;
+  .#{$ray-class-prefix}text-area {
+    @include icon-support('text-area');
+  }
+
+  .#{$ray-class-prefix}text-field,
+  .#{$ray-class-prefix}text-area {
+    border: $ray-border-width solid $ray-color-gray-60;
+    background-color: $ray-color-white;
     border-radius: $ray-border-radius;
-    line-height: 1;
-    width: 100%;
-    height: 100%;
-    font-size: $ray-field-label-size;
-    display: block;
-    background-color: transparent;
-    padding: 0 $ray-field-h-spacing - $ray-border-width;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
+    position: relative;
+    height: $ray-field-height;
 
-    &::-ms-clear {
-      display: none;
+    &__label {
+      @include label;
+      z-index: 2;
     }
 
-    &:not(:focus) {
-      @include placeholder {
-        color: transparent;
+    &__input {
+      font-family: inherit;
+      border-radius: $ray-border-radius;
+      line-height: 1;
+      width: 100%;
+      height: 100%;
+      font-size: $ray-field-label-size;
+      display: block;
+      background-color: transparent;
+      padding: 0 $ray-field-h-spacing - $ray-border-width;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+
+      &::-ms-clear {
+        display: none;
       }
-    }
 
-    // separate selector from :not(:placeholder-shown) to support IE11
-    &:focus {
-      @include input--active;
+      &:not(:focus) {
+        @include placeholder {
+          color: transparent;
+        }
+      }
 
-      @include placeholder {
-        transition: color 0.125s ease-in;
-        @include no-select;
+      // separate selector from :not(:placeholder-shown) to support IE11
+      &:focus {
+        @include input--active;
+
+        @include placeholder {
+          transition: color 0.125s ease-in;
+          @include no-select;
+          text-overflow: ellipsis;
+          color: $ray-color-text-medium !important;
+        }
+      }
+
+      &:not(:placeholder-shown) {
+        @include input--active;
+      }
+
+      [placeholder] {
         text-overflow: ellipsis;
-        color: $ray-color-text-medium !important;
       }
-    }
-
-    &:not(:placeholder-shown) {
-      @include input--active;
     }
 
     [placeholder] {
       text-overflow: ellipsis;
     }
-  }
 
-  [placeholder] {
-    text-overflow: ellipsis;
-  }
-
-  // :focus-within is only supported in modern browsers (https://caniuse.com/#search=focus-within), --active should be used as a backup
-  &:focus-within {
-    @include text-field--has-value;
-    @include text-field--focus;
-  }
-
-  &--active,
-  &--has-value {
-    @include text-field--has-value;
-  }
-
-  &--active {
-    @include text-field--focus;
-  }
-
-  &--disabled {
-    border-color: rgba($ray-color-gray-60, 0.4);
-  }
-
-  &--success {
-    border-color: $ray-color-green-70;
-  }
-
-  &--error {
-    border-color: $ray-color-red-50;
-  }
-
-  [disabled] {
-    background-color: $ray-color-white;
-    @include no-select;
-
-    &,
-    + .#{$ray-class-prefix}text-field__label,
-    + .#{$ray-class-prefix}text-area__label {
-      cursor: not-allowed;
-      color: rgba($ray-color-gray-60, 0.4);
-    }
-  }
-
-  &--compact {
-    height: $ray-field-height-compact;
-
-    .#{$ray-class-prefix}text-field__label,
-    .#{$ray-class-prefix}text-area__label {
-      padding-top: $ray-field-v-spacing-compact;
+    // :focus-within is only supported in modern browsers (https://caniuse.com/#search=focus-within), --active should be used as a backup
+    &:focus-within {
+      @include text-field--has-value;
+      @include text-field--focus;
     }
 
-    .#{$ray-class-prefix}text-field__input,
-    .#{$ray-class-prefix}text-area__input {
-      padding-top: 0;
+    &--active,
+    &--has-value {
+      @include text-field--has-value;
+    }
 
-      // separate selector to support IE11
-      &:focus {
-        @include compact-label--active;
+    &--active {
+      @include text-field--focus;
+    }
+
+    &--disabled {
+      border-color: rgba($ray-color-gray-60, 0.4);
+    }
+
+    &--success {
+      border-color: $ray-color-green-70;
+    }
+
+    &--error {
+      border-color: $ray-color-red-50;
+    }
+
+    [disabled] {
+      background-color: $ray-color-white;
+      @include no-select;
+
+      &,
+      + .#{$ray-class-prefix}text-field__label,
+      + .#{$ray-class-prefix}text-area__label {
+        cursor: not-allowed;
+        color: rgba($ray-color-gray-60, 0.4);
+      }
+    }
+
+    &--compact {
+      height: $ray-field-height-compact;
+
+      .#{$ray-class-prefix}text-field__label,
+      .#{$ray-class-prefix}text-area__label {
+        padding-top: $ray-field-v-spacing-compact;
       }
 
-      &:not(:placeholder-shown) {
-        @include compact-label--active;
+      .#{$ray-class-prefix}text-field__input,
+      .#{$ray-class-prefix}text-area__input {
+        padding-top: 0;
+
+        // separate selector to support IE11
+        &:focus {
+          @include compact-label--active;
+        }
+
+        &:not(:placeholder-shown) {
+          @include compact-label--active;
+        }
       }
     }
   }
-}
 
-.#{$ray-class-prefix}text-area {
-  line-height: 0;
-
-  &,
-  &__input {
-    height: auto;
-    min-height: $ray-field-height - 2 * $ray-border-width;
-  }
-
-  &__input {
-    overflow-y: scroll;
-    display: inline-block;
-    padding-top: 1rem;
-    resize: vertical;
-    line-height: $ray-field-line-height;
-    height: $ray-field-height - 2 * $ray-border-width;
-  }
-
-  &--compact {
-    min-height: $ray-field-height-compact;
+  .#{$ray-class-prefix}text-area {
     line-height: 0;
 
-    .#{$ray-class-prefix}text-area__input {
-      padding-top: $ray-field-v-spacing-compact / 2;
-      height: $ray-field-height-compact - 2 * $ray-border-width;
-      min-height: $ray-field-height-compact - 2 * $ray-border-width;
+    &,
+    &__input {
+      height: auto;
+      min-height: $ray-field-height - 2 * $ray-border-width;
+    }
+
+    &__input {
+      overflow-y: scroll;
+      display: inline-block;
+      padding-top: 1rem;
+      resize: vertical;
+      line-height: $ray-field-line-height;
+      height: $ray-field-height - 2 * $ray-border-width;
+    }
+
+    &--compact {
+      min-height: $ray-field-height-compact;
+      line-height: 0;
+
+      .#{$ray-class-prefix}text-area__input {
+        padding-top: $ray-field-v-spacing-compact / 2;
+        height: $ray-field-height-compact - 2 * $ray-border-width;
+        min-height: $ray-field-height-compact - 2 * $ray-border-width;
+      }
     }
   }
 }
