@@ -69,5 +69,6 @@
     "src/**/*",
     "umd/**/*"
   ],
-  "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc"
+  "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc",
+  "dependencies": {}
 }
