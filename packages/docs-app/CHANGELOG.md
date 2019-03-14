@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.20](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.1.19...ray-website-gatsby@0.1.20) (2019-03-14)
+
+
+### Bug Fixes
+
+* typography running text margins ([#43](https://github.com/weconnect/ray-website/issues/43)) ([661e53f](https://github.com/weconnect/ray-website/commit/661e53f))
+
+
+
+
+
 ## [0.1.19](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.1.18...ray-website-gatsby@0.1.19) (2019-03-14)
 
 **Note:** Version bump only for package ray-website-gatsby

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.11](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.10...@wework/ray-core@0.1.11) (2019-03-14)
+
+
+### Bug Fixes
+
+* typography running text margins ([#43](https://github.com/WeConnect/ray/issues/43)) ([661e53f](https://github.com/WeConnect/ray/commit/661e53f))
+
+
+
+
+
 ## [0.1.10](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.9...@wework/ray-core@0.1.10) (2019-03-14)
 
 **Note:** Version bump only for package @wework/ray-core
