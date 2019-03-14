@@ -12,6 +12,7 @@ import PageTable from '../components/PageTable';
 import ComponentCode from '../components/ComponentCode';
 import CodeSnippet from '../components/CodeSnippet';
 import ColorTable from '../components/ColorTable';
+import GridDocumentation from '../components/GridDocumentation';
 
 // Custom Markdown
 import {
@@ -57,7 +58,8 @@ const renderAst = new RehypeReact({
     'page-intro': PageIntro,
     'flex-group': FlexGroup,
     'color-table': ColorTable,
-    component: ComponentCode
+    component: ComponentCode,
+    'grid-documentation': GridDocumentation
   }
 }).Compiler;
 /* eslint-enable react/prop-types */
@@ -86,7 +88,7 @@ export default ({ data }) => {
 
       <div className={classNames}>
         <div className="ray-grid__inner">
-          <div className="ray-grid__cell--span-12 ray-grid__cell--span-8-desktop">
+          <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-10-desktop">
             {renderAst(post.htmlAst)}
           </div>
         </div>

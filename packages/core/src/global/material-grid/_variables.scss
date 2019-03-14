@@ -1,3 +1,6 @@
+@import '../colors';
+@import '../variables';
+
 // Copyright 2017 Google Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,3 +59,29 @@ $mdc-layout-grid-max-width: (
 
 $mdc-layout-grid-default-column-span: 4 !default;
 $mdc-prefix: $ray-class-prefix;
+
+:export {
+  @each $key, $value in $mdc-layout-grid-breakpoints {
+    ray-breakpoint-#{$key}: $value;
+  }
+
+  @each $key, $value in $mdc-layout-grid-columns {
+    ray-grid-breakpoint-columns-#{$key}: $value;
+  }
+
+  @each $key, $value in $mdc-layout-grid-default-margin {
+    ray-grid-margin-#{$key}: $value;
+  }
+
+  @each $key, $value in $mdc-layout-grid-default-gutter {
+    ray-grid-gutter-#{$key}: $value;
+  }
+
+  @each $key, $value in $mdc-layout-grid-column-width {
+    ray-grid-column-width-#{$key}: $value;
+  }
+
+  @each $key, $value in $mdc-layout-grid-max-width {
+    ray-grid-max-width-#{$key}: $value;
+  }
+}
