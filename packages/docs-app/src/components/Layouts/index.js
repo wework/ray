@@ -13,6 +13,19 @@ class Layout extends React.Component {
     location: PropTypes.object
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      navOpen: false
+    };
+  }
+
+  toggleNav = () => {
+    this.setState({
+      navOpen: !this.state.navOpen
+    });
+  };
+
   render() {
     const { children } = this.props;
 
@@ -55,6 +68,8 @@ class Layout extends React.Component {
               <SideNav
                 location={this.props.location}
                 clickToClose={this.clickToClose}
+                open={this.state.navOpen}
+                toggleNav={this.toggleNav}
               />
 
               <main className="main-content">{children}</main>

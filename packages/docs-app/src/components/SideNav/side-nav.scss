@@ -1,18 +1,42 @@
 .side-nav {
+  position: fixed;
+  left: -100%;
   display: flex;
   flex-direction: column;
   height: 100vh;
   z-index: 7000;
   overflow-y: auto;
   background-color: hsla(240, 17%, 98%, 1);
-  position: sticky;
-  left: 0;
-  top: 0;
   min-width: 200px;
   max-width: 300px;
   width: 100%;
-  padding: $ray-spacing-2xl $ray-spacing-xl;
   border-right: 1px solid $ray-color-gray-10;
+  transition: left 0.15s ease;
+  padding: 4rem map-get($ray-container-gutters, sm);
+
+  &--open {
+    left: 0;
+  }
+
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+    position: sticky;
+    left: 0;
+    top: 0;
+    padding: $ray-spacing-2xl $ray-spacing-xl;
+  }
+}
+
+.side-nav--mobile-toggle {
+  position: fixed;
+  top: 1rem;
+  left: map-get($ray-container-gutters, sm);
+  cursor: pointer;
+  z-index: 7001;
+  padding: 0 !important;
+
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+    display: none;
+  }
 }
 
 .side-nav__item {
@@ -31,8 +55,6 @@
   border-bottom: 1px solid $ray-color-gray-10;
   padding-bottom: $ray-spacing-lg;
   margin-bottom: $ray-spacing-lg;
-  display: flex;
-  flex-direction: column;
 }
 
 .side-nav__heading {
@@ -56,6 +78,7 @@
 
 .side-nav__github {
   @extend .ray-p5;
+  display: block;
 }
 
 .side-nav__version {

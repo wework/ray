@@ -92,6 +92,7 @@ button,
     border-radius: 4px;
     background-color: $ray-color-gray-10;
     font-size: 85%;
+    word-break: break-all;
   }
 
   // HR dividers
@@ -107,7 +108,11 @@ button,
 
 .main-content {
   width: 100%;
-  margin: $ray-spacing-2xl 0;
+  margin: 4rem 0;
+
+  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+    margin: $ray-spacing-2xl 0;
+  }
 }
 
 .page {
