@@ -1,12 +1,6 @@
 @import './mixins/exports';
 
 @include exports('ray-typography') {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
   .#{$ray-class-prefix}h1,
   .#{$ray-class-prefix}h2,
   .#{$ray-class-prefix}h3,
@@ -17,7 +11,6 @@
     margin: 0;
   }
 
-  .h1,
   .#{$ray-class-prefix}h1 {
     // h5
     font-size: 1.5rem;
@@ -38,7 +31,6 @@
     }
   }
 
-  .h2,
   .#{$ray-class-prefix}h2 {
     // h6
     font-size: 1.25rem;
@@ -59,7 +51,6 @@
     }
   }
 
-  .h3,
   .#{$ray-class-prefix}h3 {
     // h6
     font-size: 1.25rem;
@@ -80,7 +71,6 @@
     }
   }
 
-  .h4,
   .#{$ray-class-prefix}h4 {
     // h6
     font-size: 1.25rem;
@@ -101,7 +91,6 @@
     }
   }
 
-  .h5,
   .#{$ray-class-prefix}h5 {
     // h6
     font-size: 1.25rem;
@@ -115,7 +104,6 @@
     }
   }
 
-  .h6,
   .#{$ray-class-prefix}h6 {
     font-size: 1.25rem;
     line-height: 40px;
@@ -203,5 +191,58 @@
   .#{$ray-class-prefix}p6 {
     font-size: 0.75rem;
     line-height: 12px;
+  }
+
+  .#{$ray-class-prefix}running-text {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 3rem 0 1rem;
+    }
+
+    h1 {
+      @extend .#{$ray-class-prefix}h1;
+    }
+
+    h2 {
+      @extend .#{$ray-class-prefix}h2;
+    }
+
+    h3 {
+      @extend .#{$ray-class-prefix}h3;
+    }
+
+    h4 {
+      @extend .#{$ray-class-prefix}h4;
+    }
+
+    h5 {
+      @extend .#{$ray-class-prefix}h5;
+    }
+
+    h6 {
+      @extend .#{$ray-class-prefix}h6;
+    }
+
+    p {
+      @extend .#{$ray-class-prefix}p4;
+    }
+
+    ul,
+    ol {
+      margin: 10px 0;
+      padding-left: 30px;
+    }
+
+    ul li {
+      list-style-type: circle;
+    }
+
+    ol li {
+      list-style-type: decimal;
+    }
   }
 }

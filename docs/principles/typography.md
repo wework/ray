@@ -5,6 +5,8 @@ title: Typography
 
 <page-intro>Well-defined typography styles in combination with a design system layout grid will create structured content. Limiting font-families, a tight type scale, and content limits will keep it tight.</page-intro>
 
+To avoid conflicting with other libraries, Ray does _not_ assign css attributes directly to HTML tags like h1–h6. If that kind of behavior is needed, see Running Text below.
+
 <component
     name="All types"
     component="typography"
@@ -20,6 +22,16 @@ title: Typography
     name=".ray-h3 + .ray-p3"
     component="typography"
     variation="typography-h3p3"
+    >
+</component>
+
+## Running Text
+
+This utility is useful for long-form content, especially content that is dynamically genereated from markdown. It will directly style `h1`–`h6`, `p`, `ul`, and `ol` tags.
+
+<component
+    component="typography"
+    variation="typography-running-text"
     >
 </component>
 

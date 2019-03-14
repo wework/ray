@@ -1,0 +1,50 @@
+{
+  "name": "rehype-react",
+  "description": "Compile Hast tree to React with remark",
+  "version": "3.1.0",
+  "private": true,
+  "keywords": [
+    "compile",
+    "html",
+    "markdown",
+    "remark",
+    "stringify"
+  ],
+  "license": "MIT",
+  "contributors": [
+    "Tom MacWright <tom@macwright.org>",
+    "Titus Wormer <tituswormer@gmail.com>",
+    "Ciaran Wood <cyrzinsomnia@gmail.com>",
+    "Juho Vepsalainen <bebraw@gmail.com>",
+    "Jason Trill <jason@jasontrill.com>",
+    "Tsuyusato Kitsune <make.just.on@gmail.com>",
+    "Jeremy Stucki <jeremy@interactivethings.com>",
+    "rhysd <lin90162@yahoo.co.jp>"
+  ],
+  "dependencies": {
+    "@mapbox/hast-util-table-cell-style": "^0.1.3",
+    "has": "^1.0.1",
+    "hast-to-hyperscript": "^5.0.0"
+  },
+  "devDependencies": {
+    "hastscript": "^3.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "remark": "^8.0.0",
+    "remark-cli": "^4.0.0",
+    "remark-preset-wooorm": "^3.0.0",
+    "unified": "^6.1.6",
+    "unist-builder": "^1.0.2"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "build-md": "remark . -qfo"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-wooorm"
+    ]
+  }
+}

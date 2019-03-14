@@ -4,8 +4,6 @@
 
 body {
   background: $ray-color-white;
-  line-height: 1.5;
-  font-family: $font-family;
 }
 
 //---------------------------------------
@@ -18,22 +16,22 @@ button,
 }
 
 .page-content {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-  }
-
   // All paragraphs on Markdown pages
   // And divs when markdown doesn't wrap text in paragraphs (when you have to use html for links to open in a new window)
   p {
     max-width: 38rem;
-    line-height: 1.5;
     margin: 0 0 $ray-spacing-md;
+  }
+
+  .rehype-root {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      margin: 3rem 0 1rem;
+    }
   }
 
   // All em on Markdown pages after images and image grid
