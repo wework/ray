@@ -37,9 +37,6 @@
   "principles": {
     "title": "Principles",
     "children": {
-      "animations": {
-        "title": "Animations"
-      },
       "colors": {
         "title": "Colors"
       },
