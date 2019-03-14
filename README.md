@@ -13,8 +13,8 @@ See the [getting started docs](/getting-started).
 ## 👩🏻‍💻 Development
 
 ```bash
-# to install dependencies, this will also bootstrap lerna
-$ yarn install
+# to install dependencies and bootstrap lerna
+$ yarn bootstrap
 
 # to start all dev servers
 $ yarn dev

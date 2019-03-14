@@ -18,7 +18,7 @@ jobs:
       - image: circleci/node:10.13.0
     steps:
       - checkout
-      - run: yarn install
+      - run: yarn bootstrap
       - run: yarn test --coverage
       - run: yarn coveralls
 
@@ -27,7 +27,7 @@ jobs:
       - image: circleci/node:10.13.0
     steps:
       - checkout
-      - run: yarn install
+      - run: yarn bootstrap
       - run: yarn build
 
   'build and release':
@@ -35,7 +35,7 @@ jobs:
       - image: circleci/node:10.13.0
     steps:
       - checkout
-      - run: yarn install
+      - run: yarn bootstrap
       - run: yarn build
       - run: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
