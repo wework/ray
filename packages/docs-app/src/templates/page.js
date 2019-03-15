@@ -50,6 +50,20 @@ const renderAst = new RehypeReact({
     p: function p({ children }) {
       return <p className="ray-p4">{children}</p>;
     },
+    a: function a({ children, ...props }) {
+      const isExternal = props.href.startsWith('http');
+      const additionalProps = isExternal
+        ? {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
+        : null;
+      return (
+        <a {...props} {...additionalProps}>
+          {children}
+        </a>
+      );
+    },
     ul,
     ol,
     div,
