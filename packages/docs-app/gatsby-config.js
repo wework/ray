@@ -10,12 +10,6 @@ module.exports = {
     title: 'Ray — Documentation'
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: ''
-      }
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

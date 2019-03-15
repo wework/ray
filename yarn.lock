@@ -2875,7 +2875,7 @@
     "@xtuc/long" "4.2.2"
 
 "@wework/ray-core@file:packages/core":
-  version "0.1.11"
+  version "0.1.16"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -8836,13 +8836,6 @@ gatsby-link@^2.0.14:
     "@reach/router" "^1.1.1"
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
-
-gatsby-plugin-google-analytics@^2.0.7:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.15.tgz#c70a69f873398b737776dd5b05abacb763fc8cc7"
-  integrity sha512-XO2KVHN/pt2sNFraw+V5K026L6F72MisWAfxRm7U+zPX2cjDHN5w74fojM+6S0BPiRb4/KDitwSTVu4FQ+mEow==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-manifest@^2.0.10:
   version "2.0.20"

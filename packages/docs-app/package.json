@@ -33,7 +33,6 @@
     "fs": "0.0.1-security",
     "gatsby": "^2.1.23",
     "gatsby-image": "2.0.20",
-    "gatsby-plugin-google-analytics": "^2.0.7",
     "gatsby-plugin-manifest": "^2.0.10",
     "gatsby-plugin-react-helmet": "3.0.2",
     "gatsby-plugin-sass": "2.0.4",
