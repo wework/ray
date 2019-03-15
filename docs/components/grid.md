@@ -4,12 +4,12 @@ title: Grid System
 ---
 
 <page-intro>
-Ray features three primary breakpoints: `desktop`, `tablet`, and `mobile`. Our grid system is implemented as a fork of <a href="https://material.io/develop/web/components/layout-grid/" rel="noopener noreferrer" target="_blank">Material Design's CSS grid</a>. 
+Ray features three primary breakpoints: desktop, tablet, and mobile. Our grid system is implemented as a fork of <a href="https://material.io/develop/web/components/layout-grid/" rel="noopener noreferrer" target="_blank">Material Design's CSS grid</a>. 
 </page-intro>
 
 <grid-documentation></grid-documentation>
 
-## Structure
+#### Structure
 
 ```html
 <div class="ray-grid">

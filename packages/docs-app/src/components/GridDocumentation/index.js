@@ -3,6 +3,7 @@ import { pickBy, range } from 'lodash';
 
 import * as gridVars from '../../../../core/src/global/material-grid/_variables.scss';
 
+/* eslint-disable react/prop-types */
 function GridDocumentation() {
   const breakpoints = pickBy(gridVars, (_, key) =>
     key.startsWith('rayBreakpoint')
@@ -10,11 +11,11 @@ function GridDocumentation() {
 
   return (
     <div>
-      <h3 className="ray-h3">Live Example</h3>
+      <h4 className="ray-h4">Live Example</h4>
       <p>Try resizing your browser!</p>
       <GridExample />
 
-      <h3 className="ray-h3">Breakpoints</h3>
+      <h4 className="ray-h4">Breakpoints</h4>
 
       <Breakpoints breakpoints={breakpoints} />
     </div>
@@ -59,7 +60,7 @@ function GridExample() {
 
 function Breakpoints({ breakpoints }) {
   return (
-    <table class="ray-table">
+    <table className="ray-table">
       <thead>
         <th>Breakpoint</th>
         <th>min. width</th>

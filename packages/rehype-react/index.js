@@ -28,20 +28,17 @@ function rehype2react(options) {
   /* Compile HAST to React. */
   function compiler(node) {
     let sanitizedNode = node;
+
     if (node.type === 'root') {
-      if (node.children.length === 1 && node.children[0].type === 'element') {
-        sanitizedNode = node.children[0]; // eslint-disable-line prefer-destructuring
-      } else {
-        sanitizedNode = {
-          type: 'element',
-          tagName: 'div',
-          properties: {
-            ...node.properties,
-            className: 'rehype-root'
-          },
-          children: node.children
-        };
-      }
+      sanitizedNode = {
+        type: 'element',
+        tagName: 'div',
+        properties: {
+          ...node.properties,
+          className: 'rehype-root'
+        },
+        children: node.children
+      };
     }
 
     return toH(h, tableCellStyle(sanitizedNode), settings.prefix);
