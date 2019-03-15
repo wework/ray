@@ -27,16 +27,14 @@ export default class SideNav extends React.Component {
           key={key}
           className={`side-nav__item side-nav__item--level-${level}`}
         >
-          {!item.children && <Link to={path}>{item.title}</Link>}
+          {!item.children && (
+            <Link to={path} activeClassName="active">
+              {item.title}
+            </Link>
+          )}
           {item.children && (
             <>
-              <div
-                className="ray-p4"
-                style={{
-                  margin: '1rem 0 0 0',
-                  fontWeight: 600
-                }}
-              >
+              <div className="ray-caption side-nav__item--heading">
                 {item.title}
               </div>
               <ul>{this.renderNavItems(path, item.children, level + 1)}</ul>
@@ -63,7 +61,7 @@ export default class SideNav extends React.Component {
         >
           <div className="side-nav--header">
             <Link to="/" className="side-nav__heading">
-              Ray
+              Ray <span className="side-nav__version"> v{version}</span>
             </Link>
             <a
               className="side-nav__github"
@@ -79,7 +77,6 @@ export default class SideNav extends React.Component {
               {this.renderNavItems('/', navigation)}
             </ul>
           </div>
-          <div className="side-nav__version">ray-core@{version}</div>
         </nav>
       </>
     );
