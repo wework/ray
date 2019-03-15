@@ -1,4 +1,5 @@
 import React from 'react';
+import Color from 'color';
 import * as colors from '../../../../core/src/global/_colors.scss';
 
 function toKebab(str) {
@@ -9,37 +10,70 @@ function ColorTable() {
   return (
     <table className="ray-table color-table">
       <thead>
-        <th>name</th>
-        <th>value</th>
+        <th>variable</th>
+        <th>hsl</th>
+        <th>hex</th>
+        <th>rgb</th>
       </thead>
       <tbody>
-        {Object.keys(colors).map(colorKey => (
-          <tr key={colorKey}>
-            <td>
-              <pre>${toKebab(colorKey)}</pre>
-            </td>
-            <td>
-              <div
-                style={{
-                  backgroundColor: colors[colorKey],
-                  width: '4rem',
-                  height: '4rem',
-                  display: 'inline-block',
-                  marginRight: '1rem',
-                  verticalAlign: 'middle'
-                }}
-              />
-              <pre
-                style={{
-                  display: 'inline-block',
-                  verticalAlign: 'middle'
-                }}
-              >
-                {colors[colorKey]}
-              </pre>
-            </td>
-          </tr>
-        ))}
+        {Object.keys(colors).map(colorKey => {
+          const color = Color(colors[colorKey]);
+          const textColor = color.isDark() ? 'white' : 'black';
+
+          return (
+            <tr
+              key={colorKey}
+              style={{
+                padding: 0
+              }}
+            >
+              <td>
+                <div
+                  style={{
+                    backgroundColor: colors[colorKey],
+                    display: 'inline-block',
+                    padding: '1rem',
+                    marginRight: '1rem',
+                    verticalAlign: 'middle',
+                    color: textColor
+                  }}
+                >
+                  <pre>${toKebab(colorKey)}</pre>
+                </div>
+              </td>
+              <td>
+                <pre
+                  style={{
+                    display: 'inline-block',
+                    verticalAlign: 'middle'
+                  }}
+                >
+                  {color.hsl().string()}
+                </pre>
+              </td>
+              <td>
+                <pre
+                  style={{
+                    display: 'inline-block',
+                    verticalAlign: 'middle'
+                  }}
+                >
+                  {color.rgb().string()}
+                </pre>
+              </td>
+              <td>
+                <pre
+                  style={{
+                    display: 'inline-block',
+                    verticalAlign: 'middle'
+                  }}
+                >
+                  {color.hex().toString()}
+                </pre>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
