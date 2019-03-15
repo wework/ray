@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.15](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.14...@wework/ray-core@0.1.15) (2019-03-15)
+
+
+### Bug Fixes
+
+* **text-field:** cursor should be type text ([#49](https://github.com/WeConnect/ray/issues/49)) ([697046c](https://github.com/WeConnect/ray/commit/697046c))
+
+
+
+
+
 ## [0.1.14](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.13...@wework/ray-core@0.1.14) (2019-03-14)
 
 **Note:** Version bump only for package @wework/ray-core
