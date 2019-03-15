@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.16](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.15...@wework/ray-core@0.1.16) (2019-03-15)
+
+
+### Bug Fixes
+
+* remove flex body styles ([3d038f5](https://github.com/WeConnect/ray/commit/3d038f5))
+
+
+
+
+
 ## [0.1.15](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.14...@wework/ray-core@0.1.15) (2019-03-15)
 
 
