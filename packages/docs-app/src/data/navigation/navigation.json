@@ -5,6 +5,20 @@
   "about": {
     "title": "About"
   },
+  "principles": {
+    "title": "Principles",
+    "children": {
+      "colors": {
+        "title": "Colors"
+      },
+      "fonts": {
+        "title": "Fonts"
+      },
+      "typography": {
+        "title": "Typography"
+      }
+    }
+  },
   "components": {
     "title": "Components",
     "children": {
@@ -34,20 +48,9 @@
       },
       "grid": {
         "title": "Grid"
-      }
-    }
-  },
-  "principles": {
-    "title": "Principles",
-    "children": {
-      "colors": {
-        "title": "Colors"
       },
-      "fonts": {
-        "title": "Fonts"
-      },
-      "typography": {
-        "title": "Typography"
+      "table": {
+        "title": "Table"
       }
     }
   }
