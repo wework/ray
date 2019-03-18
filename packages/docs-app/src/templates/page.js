@@ -8,7 +8,6 @@ import Layout from '../components/Layouts';
 
 // Components
 import PageHeader from '../components/PageHeader';
-import PageTable from '../components/PageTable';
 import ComponentCode from '../components/ComponentCode';
 import CodeSnippet from '../components/CodeSnippet';
 import ColorTable from '../components/ColorTable';
@@ -91,7 +90,13 @@ const renderAst = new RehypeReact({
     ul,
     ol,
     div,
-    table: PageTable,
+    table: function table({ children, ...props }) {
+      return (
+        <table {...props} className="ray-table">
+          {children}
+        </table>
+      );
+    },
     pre: CodeSnippet,
     'page-intro': PageIntro,
     'flex-group': FlexGroup,
