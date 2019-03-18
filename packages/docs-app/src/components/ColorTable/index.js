@@ -10,10 +10,12 @@ function ColorTable() {
   return (
     <table className="ray-table color-table">
       <thead>
-        <th>variable</th>
-        <th>hsl</th>
-        <th>hex</th>
-        <th>rgb</th>
+        <tr>
+          <th>variable</th>
+          <th>hsl</th>
+          <th>rgb</th>
+          <th>hex</th>
+        </tr>
       </thead>
       <tbody>
         {Object.keys(colors).map(colorKey => {
@@ -32,10 +34,11 @@ function ColorTable() {
                   style={{
                     backgroundColor: colors[colorKey],
                     display: 'inline-block',
-                    padding: '1rem',
+                    padding: '.25rem .5rem',
                     marginRight: '1rem',
                     verticalAlign: 'middle',
-                    color: textColor
+                    color: textColor,
+                    borderRadius: '0.25rem'
                   }}
                 >
                   <pre>${toKebab(colorKey)}</pre>
