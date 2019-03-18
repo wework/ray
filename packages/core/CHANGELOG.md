@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.20](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.19...@wework/ray-core@0.1.20) (2019-03-18)
+
+
+### Bug Fixes
+
+* **radio-checkbox:** fix alignment of input with text ([#58](https://github.com/WeConnect/ray/issues/58)) ([0e764e8](https://github.com/WeConnect/ray/commit/0e764e8)), closes [#51](https://github.com/WeConnect/ray/issues/51)
+
+
+
+
+
 ## [0.1.19](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.18...@wework/ray-core@0.1.19) (2019-03-18)
 
 
