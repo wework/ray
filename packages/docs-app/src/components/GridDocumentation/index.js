@@ -62,12 +62,14 @@ function Breakpoints({ breakpoints }) {
   return (
     <table className="ray-table">
       <thead>
-        <th>Breakpoint</th>
-        <th>min. width</th>
-        <th>max. width</th>
-        <th># of cols</th>
-        <th>gutter</th>
-        <th>margin</th>
+        <tr>
+          <th>Breakpoint</th>
+          <th>threshold</th>
+          <th>max. width</th>
+          <th># of cols</th>
+          <th>gutter</th>
+          <th>margin</th>
+        </tr>
       </thead>
       <tbody>
         {Object.keys(breakpoints).map(breakpointKey => {
