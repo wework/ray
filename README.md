@@ -8,7 +8,7 @@
 
 ## 🐥 Getting Started
 
-See the [getting started docs](/getting-started).
+See the [getting started docs](https://ray.weworkers.io/getting-started/).
 
 ## 👩🏻‍💻 Development
 
