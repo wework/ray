@@ -1,6 +1,6 @@
 @include exports('ray-radio-checkbox') {
   $ray-radio-checkbox-border-width: 3px;
-  $ray-radio-checkbox-width: 1rem;
+  $ray-radio-checkbox-size: 16px;
 
   .#{$ray-class-prefix}radio,
   .#{$ray-class-prefix}checkbox {
@@ -18,13 +18,14 @@
         content: '';
         background-color: $ray-color-white;
         border: $ray-radio-checkbox-border-width double $ray-color-black;
-        width: $ray-radio-checkbox-width;
-        height: $ray-radio-checkbox-width;
+        width: $ray-radio-checkbox-size;
+        height: $ray-radio-checkbox-size;
         position: relative;
         transition: box-shadow 0.15s ease;
         display: inline-block;
         margin-right: 1rem;
-        top: 4px;
+        // centers the input with the first line of text in the label
+        top: ($ray-field-line-height - $ray-radio-checkbox-size) / 2;
       }
 
       &:focus {
