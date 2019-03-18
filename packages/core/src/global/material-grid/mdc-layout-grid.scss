@@ -114,23 +114,6 @@
     }
   }
 
-  .#{$mdc-prefix}grid--fixed-column-width {
-    @each $size in map-keys($mdc-layout-grid-columns) {
-      @include mdc-layout-grid-media-query_($size) {
-        $margin: map-get($mdc-layout-grid-default-margin, $size);
-        $gutter: map-get($mdc-layout-grid-default-gutter, $size);
-        $column-width: map-get($mdc-layout-grid-column-width, $size);
-
-        @include mdc-layout-grid-fixed-column-width(
-          $size,
-          $margin,
-          $gutter,
-          $column-width
-        );
-      }
-    }
-  }
-
   .#{$mdc-prefix}grid--align-left {
     margin-right: auto;
     margin-left: 0;

@@ -23,6 +23,8 @@ Ray features three primary breakpoints: desktop, tablet, and mobile. Our grid sy
 | Name                                                        | Description                                                                                           |
 | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | ray-grid                                                    | Mandatory, for the layout grid element                                                                |
+| ray-grid--align-<left\|right>                               | Optional, align the grid to the left or right side of the container (default: center)                 |
 | ray-grid\_\_inner                                           | Mandatory, for wrapping grid cells (_must_ be child of `.ray-grid`)                                   |
 | ray-grid\_\_cell                                            | Mandatory, for the layout grid cell                                                                   |
+| ray-grid\_\_cell--align-<top\|middle\|bottom>               | Optional, align the cell to the top, middle, or center of the containing grid                         |
 | ray-grid\_\_cell--span-<NUMBER_OF_COLUMNS>-<TYPE_OF_DEVICE> | Optional, specifies the number of columns the cell spans on a type of device (desktop, tablet, phone) |

@@ -86,17 +86,10 @@
   width: calc(#{$percent} - #{$gutter});
   width: calc(#{$percent} - var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}));
 
-  // fallback for IE11 gutter (grid-gap doesn't work in IE11)
   margin: 0 $gutter / 2;
-  margin: 0 calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2);
 
-  @supports (display: grid) {
-    width: auto;
-    grid-column-end: span min($span, map-get($mdc-layout-grid-columns, $size));
-
-    // fallback for IE11 gutter (grid-gap doesn't work in IE11)
-    margin: 0;
-  }
+  margin-left: calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2);
+  margin-right: calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2);
 }
 
 // Public mixins, meant for developer usage.
@@ -106,9 +99,13 @@
   }
 
   box-sizing: border-box;
+
   margin: 0 auto;
   padding: 0 $margin;
-  padding: 0 var(--mdc-layout-grid-margin-#{$size}, #{$margin});
+
+  padding-left: var(--mdc-layout-grid-margin-#{$size}, #{$margin});
+  padding-right: var(--mdc-layout-grid-margin-#{$size}, #{$margin});
+
   width: 100%;
 
   @if $max-width {
@@ -124,19 +121,15 @@
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
-  margin: -$gutter / 2;
-  margin: calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2 * -1);
 
-  @supports (display: grid) {
-    display: grid;
-    margin: 0;
-    grid-gap: 0 $gutter;
-    grid-gap: 0 var(--mdc-layout-grid-gutter-#{$size}, $gutter);
-    grid-template-columns: repeat(
-      map-get($mdc-layout-grid-columns, $size),
-      minmax(0, 1fr)
-    );
-  }
+  margin: 0 (-$gutter / 2);
+
+  margin-left: calc(
+    var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2 * -1
+  );
+  margin-right: calc(
+    var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2 * -1
+  );
 }
 
 @mixin mdc-layout-grid-cell($size, $default-span, $gutter) {
@@ -156,10 +149,6 @@
 @mixin mdc-layout-grid-cell-align($position) {
   @if $position == 'top' {
     align-self: flex-start;
-
-    @supports (display: grid) {
-      align-self: start;
-    }
   }
 
   @if $position == 'middle' {
@@ -168,36 +157,9 @@
 
   @if $position == 'bottom' {
     align-self: flex-end;
-
-    @supports (display: grid) {
-      align-self: end;
-    }
   }
 
   @if $position == 'stretch' {
     align-self: stretch;
   }
-}
-
-@mixin mdc-layout-grid-fixed-column-width(
-  $size,
-  $margin,
-  $gutter,
-  $column-width
-) {
-  @if not map-has-key($mdc-layout-grid-columns, $size) {
-    @error "Invalid style specified! Choose one of #{map-keys($mdc-layout-grid-columns)}";
-  }
-
-  $columnCount: map-get($mdc-layout-grid-columns, $size);
-  $gutter-number: $columnCount - 1;
-  $margin-number: 2;
-
-  width: $column-width * $columnCount + $gutter * $gutter-number + $margin *
-    $margin-number;
-  width: calc(
-    var(--mdc-layout-grid-column-width-#{$size}, #{$column-width}) * #{$columnCount} +
-      var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) * #{$gutter-number} +
-      var(--mdc-layout-grid-margin-#{$size}, #{$margin}) * #{$margin-number}
-  );
 }

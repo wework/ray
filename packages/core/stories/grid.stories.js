@@ -32,27 +32,51 @@ storiesOf('Grid', module)
         <div
           className="ray-grid__inner"
           style={{
-            alignItems: 'center'
+            position: 'relative'
           }}
         >
           <div
             className="ray-grid__cell--span-4"
             style={{
               zIndex: '1',
-              gridColumnStart: '1',
-              gridRow: '1'
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              display: 'flex',
+              alignItems: 'center'
             }}
           >
-            <div className="ray-h3">
-              Each element needs `grid-column-start` & `grid-row: 1` defined for
-              overlapping containers. :)
+            <div
+              className="ray-p2"
+              style={{
+                backgroundColor: '#fff',
+                padding: '1rem'
+              }}
+            >
+              <pre
+                style={{
+                  margin: 0
+                }}
+              >
+                z-index: 1;
+                <br />
+                position: absolute;
+                <br />
+                top: 0;
+                <br />
+                bottom: 0;
+                <br />
+                display: flex;
+                <br />
+                align-items: center;
+                <br />
+              </pre>
             </div>
           </div>
           <div
             className="ray-grid__cell--span-10"
             style={{
-              gridColumnStart: '3',
-              gridRow: '1'
+              marginLeft: 'auto'
             }}
           >
             <div
