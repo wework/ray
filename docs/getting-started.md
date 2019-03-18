@@ -94,3 +94,9 @@ Ray can also be installed via CDN for rapid prototyping.
 ├── LICENSE
 └── README.md
 ```
+
+## Contributing
+
+Feeling ambitious? Good, because we’d love your input and contributions to the design system. We’re currently in the infancy of the system and would love your feedback and help.
+
+Join us in the [#ray-design-system](https://wework.slack.com/messages/CFLL3QWQ5) slack channel.
