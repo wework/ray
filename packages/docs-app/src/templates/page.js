@@ -29,23 +29,47 @@ const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
-    h1: function h1({ children }) {
-      return <h1 className="ray-h3">{children}</h1>;
+    h1: function h1({ children, ...props }) {
+      return (
+        <h1 {...props} className="ray-h3">
+          {children}
+        </h1>
+      );
     },
-    h2: function h2({ children }) {
-      return <h2 className="ray-h4">{children}</h2>;
+    h2: function h2({ children, ...props }) {
+      return (
+        <h2 {...props} className="ray-h4">
+          {children}
+        </h2>
+      );
     },
-    h3: function h3({ children }) {
-      return <h3 className="ray-h5">{children}</h3>;
+    h3: function h3({ children, ...props }) {
+      return (
+        <h3 {...props} className="ray-h5">
+          {children}
+        </h3>
+      );
     },
-    h4: function h4({ children }) {
-      return <h4 className="ray-h6">{children}</h4>;
+    h4: function h4({ children, ...props }) {
+      return (
+        <h4 {...props} className="ray-h6">
+          {children}
+        </h4>
+      );
     },
-    h5: function h5({ children }) {
-      return <h5 className="ray-h6">{children}</h5>;
+    h5: function h5({ children, ...props }) {
+      return (
+        <h5 {...props} className="ray-h6">
+          {children}
+        </h5>
+      );
     },
-    h6: function h6({ children }) {
-      return <h6 className="ray-h6">{children}</h6>;
+    h6: function h6({ children, ...props }) {
+      return (
+        <h6 {...props} className="ray-h6">
+          {children}
+        </h6>
+      );
     },
     p: function p({ children }) {
       return <p className="ray-p4">{children}</p>;
