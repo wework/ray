@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.19](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.18...@wework/ray-core@0.1.19) (2019-03-18)
+
+
+### Bug Fixes
+
+* **select:** remove arrow rotation on focus ([#57](https://github.com/WeConnect/ray/issues/57)) ([7cc42c3](https://github.com/WeConnect/ray/commit/7cc42c3)), closes [#56](https://github.com/WeConnect/ray/issues/56)
+
+
+
+
+
 ## [0.1.18](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.17...@wework/ray-core@0.1.18) (2019-03-18)
 
 
