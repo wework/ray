@@ -5,7 +5,7 @@ title: Typography
 
 <page-intro>Well-defined typography styles in combination with a design system layout grid will create structured content. Limiting font-families, a tight type scale, and content limits will keep it tight.</page-intro>
 
-To avoid conflicting with other libraries, Ray does _not_ assign css attributes directly to HTML tags like h1–h6. If that kind of behavior is needed, see Running Text below.
+> To avoid conflicting with other libraries, Ray does _not_ assign css attributes directly to HTML tags like h1–h6. If that kind of behavior is needed, see Running Text below.
 
 <component
     name="All types"
