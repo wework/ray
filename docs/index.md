@@ -7,9 +7,11 @@ title: Ray
 
 # Hello friend, 👋
 
-<page-intro>We are building a system that channels the design aethetic of WeWork spaces into our digital spaces, with accesessibile, beautiful user interface resources. Ray is designed for software engineers as much as it is our visitors. This developer experience is achieved with by BEM architecture and high-quality documentation.</page-intro>
+<page-intro>Our goal is to build a collection of beautiful and accessible user-interface resources for WeWork's wide array of web properties. All while maintaining excellent developer experience.</page-intro>
 
-## <a href="/getting-started" class="ray-btn ray-btn--tertiary ray-btn--pull-left">Get Started</a>
+<a href="/getting-started" class="ray-btn ray-btn--primary ray-btn--compact">Get Started &nbsp;→</a> <a href="/about" class="ray-btn ray-btn--secondary ray-btn--compact">About</a>
+
+<br />
 
 > #### Question?
 >
