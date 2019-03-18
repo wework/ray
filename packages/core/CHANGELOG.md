@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.17](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.16...@wework/ray-core@0.1.17) (2019-03-18)
+
+
+### Bug Fixes
+
+* table style border tweak ([c2b5d60](https://github.com/WeConnect/ray/commit/c2b5d60))
+
+
+
+
+
 ## [0.1.16](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.15...@wework/ray-core@0.1.16) (2019-03-15)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/WeConnect/ray/compare/rehype-react@3.1.1...rehype-react@3.1.2) (2019-03-18)
+
+**Note:** Version bump only for package rehype-react
+
+
+
+
+
 ## 3.1.1 (2019-03-14)
 
 
