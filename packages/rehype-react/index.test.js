@@ -61,12 +61,6 @@ describe('rehype-react', () => {
     );
   });
 
-  test('should skip `root`s', () => {
-    expect(processor.stringify(u('root', [h('body')]))).toEqual(
-      React.createElement('body', { key: 'h-1' }, undefined)
-    );
-  });
-
   test('should skip `doctype`s', () => {
     expect(
       processor.stringify(u('root', [u('doctype', { name: 'html' })]))
@@ -106,7 +100,7 @@ describe('rehype-react', () => {
           .use(rehype2react, {
             createElement: React.createElement,
             components: {
-              h1: function(props) {
+              h1(props) {
                 return React.createElement('h2', props);
               }
             }
