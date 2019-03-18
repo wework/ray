@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.18](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.17...@wework/ray-core@0.1.18) (2019-03-18)
+
+
+### Bug Fixes
+
+* **grid:** remove css grid ([#54](https://github.com/WeConnect/ray/issues/54)) ([e07bba1](https://github.com/WeConnect/ray/commit/e07bba1))
+
+
+
+
+
 ## [0.1.17](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.16...@wework/ray-core@0.1.17) (2019-03-18)
 
 
