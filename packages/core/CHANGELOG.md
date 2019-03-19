@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.27](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.26...@wework/ray-core@0.1.27) (2019-03-19)
+
+
+### Bug Fixes
+
+* **form-items:** support label for slightly darker background ([#64](https://github.com/WeConnect/ray/issues/64)) ([b6f07e5](https://github.com/WeConnect/ray/commit/b6f07e5))
+
+
+
+
+
 ## [0.1.26](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.25...@wework/ray-core@0.1.26) (2019-03-19)
 
 
