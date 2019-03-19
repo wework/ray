@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.2.6...ray-website-gatsby@0.2.7) (2019-03-19)
+
+
+### Bug Fixes
+
+* **typography:** running-text with blockquote and add blockquote styles ([482bc82](https://github.com/weconnect/ray-website/commit/482bc82))
+
+
+
+
+
 ## [0.2.6](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.2.5...ray-website-gatsby@0.2.6) (2019-03-19)
 
 **Note:** Version bump only for package ray-website-gatsby

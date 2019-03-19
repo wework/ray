@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.26](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.25...@wework/ray-core@0.1.26) (2019-03-19)
+
+
+### Bug Fixes
+
+* **typography:** running-text with blockquote and add blockquote styles ([482bc82](https://github.com/WeConnect/ray/commit/482bc82))
+
+
+
+
+
 ## [0.1.25](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.24...@wework/ray-core@0.1.25) (2019-03-19)
 
 **Note:** Version bump only for package @wework/ray-core
