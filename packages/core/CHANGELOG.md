@@ -7,12 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @wework/ray-core
 
-
-
-
-
-page-intro>
-
 ## [0.1.22](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.21...@wework/ray-core@0.1.22) (2019-03-19)
 
 ### Bug Fixes
