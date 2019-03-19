@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.21](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.20...@wework/ray-core@0.1.21) (2019-03-19)
+
+
+### Bug Fixes
+
+* **textarea:** fix input text not centered ([7d90ff7](https://github.com/WeConnect/ray/commit/7d90ff7))
+
+
+
+
+
 ## [0.1.20](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.19...@wework/ray-core@0.1.20) (2019-03-18)
 
 
