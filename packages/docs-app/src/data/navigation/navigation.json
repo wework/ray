@@ -5,6 +5,9 @@
   "about": {
     "title": "About"
   },
+  "changelog": {
+    "title": "Change Log"
+  },
   "principles": {
     "title": "Principles",
     "children": {

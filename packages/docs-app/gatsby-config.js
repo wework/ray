@@ -32,6 +32,13 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'core-changelog',
+        path: path.join(__dirname, '../core/CHANGELOG.md')
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
