@@ -26,6 +26,13 @@ title: Select
     >
 </component>
 
+<component 
+    name="With icon"
+    component="select"
+    variation="select-with-icon" 
+    >
+</component>
+
 ## JavaScript
 
 ```javascript

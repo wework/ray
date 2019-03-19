@@ -156,7 +156,7 @@
   &__icon--right {
     @include icon;
     // add spacing to compensate for the
-    right: calc(#{$ray-field-h-spacing} * 2 + 12px);
+    right: $ray-field-h-spacing;
   }
 
   &--with-icon-left {

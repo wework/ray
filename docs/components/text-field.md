@@ -43,6 +43,15 @@ To be used adjacent to any form item.
     >
 </component>
 
+## Icons
+
+<component
+    name="Text field with icons"
+    component="text-field"
+    variation="text-field-with-icon"
+    >
+</component>
+
 ### Modifiers
 
 Use these modifiers with `.ray-form-item__hint` class.
