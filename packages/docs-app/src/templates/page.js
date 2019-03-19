@@ -98,6 +98,9 @@ const renderAst = new RehypeReact({
         </table>
       );
     },
+    blockquote: function blockquote({ children }) {
+      return <blockquote className="ray-blockquote">{children}</blockquote>;
+    },
     pre: CodeSnippet,
     'page-intro': PageIntro,
     'flex-group': FlexGroup,

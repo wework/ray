@@ -27,11 +27,19 @@ title: Typography
 
 ## Running Text
 
-This utility is useful for long-form content, especially content that is dynamically genereated from markdown. It will directly style `h1`–`h6`, `p`, `ul`, and `ol` tags.
+This utility is useful for long-form content, especially content that is dynamically genereated from markdown. It will directly style `h1`–`h6`, `p`, `blockquote`, `ul`, and `ol` tags.
 
 <component
     component="typography"
     variation="typography-running-text"
+    >
+</component>
+
+# Utilities
+
+<component
+    component="typography"
+    variation="typography-utilities"
     >
 </component>
 
