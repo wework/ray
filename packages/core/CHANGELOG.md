@@ -1,10 +1,17 @@
----
-title: 'Change Log'
-path: '/changelog'
----
+# Change Log
 
-<page-intro>All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.</page-intro>
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.1.23](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.22...@wework/ray-core@0.1.23) (2019-03-19)
+
+**Note:** Version bump only for package @wework/ray-core
+
+
+
+
+
+page-intro>
 
 ## [0.1.22](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.21...@wework/ray-core@0.1.22) (2019-03-19)
 
