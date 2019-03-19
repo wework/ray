@@ -37,7 +37,18 @@
   padding-right: $ray-field-h-spacing / 2;
   width: auto;
   height: auto;
-  background: $ray-color-white;
+  background: transparent;
+
+  &::before {
+    content: '';
+    width: calc(100% + #{$ray-field-h-spacing} / 2);
+    height: 1px;
+    background-color: $ray-color-white;
+    position: absolute;
+    top: 5px;
+    left: -1 * $ray-field-h-spacing / 2;
+    z-index: -1;
+  }
 }
 
 @mixin text-field--has-value {
