@@ -33,15 +33,30 @@ title: Select
     >
 </component>
 
-## JavaScript
+## JavaScript API
 
 ```javascript
 import { Select } from '@wework/ray-core';
 
+// instantiate all instances on document
 Select.createAll();
-// or
-Select.create(document.querySelector('.ray-select'));
+
+// create instance
+const select = Select.create(document.querySelector('.ray-select'));
+
+// assign a value
+select.set('pikachu');
+
+// destroy
+select.destroy();
 ```
+
+| Method                     | Params               | Description                      |
+| -------------------------- | -------------------- | -------------------------------- |
+| `Select.createAll`         | `HTMLElement:Object` | create all instances in document |
+| `Select.create`            | `HTMLElement:Object` | create an instance               |
+| `Select.prototype.destroy` |                      | destroy the instance             |
+| `Select.prototype.set`     |                      | sets the value of the instance   |
 
 ## Modifiers
 

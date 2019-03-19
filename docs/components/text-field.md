@@ -67,6 +67,7 @@ Text fields:
 
 ```javascript
 import { TextField } from '@wework/ray-core';
+
 TextField.createAll();
 // or
 TextField.create(document.querySelector('.ray-text-field'));
@@ -76,7 +77,15 @@ Textareas:
 
 ```javascript
 import { TextArea } from '@wework/ray-core';
+
 TextArea.createAll();
 // or
 TextArea.create(document.querySelector('.ray-text-area'));
 ```
+
+| Method                                      | Params               | Description                      |
+| ------------------------------------------- | -------------------- | -------------------------------- |
+| `(TextField || TextArea).createAll`         | `HTMLElement:Object` | create all instances in document |
+| `(TextField || TextArea).create`            | `HTMLElement:Object` | create an instance               |
+| `(TextField || TextArea).prototype.destroy` |                      | destroy the instance             |
+| `(TextField || TextArea).prototype.set`     |                      | sets the value of the instance   |
