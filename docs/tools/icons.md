@@ -5,6 +5,8 @@ title: Icons
 
 <page-intro>Everyone loves icons 🤗</page-intro>
 
+> 🚧 Note: this package is not available yet as we need to iron out licensing.
+
 ## Installation
 
 ```bash
