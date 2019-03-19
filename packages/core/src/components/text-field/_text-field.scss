@@ -148,7 +148,7 @@
     &__input {
       overflow-y: scroll;
       display: inline-block;
-      padding-top: 1rem;
+      padding-top: ($ray-field-height - $ray-field-line-height) / 2;
       resize: vertical;
       line-height: $ray-field-line-height;
       height: $ray-field-height - 2 * $ray-border-width;
@@ -159,7 +159,7 @@
       line-height: 0;
 
       .#{$ray-class-prefix}text-area__input {
-        padding-top: $ray-field-v-spacing-compact / 2;
+        padding-top: ($ray-field-v-spacing-compact) / 2;
         height: $ray-field-height-compact - 2 * $ray-border-width;
         min-height: $ray-field-height-compact - 2 * $ray-border-width;
       }
