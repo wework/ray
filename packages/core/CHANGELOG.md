@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.22](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.21...@wework/ray-core@0.1.22) (2019-03-19)
+
+
+### Bug Fixes
+
+* text field right icon position and add docs ([#60](https://github.com/WeConnect/ray/issues/60)) ([ccb28eb](https://github.com/WeConnect/ray/commit/ccb28eb))
+
+
+
+
+
 ## [0.1.21](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.20...@wework/ray-core@0.1.21) (2019-03-19)
 
 
