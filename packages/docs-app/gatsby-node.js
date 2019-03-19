@@ -91,6 +91,7 @@ exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
   const { rules } = module;
   actions.replaceWebpackConfig({
     ...config,
+    node: { fs: 'empty' },
     module: {
       ...module,
       rules: [

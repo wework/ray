@@ -12,11 +12,9 @@
     "gatsby"
   ],
   "scripts": {
-    "build": "echo \"Error: no build specified\" && exit 0",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o public/docs",
     "netlify:build": "gatsby build && cp -r static/* ../../.out && cp -r public/* ../../.out"
@@ -30,7 +28,6 @@
     "custom-event": "^1.0.1",
     "dotenv": "^6.1.0",
     "flatpickr": "^4.5.2",
-    "fs": "0.0.1-security",
     "gatsby": "^2.1.23",
     "gatsby-image": "2.0.20",
     "gatsby-plugin-manifest": "^2.0.10",
@@ -64,6 +61,7 @@
     "@storybook/addon-options": "^5.0.1",
     "@storybook/react": "^5.0.1",
     "@wework/ray-core": "file:../core",
+    "@wework/ray-icons": "file:../icons",
     "babel-loader": "8.0.5",
     "cross-env": "^5.2.0",
     "fs-extra": "^7.0.1",

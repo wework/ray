@@ -53,5 +53,13 @@
         "title": "Table"
       }
     }
+  },
+  "tools": {
+    "title": "Tools",
+    "children": {
+      "icons": {
+        "title": "Icons"
+      }
+    }
   }
 }

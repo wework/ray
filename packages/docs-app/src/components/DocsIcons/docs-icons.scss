@@ -1,0 +1,14 @@
+.docs-icons__icon {
+  padding: 0.5rem 0;
+}
+
+.docs-icons__img-wrapper {
+  img {
+    width: 2rem;
+  }
+}
+
+.docs-icons__caption {
+  @extend .ray-p6;
+  line-height: 1.35;
+}
