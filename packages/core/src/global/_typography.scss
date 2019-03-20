@@ -1,69 +1,69 @@
 @import './mixins/exports';
 
 @mixin ray-display-1 {
-  font-size: 64px;
-  line-height: 88px;
+  font-size: 4rem;
+  line-height: 5.5rem;
 }
 
 @mixin ray-display-2 {
-  font-size: 48px;
-  line-height: 64px;
+  font-size: 3rem;
+  line-height: 4rem;
 }
 
 @mixin ray-h1 {
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   margin-bottom: 1.5rem;
 }
 
 @mixin ray-h2 {
-  font-size: 32px;
-  line-height: 44px;
+  font-size: 2rem;
+  line-height: 2.75rem;
   margin-bottom: 1.5rem;
 }
 
 @mixin ray-h3 {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
   margin-bottom: 1rem;
 }
 
 @mixin ray-h4 {
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   margin-bottom: 1rem;
 }
 
 @mixin ray-h5 {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   margin-bottom: 1rem;
 }
 
 @mixin ray-h6 {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   margin-bottom: 1rem;
 }
 
 @mixin ray-body {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 @mixin ray-body-large {
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 @mixin ray-body-small {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 @mixin ray-body-x-small {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
 @include exports('ray-typography') {
@@ -243,8 +243,8 @@
 
     ul,
     ol {
-      margin: 10px 0;
-      padding-left: 30px;
+      margin: 0.75rem 0;
+      padding-left: 2rem;
     }
 
     ul li {
