@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.9](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.2.8...ray-website-gatsby@0.2.9) (2019-03-20)
+
+
+### Bug Fixes
+
+* remove icons ([#65](https://github.com/weconnect/ray-website/issues/65)) ([74bc7fd](https://github.com/weconnect/ray-website/commit/74bc7fd))
+
+
+
+
+
 ## [0.2.8](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.2.7...ray-website-gatsby@0.2.8) (2019-03-19)
 
 **Note:** Version bump only for package ray-website-gatsby
