@@ -36,7 +36,3 @@ Use these modifiers with `.ray-btn` class.
 | .ray-btn--danger    | Selector for applying danger button styles    |
 | .ray-btn--tertiary  | Selector for applying tertiary button styles  |
 | .ray-btn--compact   | Selector for applying compact button styles   |
-
-## Adding icons
-
-@Todo

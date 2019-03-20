@@ -61,7 +61,6 @@
     "@storybook/addon-options": "^5.0.1",
     "@storybook/react": "^5.0.1",
     "@wework/ray-core": "file:../core",
-    "@wework/ray-icons": "file:../icons",
     "babel-loader": "8.0.5",
     "cross-env": "^5.2.0",
     "fs-extra": "^7.0.1",
