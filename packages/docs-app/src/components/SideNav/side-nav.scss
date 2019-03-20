@@ -105,7 +105,7 @@
 }
 
 .side-nav__heading {
-  @extend .ray-h5;
+  @extend .ray-text--h3;
   display: inline-block;
   color: $ray-color-text-dark;
   text-decoration: none;
@@ -132,7 +132,7 @@
 }
 
 .side-nav__github {
-  @extend .ray-p5;
+  @extend .ray-text--body-small;
   display: block;
 }
 

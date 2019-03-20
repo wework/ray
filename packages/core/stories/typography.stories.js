@@ -4,51 +4,50 @@ import { storiesOf } from '@storybook/react';
 storiesOf('Typography', module)
   .add('all', () =>
     [
-      'h1',
-      'h2',
-      'h3',
-      'h4',
-      'h5',
-      'h6',
-      'p1',
-      'p2',
-      'p3',
-      'p4',
-      'p5',
-      'p6'
+      'ray-text--display-1',
+      'ray-text--display-2',
+      'ray-text--h1',
+      'ray-text--h2',
+      'ray-text--h3',
+      'ray-text--h4',
+      'ray-text--h5',
+      'ray-text--h6',
+      'ray-text--body-large',
+      'ray-text--body',
+      'ray-text--body-small',
+      'ray-text--body-x-small'
     ].map(type => {
-      const Tag = type[0] === 'h' ? type : 'p';
       return (
-        <React.Fragment key={type}>
-          <Tag className={`ray-${type}`}>ray-{type}</Tag>
-        </React.Fragment>
+        <div key={type}>
+          <span className={type}>{type}</span>
+        </div>
       );
     })
   )
-  .add('h1 + p1', () => (
+  .add('h1 + body-large', () => (
     <React.Fragment>
-      <h1 className="ray-h1">Keeping It Fresh</h1>
-      <p className="ray-p1">
+      <h1 className="ray-text--h1">Keeping It Fresh</h1>
+      <p className="ray-text--body-large">
         This is a living system that needs to be maintained, so we’re focusing
         on ease of use and keeping things up-to-date. Feel free to leave us
         feedback too!
       </p>
     </React.Fragment>
   ))
-  .add('h2 + p2', () => (
+  .add('h2 + body-large', () => (
     <React.Fragment>
-      <h1 className="ray-h2">Keeping It Fresh</h1>
-      <p className="ray-p2">
+      <h1 className="ray-text--h2">Keeping It Fresh</h1>
+      <p className="ray-text--body-large">
         This is a living system that needs to be maintained, so we’re focusing
         on ease of use and keeping things up-to-date. Feel free to leave us
         feedback too!
       </p>
     </React.Fragment>
   ))
-  .add('h3 + p3', () => (
+  .add('h3 + body', () => (
     <React.Fragment>
-      <h1 className="ray-h3">Keeping It Fresh</h1>
-      <p className="ray-p3">
+      <h1 className="ray-text--h3">Keeping It Fresh</h1>
+      <p className="ray-text--body">
         This is a living system that needs to be maintained, so we’re focusing
         on ease of use and keeping things up-to-date. Feel free to leave us
         feedback too!

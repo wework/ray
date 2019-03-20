@@ -84,7 +84,7 @@ function Breakpoints({ breakpoints }) {
 
           return (
             <tr key={breakpointName}>
-              <td className="ray-h6">{breakpointName}</td>
+              <td className="ray-text--h5">{breakpointName}</td>
               <td>{breakpointMinWidth}</td>
               <td>{breakpointMaxWidth}</td>
               <td>{breakpointNumOfColumns}</td>

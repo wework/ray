@@ -4,7 +4,10 @@
 $ray-class-prefix: 'ray-';
 $ray-font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif;
-$ray-font-stack-mono: 'Apercu Mono', monospace;
+$ray-font-stack-mono: 'Apercu Mono', 'Consolas', 'Bitstream Vera Sans Mono',
+  'Courier New', Courier, monospace;
+
+$ray-assign-typography-styles-natively: false !default;
 
 $ray-transition: all 0.125s ease;
 
@@ -14,7 +17,6 @@ $ray-border-width: 1px;
 $ray-color-text-light: $ray-color-gray-30;
 $ray-color-text-medium: $ray-color-gray-60;
 $ray-color-text-dark: $ray-color-black;
-
 $ray-field-v-spacing: 20px;
 $ray-field-v-spacing-compact: 12px;
 $ray-field-h-spacing: 12px;

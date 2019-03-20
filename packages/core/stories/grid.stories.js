@@ -47,7 +47,6 @@ storiesOf('Grid', module)
             }}
           >
             <div
-              className="ray-p2"
               style={{
                 backgroundColor: '#fff',
                 padding: '1rem'

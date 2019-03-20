@@ -1,122 +1,148 @@
 @import './mixins/exports';
 
+@mixin ray-display-1 {
+  font-size: 64px;
+  line-height: 88px;
+}
+
+@mixin ray-display-2 {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+@mixin ray-h1 {
+  font-size: 40px;
+  line-height: 56px;
+  margin-bottom: 1.5rem;
+}
+
+@mixin ray-h2 {
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 1.5rem;
+}
+
+@mixin ray-h3 {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 1rem;
+}
+
+@mixin ray-h4 {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 1rem;
+}
+
+@mixin ray-h5 {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 1rem;
+}
+
+@mixin ray-h6 {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 1rem;
+}
+
+@mixin ray-body {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@mixin ray-body-large {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@mixin ray-body-small {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@mixin ray-body-x-small {
+  font-size: 12px;
+  line-height: 20px;
+}
+
 @include exports('ray-typography') {
-  .#{$ray-class-prefix}h1,
-  .#{$ray-class-prefix}h2,
-  .#{$ray-class-prefix}h3,
-  .#{$ray-class-prefix}h4,
-  .#{$ray-class-prefix}h5,
-  .#{$ray-class-prefix}h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  .#{$ray-class-prefix}text--display-1 {
+    @include ray-display-1;
+  }
+
+  .#{$ray-class-prefix}text--display-2 {
+    @include ray-display-2;
+  }
+
+  .#{$ray-class-prefix}text--h1,
+  .#{$ray-class-prefix}text--h2,
+  .#{$ray-class-prefix}text--h3,
+  .#{$ray-class-prefix}text--h4,
+  .#{$ray-class-prefix}text--h5,
+  .#{$ray-class-prefix}text--h6 {
     font-weight: bold;
     margin: 0;
   }
 
-  .#{$ray-class-prefix}h1 {
-    // h5
-    font-size: 1.5rem;
-    line-height: 40px;
-    margin-bottom: 0.5rem;
+  .#{$ray-class-prefix}text--h1 {
+    @include ray-h3;
 
     @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      // h3
-      font-size: 2.5rem;
-      line-height: 60px;
-      margin-bottom: 1rem;
+      @include ray-h2;
     }
 
     @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      font-size: 4rem;
-      line-height: 96px;
-      margin-bottom: 1.5rem;
+      @include ray-h1;
     }
   }
 
-  .#{$ray-class-prefix}h2 {
-    // h6
-    font-size: 1.25rem;
-    line-height: 40px;
-    margin-bottom: 0.5rem;
+  .#{$ray-class-prefix}text--h2 {
+    @include ray-h4;
 
     @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      // h4
-      font-size: 2rem;
-      line-height: 56px;
-      margin-bottom: 1rem;
+      @include ray-h3;
     }
 
     @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      font-size: 3rem;
-      line-height: 72px;
-      margin-bottom: 1rem;
+      @include ray-h2;
     }
   }
 
-  .#{$ray-class-prefix}h3 {
-    // h6
-    font-size: 1.25rem;
-    line-height: 40px;
-    margin-bottom: 0.5rem;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      // h4
-      font-size: 2rem;
-      line-height: 56px;
-      margin-bottom: 1rem;
-    }
+  .#{$ray-class-prefix}text--h3 {
+    @include ray-h4;
 
     @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      font-size: 2.5rem;
-      line-height: 60px;
-      margin-bottom: 1rem;
+      @include ray-h3;
     }
   }
 
-  .#{$ray-class-prefix}h4 {
-    // h6
-    font-size: 1.25rem;
-    line-height: 40px;
-    margin-bottom: 0.5rem;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      // h5
-      font-size: 1.5rem;
-      line-height: 40px;
-      margin-bottom: 0.5rem;
-    }
+  .#{$ray-class-prefix}text--h4 {
+    @include ray-h5;
 
     @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      font-size: 2rem;
-      line-height: 56px;
-      margin-bottom: 1rem;
+      @include ray-h4;
     }
   }
 
-  .#{$ray-class-prefix}h5 {
-    // h6
-    font-size: 1.25rem;
-    line-height: 40px;
-    margin-bottom: 0.5rem;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      font-size: 1.5rem;
-      line-height: 40px;
-      margin-bottom: 0.5rem;
-    }
+  .#{$ray-class-prefix}text--h5 {
+    @include ray-h5;
   }
 
-  .#{$ray-class-prefix}h6 {
-    font-size: 1.25rem;
-    line-height: 40px;
-    margin-bottom: 0.5rem;
+  .#{$ray-class-prefix}text--h6 {
+    @include ray-h6;
   }
 
-  p,
-  .#{$ray-class-prefix}p1,
-  .#{$ray-class-prefix}p2,
-  .#{$ray-class-prefix}p3,
-  .#{$ray-class-prefix}p4,
-  .#{$ray-class-prefix}p5,
-  .#{$ray-class-prefix}p6 {
+  p {
     font-weight: 400;
     margin: 0;
   }
@@ -127,73 +153,27 @@
     }
   }
 
-  .#{$ray-class-prefix}p1 {
-    // p3
-    font-size: 1.25rem;
-    line-height: 32px;
+  .#{$ray-class-prefix}text--body-large {
+    @include ray-body;
 
     @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      // p2
-      font-size: 1.5rem;
-      line-height: 40px;
-    }
-
-    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      font-size: 2rem;
-      line-height: 48px;
+      @include ray-body-large;
     }
   }
 
-  .#{$ray-class-prefix}p2 {
-    // p4
-    font-size: 1rem;
-    line-height: 28px;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      // p3
-      font-size: 1.25rem;
-      line-height: 32px;
-    }
-
-    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      font-size: 1.5rem;
-      line-height: 40px;
-    }
+  .#{$ray-class-prefix}text--body {
+    @include ray-body;
   }
 
-  .#{$ray-class-prefix}p3 {
-    // p4
-    font-size: 1rem;
-    line-height: 28px;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      font-size: 1.25rem;
-      line-height: 32px;
-    }
+  .#{$ray-class-prefix}text--body-small {
+    @include ray-body-small;
   }
 
-  .#{$ray-class-prefix}p4 {
-    // p5
-    font-size: 0.875rem;
-    line-height: 24px;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      font-size: 1rem;
-      line-height: 28px;
-    }
+  .#{$ray-class-prefix}text--body-x-small {
+    @include ray-body-x-small;
   }
 
-  .#{$ray-class-prefix}p5 {
-    font-size: 0.875rem;
-    line-height: 24px;
-  }
-
-  .#{$ray-class-prefix}p6 {
-    font-size: 0.75rem;
-    line-height: 12px;
-  }
-
-  .#{$ray-class-prefix}text-monospace {
+  .#{$ray-class-prefix}text--monospace {
     font-family: $ray-font-stack-mono;
     font-weight: 400;
   }
@@ -208,6 +188,17 @@
     border-left: 2px solid $ray-color-blue-50;
   }
 
+  .#{$ray-class-prefix}blockquote__footer {
+    @include ray-body-small;
+    font-weight: 400;
+    font-family: $ray-font-stack-mono;
+    color: $ray-color-text-medium;
+
+    &::before {
+      content: '\2014\00A0';
+    }
+  }
+
   .#{$ray-class-prefix}running-text {
     h1,
     h2,
@@ -219,31 +210,35 @@
     }
 
     h1 {
-      @extend .#{$ray-class-prefix}h1;
+      @extend .#{$ray-class-prefix}text--h1;
     }
 
     h2 {
-      @extend .#{$ray-class-prefix}h2;
+      @extend .#{$ray-class-prefix}text--h2;
     }
 
     h3 {
-      @extend .#{$ray-class-prefix}h3;
+      @extend .#{$ray-class-prefix}text--h3;
     }
 
     h4 {
-      @extend .#{$ray-class-prefix}h4;
+      @extend .#{$ray-class-prefix}text--h4;
     }
 
     h5 {
-      @extend .#{$ray-class-prefix}h5;
+      @extend .#{$ray-class-prefix}text--h5;
     }
 
     h6 {
-      @extend .#{$ray-class-prefix}h6;
+      @extend .#{$ray-class-prefix}text--h6;
     }
 
     p {
-      @extend .#{$ray-class-prefix}p4;
+      @extend .#{$ray-class-prefix}text--body;
+    }
+
+    small {
+      @extend .#{$ray-class-prefix}text--body-small;
     }
 
     ul,
@@ -262,6 +257,44 @@
 
     blockquote {
       @extend .#{$ray-class-prefix}blockquote;
+    }
+  }
+
+  @if global-variable-exists(ray-assign-typography-styles-natively) ==
+    false or
+    $ray-assign-typography-styles-natively ==
+    true
+  {
+    h1 {
+      @extend .#{$ray-class-prefix}text--h1;
+    }
+
+    h2 {
+      @extend .#{$ray-class-prefix}text--h2;
+    }
+
+    h3 {
+      @extend .#{$ray-class-prefix}text--h3;
+    }
+
+    h4 {
+      @extend .#{$ray-class-prefix}text--h4;
+    }
+
+    h5 {
+      @extend .#{$ray-class-prefix}text--h5;
+    }
+
+    h6 {
+      @extend .#{$ray-class-prefix}text--h6;
+    }
+
+    blockquote {
+      @extend .#{$ray-class-prefix}blockquote;
+    }
+
+    small {
+      @extend .#{$ray-class-prefix}text--body-small;
     }
   }
 }

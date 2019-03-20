@@ -40,7 +40,7 @@ export default class ComponentCode extends React.Component {
 
     return (
       <div className="component-variation">
-        <h2 className="ray-h5">{name}</h2>
+        <h2 className="ray-text--h2">{name}</h2>
 
         <ComponentExample
           codepenSlug={codepen}

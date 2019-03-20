@@ -7,7 +7,7 @@ storiesOf('Fieldset', module).add('default', () => (
       maxWidth: '400px'
     }}
   >
-    <h2 className="ray-h2">User Information</h2>
+    <h2 className="ray-text--h2">User Information</h2>
     <div className="ray-form-item">
       <div className="ray-text-field">
         <input

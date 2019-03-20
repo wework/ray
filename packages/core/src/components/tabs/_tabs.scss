@@ -5,7 +5,7 @@ $tabs-border-size: 1px;
   display: flex;
 
   &__item {
-    @extend .#{$ray-class-prefix}p3;
+    @extend .#{$ray-class-prefix}text--body-large;
     display: block;
     cursor: pointer;
     color: $ray-color-blue-50;
