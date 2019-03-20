@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.2.9...ray-website-gatsby@0.3.0) (2019-03-20)
+
+
+### Features
+
+* **typography:** better typography naming conventions ([#62](https://github.com/weconnect/ray-website/issues/62)) ([59c439d](https://github.com/weconnect/ray-website/commit/59c439d)), closes [#39](https://github.com/weconnect/ray-website/issues/39)
+
+
+
+
+
 ## [0.2.9](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.2.8...ray-website-gatsby@0.2.9) (2019-03-20)
 
 

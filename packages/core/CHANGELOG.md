@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.27...@wework/ray-core@0.2.0) (2019-03-20)
+
+
+### Features
+
+* **typography:** better typography naming conventions ([#62](https://github.com/WeConnect/ray/issues/62)) ([59c439d](https://github.com/WeConnect/ray/commit/59c439d)), closes [#39](https://github.com/WeConnect/ray/issues/39)
+
+
+
+
+
 ## [0.1.27](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.1.26...@wework/ray-core@0.1.27) (2019-03-19)
 
 
