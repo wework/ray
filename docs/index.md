@@ -9,7 +9,7 @@ title: Ray
 
 <page-intro>Our goal is to build a collection of beautiful and accessible user-interface resources for WeWork's wide array of web properties. All while maintaining excellent developer experience.</page-intro>
 
-<a href="/getting-started" class="ray-btn ray-btn--primary ray-btn--compact">Get Started &nbsp;→</a> <a href="/about" class="ray-btn ray-btn--secondary ray-btn--compact">About</a>
+<a href="/getting-started" class="ray-button ray-button--primary ray-button--compact">Get Started &nbsp;→</a> <a href="/about" class="ray-button ray-button--secondary ray-button--compact">About</a>
 
 <br />
 

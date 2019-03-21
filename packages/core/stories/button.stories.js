@@ -8,39 +8,42 @@ const Divider = () => (
 storiesOf('Button', module)
   .add('primary', () => (
     <>
-      <button className="ray-btn ray-btn--primary">Click me</button>
+      <button className="ray-button ray-button--primary">Click me</button>
       <Divider />
       <a
         href="https://wework.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="ray-btn ray-btn--primary"
+        className="ray-button ray-button--primary"
       >
         Click me anchor
       </a>
       <Divider />
-      <button className="ray-btn ray-btn--primary" disabled>
+      <button className="ray-button ray-button--primary" disabled>
         Click me disabled
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--primary ray-btn--compact">
+      <button className="ray-button ray-button--primary ray-button--compact">
         Compact click me
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--primary ray-btn--compact" disabled>
+      <button
+        className="ray-button ray-button--primary ray-button--compact"
+        disabled
+      >
         Compact Disabled
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--primary ray-btn--danger">
+      <button className="ray-button ray-button--primary ray-button--danger">
         Click me danger
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--primary ray-btn--compact ray-btn--danger">
+      <button className="ray-button ray-button--primary ray-button--compact ray-button--danger">
         Compact click me danger
       </button>
       <Divider />
       <button
-        className="ray-btn ray-btn--primary ray-btn--compact ray-btn--danger"
+        className="ray-button ray-button--primary ray-button--compact ray-button--danger"
         disabled
       >
         Compact click me danger disabled
@@ -49,39 +52,42 @@ storiesOf('Button', module)
   ))
   .add('secondary', () => (
     <>
-      <button className="ray-btn ray-btn--secondary">Click me</button>
+      <button className="ray-button ray-button--secondary">Click me</button>
       <Divider />
       <a
         href="https://wework.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="ray-btn ray-btn--secondary"
+        className="ray-button ray-button--secondary"
       >
         Click me anchor
       </a>
       <Divider />
-      <button className="ray-btn ray-btn--secondary" disabled>
+      <button className="ray-button ray-button--secondary" disabled>
         Click me disabled
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--secondary ray-btn--compact">
+      <button className="ray-button ray-button--secondary ray-button--compact">
         Compact click me
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--secondary ray-btn--compact" disabled>
+      <button
+        className="ray-button ray-button--secondary ray-button--compact"
+        disabled
+      >
         Compact Disabled
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--secondary ray-btn--danger">
+      <button className="ray-button ray-button--secondary ray-button--danger">
         Click me danger
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--secondary ray-btn--compact ray-btn--danger">
+      <button className="ray-button ray-button--secondary ray-button--compact ray-button--danger">
         Compact click me danger
       </button>
       <Divider />
       <button
-        className="ray-btn ray-btn--secondary ray-btn--compact ray-btn--danger"
+        className="ray-button ray-button--secondary ray-button--compact ray-button--danger"
         disabled
       >
         Compact click me danger disabled
@@ -90,39 +96,42 @@ storiesOf('Button', module)
   ))
   .add('tertiary', () => (
     <>
-      <button className="ray-btn ray-btn--tertiary">Click me</button>
+      <button className="ray-button ray-button--tertiary">Click me</button>
       <Divider />
       <a
         href="https://wework.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="ray-btn ray-btn--tertiary"
+        className="ray-button ray-button--tertiary"
       >
         Click me anchor
       </a>
       <Divider />
-      <button className="ray-btn ray-btn--tertiary ray-btn--compact">
+      <button className="ray-button ray-button--tertiary ray-button--compact">
         Compact click me
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--tertiary" disabled>
+      <button className="ray-button ray-button--tertiary" disabled>
         Disabled
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--tertiary ray-btn--compact" disabled>
+      <button
+        className="ray-button ray-button--tertiary ray-button--compact"
+        disabled
+      >
         Compact disabled
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--tertiary ray-btn--danger">
+      <button className="ray-button ray-button--tertiary ray-button--danger">
         Click me danger
       </button>
       <Divider />
-      <button className="ray-btn ray-btn--tertiary ray-btn--compact ray-btn--danger">
+      <button className="ray-button ray-button--tertiary ray-button--compact ray-button--danger">
         Compact click me danger
       </button>
       <Divider />
       <button
-        className="ray-btn ray-btn--tertiary ray-btn--compact ray-btn--danger"
+        className="ray-button ray-button--tertiary ray-button--compact ray-button--danger"
         disabled
       >
         Compact click me danger disabled

@@ -185,7 +185,7 @@ storiesOf('Text Field', module)
               </div>
             </div>
 
-            <button className="ray-btn ray-btn--primary">Submit</button>
+            <button className="ray-button ray-button--primary">Submit</button>
           </div>
         </div>
       </div>
@@ -453,7 +453,7 @@ storiesOf('Text Field', module)
               </div>
             </div>
 
-            <button className="ray-btn ray-btn--compact ray-btn--primary">
+            <button className="ray-button ray-button--compact ray-button--primary">
               Submit
             </button>
           </div>

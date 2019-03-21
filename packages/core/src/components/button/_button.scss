@@ -1,18 +1,18 @@
 @import '../../global/mixins/exports';
 
 @include exports('ray-button') {
-  $ray-btn-border-radius: $ray-border-radius;
+  $ray-button-border-radius: $ray-border-radius;
 
-  .#{$ray-class-prefix}btn {
+  .#{$ray-class-prefix}button {
     font-family: inherit;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
     display: inline-block;
     border: $ray-border-width solid $ray-color-blue-50;
-    border-radius: $ray-btn-border-radius;
+    border-radius: $ray-button-border-radius;
     cursor: pointer;
-    padding: $ray-btn-v-spacing $ray-btn-h-spacing;
+    padding: $ray-button-v-spacing $ray-button-h-spacing;
     white-space: nowrap;
     text-align: center;
     vertical-align: bottom;
@@ -32,15 +32,15 @@
     }
 
     &--pull-left {
-      margin-left: -($ray-btn-h-spacing + $ray-border-width);
+      margin-left: -($ray-button-h-spacing + $ray-border-width);
     }
 
     &--pull-right {
-      margin-right: -($ray-btn-h-spacing + $ray-border-width);
+      margin-right: -($ray-button-h-spacing + $ray-border-width);
     }
   }
 
-  .#{$ray-class-prefix}btn--primary {
+  .#{$ray-class-prefix}button--primary {
     background-color: $ray-color-blue-50;
     color: $ray-color-white;
 
@@ -54,7 +54,7 @@
       border-color: $ray-color-blue-70;
     }
 
-    &.#{$ray-class-prefix}btn--danger {
+    &.#{$ray-class-prefix}button--danger {
       background-color: $ray-color-red-50;
       border-color: $ray-color-red-50;
 
@@ -82,7 +82,7 @@
     }
   }
 
-  .#{$ray-class-prefix}btn--secondary {
+  .#{$ray-class-prefix}button--secondary {
     color: $ray-color-blue-50;
     background-color: $ray-color-white;
 
@@ -94,7 +94,7 @@
       background-color: $ray-color-blue-20;
     }
 
-    &.#{$ray-class-prefix}btn--danger {
+    &.#{$ray-class-prefix}button--danger {
       border-color: $ray-color-red-50;
       color: $ray-color-red-50;
 
@@ -120,21 +120,21 @@
     }
   }
 
-  .#{$ray-class-prefix}btn--compact {
-    padding: $ray-btn-v-spacing-compact $ray-btn-h-spacing-compact;
+  .#{$ray-class-prefix}button--compact {
+    padding: $ray-button-v-spacing-compact $ray-button-h-spacing-compact;
     line-height: 1;
     height: auto;
 
-    &.#{$ray-class-prefix}btn--pull-left {
-      margin-left: -($ray-btn-h-spacing-compact + $ray-border-width);
+    &.#{$ray-class-prefix}button--pull-left {
+      margin-left: -($ray-button-h-spacing-compact + $ray-border-width);
     }
 
-    &.#{$ray-class-prefix}btn--pull-right {
-      margin-right: -($ray-btn-h-spacing-compact + $ray-border-width);
+    &.#{$ray-class-prefix}button--pull-right {
+      margin-right: -($ray-button-h-spacing-compact + $ray-border-width);
     }
   }
 
-  .#{$ray-class-prefix}btn--tertiary {
+  .#{$ray-class-prefix}button--tertiary {
     color: $ray-color-blue-50;
     background-color: transparent;
     border-color: transparent;
@@ -147,7 +147,7 @@
       color: $ray-color-blue-70;
     }
 
-    &.#{$ray-class-prefix}btn--danger {
+    &.#{$ray-class-prefix}button--danger {
       color: $ray-color-red-50;
 
       &:hover {

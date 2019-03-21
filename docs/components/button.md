@@ -27,12 +27,12 @@ status: Experimental
 
 ## Modifiers
 
-Use these modifiers with `.ray-btn` class.
+Use these modifiers with `.ray-button` class.
 
-| Selector            | Description                                   |
-| ------------------- | --------------------------------------------- |
-| .ray-btn--primary   | Selector for applying primary button styles   |
-| .ray-btn--secondary | Selector for applying secondary button styles |
-| .ray-btn--danger    | Selector for applying danger button styles    |
-| .ray-btn--tertiary  | Selector for applying tertiary button styles  |
-| .ray-btn--compact   | Selector for applying compact button styles   |
+| Selector               | Description                                   |
+| ---------------------- | --------------------------------------------- |
+| .ray-button--primary   | Selector for applying primary button styles   |
+| .ray-button--secondary | Selector for applying secondary button styles |
+| .ray-button--danger    | Selector for applying danger button styles    |
+| .ray-button--tertiary  | Selector for applying tertiary button styles  |
+| .ray-button--compact   | Selector for applying compact button styles   |

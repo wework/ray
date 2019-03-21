@@ -86,13 +86,13 @@ storiesOf('Card', module)
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
-        <button className="ray-btn ray-btn--primary ray-btn--compact">
+        <button className="ray-button ray-button--primary ray-button--compact">
           Sign Up Now
         </button>
-        <button className="ray-btn ray-btn--secondary ray-btn--compact">
+        <button className="ray-button ray-button--secondary ray-button--compact">
           Learn More
         </button>
-        <button className="ray-btn ray-btn--tertiary ray-btn--compact">
+        <button className="ray-button ray-button--tertiary ray-button--compact">
           Share
         </button>
       </div>
@@ -111,7 +111,7 @@ storiesOf('Card', module)
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
-        <button className="ray-btn ray-btn--tertiary ray-btn--pull-left ray-btn--compact">
+        <button className="ray-button ray-button--tertiary ray-button--pull-left ray-button--compact">
           Share
         </button>
       </div>

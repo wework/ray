@@ -31,7 +31,7 @@ export default class PageHeader extends React.Component {
                 <h1 className="ray-text--h1">{title}</h1>
                 {githubPath && (
                   <a
-                    className="ray-btn ray-btn--tertiary ray-btn--pull-right"
+                    className="ray-button ray-button--tertiary ray-button--pull-right"
                     href={githubPath}
                     target="_blank"
                     rel="noopener noreferrer"

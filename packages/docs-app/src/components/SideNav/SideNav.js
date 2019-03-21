@@ -49,7 +49,7 @@ export default class SideNav extends React.Component {
     return (
       <>
         <button
-          className="side-nav--mobile-toggle ray-btn ray-btn--tertiary"
+          className="side-nav--mobile-toggle ray-button ray-button--tertiary"
           onClick={this.props.toggleNav}
         >
           {this.props.open ? '╳' : '☰'}

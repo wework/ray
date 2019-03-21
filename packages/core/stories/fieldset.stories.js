@@ -66,6 +66,6 @@ storiesOf('Fieldset', module).add('default', () => (
       </div>
     </div>
 
-    <button className="ray-btn ray-btn--primary">Submit</button>
+    <button className="ray-button ray-button--primary">Submit</button>
   </form>
 ));
