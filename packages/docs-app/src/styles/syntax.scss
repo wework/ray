@@ -49,10 +49,6 @@ pre[class*='language-'] {
   background-color: white;
 }
 
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
-}
-
 /* Inline code */
 :not(pre) > code[class*='language-'] {
   padding: 0.2em;
@@ -78,6 +74,7 @@ pre[class*='language-'] {
 .token.attr-value {
   color: #e3116c;
 }
+
 .token.punctuation,
 .token.operator {
   color: #393a34; /* no highlight */

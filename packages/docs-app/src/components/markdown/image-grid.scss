@@ -63,6 +63,7 @@
       width: calc(33% - 1rem);
     }
   }
+
   > div:first-child:nth-last-child(8),
   > div:first-child:nth-last-child(8) ~ div {
     @include breakpoint('600px') {

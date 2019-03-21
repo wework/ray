@@ -37,7 +37,8 @@
     "jest": "24.1.0",
     "lerna": "3.13.1",
     "lint-staged": "8.1.4",
-    "prettier": "1.16.4"
+    "prettier": "1.16.4",
+    "stylelint": "^9.10.1"
   },
   "scripts": {
     "dev": "lerna run dev --parallel",
@@ -60,6 +61,10 @@
     }
   },
   "lint-staged": {
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "git add"
+    ],
     "*.{js,json,scss,css,md,html}": [
       "prettier --write",
       "git add"

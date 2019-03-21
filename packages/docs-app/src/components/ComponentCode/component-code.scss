@@ -100,32 +100,6 @@
   }
 }
 
-.component-toolbar__switcher {
-  display: flex;
-  align-items: center;
-  border-left: 1px solid $code-border;
-  height: 100%;
-  padding-left: 1rem;
-
-  .bx--form-item {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  .bx--radio-button__label {
-    color: $ray-color-text-medium;
-  }
-
-  .bx--radio-button-group {
-    margin-top: 0;
-  }
-
-  .radioButtonWrapper:last-child {
-    padding-left: 1rem;
-    border-left: 1px solid $code-border;
-  }
-}
-
 .component-variation {
   margin-top: 3rem;
 }
