@@ -28,6 +28,48 @@ const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
+    h1: function h1({ children, ...props }) {
+      return (
+        <h1 {...props} className="ray-text--h1">
+          {children}
+        </h1>
+      );
+    },
+    h2: function h2({ children, ...props }) {
+      return (
+        <h2 {...props} className="ray-text--h2">
+          {children}
+        </h2>
+      );
+    },
+    h3: function h3({ children, ...props }) {
+      return (
+        <h3 {...props} className="ray-text--h3">
+          {children}
+        </h3>
+      );
+    },
+    h4: function h4({ children, ...props }) {
+      return (
+        <h4 {...props} className="ray-text--h4">
+          {children}
+        </h4>
+      );
+    },
+    h5: function h5({ children, ...props }) {
+      return (
+        <h5 {...props} className="ray-text--h5">
+          {children}
+        </h5>
+      );
+    },
+    h6: function h6({ children, ...props }) {
+      return (
+        <h6 {...props} className="ray-text--h6">
+          {children}
+        </h6>
+      );
+    },
     p: function p({ children }) {
       return <p className="ray-text--body">{children}</p>;
     },
