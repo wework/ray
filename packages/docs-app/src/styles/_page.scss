@@ -109,6 +109,8 @@ button,
 
   @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     margin: $ray-spacing-2xl 0;
+    // subtract with of side nav
+    width: calc(100% - 300px);
   }
 }
 
