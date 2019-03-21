@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.2...@wework/ray-core@0.2.3) (2019-03-21)
+
+
+### Bug Fixes
+
+* button naming convention ([#68](https://github.com/WeConnect/ray/issues/68)) ([27d160c](https://github.com/WeConnect/ray/commit/27d160c))
+
+
+
+
+
 ## [0.2.2](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.1...@wework/ray-core@0.2.2) (2019-03-21)
 
 
