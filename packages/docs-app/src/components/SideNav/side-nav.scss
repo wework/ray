@@ -24,6 +24,12 @@
   transition: left 0.15s ease;
   padding: 4rem 0;
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
   &--open {
     left: 0;
   }

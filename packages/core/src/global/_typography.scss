@@ -3,79 +3,76 @@
 @mixin ray-display-1 {
   font-size: 4rem;
   line-height: 5.5rem;
+  margin: 0 0 2rem;
 }
 
 @mixin ray-display-2 {
   font-size: 3rem;
   line-height: 4rem;
+  margin: 0 0 2rem;
 }
 
 @mixin ray-h1 {
   font-size: 2.5rem;
   line-height: 3.5rem;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 @mixin ray-h2 {
   font-size: 2rem;
   line-height: 2.75rem;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 @mixin ray-h3 {
   font-size: 1.5rem;
   line-height: 2.25rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
 @mixin ray-h4 {
   font-size: 1.25rem;
   line-height: 2rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
 @mixin ray-h5 {
   font-size: 1rem;
   line-height: 1.75rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
 @mixin ray-h6 {
   font-size: 0.875rem;
   line-height: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
 @mixin ray-body {
   font-size: 1rem;
   line-height: 1.75rem;
+  margin: 0 0 1rem;
 }
 
 @mixin ray-body-large {
   font-size: 1.25rem;
   line-height: 2rem;
+  margin: 0 0 1rem;
 }
 
 @mixin ray-body-small {
   font-size: 0.875rem;
   line-height: 1.5rem;
+  margin: 0 0 0.75rem;
 }
 
 @mixin ray-body-x-small {
   font-size: 0.75rem;
   line-height: 1.25rem;
+  margin: 0 0 0.5rem;
 }
 
 @include exports('ray-typography') {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-  }
-
   .#{$ray-class-prefix}text--display-1 {
     @include ray-display-1;
   }
@@ -142,17 +139,6 @@
     @include ray-h6;
   }
 
-  p {
-    font-weight: 400;
-    margin: 0;
-  }
-
-  p {
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-  }
-
   .#{$ray-class-prefix}text--body-large {
     @include ray-body;
 
@@ -193,10 +179,30 @@
     font-weight: 400;
     font-family: $ray-font-stack-mono;
     color: $ray-color-text-medium;
+    margin: 0;
 
     &::before {
       content: '\2014\00A0';
     }
+  }
+
+  ul,
+  ol {
+    margin: 0.75rem 0;
+    padding-left: 2rem;
+
+    ul,
+    ol {
+      margin: 0 0 0.25rem 0;
+    }
+  }
+
+  ul li {
+    list-style-type: circle;
+  }
+
+  ol {
+    list-style-type: decimal;
   }
 
   .#{$ray-class-prefix}running-text {
@@ -239,20 +245,6 @@
 
     small {
       @extend .#{$ray-class-prefix}text--body-small;
-    }
-
-    ul,
-    ol {
-      margin: 0.75rem 0;
-      padding-left: 2rem;
-    }
-
-    ul li {
-      list-style-type: circle;
-    }
-
-    ol li {
-      list-style-type: decimal;
     }
 
     blockquote {
