@@ -54,6 +54,10 @@
       border-color: $ray-color-blue-70;
     }
 
+    &:active {
+      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+    }
+
     &.#{$ray-class-prefix}button--danger {
       background-color: $ray-color-red-50;
       border-color: $ray-color-red-50;
@@ -66,6 +70,10 @@
       &:focus {
         background-color: $ray-color-red-70;
         border-color: $ray-color-red-70;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 3px transparentize($ray-color-red-50, 0.75);
       }
 
       &[disabled] {
@@ -94,6 +102,10 @@
       background-color: $ray-color-blue-20;
     }
 
+    &:active {
+      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+    }
+
     &.#{$ray-class-prefix}button--danger {
       border-color: $ray-color-red-50;
       color: $ray-color-red-50;
@@ -104,6 +116,10 @@
 
       &:focus {
         background-color: $ray-color-red-20;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 3px transparentize($ray-color-red-50, 0.75);
       }
 
       &[disabled] {
