@@ -20,6 +20,7 @@ module.exports = {
         except: ['first-nested'],
         ignore: ['after-comment']
       }
-    ]
+    ],
+    'property-blacklist': ['transition']
   }
 };

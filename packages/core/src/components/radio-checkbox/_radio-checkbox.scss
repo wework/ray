@@ -21,7 +21,6 @@
         width: $ray-radio-checkbox-size;
         height: $ray-radio-checkbox-size;
         position: relative;
-        transition: box-shadow 0.15s ease;
         display: inline-block;
         margin-right: 1rem;
         // centers the input with the first line of text in the label
@@ -107,7 +106,6 @@
   .#{$ray-class-prefix}radio__label {
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    transition: box-shadow 0.15s ease;
 
     &:focus {
       outline: 0;
