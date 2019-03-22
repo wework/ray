@@ -50,12 +50,12 @@
     }
 
     &:focus {
-      background-color: $ray-color-blue-70;
-      border-color: $ray-color-blue-70;
+      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
     }
 
     &:active {
-      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+      border-color: $ray-color-blue-70;
+      background-color: $ray-color-blue-70;
     }
 
     &.#{$ray-class-prefix}button--danger {
@@ -99,11 +99,11 @@
     }
 
     &:focus {
-      background-color: $ray-color-blue-20;
+      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
     }
 
     &:active {
-      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+      background-color: $ray-color-blue-20;
     }
 
     &.#{$ray-class-prefix}button--danger {
@@ -157,10 +157,15 @@
 
     &:hover {
       color: $ray-color-blue-60;
+      background-color: $ray-color-gray-02;
     }
 
     &:focus {
-      color: $ray-color-blue-70;
+      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+    }
+
+    &:active {
+      background-color: $ray-color-gray-10;
     }
 
     &.#{$ray-class-prefix}button--danger {
@@ -171,7 +176,7 @@
       }
 
       &:focus {
-        color: $ray-color-red-70;
+        box-shadow: 0 0 0 3px transparentize($ray-color-red-50, 0.75);
       }
 
       &[disabled] {
