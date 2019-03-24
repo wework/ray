@@ -13,6 +13,6 @@ title: Ray
 
 <br />
 
-> #### Question?
+> **Question?**
 >
 > Please don't hesitate to [submit an issue](https://github.com/WeConnect/ray/issues/new), or join the slack channel [#ray-design-system](https://wework.slack.com/messages/CFLL3QWQ5). We are here to help.
