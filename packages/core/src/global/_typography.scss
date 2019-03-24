@@ -188,22 +188,22 @@
     }
   }
 
-  ul,
-  ol {
+  .#{$ray-class-prefix}list {
     margin: 0.75rem 0;
     padding-left: 2rem;
 
+    // nested lists
     ul,
     ol {
       margin: 0 0 0.25rem 0;
     }
   }
 
-  ul li {
+  ul.#{$ray-class-prefix}list {
     list-style-type: circle;
   }
 
-  ol {
+  ol.#{$ray-class-prefix}list {
     list-style-type: decimal;
   }
 

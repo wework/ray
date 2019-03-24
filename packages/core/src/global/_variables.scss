@@ -7,7 +7,8 @@ $ray-font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
 $ray-font-stack-mono: 'Apercu Mono', 'Consolas', 'Bitstream Vera Sans Mono',
   'Courier New', Courier, monospace;
 $ray-base-font-size: 16px;
-$ray-assign-typography-styles-natively: false !default;
+
+$ray-assign-typography-styles-natively: true !default;
 
 $ray-css-reset: true !default;
 $ray-css-normalize: true !default;
