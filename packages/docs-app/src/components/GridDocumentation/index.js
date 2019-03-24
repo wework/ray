@@ -11,11 +11,13 @@ function GridDocumentation() {
 
   return (
     <div>
-      <h4 className="ray-h4">Live Example</h4>
+      <h4 className="ray-text--h4">Live Example</h4>
       <p>Try resizing your browser!</p>
       <GridExample />
 
-      <h4 className="ray-h4">Breakpoints</h4>
+      <h4 className="ray-text--h4" style={{ marginTop: '3rem' }}>
+        Breakpoints
+      </h4>
 
       <Breakpoints breakpoints={breakpoints} />
     </div>
