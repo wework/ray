@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.8](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.7...@wework/ray-core@0.2.8) (2019-03-24)
+
+
+### Bug Fixes
+
+* add class to style buttons as links ([#75](https://github.com/WeConnect/ray/issues/75)) ([eeaedbf](https://github.com/WeConnect/ray/commit/eeaedbf))
+
+
+
+
+
 ## [0.2.7](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.6...@wework/ray-core@0.2.7) (2019-03-24)
 
 

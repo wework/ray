@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.11](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.10...ray-website-gatsby@0.3.11) (2019-03-24)
+
+
+### Bug Fixes
+
+* add class to style buttons as links ([#75](https://github.com/weconnect/ray-website/issues/75)) ([eeaedbf](https://github.com/weconnect/ray-website/commit/eeaedbf))
+
+
+
+
+
 ## [0.3.10](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.9...ray-website-gatsby@0.3.10) (2019-03-24)
 
 **Note:** Version bump only for package ray-website-gatsby
