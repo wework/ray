@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.6...@wework/ray-core@0.2.7) (2019-03-24)
+
+
+### Bug Fixes
+
+* **button:** adds subtle active state ([238febd](https://github.com/WeConnect/ray/commit/238febd))
+* active states ([5fb51e1](https://github.com/WeConnect/ray/commit/5fb51e1))
+* **button:** adds subtle active state ([#71](https://github.com/WeConnect/ray/issues/71)) ([298ceb2](https://github.com/WeConnect/ray/commit/298ceb2))
+* default typography styles ([#74](https://github.com/WeConnect/ray/issues/74)) ([8488b99](https://github.com/WeConnect/ray/commit/8488b99))
+
+
+
+
+
 ## [0.2.6](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.5...@wework/ray-core@0.2.6) (2019-03-22)
 
 
