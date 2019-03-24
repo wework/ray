@@ -75,6 +75,14 @@ Add a `<footer class="ray-blockquote__footer">` to identify a source.
     >
 </component>
 
+## Links
+
+<component
+    component="typography"
+    variation="typography-links"
+    >
+</component>
+
 # Font Family
 
 <p class="ray-text--body-large">Limiting font-families, a tight type scale, and content limits will keep it tight.</p>

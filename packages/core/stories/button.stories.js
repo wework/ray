@@ -137,4 +137,5 @@ storiesOf('Button', module)
         Compact click me danger disabled
       </button>
     </>
-  ));
+  ))
+  .add('as link', () => <button className="ray-link">button as link</button>);

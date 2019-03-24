@@ -53,4 +53,10 @@ storiesOf('Typography', module)
         feedback too!
       </p>
     </React.Fragment>
+  ))
+  .add('anchor', () => (
+    // eslint-disable-next-line no-script-url
+    <a href="javascript:;" rel="noopener noreferrer">
+      Valar morghulis
+    </a>
   ));
