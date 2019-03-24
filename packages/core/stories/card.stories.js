@@ -20,7 +20,7 @@ storiesOf('Card', module)
 
       <div className="ray-card__content">
         <h4 className="ray-text--h4">Nicolas Boer 399</h4>
-        <p className="ray-copy5">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
@@ -39,7 +39,7 @@ storiesOf('Card', module)
     >
       <div className="ray-card__content">
         <h4 className="ray-text--h4">Nicolas Boer 399</h4>
-        <p className="ray-copy5">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
@@ -62,7 +62,7 @@ storiesOf('Card', module)
     >
       <div className="ray-card__content">
         <h4 className="ray-text--h4">Nicolas Boer 399</h4>
-        <p className="ray-copy5">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
@@ -82,7 +82,7 @@ storiesOf('Card', module)
 
       <div className="ray-card__content">
         <h4 className="ray-text--h4">Nicolas Boer 399</h4>
-        <p className="ray-copy5">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
@@ -107,7 +107,7 @@ storiesOf('Card', module)
     >
       <div className="ray-card__content">
         <h4 className="ray-text--h4">Nicolas Boer 399</h4>
-        <p className="ray-copy5">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
