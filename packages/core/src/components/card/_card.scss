@@ -22,6 +22,10 @@
         text-decoration: none;
       }
 
+      &:focus {
+        box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+      }
+
       &:hover {
         &::after {
           border-color: $ray-color-blue-50;
