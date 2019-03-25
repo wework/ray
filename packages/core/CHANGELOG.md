@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.10](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.9...@wework/ray-core@0.2.10) (2019-03-25)
+
+
+### Bug Fixes
+
+* **grid:** update desktop max width to 1440 ([#78](https://github.com/WeConnect/ray/issues/78)) ([139e3f6](https://github.com/WeConnect/ray/commit/139e3f6))
+
+
+
+
+
 ## [0.2.9](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.8...@wework/ray-core@0.2.9) (2019-03-25)
 
 
