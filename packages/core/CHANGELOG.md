@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.16](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.15...@wework/ray-core@0.2.16) (2019-03-25)
+
+
+### Bug Fixes
+
+* add active state color effects to icons ([#81](https://github.com/WeConnect/ray/issues/81)) ([4c6de1c](https://github.com/WeConnect/ray/commit/4c6de1c))
+
+
+
+
+
 ## [0.2.15](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.14...@wework/ray-core@0.2.15) (2019-03-25)
 
 **Note:** Version bump only for package @wework/ray-core
