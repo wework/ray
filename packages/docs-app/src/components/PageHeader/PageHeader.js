@@ -36,7 +36,8 @@ export default class PageHeader extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                      marginLeft: 'auto'
+                      marginLeft: 'auto',
+                      alignSelf: 'flex-start'
                     }}
                   >
                     ✍ Edit this page
