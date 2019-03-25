@@ -156,6 +156,11 @@
   line-height: 1;
   top: 20px;
   border-radius: 2px;
+  fill: currentColor;
+
+  path {
+    fill: currentColor;
+  }
 }
 @mixin icon-support($class) {
   &__icon--left {
