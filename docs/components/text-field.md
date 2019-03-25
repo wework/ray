@@ -33,7 +33,7 @@ title: Text Field
     >
 </component>
 
-## Modifiers
+## Adding hints
 
 Use these modifiers with `.ray-form-item__hint` class.
 
@@ -41,6 +41,8 @@ Use these modifiers with `.ray-form-item__hint` class.
 | ------------------------------- | ----------------------------------------- |
 | `.ray-form-item__hint--success` | Selector for applying hint success styles |
 | `.ray-form-item__hint--error`   | Selector for applying hint error styles   |
+
+## Modifiers for Text Fields and Text Areas
 
 Use these modifiers with `.ray-text-field` or `.ray-text-area` class.
 
