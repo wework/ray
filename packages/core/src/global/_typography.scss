@@ -293,6 +293,11 @@
     blockquote {
       @extend .#{$ray-class-prefix}blockquote;
     }
+
+    ul,
+    ol {
+      @extend .#{$ray-class-prefix}list;
+    }
   }
 
   @if global-variable-exists(ray-assign-typography-styles-natively) ==
