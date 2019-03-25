@@ -184,6 +184,7 @@
     }
 
     &[disabled] {
+      background-color: transparent;
       color: rgba($ray-color-blue-50, 0.4);
     }
   }
