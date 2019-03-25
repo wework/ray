@@ -33,7 +33,7 @@ Javascripts:
 
 ```js
 /* Your JavaScript file */
-import { Select } from '@wework/ray-core';
+import { Select } from '@wework/ray-core/scss/ray-core';
 Select.create(...)
 ```
 
