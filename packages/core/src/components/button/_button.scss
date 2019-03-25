@@ -58,6 +58,12 @@
       border-color: $ray-color-blue-70;
     }
 
+    &[disabled] {
+      background-color: $ray-color-blue-20;
+      border-color: $ray-color-blue-20;
+      color: rgba($ray-color-white, 0.4);
+    }
+
     &.#{$ray-class-prefix}button--danger {
       background-color: $ray-color-red-50;
       border-color: $ray-color-red-50;
@@ -81,12 +87,6 @@
         border-color: $ray-color-red-20;
         color: rgba($ray-color-white, 0.4);
       }
-    }
-
-    &[disabled] {
-      background-color: $ray-color-blue-20;
-      border-color: $ray-color-blue-20;
-      color: rgba($ray-color-white, 0.4);
     }
   }
 
@@ -186,5 +186,29 @@
     &[disabled] {
       color: rgba($ray-color-blue-50, 0.4);
     }
+  }
+}
+
+.#{$ray-class-prefix}button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  color: currentColor;
+  position: relative;
+  top: -1px;
+
+  &:last-child {
+    margin-left: 0.5rem;
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  svg,
+  path {
+    color: currentColor;
+    fill: currentColor;
   }
 }
