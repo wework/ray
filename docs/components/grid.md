@@ -16,6 +16,9 @@ Ray features three primary breakpoints: desktop, tablet, and mobile. Our grid sy
   <div class="ray-grid__inner">
     <div class="ray-grid__cell">I'm a cell</div>
     <div class="ray-grid__cell--span-4">I'm another cell that is 4 columns</div>
+    <div class="ray-grid__cell--span-full">
+      I'm another cell that will always span full width
+    </div>
   </div>
 </div>
 ```
@@ -24,7 +27,9 @@ Ray features three primary breakpoints: desktop, tablet, and mobile. Our grid sy
 | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | ray-grid                                                    | Mandatory, for the layout grid element                                                                |
 | ray-grid--align-<left\|right>                               | Optional, align the grid to the left or right side of the container (default: center)                 |
+| ray-grid--justify-<left\|center\|right>                     | Optional, align the cells of the grid (default: left, does not affect nested grids                    |
 | ray-grid\_\_inner                                           | Mandatory, for wrapping grid cells (_must_ be child of `.ray-grid`)                                   |
 | ray-grid\_\_cell                                            | Mandatory, for the layout grid cell                                                                   |
 | ray-grid\_\_cell--align-<top\|middle\|bottom>               | Optional, align the cell to the top, middle, or center of the containing grid                         |
 | ray-grid\_\_cell--span-<NUMBER_OF_COLUMNS>-<TYPE_OF_DEVICE> | Optional, specifies the number of columns the cell spans on a type of device (desktop, tablet, phone) |
+| ray-grid\_\_cell--span-full                                 | Optional, specify that the cell should span the full width of the grid                                |

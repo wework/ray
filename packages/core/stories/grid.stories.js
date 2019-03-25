@@ -2,39 +2,58 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { range } from 'lodash';
 
+/* eslint-disable react/prop-types */
+
+function SampleContent(props) {
+  return (
+    <div
+      {...props}
+      style={{
+        minHeight: '4vh',
+        backgroundColor: 'hsl(255, 100%, 75%)'
+      }}
+    />
+  );
+}
+
+function RayGridInnerWithBackground(props) {
+  return (
+    <div
+      {...props}
+      className="ray-grid__inner"
+      style={{ backgroundColor: 'hsl(0, 100%, 75%)', ...props.style }}
+    />
+  );
+}
+
 storiesOf('Grid', module)
   .add('default', () => (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
       <div className="ray-grid">
-        <div
-          className="ray-grid__inner"
-          style={{ backgroundColor: 'hsl(0, 100%, 75%)' }}
-        >
+        <RayGridInnerWithBackground>
           {range(12).map(n => (
-            <div className="ray-grid__cell--span-1" key={n}>
-              <div
-                style={{
-                  minHeight: '4vh',
-                  backgroundColor: 'hsl(255, 100%, 75%)'
-                }}
-              >
-                {n + 1}
-              </div>
+            <div className="ray-grid__cell" key={n}>
+              <SampleContent>{n + 1}</SampleContent>
             </div>
           ))}
-        </div>
+          <div className="ray-grid__cell">
+            <div
+              style={{
+                minHeight: '4vh',
+                backgroundColor: 'hsl(255, 100%, 75%)'
+              }}
+            >
+              yo
+            </div>
+          </div>
+        </RayGridInnerWithBackground>
       </div>
     </div>
   ))
   .add('overlap', () => (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
       <div className="ray-grid">
-        <div
-          className="ray-grid__inner"
-          style={{
-            position: 'relative'
-          }}
-        >
+        <RayGridInnerWithBackground>
           <div
             className="ray-grid__cell--span-4"
             style={{
@@ -49,7 +68,8 @@ storiesOf('Grid', module)
             <div
               style={{
                 backgroundColor: '#fff',
-                padding: '1rem'
+                padding: '1rem',
+                width: '100%'
               }}
             >
               <pre
@@ -85,7 +105,24 @@ storiesOf('Grid', module)
               }}
             />
           </div>
-        </div>
+        </RayGridInnerWithBackground>
+      </div>
+    </div>
+  ))
+  .add('sample utils', () => (
+    <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
+      <div className="ray-grid ray-grid--justify-center">
+        <RayGridInnerWithBackground>
+          <div className="ray-grid__cell">
+            <SampleContent />
+          </div>
+          <div className="ray-grid__cell--span-full">
+            <SampleContent />
+          </div>
+          <div className="ray-grid__cell">
+            <SampleContent />
+          </div>
+        </RayGridInnerWithBackground>
       </div>
     </div>
   ));

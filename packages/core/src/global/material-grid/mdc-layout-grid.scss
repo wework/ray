@@ -77,6 +77,12 @@
           $gutter
         );
 
+        &--span-full {
+          $max-columns: map-get($mdc-layout-grid-columns, $size);
+
+          @include mdc-layout-grid-cell($size, $max-columns, $gutter);
+        }
+
         @for $span
           from 1
           through map-get($mdc-layout-grid-columns, $upper-breakpoint)
@@ -122,6 +128,24 @@
   .#{$mdc-prefix}grid--align-right {
     margin-right: 0;
     margin-left: auto;
+  }
+
+  .#{$mdc-prefix}grid--justify-left {
+    > .#{$mdc-prefix}grid__inner {
+      justify-content: left;
+    }
+  }
+
+  .#{$mdc-prefix}grid--justify-center {
+    > .#{$mdc-prefix}grid__inner {
+      justify-content: center;
+    }
+  }
+
+  .#{$mdc-prefix}grid--justify-right {
+    > .#{$mdc-prefix}grid__inner {
+      justify-content: right;
+    }
   }
   // postcss-bem-linter: end
 }

@@ -24,37 +24,46 @@ function GridDocumentation() {
   );
 }
 
+function SampleContent(props) {
+  return (
+    <div
+      {...props}
+      style={{
+        minHeight: '4vh',
+        backgroundColor: 'hsl(255, 100%, 75%)'
+      }}
+    />
+  );
+}
+
+function RayGridInnerWithBackground(props) {
+  return (
+    <div
+      {...props}
+      className="ray-grid__inner"
+      style={{ backgroundColor: 'hsl(0, 100%, 75%)', ...props.style }}
+    />
+  );
+}
 function GridExample() {
   return (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
       <div className="ray-grid">
-        <div
-          className="ray-grid__inner"
-          style={{ backgroundColor: 'hsl(0, 100%, 75%)' }}
-        >
+        <RayGridInnerWithBackground>
           {range(12).map(n => (
             <div className="ray-grid__cell--span-1" key={n}>
-              <div
-                style={{
-                  minHeight: '4vh',
-                  backgroundColor: 'hsl(255, 100%, 75%)'
-                }}
-              >
-                span-1
-              </div>
+              <SampleContent>cell</SampleContent>
             </div>
           ))}
           <div className="ray-grid__cell">
-            <div
-              style={{
-                minHeight: '4vh',
-                backgroundColor: 'hsl(255, 100%, 75%)'
-              }}
-            >
-              span
-            </div>
+            <SampleContent>cell</SampleContent>
           </div>
-        </div>
+          <div className="ray-grid__cell--span-full">
+            <SampleContent>
+              {"I'm a cell that will always span full width"}
+            </SampleContent>
+          </div>
+        </RayGridInnerWithBackground>
       </div>
     </div>
   );
