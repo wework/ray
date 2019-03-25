@@ -40,7 +40,8 @@ export default class PageHeader extends React.Component {
                       alignSelf: 'flex-start'
                     }}
                   >
-                    ✍ Edit this page
+                    Edit this page
+                    <span className="ray-button__icon">✍</span>
                   </a>
                 )}
               </div>
