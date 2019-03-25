@@ -38,3 +38,7 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
+
+@function rem($px, $base-font-size: 16px) {
+  @return ($px / $base-font-size) * 1rem;
+}

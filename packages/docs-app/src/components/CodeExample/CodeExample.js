@@ -57,10 +57,13 @@ class CodeExample extends Component {
       'code-example__raw-html--expanded': this.state.expandedCode
     });
 
-    const expandBtnClass = classnames({
-      'code-example__expand': this.state.showBtn,
-      'code-example__expand--hidden': !this.state.showBtn
-    });
+    const expandBtnClass = classnames(
+      'ray-button ray-button--tertiary ray-button--compact',
+      {
+        'code-example__expand': this.state.showBtn,
+        'code-example__expand--hidden': !this.state.showBtn
+      }
+    );
 
     const expandCodeBtnText = this.state.expandedCode
       ? 'Show less code'
