@@ -16,6 +16,7 @@ $ray-css-normalize: true !default;
 
 $ray-border-radius: 0.25rem;
 $ray-border-width: 1px;
+$ray-box-shadow-focus-state: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
 
 $ray-color-text-light: $ray-color-gray-30;
 $ray-color-text-medium: $ray-color-gray-60;

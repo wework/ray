@@ -50,7 +50,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+      box-shadow: $ray-box-shadow-focus-state;
     }
 
     &:active {
@@ -99,7 +99,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+      box-shadow: $ray-box-shadow-focus-state;
     }
 
     &:active {
@@ -160,7 +160,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+      box-shadow: $ray-box-shadow-focus-state;
     }
 
     &:active {

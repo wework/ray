@@ -32,7 +32,7 @@
 
         &::before {
           outline: 0;
-          box-shadow: 0 0 0 0.25rem $ray-color-blue-20;
+          box-shadow: $ray-box-shadow-focus-state;
         }
       }
     }
@@ -48,7 +48,7 @@
         + .#{$ray-class-prefix}radio__label {
           &::before {
             outline: 0;
-            box-shadow: 0 0 0 0.25rem $ray-color-blue-20;
+            box-shadow: $ray-box-shadow-focus-state;
           }
         }
       }
@@ -105,11 +105,11 @@
    */
   .#{$ray-class-prefix}radio__label {
     border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: none;
 
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 0.25rem $ray-color-blue-20;
+      box-shadow: $ray-box-shadow-focus-state;
     }
 
     &::before {
