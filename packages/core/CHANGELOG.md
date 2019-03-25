@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.12](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.11...@wework/ray-core@0.2.12) (2019-03-25)
+
+
+### Bug Fixes
+
+* **button:** remove hover effect on disabled ([#82](https://github.com/WeConnect/ray/issues/82)) ([d9c1b78](https://github.com/WeConnect/ray/commit/d9c1b78))
+
+
+
+
+
 ## [0.2.11](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.10...@wework/ray-core@0.2.11) (2019-03-25)
 
 
