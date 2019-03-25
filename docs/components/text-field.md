@@ -19,7 +19,28 @@ title: Text Field
     >
 </component>
 
+<component
+    name="Text field with hints"
+    component="text-field"
+    variation="text-field-with-hint"
+    >
+</component>
+
+<component
+    name="Text field with icons"
+    component="text-field"
+    variation="text-field-with-icon"
+    >
+</component>
+
 ## Modifiers
+
+Use these modifiers with `.ray-form-item__hint` class.
+
+| Selector                        | Description                               |
+| ------------------------------- | ----------------------------------------- |
+| .ray-form-item\_\_hint--success | Selector for applying hint success styles |
+| .ray-form-item\_\_hint--error   | Selector for applying hint error styles   |
 
 Use these modifiers with `.ray-text-field` or `.ray-text-area` class.
 
@@ -31,35 +52,6 @@ Use these modifiers with `.ray-text-field` or `.ray-text-area` class.
 | .ray-{text-field\|text-area}--disabled  | Selector for applying disabled styles             |
 | .ray-{text-field\|text-area}--error     | Selector for applying error styles                |
 | .ray-{text-field\|text-area}--success   | Selector for applying success styles              |
-
-## Hints
-
-To be used adjacent to any form item.
-
-<component
-    name="With hints"
-    component="text-field"
-    variation="text-field-with-hint"
-    >
-</component>
-
-## Icons
-
-<component
-    name="Text field with icons"
-    component="text-field"
-    variation="text-field-with-icon"
-    >
-</component>
-
-### Modifiers
-
-Use these modifiers with `.ray-form-item__hint` class.
-
-| Selector                        | Description                               |
-| ------------------------------- | ----------------------------------------- |
-| .ray-form-item\_\_hint--success | Selector for applying hint success styles |
-| .ray-form-item\_\_hint--error   | Selector for applying hint error styles   |
 
 ## JavaScript
 

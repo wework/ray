@@ -163,17 +163,6 @@
   }
 }
 @mixin icon-support($class) {
-  &__icon--left {
-    @include icon;
-    left: $ray-field-h-spacing;
-  }
-
-  &__icon--right {
-    @include icon;
-    // add spacing to compensate for the
-    right: $ray-field-h-spacing;
-  }
-
   &--with-icon-left {
     .#{$ray-class-prefix}#{$class}__input,
     .#{$ray-class-prefix}#{$class}__label {
@@ -192,10 +181,51 @@
     }
   }
 
+  &--with-icon-left,
+  &--with-icon-right {
+    fill: $ray-color-text-medium;
+
+    path {
+      fill: $ray-color-text-medium;
+    }
+  }
+
+  &__icon--left {
+    @include icon;
+    left: $ray-field-h-spacing;
+  }
+
+  &__icon--right {
+    @include icon;
+    right: $ray-field-h-spacing;
+  }
+
   &--compact {
     .#{$ray-class-prefix}#{$class}__icon--left,
     .#{$ray-class-prefix}#{$class}__icon--right {
       top: $ray-field-v-spacing-compact;
+    }
+  }
+
+  &--active {
+    .#{$ray-class-prefix}#{$class}__icon--left,
+    .#{$ray-class-prefix}#{$class}__icon--right {
+      fill: $ray-color-blue-50;
+
+      path {
+        fill: $ray-color-blue-50;
+      }
+    }
+  }
+
+  &--disabled {
+    .#{$ray-class-prefix}#{$class}__icon--left,
+    .#{$ray-class-prefix}#{$class}__icon--right {
+      fill: rgba($ray-color-gray-60, 0.4);
+
+      path {
+        fill: rgba($ray-color-gray-60, 0.4);
+      }
     }
   }
 }
