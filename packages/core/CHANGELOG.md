@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.9](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.8...@wework/ray-core@0.2.9) (2019-03-25)
+
+
+### Bug Fixes
+
+* **grid:** add some utils ([#77](https://github.com/WeConnect/ray/issues/77)) ([0fa998f](https://github.com/WeConnect/ray/commit/0fa998f))
+
+
+
+
+
 ## [0.2.8](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.7...@wework/ray-core@0.2.8) (2019-03-24)
 
 

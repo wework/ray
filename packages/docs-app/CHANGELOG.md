@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.12](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.11...ray-website-gatsby@0.3.12) (2019-03-25)
+
+
+### Bug Fixes
+
+* **grid:** add some utils ([#77](https://github.com/weconnect/ray-website/issues/77)) ([0fa998f](https://github.com/weconnect/ray-website/commit/0fa998f))
+
+
+
+
+
 ## [0.3.11](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.10...ray-website-gatsby@0.3.11) (2019-03-24)
 
 
