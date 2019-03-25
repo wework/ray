@@ -39,19 +39,19 @@ Use these modifiers with `.ray-form-item__hint` class.
 
 | Selector                        | Description                               |
 | ------------------------------- | ----------------------------------------- |
-| .ray-form-item\_\_hint--success | Selector for applying hint success styles |
-| .ray-form-item\_\_hint--error   | Selector for applying hint error styles   |
+| `.ray-form-item__hint--success` | Selector for applying hint success styles |
+| `.ray-form-item__hint--error`   | Selector for applying hint error styles   |
 
 Use these modifiers with `.ray-text-field` or `.ray-text-area` class.
 
-| Selector                                | Description                                       |
-| --------------------------------------- | ------------------------------------------------- |
-| .ray-{text-field\|text-area}--compact   | Selector for applying compact styles              |
-| .ray-{text-field\|text-area}--active    | Selector for applying active/focus styles         |
-| .ray-{text-field\|text-area}--has-value | Selector for applying styles when field has value |
-| .ray-{text-field\|text-area}--disabled  | Selector for applying disabled styles             |
-| .ray-{text-field\|text-area}--error     | Selector for applying error styles                |
-| .ray-{text-field\|text-area}--success   | Selector for applying success styles              |
+| Selector                                                    | Description                                       |
+| ----------------------------------------------------------- | ------------------------------------------------- |
+| `.ray-text-field--compact`<br>`.ray-text-area--compact`     | Selector for applying compact styles              |
+| `.ray-text-field--active`<br>`.ray-text-area--active`       | Selector for applying active/focus styles         |
+| `.ray-text-field--has-value`<br>`.ray-text-area--has-value` | Selector for applying styles when field has value |
+| `.ray-text-field--disabled`<br>`.ray-text-area--disabled`   | Selector for applying disabled styles             |
+| `.ray-text-field--error`<br>`.ray-text-area--error`         | Selector for applying error styles                |
+| `.ray-text-field--success`<br>`.ray-text-area--success`     | Selector for applying success styles              |
 
 ## JavaScript
 

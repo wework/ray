@@ -62,7 +62,7 @@ select.destroy();
 
 Use these modifiers with `.ray-select` class.
 
-| Selector             | Description                                 |
-| -------------------- | ------------------------------------------- |
-| .ray-select--compact | Selector for applying compact select styles |
-| .ray-select--error   | Selector for applying error styles          |
+| Selector               | Description                                 |
+| ---------------------- | ------------------------------------------- |
+| `.ray-select--compact` | Selector for applying compact select styles |
+| `.ray-select--error`   | Selector for applying error styles          |

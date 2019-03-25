@@ -23,6 +23,6 @@ title: Card
 
 Use these modifiers with `.ray-card` class.
 
-| Selector        | Description                                 |
-| --------------- | ------------------------------------------- |
-| .ray-card--link | Selector for applying link and hover styles |
+| Selector          | Description                                 |
+| ----------------- | ------------------------------------------- |
+| `.ray-card--link` | Selector for applying link and hover styles |

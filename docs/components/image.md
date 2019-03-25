@@ -30,10 +30,10 @@ title: Image
 
 Use these modifiers with `.ray-image` or `.ray-bg` classes.
 
-| Selector                 | Description                            |
-| ------------------------ | -------------------------------------- |
-| .ray-{image\|bg}--3by4   | Selector for 3:4 aspect ratio          |
-| .ray-{image\|bg}--16by9  | Selector for 16:9 aspect ratio         |
-| .ray-{image\|bg}--4by3   | Selector for 4:3 aspect ratio          |
-| .ray-{image\|bg}--1by1   | Selector for 1:1 aspect ratio          |
-| .ray-{image\|bg}--cinema | Selector for 2.4:1 cinema aspect ratio |
+| Selector                                  | Description                            |
+| ----------------------------------------- | -------------------------------------- |
+| `.ray-image--3by4`<br>`.ray-bg--3by4`     | Selector for 3:4 aspect ratio          |
+| `.ray-image--16by9`<br>`.ray-bg--16by9`   | Selector for 16:9 aspect ratio         |
+| `.ray-image--4by3`<br>`.ray-bg--4by3`     | Selector for 4:3 aspect ratio          |
+| `.ray-image--1by1`<br>`.ray-bg--1by1`     | Selector for 1:1 aspect ratio          |
+| `.ray-image--cinema`<br>`.ray-bg--cinema` | Selector for 2.4:1 cinema aspect ratio |
