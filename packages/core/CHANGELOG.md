@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.10...@wework/ray-core@0.2.11) (2019-03-25)
+
+
+### Bug Fixes
+
+* icon color on form fields ([#79](https://github.com/WeConnect/ray/issues/79)) ([9f1452a](https://github.com/WeConnect/ray/commit/9f1452a))
+
+
+
+
+
 ## [0.2.10](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.9...@wework/ray-core@0.2.10) (2019-03-25)
 
 
