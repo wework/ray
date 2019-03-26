@@ -16,71 +16,89 @@
 
 @mixin ray-h1 {
   font-size: 2.5rem;
+  font-weight: 600;
   line-height: 3.5rem;
   margin: 0 0 1.5rem;
 }
 
 @mixin ray-h2 {
   font-size: 2rem;
+  font-weight: 600;
   line-height: 2.75rem;
   margin: 0 0 1.5rem;
 }
 
 @mixin ray-h3 {
   font-size: 1.5rem;
+  font-weight: 600;
   line-height: 2.25rem;
   margin: 0 0 1rem;
 }
 
 @mixin ray-h4 {
   font-size: 1.25rem;
+  font-weight: 600;
   line-height: 2rem;
   margin: 0 0 1rem;
 }
 
 @mixin ray-h5 {
   font-size: 1rem;
+  font-weight: 600;
   line-height: 1.75rem;
   margin: 0 0 1rem;
 }
 
 @mixin ray-h6 {
   font-size: 0.875rem;
+  font-weight: 600;
   line-height: 1.5rem;
   margin: 0 0 1rem;
 }
 
 @mixin ray-body {
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.75rem;
   margin: 0 0 1rem;
 }
 
 @mixin ray-body-large {
   font-size: 1.25rem;
+  font-weight: 400;
   line-height: 2rem;
   margin: 0 0 1rem;
 }
 
 @mixin ray-body-small {
   font-size: 0.875rem;
+  font-weight: 400;
   line-height: 1.5rem;
   margin: 0 0 0.75rem;
 }
 
 @mixin ray-body-x-small {
   font-size: 0.75rem;
+  font-weight: 400;
   line-height: 1.25rem;
   margin: 0 0 0.5rem;
 }
 
 @include exports('ray-typography') {
   .#{$ray-class-prefix}text--display-1 {
-    @include ray-display-1;
+    @include ray-h1;
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      @include ray-display-1;
+    }
   }
 
   .#{$ray-class-prefix}text--display-2 {
-    @include ray-display-2;
+    @include ray-h1;
+
+    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+      @include ray-display-2;
+    }
   }
 
   .#{$ray-class-prefix}text--h1,
@@ -94,43 +112,19 @@
   }
 
   .#{$ray-class-prefix}text--h1 {
-    @include ray-h3;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      @include ray-h2;
-    }
-
-    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      @include ray-h1;
-    }
+    @include ray-h1;
   }
 
   .#{$ray-class-prefix}text--h2 {
-    @include ray-h4;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      @include ray-h3;
-    }
-
-    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      @include ray-h2;
-    }
+    @include ray-h2;
   }
 
   .#{$ray-class-prefix}text--h3 {
-    @include ray-h4;
-
-    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      @include ray-h3;
-    }
+    @include ray-h3;
   }
 
   .#{$ray-class-prefix}text--h4 {
-    @include ray-h5;
-
-    @media (min-width: map-get($ray-grid-breakpoints, lg)) {
-      @include ray-h4;
-    }
+    @include ray-h4;
   }
 
   .#{$ray-class-prefix}text--h5 {
@@ -142,11 +136,7 @@
   }
 
   .#{$ray-class-prefix}text--body-large {
-    @include ray-body;
-
-    @media (min-width: map-get($ray-grid-breakpoints, md)) {
-      @include ray-body-large;
-    }
+    @include ray-body-large;
   }
 
   .#{$ray-class-prefix}text--body {
@@ -178,6 +168,7 @@
 
   .#{$ray-class-prefix}blockquote__footer {
     @include ray-body-small;
+
     font-weight: 400;
     font-family: $ray-font-stack-mono;
     color: $ray-color-text-medium;
@@ -232,9 +223,9 @@
     color: $ray-link-color;
     text-decoration: none;
     appearance: none;
+    background: none;
     border: 0;
     outline: 0;
-    background: none;
     padding: 0;
     display: inline;
     cursor: pointer;
@@ -255,7 +246,7 @@
     h4,
     h5,
     h6 {
-      margin: 3rem 0 1rem;
+      margin-top: 3rem;
     }
 
     h1 {
