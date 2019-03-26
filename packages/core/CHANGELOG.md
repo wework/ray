@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.19](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.18...@wework/ray-core@0.2.19) (2019-03-26)
+
+
+### Bug Fixes
+
+* **typography:** update responsive scaling ([#83](https://github.com/WeConnect/ray/issues/83)) ([fff302c](https://github.com/WeConnect/ray/commit/fff302c))
+
+
+
+
+
 ## [0.2.18](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.17...@wework/ray-core@0.2.18) (2019-03-26)
 
 
