@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.17](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.16...@wework/ray-core@0.2.17) (2019-03-26)
+
+
+### Bug Fixes
+
+* **text-field:** focus onmousedown of label for more responsive feel ([#85](https://github.com/WeConnect/ray/issues/85)) ([2802100](https://github.com/WeConnect/ray/commit/2802100))
+
+
+
+
+
 ## [0.2.16](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.15...@wework/ray-core@0.2.16) (2019-03-25)
 
 
