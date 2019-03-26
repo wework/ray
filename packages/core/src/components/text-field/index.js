@@ -24,7 +24,9 @@ class _InputComponent {
     this._inputElement = this._root.querySelector(
       `.${this.constructor.cssClasses.EL__INPUT}`
     );
-
+    this._labelElement = this._root.querySelector(
+      `.${this.constructor.cssClasses.EL__LABEL}`
+    );
     if (!this._inputElement) {
       throw new Error(
         `TextField must have an input element with a class of .${
@@ -41,7 +43,13 @@ class _InputComponent {
   _bindEventListeners() {
     this._inputElement.addEventListener('focus', this.onFocus);
     this._inputElement.addEventListener('blur', this.onBlur);
+    this._labelElement.addEventListener('mousedown', this.onMousedown);
   }
+
+  onMousedown = event => {
+    event.preventDefault();
+    this._inputElement.focus();
+  };
 
   value() {
     // Current value of the TextField
@@ -71,6 +79,7 @@ class _InputComponent {
     // attached. An example of this might be deregistering a resize event from the window object.
     this._inputElement.removeEventListener('focus', this.onFocus);
     this._inputElement.removeEventListener('blur', this.onBlur);
+    this._labelElement.removeEventListener('mousedown', this.onMousedown);
 
     this.constructor.instances.delete(this._root);
   }

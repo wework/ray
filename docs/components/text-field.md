@@ -14,7 +14,7 @@ title: Text Field
 
 <component
     name="Text area"
-    component="text-field"
+    component="text-area"
     variation="text-area"
     >
 </component>

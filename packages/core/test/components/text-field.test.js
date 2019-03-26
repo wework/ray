@@ -75,6 +75,19 @@ describe('TextField', () => {
     textField.destroy();
   });
 
+  test('it focuses to input on mouse down of label', () => {
+    const { textField, textFieldEl } = setupTest();
+
+    textFieldEl
+      .querySelector(`${initSelectorString}__label`)
+      .dispatchEvent(new Event('mousedown'));
+
+    expect(textFieldEl.querySelector(`${initSelectorString}__input`)).toBe(
+      document.activeElement
+    );
+    textField.destroy();
+  });
+
   test('it removes active class on blur', () => {
     const { textField, textFieldEl } = setupTest();
 

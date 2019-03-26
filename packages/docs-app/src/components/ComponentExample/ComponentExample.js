@@ -7,7 +7,7 @@ import bg from '../../content/global/images/bg.svg';
 
 const nameMap = {
   'text-field': 'TextField',
-  'text-area': 'TextField'
+  'text-area': 'TextArea'
 };
 
 class ComponentExample extends Component {
