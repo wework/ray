@@ -154,9 +154,10 @@
   height: 1rem;
   position: absolute;
   line-height: 1;
-  top: 20px;
-  border-radius: 2px;
+  text-align: center;
   fill: currentColor;
+  // optical correction, subtract 1px
+  top: $ray-field-v-spacing - 1px;
 
   path {
     fill: currentColor;
