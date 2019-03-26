@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.18](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.17...@wework/ray-core@0.2.18) (2019-03-26)
+
+
+### Bug Fixes
+
+* **icon:** subtract 1 pickle from top position ([e893403](https://github.com/WeConnect/ray/commit/e893403))
+
+
+
+
+
 ## [0.2.17](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.16...@wework/ray-core@0.2.17) (2019-03-26)
 
 
