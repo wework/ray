@@ -17,7 +17,7 @@
     "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o public/docs",
-    "netlify:build": "gatsby build && cp -r static/* ../../.out && cp -r public/* ../../.out"
+    "netlify:build": "gatsby build && cp -r static/* ../../.out/ && cp -r public/* ../../.out/"
   },
   "dependencies": {
     "@babel/core": "7.3.4",
@@ -28,7 +28,7 @@
     "custom-event": "^1.0.1",
     "dotenv": "^6.1.0",
     "flatpickr": "^4.5.2",
-    "gatsby": "^2.2.11",
+    "gatsby": "^2.1.23",
     "gatsby-image": "2.0.20",
     "gatsby-plugin-manifest": "^2.0.10",
     "gatsby-plugin-react-helmet": "3.0.2",
@@ -49,9 +49,7 @@
     "markdown-loader": "^4.0.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
-    "react": "^16.8.5",
     "react-copy-to-clipboard": "^5.0.1",
-    "react-dom": "^16.8.5",
     "react-ga": "^2.5.5",
     "react-helmet": "^5.2.0",
     "react-router": "^4.3.1",
@@ -71,6 +69,8 @@
     "html-loader": "^0.5.5",
     "lodash": "4.17.11",
     "node-sass": "^4.10.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "sass-loader": "^7.1.0",
     "storybook-readme": "^3.3.0"
   },
