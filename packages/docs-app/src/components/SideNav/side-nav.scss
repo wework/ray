@@ -1,6 +1,6 @@
 @mixin nav-h-padding {
-  padding-left: map-get($ray-container-gutters, sm);
-  padding-right: map-get($ray-container-gutters, sm);
+  padding-left: map-get($ray-layout-grid-default-gutter, phone);
+  padding-right: map-get($ray-layout-grid-default-gutter, phone);
 
   @media (min-width: map-get($ray-grid-breakpoints, lg)) {
     padding-left: $ray-spacing-xl;
@@ -21,7 +21,7 @@
   max-width: 300px;
   width: 100%;
   border-right: 1px solid $ray-color-gray-10;
-  transition: left 0.15s ease;
+  transition: left 0.15s ease; // stylelint-disable-line property-blacklist
   padding: 4rem 0;
 
   ul {
@@ -45,7 +45,7 @@
 .side-nav--mobile-toggle {
   position: fixed;
   top: 1rem;
-  left: calc(#{map-get($ray-container-gutters, sm)} - 0.5rem);
+  left: calc(#{map-get($ray-layout-grid-default-gutter, phone)} - 0.5rem);
   cursor: pointer;
   z-index: 7001;
   padding: 0.5rem;

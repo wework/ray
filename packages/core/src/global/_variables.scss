@@ -1,4 +1,5 @@
 @import './functions';
+@import './colors';
 @import './spacing/spacing';
 
 $ray-class-prefix: 'ray-';
@@ -6,7 +7,7 @@ $ray-font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif;
 $ray-font-stack-mono: 'Apercu Mono', 'Consolas', 'Bitstream Vera Sans Mono',
   'Courier New', Courier, monospace;
-$ray-base-font-size: 16px;
+$ray-base-font-size: rem(16px);
 
 $ray-assign-typography-styles-natively: true !default;
 $ray-link-color: $ray-color-blue-50;
@@ -15,50 +16,96 @@ $ray-css-reset: true !default;
 $ray-css-normalize: true !default;
 
 $ray-border-radius: 0.25rem;
-$ray-border-width: 1px;
-$ray-box-shadow-focus-state: 0 0 0 3px transparentize($ray-color-blue-50, 0.75);
+$ray-border-width: rem(1px);
+$ray-box-shadow-focus-state: 0 0 0 rem(3px)
+  transparentize($ray-color-blue-50, 0.75);
 
 $ray-color-text-light: $ray-color-gray-30;
 $ray-color-text-medium: $ray-color-gray-60;
 $ray-color-text-dark: $ray-color-black;
-$ray-field-v-spacing: 20px;
-$ray-field-v-spacing-compact: 12px;
-$ray-field-h-spacing: 12px;
+$ray-field-v-spacing: rem(20px);
+$ray-field-v-spacing-compact: rem(12px);
+$ray-field-h-spacing: rem(12px);
 $ray-field-label-size: 1rem;
-$ray-field-label-size-focus: 12px;
-$ray-field-height: 56px;
-$ray-field-height-compact: 40px;
-$ray-field-font-size: 16px;
-$ray-field-line-height: 28px;
+$ray-field-label-size-focus: rem(12px);
+$ray-field-height: rem(56px);
+$ray-field-height-compact: rem(40px);
+$ray-field-font-size: rem(16px);
+$ray-field-line-height: rem(28px);
 $ray-field-icon-width: 1rem;
 
-$ray-button-v-spacing: 20px - $ray-border-width;
-$ray-button-v-spacing-compact: 12px - $ray-border-width;
-$ray-button-h-spacing: 24px - $ray-border-width;
-$ray-button-h-spacing-compact: 12px - $ray-border-width;
+$ray-button-v-spacing: rem(20px) - $ray-border-width;
+$ray-button-v-spacing-compact: rem(12px) - $ray-border-width;
+$ray-button-h-spacing: rem(24px) - $ray-border-width;
+$ray-button-h-spacing-compact: rem(12px) - $ray-border-width;
 
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
-
+// @todo: rename to desktop, tablet, and phone
 $ray-grid-breakpoints: (
-  sm: 0px,
+  lg: 1195px,
   md: 600px,
-  lg: 1195px
+  sm: 0px
 );
 
-$ray-container-max-widths: (
-  sm: 100%,
-  md: 100%,
-  lg: 1440px
-);
+$ray-layout-grid-breakpoints: (
+  desktop: 1195px,
+  tablet: 600px,
+  phone: 0px
+) !default;
 
-$ray-container-gutters: (
-  sm: 1rem,
-  md: 3rem,
-  lg: 3.75rem
-);
+$ray-layout-grid-columns: (
+  desktop: 12,
+  tablet: 8,
+  phone: 4
+) !default;
 
-@include _assert-ascending($ray-grid-breakpoints, '$ray-grid-breakpoints');
-@include _assert-starts-at-zero($ray-grid-breakpoints);
+$ray-layout-grid-default-margin: (
+  desktop: 60px,
+  tablet: 48px,
+  phone: 16px
+) !default;
+
+$ray-layout-grid-default-gutter: (
+  desktop: 24px,
+  tablet: 24px,
+  phone: 16px
+) !default;
+
+$ray-layout-grid-column-width: (
+  desktop: 72px,
+  tablet: 72px,
+  phone: 72px
+) !default;
+
+$ray-layout-grid-max-width: (
+  desktop: 1440px,
+  tablet: 100%,
+  phone: 100%
+) !default;
+
+$ray-layout-grid-default-column-span: 4 !default;
+
+:export {
+  @each $key, $value in $ray-layout-grid-breakpoints {
+    ray-breakpoint-#{$key}: $value;
+  }
+
+  @each $key, $value in $ray-layout-grid-columns {
+    ray-grid-breakpoint-columns-#{$key}: $value;
+  }
+
+  @each $key, $value in $ray-layout-grid-default-margin {
+    ray-grid-margin-#{$key}: $value;
+  }
+
+  @each $key, $value in $ray-layout-grid-default-gutter {
+    ray-grid-gutter-#{$key}: $value;
+  }
+
+  @each $key, $value in $ray-layout-grid-column-width {
+    ray-grid-column-width-#{$key}: $value;
+  }
+
+  @each $key, $value in $ray-layout-grid-max-width {
+    ray-grid-max-width-#{$key}: $value;
+  }
+}

@@ -1,6 +1,6 @@
 @include exports('ray-radio-checkbox') {
-  $ray-radio-checkbox-border-width: 3px;
-  $ray-radio-checkbox-size: 16px;
+  $ray-radio-checkbox-border-width: rem(3px);
+  $ray-radio-checkbox-size: rem(16px);
 
   .#{$ray-class-prefix}radio,
   .#{$ray-class-prefix}checkbox {

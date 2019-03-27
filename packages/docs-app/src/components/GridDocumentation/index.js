@@ -1,7 +1,7 @@
 import React from 'react';
 import { pickBy, range } from 'lodash';
 
-import * as gridVars from '../../../../core/src/global/material-grid/_variables.scss';
+import * as gridVars from '../../../../core/src/global/_variables.scss';
 
 /* eslint-disable react/prop-types */
 function GridDocumentation() {
