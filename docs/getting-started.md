@@ -26,14 +26,14 @@ We encourage the use of the Sass source files as they give access to Ray variabl
 
 ```css
 /* Your Sass file */
-@import '@wework/ray-core';
+@import '@wework/ray-core/scss/ray-core';
 ```
 
 Javascripts:
 
 ```js
 /* Your JavaScript file */
-import { Select } from '@wework/ray-core/scss/ray-core';
+import { Select } from '@wework/ray-core';
 Select.create(...)
 ```
 
