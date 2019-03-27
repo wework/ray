@@ -3,13 +3,11 @@ import { storiesOf } from '@storybook/react';
 
 import getPlaceholderURL from './util/placeholder';
 
+/* eslint-disable no-script-url */
 storiesOf('Card', module)
-  .add('card, link, image on top', () => (
-    <a
-      href="https://wework.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="ray-card ray-card--link"
+  .add('card, with image on top', () => (
+    <div
+      className="ray-card"
       style={{
         maxWidth: '480px'
       }}
@@ -19,26 +17,29 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <h4 className="ray-text--h4">Nicolas Boer 399</h4>
+        <div className="ray-text--body-large">
+          <a href="javascript:;">Better Together</a>
+        </div>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
       </div>
-    </a>
+    </div>
   ))
-  .add('card, link, image on bottom', () => (
-    <a
-      href="https://wework.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="ray-card ray-card--link"
+  .add('card, with image on bottom', () => (
+    <div
+      className="ray-card"
       style={{
         maxWidth: '480px'
       }}
     >
       <div className="ray-card__content">
-        <h4 className="ray-text--h4">Nicolas Boer 399</h4>
+        <div className="ray-text--body-large">
+          <a href="javascript:;">Better Together</a>
+        </div>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
@@ -48,10 +49,10 @@ storiesOf('Card', module)
       <div className="ray-card__image ray-image ray-image--16by9">
         <img src={getPlaceholderURL('800x450')} />
       </div>
-    </a>
+    </div>
   ))
-  .add('card, link, no image', () => (
-    <a
+  .add('card, no image', () => (
+    <div
       href="https://wework.com"
       target="_blank"
       rel="noopener noreferrer"
@@ -61,13 +62,16 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <h4 className="ray-text--h4">Nicolas Boer 399</h4>
+        <div className="ray-text--body-large">
+          <a href="javascript:;">Better Together</a>
+        </div>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
       </div>
-    </a>
+    </div>
   ))
   .add('card, image on top, with buttons', () => (
     <div
@@ -81,37 +85,19 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <h4 className="ray-text--h4">Nicolas Boer 399</h4>
-        <p>
+        <div className="ray-text--body-large">
+          <a href="javascript:;">Better Together</a>
+        </div>
+
+        <p className="ray-text--body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
+
         <button className="ray-button ray-button--primary ray-button--compact">
           Sign Up Now
         </button>
-        <button className="ray-button ray-button--secondary ray-button--compact">
-          Learn More
-        </button>
         <button className="ray-button ray-button--tertiary ray-button--compact">
-          Share
-        </button>
-      </div>
-    </div>
-  ))
-  .add('card, tertiary button', () => (
-    <div
-      className="ray-card"
-      style={{
-        maxWidth: '480px'
-      }}
-    >
-      <div className="ray-card__content">
-        <h4 className="ray-text--h4">Nicolas Boer 399</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          atque minima itaque sint! Doloremque odio quia saepe.
-        </p>
-        <button className="ray-button ray-button--tertiary ray-button--pull-left ray-button--compact">
           Share
         </button>
       </div>
