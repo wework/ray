@@ -157,7 +157,7 @@
   text-align: center;
   fill: currentColor;
   // optical correction, subtract 1px
-  top: $ray-field-v-spacing - 1px;
+  top: $ray-field-v-spacing - rem(1px);
 
   path {
     fill: currentColor;
