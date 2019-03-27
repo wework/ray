@@ -1,6 +1,8 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
+
 import '../stories/styles/index.scss';
+import '../src/global/js/boot';
 
 const req = require.context('../stories', true, /.stories.js$/);
 

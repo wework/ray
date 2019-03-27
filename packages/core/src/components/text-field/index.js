@@ -15,7 +15,9 @@ class _InputComponent {
 
     validateNodeType(target);
 
-    const textFields = [...target.querySelectorAll(options.initSelector)];
+    const textFields = Array.from(
+      target.querySelectorAll(options.initSelector)
+    );
     textFields.forEach(textField => this.create(textField, options));
   }
 

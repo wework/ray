@@ -13,6 +13,10 @@ We encourage consumers of Ray to install via npm or yarn and interface with pack
 
 You will need also need to install the fonts, which can be done via WeWork's CDN. See instructions in the [fonts documentation](/principles/fonts).
 
+### JavaScript
+
+**Note:** For convenience, Ray will automatically instantiate any components that require JavaScript on `DOMContentLoaded`. If components are generated after this event (i.e. client-side rendered), or if they require additional programming, you can use the APIs available on the component level throughtout the documentation.
+
 ### Package
 
 ```bash

@@ -1,4 +1,4 @@
-import Select from './components/select';
-import { TextField, TextArea } from './components/text-field';
+import './global/js/polyfills';
+import './global/js/boot';
 
-export { Select, TextField, TextArea };
+export * from './components';

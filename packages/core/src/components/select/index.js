@@ -25,7 +25,7 @@ class Select {
 
     validateNodeType(target);
 
-    const selects = [...target.querySelectorAll(options.initSelector)];
+    const selects = Array.from(target.querySelectorAll(options.initSelector));
     selects.forEach(select => this.create(select, options));
   }
 
