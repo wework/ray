@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.0...@wework/ray-core@0.3.1) (2019-03-27)
+
+
+### Bug Fixes
+
+* update hover/active states for card border and title ([#86](https://github.com/WeConnect/ray/issues/86)) ([3fcf8b6](https://github.com/WeConnect/ray/commit/3fcf8b6))
+
+
+
+
+
 # [0.3.0](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.19...@wework/ray-core@0.3.0) (2019-03-27)
 
 
