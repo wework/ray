@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.19...@wework/ray-core@0.3.0) (2019-03-27)
+
+
+### Features
+
+* add boot loader for ray components on dom load ([#89](https://github.com/WeConnect/ray/issues/89)) ([66d1560](https://github.com/WeConnect/ray/commit/66d1560))
+
+
+
+
+
 ## [0.2.19](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.2.18...@wework/ray-core@0.2.19) (2019-03-26)
 
 
