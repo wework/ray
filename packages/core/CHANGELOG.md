@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.2...@wework/ray-core@0.3.3) (2019-03-28)
+
+
+### Bug Fixes
+
+* **typography:** removes global a tag outline style ([9f8fb36](https://github.com/WeConnect/ray/commit/9f8fb36))
+
+
+
+
+
 ## [0.3.2](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.1...@wework/ray-core@0.3.2) (2019-03-27)
 
 
