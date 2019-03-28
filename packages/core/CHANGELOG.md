@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.3...@wework/ray-core@0.3.4) (2019-03-28)
+
+
+### Bug Fixes
+
+* **spacing:** updates vertical rythm and adds spacing docs ([#93](https://github.com/WeConnect/ray/issues/93)) ([807c217](https://github.com/WeConnect/ray/commit/807c217))
+
+
+
+
+
 ## [0.3.3](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.2...@wework/ray-core@0.3.3) (2019-03-28)
 
 
