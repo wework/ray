@@ -5,7 +5,7 @@
   "about": {
     "title": "About"
   },
-  "principles": {
+  "foundations": {
     "title": "Principles",
     "children": {
       "colors": {
@@ -16,6 +16,9 @@
       },
       "typography": {
         "title": "Typography"
+      },
+      "spacing": {
+        "title": "Spacing"
       }
     }
   },

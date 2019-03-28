@@ -1,0 +1,35 @@
+.space-example-set {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.space-example {
+  margin-right: 5rem;
+}
+
+.space-example__box {
+  border: 1px solid $ray-color-black;
+}
+
+.space-example__label {
+  position: relative;
+  background-color: $ray-color-blue-50;
+  color: $ray-color-white;
+  display: inline-block;
+  line-height: 1.5;
+  font-family: $ray-font-stack-mono;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  font-size: 0.625rem;
+  padding: 2px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -1rem;
+    height: 1rem;
+    border-left: 1px dashed $ray-color-black;
+  }
+}

@@ -12,18 +12,20 @@ import ComponentCode from '../components/ComponentCode';
 import CodeSnippet from '../components/CodeSnippet';
 import ColorTable from '../components/ColorTable';
 import GridDocumentation from '../components/GridDocumentation';
+import SpaceExample from '../components/SpaceExample';
 
 // Custom Markdown
 import { ul, ol, PageIntro, FlexGroup } from '../components/markdown/Markdown';
 
 const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
 const HEADING_STYLE = {
-  marginTop: '3rem'
+  marginTop: '4rem'
 };
 /* eslint-disable react/prop-types */
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
+    'space-example': SpaceExample,
     h1: function h1({ children, ...props }) {
       return (
         <h1 {...props} style={HEADING_STYLE} className="ray-text--h1">
