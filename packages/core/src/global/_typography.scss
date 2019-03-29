@@ -112,15 +112,27 @@
   }
 
   .#{$ray-class-prefix}text--h1 {
-    @include ray-h1;
+    @include ray-h2;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      @include ray-h1;
+    }
   }
 
   .#{$ray-class-prefix}text--h2 {
-    @include ray-h2;
+    @include ray-h3;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      @include ray-h2;
+    }
   }
 
   .#{$ray-class-prefix}text--h3 {
-    @include ray-h3;
+    @include ray-h4;
+
+    @media (min-width: map-get($ray-grid-breakpoints, md)) {
+      @include ray-h3;
+    }
   }
 
   .#{$ray-class-prefix}text--h4 {
