@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.32](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.31...ray-website-gatsby@0.3.32) (2019-03-29)
+
+**Note:** Version bump only for package ray-website-gatsby
+
+
+
+
+
 ## [0.3.31](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.30...ray-website-gatsby@0.3.31) (2019-03-28)
 
 

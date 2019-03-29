@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.4...@wework/ray-core@0.3.5) (2019-03-29)
+
+
+### Bug Fixes
+
+* add scaling to h1 h2 and h3 ([#98](https://github.com/WeConnect/ray/issues/98)) ([fbf977b](https://github.com/WeConnect/ray/commit/fbf977b))
+
+
+
+
+
 ## [0.3.4](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.3...@wework/ray-core@0.3.4) (2019-03-28)
 
 
