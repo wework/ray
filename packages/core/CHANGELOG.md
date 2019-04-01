@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.8](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.7...@wework/ray-core@0.3.8) (2019-04-01)
+
+
+### Bug Fixes
+
+* **grid:** add css debugger ([#99](https://github.com/WeConnect/ray/issues/99)) ([0c51be8](https://github.com/WeConnect/ray/commit/0c51be8))
+
+
+
+
+
 ## [0.3.7](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.6...@wework/ray-core@0.3.7) (2019-04-01)
 
 

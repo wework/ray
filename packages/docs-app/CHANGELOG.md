@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.35](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.34...ray-website-gatsby@0.3.35) (2019-04-01)
+
+
+### Bug Fixes
+
+* **grid:** add css debugger ([#99](https://github.com/weconnect/ray-website/issues/99)) ([0c51be8](https://github.com/weconnect/ray-website/commit/0c51be8))
+
+
+
+
+
 ## [0.3.34](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.33...ray-website-gatsby@0.3.34) (2019-04-01)
 
 
