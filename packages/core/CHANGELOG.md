@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.6...@wework/ray-core@0.3.7) (2019-04-01)
+
+
+### Bug Fixes
+
+* **grid:** add push modifiers ([#100](https://github.com/WeConnect/ray/issues/100)) ([6b23fd1](https://github.com/WeConnect/ray/commit/6b23fd1))
+
+
+
+
+
 ## [0.3.6](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.5...@wework/ray-core@0.3.6) (2019-03-31)
 
 **Note:** Version bump only for package @wework/ray-core
