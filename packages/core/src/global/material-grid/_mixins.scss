@@ -92,6 +92,22 @@
   margin-right: calc(var(--ray-layout-grid-gutter-#{$size}, #{$gutter}) / 2);
 }
 
+@mixin mdc-layout-grid-cell-push_($size, $span, $gutter) {
+  @if not map-has-key($ray-layout-grid-columns, $size) {
+    @error "Invalid style specified! Choose one of #{map-keys($ray-layout-grid-columns)}";
+  }
+
+  $percent: percentage($span / map-get($ray-layout-grid-columns, $size));
+
+  @if $percent > 100% {
+    $percent: 100%;
+  }
+
+  $margin: var(--ray-layout-grid-gutter-#{$size}, #{$gutter}) / 2;
+
+  margin-left: calc(#{$margin} + #{$percent}) !important;
+}
+
 // Public mixins, meant for developer usage.
 @mixin mdc-layout-grid($size, $margin, $max-width: null) {
   @if not map-has-key($ray-layout-grid-columns, $size) {

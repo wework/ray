@@ -63,6 +63,9 @@ function GridExample() {
               {"I'm a cell that will always span full width"}
             </SampleContent>
           </div>
+          <div className="ray-grid__cell ray-grid__cell--push-2">
+            <SampleContent>{"I'm a cell with a push modifier"}</SampleContent>
+          </div>
         </RayGridInnerWithBackground>
       </div>
     </div>
