@@ -16,9 +16,26 @@ function GridDocumentation() {
       <GridExample />
 
       <h4 className="ray-text--h4" style={{ marginTop: '3rem' }}>
+        Debug Overlay
+      </h4>
+      <p className="ray-text--body">
+        You can enable a visual grid overlay by adding a{' '}
+        <code>ray-grid--debug</code> class name to either the{' '}
+        <code>ray-grid</code> div or any parent, full-width container (ie, html
+        or body). Grid overlay is aware of phone/tablet/desktop breakpoints and
+        will adjust accordingly.
+      </p>
+      <p>
+        <strong>Note:</strong> These classes are not available in the{' '}
+        compiled css output, but are
+        available in the non-minified version as well as the{' '}
+        <code>scss/ray-debug.scss</code> file.
+      </p>
+      <GridDebugExample />
+
+      <h4 className="ray-text--h4" style={{ marginTop: '3rem' }}>
         Breakpoints
       </h4>
-
       <Breakpoints breakpoints={breakpoints} />
     </div>
   );
@@ -45,6 +62,7 @@ function RayGridInnerWithBackground(props) {
     />
   );
 }
+
 function GridExample() {
   return (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
@@ -67,6 +85,22 @@ function GridExample() {
             <SampleContent>{"I'm a cell with a push modifier"}</SampleContent>
           </div>
         </RayGridInnerWithBackground>
+      </div>
+    </div>
+  );
+}
+
+function GridDebugExample() {
+  return (
+    <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
+      <div className="ray-grid ray-grid--debug" style={{ height: '10rem' }}>
+        <div className="ray-grid__inner">
+          {range(12).map(n => (
+            <div className="ray-grid__cell--span-1" key={n}>
+              <SampleContent>cell</SampleContent>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

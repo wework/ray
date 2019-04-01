@@ -1,0 +1,66 @@
+@import '../variables';
+
+/* Grid Debug - Settings */
+:root {
+  --g-columns: var(--ray-layout-grid-columns-phone);
+  --g-gutter: var(--ray-layout-grid-gutter-phone);
+  --g-margin: var(--ray-layout-grid-margin-phone);
+  --g-color: hsla(4, 80%, 72%, 0.35);
+}
+
+@media (min-width: map-get($ray-layout-grid-breakpoints, tablet)) {
+  :root {
+    --g-columns: var(--ray-layout-grid-columns-tablet);
+    --g-gutter: var(--ray-layout-grid-gutter-tablet);
+    --g-margin: var(--ray-layout-grid-margin-tablet);
+  }
+}
+
+@media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
+  :root {
+    --g-columns: var(--ray-layout-grid-columns-desktop);
+    --g-gutter: var(--ray-layout-grid-gutter-desktop);
+    --g-margin: var(--ray-layout-grid-margin-desktop);
+  }
+}
+
+/* Grid Debug - Helper variables */
+:root {
+  --g-repeating-width: calc((100% / var(--g-columns)));
+  --g-column-width: calc((100% / var(--g-columns)) - var(--g-gutter));
+  --g-background-columns: repeating-linear-gradient(
+    to right,
+    var(--g-color),
+    var(--g-color),
+    var(--g-column-width),
+    transparent var(--g-column-width),
+    transparent var(--g-repeating-width)
+  );
+}
+
+.#{$ray-class-prefix}grid--debug {
+  position: relative;
+
+  &.#{$ray-class-prefix}grid::before {
+    right: var(--g-margin) !important;
+    margin-right: calc(-1 * var(--g-gutter)) !important;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    left: var(--g-margin);
+    right: calc(var(--g-margin) + -1 * var(--g-gutter));
+    top: 0;
+    bottom: 0;
+    max-width: calc(
+      #{map-get($ray-layout-grid-max-width, desktop)} - var(--g-margin) * 2 + var(--g-gutter)
+    );
+    margin: 0 auto;
+    background-image: var(--g-background-columns);
+    z-index: 1000;
+    pointer-events: none;
+  }
+}

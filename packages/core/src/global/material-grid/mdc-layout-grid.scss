@@ -25,6 +25,10 @@
 @include exports('ray-grid') {
   :root {
     @each $size in map-keys($ray-layout-grid-columns) {
+      --ray-layout-grid-columns-#{$size}: #{map-get(
+          $ray-layout-grid-columns,
+          $size
+        )};
       --ray-layout-grid-margin-#{$size}: #{map-get(
           $ray-layout-grid-default-margin,
           $size

@@ -5,6 +5,7 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 const del = require('del');
 const rollup = require('rollup');
 const rollupConfig = require('./config/rollup.config');
@@ -24,8 +25,15 @@ gulp.task('clean', () =>
 
 gulp.task('sass:compiled', () => {
   function buildStyles(prod) {
+    const scssSources = ['src/ray-core.scss'];
+
+    if (!prod) {
+      scssSources.push('src/ray-debug.scss');
+    }
+
     return gulp
-      .src('src/ray-core.scss')
+      .src(scssSources)
+      .pipe(concat('ray-core.scss'))
       .pipe(sourcemaps.init())
       .pipe(
         sass({
