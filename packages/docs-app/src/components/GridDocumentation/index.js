@@ -15,7 +15,7 @@ function GridDocumentation() {
       <p>Try resizing your browser!</p>
       <GridExample />
 
-      <h4 className="ray-text--h4" style={{ marginTop: '3rem' }}>
+      <h4 className="ray-text--h4" style={{ marginTop: '4rem' }}>
         Debug Overlay
       </h4>
       <p className="ray-text--body">
@@ -26,14 +26,13 @@ function GridDocumentation() {
         will adjust accordingly.
       </p>
       <p>
-        <strong>Note:</strong> These classes are not available in the{' '}
-        compiled css output, but are
-        available in the non-minified version as well as the{' '}
+        <strong>Note:</strong> These classes are not available in the compiled
+        css output, but are available in the non-minified version as well as the{' '}
         <code>scss/ray-debug.scss</code> file.
       </p>
       <GridDebugExample />
 
-      <h4 className="ray-text--h4" style={{ marginTop: '3rem' }}>
+      <h4 className="ray-text--h4" style={{ marginTop: '4rem' }}>
         Breakpoints
       </h4>
       <Breakpoints breakpoints={breakpoints} />
@@ -92,14 +91,19 @@ function GridExample() {
 
 function GridDebugExample() {
   return (
-    <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
-      <div className="ray-grid ray-grid--debug" style={{ height: '10rem' }}>
-        <div className="ray-grid__inner">
-          {range(12).map(n => (
-            <div className="ray-grid__cell--span-1" key={n}>
-              <SampleContent>cell</SampleContent>
-            </div>
-          ))}
+    <div className="ray-grid ray-grid--debug">
+      <div className="ray-grid__inner">
+        <div className="ray-grid__cell ray-grid__cell--push-2-desktop">
+          <div
+            className="ray-bg ray-bg--16by9"
+            style={{
+              backgroundImage: `url(https://source.unsplash.com/random/1280x720?minimalist)`
+            }}
+          />
+        </div>
+        <div className="ray-grid__cell">
+          <h3 className="ray-text--h3">Better Together</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>
     </div>
