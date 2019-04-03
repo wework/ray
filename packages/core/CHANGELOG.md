@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.11](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.10...@wework/ray-core@0.3.11) (2019-04-03)
+
+
+### Bug Fixes
+
+* **input-label:** for zooms ([#103](https://github.com/WeConnect/ray/issues/103)) ([a42b212](https://github.com/WeConnect/ray/commit/a42b212))
+
+
+
+
+
 ## [0.3.10](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.9...@wework/ray-core@0.3.10) (2019-04-03)
 
 
