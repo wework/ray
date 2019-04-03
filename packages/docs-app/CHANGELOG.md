@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.38](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.37...ray-website-gatsby@0.3.38) (2019-04-03)
+
+
+### Bug Fixes
+
+* dont include scss exports in normal bundle ([#102](https://github.com/weconnect/ray-website/issues/102)) ([b529cd0](https://github.com/weconnect/ray-website/commit/b529cd0))
+
+
+
+
+
 ## [0.3.37](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.36...ray-website-gatsby@0.3.37) (2019-04-02)
 
 **Note:** Version bump only for package ray-website-gatsby

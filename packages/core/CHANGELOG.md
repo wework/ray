@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.10](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.9...@wework/ray-core@0.3.10) (2019-04-03)
+
+
+### Bug Fixes
+
+* dont include scss exports in normal bundle ([#102](https://github.com/WeConnect/ray/issues/102)) ([b529cd0](https://github.com/WeConnect/ray/commit/b529cd0))
+
+
+
+
+
 ## [0.3.9](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.8...@wework/ray-core@0.3.9) (2019-04-02)
 
 **Note:** Version bump only for package @wework/ray-core
