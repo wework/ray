@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.40](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.39...ray-website-gatsby@0.3.40) (2019-04-03)
+
+
+### Bug Fixes
+
+* **color:** add yellow ([#104](https://github.com/weconnect/ray-website/issues/104)) ([090db73](https://github.com/weconnect/ray-website/commit/090db73))
+
+
+
+
+
 ## [0.3.39](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.38...ray-website-gatsby@0.3.39) (2019-04-03)
 
 **Note:** Version bump only for package ray-website-gatsby

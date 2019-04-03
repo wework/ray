@@ -2,7 +2,7 @@
   "name": "ray-website-gatsby",
   "description": "Ray Design System website",
   "private": true,
-  "version": "0.3.39",
+  "version": "0.3.40",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
