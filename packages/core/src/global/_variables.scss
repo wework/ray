@@ -83,29 +83,3 @@ $ray-layout-grid-max-width: (
 ) !default;
 
 $ray-layout-grid-default-column-span: 4 !default;
-
-:export {
-  @each $key, $value in $ray-layout-grid-breakpoints {
-    ray-breakpoint-#{$key}: $value;
-  }
-
-  @each $key, $value in $ray-layout-grid-columns {
-    ray-grid-breakpoint-columns-#{$key}: $value;
-  }
-
-  @each $key, $value in $ray-layout-grid-default-margin {
-    ray-grid-margin-#{$key}: $value;
-  }
-
-  @each $key, $value in $ray-layout-grid-default-gutter {
-    ray-grid-gutter-#{$key}: $value;
-  }
-
-  @each $key, $value in $ray-layout-grid-column-width {
-    ray-grid-column-width-#{$key}: $value;
-  }
-
-  @each $key, $value in $ray-layout-grid-max-width {
-    ray-grid-max-width-#{$key}: $value;
-  }
-}

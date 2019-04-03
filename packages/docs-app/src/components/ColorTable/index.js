@@ -1,6 +1,10 @@
 import React from 'react';
 import Color from 'color';
-import * as colors from '../../../../core/src/global/_colors.scss';
+import * as rayVars from '../../../../core/src/ray-exports.scss';
+
+const colorKeys = Object.keys(rayVars).filter(rayVar =>
+  rayVar.includes('rayColor')
+);
 
 function toKebab(str) {
   return str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase();
@@ -18,8 +22,8 @@ function ColorTable() {
         </tr>
       </thead>
       <tbody>
-        {Object.keys(colors).map(colorKey => {
-          const color = Color(colors[colorKey]);
+        {colorKeys.map(colorKey => {
+          const color = Color(rayVars[colorKey]);
           const textColor = color.isDark() ? 'white' : 'black';
 
           return (
@@ -32,7 +36,7 @@ function ColorTable() {
               <td>
                 <div
                   style={{
-                    backgroundColor: colors[colorKey],
+                    backgroundColor: rayVars[colorKey],
                     display: 'inline-block',
                     padding: '.25rem .5rem',
                     marginRight: '1rem',
