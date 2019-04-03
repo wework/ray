@@ -2970,7 +2970,7 @@
     "@xtuc/long" "4.2.2"
 
 "@wework/ray-core@file:packages/core":
-  version "0.3.7"
+  version "0.3.10"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"

@@ -55,7 +55,10 @@ function ColorTable() {
                     verticalAlign: 'middle'
                   }}
                 >
-                  {color.hsl().string()}
+                  {color
+                    .hsl()
+                    .round()
+                    .string()}
                 </pre>
               </td>
               <td>
