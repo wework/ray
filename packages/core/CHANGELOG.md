@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.13](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.12...@wework/ray-core@0.3.13) (2019-04-04)
+
+
+### Bug Fixes
+
+* **blockquote:** tweak styles ([#106](https://github.com/WeConnect/ray/issues/106)) ([7bd315a](https://github.com/WeConnect/ray/commit/7bd315a))
+
+
+
+
+
 ## [0.3.12](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.11...@wework/ray-core@0.3.12) (2019-04-03)
 
 
