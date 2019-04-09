@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.41...ray-website-gatsby@0.4.0) (2019-04-09)
+
+
+### Features
+
+* **tag:** add tag component and docs ([#107](https://github.com/weconnect/ray-website/issues/107)) ([9639db9](https://github.com/weconnect/ray-website/commit/9639db9))
+
+
+
+
+
 ## [0.3.41](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.3.40...ray-website-gatsby@0.3.41) (2019-04-04)
 
 **Note:** Version bump only for package ray-website-gatsby

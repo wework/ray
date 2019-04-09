@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.13...@wework/ray-core@0.4.0) (2019-04-09)
+
+
+### Features
+
+* **tag:** add tag component and docs ([#107](https://github.com/WeConnect/ray/issues/107)) ([9639db9](https://github.com/WeConnect/ray/commit/9639db9))
+
+
+
+
+
 ## [0.3.13](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.3.12...@wework/ray-core@0.3.13) (2019-04-04)
 
 
