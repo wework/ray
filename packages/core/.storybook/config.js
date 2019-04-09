@@ -1,5 +1,6 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
+import 'storybook-chromatic';
 
 import '../stories/styles/index.scss';
 import '../src/global/js/boot';

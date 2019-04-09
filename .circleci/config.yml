@@ -21,6 +21,7 @@ jobs:
       - run: yarn bootstrap
       - run: yarn test --coverage
       - run: yarn coveralls
+      - run: yarn chromatic --scope="@wework/ray-core"
 
   build:
     docker:
