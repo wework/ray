@@ -54,6 +54,9 @@
       },
       "table": {
         "title": "Table"
+      },
+      "tag": {
+        "title": "Tag"
       }
     }
   }

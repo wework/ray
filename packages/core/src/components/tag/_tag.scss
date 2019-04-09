@@ -1,0 +1,15 @@
+@import '../../global/mixins/exports';
+@import '../../global/variables';
+
+@include exports('ray-tag') {
+  .#{$ray-class-prefix}tag {
+    font-family: $ray-font-stack-mono;
+    border: 1px solid $ray-color-black;
+    border-radius: $ray-border-radius;
+    display: inline;
+    padding: $ray-spacing-3xs $ray-spacing-2xs;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+}
