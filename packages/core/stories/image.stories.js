@@ -7,21 +7,21 @@ storiesOf('Image', module)
   .add('16:9 img', () => (
     <div style={{ maxWidth: '500px' }}>
       <div className="ray-image ray-image--16by9">
-        <img src={getPlaceholderURL('800x800')} />
+        <img src={getPlaceholderURL('16x9')} />
       </div>
     </div>
   ))
   .add('3:4 img', () => (
     <div style={{ maxWidth: '400px' }}>
       <div className="ray-image ray-image--3by4">
-        <img src={getPlaceholderURL('800x1200')} />
+        <img src={getPlaceholderURL('3x4')} />
       </div>
     </div>
   ))
   .add('4:3 img', () => (
     <div style={{ maxWidth: '400px' }}>
       <div className="ray-image ray-image--4by3">
-        <img src={getPlaceholderURL('1200x800')} />
+        <img src={getPlaceholderURL('4x3')} />
       </div>
     </div>
   ))
@@ -30,7 +30,7 @@ storiesOf('Image', module)
       <div
         className="ray-bg ray-bg--16by9"
         style={{
-          backgroundImage: `url(${getPlaceholderURL('800x800')})`
+          backgroundImage: `url(${getPlaceholderURL('16x9')})`
         }}
       />
     </div>
@@ -40,7 +40,7 @@ storiesOf('Image', module)
       <div
         className="ray-bg ray-bg--3by4"
         style={{
-          backgroundImage: `url(${getPlaceholderURL('800x1200')})`
+          backgroundImage: `url(${getPlaceholderURL('3x4')})`
         }}
       />
     </div>
@@ -50,7 +50,7 @@ storiesOf('Image', module)
       <div
         className="ray-bg ray-bg--4by3"
         style={{
-          backgroundImage: `url(${getPlaceholderURL('1200x800')})`
+          backgroundImage: `url(${getPlaceholderURL('4x3')})`
         }}
       />
     </div>
@@ -78,7 +78,7 @@ storiesOf('Image', module)
   .add('img with caption', () => (
     <div style={{ maxWidth: '500px' }}>
       <div className="ray-image ray-image--16by9">
-        <img src={getPlaceholderURL('800x800')} />
+        <img src={getPlaceholderURL('16x9')} />
       </div>
       <div className="ray-caption">
         12pt apercu mono caption relating to this image
@@ -88,7 +88,7 @@ storiesOf('Image', module)
   .add('img with long caption', () => (
     <div style={{ maxWidth: '500px' }}>
       <div className="ray-image ray-image--16by9">
-        <img src={getPlaceholderURL('800x800')} />
+        <img src={getPlaceholderURL('16x9')} />
       </div>
       <div className="ray-caption">
         12pt apercu mono caption relating to this image but the caption is
@@ -101,7 +101,7 @@ storiesOf('Image', module)
       <div
         className="ray-bg ray-bg--3by4"
         style={{
-          backgroundImage: `url(${getPlaceholderURL('800x1200')})`
+          backgroundImage: `url(${getPlaceholderURL('3x4')})`
         }}
       />
       <div className="ray-caption">

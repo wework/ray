@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { range } from 'lodash';
 
+import getPlaceholderURL from './util/placeholder';
 /* eslint-disable react/prop-types */
 
 function SampleContent(props) {
@@ -87,8 +88,8 @@ storiesOf('Grid', module)
           <div className="ray-grid__cell--span-4 ray-grid__cell--push-1-desktop">
             <div className="ray-image ray-image--3by4">
               <img
-                alt="two women on tan couch with painting, 4 by 3"
-                src="//images.ctfassets.net/6vy33zo2mgy3/4e5FEyVUX65p3qyL37zIoz/946ec993ed191f7efe1737190872cedc/Web_150DPI-20181205_Munich_Oskar-von-Miller-ring-20_Common-Area_03-Edit.jpg?w=600&amp;h=800&amp;q=50"
+                alt="two women on tan couch with painting, 3 by 4"
+                src={getPlaceholderURL('3x4')}
               />
             </div>
           </div>
@@ -158,7 +159,7 @@ storiesOf('Grid', module)
             <div
               className="ray-bg ray-bg--16by9"
               style={{
-                backgroundImage: `url(//cdn.wework.com/6vy33zo2mgy3/2C7F8u8yfW4kKAI6OUa0a2/aae67b57aa0e7a26fcc84c561e823ee8/1_Web_150DPI-20180717_WeWork_Constellation_-_Common_Areas_-_Internal_Staircase.jpg?auto=compress&faces=false&w=1000&fit=crop&dpr=2&h=)`
+                backgroundImage: `url(${getPlaceholderURL('16x9')})`
               }}
             />
           </div>
@@ -217,7 +218,7 @@ storiesOf('Grid', module)
             <div
               className="ray-bg ray-bg--16by9"
               style={{
-                backgroundImage: `url(//cdn.wework.com/6vy33zo2mgy3/2C7F8u8yfW4kKAI6OUa0a2/aae67b57aa0e7a26fcc84c561e823ee8/1_Web_150DPI-20180717_WeWork_Constellation_-_Common_Areas_-_Internal_Staircase.jpg?auto=compress&faces=false&w=1000&fit=crop&dpr=2&h=)`
+                backgroundImage: `url(${getPlaceholderURL('16x9')})`
               }}
             />
           </div>

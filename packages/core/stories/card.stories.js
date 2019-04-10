@@ -13,7 +13,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__image ray-image ray-image--16by9">
-        <img src={getPlaceholderURL('800x450')} />
+        <img src={getPlaceholderURL('16x9')} />
       </div>
 
       <div className="ray-card__content">
@@ -47,7 +47,7 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__image ray-image ray-image--16by9">
-        <img src={getPlaceholderURL('800x450')} />
+        <img src={getPlaceholderURL('16x9')} />
       </div>
     </div>
   ))
@@ -81,7 +81,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__image ray-image ray-image--16by9">
-        <img src={getPlaceholderURL('800x450')} />
+        <img src={getPlaceholderURL('16x9')} />
       </div>
 
       <div className="ray-card__content">
