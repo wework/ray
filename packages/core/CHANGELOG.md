@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.4.3...@wework/ray-core@0.4.4) (2019-04-11)
+
+
+### Bug Fixes
+
+* **text-field:** text is off v center in safari ([#108](https://github.com/WeConnect/ray/issues/108)) ([9d006e3](https://github.com/WeConnect/ray/commit/9d006e3))
+
+
+
+
+
 ## [0.4.3](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.4.2...@wework/ray-core@0.4.3) (2019-04-10)
 
 **Note:** Version bump only for package @wework/ray-core
