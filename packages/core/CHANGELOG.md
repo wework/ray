@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.4.4...@wework/ray-core@0.4.5) (2019-04-15)
+
+
+### Bug Fixes
+
+* **text-field:** add has-value class in create ([#116](https://github.com/WeConnect/ray/issues/116)) ([6d158e8](https://github.com/WeConnect/ray/commit/6d158e8))
+
+
+
+
+
 ## [0.4.4](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.4.3...@wework/ray-core@0.4.4) (2019-04-11)
 
 
