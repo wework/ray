@@ -5,7 +5,8 @@ import {
 } from '../../src/components/text-field/constants';
 import {
   textFieldFixture,
-  textFieldFixtureNoInput
+  textFieldFixtureNoInput,
+  textFieldFixtureWithValue
 } from '../fixtures/text-field';
 
 const initSelectorString = STRINGS.TEXT_FIELD.INIT_SELECTOR;
@@ -28,6 +29,13 @@ describe('TextField', () => {
     const { textField, textFieldEl } = setupTest();
 
     expect(TextField.instances.get(textFieldEl)).toBeDefined();
+    textField.destroy();
+  });
+
+  test('#create can add has-value class if there is a prefilled value', () => {
+    const { textField, textFieldEl } = setupTest(textFieldFixtureWithValue());
+
+    expect(textFieldEl.classList).toContain(CSS_CLASSES.TEXT_FIELD.HAS_VALUE);
     textField.destroy();
   });
 

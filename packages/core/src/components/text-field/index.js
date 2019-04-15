@@ -37,6 +37,7 @@ class _InputComponent {
       );
     }
 
+    this.assignClasses();
     this._bindEventListeners();
 
     this.constructor.instances.set(this._root, this);
@@ -69,12 +70,16 @@ class _InputComponent {
   onBlur = () => {
     this._root.classList.remove(this.constructor.cssClasses.ACTIVE);
 
+    this.assignClasses();
+  };
+
+  assignClasses() {
     if (this.value()) {
       this._root.classList.add(this.constructor.cssClasses.HAS_VALUE);
     } else {
       this._root.classList.remove(this.constructor.cssClasses.HAS_VALUE);
     }
-  };
+  }
 
   destroy() {
     // Implement this method to release any resources / deregister any listeners they have

@@ -28,3 +28,20 @@ export function textFieldFixtureNoInput() {
     </div>
   `;
 }
+
+export function textFieldFixtureWithValue() {
+  return html`
+    <div class="${baseClass}">
+      <input
+        class="${baseClass}__input"
+        id="email"
+        type="email"
+        placeholder="arya.stark@winterfell.org"
+        value="bob@bob.com"
+      />
+      <label class="${baseClass}__label" for="email">
+        Email address
+      </label>
+    </div>
+  `;
+}
