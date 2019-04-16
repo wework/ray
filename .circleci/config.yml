@@ -35,6 +35,9 @@ jobs:
     docker:
       - image: circleci/node:10.13.0
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - 'f2:ad:87:6b:39:67:71:e0:7e:4e:2a:63:bd:4e:65:1a'
       - checkout
       - run: yarn bootstrap
       - run: yarn build
