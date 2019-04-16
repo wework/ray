@@ -9,7 +9,7 @@ label: Guide
 
 ## 🏖 Installation
 
-We encourage consumers of Ray to install via npm or yarn and interface with package via the package manager.
+We encourage consumers of Ray to install via npm or yarn and interface with the package via the package manager.
 
 You will need also need to install the fonts, which can be done via WeWork's CDN. See instructions in the [fonts documentation](/principles/fonts).
 
