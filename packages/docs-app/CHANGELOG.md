@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2019-04-16)
+
+
+### Bug Fixes
+
+* add class to style buttons as links ([#75](https://github.com/weconnect/ray-website/issues/75)) ([d4316df](https://github.com/weconnect/ray-website/commit/d4316df))
+* button naming convention ([#68](https://github.com/weconnect/ray-website/issues/68)) ([2ededfa](https://github.com/weconnect/ray-website/commit/2ededfa))
+* dont include scss exports in normal bundle ([#102](https://github.com/weconnect/ray-website/issues/102)) ([566845c](https://github.com/weconnect/ray-website/commit/566845c))
+* fieldset styles and docs ([#27](https://github.com/weconnect/ray-website/issues/27)) ([e45d4f0](https://github.com/weconnect/ray-website/commit/e45d4f0))
+* remove icons ([#65](https://github.com/weconnect/ray-website/issues/65)) ([bf89388](https://github.com/weconnect/ray-website/commit/bf89388))
+* **typography:** some cleanup ([e5fb1b3](https://github.com/weconnect/ray-website/commit/e5fb1b3))
+* revert changelog prettier changes ([fad12cc](https://github.com/weconnect/ray-website/commit/fad12cc))
+* typography running text margins ([#43](https://github.com/weconnect/ray-website/issues/43)) ([fef06de](https://github.com/weconnect/ray-website/commit/fef06de))
+* **color:** add yellow ([#104](https://github.com/weconnect/ray-website/issues/104)) ([2d0b19f](https://github.com/weconnect/ray-website/commit/2d0b19f))
+* **docs:** heading spacing stop gap solution ([708a7fc](https://github.com/weconnect/ray-website/commit/708a7fc))
+* **docs:** page margin ([27ba3f8](https://github.com/weconnect/ray-website/commit/27ba3f8))
+* **docs:** reduce page padding ([1fa4631](https://github.com/weconnect/ray-website/commit/1fa4631))
+* **grid:** add css debugger ([#99](https://github.com/weconnect/ray-website/issues/99)) ([22eae76](https://github.com/weconnect/ray-website/commit/22eae76))
+* **grid:** add push modifiers ([#100](https://github.com/weconnect/ray-website/issues/100)) ([fcef2e3](https://github.com/weconnect/ray-website/commit/fcef2e3))
+* **grid:** add some utils ([#77](https://github.com/weconnect/ray-website/issues/77)) ([9749b68](https://github.com/weconnect/ray-website/commit/9749b68))
+* **spacing:** updates vertical rythm and adds spacing docs ([#93](https://github.com/weconnect/ray-website/issues/93)) ([efe7ec5](https://github.com/weconnect/ray-website/commit/efe7ec5))
+* **text-field:** focus onmousedown of label for more responsive feel ([#85](https://github.com/weconnect/ray-website/issues/85)) ([84a1c81](https://github.com/weconnect/ray-website/commit/84a1c81))
+* **typography:** running-text with blockquote and add blockquote styles ([1fec97e](https://github.com/weconnect/ray-website/commit/1fec97e))
+
+
+### Features
+
+* icons ([#59](https://github.com/weconnect/ray-website/issues/59)) ([0feebfc](https://github.com/weconnect/ray-website/commit/0feebfc))
+* standardize build naming convention and add js compiled versions ([9c06534](https://github.com/weconnect/ray-website/commit/9c06534))
+* **tag:** add tag component and docs ([#107](https://github.com/weconnect/ray-website/issues/107)) ([2bdfe2d](https://github.com/weconnect/ray-website/commit/2bdfe2d))
+* **typography:** better typography naming conventions ([#62](https://github.com/weconnect/ray-website/issues/62)) ([a643816](https://github.com/weconnect/ray-website/commit/a643816)), closes [#39](https://github.com/weconnect/ray-website/issues/39)
+
+
+
+
+
 ## [0.4.6](https://github.com/weconnect/ray-website/compare/ray-website-gatsby@0.4.5...ray-website-gatsby@0.4.6) (2019-04-15)
 
 **Note:** Version bump only for package ray-website-gatsby

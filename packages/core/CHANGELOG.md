@@ -3,6 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2019-04-16)
+
+
+### Bug Fixes
+
+* **blockquote:** tweak styles ([#106](https://github.com/wework/ray/issues/106)) ([8b9f4fc](https://github.com/wework/ray/commit/8b9f4fc))
+* **button:** adds subtle active state ([12cec17](https://github.com/wework/ray/commit/12cec17))
+* **button:** adds subtle active state ([#71](https://github.com/wework/ray/issues/71)) ([5a407ff](https://github.com/wework/ray/commit/5a407ff))
+* **button:** remove hover effect on disabled ([#82](https://github.com/wework/ray/issues/82)) ([15d1ea0](https://github.com/wework/ray/commit/15d1ea0))
+* **card:** add focus state to card ([c079062](https://github.com/wework/ray/commit/c079062))
+* **color:** add yellow ([#104](https://github.com/wework/ray/issues/104)) ([2d0b19f](https://github.com/wework/ray/commit/2d0b19f))
+* **form-items:** support label for slightly darker background ([#64](https://github.com/wework/ray/issues/64)) ([2762135](https://github.com/wework/ray/commit/2762135))
+* **grid:** add css debugger ([#99](https://github.com/wework/ray/issues/99)) ([22eae76](https://github.com/wework/ray/commit/22eae76))
+* **grid:** add push modifiers ([#100](https://github.com/wework/ray/issues/100)) ([fcef2e3](https://github.com/wework/ray/commit/fcef2e3))
+* **grid:** add some utils ([#77](https://github.com/wework/ray/issues/77)) ([9749b68](https://github.com/wework/ray/commit/9749b68))
+* **grid:** fix gutter for all browsers ([#21](https://github.com/wework/ray/issues/21)) ([ae20298](https://github.com/wework/ray/commit/ae20298))
+* **grid:** remove css grid ([#54](https://github.com/wework/ray/issues/54)) ([054f198](https://github.com/wework/ray/commit/054f198))
+* **grid:** update desktop max width to 1440 ([#78](https://github.com/wework/ray/issues/78)) ([8136676](https://github.com/wework/ray/commit/8136676))
+* **icon:** subtract 1 pickle from top position ([3e36dc1](https://github.com/wework/ray/commit/3e36dc1))
+* **ie11:** make text field and text area active states work ([#4](https://github.com/wework/ray/issues/4)) ([9b67d33](https://github.com/wework/ray/commit/9b67d33))
+* **image:** 4by3 ([#28](https://github.com/wework/ray/issues/28)) ([1955c5c](https://github.com/wework/ray/commit/1955c5c))
+* **image:** programmatically generate image classes and adds new ratios ([#29](https://github.com/wework/ray/issues/29)) ([5f96f76](https://github.com/wework/ray/commit/5f96f76))
+* **input-label:** for zooms ([#103](https://github.com/wework/ray/issues/103)) ([d6297fa](https://github.com/wework/ray/commit/d6297fa))
+* **radio-checkbox:** add support for ie11 ([#47](https://github.com/wework/ray/issues/47)) ([cc81d88](https://github.com/wework/ray/commit/cc81d88))
+* **radio-checkbox:** cursor dead area ([#35](https://github.com/wework/ray/issues/35)) ([152a7a4](https://github.com/wework/ray/commit/152a7a4))
+* **radio-checkbox:** fix alignment of input with text ([#58](https://github.com/wework/ray/issues/58)) ([414e672](https://github.com/wework/ray/commit/414e672)), closes [#51](https://github.com/wework/ray/issues/51)
+* **select:** add icon support to select ([49a2359](https://github.com/wework/ray/commit/49a2359))
+* **select:** options should be visible on windows ([#20](https://github.com/wework/ray/issues/20)) ([6efd051](https://github.com/wework/ray/commit/6efd051))
+* **select:** remove arrow rotation on focus ([#57](https://github.com/wework/ray/issues/57)) ([d4654a8](https://github.com/wework/ray/commit/d4654a8)), closes [#56](https://github.com/wework/ray/issues/56)
+* **spacing:** updates vertical rythm and adds spacing docs ([#93](https://github.com/wework/ray/issues/93)) ([efe7ec5](https://github.com/wework/ray/commit/efe7ec5))
+* **test:** test coverage to 100 percent ([#14](https://github.com/wework/ray/issues/14)) ([f9f2a97](https://github.com/wework/ray/commit/f9f2a97))
+* **text-field:** add has-value class in create ([#116](https://github.com/wework/ray/issues/116)) ([749839b](https://github.com/wework/ray/commit/749839b))
+* **text-field:** cursor should be type text ([#49](https://github.com/wework/ray/issues/49)) ([7c53521](https://github.com/wework/ray/commit/7c53521))
+* typography running text margins ([#43](https://github.com/wework/ray/issues/43)) ([fef06de](https://github.com/wework/ray/commit/fef06de))
+* **text-field:** focus onmousedown of label for more responsive feel ([#85](https://github.com/wework/ray/issues/85)) ([84a1c81](https://github.com/wework/ray/commit/84a1c81))
+* active states ([a390d0b](https://github.com/wework/ray/commit/a390d0b))
+* add active state color effects to icons ([#81](https://github.com/wework/ray/issues/81)) ([73c7a22](https://github.com/wework/ray/commit/73c7a22))
+* add caption element for media ([6f9dea8](https://github.com/wework/ray/commit/6f9dea8))
+* add caption element for media ([#24](https://github.com/wework/ray/issues/24)) ([99330e3](https://github.com/wework/ray/commit/99330e3))
+* add class to style buttons as links ([#75](https://github.com/wework/ray/issues/75)) ([d4316df](https://github.com/wework/ray/commit/d4316df))
+* add scaling to h1 h2 and h3 ([#98](https://github.com/wework/ray/issues/98)) ([7066307](https://github.com/wework/ray/commit/7066307))
+* adds icon support to text-field and text-area ([3c7048a](https://github.com/wework/ray/commit/3c7048a))
+* button naming convention ([#68](https://github.com/wework/ray/issues/68)) ([2ededfa](https://github.com/wework/ray/commit/2ededfa))
+* **textarea:** fix input text not centered ([7ab520c](https://github.com/wework/ray/commit/7ab520c))
+* css reset and normalize ([#73](https://github.com/wework/ray/issues/73)) ([bbb4a2f](https://github.com/wework/ray/commit/bbb4a2f))
+* default typography styles ([#74](https://github.com/wework/ray/issues/74)) ([8dc8df4](https://github.com/wework/ray/commit/8dc8df4))
+* dont include scss exports in normal bundle ([#102](https://github.com/wework/ray/issues/102)) ([566845c](https://github.com/wework/ray/commit/566845c))
+* fieldset styles and docs ([#27](https://github.com/wework/ray/issues/27)) ([e45d4f0](https://github.com/wework/ray/commit/e45d4f0))
+* icon color on form fields ([#79](https://github.com/wework/ray/issues/79)) ([c5b44d6](https://github.com/wework/ray/commit/c5b44d6))
+* merge conflict with rem variable ([#90](https://github.com/wework/ray/issues/90)) ([f2773a8](https://github.com/wework/ray/commit/f2773a8))
+* push package to public registry ([0ad2775](https://github.com/wework/ray/commit/0ad2775))
+* remove all transitions ([#72](https://github.com/wework/ray/issues/72)) ([8ba8692](https://github.com/wework/ray/commit/8ba8692))
+* remove comment ([#7](https://github.com/wework/ray/issues/7)) ([6dfedae](https://github.com/wework/ray/commit/6dfedae))
+* remove flex body styles ([035bfaa](https://github.com/wework/ray/commit/035bfaa))
+* revert changelog prettier changes ([fad12cc](https://github.com/wework/ray/commit/fad12cc))
+* table style border tweak ([4d72648](https://github.com/wework/ray/commit/4d72648))
+* text field right icon position and add docs ([#60](https://github.com/wework/ray/issues/60)) ([252bed6](https://github.com/wework/ray/commit/252bed6))
+* update hover/active states for card border and title ([#86](https://github.com/wework/ray/issues/86)) ([91666a3](https://github.com/wework/ray/commit/91666a3))
+* **text-field:** text is off v center in safari ([#108](https://github.com/wework/ray/issues/108)) ([b51d0a0](https://github.com/wework/ray/commit/b51d0a0))
+* **typography:** removes global a tag outline style ([df95b8a](https://github.com/wework/ray/commit/df95b8a))
+* **typography:** running-text should apply list styles ([26ff406](https://github.com/wework/ray/commit/26ff406))
+* **typography:** running-text with blockquote and add blockquote styles ([1fec97e](https://github.com/wework/ray/commit/1fec97e))
+* **typography:** some cleanup ([e5fb1b3](https://github.com/wework/ray/commit/e5fb1b3))
+* **typography:** update responsive scaling ([#83](https://github.com/wework/ray/issues/83)) ([db9450b](https://github.com/wework/ray/commit/db9450b))
+
+
+### Features
+
+* add boot loader for ray components on dom load ([#89](https://github.com/wework/ray/issues/89)) ([7f6de01](https://github.com/wework/ray/commit/7f6de01))
+* standardize build naming convention and add js compiled versions ([9c06534](https://github.com/wework/ray/commit/9c06534))
+* **tag:** add tag component and docs ([#107](https://github.com/wework/ray/issues/107)) ([2bdfe2d](https://github.com/wework/ray/commit/2bdfe2d))
+* **typography:** better typography naming conventions ([#62](https://github.com/wework/ray/issues/62)) ([a643816](https://github.com/wework/ray/commit/a643816)), closes [#39](https://github.com/wework/ray/issues/39)
+
+
+
+
+
 ## [0.4.6](https://github.com/WeConnect/ray/compare/@wework/ray-core@0.4.5...@wework/ray-core@0.4.6) (2019-04-15)
 
 **Note:** Version bump only for package @wework/ray-core
