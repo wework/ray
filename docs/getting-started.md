@@ -3,7 +3,7 @@ title: Getting Started
 label: Guide
 ---
 
-<page-intro>Ray is a CSS and JavaScript framework [available on npm](https://github.com/WeConnect/ray).</page-intro>
+<page-intro>Ray is a CSS and JavaScript framework [available on npm](https://github.com/wework/ray).</page-intro>
 
 > Just want to get your feet wet? Check out the [codepen demo](https://codepen.io/adamraider/pen/bZoBqL).
 

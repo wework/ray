@@ -17,7 +17,7 @@ import SpaceExample from '../components/SpaceExample';
 // Custom Markdown
 import { ul, ol, PageIntro, FlexGroup } from '../components/markdown/Markdown';
 
-const GITHUB_SOURCE_URL = 'https://github.com/WeConnect/ray/blob/master';
+const GITHUB_SOURCE_URL = 'https://github.com/wework/ray/blob/master';
 const HEADING_STYLE = {
   marginTop: '4rem'
 };

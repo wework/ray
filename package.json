@@ -3,7 +3,7 @@
   "description": "Resources for building interfaces with WeWork's design system",
   "private": true,
   "author": "WeWork Companies Inc.",
-  "repository": "https://github.com/WeConnect/ray",
+  "repository": "https://github.com/wework/ray",
   "contributors": [
     "Adam Raider <adam.raider@wework.com>",
     "Celeste Glavin <celeste.glavin@wework.com>"

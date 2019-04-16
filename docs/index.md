@@ -3,7 +3,7 @@ label: WeWork UI Library
 title: Ray
 ---
 
-[![CircleCI](https://circleci.com/gh/WeConnect/ray.svg?style=svg&circle-token=99fe6d74b0b60e0113df0e37df0009ba77793b1d)](https://circleci.com/gh/WeConnect/ray) [![Coverage Status](https://coveralls.io/repos/github/WeConnect/ray/badge.svg?t=cuEPSr)](https://coveralls.io/github/WeConnect/ray)
+[![CircleCI](https://circleci.com/gh/wework/ray.svg?style=svg)](https://circleci.com/gh/wework/ray) [![Coverage Status](https://coveralls.io/repos/github/wework/ray/badge.svg?branch=master)](https://coveralls.io/github/wework/ray?branch=master)
 
 # Hello friend, 👋
 
@@ -15,4 +15,4 @@ title: Ray
 
 > **Question?**
 >
-> Please don't hesitate to [submit an issue](https://github.com/WeConnect/ray/issues/new), or join the slack channel [#ray-design-system](https://wework.slack.com/messages/CFLL3QWQ5). We are here to help.
+> Please don't hesitate to [submit an issue](https://github.com/wework/ray/issues/new), or join the slack channel [#ray-design-system](https://wework.slack.com/messages/CFLL3QWQ5). We are here to help.
