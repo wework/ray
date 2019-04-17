@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/wework/ray/compare/@wework/ray-core@0.5.1...@wework/ray-core@0.5.2) (2019-04-17)
+
+
+### Bug Fixes
+
+* **text-field:** change label color to red when error ([#6](https://github.com/wework/ray/issues/6)) ([5fa31a0](https://github.com/wework/ray/commit/5fa31a0)), closes [#4](https://github.com/wework/ray/issues/4)
+* **typography:** update margin-bottom of h4-g6 ([#7](https://github.com/wework/ray/issues/7)) ([d372731](https://github.com/wework/ray/commit/d372731)), closes [#3](https://github.com/wework/ray/issues/3)
+
+
+
+
+
 ## [0.5.1](https://github.com/wework/ray/compare/@wework/ray-core@0.5.0...@wework/ray-core@0.5.1) (2019-04-16)
 
 **Note:** Version bump only for package @wework/ray-core
