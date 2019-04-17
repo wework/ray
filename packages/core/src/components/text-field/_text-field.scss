@@ -97,6 +97,11 @@
 
     &--error {
       border-color: $ray-color-red-50;
+
+      .#{$ray-class-prefix}text-field__label,
+      .#{$ray-class-prefix}text-area__label {
+        color: $ray-color-red-50;
+      }
     }
 
     [disabled] {
