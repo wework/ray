@@ -1,0 +1,42 @@
+@import '../../global/variables';
+
+$ray-chip-border-width: 1px;
+$ray-chip-height: $ray-spacing-xs * 2 + 1rem;
+
+.#{$ray-class-prefix}chip {
+  @include no-select;
+  border: $ray-chip-border-width solid $ray-color-blue-50;
+  background-color: $ray-color-white;
+  padding: $ray-spacing-xs $ray-spacing-md;
+  border-radius: $ray-chip-height;
+  color: $ray-color-blue-50;
+  display: inline-block;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: $ray-spacing-xs;
+  }
+
+  &:hover {
+    background-color: $ray-color-blue-10;
+    color: $ray-color-blue-50;
+  }
+
+  &:focus {
+    box-shadow: $ray-box-shadow-focus-state;
+  }
+
+  &:active {
+    background-color: $ray-color-blue-20;
+  }
+}
+
+.#{$ray-class-prefix}chip--active {
+  background-color: $ray-color-blue-50;
+  color: $ray-color-white;
+
+  &:hover {
+    background-color: $ray-color-blue-50;
+    color: $ray-color-white;
+  }
+}

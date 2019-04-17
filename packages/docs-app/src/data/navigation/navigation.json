@@ -59,6 +59,9 @@
       "card": {
         "title": "Card"
       },
+      "chip": {
+        "title": "Chip"
+      },
       "image": {
         "title": "Image"
       },
