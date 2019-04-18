@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 machine:
   pre:
@@ -22,12 +22,12 @@ commands:
     description: 'Install NPM deps and bootstrap Lerna'
     steps:
       - run: yarn bootstrap
-  get-npm-packages-cache:
+  get_npm_packages_cache:
     description: 'Restore NPM packages'
     steps:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-  save-npm-packages-cache:
+  save_npm_packages_cache:
     description: 'Cache NPM packages'
     steps:
       - save_cache:
@@ -41,9 +41,9 @@ jobs:
       name: docker-config
     steps:
       - checkout
-      - get-npm-packages-cache
+      - get_npm_packages_cache
       - bootstrap
-      - save-npm-packages-cache
+      - save_npm_packages_cache
       - run:
           name: Run unit tests
           command: yarn test --coverage
@@ -59,9 +59,9 @@ jobs:
       name: docker-config
     steps:
       - checkout
-      - get-npm-packages-cache
+      - get_npm_packages_cache
       - bootstrap
-      - save-npm-packages-cache
+      - save_npm_packages_cache
       - run: yarn build
 
   release:
@@ -72,9 +72,9 @@ jobs:
           fingerprints:
             - 'f2:ad:87:6b:39:67:71:e0:7e:4e:2a:63:bd:4e:65:1a'
       - checkout
-      - get-npm-packages-cache
+      - get_npm_packages_cache
       - bootstrap
-      - save-npm-packages-cache
+      - save_npm_packages_cache
       - run:
           name: 'Build packages'
           command: yarn build
