@@ -19,9 +19,10 @@ executors:
 
 commands:
   bootstrap:
-    description: 'Install NPM deps and bootstrap Lerna'
     steps:
-      - run: yarn bootstrap
+      - run:
+          name: 'Install NPM deps and bootstrap Lerna'
+          command: yarn bootstrap
   get_npm_packages_cache:
     description: 'Restore NPM packages'
     steps:
@@ -62,7 +63,9 @@ jobs:
       - get_npm_packages_cache
       - bootstrap
       - save_npm_packages_cache
-      - run: yarn build
+      - run:
+          name: 'Build packages'
+          command: yarn build
 
   release:
     executor:
