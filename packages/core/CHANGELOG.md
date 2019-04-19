@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/wework/ray/compare/@wework/ray-core@0.5.4...@wework/ray-core@0.5.5) (2019-04-19)
+
+
+### Bug Fixes
+
+* **grid-push:** for ie11 ([#12](https://github.com/wework/ray/issues/12)) ([e4241b9](https://github.com/wework/ray/commit/e4241b9))
+
+
+
+
+
 ## [0.5.4](https://github.com/wework/ray/compare/@wework/ray-core@0.5.3...@wework/ray-core@0.5.4) (2019-04-18)
 
 **Note:** Version bump only for package @wework/ray-core
