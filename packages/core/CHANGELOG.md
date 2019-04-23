@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/wework/ray/compare/@wework/ray-core@0.5.5...@wework/ray-core@0.6.0) (2019-04-23)
+
+
+### Features
+
+* **_image.scss caption style update:** update caption styling ([#13](https://github.com/wework/ray/issues/13)) ([17e0c47](https://github.com/wework/ray/commit/17e0c47))
+
+
+
+
+
 ## [0.5.5](https://github.com/wework/ray/compare/@wework/ray-core@0.5.4...@wework/ray-core@0.5.5) (2019-04-19)
 
 
