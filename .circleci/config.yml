@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 machine:
   pre:
@@ -12,53 +12,96 @@ dependencies:
   override:
     - yarn install
 
+executors:
+  docker-config:
+    docker:
+      - image: circleci/node:10.13.0
+
+commands:
+  bootstrap:
+    steps:
+      - run:
+          name: 'Install NPM deps and bootstrap Lerna'
+          command: yarn bootstrap
+  get_npm_packages_cache:
+    description: 'Restore NPM packages'
+    steps:
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+  save_npm_packages_cache:
+    description: 'Cache NPM packages'
+    steps:
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
 jobs:
   test:
-    docker:
-      - image: circleci/node:10.13.0
+    executor:
+      name: docker-config
     steps:
       - checkout
-      - run: yarn bootstrap
-      - run: yarn test --coverage
-      - run: yarn coveralls
-      - run: yarn lerna run chromatic --scope="@wework/ray-core" --parallel
+      - get_npm_packages_cache
+      - bootstrap
+      - save_npm_packages_cache
+      - run:
+          name: Run unit tests
+          command: yarn test --coverage
+      - run:
+          name: Ship test coverage report to coveralls
+          command: yarn coveralls
+      - run:
+          name: 'Run visual regression tests'
+          command: yarn lerna run chromatic --scope="@wework/ray-core" --parallel
 
   build:
-    docker:
-      - image: circleci/node:10.13.0
+    executor:
+      name: docker-config
     steps:
       - checkout
-      - run: yarn bootstrap
-      - run: yarn build
+      - get_npm_packages_cache
+      - bootstrap
+      - save_npm_packages_cache
+      - run:
+          name: 'Build packages'
+          command: yarn build
 
-  'build and release':
-    docker:
-      - image: circleci/node:10.13.0
+  release:
+    executor:
+      name: docker-config
     steps:
       - add_ssh_keys:
           fingerprints:
             - 'f2:ad:87:6b:39:67:71:e0:7e:4e:2a:63:bd:4e:65:1a'
       - checkout
-      - run: yarn bootstrap
-      - run: yarn build
-      - run: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: yarn lerna:publish
+      - get_npm_packages_cache
+      - bootstrap
+      - save_npm_packages_cache
+      - run:
+          name: 'Build packages'
+          command: yarn build
+      - run:
+          name: 'Configure github user details for publish commit'
+          command: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
+      - run:
+          name: 'Add NPM config with authToken to machine'
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+      - run:
+          name: 'Publish to NPM registry and commit release to GitHub'
+          command: yarn lerna:publish
 
 workflows:
   version: 2
   'continuously integrate':
-    # Run the test jobs first, then the release only when all the test jobs are successful
     jobs:
       - test
       - build:
-          requires:
-            - test
           filters:
             branches:
               ignore:
                 - master
-      - 'build and release':
+      - release:
           requires:
             - test
           filters:

@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/wework/ray/compare/@wework/ray-core@0.5.5...@wework/ray-core@0.6.0) (2019-04-23)
+
+
+### Features
+
+* **_image.scss caption style update:** update caption styling ([#13](https://github.com/wework/ray/issues/13)) ([17e0c47](https://github.com/wework/ray/commit/17e0c47))
+
+
+
+
+
+## [0.5.5](https://github.com/wework/ray/compare/@wework/ray-core@0.5.4...@wework/ray-core@0.5.5) (2019-04-19)
+
+
+### Bug Fixes
+
+* **grid-push:** for ie11 ([#12](https://github.com/wework/ray/issues/12)) ([e4241b9](https://github.com/wework/ray/commit/e4241b9))
+
+
+
+
+
+## [0.5.4](https://github.com/wework/ray/compare/@wework/ray-core@0.5.3...@wework/ray-core@0.5.4) (2019-04-18)
+
+**Note:** Version bump only for package @wework/ray-core
+
+
+
+
+
+## [0.5.3](https://github.com/wework/ray/compare/@wework/ray-core@0.5.2...@wework/ray-core@0.5.3) (2019-04-17)
+
+**Note:** Version bump only for package @wework/ray-core
+
+
+
+
+
+## [0.5.2](https://github.com/wework/ray/compare/@wework/ray-core@0.5.1...@wework/ray-core@0.5.2) (2019-04-17)
+
+
+### Bug Fixes
+
+* **text-field:** change label color to red when error ([#6](https://github.com/wework/ray/issues/6)) ([5fa31a0](https://github.com/wework/ray/commit/5fa31a0)), closes [#4](https://github.com/wework/ray/issues/4)
+* **typography:** update margin-bottom of h4-g6 ([#7](https://github.com/wework/ray/issues/7)) ([d372731](https://github.com/wework/ray/commit/d372731)), closes [#3](https://github.com/wework/ray/issues/3)
+
+
+
+
+
 ## [0.5.1](https://github.com/wework/ray/compare/@wework/ray-core@0.5.0...@wework/ray-core@0.5.1) (2019-04-16)
 
 **Note:** Version bump only for package @wework/ray-core

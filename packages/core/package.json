@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "main": "umd/index.js",
   "module": "es/index.js",
   "style": "css/ray-core.min.css",
@@ -12,7 +12,7 @@
     "clean": "gulp clean",
     "prebuild": "yarn clean",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/storybook -s ./stories/static",
-    "chromatic": "CHROMATIC_APP_CODE=j9x9t3ojfqi ./tools/build_chromatic.sh --exit-zero-on-changes"
+    "chromatic": "CHROMATIC_APP_CODE=r0jc387xrba ./tools/build_chromatic.sh --exit-zero-on-changes"
   },
   "license": "Apache-2.0",
   "devDependencies": {

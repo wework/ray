@@ -1,6 +1,6 @@
 # Ray Docs
 
-This is the [Ray Design System website](http://ray.weworkers.io) which is built using GatsbyJS.
+This is the [Ray Design System website](http://ray.wework.com) which is built using GatsbyJS.
 
 ## Structure
 
