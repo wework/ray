@@ -13,6 +13,38 @@
     flex-direction: column;
     position: relative;
 
+    &--link {
+      cursor: pointer;
+      color: $ray-color-text-dark;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:focus {
+        box-shadow: $ray-box-shadow-focus-state;
+      }
+
+      &:hover {
+        &::after {
+          border-color: $ray-color-blue-50;
+        }
+      }
+
+      &::after {
+        content: '';
+        border: 1px solid transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: $ray-border-radius;
+        pointer-events: none;
+      }
+    }
+
     &__content {
       flex-grow: 1;
       padding: $card-padding;
