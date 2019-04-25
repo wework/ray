@@ -1,96 +1,92 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import Color from 'color';
 
-const BLUES = [
-  'ray-color-blue-10',
-  'ray-color-blue-20',
-  'ray-color-blue-50',
-  'ray-color-blue-60',
-  'ray-color-blue-70'
-];
+import * as rayVars from '../src/ray-exports.scss';
 
-const REDS = [
-  'ray-color-red-10',
-  'ray-color-red-20',
-  'ray-color-red-50',
-  'ray-color-red-60',
-  'ray-color-red-70'
-];
-
-const GREENS = [
-  'ray-color-green-10',
-  'ray-color-green-20',
-  'ray-color-green-70',
-  'ray-color-green-80',
-  'ray-color-green-90'
-];
-
-const GRAYS = [
-  'ray-color-gray-02',
-  'ray-color-gray-10',
-  'ray-color-gray-30',
-  'ray-color-gray-50',
-  'ray-color-gray-60'
-];
-
-const Color = function(props) {
-  return (
-    <div
-      {...props}
-      style={{
-        width: '100%',
-        height: `calc(${100 / 6}vh - 4px)`,
-        marginRight: '0.5rem',
-        fontSize: '1.25rem',
-        fontWeight: 600,
-        color: '#fff',
-        display: 'flex',
-        flexDirection: 'column',
-        textShadow: '0 1px 4px rgba(0,0,0,.1)'
-      }}
-    />
+storiesOf('Colors', module).add('all', () => {
+  const colorKeys = Object.keys(rayVars).filter(rayVariable =>
+    rayVariable.startsWith('ray-color-')
   );
-};
 
-storiesOf('Colors', module).add('all', () => (
-  <div className="ray-grid">
-    <div className="ray-grid__inner">
-      <div
-        className="ray-grid__cell--span-2-phone ray-grid__cell--span-4-tablet ray-grid__cell--span-6-desktop"
-        style={{
-          marginBottom: '24px'
-        }}
-      >
-        <Color className="ray-color-white" />
-      </div>
-      <div
-        className="ray-grid__cell--span-2-phone ray-grid__cell--span-4-tablet ray-grid__cell--span-6-desktop"
-        style={{
-          marginBottom: '24px'
-        }}
-      >
-        <Color className="ray-color-black" />
-      </div>
-      <div className="ray-grid__cell--span-1-phone ray-grid__cell--span-2-tablet ray-grid__cell--span-3-desktop">
-        {GRAYS.map(color => (
-          <Color className={color} />
-        ))}
-      </div>
-      <div className="ray-grid__cell--span-1-phone ray-grid__cell--span-2-tablet ray-grid__cell--span-3-desktop">
-        {BLUES.map(color => (
-          <Color className={color} />
-        ))}
-      </div>
-      <div className="ray-grid__cell--span-1-phone ray-grid__cell--span-2-tablet ray-grid__cell--span-3-desktop">
-        {REDS.map(color => (
-          <Color className={color} />
-        ))}
-      </div>
-      <div className="ray-grid__cell--span-1-phone ray-grid__cell--span-2-tablet ray-grid__cell--span-3-desktop">
-        {GREENS.map(color => (
-          <Color className={color} />
-        ))}
+  return (
+    <div className="ray-grid">
+      <div className="ray-grid__inner">
+        <table className="ray-table color-table">
+          <thead>
+            <tr>
+              <th>variable</th>
+              <th>hsl</th>
+              <th>rgb</th>
+              <th>hex</th>
+            </tr>
+          </thead>
+          <tbody>
+            {colorKeys.map(colorKey => {
+              const color = Color(rayVars[colorKey]);
+              const textColor = color.isDark() ? 'white' : 'black';
+
+              return (
+                <tr
+                  key={colorKey}
+                  style={{
+                    padding: 0
+                  }}
+                >
+                  <td>
+                    <div
+                      style={{
+                        backgroundColor: rayVars[colorKey],
+                        display: 'inline-block',
+                        padding: '.25rem .5rem',
+                        marginRight: '1rem',
+                        verticalAlign: 'middle',
+                        color: textColor,
+                        borderRadius: '0.25rem'
+                      }}
+                    >
+                      <pre>${colorKey}</pre>
+                    </div>
+                  </td>
+                  <td>
+                    <pre
+                      style={{
+                        display: 'inline-block',
+                        verticalAlign: 'middle'
+                      }}
+                    >
+                      {color
+                        .hsl()
+                        .round()
+                        .string()}
+                    </pre>
+                  </td>
+                  <td>
+                    <pre
+                      style={{
+                        display: 'inline-block',
+                        verticalAlign: 'middle'
+                      }}
+                    >
+                      {color.rgb().string()}
+                    </pre>
+                  </td>
+                  <td>
+                    <pre
+                      style={{
+                        display: 'inline-block',
+                        verticalAlign: 'middle'
+                      }}
+                    >
+                      {color.hex().toString()}
+                    </pre>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-));
+  );
+});
