@@ -21,11 +21,7 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <p className="ray-text--body-large">
-          <a aria-label="go to Better Together page" href="javascript:;">
-            Better Together
-          </a>
-        </p>
+        <div className="ray-link ray-text--body-large">Better Together</div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque
         minima itaque sint! Doloremque odio quia saepe.
       </div>
@@ -42,11 +38,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <p className="ray-text--body-large">
-          <a aria-label="go to Better Together page" href="javascript:;">
-            Better Together
-          </a>
-        </p>
+        <div className="ray-link ray-text--body-large">Better Together</div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque
         minima itaque sint! Doloremque odio quia saepe.
       </div>
@@ -67,11 +59,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <p className="ray-text--body-large">
-          <a aria-label="go to Better Together page" href="javascript:;">
-            Better Together
-          </a>
-        </p>
+        <div className="ray-link ray-text--body-large">Better Together</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
@@ -91,11 +79,7 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <p className="ray-text--body-large">
-          <a aria-label="go to Better Together page" href="javascript:;">
-            Better Together
-          </a>
-        </p>
+        <div className="ray-link ray-text--body-large">Better Together</div>
         <p className="ray-text--body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
@@ -120,7 +104,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <h4 className="ray-text--h4">Nicolas Boer 399</h4>
+        <div className="ray-link ray-text--body-large">Better Together</div>
         <p className="ray-text--body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
