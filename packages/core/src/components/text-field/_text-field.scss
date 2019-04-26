@@ -169,4 +169,10 @@
       }
     }
   }
+
+  textarea[rows].#{$ray-class-prefix}text-area {
+    &__input {
+      height: auto !important;
+    }
+  }
 }
