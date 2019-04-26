@@ -5,8 +5,8 @@
 $ray-class-prefix: 'ray-';
 $ray-font-stack-sans-serif: 'Apercu', Avenir, -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, 'Calibri', 'Roboto', Arial, sans-serif;
-$ray-font-stack-mono: 'Apercu Mono', 'Consolas', 'Bitstream Vera Sans Mono',
-  'Courier New', Courier, monospace;
+$ray-font-stack-mono: 'Apercu Mono', SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace;
 $ray-base-font-size: rem(16px);
 
 $ray-assign-typography-styles-natively: true !default;
