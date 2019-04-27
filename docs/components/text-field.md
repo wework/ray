@@ -20,6 +20,13 @@ title: Text Field
 </component>
 
 <component
+    name="Text area with rows"
+    component="text-area"
+    variation="text-area-multi-row"
+    >
+</component>
+
+<component
     name="Text field with hints"
     component="text-field"
     variation="text-field-with-hint"

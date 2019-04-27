@@ -65,7 +65,7 @@ storiesOf('Text Field', module)
       <div className="ray-text-area">
         <textarea
           className="ray-text-area__input"
-          row="4"
+          rows="4"
           id="textarea"
           placeholder="Few people are aware..."
         />

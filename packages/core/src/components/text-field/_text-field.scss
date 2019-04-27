@@ -169,4 +169,11 @@
       }
     }
   }
+
+  [rows].#{$ray-class-prefix}text-area {
+    &__input {
+      height: auto; // ie11 fallback
+      height: unset;
+    }
+  }
 }
