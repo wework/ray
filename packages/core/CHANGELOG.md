@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/wework/ray/compare/@wework/ray-core@0.6.1...@wework/ray-core@0.6.2) (2019-04-30)
+
+
+### Bug Fixes
+
+* **font:** update monospace font stack ([#17](https://github.com/wework/ray/issues/17)) ([f69d8a4](https://github.com/wework/ray/commit/f69d8a4))
+
+
+
+
+
 ## [0.6.1](https://github.com/wework/ray/compare/@wework/ray-core@0.6.0...@wework/ray-core@0.6.1) (2019-04-27)
 
 
