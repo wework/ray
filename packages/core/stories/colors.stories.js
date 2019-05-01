@@ -10,8 +10,8 @@ storiesOf('Colors', module).add('all', () => {
   );
 
   return (
-    <div className="ray-grid">
-      <div className="ray-grid__inner">
+    <div className="ray-page-container">
+      <div className="ray-grid">
         <table className="ray-table color-table">
           <thead>
             <tr>

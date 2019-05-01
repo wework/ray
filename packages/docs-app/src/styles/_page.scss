@@ -36,7 +36,7 @@ button,
 
   // All em on Markdown pages after images and image grid
   .gatsby-resp-image-link + em,
-  .image-grid + p > em,
+  .image-page-container + p > em,
   .image-component + p > em {
     font-size: 0.875em;
     color: $ray-color-text-medium;

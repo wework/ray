@@ -21,7 +21,7 @@ function RayGridInnerWithBackground(props) {
   return (
     <div
       {...props}
-      className="ray-grid__inner"
+      className="ray-grid"
       style={{
         position: 'relative',
         backgroundColor: 'hsl(0, 100%, 75%)',
@@ -34,7 +34,7 @@ function RayGridInnerWithBackground(props) {
 storiesOf('Grid', module)
   .add('default', () => (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
-      <div className="ray-grid">
+      <div className="ray-page-container">
         <RayGridInnerWithBackground>
           {range(12).map(n => (
             <div className="ray-grid__cell--span-1" key={n}>
@@ -58,7 +58,7 @@ storiesOf('Grid', module)
   .add('push', () => (
     <div>
       <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
-        <div className="ray-grid">
+        <div className="ray-page-container">
           <RayGridInnerWithBackground style={{ marginBottom: '0.5rem' }}>
             {range(12).map(n => (
               <div className="ray-grid__cell--span-1" key={n}>
@@ -83,8 +83,8 @@ storiesOf('Grid', module)
           </RayGridInnerWithBackground>
         </div>
       </div>
-      <div className="ray-grid" style={{ margin: '5rem 0' }}>
-        <div className="ray-grid__inner">
+      <div className="ray-page-container" style={{ margin: '5rem 0' }}>
+        <div className="ray-grid">
           <div className="ray-grid__cell--span-4 ray-grid__cell--push-1-desktop">
             <div className="ray-image ray-image--3by4">
               <img
@@ -110,7 +110,7 @@ storiesOf('Grid', module)
   ))
   .add('overlap', () => (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
-      <div className="ray-grid">
+      <div className="ray-page-container">
         <RayGridInnerWithBackground>
           <div
             className="ray-grid__cell--span-4"
@@ -169,8 +169,8 @@ storiesOf('Grid', module)
   ))
   .add('debugger', () => (
     <div>
-      <div className="ray-grid ray-grid--debug">
-        <div className="ray-grid__inner" style={{ position: 'relative' }}>
+      <div className="ray-page-container ray-page-container--debug">
+        <div className="ray-grid" style={{ position: 'relative' }}>
           <div
             className="ray-grid__cell--span-4"
             style={{
@@ -228,7 +228,7 @@ storiesOf('Grid', module)
   ))
   .add('sample utils', () => (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
-      <div className="ray-grid ray-grid--justify-center">
+      <div className="ray-page-container ray-page-container--justify-center">
         <RayGridInnerWithBackground>
           <div className="ray-grid__cell">
             <SampleContent />

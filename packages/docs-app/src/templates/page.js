@@ -113,7 +113,7 @@ const renderAst = new RehypeReact({
 export default ({ data }) => {
   const post = data.markdownRemark;
 
-  const classNames = classnames('page-content ray-grid', {
+  const classNames = classnames('page-content ray-page-container', {
     'page-content--component': post.frontmatter.label === 'Component'
   });
 
@@ -132,7 +132,7 @@ export default ({ data }) => {
       )}
 
       <div className={classNames}>
-        <div className="ray-grid__inner">
+        <div className="ray-grid">
           <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-10-desktop">
             {renderAst(post.htmlAst)}
           </div>

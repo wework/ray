@@ -20,7 +20,7 @@ function GridDocumentation() {
       </h4>
       <p className="ray-text--body">
         You can enable a visual grid overlay by adding a{' '}
-        <code>ray-grid--debug</code> class name to either the{' '}
+        <code>ray-page-container--debug</code> class name to either the{' '}
         <code>ray-grid</code> div or any parent, full-width container (ie, html
         or body). Grid overlay is aware of phone/tablet/desktop breakpoints and
         will adjust accordingly.
@@ -56,7 +56,7 @@ function RayGridInnerWithBackground(props) {
   return (
     <div
       {...props}
-      className="ray-grid__inner"
+      className="ray-grid"
       style={{ backgroundColor: 'hsl(0, 100%, 75%)', ...props.style }}
     />
   );
@@ -65,7 +65,7 @@ function RayGridInnerWithBackground(props) {
 function GridExample() {
   return (
     <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
-      <div className="ray-grid">
+      <div className="ray-page-container">
         <RayGridInnerWithBackground>
           {range(12).map(n => (
             <div className="ray-grid__cell--span-1" key={n}>
@@ -91,8 +91,8 @@ function GridExample() {
 
 function GridDebugExample() {
   return (
-    <div className="ray-grid ray-grid--debug">
-      <div className="ray-grid__inner">
+    <div className="ray-page-container ray-page-container--debug">
+      <div className="ray-grid">
         <div className="ray-grid__cell ray-grid__cell--push-2-desktop">
           <div
             className="ray-bg ray-bg--16by9"

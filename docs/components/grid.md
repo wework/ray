@@ -10,8 +10,8 @@ title: Grid System
 #### Structure
 
 ```html
-<div class="ray-grid">
-  <div class="ray-grid__inner">
+<div class="ray-page-container">
+  <div class="ray-grid">
     <div class="ray-grid__cell">
       I'm a cell, spanning the default 4 columns
     </div>
@@ -30,10 +30,10 @@ title: Grid System
 
 | Name                                                         | Description                                                                                                                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `.ray-grid`                                                  | Mandatory, for the layout grid element                                                                                                                             |
-| `.ray-grid--align-<POSITION>`                                | Optional, align the grid to the left or right side of the container<br>`POSITION`: left, right                                                                     |
-| `.ray-grid--justify-<POSITION>`                              | Optional, align the cells of the grid (default: left, does not affect nested grids<br>`POSITION`: left, center, right                                              |
-| `.ray-grid__inner`                                           | Mandatory, for wrapping grid cells (_must_ be child of `.ray-grid`)                                                                                                |
+| `.ray-page-container`                                        | Typically used once on a page, defines maximum width and padding charactersitics for the page                                                                      |
+| `.ray-page-container--align-<POSITION>`                      | Optional, align the grid to the left or right side of the container<br>`POSITION`: left, right                                                                     |
+| `.ray-page-container--justify-<POSITION>`                    | Optional, align the cells of the grid (default: left, does not affect nested grids<br>`POSITION`: left, center, right                                              |
+| `.ray-grid`                                                  | Mandatory, for wrapping grid cells (_must_ be child of `.ray-grid`)                                                                                                |
 | `.ray-grid__cell`                                            | Mandatory, for the layout grid cell (default width: 4 columns)                                                                                                     |
 | `.ray-grid__cell--align-<POSITION>`                          | Optional, align the cell to the top, middle, or center of the containing grid<br>`POSITION`: top, middle, bottom                                                   |
 | `.ray-grid__cell--span-<NUMBER_OF_COLUMNS>-<TYPE_OF_DEVICE>` | Optional, specifies the number of columns the cell spans on a type of device<br>`NUMBER_OF_COLUMS`: 1 through 12<br>`TYPE_OF_DEVICE`: desktop, tablet, phone       |

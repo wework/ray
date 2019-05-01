@@ -45,7 +45,7 @@
   }
 
   // postcss-bem-linter: define layout-grid
-  .#{$ray-class-prefix}grid {
+  .#{$ray-class-prefix}page-container {
     @each $size in map-keys($ray-layout-grid-columns) {
       @include mdc-layout-grid-media-query_($size) {
         $margin: map-get($ray-layout-grid-default-margin, $size);
@@ -56,7 +56,7 @@
     }
   }
 
-  .#{$ray-class-prefix}grid__inner {
+  .#{$ray-class-prefix}grid {
     @each $size in map-keys($ray-layout-grid-columns) {
       @include mdc-layout-grid-media-query_($size) {
         $margin: map-get($ray-layout-grid-default-margin, $size);
@@ -132,30 +132,30 @@
     }
   }
 
-  .#{$ray-class-prefix}grid--align-left {
+  .#{$ray-class-prefix}page-container--align-left {
     margin-right: auto;
     margin-left: 0;
   }
 
-  .#{$ray-class-prefix}grid--align-right {
+  .#{$ray-class-prefix}page-container--align-right {
     margin-right: 0;
     margin-left: auto;
   }
 
-  .#{$ray-class-prefix}grid--justify-left {
-    > .#{$ray-class-prefix}grid__inner {
+  .#{$ray-class-prefix}page-container--justify-left {
+    > .#{$ray-class-prefix}grid {
       justify-content: left;
     }
   }
 
-  .#{$ray-class-prefix}grid--justify-center {
-    > .#{$ray-class-prefix}grid__inner {
+  .#{$ray-class-prefix}page-container--justify-center {
+    > .#{$ray-class-prefix}grid {
       justify-content: center;
     }
   }
 
-  .#{$ray-class-prefix}grid--justify-right {
-    > .#{$ray-class-prefix}grid__inner {
+  .#{$ray-class-prefix}page-container--justify-right {
+    > .#{$ray-class-prefix}grid {
       justify-content: right;
     }
   }
