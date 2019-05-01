@@ -35,6 +35,9 @@ commands:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+            - packages/core/node_modules
+            - packages/docs-app/node_modules
+            - packages/rehype-react/node_modules
 
 jobs:
   test:
