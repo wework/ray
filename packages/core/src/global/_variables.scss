@@ -39,13 +39,6 @@ $ray-button-v-spacing-compact: rem(12px) - $ray-border-width;
 $ray-button-h-spacing: rem(24px) - $ray-border-width;
 $ray-button-h-spacing-compact: rem(12px) - $ray-border-width;
 
-// @todo: rename to desktop, tablet, and phone
-$ray-grid-breakpoints: (
-  lg: 1195px,
-  md: 600px,
-  sm: 0px
-);
-
 $ray-layout-grid-breakpoints: (
   desktop: 1195px,
   tablet: 600px,

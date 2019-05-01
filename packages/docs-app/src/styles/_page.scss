@@ -107,7 +107,7 @@ button,
   width: 100%;
   margin: 4rem 0;
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
     margin: $ray-spacing-2xl 0;
     // subtract with of side nav
     width: calc(100% - 300px);

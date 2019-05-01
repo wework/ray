@@ -2,7 +2,7 @@
   padding-left: map-get($ray-layout-grid-default-gutter, phone);
   padding-right: map-get($ray-layout-grid-default-gutter, phone);
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
     padding-left: $ray-spacing-xl;
     padding-right: $ray-spacing-xl;
   }
@@ -34,7 +34,7 @@
     left: 0;
   }
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
     position: sticky;
     left: 0;
     top: 0;
@@ -56,7 +56,7 @@
     border-color: $ray-color-blue-50;
   }
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
     display: none;
   }
 }

@@ -1,2 +1,6 @@
 @import '../../src/ray-core.scss';
 @import '../../src/ray-debug.scss';
+
+body {
+  @include desktop;
+}

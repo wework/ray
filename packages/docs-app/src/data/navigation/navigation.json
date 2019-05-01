@@ -19,6 +19,9 @@
       },
       "spacing": {
         "title": "Spacing"
+      },
+      "breakpoints": {
+        "title": "Breakpoints"
       }
     }
   },

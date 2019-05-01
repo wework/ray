@@ -12,6 +12,7 @@ import ComponentCode from '../components/ComponentCode';
 import CodeSnippet from '../components/CodeSnippet';
 import ColorTable from '../components/ColorTable';
 import GridDocumentation from '../components/GridDocumentation';
+import BreakpointsDocumentation from '../components/BreakpointsDocumentation';
 import SpaceExample from '../components/SpaceExample';
 
 // Custom Markdown
@@ -102,7 +103,8 @@ const renderAst = new RehypeReact({
     'flex-group': FlexGroup,
     'color-table': ColorTable,
     component: ComponentCode,
-    'grid-documentation': GridDocumentation
+    'grid-documentation': GridDocumentation,
+    'breakpoints-documentation': BreakpointsDocumentation
   }
 }).Compiler;
 /* eslint-enable react/prop-types */
