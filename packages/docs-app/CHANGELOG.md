@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.12](https://github.com/wework/ray/compare/ray-website-gatsby@0.5.11...ray-website-gatsby@0.5.12) (2019-05-02)
+
+
+### Bug Fixes
+
+* clean up breakpoints, grid and add docs ([#20](https://github.com/wework/ray/issues/20)) ([e3c4383](https://github.com/wework/ray/commit/e3c4383))
+
+
+
+
+
 ## [0.5.11](https://github.com/wework/ray/compare/ray-website-gatsby@0.5.10...ray-website-gatsby@0.5.11) (2019-05-02)
 
 **Note:** Version bump only for package ray-website-gatsby

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/wework/ray/compare/@wework/ray-core@0.6.5...@wework/ray-core@0.6.6) (2019-05-02)
+
+
+### Bug Fixes
+
+* **card:** add card link modifier ([#15](https://github.com/wework/ray/issues/15)) ([33ba86d](https://github.com/wework/ray/commit/33ba86d))
+* clean up breakpoints, grid and add docs ([#20](https://github.com/wework/ray/issues/20)) ([e3c4383](https://github.com/wework/ray/commit/e3c4383))
+
+
+
+
+
 ## [0.6.5](https://github.com/wework/ray/compare/@wework/ray-core@0.6.4...@wework/ray-core@0.6.5) (2019-05-02)
 
 **Note:** Version bump only for package @wework/ray-core
