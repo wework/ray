@@ -33,6 +33,15 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "evzaro",
+      "name": "Evan Zarowitz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13824279?v=4",
+      "profile": "http://evanzarowitz.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
