@@ -14,6 +14,16 @@
         "maintenance",
         "code"
       ]
+    },
+    {
+      "login": "cmugla",
+      "name": "Celeste Glavin",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19141291?v=4",
+      "profile": "http://celesteglavin.com/",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
