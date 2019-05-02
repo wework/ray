@@ -1,4 +1,6 @@
 @import '../../global/mixins/exports';
+@import '../../global/variables';
+@import '../../global/typography';
 
 @include exports('ray-card') {
   $card-padding: 1rem;
@@ -28,21 +30,9 @@
       }
 
       &:hover {
-        &::after {
-          border-color: $ray-color-blue-50;
+        .#{$ray-class-prefix}card__heading {
+          text-decoration: underline;
         }
-      }
-
-      &::after {
-        content: '';
-        border: 1px solid transparent;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: $ray-border-radius;
-        pointer-events: none;
       }
     }
 
@@ -76,5 +66,10 @@
         border-top-right-radius: 0;
       }
     }
+  }
+
+  .#{$ray-class-prefix}card__heading {
+    @extend .ray-text--body-large;
+    color: $ray-color-blue-50;
   }
 }
