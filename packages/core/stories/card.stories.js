@@ -4,10 +4,14 @@ import { storiesOf } from '@storybook/react';
 import getPlaceholderURL from './util/placeholder';
 
 /* eslint-disable no-script-url */
+
 storiesOf('Card', module)
-  .add('card, with image on top', () => (
-    <div
-      className="ray-card"
+  .add('card, link, image on top', () => (
+    <a
+      href="https://wework.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="ray-card ray-card--link"
       style={{
         maxWidth: '480px'
       }}
@@ -17,42 +21,14 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <div className="ray-text--body-large">
-          <a href="javascript:;">Better Together</a>
-        </div>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          atque minima itaque sint! Doloremque odio quia saepe.
-        </p>
+        <div className="ray-link ray-text--body-large">Better Together</div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque
+        minima itaque sint! Doloremque odio quia saepe.
       </div>
-    </div>
+    </a>
   ))
-  .add('card, with image on bottom', () => (
-    <div
-      className="ray-card"
-      style={{
-        maxWidth: '480px'
-      }}
-    >
-      <div className="ray-card__content">
-        <div className="ray-text--body-large">
-          <a href="javascript:;">Better Together</a>
-        </div>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          atque minima itaque sint! Doloremque odio quia saepe.
-        </p>
-      </div>
-
-      <div className="ray-card__image ray-image ray-image--16by9">
-        <img src={getPlaceholderURL('16x9')} />
-      </div>
-    </div>
-  ))
-  .add('card, no image', () => (
-    <div
+  .add('card, link, image on bottom', () => (
+    <a
       href="https://wework.com"
       target="_blank"
       rel="noopener noreferrer"
@@ -62,16 +38,34 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <div className="ray-text--body-large">
-          <a href="javascript:;">Better Together</a>
-        </div>
+        <div className="ray-link ray-text--body-large">Better Together</div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque
+        minima itaque sint! Doloremque odio quia saepe.
+      </div>
 
+      <div className="ray-card__image ray-image ray-image--16by9">
+        <img src={getPlaceholderURL('16x9')} />
+      </div>
+    </a>
+  ))
+  .add('card, link, no image', () => (
+    <a
+      href="https://wework.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="ray-card ray-card--link"
+      style={{
+        maxWidth: '480px'
+      }}
+    >
+      <div className="ray-card__content">
+        <div className="ray-link ray-text--body-large">Better Together</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
       </div>
-    </div>
+    </a>
   ))
   .add('card, image on top, with buttons', () => (
     <div
@@ -85,21 +79,37 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <div className="ray-text--body-large">
-          <a href="javascript:;">Better Together</a>
-        </div>
-
+        <div className="ray-link ray-text--body-large">Better Together</div>
         <p className="ray-text--body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
         </p>
-
         <button className="ray-button ray-button--primary ray-button--compact">
           Sign Up Now
+        </button>
+        <button className="ray-button ray-button--secondary ray-button--compact">
+          Learn More
         </button>
         <button className="ray-button ray-button--tertiary ray-button--compact">
           Share
         </button>
+      </div>
+    </div>
+  ))
+  .add('card, tertiary button', () => (
+    <div
+      className="ray-card"
+      style={{
+        maxWidth: '480px'
+      }}
+    >
+      <div className="ray-card__content">
+        <div className="ray-link ray-text--body-large">Better Together</div>
+        <p className="ray-text--body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+          atque minima itaque sint! Doloremque odio quia saepe.
+        </p>
+        <button className="ray-link">Share</button>
       </div>
     </div>
   ));
