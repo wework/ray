@@ -27,12 +27,12 @@ commands:
     description: 'Restore NPM packages'
     steps:
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "yarn.lock" }}
   save_npm_packages_cache:
     description: 'Cache NPM packages'
     steps:
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
             - packages/core/node_modules
