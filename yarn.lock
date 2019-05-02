@@ -3477,7 +3477,7 @@
     "@xtuc/long" "4.2.2"
 
 "@wework/ray-core@file:packages/core":
-  version "0.6.3"
+  version "0.6.4"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
