@@ -20,10 +20,10 @@ function GridDocumentation() {
       </h4>
       <p className="ray-text--body">
         You can enable a visual grid overlay by adding a{' '}
-        <code>ray-page-container--debug</code> class name to either the{' '}
-        <code>ray-grid</code> div or any parent, full-width container (ie, html
-        or body). Grid overlay is aware of phone/tablet/desktop breakpoints and
-        will adjust accordingly.
+        <code>ray-page-container--debug</code> class name to the{' '}
+        <code>ray-page-container</code> div, or any full-width container (ie,
+        html or body). Grid overlay is aware of phone/tablet/desktop breakpoints
+        and will adjust accordingly.
       </p>
       <p>
         <strong>Note:</strong> These classes are not available in the compiled
@@ -53,39 +53,29 @@ function SampleContent(props) {
 }
 
 function RayGridInnerWithBackground(props) {
-  return (
-    <div
-      {...props}
-      className="ray-grid"
-      style={{ backgroundColor: 'hsl(0, 100%, 75%)', ...props.style }}
-    />
-  );
+  return <div {...props} className="ray-grid" />;
 }
 
 function GridExample() {
   return (
-    <div style={{ backgroundColor: 'hsl(144, 100%, 75%)' }}>
-      <div className="ray-page-container">
-        <RayGridInnerWithBackground>
-          {range(12).map(n => (
-            <div className="ray-grid__cell--span-1" key={n}>
-              <SampleContent>cell</SampleContent>
-            </div>
-          ))}
-          <div className="ray-grid__cell">
-            <SampleContent>cell</SampleContent>
-          </div>
-          <div className="ray-grid__cell--span-full">
-            <SampleContent>
-              {"I'm a cell that will always span full width"}
-            </SampleContent>
-          </div>
-          <div className="ray-grid__cell ray-grid__cell--push-2">
-            <SampleContent>{"I'm a cell with a push modifier"}</SampleContent>
-          </div>
-        </RayGridInnerWithBackground>
+    <RayGridInnerWithBackground>
+      {range(12).map(n => (
+        <div className="ray-grid__cell--span-1" key={n}>
+          <SampleContent>cell</SampleContent>
+        </div>
+      ))}
+      <div className="ray-grid__cell">
+        <SampleContent>cell</SampleContent>
       </div>
-    </div>
+      <div className="ray-grid__cell--span-full">
+        <SampleContent>
+          {"I'm a cell that will always span full width"}
+        </SampleContent>
+      </div>
+      <div className="ray-grid__cell ray-grid__cell--push-2">
+        <SampleContent>{"I'm a cell with a push modifier"}</SampleContent>
+      </div>
+    </RayGridInnerWithBackground>
   );
 }
 
