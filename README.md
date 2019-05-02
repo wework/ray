@@ -1,4 +1,5 @@
 # Ray – WeWork Design System
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1fc61cc7-d0e8-4424-977e-8fa3f3a237b2/deploy-status)](https://app.netlify.com/sites/ray-docs/deploys) [![CircleCI](https://circleci.com/gh/wework/ray.svg?style=svg)](https://circleci.com/gh/wework/ray) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Coverage Status](https://coveralls.io/repos/github/wework/ray/badge.svg?branch=master)](https://coveralls.io/github/wework/ray?branch=master) [![NPM Version](https://img.shields.io/npm/v/@wework/ray-core.svg)](https://www.npmjs.com/package/@wework/ray-core)
 
@@ -53,3 +54,15 @@ $ yarn lerna:publish
 This repository is maintained by Demand Generation of Product Offerings & Growth at WeWork.
 
 Its lead maintainer is [Adam Raider](https://github.com/adamraider), please either [submit an issue](https://github.com/wework/ray/issues/new) or reach out to Adam at [adam.raider@wework.com](mailto:adam.raider@wework.com) for questions or concerns.
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://raider.tech"><img src="https://avatars1.githubusercontent.com/u/6812331?v=4" width="100px;" alt="adamraider"/><br /><sub><b>adamraider</b></sub></a><br /><a href="#maintenance-adamraider" title="Maintenance">🚧</a> <a href="https://github.com/wework/ray/commits?author=adamraider" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
