@@ -30,7 +30,7 @@
     "hastscript": "^3.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "remark": "^8.0.0",
+    "remark": "^10.0.1",
     "remark-cli": "^4.0.0",
     "remark-preset-wooorm": "^3.0.0",
     "unified": "^6.1.6",
