@@ -36,7 +36,7 @@ button,
 
   // All em on Markdown pages after images and image grid
   .gatsby-resp-image-link + em,
-  .image-grid + p > em,
+  .image-page-container + p > em,
   .image-component + p > em {
     font-size: 0.875em;
     color: $ray-color-text-medium;
@@ -107,7 +107,7 @@ button,
   width: 100%;
   margin: 4rem 0;
 
-  @media (min-width: map-get($ray-grid-breakpoints, lg)) {
+  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
     margin: $ray-spacing-2xl 0;
     // subtract with of side nav
     width: calc(100% - 300px);

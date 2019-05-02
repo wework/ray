@@ -35,17 +35,17 @@
       width: 100%;
     }
 
-    .#{$ray-class-prefix}grid {
+    .#{$ray-class-prefix}page-container {
       background-color: rgb(128, 255, 179);
+    }
 
-      &__inner {
-        background-color: rgb(255, 128, 128);
-      }
+    .#{$ray-class-prefix}grid {
+      background-color: rgb(255, 128, 128);
+    }
 
-      &__cell--span-4 {
-        background-color: rgb(159, 128, 255);
-        min-height: 10vh;
-      }
+    .#{$ray-class-prefix}grid__cell--span-4 {
+      background-color: rgb(159, 128, 255);
+      min-height: 10vh;
     }
   }
 

@@ -38,10 +38,10 @@
   );
 }
 
-.#{$ray-class-prefix}grid--debug {
+.#{$ray-class-prefix}page-container--debug {
   position: relative;
 
-  &.#{$ray-class-prefix}grid::before {
+  &.#{$ray-class-prefix}page-container::before {
     right: var(--g-margin) !important;
     margin-right: calc(-1 * var(--g-gutter)) !important;
   }
