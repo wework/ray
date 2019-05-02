@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "adamraider",
+      "name": "adamraider",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6812331?v=4",
+      "profile": "https://raider.tech",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ray",
+  "projectOwner": "wework",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
