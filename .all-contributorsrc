@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "cmugla",
+      "name": "Celeste Glavin",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19141291?v=4",
+      "profile": "http://celesteglavin.com/",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ray",
+  "projectOwner": "wework",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
