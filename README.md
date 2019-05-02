@@ -6,11 +6,11 @@
 
 🚧 **Warning**: Work-in-progress, do not use on production.
 
-## 🐥 Getting Started
+## Getting Started
 
 See the [getting started docs](https://ray.wework.com/getting-started/).
 
-## 👩🏻‍💻 Development
+## Development
 
 ```bash
 # to install dependencies and bootstrap lerna
@@ -26,7 +26,7 @@ $ npx lerna run storybook --scope="@wework/ray-core" --parallel
 $ npx lerna run dev --scope="ray-website-gatsby"  --parallel
 ```
 
-## 🤖 Contributing
+## Contributing
 
 This project uses [commitizen](https://github.com/commitizen/cz-cli).
 
@@ -36,7 +36,7 @@ When commiting, please use the following command and follow the prompts:
 $ yarn commit
 ```
 
-## 🚀 [Release](https://github.com/wework/ray/releases)
+## [Release](https://github.com/wework/ray/releases)
 
 Releases are automatically created when a commit is merged into master. Circle CI will kick off a job, bump the version and publish to the npm registry.
 
@@ -48,7 +48,7 @@ $ yarn build
 $ yarn lerna:publish
 ```
 
-## 👷🏻‍ Ownership
+## Ownership
 
 This repository is maintained by Demand Generation of Product Offerings & Growth at WeWork.
 
