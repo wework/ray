@@ -106,6 +106,12 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-remove-serviceworker`
+    `gatsby-plugin-remove-serviceworker`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-4260314-47'
+      }
+    }
   ]
 };
