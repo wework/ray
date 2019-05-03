@@ -3572,7 +3572,7 @@
     "@xtuc/long" "4.2.2"
 
 "@wework/ray-core@file:packages/core":
-  version "0.6.4"
+  version "0.6.6"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -9604,10 +9604,10 @@ gatsby-image@2.0.20:
     "@babel/runtime" "^7.0.0"
     prop-types "^15.6.1"
 
-gatsby-link@^2.0.17:
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.17.tgz#f6129a942c9138466fceb25cce89d579f3a62f85"
-  integrity sha512-PAvQTAwjebiwzso2PeLGT/P365q4iqE62YYY0heK46VKMvhSklCOx0MjldYsUjp0lvtU23plwwVabitmBuPztQ==
+gatsby-link@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.1.0.tgz#19b9d0d3c06f42b707d0cf097c3a76b72d189530"
+  integrity sha512-HNXxZoS4TB4FDRiBHwZEIS374jwvw0cNnLTqgW6gTI6mPQcqGwn//qQHmpSwT/jDDJWaVcvVNDZksnkKm0kgJA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@types/reach__router" "^1.0.0"
@@ -9843,9 +9843,9 @@ gatsby-transformer-sharp@2.1.8:
     sharp "^0.21.0"
 
 gatsby@^2.1.23:
-  version "2.3.35"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.35.tgz#a154dd883d5bf458a363d23aa627229d9c2910e1"
-  integrity sha512-yb1KnX5P45WMeJvvCE2YePpPtSAxTIYHGjYCCJN6xI+cDJLL+lXmz7Q5WsvwiMPAZTdCUR26m3ZyJhERtnwHeg==
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.4.1.tgz#5e199df5afa0285093fcf68809ef4160b1016768"
+  integrity sha512-KfpsYh79ZLo0UDlu8Nvjv4vH1Ru4arux2wg0lF9vk85DliNJ90+eGhKURX8Diw5MjKOtKXC9gVgkjiVK2VjGSg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -9903,7 +9903,7 @@ gatsby@^2.1.23:
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
     gatsby-cli "^2.5.12"
-    gatsby-link "^2.0.17"
+    gatsby-link "^2.1.0"
     gatsby-plugin-page-creator "^2.0.12"
     gatsby-react-router-scroll "^2.0.7"
     gatsby-telemetry "^1.0.9"
