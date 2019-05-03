@@ -27,7 +27,6 @@
     "color": "^3.1.0",
     "custom-event": "^1.0.1",
     "dotenv": "^6.1.0",
-    "flatpickr": "^4.5.2",
     "gatsby": "^2.1.23",
     "gatsby-image": "2.0.20",
     "gatsby-plugin-manifest": "^2.0.10",
@@ -71,8 +70,7 @@
     "node-sass": "^4.10.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "sass-loader": "^7.1.0",
-    "storybook-readme": "^3.3.0"
+    "sass-loader": "^7.1.0"
   },
   "eslintConfig": {
     "globals": {
