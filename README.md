@@ -4,8 +4,6 @@
 
 <page-intro>Resources for building interfaces with WeWork's design system. [npm package](https://www.npmjs.com/package/@wework/ray-core)</page-intro>
 
-🚧 **Warning**: Work-in-progress, do not use on production.
-
 ## Getting Started
 
 See the [getting started docs](https://ray.wework.com/getting-started/).
