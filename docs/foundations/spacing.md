@@ -9,7 +9,7 @@ title: Spacing
 
 <div class="space-example-set">
 
-<space-example rem="8"></space-example>
+<space-example rem="6"></space-example>
 
 <space-example rem="4"></space-example>
 
