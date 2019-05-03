@@ -44,7 +44,7 @@
     "gulp-util": "3.0.8",
     "lodash": "4.17.11",
     "mini-css-extract-plugin": "0.4.4",
-    "nanohtml": "1.4.0",
+    "nanohtml": "1.6.1",
     "node-sass": "4.11.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "postcss-loader": "3.0.0",
