@@ -20706,9 +20706,9 @@ stealthy-require@^1.1.1:
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
 storybook-chromatic@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/storybook-chromatic/-/storybook-chromatic-1.3.2.tgz#e95ceeb3c94b1a1574f5b6daa69479ae17f05a8f"
-  integrity sha512-bUzMeVfYPhic1nEgn2MvGgqc901Ju4xmtxk/2mSIi/TIJg1ENS67eRt5DvE6oJ3pommfcX73Js/boArXxk/u9w==
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/storybook-chromatic/-/storybook-chromatic-1.3.3.tgz#4ea0ff8dfc7e196243e045c3cd0d1e19086b3587"
+  integrity sha512-Ub92mvOfuPWOUUvS4Q3+mVCuWgbnWQAq4hxtLfg39vNDm7d14R/nLLCKgRI7KglATrL0+t4g1x0MNa3nCcN4fA==
   dependencies:
     "@babel/runtime" "^7.3.1"
     "@chromaui/localtunnel" "1.9.1-chromatic.3"
