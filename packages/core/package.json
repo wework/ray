@@ -34,7 +34,7 @@
     "emotion-theming": "^10.0.7",
     "file-loader": "3.0.1",
     "gulp": "4.0.0",
-    "gulp-autoprefixer": "6.0.0",
+    "gulp-autoprefixer": "6.1.0",
     "gulp-babel": "8.0.0",
     "gulp-concat": "2.6.1",
     "gulp-rename": "1.4.0",
