@@ -3663,12 +3663,12 @@ acorn-walk@^6.0.1, acorn-walk@^6.1.0:
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-6.1.1.tgz#d363b66f5fac5f018ff9c3a1e7b6f8e310cc3913"
   integrity sha512-OtUw6JUTgxA2QoqqmrmQ7F2NYqiBPi/L2jqHyFtllhOUvXYQXf0Z1CYUinIfyT4bTCGmrA7gX9FvHA81uzCoVw==
 
-acorn@5.X, acorn@^5.0.0, acorn@^5.0.3, acorn@^5.2.1, acorn@^5.5.3, acorn@^5.6.2:
+acorn@5.X, acorn@^5.0.0, acorn@^5.0.3, acorn@^5.5.3, acorn@^5.6.2:
   version "5.7.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
   integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
 
-acorn@^6.0.1, acorn@^6.0.2, acorn@^6.0.5, acorn@^6.0.7, acorn@^6.1.1:
+acorn@^6.0.1, acorn@^6.0.2, acorn@^6.0.4, acorn@^6.0.5, acorn@^6.0.7, acorn@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
@@ -15061,12 +15061,12 @@ nanobench@^2.1.0, nanobench@^2.1.1:
     mutexify "^1.1.0"
     pretty-hrtime "^1.0.2"
 
-nanohtml@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/nanohtml/-/nanohtml-1.4.0.tgz#037ac7cf41513269799aaacf97c5eff456c452d1"
-  integrity sha512-UceOMAdudLvo0piPDy+NhAEJpGD4H/pE2OWgV8xZ9D4oqJv9RjzxbyucajqJkjSsNU22XahuFAJoJJOhzJ2AVQ==
+nanohtml@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/nanohtml/-/nanohtml-1.6.1.tgz#613434af56cbba62e7d15e508e72b73618a29b20"
+  integrity sha512-rl6Pa7OwymT4FyMhapXyvji0pYJOE7lJ5wD43oDbR2gADGstTwU/lGrZ+u/v+ndl+aqQWrYdP8DOl9c724IeuQ==
   dependencies:
-    acorn "^5.2.1"
+    acorn "^6.0.4"
     camel-case "^3.0.0"
     convert-source-map "^1.5.1"
     estree-is-member-expression "^1.0.0"
