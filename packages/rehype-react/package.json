@@ -1,7 +1,7 @@
 {
   "name": "rehype-react",
   "description": "Compile Hast tree to React with remark",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "private": true,
   "keywords": [
     "compile",
