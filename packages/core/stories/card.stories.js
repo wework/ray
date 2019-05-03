@@ -21,7 +21,7 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <div className="ray-link ray-text--body-large">Better Together</div>
+        <div className="ray-card__heading">Better Together</div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque
         minima itaque sint! Doloremque odio quia saepe.
       </div>
@@ -38,7 +38,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <div className="ray-link ray-text--body-large">Better Together</div>
+        <div className="ray-card__heading">Better Together</div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque
         minima itaque sint! Doloremque odio quia saepe.
       </div>
@@ -59,7 +59,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <div className="ray-link ray-text--body-large">Better Together</div>
+        <div className="ray-card__heading">Better Together</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
@@ -79,7 +79,7 @@ storiesOf('Card', module)
       </div>
 
       <div className="ray-card__content">
-        <div className="ray-link ray-text--body-large">Better Together</div>
+        <div className="ray-card__heading">Better Together</div>
         <p className="ray-text--body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
@@ -104,7 +104,7 @@ storiesOf('Card', module)
       }}
     >
       <div className="ray-card__content">
-        <div className="ray-link ray-text--body-large">Better Together</div>
+        <div className="ray-card__heading">Better Together</div>
         <p className="ray-text--body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
           atque minima itaque sint! Doloremque odio quia saepe.
