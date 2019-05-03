@@ -29,6 +29,10 @@
         outline: 0;
       }
 
+      .#{$ray-class-prefix}card__heading {
+        color: $ray-color-blue-50;
+      }
+
       &:hover {
         .#{$ray-class-prefix}card__heading {
           text-decoration: underline;
@@ -70,6 +74,5 @@
 
   .#{$ray-class-prefix}card__heading {
     @extend .ray-text--body-large;
-    color: $ray-color-blue-50;
   }
 }
