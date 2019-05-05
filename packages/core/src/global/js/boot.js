@@ -1,13 +1,9 @@
 import * as components from '../../components';
-import logger from './logger';
 
 function initializeAllComponents() {
-  logger.debug('booting');
-
   Object.keys(components).forEach(componentKey => {
     const Component = components[componentKey];
     if (Component.createAll) {
-      logger.debug(`instantiating ${componentKey}`);
       Component.createAll();
     }
   });
