@@ -1,4 +1,6 @@
 import './global/js/polyfills';
-import './global/js/boot';
+import boot from './global/js/boot';
+
+boot();
 
 export * from './components';
