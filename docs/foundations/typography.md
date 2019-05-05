@@ -5,7 +5,9 @@ title: Typography
 
 <page-intro>Well-defined typography styles in combination with a design system layout grid will create structured content. Limiting font-families, a tight type scale, and content limits will keep it tight.</page-intro>
 
-> To avoid conflicting with other libraries, by default, Ray does _not_ assign css attributes directly to HTML tags like h1–h6. If that kind of behavior is needed, assign the `$ray-assign-typography-styles-natively` sass variable to true _or_ see [Running Text](#running-text) below.
+<div class="ray-caption">Note</div>
+
+To avoid conflicting with other libraries, by default, Ray does _not_ assign css attributes directly to HTML tags like h1–h6. If that kind of behavior is needed, assign the `$ray-assign-typography-styles-natively` sass variable to true _or_ see [Running Text](#running-text) below.
 
 ## Headings
 

@@ -16,11 +16,10 @@
   height: 100vh;
   z-index: 7000;
   overflow-y: auto;
-  background-color: hsla(240, 17%, 98%, 1);
+  background-color: hsla(240, 17%, 97%, 1);
   min-width: 200px;
   max-width: 300px;
   width: 100%;
-  border-right: 1px solid $ray-color-gray-10;
   transition: left 0.15s ease; // stylelint-disable-line property-blacklist
   padding: 4rem 0;
 
@@ -94,15 +93,6 @@
   color: black;
   display: flex;
   align-items: center;
-
-  &::after {
-    width: 100%;
-    height: 1px;
-    content: '';
-    background-color: $ray-color-gray-10;
-    display: block;
-    margin-left: 1rem;
-  }
 }
 
 .side-nav--items {
@@ -110,8 +100,6 @@
 }
 
 .side-nav--header {
-  border-bottom: 1px solid $ray-color-gray-10;
-  padding-bottom: $ray-spacing-lg;
   margin-bottom: $ray-spacing-lg;
   @include nav-h-padding;
 }

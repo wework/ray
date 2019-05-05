@@ -25,19 +25,22 @@ export default class PageHeader extends React.Component {
               {labelContent}
               <div
                 style={{
-                  display: 'flex'
+                  display: 'flex',
+                  marginBottom: '1rem'
                 }}
               >
-                <h1 className="ray-text--h1">{title}</h1>
+                <h1 className="ray-text--h1" style={{ marginBottom: 0 }}>
+                  {title}
+                </h1>
                 {githubPath && (
                   <a
-                    className="ray-button ray-button--tertiary ray-button--pull-right"
+                    className="ray-button ray-button--tertiary ray-button--compact ray-button--pull-right"
                     href={githubPath}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
                       marginLeft: 'auto',
-                      alignSelf: 'flex-start'
+                      alignSelf: 'center'
                     }}
                   >
                     Edit this page

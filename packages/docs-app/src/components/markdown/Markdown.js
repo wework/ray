@@ -15,12 +15,12 @@ export class FlexGroup extends React.Component {
 
 export class ul extends React.Component {
   render() {
-    return <ul className="page-ul">{this.props.children}</ul>;
+    return <ul className="ray-list">{this.props.children}</ul>;
   }
 }
 
 export class ol extends React.Component {
   render() {
-    return <ol className="page-ol">{this.props.children}</ol>;
+    return <ol className="ray-list">{this.props.children}</ol>;
   }
 }
