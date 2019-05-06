@@ -1,0 +1,56 @@
+@include exports('ray-radio-pill') {
+  $ray-radio-pill-border-width: 1px;
+  $ray-radio-pill-border-radius: 4px;
+
+  .#{$ray-class-prefix}radio-pill {
+    float: left;
+    display: flex;
+
+    &:not(:first-child) {
+      margin-left: -$ray-radio-pill-border-width;
+    }
+
+    &:first-child {
+      .#{$ray-class-prefix}radio-pill__label {
+        border-bottom-left-radius: $ray-radio-pill-border-radius;
+        border-top-left-radius: $ray-radio-pill-border-radius;
+      }
+    }
+
+    &:last-child {
+      .#{$ray-class-prefix}radio-pill__label {
+        border-bottom-right-radius: $ray-radio-pill-border-radius;
+        border-top-right-radius: $ray-radio-pill-border-radius;
+      }
+    }
+
+    &__label {
+      cursor: pointer;
+      color: $ray-color-blue-50;
+      background-color: $ray-color-white;
+      padding: 15px 12px;
+      border: $ray-radio-pill-border-width solid $ray-color-blue-50;
+
+      @media (min-width: map-get($ray-layout-grid-breakpoints, tablet)) {
+        padding: 10px 25px;
+      }
+    }
+
+    &__input {
+      appearance: none;
+      width: 0;
+      height: 0;
+      opacity: 0;
+
+      &:checked + .#{$ray-class-prefix}radio-pill__label {
+        background-color: $ray-color-blue-20;
+      }
+
+      &:not(:checked) {
+        &:hover + .#{$ray-class-prefix}radio-pill__label {
+          background-color: $ray-color-blue-10;
+        }
+      }
+    }
+  }
+}

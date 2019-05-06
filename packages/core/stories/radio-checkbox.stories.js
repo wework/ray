@@ -44,6 +44,45 @@ storiesOf('Radio & Checkbox', module)
       </div>
     </React.Fragment>
   ))
+  .add('Radio pill group', () => (
+    <React.Fragment>
+      <div className="ray-radio-pill">
+        <input
+          id="radio-1"
+          name="radio-button-story"
+          type="radio"
+          className="ray-radio-pill__input"
+        />
+        <label className="ray-radio-pill__label" htmlFor="radio-1">
+          One
+        </label>
+      </div>
+
+      <div className="ray-radio-pill">
+        <input
+          id="radio-2"
+          name="radio-button-story"
+          type="radio"
+          className="ray-radio-pill__input"
+        />
+        <label className="ray-radio-pill__label" htmlFor="radio-2">
+          Two
+        </label>
+      </div>
+
+      <div className="ray-radio-pill">
+        <input
+          id="radio-3"
+          name="radio-button-story"
+          type="radio"
+          className="ray-radio-pill__input"
+        />
+        <label className="ray-radio-pill__label" htmlFor="radio-3">
+          Longest Item
+        </label>
+      </div>
+    </React.Fragment>
+  ))
   .add('Checkbox', () => (
     <div className="ray-checkbox">
       <input id="check" type="checkbox" className="ray-checkbox__input" />
