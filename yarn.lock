@@ -3794,7 +3794,7 @@
     "@xtuc/long" "4.2.2"
 
 "@wework/ray-core@file:packages/core":
-  version "1.0.0"
+  version "1.0.3"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -8203,12 +8203,12 @@ emojis-list@^2.0.0:
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
 emotion-theming@^10.0.7:
-  version "10.0.7"
-  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.7.tgz#0629740840f2ff6b929a7c3d52811187768e91c9"
-  integrity sha512-/dqXTvPA8pRQJRrW6/wpGqu0s0tmtwC27Pk0IOrxDV2F/knbKcd7J/G3T2385NjE+aJO4XJJ7JCNWQkwcjuX0Q==
+  version "10.0.10"
+  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.10.tgz#efe8751119751bdc70fdc1795fe4cde0fb0cf14c"
+  integrity sha512-E4SQ3Y91avxxydDgubi/po/GaC5MM1XHm8kcClKg1PA/TeOye0PiLBzAzlgt9dBzDRV9+qHDunsayPvzVYIYng==
   dependencies:
     "@emotion/weak-memoize" "0.2.2"
-    hoist-non-react-statics "^2.3.1"
+    hoist-non-react-statics "^3.3.0"
     object-assign "^4.1.1"
 
 emotion@^9.1.2:
