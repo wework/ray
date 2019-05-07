@@ -12,6 +12,9 @@
     flex-grow: 1;
     text-align: center;
     align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     &:not(:first-child) {
       margin-left: -$ray-border-width;
