@@ -12,6 +12,13 @@ title: Radio
     >
 </component>
 
+<component 
+    name="Radio Pill Group"
+    component="radio"
+    variation="radio-group" 
+    >
+</component>
+
 # Best Practices
 
 Source: [Radio Buttons UX Design](https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc)
