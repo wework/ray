@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/wework/ray/compare/@wework/ray-core@1.1.0...@wework/ray-core@1.2.0) (2019-05-08)
+
+
+### Features
+
+* **settings:** export breakpoints from settings ([#79](https://github.com/wework/ray/issues/79)) ([280ad02](https://github.com/wework/ray/commit/280ad02))
+
+
+
+
+
 # [1.1.0](https://github.com/wework/ray/compare/@wework/ray-core@1.0.5...@wework/ray-core@1.1.0) (2019-05-08)
 
 
