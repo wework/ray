@@ -1,0 +1,67 @@
+@import '../../global/variables';
+
+@include exports('ray-radio-pill') {
+  .#{$ray-class-prefix}radio-pill__wrapper {
+    width: 100%;
+    display: flex;
+  }
+
+  .#{$ray-class-prefix}radio-pill {
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    min-width: 0;
+
+    &:not(:first-child) {
+      margin-left: -$ray-border-width;
+    }
+
+    &:first-child {
+      .#{$ray-class-prefix}radio-pill__label {
+        border-bottom-left-radius: $ray-border-radius;
+        border-top-left-radius: $ray-border-radius;
+      }
+    }
+
+    &:last-child {
+      .#{$ray-class-prefix}radio-pill__label {
+        border-bottom-right-radius: $ray-border-radius;
+        border-top-right-radius: $ray-border-radius;
+      }
+    }
+  }
+
+  .#{$ray-class-prefix}radio-pill__input {
+    appearance: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked + .#{$ray-class-prefix}radio-pill__label {
+      background-color: $ray-color-blue-20;
+    }
+
+    &:not(:checked) {
+      &:hover + .#{$ray-class-prefix}radio-pill__label {
+        background-color: $ray-color-blue-10;
+      }
+    }
+  }
+
+  .#{$ray-class-prefix}radio-pill__label {
+    cursor: pointer;
+    color: $ray-color-blue-50;
+    background-color: $ray-color-white;
+    flex-grow: 1;
+    padding: $ray-radio-pill-v-spacing-compact $ray-radio-pill-h-spacing-compact;
+    border: $ray-border-width solid $ray-color-blue-50;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @media (min-width: map-get($ray-layout-grid-breakpoints, tablet)) {
+      padding: $ray-radio-pill-v-spacing $ray-radio-pill-h-spacing;
+    }
+  }
+}
