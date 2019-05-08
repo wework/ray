@@ -1,3 +1,8 @@
 export default {
-  prefix: 'ray-'
+  prefix: 'ray-',
+  breakpointsInPixels: {
+    phone: 0,
+    tablet: 600,
+    desktop: 1195
+  }
 };
