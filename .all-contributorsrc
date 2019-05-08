@@ -69,6 +69,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "alanfriedman",
+      "name": "Alan Friedman",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1093435?v=4",
+      "profile": "http://alanfriedmandesign.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
