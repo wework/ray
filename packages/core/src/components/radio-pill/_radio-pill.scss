@@ -7,14 +7,11 @@
   }
 
   .#{$ray-class-prefix}radio-pill {
-    float: left;
     display: flex;
     flex-grow: 1;
     text-align: center;
     align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    min-width: 0;
 
     &:not(:first-child) {
       margin-left: -$ray-border-width;
@@ -59,6 +56,9 @@
     flex-grow: 1;
     padding: $ray-radio-pill-v-spacing-compact $ray-radio-pill-h-spacing-compact;
     border: $ray-border-width solid $ray-color-blue-50;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     @media (min-width: map-get($ray-layout-grid-breakpoints, tablet)) {
       padding: $ray-radio-pill-v-spacing $ray-radio-pill-h-spacing;
