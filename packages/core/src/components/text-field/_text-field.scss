@@ -5,6 +5,7 @@
   .#{$ray-class-prefix}text-field {
     @include required-support('text-field');
     @include icon-support('text-field');
+    @include prepend-support('text-field');
   }
 
   .#{$ray-class-prefix}text-area {
@@ -19,6 +20,13 @@
     border-radius: $ray-border-radius;
     position: relative;
     height: $ray-field-height;
+    display: flex;
+    align-items: stretch;
+
+    &__wrapper {
+      position: relative;
+      flex: 1;
+    }
 
     &__label {
       @include label;

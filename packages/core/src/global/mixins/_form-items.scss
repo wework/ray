@@ -219,6 +219,18 @@
     }
   }
 
+  // --icon-left/right are DEPRECATED in favor of --icon-start/end,
+  // and will be removed in a future release of Ray. Use of --icon-left/right may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &--disabled {
+    .#{$ray-class-prefix}#{$class}__icon--left,
+    .#{$ray-class-prefix}#{$class}__icon--right,
+    .#{$ray-class-prefix}#{$class}__icon--start,
+    .#{$ray-class-prefix}#{$class}__icon--end {
+      opacity: 0.4;
+    }
+  }
+
   &--with-icon-left,
   &--with-icon-right,
   &--with-icon-start,
@@ -305,6 +317,44 @@
           padding-left: auto;
           padding-right: 3px;
         }
+      }
+    }
+  }
+}
+
+@mixin prepend-support($class) {
+  &--disabled {
+    .#{$ray-class-prefix}#{$class}__prepend {
+      opacity: 0.4;
+    }
+  }
+
+  &__prepend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    // using 69px to match the current
+    // flag dropdown selector on wework.com
+    min-width: rem(69px);
+    background-color: $ray-color-gray-03;
+    border-right: 1px solid $ray-color-gray-10;
+    border-radius: $ray-border-radius 0 0 $ray-border-radius;
+
+    [dir='rtl'] & {
+      border-radius: 0 $ray-border-radius $ray-border-radius 0;
+    }
+  }
+}
+
+@mixin required-support($class) {
+  &--required {
+    .#{$ray-class-prefix}#{$class}__label {
+      &::after {
+        content: '*';
+        padding-left: 3px;
       }
     }
   }

@@ -68,6 +68,20 @@ title: Select
     >
 </component>
 
+<component
+    name="With prepend"
+    component="select"
+    variation="select-with-prepend"
+    >
+</component>
+
+<component
+    name="With prepend (RTL)"
+    component="select"
+    variation="rtl-select-with-prepend"
+    >
+</component>
+
 ## JavaScript API
 
 ```javascript
