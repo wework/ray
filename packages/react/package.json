@@ -1,0 +1,45 @@
+{
+  "name": "@wework/ray-react",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn storybook",
+    "storybook": "start-storybook -p 6007 --ci"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@storybook/addon-knobs": "5.0.11",
+    "@storybook/addon-options": "5.0.5",
+    "@storybook/addon-viewport": "5.0.5",
+    "@storybook/addons": "^5.0.5",
+    "@storybook/core": "^5.0.6",
+    "@storybook/react": "^5.0.5",
+    "@storybook/theming": "5.0.11",
+    "@wework/ray-core": "1.2.0",
+    "babel-loader": "8.0.5",
+    "clsx": "1.0.4",
+    "node-sass": "4.12.0",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "storybook-chromatic": "1.3.3"
+  },
+  "peerDependencies": {
+    "@wework/ray-core": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src/**/*"
+  ],
+  "keywords": [
+    "wework",
+    "react",
+    "design-system"
+  ]
+}

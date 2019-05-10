@@ -44,6 +44,7 @@
     "dev": "lerna run dev --parallel",
     "dev:core": "lerna run dev --scope=\"@wework/ray-core\" --parallel",
     "dev:docs": "lerna run dev --scope=\"ray-website-gatsby\" --parallel",
+    "dev:react": "lerna run dev --scope=\"@wework/ray-react\" --parallel",
     "commit": "git-cz",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "bootstrap": "npx lerna bootstrap",
