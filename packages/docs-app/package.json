@@ -20,7 +20,7 @@
     "netlify:build": "gatsby build && cp -r static/* ../../.out/ && cp -r public/* ../../.out/"
   },
   "dependencies": {
-    "@babel/core": "7.3.4",
+    "@babel/core": "7.4.4",
     "@reach/router": "^1.2.1",
     "add": "2.0.6",
     "classnames": "^2.2.6",
