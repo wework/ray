@@ -3,8 +3,6 @@ import { storiesOf } from '@storybook/react';
 
 import getPlaceholderURL from './util/placeholder';
 
-/* eslint-disable no-script-url */
-
 storiesOf('Card', module)
   .add('card, link, image on top', () => (
     <a

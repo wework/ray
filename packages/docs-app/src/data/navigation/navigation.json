@@ -31,6 +31,9 @@
       "button": {
         "title": "Button"
       },
+      "breadcrumb": {
+        "title": "Breadcrumb"
+      },
       "select": {
         "title": "Select"
       },
