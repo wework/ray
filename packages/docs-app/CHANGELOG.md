@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/wework/ray/compare/ray-website-gatsby@1.0.9...ray-website-gatsby@1.1.0) (2019-05-10)
+
+
+### Features
+
+* **breadcrumb:** add breadcrumb component and examples ([#86](https://github.com/wework/ray/issues/86)) ([c0f1c7f](https://github.com/wework/ray/commit/c0f1c7f))
+
+
+
+
+
 ## [1.0.9](https://github.com/wework/ray/compare/ray-website-gatsby@1.0.8...ray-website-gatsby@1.0.9) (2019-05-10)
 
 
