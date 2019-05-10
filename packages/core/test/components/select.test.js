@@ -1,6 +1,8 @@
 import Select from '../../src/components/select';
+import { CSS_CLASSES, STRINGS } from '../../src/components/select/constants';
 import {
   selectFixture,
+  selectFixtureRequired,
   selectFixtureWithPlaceholder,
   selectFixtureNoInput
 } from '../fixtures/select';
@@ -8,7 +10,7 @@ import {
 function setupTest(fixture = selectFixture()) {
   document.body.innerHTML = null;
   document.body.appendChild(fixture);
-  const selectEl = document.querySelector('.ray-select');
+  const selectEl = document.querySelector(STRINGS.INIT_SELECTOR);
   const select = Select.create(selectEl);
   return { select, selectEl };
 }
@@ -76,7 +78,7 @@ describe('Select', () => {
 
     Select.createAll();
 
-    const selectEl = document.querySelector('.ray-select');
+    const selectEl = document.querySelector(STRINGS.INIT_SELECTOR);
     expect(Select.instances.get(selectEl)).toBeDefined();
   });
 
@@ -112,6 +114,13 @@ describe('Select', () => {
     select.set('Squirtle');
     expect(selectEl.classList).not.toContain('ray-select--placeholder-mode');
     expect(selectEl.classList).toContain('ray-select--has-value');
+    select.destroy();
+  });
+
+  test('it adds `required` class if select is required', () => {
+    const { select, selectEl } = setupTest(selectFixtureRequired());
+
+    expect(selectEl.classList).toContain(CSS_CLASSES.REQUIRED);
     select.destroy();
   });
 });

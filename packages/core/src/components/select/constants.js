@@ -1,5 +1,6 @@
 export const CSS_CLASSES = {
   ACTIVE: 'ray-select--active',
+  REQUIRED: 'ray-select--required',
   HAS_VALUE: 'ray-select--has-value',
   PLACEHOLDER_MODE: 'ray-select--placeholder-mode',
   EL__INPUT: 'ray-select__input'

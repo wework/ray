@@ -42,6 +42,23 @@ storiesOf('Text Field', module)
       </label>
     </div>
   ))
+  .add('Text field, required', () => {
+    setTimeout(initTextField);
+    return (
+      <div className="ray-text-field ray-text-field--active">
+        <input
+          className="ray-text-field__input"
+          id="email"
+          type="email"
+          placeholder="arya.stark@winterfell.org"
+          required
+        />
+        <label className="ray-text-field__label" htmlFor="email">
+          Email address
+        </label>
+      </div>
+    );
+  })
   .add('Text field, textarea', () => {
     setTimeout(initTextArea);
 
@@ -51,6 +68,23 @@ storiesOf('Text Field', module)
           className="ray-text-area__input"
           id="textarea"
           placeholder="Few people are aware..."
+        />
+        <label className="ray-text-area__label" htmlFor="textarea">
+          Fun fact about Ray Eames
+        </label>
+      </div>
+    );
+  })
+  .add('Text field, textarea - required', () => {
+    setTimeout(initTextArea);
+
+    return (
+      <div className="ray-text-area">
+        <textarea
+          className="ray-text-area__input"
+          id="textarea"
+          placeholder="Few people are aware..."
+          required
         />
         <label className="ray-text-area__label" htmlFor="textarea">
           Fun fact about Ray Eames

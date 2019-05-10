@@ -55,6 +55,10 @@ class Select {
     this._inputElement.addEventListener('change', this.onChange);
   }
 
+  isRequired() {
+    return this._inputElement.required;
+  }
+
   value() {
     // Current value of the Select
     return this._inputElement.value;
@@ -95,6 +99,12 @@ class Select {
         this.constructor.cssClasses.PLACEHOLDER_MODE,
         this.constructor.cssClasses.HAS_VALUE
       );
+    }
+
+    if (this.isRequired()) {
+      this._root.classList.add(this.constructor.cssClasses.REQUIRED);
+    } else {
+      this._root.classList.remove(this.constructor.cssClasses.REQUIRED);
     }
   }
 

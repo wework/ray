@@ -3,10 +3,12 @@
 
 @include exports('ray-text-field') {
   .#{$ray-class-prefix}text-field {
+    @include required-support('text-field');
     @include icon-support('text-field');
   }
 
   .#{$ray-class-prefix}text-area {
+    @include required-support('text-area');
     @include icon-support('text-area');
   }
 
