@@ -230,3 +230,14 @@
     }
   }
 }
+
+@mixin required-support($class) {
+  &--required {
+    .#{$ray-class-prefix}#{$class}__label {
+      &::after {
+        content: '*';
+        padding-left: 3px;
+      }
+    }
+  }
+}

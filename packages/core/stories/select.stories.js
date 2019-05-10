@@ -62,6 +62,25 @@ storiesOf('Select', module)
       </div>
     );
   })
+  .add('select, required', () => {
+    setTimeout(init);
+
+    return (
+      <div className="ray-select">
+        <select className="ray-select__input" required>
+          <option value="" disabled selected data-ray-placeholder>
+            {"Hi, I'm a placeholder"}
+          </option>
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Charmander">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          {"What's your favorite Pokémon?"}
+        </label>
+      </div>
+    );
+  })
   .add('select, error', () => {
     setTimeout(init);
 

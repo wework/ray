@@ -19,6 +19,23 @@ export function textFieldFixture() {
   `;
 }
 
+export function textFieldFixtureRequired() {
+  return html`
+    <div class="${baseClass}">
+      <input
+        class="${baseClass}__input"
+        id="email"
+        type="email"
+        placeholder="arya.stark@winterfell.org"
+        required
+      />
+      <label class="${baseClass}__label" for="email">
+        Email address
+      </label>
+    </div>
+  `;
+}
+
 export function textFieldFixtureNoInput() {
   return html`
     <div class="${baseClass}">

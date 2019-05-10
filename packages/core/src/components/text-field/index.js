@@ -59,6 +59,10 @@ class _InputComponent {
     return this._inputElement.value;
   }
 
+  isRequired() {
+    return this._inputElement.required;
+  }
+
   set(value) {
     this._inputElement.value = value;
   }
@@ -78,6 +82,12 @@ class _InputComponent {
       this._root.classList.add(this.constructor.cssClasses.HAS_VALUE);
     } else {
       this._root.classList.remove(this.constructor.cssClasses.HAS_VALUE);
+    }
+
+    if (this.isRequired()) {
+      this._root.classList.add(this.constructor.cssClasses.REQUIRED);
+    } else {
+      this._root.classList.remove(this.constructor.cssClasses.REQUIRED);
     }
   }
 

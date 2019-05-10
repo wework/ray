@@ -5,6 +5,7 @@ import {
 } from '../../src/components/text-field/constants';
 import {
   textFieldFixture,
+  textFieldFixtureRequired,
   textFieldFixtureNoInput,
   textFieldFixtureWithValue
 } from '../fixtures/text-field';
@@ -32,10 +33,17 @@ describe('TextField', () => {
     textField.destroy();
   });
 
-  test('#create can add has-value class if there is a prefilled value', () => {
+  test('#create can add `has-value` class if there is a prefilled value', () => {
     const { textField, textFieldEl } = setupTest(textFieldFixtureWithValue());
 
     expect(textFieldEl.classList).toContain(CSS_CLASSES.TEXT_FIELD.HAS_VALUE);
+    textField.destroy();
+  });
+
+  test('#create can add `required` class if the input is required', () => {
+    const { textField, textFieldEl } = setupTest(textFieldFixtureRequired());
+
+    expect(textFieldEl.classList).toContain(CSS_CLASSES.TEXT_FIELD.REQUIRED);
     textField.destroy();
   });
 

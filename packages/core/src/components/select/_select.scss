@@ -3,6 +3,7 @@
 
 @include exports('ray-select') {
   .#{$ray-class-prefix}select {
+    @include required-support('select');
     @include icon-support('select');
 
     border: $ray-border-width solid $ray-color-gray-60;
