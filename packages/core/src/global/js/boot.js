@@ -9,13 +9,15 @@ export function initializeAllComponents() {
 }
 
 export default function boot() {
-  if (
-    document.readyState === 'complete' ||
-    document.readyState === 'loaded' ||
-    document.readyState === 'interactive'
-  ) {
-    initializeAllComponents();
-  } else {
-    window.addEventListener('DOMContentLoaded', initializeAllComponents);
+  if (typeof global.window !== 'undefined' && typeof document !== 'undefined') {
+    if (
+      document.readyState === 'complete' ||
+      document.readyState === 'loaded' ||
+      document.readyState === 'interactive'
+    ) {
+      initializeAllComponents();
+    } else {
+      window.addEventListener('DOMContentLoaded', initializeAllComponents);
+    }
   }
 }

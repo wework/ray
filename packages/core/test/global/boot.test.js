@@ -7,7 +7,7 @@ const {
 } = require('../../src/global/js/boot');
 
 describe('boot', () => {
-  test('it initailizes all components if DOM is ready', async done => {
+  test('it initailizes all components if DOM is ready', () => {
     Object.defineProperty(document, 'readyState', {
       value: 'complete',
       enumerable: true,
@@ -19,11 +19,9 @@ describe('boot', () => {
     boot();
 
     expect(windowSpy).not.toHaveBeenCalled();
-
-    done();
   });
 
-  test('it will instantiate all components if DOM is not ready', async done => {
+  test('it will instantiate all components if DOM is not ready', () => {
     Object.defineProperty(document, 'readyState', {
       value: 'loading',
       enumerable: true,
@@ -38,12 +36,9 @@ describe('boot', () => {
       'DOMContentLoaded',
       expect.anything()
     );
-
-    done();
   });
 
-  test('components', async done => {
-    jest.mock();
+  test('components', () => {
     Object.defineProperty(document, 'readyState', {
       value: 'loading',
       enumerable: true,
@@ -58,8 +53,6 @@ describe('boot', () => {
       'DOMContentLoaded',
       expect.anything()
     );
-
-    done();
   });
 
   describe('initializeAllComponents()', () => {
