@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/wework/ray/compare/ray-website-gatsby@1.0.8...ray-website-gatsby@1.0.9) (2019-05-10)
+
+
+### Bug Fixes
+
+* component code anchor ico ([08621f8](https://github.com/wework/ray/commit/08621f8))
+
+
+
+
+
 ## [1.0.8](https://github.com/wework/ray/compare/ray-website-gatsby@1.0.7...ray-website-gatsby@1.0.8) (2019-05-08)
 
 **Note:** Version bump only for package ray-website-gatsby
