@@ -56,7 +56,9 @@ export default class ComponentCode extends React.Component {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
               >
-                <defs />
+                <defs>
+                  <style>{'.cls-1{fill:none;}'}</style>
+                </defs>
                 <title>icons</title>
                 <g id="Icon">
                   <path d="M29.2416,6.7587a6.0194,6.0194,0,0,0-8.5039,0l1.4172,1.4171a4.0089,4.0089,0,0,1,5.67,5.6694l-7.9793,7.9791a4.0089,4.0089,0,0,1-5.67-5.6694l1.4176-1.4171L14.176,13.3206l-1.4176,1.4171a6.0131,6.0131,0,0,0,8.5039,8.5036l7.9793-7.9791A6.02,6.02,0,0,0,29.2416,6.7587Z" />
