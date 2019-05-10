@@ -1,4 +1,10 @@
+import * as components from '../../src/components';
+
 /* eslint-disable global-require */
+const {
+  default: boot,
+  initializeAllComponents
+} = require('../../src/global/js/boot');
 
 describe('boot', () => {
   test('it initailizes all components if DOM is ready', async done => {
@@ -10,7 +16,6 @@ describe('boot', () => {
 
     const windowSpy = jest.spyOn(window, 'addEventListener');
 
-    const boot = require('../../src/global/js/boot').default;
     boot();
 
     expect(windowSpy).not.toHaveBeenCalled();
@@ -24,9 +29,9 @@ describe('boot', () => {
       enumerable: true,
       configurable: true
     });
+
     const windowSpy = jest.spyOn(window, 'addEventListener');
 
-    const boot = require('../../src/global/js/boot').default;
     boot();
 
     expect(windowSpy).toHaveBeenCalledWith(
@@ -35,5 +40,42 @@ describe('boot', () => {
     );
 
     done();
+  });
+
+  test('components', async done => {
+    jest.mock();
+    Object.defineProperty(document, 'readyState', {
+      value: 'loading',
+      enumerable: true,
+      configurable: true
+    });
+
+    const windowSpy = jest.spyOn(window, 'addEventListener');
+
+    boot();
+
+    expect(windowSpy).toHaveBeenCalledWith(
+      'DOMContentLoaded',
+      expect.anything()
+    );
+
+    done();
+  });
+
+  describe('initializeAllComponents()', () => {
+    test('it calls #createAll on all components', () => {
+      const componentNames = Object.keys(components);
+      const createAllSpys = [];
+
+      componentNames.forEach(componentName => {
+        createAllSpys.push(jest.spyOn(components[componentName], 'createAll'));
+      });
+
+      initializeAllComponents();
+
+      createAllSpys.forEach(spy => {
+        expect(spy).toHaveBeenCalled();
+      });
+    });
   });
 });
