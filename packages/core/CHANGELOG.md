@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/wework/ray/compare/@wework/ray-core@1.3.0...@wework/ray-core@1.3.1) (2019-05-10)
+
+
+### Bug Fixes
+
+* add required support for labels ([#87](https://github.com/wework/ray/issues/87)) ([70675de](https://github.com/wework/ray/commit/70675de))
+
+
+
+
+
 # [1.3.0](https://github.com/wework/ray/compare/@wework/ray-core@1.2.0...@wework/ray-core@1.3.0) (2019-05-10)
 
 
