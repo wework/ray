@@ -26,6 +26,7 @@ module.exports = {
         allowAfterThis: true
       }
     ],
-    'no-use-before-define': 'off'
+    'no-use-before-define': 'off',
+    'no-script-url': 'off'
   }
 };
