@@ -88,19 +88,8 @@
     &--active {
       border-color: $ray-color-blue-50;
 
-      .#{$ray-class-prefix}select__input {
-        color: $ray-color-black;
-      }
-
       .#{$ray-class-prefix}select__label {
-        @include label--active;
         color: $ray-color-blue-50;
-      }
-
-      &.#{$ray-class-prefix}select--placeholder-mode {
-        .#{$ray-class-prefix}select__input {
-          color: $ray-color-text-light;
-        }
       }
 
       &.#{$ray-class-prefix}select--has-value {
