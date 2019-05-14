@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/wework/ray/compare/@wework/ray-core@1.3.1...@wework/ray-core@1.3.2) (2019-05-14)
+
+
+### Bug Fixes
+
+* **tag:** increase left and right padding ([#95](https://github.com/wework/ray/issues/95)) ([a40c9df](https://github.com/wework/ray/commit/a40c9df))
+
+
+
+
+
 ## [1.3.1](https://github.com/wework/ray/compare/@wework/ray-core@1.3.0...@wework/ray-core@1.3.1) (2019-05-10)
 
 
