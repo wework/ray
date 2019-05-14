@@ -47,11 +47,18 @@
         background-color: $ray-color-blue-10;
       }
     }
+
+    &:focus {
+      & + .#{$ray-class-prefix}radio-pill__label {
+        box-shadow: $ray-box-shadow-focus-state;
+        z-index: 1;
+      }
+    }
   }
 
   .#{$ray-class-prefix}radio-pill__label {
     cursor: pointer;
-    color: $ray-color-blue-50;
+    color: $ray-color-black;
     background-color: $ray-color-white;
     flex-grow: 1;
     padding: $ray-radio-pill-v-spacing-compact $ray-radio-pill-h-spacing-compact;
