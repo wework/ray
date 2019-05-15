@@ -110,9 +110,6 @@
    * Radio
    */
   .#{$ray-class-prefix}radio__label {
-    border-radius: 50%;
-    box-shadow: none;
-
     &:focus {
       outline: 0;
       box-shadow: $ray-box-shadow-focus-state;
