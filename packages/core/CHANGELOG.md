@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.3](https://github.com/wework/ray/compare/@wework/ray-core@1.3.2...@wework/ray-core@1.3.3) (2019-05-15)
+
+
+### Bug Fixes
+
+* **radio-pill:** add focus state ([#94](https://github.com/wework/ray/issues/94)) ([c1b6b68](https://github.com/wework/ray/commit/c1b6b68))
+* **typography:** add styles for italics to em ([#96](https://github.com/wework/ray/issues/96)) ([2cbcbaa](https://github.com/wework/ray/commit/2cbcbaa))
+
+
+
+
+
 ## [1.3.2](https://github.com/wework/ray/compare/@wework/ray-core@1.3.1...@wework/ray-core@1.3.2) (2019-05-14)
 
 
