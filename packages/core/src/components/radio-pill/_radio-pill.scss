@@ -36,8 +36,9 @@
     appearance: none;
     width: 0;
     height: 0;
-    margin: 0 -$ray-border-width;
     opacity: 0;
+    position: absolute;
+    z-index: -99999;
 
     &:checked + .#{$ray-class-prefix}radio-pill__label {
       background-color: $ray-color-blue-20;
