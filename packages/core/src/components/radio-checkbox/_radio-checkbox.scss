@@ -1,6 +1,12 @@
+@import '../../global/mixins/exports';
+@import '../../global/variables';
+
 @include exports('ray-radio-checkbox') {
   $ray-radio-checkbox-border-width: rem(3px);
   $ray-radio-checkbox-size: rem(16px);
+  $ray-radio-checkbox-top-offset: (
+      $ray-field-line-height - $ray-radio-checkbox-size
+    ) / 2;
 
   .#{$ray-class-prefix}radio,
   .#{$ray-class-prefix}checkbox {
@@ -24,7 +30,7 @@
         display: inline-block;
         margin-right: 1rem;
         // centers the input with the first line of text in the label
-        top: ($ray-field-line-height - $ray-radio-checkbox-size) / 2;
+        top: $ray-radio-checkbox-top-offset;
       }
 
       &:focus {
@@ -57,7 +63,7 @@
       &:checked + .#{$ray-class-prefix}radio__label {
         &::before {
           border-color: $ray-color-blue-50;
-          background-color: $ray-color-blue-50 !important;
+          background-color: $ray-color-blue-50;
         }
 
         &:hover + .#{$ray-class-prefix}checkbox__label,
@@ -122,5 +128,41 @@
    */
   .#{$ray-class-prefix}checkbox__label::before {
     border-radius: $ray-border-radius;
+  }
+
+  .#{$ray-class-prefix}checkbox__input:checked
+    + .#{$ray-class-prefix}checkbox__label::before {
+    color: $ray-color-white;
+    content: '✓';
+
+    // Needed to center the checkmark
+    text-indent: -2px;
+    line-height: 11px;
+  }
+
+  /**
+   * Radio
+   */
+  .#{$ray-class-prefix}radio__input:checked
+    + .#{$ray-class-prefix}radio__label {
+    &::before {
+      border-style: solid;
+      border-width: rem(2px);
+      background-color: $ray-color-white !important;
+    }
+
+    $ray-radio-dot-size: 0.4rem;
+
+    &::after {
+      content: '';
+      width: $ray-radio-dot-size;
+      height: $ray-radio-dot-size;
+      background-color: $ray-color-blue-50;
+      border-radius: $ray-radio-dot-size;
+      position: absolute;
+      top: $ray-radio-checkbox-top-offset + ($ray-radio-checkbox-size / 2) -
+        ($ray-radio-dot-size / 2);
+      left: ($ray-radio-checkbox-size / 2) - ($ray-radio-dot-size / 2);
+    }
   }
 }
