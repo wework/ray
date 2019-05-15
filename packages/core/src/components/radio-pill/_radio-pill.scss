@@ -37,6 +37,9 @@
     width: 0;
     height: 0;
     opacity: 0;
+    // This is needed to remove spacing on inputs in iOS Safari
+    position: absolute;
+    z-index: -99999;
 
     &:checked + .#{$ray-class-prefix}radio-pill__label {
       background-color: $ray-color-blue-20;
@@ -45,6 +48,13 @@
     &:not(:checked) {
       &:hover + .#{$ray-class-prefix}radio-pill__label {
         background-color: $ray-color-blue-10;
+      }
+    }
+
+    &:focus {
+      & + .#{$ray-class-prefix}radio-pill__label {
+        box-shadow: $ray-box-shadow-focus-state;
+        z-index: 1;
       }
     }
   }
