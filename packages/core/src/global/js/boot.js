@@ -9,7 +9,7 @@ export function initializeAllComponents() {
 }
 
 export default function boot() {
-  if (typeof global.window !== 'undefined' && typeof document !== 'undefined') {
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (
       document.readyState === 'complete' ||
       document.readyState === 'loaded' ||
