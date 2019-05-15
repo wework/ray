@@ -37,6 +37,7 @@
     width: 0;
     height: 0;
     opacity: 0;
+    // This is needed to remove spacing on inputs in iOS Safari
     position: absolute;
     z-index: -99999;
 
