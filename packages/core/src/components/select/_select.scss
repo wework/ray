@@ -63,6 +63,12 @@
       }
     }
 
+    &--placeholder-mode {
+      .#{$ray-class-prefix}select__input {
+        color: rgba(0, 0, 0, 0);
+      }
+    }
+
     &--has-value {
       .#{$ray-class-prefix}select__label {
         @include label--active;
@@ -93,11 +99,14 @@
       }
 
       .#{$ray-class-prefix}select__label {
-        @include label--active;
         color: $ray-color-blue-50;
       }
 
       &.#{$ray-class-prefix}select--placeholder-mode {
+        .#{$ray-class-prefix}select__label {
+          @include label--active;
+        }
+
         .#{$ray-class-prefix}select__input {
           color: $ray-color-text-light;
         }
