@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.5](https://github.com/wework/ray/compare/@wework/ray-core@1.3.4...@wework/ray-core@1.3.5) (2019-05-15)
+
+
+### Bug Fixes
+
+* **select:** don't move label on focus/active ([#89](https://github.com/wework/ray/issues/89)) ([ebfd737](https://github.com/wework/ray/commit/ebfd737)), closes [#88](https://github.com/wework/ray/issues/88)
+
+
+
+
+
 ## [1.3.4](https://github.com/wework/ray/compare/@wework/ray-core@1.3.3...@wework/ray-core@1.3.4) (2019-05-15)
 
 **Note:** Version bump only for package @wework/ray-core
