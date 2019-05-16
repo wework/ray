@@ -10,3 +10,9 @@ title: Tag
     variation="tag"
     >
 </component>
+
+<component
+    component="tag"
+    variation="tag-link"
+    >
+</component>
