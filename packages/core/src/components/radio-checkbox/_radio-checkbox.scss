@@ -2,7 +2,7 @@
 @import '../../global/variables';
 
 @include exports('ray-radio-checkbox') {
-  $ray-radio-checkbox-border-width: rem(3px);
+  $ray-radio-checkbox-border-width: rem(1px);
   $ray-radio-checkbox-size: rem(16px);
   $ray-radio-checkbox-top-offset: (
       $ray-field-line-height - $ray-radio-checkbox-size
@@ -23,7 +23,7 @@
         box-sizing: border-box;
         content: '';
         background-color: $ray-color-white;
-        border: $ray-radio-checkbox-border-width double $ray-color-black;
+        border: $ray-radio-checkbox-border-width solid $ray-color-black;
         width: $ray-radio-checkbox-size;
         height: $ray-radio-checkbox-size;
         position: relative;
@@ -133,8 +133,9 @@
     content: '✓';
 
     // Needed to center the checkmark
-    text-indent: -2px;
-    line-height: 11px;
+    line-height: 14px;
+    font-size: calc(1rem - #{rem(1px)});
+    text-indent: 1px;
   }
 
   /**
