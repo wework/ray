@@ -10,6 +10,7 @@ storiesOf('Radio & Checkbox', module)
           name="radio-button-story"
           type="radio"
           className="ray-radio__input"
+          defaultChecked
         />
         <label className="ray-radio__label" htmlFor="radio-1">
           Choose me
@@ -55,6 +56,7 @@ storiesOf('Radio & Checkbox', module)
                 name="radio-button-story"
                 type="radio"
                 className="ray-radio-pill__input"
+                defaultChecked
               />
               <label className="ray-radio-pill__label" htmlFor="radio-1">
                 One
@@ -90,12 +92,25 @@ storiesOf('Radio & Checkbox', module)
     </React.Fragment>
   ))
   .add('Checkbox', () => (
-    <div className="ray-checkbox">
-      <input id="check" type="checkbox" className="ray-checkbox__input" />
-      <label className="ray-checkbox__label" htmlFor="check">
-        Check me out
-      </label>
-    </div>
+    <>
+      <div className="ray-checkbox">
+        <input id="check" type="checkbox" className="ray-checkbox__input" />
+        <label className="ray-checkbox__label" htmlFor="check">
+          Check me out
+        </label>
+      </div>
+      <div className="ray-checkbox">
+        <input
+          id="check2"
+          type="checkbox"
+          className="ray-checkbox__input"
+          defaultChecked
+        />
+        <label className="ray-checkbox__label" htmlFor="check2">
+          Check me out
+        </label>
+      </div>
+    </>
   ))
   .add('Checkbox, multiple', () => (
     <>

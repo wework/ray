@@ -1,6 +1,12 @@
+@import '../../global/mixins/exports';
+@import '../../global/variables';
+
 @include exports('ray-radio-checkbox') {
-  $ray-radio-checkbox-border-width: rem(3px);
+  $ray-radio-checkbox-border-width: $ray-border-width;
   $ray-radio-checkbox-size: rem(16px);
+  $ray-radio-checkbox-top-offset: (
+      $ray-field-line-height - $ray-radio-checkbox-size
+    ) / 2;
 
   .#{$ray-class-prefix}radio,
   .#{$ray-class-prefix}checkbox {
@@ -17,14 +23,14 @@
         box-sizing: border-box;
         content: '';
         background-color: $ray-color-white;
-        border: $ray-radio-checkbox-border-width double $ray-color-black;
+        border: $ray-radio-checkbox-border-width solid $ray-color-black;
         width: $ray-radio-checkbox-size;
         height: $ray-radio-checkbox-size;
         position: relative;
         display: inline-block;
         margin-right: 1rem;
         // centers the input with the first line of text in the label
-        top: ($ray-field-line-height - $ray-radio-checkbox-size) / 2;
+        top: $ray-radio-checkbox-top-offset;
       }
 
       &:focus {
@@ -57,7 +63,7 @@
       &:checked + .#{$ray-class-prefix}radio__label {
         &::before {
           border-color: $ray-color-blue-50;
-          background-color: $ray-color-blue-50 !important;
+          background-color: $ray-color-blue-50;
         }
 
         &:hover + .#{$ray-class-prefix}checkbox__label,
@@ -83,17 +89,17 @@
         &:hover + .#{$ray-class-prefix}checkbox__label,
         &:hover + .#{$ray-class-prefix}radio__label {
           &::before {
-            background-color: $ray-color-white;
+            background-color: $ray-color-white !important;
           }
         }
 
         + .#{$ray-class-prefix}radio__label,
         + .#{$ray-class-prefix}checkbox__label {
           cursor: not-allowed;
-          color: $ray-color-gray-30;
+          color: $ray-color-gray-30 !important;
 
           &::before {
-            border-color: $ray-color-gray-30;
+            border-color: $ray-color-gray-30 !important;
           }
         }
       }
@@ -104,8 +110,7 @@
    * Radio
    */
   .#{$ray-class-prefix}radio__label {
-    border-radius: 50%;
-    box-shadow: none;
+    position: relative;
 
     &:focus {
       outline: 0;
@@ -122,5 +127,40 @@
    */
   .#{$ray-class-prefix}checkbox__label::before {
     border-radius: $ray-border-radius;
+  }
+
+  .#{$ray-class-prefix}checkbox__input:checked
+    + .#{$ray-class-prefix}checkbox__label::before {
+    color: $ray-color-white;
+    content: '✓';
+
+    // Needed to center the checkmark
+    line-height: 14px;
+    font-size: calc(1rem - #{rem(1px)});
+    text-indent: 1px;
+  }
+
+  /**
+   * Radio
+   */
+  .#{$ray-class-prefix}radio__input:checked
+    + .#{$ray-class-prefix}radio__label {
+    &::before {
+      background-color: $ray-color-white !important;
+    }
+
+    $ray-radio-dot-size: 0.5rem;
+
+    &::after {
+      content: '';
+      width: $ray-radio-dot-size;
+      height: $ray-radio-dot-size;
+      background-color: $ray-color-blue-50;
+      border-radius: $ray-radio-dot-size;
+      position: absolute;
+      top: $ray-radio-checkbox-top-offset + ($ray-radio-checkbox-size / 2) -
+        ($ray-radio-dot-size / 2);
+      left: ($ray-radio-checkbox-size / 2) - ($ray-radio-dot-size / 2);
+    }
   }
 }
