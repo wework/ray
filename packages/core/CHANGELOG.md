@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.7](https://github.com/wework/ray/compare/@wework/ray-core@1.3.6...@wework/ray-core@1.3.7) (2019-05-16)
+
+
+### Bug Fixes
+
+* **radio-checkbox:** improve legibility of radio-checkbox active states ([#97](https://github.com/wework/ray/issues/97)) ([7a52917](https://github.com/wework/ray/commit/7a52917))
+
+
+
+
+
 ## [1.3.6](https://github.com/wework/ray/compare/@wework/ray-core@1.3.5...@wework/ray-core@1.3.6) (2019-05-16)
 
 
