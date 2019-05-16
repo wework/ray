@@ -118,6 +118,12 @@ storiesOf('Card', module)
         maxWidth: '480px'
       }}
     >
+      <div className="ray-card__image ray-image ray-image--16by9">
+        <img
+          src="https://source.unsplash.com/random/800x450?minimalist"
+          alt="card graphic"
+        />
+      </div>
       <div className="ray-card__content">
         <div className="ray-card__heading">Better Together</div>
         <p className="ray-text--body">
