@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.8](https://github.com/wework/ray/compare/@wework/ray-core@1.3.7...@wework/ray-core@1.3.8) (2019-05-16)
+
+
+### Bug Fixes
+
+* **tag:** add link styles ([#100](https://github.com/wework/ray/issues/100)) ([8c5cf4b](https://github.com/wework/ray/commit/8c5cf4b))
+
+
+
+
+
 ## [1.3.7](https://github.com/wework/ray/compare/@wework/ray-core@1.3.6...@wework/ray-core@1.3.7) (2019-05-16)
 
 
