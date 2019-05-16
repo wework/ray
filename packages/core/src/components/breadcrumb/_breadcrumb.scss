@@ -7,7 +7,6 @@
     font-family: $ray-font-stack-mono;
     text-transform: uppercase;
     font-size: 0.75rem;
-    line-height: 1;
     white-space: nowrap;
     overflow-x: auto;
     display: flex;
@@ -23,6 +22,9 @@
       &::after {
         margin-left: 0.5rem;
         content: '➝';
+        font-size: 1.25rem;
+        position: relative;
+        top: -0.25;
       }
     }
 
