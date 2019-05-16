@@ -15,7 +15,7 @@ title: Card
 <component
     name="Card horizontal"
     component="card"
-    variation="card--horizontal"
+    variation="card--row"
     >
 </component>
 
@@ -33,3 +33,4 @@ Use these modifiers with `.ray-card` class.
 | Selector          | Description                                 |
 | ----------------- | ------------------------------------------- |
 | `.ray-card--link` | Selector for applying link and hover styles |
+| `.ray-card--row`  | Selector for applying row direction         |

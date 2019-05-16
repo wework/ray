@@ -40,7 +40,7 @@
       }
     }
 
-    &--horizontal {
+    &--row {
       flex-direction: row;
 
       .#{$ray-class-prefix}card__image,
