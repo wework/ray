@@ -144,12 +144,10 @@
   .#{$ray-class-prefix}radio__input:checked
     + .#{$ray-class-prefix}radio__label {
     &::before {
-      border-style: solid;
-      border-width: rem(2px);
       background-color: $ray-color-white !important;
     }
 
-    $ray-radio-dot-size: 0.4rem;
+    $ray-radio-dot-size: 0.5rem;
 
     &::after {
       content: '';
