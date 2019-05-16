@@ -53,20 +53,12 @@
         padding-bottom: calc(50% / (16 / 9));
       }
 
-      .#{$ray-class-prefix}card__content {
-        padding: 33px;
-      }
-
       .#{$ray-class-prefix}card__content:last-child {
         border-top: $ray-border-width solid $ray-color-gray-10;
         border-bottom-right-radius: $ray-border-radius;
         border-top-right-radius: $ray-border-radius;
         border-bottom-left-radius: 0;
         border-left: 0;
-      }
-
-      .#{$ray-class-prefix}card__heading {
-        font-size: 2rem;
       }
     }
 
