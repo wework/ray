@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.6](https://github.com/wework/ray/compare/@wework/ray-core@1.3.5...@wework/ray-core@1.3.6) (2019-05-16)
+
+
+### Bug Fixes
+
+* **breadcrumb:** remove scroll glitch and increase arrow size ([#98](https://github.com/wework/ray/issues/98)) ([81133f7](https://github.com/wework/ray/commit/81133f7))
+
+
+
+
+
 ## [1.3.5](https://github.com/wework/ray/compare/@wework/ray-core@1.3.4...@wework/ray-core@1.3.5) (2019-05-15)
 
 
