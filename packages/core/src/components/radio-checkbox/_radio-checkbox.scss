@@ -2,7 +2,7 @@
 @import '../../global/variables';
 
 @include exports('ray-radio-checkbox') {
-  $ray-radio-checkbox-border-width: rem(1px);
+  $ray-radio-checkbox-border-width: $ray-border-width;
   $ray-radio-checkbox-size: rem(16px);
   $ray-radio-checkbox-top-offset: (
       $ray-field-line-height - $ray-radio-checkbox-size
@@ -110,6 +110,8 @@
    * Radio
    */
   .#{$ray-class-prefix}radio__label {
+    position: relative;
+
     &:focus {
       outline: 0;
       box-shadow: $ray-box-shadow-focus-state;
