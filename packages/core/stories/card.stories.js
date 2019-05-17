@@ -2,8 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import getPlaceholderURL from './util/placeholder';
+import settings from '../src/global/js/settings';
+
+const viewports = Object.values(settings.breakpointsInPixels).filter(Boolean);
 
 storiesOf('Card', module)
+  .addParameters({
+    chromatic: { viewports }
+  })
   .add('card, link, image on top', () => (
     <a
       href="https://wework.com"
