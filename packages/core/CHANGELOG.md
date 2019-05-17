@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.12](https://github.com/wework/ray/compare/@wework/ray-core@1.3.11...@wework/ray-core@1.3.12) (2019-05-17)
+
+
+### Bug Fixes
+
+* **breadcrumb:** line-height problems ([#104](https://github.com/wework/ray/issues/104)) ([fb06112](https://github.com/wework/ray/commit/fb06112))
+* **card:** update card padding ([#103](https://github.com/wework/ray/issues/103)) ([ee0a533](https://github.com/wework/ray/commit/ee0a533))
+
+
+
+
+
 ## [1.3.11](https://github.com/wework/ray/compare/@wework/ray-core@1.3.10...@wework/ray-core@1.3.11) (2019-05-17)
 
 **Note:** Version bump only for package @wework/ray-core
