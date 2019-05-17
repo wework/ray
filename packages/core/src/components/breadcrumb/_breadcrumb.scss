@@ -15,6 +15,7 @@
   .#{$ray-class-prefix}breadcrumb {
     color: $ray-color-text-medium;
     display: flex;
+    line-height: 1.5;
 
     &:not(:last-child) {
       margin-right: 0.5rem;
@@ -24,7 +25,8 @@
         content: '➝';
         font-size: 1.25rem;
         position: relative;
-        top: -0.25;
+        top: -6px;
+        line-height: 1.5;
       }
     }
 
