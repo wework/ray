@@ -3,7 +3,7 @@
 @import '../../global/typography';
 
 @include exports('ray-card') {
-  $card-padding: 1rem;
+  $card-padding: 1.5rem 1rem;
   $card-border-color: $ray-color-gray-10;
 
   .#{$ray-class-prefix}card {
