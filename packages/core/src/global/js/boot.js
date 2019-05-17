@@ -4,9 +4,7 @@ export function initializeAllComponents() {
   Object.keys(components).forEach(componentKey => {
     const Component = components[componentKey];
 
-    if (Component.createAll) {
-      Component.createAll();
-    }
+    Component.createAll();
   });
 }
 
