@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/wework/ray/compare/@wework/ray-core@1.3.12...@wework/ray-core@1.4.0) (2019-05-17)
+
+
+### Features
+
+* **card:** add ray-card--row ([#101](https://github.com/wework/ray/issues/101)) ([d45d2d8](https://github.com/wework/ray/commit/d45d2d8))
+
+
+
+
+
 ## [1.3.12](https://github.com/wework/ray/compare/@wework/ray-core@1.3.11...@wework/ray-core@1.3.12) (2019-05-17)
 
 
