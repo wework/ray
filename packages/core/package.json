@@ -5,6 +5,7 @@
   "module": "es/index.js",
   "style": "css/ray-core.min.css",
   "sass": "scss/ray-core.scss",
+  "homepage": "https://ray.wework.com/",
   "scripts": {
     "dev": "yarn storybook",
     "storybook": "start-storybook -p 6006  -s ./stories/static",
@@ -72,9 +73,16 @@
     "scripts/**/*",
     "scss/**/*",
     "src/**/*",
-    "umd/**/*"
+    "umd/**/*",
+    "README.md",
+    "LICENSE"
   ],
   "gitHead": "c913b9f28177833fda170ce248c8cf1f067ef3fc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wework/ray.git",
+    "directory": "packages/core"
+  },
   "keywords": [
     "wework",
     "css",
