@@ -13,7 +13,7 @@ title: Card
 </component>
 
 <component
-    name="Card horizontal"
+    name="Card as a row"
     component="card"
     variation="card--row"
     >

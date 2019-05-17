@@ -46,19 +46,47 @@
       .#{$ray-class-prefix}card__image,
       .#{$ray-class-prefix}card__content {
         width: 50%;
-        float: left;
       }
 
       .#{$ray-class-prefix}image--16by9 {
         padding-bottom: calc(50% / (16 / 9));
       }
 
-      .#{$ray-class-prefix}card__content:last-child {
-        border-top: $ray-border-width solid $ray-color-gray-10;
-        border-bottom-right-radius: $ray-border-radius;
-        border-top-right-radius: $ray-border-radius;
-        border-bottom-left-radius: 0;
-        border-left: 0;
+      .#{$ray-class-prefix}card__content {
+        padding: 2.5rem;
+
+        &:first-child {
+          border: $ray-border-width solid $ray-color-gray-10;
+          border-right: 0;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: $ray-border-radius;
+          border-top-right-radius: 0;
+          border-top-left-radius: $ray-border-radius;
+        }
+
+        &:last-child {
+          border-top: $ray-border-width solid $ray-color-gray-10;
+          border-bottom-right-radius: $ray-border-radius;
+          border-top-right-radius: $ray-border-radius;
+          border-bottom-left-radius: 0;
+          border-left: 0;
+        }
+      }
+
+      .#{$ray-class-prefix}card__heading {
+        @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
+          @include ray-h2;
+        }
+      }
+
+      .#{$ray-class-prefix}card__image {
+        &:first-child {
+          border-top-right-radius: 0;
+        }
+
+        &:last-child {
+          border-bottom-left-radius: 0;
+        }
       }
     }
 
