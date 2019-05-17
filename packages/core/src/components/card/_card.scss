@@ -56,6 +56,12 @@
           }
         }
 
+        @each $ratio, $value in $ray-image-ratio-map-half {
+          .#{$ray-class-prefix}bg--#{$ratio} {
+            padding-bottom: $value;
+          }
+        }
+
         .#{$ray-class-prefix}card__content {
           padding: 2.5rem;
 
