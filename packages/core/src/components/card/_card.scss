@@ -40,10 +40,20 @@
       }
     }
 
+    $ray-image-ratio-map-half: (
+      4by3: calc(50% / (4 / 3)),
+      3by4: calc(50% / (3 / 4)),
+      1by1: calc(50% / 1),
+      16by9: calc(50% / (16 / 9)),
+      cinema: calc(50% / 2.4)
+    );
+
     &--row {
       @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
-        .#{$ray-class-prefix}image--16by9 {
-          padding-bottom: calc(50% / (16 / 9));
+        @each $ratio, $value in $ray-image-ratio-map-half {
+          .#{$ray-class-prefix}image--#{$ratio} {
+            padding-bottom: $value;
+          }
         }
 
         .#{$ray-class-prefix}card__content {
