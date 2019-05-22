@@ -7,7 +7,7 @@ title: Typography
 
 <div class="ray-caption">Note</div>
 
-To avoid conflicting with other libraries, by default, Ray does _not_ assign css attributes directly to HTML tags like h1–h6. If that kind of behavior is needed, assign the `$ray-assign-typography-styles-natively` sass variable to true _or_ see [Running Text](#running-text) below.
+By default, Ray _will_ assign css attributes directly to HTML tags like h1–h6. If that kind of behavior is undesired, assign the `$ray-assign-typography-styles-natively` sass variable to false.
 
 ## Headings
 
@@ -43,7 +43,7 @@ Native heading elements (h1-h6) are designed for general-purpose use throughout 
 
 ## Running Text
 
-This utility is useful for long-form content, especially content that is dynamically genereated from markdown. It will directly style `h1`–`h6`, `p`, `blockquote`, `ul`, and `ol` tags.
+This utility is useful for long-form content, especially content that is dynamically genereated from markdown. It will directly style `h1`–`h6`, `p`, `blockquote`, `ul`, and `ol` tags. This will generally only be needed when `$ray-assign-typography-styles-natively` is set to false.
 
 <component
     component="typography"
