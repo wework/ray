@@ -123,12 +123,12 @@
 
       .#{$ray-class-prefix}text-field__label,
       .#{$ray-class-prefix}text-area__label {
-        padding-top: $ray-field-v-spacing-compact;
+        padding-block-start: $ray-field-v-spacing-compact;
       }
 
       .#{$ray-class-prefix}text-field__input,
       .#{$ray-class-prefix}text-area__input {
-        padding-top: 0;
+        padding-block-start: 0;
 
         // separate selector to support IE11
         &:focus {
@@ -154,7 +154,7 @@
     &__input {
       overflow-y: scroll;
       display: inline-block;
-      padding-top: ($ray-field-height - $ray-field-line-height) / 2;
+      padding-block-start: ($ray-field-height - $ray-field-line-height) / 2;
       resize: vertical;
       line-height: $ray-field-line-height;
       height: $ray-field-height - 2 * $ray-border-width;
@@ -165,7 +165,7 @@
       line-height: 0;
 
       .#{$ray-class-prefix}text-area__input {
-        padding-top: ($ray-field-v-spacing-compact) / 2;
+        padding-block-start: ($ray-field-v-spacing-compact) / 2;
         height: $ray-field-height-compact - 2 * $ray-border-width;
         min-height: $ray-field-height-compact - 2 * $ray-border-width;
       }

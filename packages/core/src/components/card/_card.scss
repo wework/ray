@@ -5,6 +5,7 @@
 @include exports('ray-card') {
   $card-padding: 1.5rem 1rem;
   $card-border-color: $ray-color-gray-10;
+  $card-border-default: $ray-border-width solid $card-border-color;
 
   .#{$ray-class-prefix}card {
     width: 100%;
@@ -66,20 +67,27 @@
           padding: 2.5rem;
 
           &:first-child {
-            border: $ray-border-width solid $ray-color-gray-10;
+            border: $card-border-default;
             border-right: 0;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: $ray-border-radius;
-            border-top-right-radius: 0;
-            border-top-left-radius: $ray-border-radius;
+            border-radius: $ray-border-radius 0 0 $ray-border-radius;
+
+            [dir='rtl'] & {
+              border-right: $card-border-default;
+              border-left: 0;
+              border-radius: 0 $ray-border-radius $ray-border-radius 0;
+            }
           }
 
           &:last-child {
-            border-top: $ray-border-width solid $ray-color-gray-10;
-            border-bottom-right-radius: $ray-border-radius;
-            border-top-right-radius: $ray-border-radius;
-            border-bottom-left-radius: 0;
+            border-top: $card-border-default;
+            border-radius: 0 $ray-border-radius $ray-border-radius 0;
             border-left: 0;
+
+            [dir='rtl'] & {
+              border-radius: $ray-border-radius 0 0 $ray-border-radius;
+              border-left: $card-border-default;
+              border-right: 0;
+            }
           }
         }
 
@@ -109,17 +117,17 @@
     &__content {
       flex-grow: 1;
       padding: $card-padding;
-      border-left: $ray-border-width solid $ray-color-gray-10;
-      border-right: $ray-border-width solid $ray-color-gray-10;
+      border-left: $card-border-default;
+      border-right: $card-border-default;
 
       &:first-child {
-        border-top: $ray-border-width solid $ray-color-gray-10;
+        border-top: $card-border-default;
         border-top-left-radius: $ray-border-radius;
         border-top-right-radius: $ray-border-radius;
       }
 
       &:last-child {
-        border-bottom: $ray-border-width solid $ray-color-gray-10;
+        border-bottom: $card-border-default;
         border-bottom-left-radius: $ray-border-radius;
         border-bottom-right-radius: $ray-border-radius;
       }

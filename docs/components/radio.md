@@ -5,17 +5,31 @@ title: Radio
 
 <page-intro>Radio buttons are an essential form control that should be used to represent two or more mutually-exclusive choices. A radio signifies a user _must_ make a choice.</page-intro>
 
-<component 
+<component
     name="Radio Group"
     component="radio"
-    variation="radio" 
+    variation="radio"
     >
 </component>
 
-<component 
+<component
+    name="Radio Group (RTL)"
+    component="radio"
+    variation="rtl-radio"
+    >
+</component>
+
+<component
     name="Radio Pill Group"
     component="radio"
-    variation="radio-group" 
+    variation="radio-group"
+    >
+</component>
+
+<component
+    name="Radio Pill Group (RTL)"
+    component="radio"
+    variation="rtl-radio-group"
     >
 </component>
 

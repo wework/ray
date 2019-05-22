@@ -13,9 +13,23 @@ title: Image
 </component>
 
 <component
+    name="Image 16x9 with caption (RTL)"
+    component="image"
+    variation="rtl-image--16by9"
+    >
+</component>
+
+<component
     name="Image 4x3 with caption"
     component="image"
     variation="image--4by3"
+    >
+</component>
+
+<component
+    name="Image 4x3 with caption (RTL)"
+    component="image"
+    variation="rtl-image--4by3"
     >
 </component>
 

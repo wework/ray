@@ -20,13 +20,24 @@
     &:not(:last-child) {
       margin-right: 0.5rem;
 
+      [dir='rtl'] & {
+        margin-right: 0;
+        margin-left: 0.5rem;
+      }
+
       &::after {
         margin-left: 0.5rem;
-        content: '➝';
+        content: '→';
         font-size: 1.25rem;
         position: relative;
         top: -6px;
         line-height: 1.5;
+
+        [dir='rtl'] & {
+          margin-right: 0.5rem;
+          margin-left: 0;
+          content: '←';
+        }
       }
     }
 

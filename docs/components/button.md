@@ -8,34 +8,64 @@ status: Experimental
 
 To add an icon, use the `.ray-button__icon` class on an element, usually an svg. Buttons should always be on the right side of the text. For accessibility, it is recommended to add a `<title>` element to your svg.
 
-<component 
+<component
     name="Primary button"
     component="button"
-    variation="button--primary" 
+    variation="button--primary"
     >
 </component>
-<component 
+<component
+    name="Primary button (RTL)"
+    component="button"
+    variation="rtl-button--primary"
+    >
+</component>
+<component
     name="Secondary button"
     component="button"
-    variation="button--secondary" 
+    variation="button--secondary"
     >
 </component>
-<component 
+<component
+    name="Secondary button (RTL)"
+    component="button"
+    variation="rtl-button--secondary"
+    >
+</component>
+<component
     name="Tertiary button"
     component="button"
-    variation="button--tertiary" 
+    variation="button--tertiary"
     >
 </component>
-<component 
+<component
+    name="Tertiary button (RTL)"
+    component="button"
+    variation="rtl-button--tertiary"
+    >
+</component>
+<component
     name="Compact button"
     component="button"
-    variation="button--compact" 
+    variation="button--compact"
     >
 </component>
-<component 
+<component
+    name="Compact button (RTL)"
+    component="button"
+    variation="rtl-button--compact"
+    >
+</component>
+<component
     name="Danger button"
     component="button"
-    variation="button--danger" 
+    variation="button--danger"
+    >
+</component>
+<component
+    name="Danger button (RTL)"
+    component="button"
+    variation="rtl-button--danger"
     >
 </component>
 

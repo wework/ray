@@ -53,6 +53,10 @@ $ray-image-ratio-map: (
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   margin-top: $ray-spacing-xs;
+
+  [dir='rtl'] & {
+    text-align: left;
+  }
 }
 
 .#{$ray-class-prefix}image {

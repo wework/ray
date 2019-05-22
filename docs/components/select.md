@@ -5,31 +5,66 @@ title: Select
 
 <page-intro>Text fields within the system have a standard Size and a compact Size. Our fields are outlined and become activated with our primary color using the rules we set up in our affordances. These components have several elements, not all of which are required.</page-intro>
 
-<component 
+<component
+    name="Select (RTL)"
+    component="select"
+    variation="rtl-select"
+    >
+</component>
+
+<component
     name="With placeholder"
     component="select"
-    variation="select--with-placeholder" 
+    variation="select--with-placeholder"
     >
 </component>
 
-<component 
+<component
+    name="With placeholder (RTL)"
+    component="select"
+    variation="rtl-select--with-placeholder"
+    >
+</component>
+
+<component
     name="Compact"
     component="select"
-    variation="select--compact" 
+    variation="select--compact"
     >
 </component>
 
-<component 
+<component
+    name="Compact (RTL)"
+    component="select"
+    variation="rtl-select--compact"
+    >
+</component>
+
+<component
     name="Error"
     component="select"
-    variation="select--error" 
+    variation="select--error"
     >
 </component>
 
-<component 
+<component
+    name="Error (RTL)"
+    component="select"
+    variation="rtl-select--error"
+    >
+</component>
+
+<component
     name="With icon"
     component="select"
-    variation="select-with-icon" 
+    variation="select-with-icon"
+    >
+</component>
+
+<component
+    name="With icon (RTL)"
+    component="select"
+    variation="rtl-select-with-icon"
     >
 </component>
 

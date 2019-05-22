@@ -16,6 +16,10 @@
     text-align: left;
     text-transform: uppercase;
     padding: 1rem 0;
+
+    [dir='rtl'] & {
+      text-align: right;
+    }
   }
 
   tr {
