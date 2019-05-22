@@ -242,4 +242,12 @@ storiesOf('Grid', module)
         </RayGridInnerWithBackground>
       </div>
     </div>
-  ));
+  ))
+  .add('breakpoints', () => {
+    return (
+      <>
+        <div className="display-desktop">above desktop</div>
+        <div className="display-tablet-only">only on tablet</div>
+      </>
+    );
+  });

@@ -1,6 +1,8 @@
 @import './global/css-reset';
 @import './global/css-normalize';
 
+@import './global/mixins/breakpoints';
+
 @import './global/colors';
 @import './global/variables';
 @import './global/base';
