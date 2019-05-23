@@ -6,8 +6,9 @@
     font-family: $ray-font-stack-mono;
     border: 1px solid $ray-color-gray-30;
     border-radius: $ray-border-radius;
-    display: inline;
-    padding: $ray-spacing-3xs $ray-spacing-xs;
+    display: inline-block;
+    padding-left: $ray-spacing-xs;
+    padding-right: $ray-spacing-xs;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 0.875rem;
