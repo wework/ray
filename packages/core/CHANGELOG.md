@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/wework/ray/compare/@wework/ray-core@1.4.2...@wework/ray-core@1.4.3) (2019-05-23)
+
+
+### Bug Fixes
+
+* updates line-height ([#108](https://github.com/wework/ray/issues/108)) ([f111c9c](https://github.com/wework/ray/commit/f111c9c))
+
+
+
+
+
 ## [1.4.2](https://github.com/wework/ray/compare/@wework/ray-core@1.4.1...@wework/ray-core@1.4.2) (2019-05-23)
 
 **Note:** Version bump only for package @wework/ray-core
