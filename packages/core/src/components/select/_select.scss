@@ -13,6 +13,10 @@
     height: $ray-field-height;
     display: flex;
 
+    // __icon--right is DEPRECATED in favor of __icon--end, and will be
+    // removed in a future release of Ray. Use of __icon-right may result
+    // in confusing behavior for RTL language sensitive layouts.
+    &__icon--right,
     &__icon--end {
       @include icon;
       // need to add spacing to compensate for the arrow

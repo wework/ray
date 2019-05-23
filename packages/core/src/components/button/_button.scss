@@ -36,6 +36,10 @@
       }
     }
 
+    // --pull-left is DEPRECATED in favor of --pull-start, and will be
+    // removed in a future release of Ray. Use of pull-left may result
+    // in confusing behavior for RTL language sensitive layouts.
+    &--pull-left,
     &--pull-start {
       margin-left: -($ray-button-h-spacing + $ray-border-width);
 
@@ -45,6 +49,10 @@
       }
     }
 
+    // --pull-right is DEPRECATED in favor of --pull-end, and will be
+    // removed in a future release of Ray. Use of pull-right may result
+    // in confusing behavior for RTL language sensitive layouts.
+    &--pull-right,
     &--pull-end {
       margin-right: -($ray-button-h-spacing + $ray-border-width);
 
@@ -156,6 +164,10 @@
     line-height: 1;
     height: auto;
 
+    // button--pull-left is DEPRECATED in favor of button--pull-start, and will
+    // be removed in a future release of Ray. Use of button--pull-left may
+    // result in confusing behavior for RTL language sensitive layouts.
+    &.#{$ray-class-prefix}button--pull-left,
     &.#{$ray-class-prefix}button--pull-start {
       margin-left: -($ray-button-h-spacing-compact + $ray-border-width);
 
@@ -165,6 +177,10 @@
       }
     }
 
+    // button--pull-right is DEPRECATED in favor of button--pull-end, and will
+    // be removed in a future release of Ray. Use of button--pull-right may
+    // result in confusing behavior for RTL language sensitive layouts.
+    &.#{$ray-class-prefix}button--pull-right,
     &.#{$ray-class-prefix}button--pull-end {
       margin-right: -($ray-button-h-spacing-compact + $ray-border-width);
 

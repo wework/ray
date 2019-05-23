@@ -179,6 +179,10 @@
   }
 }
 @mixin icon-support($class) {
+  // --with-icon-left is DEPRECATED in favor of --with-icon-start, and will
+  // be removed in a future release of Ray. Use of --with-icon-left may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &--with-icon-left,
   &--with-icon-start {
     .#{$ray-class-prefix}#{$class}__input,
     .#{$ray-class-prefix}#{$class}__label {
@@ -195,6 +199,10 @@
     }
   }
 
+  // --with-icon-right is DEPRECATED in favor of --with-icon-end, and will
+  // be removed in a future release of Ray. Use of --with-icon-right may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &--with-icon-right,
   &--with-icon-end {
     .#{$ray-class-prefix}#{$class}__input,
     .#{$ray-class-prefix}#{$class}__label {
@@ -211,6 +219,8 @@
     }
   }
 
+  &--with-icon-left,
+  &--with-icon-right,
   &--with-icon-start,
   &--with-icon-end {
     fill: $ray-color-text-medium;
@@ -220,6 +230,10 @@
     }
   }
 
+  // __icon--left is DEPRECATED in favor of __icon--start, and will
+  // be removed in a future release of Ray. Use of __icon--left may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &__icon-left,
   &__icon--start {
     @include icon;
     left: $ray-field-h-spacing;
@@ -230,6 +244,10 @@
     }
   }
 
+  // __icon--left is DEPRECATED in favor of __icon--start, and will
+  // be removed in a future release of Ray. Use of __icon--left may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &__icon--right,
   &__icon--end {
     @include icon;
     right: $ray-field-h-spacing;
@@ -241,6 +259,8 @@
   }
 
   &--compact {
+    .#{$ray-class-prefix}#{$class}__icon--left,
+    .#{$ray-class-prefix}#{$class}__icon--right,
     .#{$ray-class-prefix}#{$class}__icon--start,
     .#{$ray-class-prefix}#{$class}__icon--end {
       top: $ray-field-v-spacing-compact;
@@ -248,6 +268,8 @@
   }
 
   &--active {
+    .#{$ray-class-prefix}#{$class}__icon--left,
+    .#{$ray-class-prefix}#{$class}__icon--right,
     .#{$ray-class-prefix}#{$class}__icon--start,
     .#{$ray-class-prefix}#{$class}__icon--end {
       fill: $ray-color-blue-50;
@@ -259,6 +281,8 @@
   }
 
   &--disabled {
+    .#{$ray-class-prefix}#{$class}__icon--left,
+    .#{$ray-class-prefix}#{$class}__icon--right,
     .#{$ray-class-prefix}#{$class}__icon--start,
     .#{$ray-class-prefix}#{$class}__icon--end {
       fill: rgba($ray-color-gray-60, 0.4);
