@@ -25,6 +25,8 @@ $ray-image-ratio-map: (
     right: 0;
     bottom: 0;
     margin: auto;
+    // hide alt text if image does not load
+    text-indent: -9999px;
   }
 }
 
