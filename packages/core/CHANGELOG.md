@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/wework/ray/compare/@wework/ray-core@1.4.2...@wework/ray-core@1.4.3) (2019-05-23)
+
+
+### Bug Fixes
+
+* updates line-height ([#108](https://github.com/wework/ray/issues/108)) ([f111c9c](https://github.com/wework/ray/commit/f111c9c))
+
+
+
+
+
+## [1.4.2](https://github.com/wework/ray/compare/@wework/ray-core@1.4.1...@wework/ray-core@1.4.2) (2019-05-23)
+
+**Note:** Version bump only for package @wework/ray-core
+
+
+
+
+
+## [1.4.1](https://github.com/wework/ray/compare/@wework/ray-core@1.4.0...@wework/ray-core@1.4.1) (2019-05-23)
+
+
+### Bug Fixes
+
+* **card:** remove overflow hidden for Safari fix ([#107](https://github.com/wework/ray/issues/107)) ([c284b24](https://github.com/wework/ray/commit/c284b24))
+
+
+
+
+
 # [1.4.0](https://github.com/wework/ray/compare/@wework/ray-core@1.3.12...@wework/ray-core@1.4.0) (2019-05-17)
 
 

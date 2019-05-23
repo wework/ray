@@ -120,10 +120,7 @@ storiesOf('Card', module)
   .add('card, as a row, image on left', () => (
     <div className="ray-card ray-card--row">
       <div className="ray-card__image ray-image ray-image--16by9">
-        <img
-          src="https://source.unsplash.com/random/800x450?minimalist"
-          alt="card graphic"
-        />
+        <img src={getPlaceholderURL('16x9')} alt="card graphic" />
       </div>
       <div className="ray-card__content">
         <div className="ray-card__heading">Better Together</div>
@@ -144,20 +141,14 @@ storiesOf('Card', module)
         </p>
       </div>
       <div className="ray-card__image ray-image ray-image--16by9">
-        <img
-          src="https://source.unsplash.com/random/800x450?minimalist"
-          alt="card graphic"
-        />
+        <img src={getPlaceholderURL('16x9')} alt="card graphic" />
       </div>
     </div>
   ))
   .add('card, as a row, 4x3 image on left', () => (
     <div className="ray-card ray-card--row">
       <div className="ray-card__image ray-image ray-image--4by3">
-        <img
-          src="https://source.unsplash.com/random/800x600?minimalist"
-          alt="card graphic"
-        />
+        <img src={getPlaceholderURL('4x3')} alt="card graphic" />
       </div>
       <div className="ray-card__content">
         <div className="ray-card__heading">Better Together</div>
