@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/wework/ray/compare/@wework/ray-core@1.5.0...@wework/ray-core@1.5.1) (2019-05-24)
+
+
+### Bug Fixes
+
+* **radio:** move dot to correct position on rtl ([#118](https://github.com/wework/ray/issues/118)) ([6726d16](https://github.com/wework/ray/commit/6726d16))
+
+
+
+
+
 # [1.5.0](https://github.com/wework/ray/compare/@wework/ray-core@1.4.3...@wework/ray-core@1.5.0) (2019-05-24)
 
 
