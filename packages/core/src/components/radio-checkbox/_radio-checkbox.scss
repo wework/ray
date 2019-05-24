@@ -166,6 +166,11 @@
       top: $ray-radio-checkbox-top-offset + ($ray-radio-checkbox-size / 2) -
         ($ray-radio-dot-size / 2);
       left: ($ray-radio-checkbox-size / 2) - ($ray-radio-dot-size / 2);
+
+      [dir='rtl'] & {
+        left: auto;
+        right: ($ray-radio-checkbox-size / 2) - ($ray-radio-dot-size / 2);
+      }
     }
   }
 }
