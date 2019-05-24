@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/wework/ray/compare/@wework/ray-core@1.4.3...@wework/ray-core@1.5.0) (2019-05-24)
+
+
+### Features
+
+* support right-to-left languages ([#110](https://github.com/wework/ray/issues/110)) ([341fc20](https://github.com/wework/ray/commit/341fc20))
+
+
+
+
+
 ## [1.4.3](https://github.com/wework/ray/compare/@wework/ray-core@1.4.2...@wework/ray-core@1.4.3) (2019-05-23)
 
 
