@@ -13,6 +13,13 @@ title: Card
 </component>
 
 <component
+    name="Card (RTL)"
+    component="card"
+    variation="rtl-card"
+    >
+</component>
+
+<component
     name="Card as a row"
     component="card"
     variation="card--row"
@@ -20,9 +27,23 @@ title: Card
 </component>
 
 <component
+    name="Card as a row (RTL)"
+    component="card"
+    variation="rtl-card--row"
+    >
+</component>
+
+<component
     name="Card as a link"
     component="card"
     variation="card--link"
+    >
+</component>
+
+<component
+    name="Card as a link (RTL)"
+    component="card"
+    variation="rtl-card--link"
     >
 </component>
 

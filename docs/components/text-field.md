@@ -13,6 +13,13 @@ title: Text Field
 </component>
 
 <component
+    name="Text field (RTL)"
+    component="text-field"
+    variation="rtl-text-field"
+    >
+</component>
+
+<component
     name="Text area"
     component="text-area"
     variation="text-area"
@@ -34,9 +41,23 @@ title: Text Field
 </component>
 
 <component
+    name="Text field with hints (RTL)"
+    component="text-field"
+    variation="rtl-text-field-with-hint"
+    >
+</component>
+
+<component
     name="Text field with icons"
     component="text-field"
     variation="text-field-with-icon"
+    >
+</component>
+
+<component
+    name="Text field with icons (RTL)"
+    component="text-field"
+    variation="rtl-text-field-with-icon"
     >
 </component>
 

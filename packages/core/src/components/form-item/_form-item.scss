@@ -17,6 +17,11 @@
       overflow: hidden;
       white-space: nowrap;
 
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: $ray-field-h-spacing;
+      }
+
       &--success {
         color: $ray-color-green-70;
       }

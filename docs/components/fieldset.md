@@ -17,9 +17,16 @@ The `legend.ray-fieldset__legend` element _must_ be the first child fo the `fiel
 </fieldset>
 ```
 
-<component 
+<component
     name="Example"
     component="fieldset"
-    variation="fieldset" 
+    variation="fieldset"
+    >
+</component>
+
+<component
+    name="Example (RTL)"
+    component="fieldset"
+    variation="rtl-fieldset"
     >
 </component>

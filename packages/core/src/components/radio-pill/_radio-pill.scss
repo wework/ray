@@ -15,12 +15,24 @@
 
     &:not(:first-child) {
       margin-left: -$ray-border-width;
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: -$ray-border-width;
+      }
     }
 
     &:first-child {
       .#{$ray-class-prefix}radio-pill__label {
         border-bottom-left-radius: $ray-border-radius;
         border-top-left-radius: $ray-border-radius;
+
+        [dir='rtl'] & {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+          border-bottom-right-radius: $ray-border-radius;
+          border-top-right-radius: $ray-border-radius;
+        }
       }
     }
 
@@ -28,6 +40,13 @@
       .#{$ray-class-prefix}radio-pill__label {
         border-bottom-right-radius: $ray-border-radius;
         border-top-right-radius: $ray-border-radius;
+
+        [dir='rtl'] & {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: $ray-border-radius;
+          border-top-left-radius: $ray-border-radius;
+        }
       }
     }
   }

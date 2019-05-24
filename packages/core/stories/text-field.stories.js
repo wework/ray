@@ -353,9 +353,9 @@ storiesOf('Text Field', module)
     return (
       <>
         <div className="ray-form-item">
-          <div className="ray-text-field ray-text-field--with-icon-left">
+          <div className="ray-text-field ray-text-field--with-icon-start">
             <svg
-              className="ray-text-field__icon--left"
+              className="ray-text-field__icon--start"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25"
             >
@@ -376,9 +376,9 @@ storiesOf('Text Field', module)
           </div>
         </div>{' '}
         <div className="ray-form-item">
-          <div className="ray-text-field ray-text-field--disabled ray-text-field--with-icon-left">
+          <div className="ray-text-field ray-text-field--disabled ray-text-field--with-icon-start">
             <svg
-              className="ray-text-field__icon--left"
+              className="ray-text-field__icon--start"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25"
             >

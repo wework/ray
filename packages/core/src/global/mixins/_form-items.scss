@@ -23,6 +23,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  [dir='rtl'] & {
+    left: auto;
+    right: 0;
+  }
 }
 
 @mixin label--active {
@@ -38,6 +43,11 @@
   height: auto;
   background: transparent;
 
+  [dir='rtl'] & {
+    left: auto;
+    right: $ray-field-h-spacing / 2;
+  }
+
   &::before {
     content: '';
     width: calc(100% + #{$ray-field-h-spacing} / 2);
@@ -47,6 +57,11 @@
     top: 0.25rem;
     left: -1 * $ray-field-h-spacing / 2;
     z-index: -1;
+
+    [dir='rtl'] & {
+      left: auto;
+      right: -1 * $ray-field-h-spacing / 2;
+    }
   }
 }
 
@@ -164,26 +179,50 @@
   }
 }
 @mixin icon-support($class) {
-  &--with-icon-left {
+  // --with-icon-left is DEPRECATED in favor of --with-icon-start, and will
+  // be removed in a future release of Ray. Use of --with-icon-left may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &--with-icon-left,
+  &--with-icon-start {
     .#{$ray-class-prefix}#{$class}__input,
     .#{$ray-class-prefix}#{$class}__label {
       padding-left: calc(
         #{$ray-field-h-spacing} * 2 + #{$ray-field-icon-width}
       );
+
+      [dir='rtl'] & {
+        padding-left: auto;
+        padding-right: calc(
+          #{$ray-field-h-spacing} * 2 + #{$ray-field-icon-width}
+        );
+      }
     }
   }
 
-  &--with-icon-right {
+  // --with-icon-right is DEPRECATED in favor of --with-icon-end, and will
+  // be removed in a future release of Ray. Use of --with-icon-right may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &--with-icon-right,
+  &--with-icon-end {
     .#{$ray-class-prefix}#{$class}__input,
     .#{$ray-class-prefix}#{$class}__label {
       padding-right: calc(
         #{$ray-field-h-spacing} * 2 + #{$ray-field-icon-width}
       );
+
+      [dir='rtl'] & {
+        padding-right: auto;
+        padding-left: calc(
+          #{$ray-field-h-spacing} * 2 + #{$ray-field-icon-width}
+        );
+      }
     }
   }
 
   &--with-icon-left,
-  &--with-icon-right {
+  &--with-icon-right,
+  &--with-icon-start,
+  &--with-icon-end {
     fill: $ray-color-text-medium;
 
     path {
@@ -191,26 +230,48 @@
     }
   }
 
-  &__icon--left {
+  // __icon--left is DEPRECATED in favor of __icon--start, and will
+  // be removed in a future release of Ray. Use of __icon--left may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &__icon-left,
+  &__icon--start {
     @include icon;
     left: $ray-field-h-spacing;
+
+    [dir='rtl'] & {
+      left: auto;
+      right: $ray-field-h-spacing;
+    }
   }
 
-  &__icon--right {
+  // __icon--left is DEPRECATED in favor of __icon--start, and will
+  // be removed in a future release of Ray. Use of __icon--left may
+  // result in confusing behavior for RTL language sensitive layouts.
+  &__icon--right,
+  &__icon--end {
     @include icon;
     right: $ray-field-h-spacing;
+
+    [dir='rtl'] & {
+      right: auto;
+      left: $ray-field-h-spacing;
+    }
   }
 
   &--compact {
     .#{$ray-class-prefix}#{$class}__icon--left,
-    .#{$ray-class-prefix}#{$class}__icon--right {
+    .#{$ray-class-prefix}#{$class}__icon--right,
+    .#{$ray-class-prefix}#{$class}__icon--start,
+    .#{$ray-class-prefix}#{$class}__icon--end {
       top: $ray-field-v-spacing-compact;
     }
   }
 
   &--active {
     .#{$ray-class-prefix}#{$class}__icon--left,
-    .#{$ray-class-prefix}#{$class}__icon--right {
+    .#{$ray-class-prefix}#{$class}__icon--right,
+    .#{$ray-class-prefix}#{$class}__icon--start,
+    .#{$ray-class-prefix}#{$class}__icon--end {
       fill: $ray-color-blue-50;
 
       path {
@@ -221,7 +282,9 @@
 
   &--disabled {
     .#{$ray-class-prefix}#{$class}__icon--left,
-    .#{$ray-class-prefix}#{$class}__icon--right {
+    .#{$ray-class-prefix}#{$class}__icon--right,
+    .#{$ray-class-prefix}#{$class}__icon--start,
+    .#{$ray-class-prefix}#{$class}__icon--end {
       fill: rgba($ray-color-gray-60, 0.4);
 
       path {
@@ -237,6 +300,11 @@
       &::after {
         content: '*';
         padding-left: 3px;
+
+        [dir='rtl'] & {
+          padding-left: auto;
+          padding-right: 3px;
+        }
       }
     }
   }

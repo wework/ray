@@ -29,14 +29,37 @@
 
     &:not(:last-of-type) {
       margin-right: 1rem;
+
+      [dir='rtl'] & {
+        margin-right: 0;
+        margin-left: 1rem;
+      }
     }
 
-    &--pull-left {
+    // --pull-left is DEPRECATED in favor of --pull-start, and will be
+    // removed in a future release of Ray. Use of pull-left may result
+    // in confusing behavior for RTL language sensitive layouts.
+    &--pull-left,
+    &--pull-start {
       margin-left: -($ray-button-h-spacing + $ray-border-width);
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: -($ray-button-h-spacing + $ray-border-width);
+      }
     }
 
-    &--pull-right {
+    // --pull-right is DEPRECATED in favor of --pull-end, and will be
+    // removed in a future release of Ray. Use of pull-right may result
+    // in confusing behavior for RTL language sensitive layouts.
+    &--pull-right,
+    &--pull-end {
       margin-right: -($ray-button-h-spacing + $ray-border-width);
+
+      [dir='rtl'] & {
+        margin-right: 0;
+        margin-left: -($ray-button-h-spacing + $ray-border-width);
+      }
     }
   }
 
@@ -141,12 +164,30 @@
     line-height: 1;
     height: auto;
 
-    &.#{$ray-class-prefix}button--pull-left {
+    // button--pull-left is DEPRECATED in favor of button--pull-start, and will
+    // be removed in a future release of Ray. Use of button--pull-left may
+    // result in confusing behavior for RTL language sensitive layouts.
+    &.#{$ray-class-prefix}button--pull-left,
+    &.#{$ray-class-prefix}button--pull-start {
       margin-left: -($ray-button-h-spacing-compact + $ray-border-width);
+
+      [dir='rtl'] & {
+        margin-left: inherit;
+        margin-right: -($ray-button-h-spacing-compact + $ray-border-width);
+      }
     }
 
-    &.#{$ray-class-prefix}button--pull-right {
+    // button--pull-right is DEPRECATED in favor of button--pull-end, and will
+    // be removed in a future release of Ray. Use of button--pull-right may
+    // result in confusing behavior for RTL language sensitive layouts.
+    &.#{$ray-class-prefix}button--pull-right,
+    &.#{$ray-class-prefix}button--pull-end {
       margin-right: -($ray-button-h-spacing-compact + $ray-border-width);
+
+      [dir='rtl'] & {
+        margin-right: inherit;
+        margin-left: -($ray-button-h-spacing-compact + $ray-border-width);
+      }
     }
   }
 
@@ -201,6 +242,11 @@
 
   &:last-child {
     margin-left: 0.5rem;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
   }
 
   svg {
