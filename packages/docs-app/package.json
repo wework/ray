@@ -42,7 +42,7 @@
     "gatsby-remark-embed-video": "^1.4.0",
     "gatsby-remark-embedded-codesandbox": "^1.2.0",
     "gatsby-remark-images": "3.0.11",
-    "gatsby-source-filesystem": "2.0.9",
+    "gatsby-source-filesystem": "2.0.37",
     "gatsby-transformer-remark": "^2.3.1",
     "gatsby-transformer-sharp": "2.1.8",
     "markdown-it": "^8.4.2",
