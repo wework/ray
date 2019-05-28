@@ -61,6 +61,20 @@ title: Text Field
     >
 </component>
 
+<component
+    name="Text field with prepend"
+    component="text-field"
+    variation="text-field-with-prepend"
+    >
+</component>
+
+<component
+    name="Text field with prepend (RTL)"
+    component="text-field"
+    variation="rtl-text-field-with-prepend"
+    >
+</component>
+
 ## Adding hints
 
 Use these modifiers with `.ray-form-item__hint` class.

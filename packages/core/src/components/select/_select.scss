@@ -5,6 +5,7 @@
   .#{$ray-class-prefix}select {
     @include required-support('select');
     @include icon-support('select');
+    @include prepend-support('select');
 
     border: $ray-border-width solid $ray-color-gray-60;
     background-color: $ray-color-white;
@@ -12,6 +13,7 @@
     position: relative;
     height: $ray-field-height;
     display: flex;
+    align-items: stretch;
 
     // __icon--right is DEPRECATED in favor of __icon--end, and will be
     // removed in a future release of Ray. Use of __icon-right may result
@@ -20,11 +22,11 @@
     &__icon--end {
       @include icon;
       // need to add spacing to compensate for the arrow
-      right: calc(#{$ray-field-h-spacing} * 2 + 12px);
+      right: calc((#{$ray-field-h-spacing} * 2) + #{$ray-field-h-spacing});
 
       [dir='rtl'] & {
         right: 0;
-        left: calc(#{$ray-field-h-spacing} * 2 + 12px);
+        left: calc((#{$ray-field-h-spacing} * 2) + #{$ray-field-h-spacing});
       }
     }
 
@@ -44,9 +46,13 @@
       border-radius: 2px;
 
       [dir='rtl'] & {
-        position: unset;
-        margin-left: $ray-field-h-spacing;
+        right: calc(100% - (2 * #{$ray-field-h-spacing}));
       }
+    }
+
+    &__wrapper {
+      position: relative;
+      flex: 1;
     }
 
     &__label {
@@ -162,6 +168,28 @@
 
       .#{$ray-class-prefix}select__label {
         color: rgba($ray-color-gray-60, 0.4);
+      }
+    }
+
+    &--simple {
+      flex: 1;
+      border: none;
+      background-color: transparent;
+      border-radius: 0;
+
+      &__input {
+        font-size: ($ray-field-label-size * 1.2);
+        width: rem(69px);
+        padding-right: 3 * $ray-field-h-spacing;
+
+        [dir='rtl'] & {
+          padding-right: $ray-field-h-spacing;
+          padding-left: 3 * $ray-field-h-spacing;
+        }
+
+        &::-ms-expand {
+          display: none;
+        }
       }
     }
   }

@@ -287,4 +287,52 @@ storiesOf('Select', module)
         </div>
       </>
     );
+  })
+  .add('select, with prepend', () => {
+    setTimeout(init);
+
+    return (
+      <>
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--with-prepend">
+            <div className="ray-select__prepend">
+              <div>🇺🇸</div>
+            </div>
+            <div className="ray-select__wrapper">
+              <select className="ray-select__input">
+                <option value="" disabled selected data-ray-placeholder />
+                <option value="Pikachu">Pikachu</option>
+                <option value="Squirtle">Squirtle</option>
+                <option value="Bulbasaur">Bulbasaur</option>
+                <option value="Charmander">Charmander</option>
+              </select>
+              <label className="ray-select__label">
+                {"What's your starter Pokémon?"}
+              </label>
+            </div>
+          </div>
+        </div>{' '}
+        <div className="ray-form-item">
+          <div className="ray-select ray-select--disabled ray-select--with-prepend">
+            <div className="ray-select__prepend">
+              <div>🐢</div>
+            </div>
+            <div className="ray-select__wrapper">
+              <select className="ray-select__input" disabled>
+                <option value="" disabled selected data-ray-placeholder />
+                <option value="Pikachu">Pikachu</option>
+                <option value="Squirtle" selected>
+                  Squirtle
+                </option>
+                <option value="Bulbasaur">Bulbasaur</option>
+                <option value="Charmander">Charmander</option>
+              </select>
+              <label className="ray-select__label">
+                {"What's your starter Pokémon?"}
+              </label>
+            </div>
+          </div>
+        </div>
+      </>
+    );
   });
