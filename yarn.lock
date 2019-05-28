@@ -3759,7 +3759,7 @@
     "@xtuc/long" "4.2.2"
 
 "@wework/ray-core@file:packages/core":
-  version "1.5.1"
+  version "1.5.2"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -9921,10 +9921,10 @@ gatsby-remark-embedded-codesandbox@^1.2.0:
     query-string "^6.0.0"
     unist-util-map "^1.0.3"
 
-gatsby-remark-images@3.0.11:
-  version "3.0.11"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.0.11.tgz#248d3575720802df67f4320feb4dceb42188ac57"
-  integrity sha512-EWcxWXyBYsHaAmFAT4Icxz7OFcurhVqRfSrHf/CeJ2Olk8rmBIIrrUnDW/mSOAdO1fPB7RHA1HHGBjanhGYL4w==
+gatsby-remark-images@3.0.13:
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.0.13.tgz#65f5e27ec3be5a424e9a18a063c322af41e7f891"
+  integrity sha512-s8igE+PU9q5ooia58FnzBnSD2Ei7UFIWtPeyTqq9trnfy8CIRpvi57JPLdAqE5HvivwrySOo1YjIXkSDf9tR2w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
