@@ -62,7 +62,7 @@
     "@storybook/addon-options": "^5.0.5",
     "@storybook/react": "^5.0.5",
     "@wework/ray-core": "file:../core",
-    "babel-loader": "8.0.5",
+    "babel-loader": "8.0.6",
     "cross-env": "^5.2.0",
     "fs-extra": "^7.0.1",
     "gatsby-remark-static-images": "^1.0.0",
