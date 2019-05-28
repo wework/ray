@@ -37,7 +37,7 @@
     "jest": "24.8.0",
     "lerna": "3.13.4",
     "lint-staged": "8.1.4",
-    "prettier": "1.16.4",
+    "prettier": "1.17.1",
     "stylelint": "^9.10.1"
   },
   "scripts": {
