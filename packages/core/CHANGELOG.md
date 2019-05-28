@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/wework/ray/compare/@wework/ray-core@1.5.2...@wework/ray-core@2.0.0) (2019-05-28)
+
+
+### Features
+
+* **component:** prepend support on textfield & select ([#82](https://github.com/wework/ray/issues/82)) ([ea1f00e](https://github.com/wework/ray/commit/ea1f00e)), closes [#81](https://github.com/wework/ray/issues/81)
+
+
+### BREAKING CHANGES
+
+* **component:** textfields and selects that have icons (and not prepends) need to be wrapped in an
+extra div with a class name of "#{$ray-class-prefix}#{$class}__wrapper"
+
+
+
+
+
 ## [1.5.2](https://github.com/wework/ray/compare/@wework/ray-core@1.5.1...@wework/ray-core@1.5.2) (2019-05-24)
 
 **Note:** Version bump only for package @wework/ray-core

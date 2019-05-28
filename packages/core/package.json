@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core",
-  "version": "1.5.2",
+  "version": "2.0.0",
   "main": "umd/index.js",
   "module": "es/index.js",
   "style": "css/ray-core.min.css",
