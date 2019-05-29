@@ -5,38 +5,67 @@ title: Image
 
 <page-intro>The `image` and `bg` components provide an easy way to add fixed aspect-ratio graphics to your site. Images can have an optional \``.ray-caption`\` element to add additional context to specific pieces of media they accompany across the system.</page-intro>
 
+# Image elements
+
+For most images on a web page, the `img` tag should be used. This is best for accessibility purposes, as backgrounds are typically not registered as content for screen readers. This will also allow you to leverage srcsets for responsive imagery.
+
 <component
-    name="Image 16x9 with caption"
+    name="16x9"
     component="image"
     variation="image--16by9"
     >
 </component>
 
 <component
-    name="Image 16x9 with caption (RTL)"
+    name="Image 16x9 RTL"
     component="image"
-    variation="rtl-image--16by9"
-    >
-</component>
-
-<component
-    name="Image 4x3 with caption"
-    component="image"
-    variation="image--4by3"
-    >
-</component>
-
-<component
-    name="Image 4x3 with caption (RTL)"
-    component="image"
-    variation="rtl-image--4by3"
+    variation="rtl-image--caption"
     >
 </component>
 
 <component
     name="Image 3x4"
+    name="3x4"
     component="image"
     variation="image--3by4"
+    >
+</component>
+
+## Background elements
+
+<component
+    name="16x9"
+    component="image"
+    variation="bg--16by9"
+    >
+</component>
+
+<component
+    name="4x3"
+    component="image"
+    variation="bg--4by3"
+    >
+</component>
+
+<component
+    name="3x4"
+    component="image"
+    variation="bg--3by4"
+    >
+</component>
+
+# Caption
+
+<component
+    component="image"
+    variation="image--caption"
+    >
+</component>
+
+<component
+    name="RTL"
+    component="image"
+    variation="rtl-image--caption"
     >
 </component>
 
