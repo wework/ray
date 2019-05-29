@@ -1,26 +1,2 @@
 @import '../../src/ray-core.scss';
 @import '../../src/ray-debug.scss';
-
-.display-desktop {
-  display: none;
-
-  @include ray-breakpoint(desktop) {
-    display: block;
-  }
-}
-
-.display-tablet {
-  display: none;
-
-  @include ray-breakpoint(tablet) {
-    display: block;
-  }
-}
-
-.display-tablet-only {
-  display: none;
-
-  @include ray-breakpoint(tablet, desktop) {
-    display: block;
-  }
-}
