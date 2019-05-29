@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/wework/ray/compare/@wework/ray-core@2.0.0...@wework/ray-core@2.0.1) (2019-05-29)
+
+
+### Bug Fixes
+
+* **checkbox:** standardize check icon ([#132](https://github.com/wework/ray/issues/132)) ([ae557c5](https://github.com/wework/ray/commit/ae557c5))
+
+
+
+
+
 # [2.0.0](https://github.com/wework/ray/compare/@wework/ray-core@1.5.2...@wework/ray-core@2.0.0) (2019-05-28)
 
 
