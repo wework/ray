@@ -7,16 +7,32 @@ title: Breakpoints
 
 <breakpoints-documentation></breakpoints-documentation>
 
+# Mixins
+
+```css
+padding: 1rem;
+
+@include ray-breakpoint(tablet) {
+  /* These styles will apply to the tablet breakpoint and above */
+  padding: 2rem;
+}
+
+@include ray-breakpoint(phone, tablet) {
+  /* These styles will apply to the phone breakpoint and end at the beginning of the tablet breakpoint */
+  padding: 2rem;
+}
+```
+
 ## Mobile first example
 
 ```css
 font-size: 0.75rem;
 
-@media (min-width: map-get($ray-layout-grid-breakpoints, tablet)) {
+@include ray-breakpoint(tablet) {
   font-size: 1rem;
 }
 
-@media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
+@include ray-breakpoint(desktop) {
   font-size: 2rem;
 }
 ```

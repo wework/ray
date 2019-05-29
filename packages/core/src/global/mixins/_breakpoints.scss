@@ -1,0 +1,26 @@
+@import '../variables';
+
+@function errorMessage($breakpointName) {
+  @return 'No value found for `#{$breakpointName}`. ' +
+    'Available breakpoints are: #{map-keys($ray-layout-grid-breakpoints)}.';
+}
+
+@mixin ray-breakpoint($minBreakpoint, $maxBreakpoint: false) {
+  @if map-has-key($ray-layout-grid-breakpoints, $minBreakpoint) {
+    @if $maxBreakpoint {
+      @if map-has-key($ray-layout-grid-breakpoints, $maxBreakpoint) {
+        @media (min-width: map-get($ray-layout-grid-breakpoints, $minBreakpoint)) and (max-width: map-get($ray-layout-grid-breakpoints, $maxBreakpoint) - 1) {
+          @content;
+        }
+      } @else {
+        @warn errorMessage($maxBreakpoint);
+      }
+    } @else {
+      @media (min-width: map-get($ray-layout-grid-breakpoints, $minBreakpoint)) {
+        @content;
+      }
+    }
+  } @else {
+    @warn errorMessage($minBreakpoint);
+  }
+}

@@ -18,6 +18,7 @@ function Breakpoints({ breakpoints }) {
       <thead>
         <tr>
           <th>Breakpoint</th>
+          <th>Scss map-get</th>
           <th>threshold</th>
         </tr>
       </thead>
@@ -28,6 +29,7 @@ function Breakpoints({ breakpoints }) {
 
           return (
             <tr key={breakpointName}>
+              <td>{breakpointName.toLowerCase()}</td>
               <td>
                 <code>
                   map-get($ray-layout-grid-breakpoints,{' '}
