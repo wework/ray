@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/wework/ray/compare/ray-website-gatsby@1.2.4...ray-website-gatsby@1.3.0) (2019-05-29)
+
+
+### Features
+
+* add breakpoint mixins ([#119](https://github.com/wework/ray/issues/119)) ([0388970](https://github.com/wework/ray/commit/0388970))
+
+
+
+
+
 ## [1.2.4](https://github.com/wework/ray/compare/ray-website-gatsby@1.2.3...ray-website-gatsby@1.2.4) (2019-05-29)
 
 **Note:** Version bump only for package ray-website-gatsby

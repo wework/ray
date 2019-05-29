@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/wework/ray/compare/@wework/ray-core@1.6.0...@wework/ray-core@1.7.0) (2019-05-29)
+
+
+### Features
+
+* add breakpoint mixins ([#119](https://github.com/wework/ray/issues/119)) ([0388970](https://github.com/wework/ray/commit/0388970))
+
+
+
+
+
 # [1.6.0](https://github.com/wework/ray/compare/@wework/ray-core@1.5.2...@wework/ray-core@1.6.0) (2019-05-29)
 
 
