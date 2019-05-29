@@ -135,14 +135,21 @@
   }
 
   .#{$ray-class-prefix}checkbox__input:checked
-    + .#{$ray-class-prefix}checkbox__label::before {
-    color: $ray-color-white;
-    content: '✓';
+    + .#{$ray-class-prefix}checkbox__label::after {
+    content: '';
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(31deg);
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    width: 3px;
+    height: 9px;
 
-    // Needed to center the checkmark
-    line-height: 14px;
-    font-size: calc(1rem - #{rem(1px)});
-    text-indent: 1px;
+    [dir='rtl'] & {
+      left: auto;
+      right: 5px;
+    }
   }
 
   /**
