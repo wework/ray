@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/wework/ray/compare/@wework/ray-core@1.7.0...@wework/ray-core@1.7.1) (2019-05-29)
+
+
+### Bug Fixes
+
+* **image:** hide alt text if no src ([#111](https://github.com/wework/ray/issues/111)) ([991834c](https://github.com/wework/ray/commit/991834c))
+
+
+
+
+
 # [1.7.0](https://github.com/wework/ray/compare/@wework/ray-core@1.6.0...@wework/ray-core@1.7.0) (2019-05-29)
 
 
