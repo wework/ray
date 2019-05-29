@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/wework/ray/compare/@wework/ray-core@1.5.2...@wework/ray-core@1.6.0) (2019-05-29)
+
+
+### Bug Fixes
+
+* **checkbox:** standardize check icon ([#132](https://github.com/wework/ray/issues/132)) ([465986e](https://github.com/wework/ray/commit/465986e))
+
+
+### Features
+
+* **component:** prepend support on textfield & select ([#82](https://github.com/wework/ray/issues/82)) ([5d7bce6](https://github.com/wework/ray/commit/5d7bce6)), closes [#81](https://github.com/wework/ray/issues/81)
+
+
+
+
+
 ## [1.5.2](https://github.com/wework/ray/compare/@wework/ray-core@1.5.1...@wework/ray-core@1.5.2) (2019-05-24)
 
 **Note:** Version bump only for package @wework/ray-core
