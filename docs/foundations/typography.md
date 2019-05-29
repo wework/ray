@@ -116,3 +116,32 @@ A mono-spaced font only has a single weight.
 ## Light
 
 `$ray-color-text-light` – A tertiary text color is need for the system to convey placeholder for example.
+
+# Typography Mixins
+
+These mixins can be useful for responsively assigning typography styles.
+
+```css
+.my-copy {
+  @include ray-body;
+
+  @include ray-breakpoint(tablet) {
+    @include ray-body-large;
+  }
+}
+```
+
+### All available typography mixins
+
+`@include ray-display-1;`  
+`@include ray-display-2;`  
+`@include ray-h1;`  
+`@include ray-h2;`  
+`@include ray-h3;`  
+`@include ray-h4;`  
+`@include ray-h5;`  
+`@include ray-h6;`  
+`@include ray-body;`  
+`@include ray-body-large;`  
+`@include ray-body-small;`  
+`@include ray-body-x-small;`
