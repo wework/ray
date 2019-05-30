@@ -1,6 +1,6 @@
 # Releasing
 
-We use conventional commits to dynamically version the packages. It's imperative that maintainers of Ray `squash and merge` all pull requests and edit the commit message/description to follow the guidelines of [Conventional Commits](conventional-commits)
+We use conventional commits to dynamically version the packages. It's imperative that maintainers of Ray `squash and merge` all pull requests and edit the commit message/description to follow the guidelines of [Conventional Commits][conventional-commits]
 
 Releases are automatically created when a commit is merged into master. Circle CI will kick off a job, bump the version and publish to the npm registry.
 
