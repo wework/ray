@@ -13,7 +13,7 @@ By default, Ray _will_ assign css attributes directly to HTML tags like h1–h6.
 
 Ray includes typography styles for `<h1>` through `<h6>` classes, with `.ray-text--h*`.
 
-The classes are _not_ tied to the semantic html tags, so for example you could use a `.ray-text--h3` on an `<h1>`, however this is an indicator that the information heriarchy of your page may need some reconsideration.
+The classes are _not_ tied to the semantic html tags, so for example you could use a `.ray-text--h3` on an `<h1>`, however this is an indicator that the information hierarchy of your page may need some reconsideration.
 
 Headings include some margin on them. If you wish to use a heading without including the margin you can assign the class to a `span`, like below:
 
@@ -25,7 +25,7 @@ Headings include some margin on them. If you wish to use a heading without inclu
 
 ## Displays
 
-Native heading elements (h1-h6) are designed for general-purpose use throughout the content. However, if a more distiguished and intentional headline is needed, consider using a `display` headline.
+Native heading elements (h1-h6) are designed for general-purpose use throughout the content. However, if a more distinguished and intentional headline is needed, consider using a `display` headline.
 
 <component
     component="typography"
@@ -43,7 +43,7 @@ Native heading elements (h1-h6) are designed for general-purpose use throughout 
 
 ## Running Text
 
-This utility is useful for long-form content, especially content that is dynamically genereated from markdown. It will directly style `h1`–`h6`, `p`, `blockquote`, `ul`, and `ol` tags. This will generally only be needed when `$ray-assign-typography-styles-natively` is set to false.
+This utility is useful for long-form content, especially content that is dynamically generated from markdown. It will directly style `h1`–`h6`, `p`, `blockquote`, `ul`, and `ol` tags. This will generally only be needed when `$ray-assign-typography-styles-natively` is set to false.
 
 <component
     component="typography"
