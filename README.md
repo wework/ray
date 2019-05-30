@@ -12,16 +12,6 @@ See the [getting started docs](https://ray.wework.com/getting-started/).
 
 See [DEVELOP.md](./DEVELOP.md) for documentation.
 
-## Contributing
-
-This project uses [commitizen](https://github.com/commitizen/cz-cli).
-
-When commiting, please use the following command and follow the prompts:
-
-```bash
-$ yarn commit
-```
-
 ## [Release](https://github.com/wework/ray/releases) (WeWork staff)
 
 See [RELEASING.md](./RELEASING.md) for documentation.

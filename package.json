@@ -21,8 +21,6 @@
     "@babel/core": "7.4.4",
     "@babel/plugin-proposal-class-properties": "7.4.4",
     "@babel/preset-env": "7.3.4",
-    "@commitlint/cli": "7.6.1",
-    "@commitlint/config-conventional": "7.6.0",
     "babel-eslint": "10.0.1",
     "commitizen": "^3.0.7",
     "coveralls": "3.0.3",
@@ -44,7 +42,6 @@
     "dev": "lerna run dev --parallel",
     "dev:core": "lerna run dev --scope=\"@wework/ray-core\" --parallel",
     "dev:docs": "lerna run dev --scope=\"ray-website-gatsby\" --parallel",
-    "commit": "git-cz",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "bootstrap": "npx lerna bootstrap",
     "test": "jest",
@@ -58,8 +55,7 @@
   "dependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
