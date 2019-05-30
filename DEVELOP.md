@@ -60,7 +60,7 @@ This is a playground for developers to build and test their HTML/CSS/JS. It runs
 
 We also use storybook in our continuous integration for visual regression testing. So it's key that stories exist for every component.
 
-Open up `localhost:3000` to find the storybook.
+Open up `localhost:6006` to find the storybook.
 
 ### Documentation
 
