@@ -35,14 +35,6 @@ The primary packages are
 After following the setup instructions above, you can use these steps to begin your contributions to the design system.
 
 1. Start the development servers
-2. Modify or create new SCSS/JS in the `packages/core/src` directory
-3. Modify or create new documentation in the `docs/` directory
-4. Test your changes (and write tests if applicable): `yarn test`
-5. Commit your changes with a [conventional commit]: `yarn commit`
-6. Push your changes to GitHub and create a pull-request.
-7. Wait for a review by the maintainers.
-
-Run the development servers
 
 ```bash
 # Spin up both the storybook and docs servers
@@ -54,6 +46,13 @@ $ yarn dev:core
 # Run only the documentation server
 $ yarn dev:docs
 ```
+
+2. Modify or create new SCSS/JS in the `packages/core/src` directory
+3. Modify or create new stories in the `packages/core/stories/` directory
+4. Modify or create new documentation in the `docs/` directory
+5. Test your changes (and write tests if applicable): `yarn test`
+6. Commit and push your changes to GitHub and create a pull-request.
+7. Wait for a review by the maintainers.
 
 ### Storybook
 
