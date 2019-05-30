@@ -24,16 +24,6 @@ $ npx lerna run storybook --scope="@wework/ray-core" --parallel
 $ npx lerna run dev --scope="ray-website-gatsby"  --parallel
 ```
 
-## Contributing
-
-This project uses [commitizen](https://github.com/commitizen/cz-cli).
-
-When commiting, please use the following command and follow the prompts:
-
-```bash
-$ yarn commit
-```
-
 ## [Release](https://github.com/wework/ray/releases)
 
 Releases are automatically created when a commit is merged into master. Circle CI will kick off a job, bump the version and publish to the npm registry.
