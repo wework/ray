@@ -10,19 +10,7 @@ See the [getting started docs](https://ray.wework.com/getting-started/).
 
 ## Development
 
-```bash
-# to install dependencies and bootstrap lerna
-$ yarn bootstrap
-
-# to start all dev servers
-$ yarn dev
-
-# to only start storybook dev server
-$ npx lerna run storybook --scope="@wework/ray-core" --parallel
-
-# to only start docs site dev server
-$ npx lerna run dev --scope="ray-website-gatsby"  --parallel
-```
+See [DEVELOP.md](./DEVELOP.md) for documentation.
 
 ## Contributing
 
