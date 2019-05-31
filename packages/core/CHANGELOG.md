@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.2](https://github.com/wework/ray/compare/@wework/ray-core@1.7.1...@wework/ray-core@1.7.2) (2019-05-31)
+
+
+### Bug Fixes
+
+* **card:** normalize font-weight of card--row heading ([#138](https://github.com/wework/ray/issues/138)) ([e72e884](https://github.com/wework/ray/commit/e72e884))
+
+
+
+
+
 ## [1.7.1](https://github.com/wework/ray/compare/@wework/ray-core@1.7.0...@wework/ray-core@1.7.1) (2019-05-29)
 
 
