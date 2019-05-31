@@ -99,6 +99,7 @@
 
         .#{$ray-class-prefix}card__heading {
           @include ray-h2;
+          font-weight: 400;
         }
 
         .#{$ray-class-prefix}card__image {
