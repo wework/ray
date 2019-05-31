@@ -6,9 +6,9 @@ title: Select
 <page-intro>Text fields within the system have a standard Size and a compact Size. Our fields are outlined and become activated with our primary color using the rules we set up in our affordances. These components have several elements, not all of which are required.</page-intro>
 
 <component
-    name="Select (RTL)"
+    name="Select"
     component="select"
-    variation="rtl-select"
+    variation="select"
     >
 </component>
 
@@ -20,9 +20,9 @@ title: Select
 </component>
 
 <component
-    name="With placeholder (RTL)"
+    name="Select"
     component="select"
-    variation="rtl-select--with-placeholder"
+    variation="rtl-select"
     >
 </component>
 
