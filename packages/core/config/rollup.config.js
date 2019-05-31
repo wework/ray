@@ -14,7 +14,9 @@ module.exports = {
   },
   plugins: [
     resolve(),
-    commonjs(),
+    commonjs({
+      include: /node_modules/
+    }),
     babel({
       babelrc: false,
       plugins: babelConfig.plugins,
