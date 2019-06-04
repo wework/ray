@@ -1,4 +1,5 @@
 import './global/js/polyfills';
+import './global/js/accessibility';
 import boot from './global/js/boot';
 
 boot();

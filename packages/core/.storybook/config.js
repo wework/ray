@@ -3,9 +3,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import 'storybook-chromatic';
 
 import '../stories/styles/index.scss';
-import boot from '../src/global/js/boot';
-
-boot();
+import '../src/';
 
 const req = require.context('../stories', true, /.stories.js$/);
 
