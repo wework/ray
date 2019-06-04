@@ -245,7 +245,7 @@
   // __icon--left is DEPRECATED in favor of __icon--start, and will
   // be removed in a future release of Ray. Use of __icon--left may
   // result in confusing behavior for RTL language sensitive layouts.
-  &__icon-left,
+  &__icon--left,
   &__icon--start {
     @include icon;
     left: $ray-field-h-spacing;
