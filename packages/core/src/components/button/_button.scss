@@ -67,9 +67,11 @@
     background-color: $ray-color-blue-50;
     color: $ray-color-white;
 
-    &:hover {
-      background-color: $ray-color-blue-60;
-      border-color: $ray-color-blue-60;
+    @include ray-breakpoint(desktop) {
+      &:hover {
+        background-color: $ray-color-blue-60;
+        border-color: $ray-color-blue-60;
+      }
     }
 
     .#{$ray-accessibility-class} &:focus {
@@ -91,9 +93,11 @@
       background-color: $ray-color-red-50;
       border-color: $ray-color-red-50;
 
-      &:hover {
-        background-color: $ray-color-red-60;
-        border-color: $ray-color-red-60;
+      @include ray-breakpoint(desktop) {
+        &:hover {
+          background-color: $ray-color-red-60;
+          border-color: $ray-color-red-60;
+        }
       }
 
       .#{$ray-accessibility-class} &:focus {
@@ -117,8 +121,10 @@
     color: $ray-color-blue-50;
     background-color: $ray-color-white;
 
-    &:hover {
-      background-color: $ray-color-blue-10;
+    @include ray-breakpoint(desktop) {
+      &:hover {
+        background-color: $ray-color-blue-10;
+      }
     }
 
     .#{$ray-accessibility-class} &:focus {
@@ -133,8 +139,10 @@
       border-color: $ray-color-red-50;
       color: $ray-color-red-50;
 
-      &:hover {
-        background-color: $ray-color-red-10;
+      @include ray-breakpoint(desktop) {
+        &:hover {
+          background-color: $ray-color-red-10;
+        }
       }
 
       .#{$ray-accessibility-class} &:focus {
@@ -196,8 +204,10 @@
     background-color: transparent;
     border-color: transparent;
 
-    &:hover {
-      background-color: $ray-color-gray-03;
+    @include ray-breakpoint(desktop) {
+      &:hover {
+        background-color: $ray-color-gray-03;
+      }
     }
 
     .#{$ray-accessibility-class} &:focus {
