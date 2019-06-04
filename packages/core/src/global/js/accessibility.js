@@ -1,3 +1,8 @@
+if (typeof document !== 'undefined') {
+  document.addEventListener('mousedown', removeAccessibilityClass);
+  document.addEventListener('keydown', addAccessibilityClass);
+}
+
 const ACCESSIBILITY_CLASS = 'js-ray-keyboard-nav';
 
 // Let the document know when the mouse is being used,
@@ -9,6 +14,3 @@ function addAccessibilityClass() {
 function removeAccessibilityClass() {
   document.body.classList.remove(ACCESSIBILITY_CLASS);
 }
-
-document.addEventListener('mousedown', removeAccessibilityClass);
-document.addEventListener('keydown', addAccessibilityClass);
