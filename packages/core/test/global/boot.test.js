@@ -7,6 +7,39 @@ const {
 } = require('../../src/global/js/boot');
 
 describe('boot', () => {
+  test('it works with SSR', () => {
+    const realDocument = global.document;
+    const realWindow = global.window;
+
+    Object.defineProperty(global, 'document', {
+      value: undefined,
+      writable: true
+    });
+
+    expect(() => {
+      boot();
+    }).not.toThrow();
+
+    Object.defineProperty(global, 'window', {
+      value: undefined,
+      writable: true
+    });
+
+    expect(() => {
+      boot();
+    }).not.toThrow();
+
+    Object.defineProperty(global, 'document', {
+      value: realDocument,
+      writable: true
+    });
+
+    Object.defineProperty(global, 'window', {
+      value: realWindow,
+      writable: true
+    });
+  });
+
   test('it initailizes all components if DOM is ready', () => {
     Object.defineProperty(document, 'readyState', {
       value: 'complete',
