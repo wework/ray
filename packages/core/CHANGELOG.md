@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.4](https://github.com/wework/ray/compare/@wework/ray-core@1.7.3...@wework/ray-core@1.7.4) (2019-06-05)
+
+
+### Bug Fixes
+
+* **checkbox:** add relative positioning for checkmark ([#140](https://github.com/wework/ray/issues/140)) ([45fb68c](https://github.com/wework/ray/commit/45fb68c))
+* **form-item:** icon--left bug fix ([#142](https://github.com/wework/ray/issues/142)) ([7bb8339](https://github.com/wework/ray/commit/7bb8339))
+
+
+
+
+
 ## [1.7.3](https://github.com/wework/ray/compare/@wework/ray-core@1.7.2...@wework/ray-core@1.7.3) (2019-05-31)
 
 **Note:** Version bump only for package @wework/ray-core
