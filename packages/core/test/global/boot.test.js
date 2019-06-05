@@ -7,7 +7,7 @@ const {
 } = require('../../src/global/js/boot');
 
 describe('boot', () => {
-  test('it works with SSR', () => {
+  test('it works with server side rendering', () => {
     const realDocument = global.document;
     const realWindow = global.window;
 
