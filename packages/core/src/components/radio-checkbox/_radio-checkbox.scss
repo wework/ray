@@ -18,6 +18,7 @@
       line-height: $ray-field-line-height;
       cursor: pointer;
       display: flex;
+      position: relative;
 
       &::before {
         box-sizing: border-box;
