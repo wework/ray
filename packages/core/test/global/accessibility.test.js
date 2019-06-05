@@ -5,7 +5,7 @@ describe('accessibility', () => {
     document.body.classList = null;
   });
 
-  test('it works with SSR', () => {
+  test('it works with server side rendering', () => {
     expect(() => {
       const spy = jest.spyOn(document, 'addEventListener');
       const realDocument = global.document;
