@@ -11,6 +11,9 @@
       "colors": {
         "title": "Colors"
       },
+      "accessibility": {
+        "title": "Accessibility"
+      },
       "fonts": {
         "title": "Fonts"
       },
