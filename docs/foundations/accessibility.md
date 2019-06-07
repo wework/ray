@@ -21,7 +21,7 @@ The WCAG state that to ensure readability, text and interactive elements should 
 
 ### Color Blindness
 
-The most common variety of colorblindness is red-green color blindness. It's important to **avoid** juxtaposing these color.
+The most common variety of colorblindness is red-green color blindness. It's important to **avoid** juxtaposing these colors.
 
 [US Government Standards](https://designsystem.digital.gov/design-tokens/color/overview/)
 
