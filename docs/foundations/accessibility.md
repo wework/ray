@@ -15,7 +15,7 @@ If the user is using a keyboard to navigate, Ray will apply a class to the docum
 
 ### Color Ratio
 
-The WCAG state that to ensure readability, text and interactive elements should maintain a color contrast ratio of at least 4.5:1.
+The [Web Content Accessibility Guidelines](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG) state that to ensure readability, text and interactive elements should maintain a color contrast ratio of at least 4.5:1.
 
 [Web Content Accessibility Guidelines](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
