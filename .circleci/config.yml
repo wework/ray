@@ -40,22 +40,45 @@ commands:
             - packages/rehype-react/node_modules
 
 jobs:
-  test:
+  checkout-code:
     executor:
       name: docker-config
     steps:
       - checkout
+      - attach_workspace: { at: '.' }
       - get_npm_packages_cache
       - bootstrap
+      - run:
+          name: Check if yarn.lock changed during install
+          command: git diff --exit-code
       - save_npm_packages_cache
+      - persist_to_workspace:
+          root: '.'
+          paths: [node_modules, packages/*/node_modules]
+
+  test-unit:
+    executor:
+      name: docker-config
+    steps:
+      - checkout
+      - attach_workspace: { at: '.' }
+      - get_npm_packages_cache
       - run:
           name: Run unit tests
           command: yarn test --coverage
       - run:
           name: Ship test coverage report to coveralls
           command: yarn coveralls
+
+  test-visual-regression:
+    executor:
+      name: docker-config
+    steps:
+      - checkout
+      - attach_workspace: { at: '.' }
+      - get_npm_packages_cache
       - run:
-          name: 'Run visual regression tests'
+          name: Run visual regression tests
           command: yarn lerna run chromatic --scope="@wework/ray-core" --parallel
 
   build:
@@ -63,14 +86,13 @@ jobs:
       name: docker-config
     steps:
       - checkout
+      - attach_workspace: { at: '.' }
       - get_npm_packages_cache
-      - bootstrap
-      - save_npm_packages_cache
       - run:
           name: 'Build packages'
           command: yarn build
 
-  release:
+  build_and_release:
     executor:
       name: docker-config
     steps:
@@ -78,9 +100,8 @@ jobs:
           fingerprints:
             - 'f2:ad:87:6b:39:67:71:e0:7e:4e:2a:63:bd:4e:65:1a'
       - checkout
+      - attach_workspace: { at: '.' }
       - get_npm_packages_cache
-      - bootstrap
-      - save_npm_packages_cache
       - run:
           name: 'Build packages'
           command: yarn build
@@ -96,17 +117,26 @@ jobs:
 
 workflows:
   version: 2
-  'continuously integrate':
+  'ray-ci-cd':
     jobs:
-      - test
+      - checkout-code
+      - test-unit:
+          requires:
+            - checkout-code
+      - test-visual-regression:
+          requires:
+            - checkout-code
       - build:
+          requires:
+            - checkout-code
           filters:
             branches:
               ignore:
                 - master
-      - release:
+      - build_and_release:
           requires:
-            - test
+            - test-unit
+            - test-visual-regression
           filters:
             branches:
               only:
