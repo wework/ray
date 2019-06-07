@@ -1,22 +1,15 @@
-/* eslint-disable no-inner-declarations */
-
-function setupAccessibility() {
+function attachAccessibilityEvents() {
   if (typeof document !== 'undefined') {
-    document.addEventListener('mousedown', removeAccessibilityClass);
-    document.addEventListener('keydown', addAccessibilityClass);
+    const ENABLE_ACCESSIBILITY_CLASS = 'js-ray-enable-accessibility';
 
-    const ACCESSIBILITY_CLASS = 'js-ray-keyboard-nav';
+    document.addEventListener('keydown', function addAccessibilityClass() {
+      document.body.classList.add(ENABLE_ACCESSIBILITY_CLASS);
+    });
 
-    // Let the document know when the mouse is being used,
-    // so accessibility styling can be removed.
-    function addAccessibilityClass() {
-      document.body.classList.add(ACCESSIBILITY_CLASS);
-    }
-
-    function removeAccessibilityClass() {
-      document.body.classList.remove(ACCESSIBILITY_CLASS);
-    }
+    document.addEventListener('mousedown', function removeAccessibilityClass() {
+      document.body.classList.remove(ENABLE_ACCESSIBILITY_CLASS);
+    });
   }
 }
 
-export default setupAccessibility;
+export default attachAccessibilityEvents;
