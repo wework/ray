@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/wework/ray/compare/@wework/ray-core@1.7.4...@wework/ray-core@1.8.0) (2019-06-07)
+
+
+### Features
+
+* **accessibility:** only show active states when keyboard navigating ([#141](https://github.com/wework/ray/issues/141)) ([7fc3791](https://github.com/wework/ray/commit/7fc3791))
+
+
+
+
+
 ## [1.7.4](https://github.com/wework/ray/compare/@wework/ray-core@1.7.3...@wework/ray-core@1.7.4) (2019-06-05)
 
 
