@@ -7,7 +7,7 @@ title: Accessibility
 
 ### Keyboard Navigation
 
-Many people navigate the web using technologies such as screen readers, or are unable to use a traditional mouse. It's imperative that content and interactive elements are accessible by way of keyboard navigation, and clearly indicate when
+Many people navigate the web using technologies such as screen readers, or are unable to use a traditional mouse. It's imperative that content and interactive elements are accessible by way of keyboard navigation, and clearly indicate where the user has focus.
 
 Do not remove focus states from elements unless you implement a suitable replacement.
 
