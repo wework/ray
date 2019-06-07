@@ -17,8 +17,6 @@ If the user is using a keyboard to navigate, Ray will apply a class to the docum
 
 The [Web Content Accessibility Guidelines](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG) state that to ensure readability, text and interactive elements should maintain a color contrast ratio of at least 4.5:1.
 
-[Web Content Accessibility Guidelines](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG)
-
 ### Color Blindness
 
 The most common variety of colorblindness is red-green color blindness. It's important to **avoid** juxtaposing these colors.
