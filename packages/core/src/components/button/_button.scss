@@ -67,12 +67,14 @@
     background-color: $ray-color-blue-50;
     color: $ray-color-white;
 
-    &:hover {
-      background-color: $ray-color-blue-60;
-      border-color: $ray-color-blue-60;
+    @include ray-breakpoint(desktop) {
+      &:hover {
+        background-color: $ray-color-blue-60;
+        border-color: $ray-color-blue-60;
+      }
     }
 
-    &:focus {
+    .#{$ray-accessibility-class} &:focus {
       box-shadow: $ray-box-shadow-focus-state;
     }
 
@@ -91,12 +93,14 @@
       background-color: $ray-color-red-50;
       border-color: $ray-color-red-50;
 
-      &:hover {
-        background-color: $ray-color-red-60;
-        border-color: $ray-color-red-60;
+      @include ray-breakpoint(desktop) {
+        &:hover {
+          background-color: $ray-color-red-60;
+          border-color: $ray-color-red-60;
+        }
       }
 
-      &:focus {
+      .#{$ray-accessibility-class} &:focus {
         box-shadow: 0 0 0 3px transparentize($ray-color-red-50, 0.75);
       }
 
@@ -117,11 +121,13 @@
     color: $ray-color-blue-50;
     background-color: $ray-color-white;
 
-    &:hover {
-      background-color: $ray-color-blue-10;
+    @include ray-breakpoint(desktop) {
+      &:hover {
+        background-color: $ray-color-blue-10;
+      }
     }
 
-    &:focus {
+    .#{$ray-accessibility-class} &:focus {
       box-shadow: $ray-box-shadow-focus-state;
     }
 
@@ -133,11 +139,13 @@
       border-color: $ray-color-red-50;
       color: $ray-color-red-50;
 
-      &:hover {
-        background-color: $ray-color-red-10;
+      @include ray-breakpoint(desktop) {
+        &:hover {
+          background-color: $ray-color-red-10;
+        }
       }
 
-      &:focus {
+      .#{$ray-accessibility-class} &:focus {
         box-shadow: 0 0 0 3px transparentize($ray-color-red-50, 0.75);
       }
 
@@ -196,11 +204,13 @@
     background-color: transparent;
     border-color: transparent;
 
-    &:hover {
-      background-color: $ray-color-gray-03;
+    @include ray-breakpoint(desktop) {
+      &:hover {
+        background-color: $ray-color-gray-03;
+      }
     }
 
-    &:focus {
+    .#{$ray-accessibility-class} &:focus {
       box-shadow: $ray-box-shadow-focus-state;
     }
 
@@ -211,7 +221,7 @@
     &.#{$ray-class-prefix}button--danger {
       color: $ray-color-red-50;
 
-      &:focus {
+      .#{$ray-accessibility-class} &:focus {
         box-shadow: 0 0 0 3px transparentize($ray-color-red-50, 0.75);
       }
 
