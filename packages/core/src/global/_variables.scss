@@ -9,7 +9,7 @@ $ray-font-stack-mono: 'Apercu Mono', SFMono-Regular, Menlo, Monaco, Consolas,
   'Liberation Mono', 'Courier New', monospace;
 $ray-base-font-size: rem(16px);
 $ray-base-line-height: 1.618;
-$ray-accessibility-class: 'js-#{$ray-class-prefix}keyboard-nav';
+$ray-accessibility-class: 'js-ray-enable-accessibility';
 
 $ray-assign-typography-styles-natively: true !default;
 $ray-link-color: $ray-color-blue-50;
