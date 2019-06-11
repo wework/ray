@@ -64,7 +64,7 @@ button,
   }
 
   // All links on Markdown pages but not inside component examples
-  & > div > * > a,
+  & > div > * > a:not(.ray-button),
   .page-table td a,
   .page-ul a {
     color: $ray-color-blue-50;
