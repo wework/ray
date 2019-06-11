@@ -20,6 +20,14 @@ export default class HTML extends React.Component {
             rel="stylesheet"
             href="//www-static.wework.com/apercu/apercu_mono.css"
           />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+          />
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+          />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

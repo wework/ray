@@ -59,23 +59,26 @@ export default class SideNav extends React.Component {
             'side-nav--open': this.props.open
           })}
         >
-          <div className="side-nav--header">
-            <Link to="/" className="side-nav__heading">
-              Ray <span className="side-nav__version"> v{version}</span>
-            </Link>
-            <a
-              className="side-nav__github"
-              href="https://github.com/wework/ray"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              View on GitHub →
-            </a>
-          </div>
-          <div className="side-nav--items">
-            <ul role="menu" className="side-nav__nav-items">
-              {this.renderNavItems('/', navigation)}
-            </ul>
+          <div className="side-nav__inner">
+            <div className="side-nav--header">
+              <Link to="/" className="side-nav__heading">
+                Ray <span className="side-nav__version"> v{version}</span>
+              </Link>
+              <a
+                className="side-nav__github"
+                href="https://github.com/wework/ray"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View on GitHub →
+              </a>
+            </div>
+
+            <div className="side-nav--items">
+              <ul role="menu" className="side-nav__nav-items">
+                {this.renderNavItems('/', navigation)}
+              </ul>
+            </div>
           </div>
         </nav>
       </>

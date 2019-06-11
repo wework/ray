@@ -131,13 +131,7 @@ export default ({ data }) => {
         />
       )}
 
-      <div className={classNames}>
-        <div className="ray-grid">
-          <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-10-desktop">
-            {renderAst(post.htmlAst)}
-          </div>
-        </div>
-      </div>
+      <div className={classNames}>{renderAst(post.htmlAst)}</div>
     </Layout>
   );
 };
