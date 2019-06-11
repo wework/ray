@@ -16,8 +16,6 @@
   background-color: #f6f6f9;
   padding-top: 2rem;
   padding-bottom: 3rem;
-  margin-left: calc(-1 * #{map-get($ray-layout-grid-default-margin, desktop)});
-  padding-left: map-get($ray-layout-grid-default-margin, desktop);
   transition: left 0.15s ease; // stylelint-disable-line property-blacklist
   overflow-y: scroll;
   z-index: 999;
@@ -28,14 +26,27 @@
     padding: 0;
   }
 
-  &--open {
-    left: 0;
+  @include ray-breakpoint(phone, desktop) {
+    position: fixed;
+    left: -9999px;
+    width: 300px;
+    padding-top: 4rem;
+
+    &--open {
+      left: 0;
+    }
   }
 
-  //  sticky
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
+  // sticky
+  @include ray-breakpoint(desktop) {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    margin-left: calc(
+      -1 * #{map-get($ray-layout-grid-default-margin, desktop)}
+    );
+    padding-left: map-get($ray-layout-grid-default-margin, desktop);
+  }
 
   @media (min-width: map-get($ray-layout-grid-max-width, desktop)) {
     margin-left: calc(
