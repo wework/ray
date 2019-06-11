@@ -1,5 +1,5 @@
 ---
-label: '@WeWork'
+label: 'WeWork'
 title: Ray Design System
 ---
 

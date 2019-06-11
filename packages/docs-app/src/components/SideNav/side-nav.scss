@@ -9,19 +9,16 @@
 }
 
 .side-nav {
-  position: fixed;
-  left: -100%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   z-index: 7000;
-  overflow-y: auto;
-  background-color: hsla(240, 17%, 97%, 1);
-  min-width: 200px;
-  max-width: 300px;
-  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f9;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   transition: left 0.15s ease; // stylelint-disable-line property-blacklist
-  padding: 4rem 0;
+  overflow-y: scroll;
+  z-index: 999;
 
   ul {
     list-style-type: none;
@@ -29,15 +26,41 @@
     padding: 0;
   }
 
-  &--open {
-    left: 0;
+  @include ray-breakpoint(phone, desktop) {
+    position: fixed;
+    left: -9999px;
+    width: 300px;
+    padding-top: 4rem;
+
+    &--open {
+      left: 0;
+    }
   }
 
-  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
+  // sticky
+  @include ray-breakpoint(desktop) {
     position: sticky;
-    left: 0;
     top: 0;
-    padding: $ray-spacing-2xl 0;
+    align-self: flex-start;
+    margin-left: calc(
+      -1 * #{map-get($ray-layout-grid-default-margin, desktop)}
+    );
+    padding-left: map-get($ray-layout-grid-default-margin, desktop);
+  }
+
+  @media (min-width: map-get($ray-layout-grid-max-width, desktop)) {
+    margin-left: calc(
+      -1 * ((100vw - #{map-get($ray-layout-grid-max-width, desktop)}) / 2 + #{map-get(
+              $ray-layout-grid-default-margin,
+              desktop
+            )})
+    );
+    padding-left: calc(
+      ((100vw - #{map-get($ray-layout-grid-max-width, desktop)})) / 2 + #{map-get(
+          $ray-layout-grid-default-margin,
+          desktop
+        )}
+    );
   }
 }
 
@@ -63,10 +86,14 @@
 .side-nav__item {
   a {
     @include nav-h-padding;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     display: block;
     color: $ray-color-text-medium;
+    border-radius: $ray-border-radius 0 0 $ray-border-radius;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    margin-bottom: 1px;
 
     &:hover {
       background-color: $ray-color-gray-10;
@@ -97,10 +124,11 @@
 
 .side-nav--items {
   width: 100%;
+  overflow-y: auto;
 }
 
 .side-nav--header {
-  margin-bottom: $ray-spacing-lg;
+  margin-bottom: 1.25rem;
   @include nav-h-padding;
 }
 

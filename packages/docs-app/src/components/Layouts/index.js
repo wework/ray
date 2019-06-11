@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import SideNav from '../SideNav';
+import Search from '../Search';
 import favicon32 from '../../content/global/images/favicon-32.png';
-
 import '../../styles/index.scss';
 
 class Layout extends React.Component {
@@ -65,14 +65,28 @@ class Layout extends React.Component {
               <html lang="en" />
             </Helmet>
             <div className="page">
-              <SideNav
-                location={this.props.location}
-                clickToClose={this.clickToClose}
-                open={this.state.navOpen}
-                toggleNav={this.toggleNav}
-              />
+              <div className="ray-page-container">
+                <div className="ray-grid">
+                  <div className="ray-grid__cell--span-3">
+                    <SideNav
+                      location={this.props.location}
+                      clickToClose={this.clickToClose}
+                      open={this.state.navOpen}
+                      toggleNav={this.toggleNav}
+                    />
+                  </div>
 
-              <main className="main-content">{children}</main>
+                  <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-9-desktop">
+                    <div
+                      className="ray-page-container"
+                      style={{ marginTop: '1.5rem' }}
+                    >
+                      <Search />
+                    </div>
+                    <main className="main-content">{children}</main>
+                  </div>
+                </div>
+              </div>
             </div>
           </>
         )}

@@ -64,7 +64,7 @@ button,
   }
 
   // All links on Markdown pages but not inside component examples
-  & > div > * > a,
+  & > div > * > a:not(.ray-button),
   .page-table td a,
   .page-ul a {
     color: $ray-color-blue-50;
@@ -109,8 +109,6 @@ button,
 
   @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
     margin: $ray-spacing-2xl 0;
-    // subtract with of side nav
-    width: calc(100% - 300px);
   }
 }
 
@@ -122,4 +120,8 @@ blockquote {
   p:last-child {
     margin: 0;
   }
+}
+
+#docsearch_wrapper {
+  border-color: $ray-color-gray-30;
 }
