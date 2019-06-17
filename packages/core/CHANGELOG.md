@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/wework/ray/compare/@wework/ray-core@1.8.0...@wework/ray-core@1.8.1) (2019-06-17)
+
+
+### Bug Fixes
+
+* **breakpoints:** add fix for 1px gap edge-case ([#145](https://github.com/wework/ray/issues/145)) ([d07ecea](https://github.com/wework/ray/commit/d07ecea))
+
+
+
+
+
 # [1.8.0](https://github.com/wework/ray/compare/@wework/ray-core@1.7.4...@wework/ray-core@1.8.0) (2019-06-07)
 
 
