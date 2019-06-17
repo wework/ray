@@ -9,7 +9,7 @@
   @if map-has-key($ray-layout-grid-breakpoints, $minBreakpoint) {
     @if $maxBreakpoint {
       @if map-has-key($ray-layout-grid-breakpoints, $maxBreakpoint) {
-        @media (min-width: map-get($ray-layout-grid-breakpoints, $minBreakpoint)) and (max-width: map-get($ray-layout-grid-breakpoints, $maxBreakpoint) - 1) {
+        @media (min-width: map-get($ray-layout-grid-breakpoints, $minBreakpoint)) and (max-width: map-get($ray-layout-grid-breakpoints, $maxBreakpoint) - 0.5) {
           @content;
         }
       } @else {
