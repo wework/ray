@@ -13,7 +13,7 @@ class Homepage extends React.Component {
             alignItems: 'center'
           }}
         >
-          <div className="ray-grid__cell--span-full ray-grid__cell--push-1">
+          <div className="ray-grid__cell--span-full ray-grid__cell--push-1-desktop">
             <div className="ray-text--h1" style={{ marginBottom: '0.5rem' }}>
               Ray
               <br />
