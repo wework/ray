@@ -41,6 +41,35 @@ For example your body element structure may look something like:
 
 <grid-documentation></grid-documentation>
 
+#### Rules
+
+- `ray-grid__cell`s must always be a direct child of a `ray-grid`
+- Never mix classes, i.e. `ray-page-container` and `ray-grid` should never be applied to the same element
+- Never modify the following attributes on any of the grid elements: `display`, `padding`, `margin`, `width`
+
+```html
+<!-- good -->
+<div class="ray-grid">
+  <div class="ray-grid__cell">
+    some content
+  </div>
+</div>
+
+<!-- bad, mixing classes -->
+<div class="ray-grid ray-grid__cell">
+  some content
+</div>
+
+<!-- bad, cell is not a direct child of ray-grid -->
+<div class="ray-grid">
+  <div class="my-wrapper">
+    <div class="ray-grid__cell">
+      some content
+    </div>
+  </div>
+</div>
+```
+
 #### Structure
 
 ```html
