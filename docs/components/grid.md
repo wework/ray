@@ -44,7 +44,7 @@ For example your body element structure may look something like:
 #### Rules
 
 - `ray-grid__cell`s must always be a direct child of a `ray-grid`
-- Never mix clases, i.e. `ray-page-container` and `ray-grid` should never be applied to the same element
+- Never mix classes, i.e. `ray-page-container` and `ray-grid` should never be applied to the same element
 - Never modify the following attributes on any of the grid elements: `display`, `padding`, `margin`, `width`
 
 ```html
