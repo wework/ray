@@ -34,7 +34,7 @@ export default class SideNav extends React.Component {
           )}
           {item.children && (
             <>
-              <div className="ray-caption side-nav__item--heading">
+              <div className="side-nav__item--heading ray-text--h5">
                 {item.title}
               </div>
               <ul>{this.renderNavItems(path, item.children, level + 1)}</ul>

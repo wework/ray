@@ -68,7 +68,6 @@ button,
   .page-table td a,
   .page-ul a {
     color: $ray-color-blue-50;
-    font-weight: 600;
   }
 
   // No padding between h2 and h3
@@ -124,4 +123,5 @@ blockquote {
 
 #docsearch_wrapper {
   border-color: $ray-color-gray-30;
+  max-width: 400px;
 }

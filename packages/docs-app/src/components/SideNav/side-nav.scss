@@ -13,7 +13,7 @@
   flex-direction: column;
   z-index: 7000;
   height: 100vh;
-  background-color: #f6f6f9;
+  background-color: $ray-color-gray-03;
   padding-top: 2rem;
   padding-bottom: 3rem;
   transition: left 0.15s ease; // stylelint-disable-line property-blacklist
@@ -89,21 +89,19 @@
     padding-top: 6px;
     padding-bottom: 6px;
     display: block;
-    color: $ray-color-text-medium;
+    color: $ray-color-blue-50;
     border-radius: $ray-border-radius 0 0 $ray-border-radius;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
     margin-bottom: 1px;
 
     &:hover {
-      background-color: $ray-color-gray-10;
-      color: $ray-color-text-dark;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     &.active {
-      color: $ray-color-text-dark;
-      font-weight: 600;
+      background-color: $ray-color-gray-10;
+      text-decoration: none;
     }
   }
 
