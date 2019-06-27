@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.5](https://github.com/wework/ray/compare/ray-website-gatsby@1.4.4...ray-website-gatsby@1.4.5) (2019-06-27)
+
+**Note:** Version bump only for package ray-website-gatsby
+
+
+
+
+
 ## [1.4.4](https://github.com/wework/ray/compare/ray-website-gatsby@1.4.2...ray-website-gatsby@1.4.4) (2019-06-20)
 
 **Note:** Version bump only for package ray-website-gatsby
