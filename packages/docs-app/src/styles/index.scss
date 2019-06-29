@@ -5,6 +5,7 @@ $font-family: 'Apercu', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
 $transition--base: 0.3s;
 $code-bg: #282a36;
 $code-border: transparent;
+$top-nav-height: 4rem;
 
 @import 'mixins';
 @import 'page';
@@ -13,6 +14,7 @@ $code-border: transparent;
 @import '../components/markdown/markdown.scss';
 @import '../components/markdown/image-grid.scss';
 @import '../components/PageHeader/page-header.scss';
+@import '../components/TopNav/top-nav.scss';
 @import '../components/SideNav/side-nav.scss';
 @import '../components/ComponentCode/component-code.scss';
 @import '../components/CodeExample/code-example.scss';

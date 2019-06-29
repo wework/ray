@@ -1,0 +1,13 @@
+.top-nav {
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 9999;
+  width: 100%;
+}
+
+.top-nav__inner {
+  height: $top-nav-height;
+  display: flex;
+  align-items: center;
+}

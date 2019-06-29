@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   z-index: 7000;
-  height: 100vh;
+  height: calc(100vh - #{$top-nav-height});
   background-color: $ray-color-white;
   padding-top: 2rem;
   padding-bottom: 3rem;
@@ -40,7 +40,7 @@
   // sticky
   @include ray-breakpoint(desktop) {
     position: sticky;
-    top: 0;
+    top: $top-nav-height;
     align-self: flex-start;
     margin-left: calc(
       -1 * #{map-get($ray-layout-grid-default-margin, desktop)}
@@ -85,7 +85,6 @@
 
 .side-nav__item {
   a {
-    @include nav-h-padding;
     padding-top: 6px;
     padding-bottom: 6px;
     display: block;
@@ -111,10 +110,10 @@
 }
 
 .side-nav__item--heading {
-  @include nav-h-padding;
   padding-top: 4px;
   padding-bottom: 4px;
-  margin-top: $ray-spacing-xl;
+  margin-top: $ray-spacing-2xl;
+  margin-bottom: $ray-spacing-xs;
   color: black;
   display: flex;
   align-items: center;
@@ -136,7 +135,7 @@
   color: $ray-color-text-dark;
   text-decoration: none;
   line-height: 1.2;
-  margin: 0 0 0.25rem;
+  margin: 0 auto 0.25rem 0;
   white-space: nowrap;
 
   &:hover {
