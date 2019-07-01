@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.2](https://github.com/wework/ray/compare/@wework/ray-core@1.8.1...@wework/ray-core@1.8.2) (2019-07-01)
+
+
+### Bug Fixes
+
+* **form-item:** ligatures on hints dont get cut off ([#152](https://github.com/wework/ray/issues/152)) ([a3de45d](https://github.com/wework/ray/commit/a3de45d)), closes [#151](https://github.com/wework/ray/issues/151)
+
+
+
+
+
 ## [1.8.1](https://github.com/wework/ray/compare/@wework/ray-core@1.8.0...@wework/ray-core@1.8.1) (2019-06-17)
 
 
