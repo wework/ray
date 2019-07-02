@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import * as components from '../../../../core/src';
 import CodeExample from '../CodeExample/CodeExample';
-import bg from '../../content/global/images/bg.svg';
 
 const nameMap = {
   'text-field': 'TextField',
@@ -124,9 +123,6 @@ class ComponentExample extends Component {
           className={liveBackgroundClasses}
           ref={this._liveContainerRef}
           data-floating-menu-container
-          style={{
-            backgroundImage: `url(${bg})`
-          }}
         >
           <div className={classNames}>
             <div
