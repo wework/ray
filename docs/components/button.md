@@ -101,3 +101,4 @@ Use these modifiers with `.ray-button` class.
 | `.ray-button--danger`    | Selector for applying danger button styles    |
 | `.ray-button--tertiary`  | Selector for applying tertiary button styles  |
 | `.ray-button--compact`   | Selector for applying compact button styles   |
+| `.ray-button--dark`      | Selector for applying dark button styles      |
