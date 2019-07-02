@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.3](https://github.com/wework/ray/compare/@wework/ray-core@1.8.2...@wework/ray-core@1.8.3) (2019-07-02)
+
+
+### Bug Fixes
+
+* **colors:** make ray-color-gray-10 slightly darker ([#150](https://github.com/wework/ray/issues/150)) ([5345dd9](https://github.com/wework/ray/commit/5345dd9))
+
+
+
+
+
 ## [1.8.2](https://github.com/wework/ray/compare/@wework/ray-core@1.8.1...@wework/ray-core@1.8.2) (2019-07-01)
 
 
