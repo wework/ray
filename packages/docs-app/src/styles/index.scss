@@ -3,8 +3,8 @@
 
 $font-family: 'Apercu', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
 $transition--base: 0.3s;
-$code-bg: #fff;
-$code-border: $ray-color-gray-10;
+$code-bg: #282a36;
+$code-border: transparent;
 
 @import 'mixins';
 @import 'page';
