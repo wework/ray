@@ -58,7 +58,7 @@ class CodeExample extends Component {
     });
 
     const expandBtnClass = classnames(
-      'ray-button ray-button--tertiary ray-button--compact',
+      'ray-button ray-button--tertiary ray-button--compact ray-button--dark',
       {
         'code-example__expand': this.state.showBtn,
         'code-example__expand--hidden': !this.state.showBtn

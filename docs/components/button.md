@@ -15,6 +15,13 @@ To add an icon, use the `.ray-button__icon` class on an element, usually an svg.
     >
 </component>
 <component
+    name="Primary button dark"
+    component="button"
+    background="dark"
+    variation="button--primary--dark"
+    >
+</component>
+<component
     name="Primary button (RTL)"
     component="button"
     variation="rtl-button--primary"
@@ -27,6 +34,13 @@ To add an icon, use the `.ray-button__icon` class on an element, usually an svg.
     >
 </component>
 <component
+    name="Secondary button dark"
+    component="button"
+    background="dark"
+    variation="button--secondary--dark"
+    >
+</component>
+<component
     name="Secondary button (RTL)"
     component="button"
     variation="rtl-button--secondary"
@@ -36,6 +50,13 @@ To add an icon, use the `.ray-button__icon` class on an element, usually an svg.
     name="Tertiary button"
     component="button"
     variation="button--tertiary"
+    >
+</component>
+<component
+    name="Tertiary button dark"
+    component="button"
+    background="dark"
+    variation="button--tertiary--dark"
     >
 </component>
 <component

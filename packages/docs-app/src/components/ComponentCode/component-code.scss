@@ -27,6 +27,10 @@
       background-color: $ray-color-white;
     }
 
+    &--dark {
+      background-color: hsl(0, 0%, 10%);
+    }
+
     &--rendered {
       display: flex;
       justify-content: center;

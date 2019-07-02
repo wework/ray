@@ -22,7 +22,8 @@ export default class ComponentCode extends React.Component {
       codepen,
       hasreactversion,
       variation,
-      experimental
+      experimental,
+      background
     } = this.props;
 
     let htmlFile;
@@ -87,6 +88,7 @@ export default class ComponentCode extends React.Component {
           hideViewFullRender={this.props.hideViewFullRender}
           hasReactVersion={hasreactversion}
           experimental={experimental}
+          background={background}
         />
       </div>
     );
