@@ -128,7 +128,7 @@ export default class SideNavItem extends React.Component {
             {item.title}
           </button>
         ) : (
-          <Link to={`/${itemSlug}`}>{item.title}</Link>
+          <Link to={item.href || `/${itemSlug}`}>{item.title}</Link>
         )}
         {hasSubNav && (
           <ul role="menu" aria-hidden="true" className="side-nav__sub-nav">

@@ -5,6 +5,16 @@
   "about": {
     "title": "About"
   },
+  "github": {
+    "title": "View on GitHub",
+    "external": true,
+    "href": "https://github.com/wework/ray"
+  },
+  "npm": {
+    "title": "View on npm",
+    "external": true,
+    "href": "https://www.npmjs.com/package/@wework/ray-core"
+  },
   "foundations": {
     "title": "Principles",
     "children": {

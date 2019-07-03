@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { version } from '@wework/ray-core/package.json';
 import cn from 'classnames';
 import navigation from '../../data/navigation/navigation.json';
 
@@ -20,18 +19,23 @@ export default class SideNav extends React.Component {
 
     return keys.map(key => {
       const item = nav[key];
-      const path = `${slug}${key}/`;
+      const path = item.href || `${slug}${key}/`;
 
       return (
         <li
           key={key}
           className={`side-nav__item side-nav__item--level-${level}`}
         >
-          {!item.children && (
-            <Link to={path} activeClassName="active">
-              {item.title}
-            </Link>
-          )}
+          {!item.children &&
+            (item.external ? (
+              <a href={path} target="_blank" rel="noopener noreferrer">
+                {item.title} →
+              </a>
+            ) : (
+              <Link to={path} activeClassName="active">
+                {item.title}
+              </Link>
+            ))}
           {item.children && (
             <>
               <div className="side-nav__item--heading ray-text--h5">

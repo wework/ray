@@ -41,7 +41,7 @@ class Layout extends React.Component {
                 />
               </div>
 
-              <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-9-desktop">
+              <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-8-desktop ray-grid__cell--push-1-desktop">
                 <main className="main-content">{children}</main>
               </div>
             </div>
