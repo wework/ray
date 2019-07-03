@@ -4,6 +4,10 @@
 
 body {
   background: $ray-color-white;
+
+  .with-fixed-nav & {
+    padding-top: $top-nav-height;
+  }
 }
 
 //---------------------------------------

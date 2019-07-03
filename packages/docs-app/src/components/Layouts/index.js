@@ -27,7 +27,7 @@ class Layout extends React.Component {
     const { children } = this.props;
 
     return (
-      <HtmlBase>
+      <HtmlBase htmlClasses="with-fixed-nav">
         <div className="page">
           <TopNav />
           <div className="ray-page-container">

@@ -8,11 +8,12 @@ import '../../styles/index.scss';
 
 class HtmlBase extends React.Component {
   static propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    htmlClasses: PropTypes.string
   };
 
   render() {
-    const { children } = this.props;
+    const { children, htmlClasses } = this.props;
 
     return (
       <StaticQuery
@@ -47,7 +48,7 @@ class HtmlBase extends React.Component {
                 }
               ]}
             >
-              <html lang="en" />
+              <html lang="en" className={htmlClasses} />
             </Helmet>
 
             {children}
