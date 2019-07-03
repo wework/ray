@@ -1,0 +1,24 @@
+@import './variables';
+@import './mixins/exports';
+
+@include exports('ray-elevation') {
+  .#{$ray-class-prefix}elevation-1 {
+    box-shadow: 0 0 1px hsla(0, 0, 8%, 0.1);
+  }
+
+  .#{$ray-class-prefix}elevation-2 {
+    box-shadow: 0 2px 2px hsla(0, 0, 8%, 0.125);
+  }
+
+  .#{$ray-class-prefix}elevation-3 {
+    box-shadow: 0 4px 4px hsla(0, 0, 8%, 0.15);
+  }
+
+  .#{$ray-class-prefix}elevation-4 {
+    box-shadow: 0 8px 8px hsla(0, 0, 8%, 0.175);
+  }
+
+  .#{$ray-class-prefix}elevation-5 {
+    box-shadow: 0 16px 16px hsla(0, 0, 8%, 0.2);
+  }
+}
