@@ -5,6 +5,12 @@
   "about": {
     "title": "About"
   },
+  "contributing": {
+    "title": "Contributing"
+  },
+  "team": {
+    "title": "Team"
+  },
   "github": {
     "title": "View on GitHub",
     "external": true,

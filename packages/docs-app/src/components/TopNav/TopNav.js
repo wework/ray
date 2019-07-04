@@ -10,8 +10,8 @@ export default function TopNav() {
         <div className="ray-grid">
           <div className="ray-grid__cell--span-full">
             <div className="top-nav__inner">
-              <Link to="/" className="side-nav__heading">
-                Ray <span className="side-nav__version"> v{version}</span>
+              <Link to="/" className="top-nav__heading">
+                Ray <span className="top-nav__version"> v{version}</span>
               </Link>
               <Search />
               <a

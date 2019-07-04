@@ -17,7 +17,7 @@
   padding-top: 2rem;
   padding-bottom: 3rem;
   transition: left 0.15s ease; // stylelint-disable-line property-blacklist
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 999;
 
   ul {
@@ -89,7 +89,6 @@
     padding-bottom: 6px;
     display: block;
     color: $ray-color-blue-50;
-    border-radius: $ray-border-radius 0 0 $ray-border-radius;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
     margin-bottom: 1px;
@@ -99,7 +98,6 @@
     }
 
     &.active {
-      background-color: $ray-color-gray-10;
       text-decoration: none;
     }
   }
@@ -127,33 +125,6 @@
 .side-nav--header {
   margin-bottom: 1.25rem;
   @include nav-h-padding;
-}
-
-.side-nav__heading {
-  @extend .ray-text--h3;
-  display: inline-block;
-  color: $ray-color-text-dark;
-  text-decoration: none;
-  line-height: 1.2;
-  margin: 0 auto 0.25rem 0;
-  white-space: nowrap;
-
-  &:hover {
-    color: $ray-color-blue-50;
-    text-decoration: none;
-  }
-
-  &:focus {
-    outline: none;
-    text-decoration: none;
-    color: $ray-color-blue-60;
-  }
-
-  .side-nav__version {
-    font-size: 1rem;
-    color: $ray-color-text-light;
-    font-weight: 400;
-  }
 }
 
 .side-nav__github {

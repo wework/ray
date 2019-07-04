@@ -1,7 +1,8 @@
 .top-nav {
   position: fixed;
   top: 0;
-  background: white;
+  color: $ray-color-white;
+  background: #282a36;
   z-index: 9999;
   width: 100%;
   border-bottom: 1px solid $ray-color-gray-10;
@@ -11,4 +12,31 @@
   height: $top-nav-height;
   display: flex;
   align-items: center;
+}
+
+.top-nav__heading {
+  @extend .ray-text--h3;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.2;
+  margin: 0 auto 0.25rem 0;
+  white-space: nowrap;
+  color: inherit !important;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    color: $ray-color-blue-60;
+  }
+
+  .top-nav__version {
+    font-size: 1rem;
+    color: $ray-color-text-light;
+    font-weight: 400;
+  }
 }

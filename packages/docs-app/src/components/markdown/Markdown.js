@@ -3,7 +3,7 @@ import React from 'react';
 /* eslint-disable react/prop-types */
 export class PageIntro extends React.Component {
   render() {
-    return <span className="page-intro">{this.props.children}</span>;
+    return <p className="page-intro">{this.props.children}</p>;
   }
 }
 
