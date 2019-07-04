@@ -138,4 +138,40 @@ storiesOf('Button', module)
       </button>
     </>
   ))
+  .add('dark', () => (
+    <div
+      style={{
+        backgroundColor: 'hsla(0, 0%, 20%, 1)',
+        padding: '1rem'
+      }}
+    >
+      <button className="ray-button ray-button--primary ray-button--dark">
+        Click me
+      </button>
+      <button
+        className="ray-button ray-button--primary ray-button--dark"
+        disabled
+      >
+        Disabled
+      </button>
+      <button className="ray-button ray-button--secondary ray-button--dark">
+        Click me
+      </button>
+      <button
+        className="ray-button ray-button--secondary ray-button--dark"
+        disabled
+      >
+        Disabled
+      </button>
+      <button className="ray-button ray-button--tertiary ray-button--dark">
+        Click me
+      </button>
+      <button
+        className="ray-button ray-button--tertiary ray-button--dark"
+        disabled
+      >
+        Disabled
+      </button>
+    </div>
+  ))
   .add('as link', () => <button className="ray-link">button as link</button>);
