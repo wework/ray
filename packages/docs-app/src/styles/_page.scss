@@ -86,13 +86,16 @@ button,
     font-family: $ray-font-stack-mono;
     position: relative;
     display: inline;
-    padding: rem(1px) $ray-spacing-xs;
+    padding: rem(1px) rem(2px);
     background: transparent;
     font-size: inherit;
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 2px;
     background-color: $ray-color-gray-10;
     font-size: 85%;
+
+    background-color: hsl(240, 40%, 95%);
+    color: hsl(240, 100%, 20%);
   }
 
   // HR dividers
