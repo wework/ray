@@ -3,7 +3,7 @@ label: Component
 title: Image
 ---
 
-<page-intro>The `image` and `bg` components provide an easy way to add fixed aspect-ratio graphics to your site. Images can have an optional \``.ray-caption`\` element to add additional context to specific pieces of media they accompany across the system.</page-intro>
+<page-intro>The `image` and `bg` components provide an easy way to add fixed aspect-ratio graphics to your site. Images can have an optional `.ray-caption` element to add additional context to specific pieces of media they accompany across the system.</page-intro>
 
 # Image elements
 
