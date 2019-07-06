@@ -15,7 +15,7 @@ Our current design system in use, Rivendell, has become outdated and unmaintaina
 
 ## Who will it serve?
 
-Ray is currently being defined by the design and engineering teams in POG. It will help serve WeWork.com site and help build cohesion with the web Member Network. Implemented in both Vanilla.JS/Css/HTML and React for wide developer adoption.
+Ray is currently being defined by the design and engineering teams in POG. It will help serve WeWork.com site and help build cohesion with the web Member Network. Implemented in both Vanilla.JS/CSS/HTML and React for wide developer adoption.
 
 ## What are the principles behind it?
 

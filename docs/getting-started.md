@@ -103,11 +103,11 @@ Ray can also be installed via CDN for rapid prototyping.
 
 ### Fonts
 
-You will also need to install the fonts, which can be done via WeWork's CDN. See instructions in the [fonts documentation](/principles/fonts).
+You will also need to install the fonts, which can be done via WeWork's CDN. See instructions in the [fonts documentation](/foundations/fonts/).
 
 ## Contributing
 
 Feeling ambitious? Good, because we’d love your input and contributions to the design system.
 
-- Create an issue or submit a pull request at[@wework/ray](https://github.com/wework/ray/issues).
+- Create an issue or submit a pull request at [@wework/ray](https://github.com/wework/ray/issues).
 - Join us in the [#ray-design-system](https://wework.slack.com/messages/CFLL3QWQ5) slack channel. (For WeWork employees)
