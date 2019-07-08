@@ -1,4 +1,7 @@
-# Development
+---
+label: Meta
+title: Development
+---
 
 Welcome to Ray, and thank you for contributing. Let's get you setup!
 
