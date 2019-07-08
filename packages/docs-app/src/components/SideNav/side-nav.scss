@@ -19,6 +19,7 @@
   transition: left 0.15s ease; // stylelint-disable-line property-blacklist
   overflow-y: auto;
   z-index: 999;
+  border-right: 1px solid $ray-color-gray-10;
 
   ul {
     list-style-type: none;
