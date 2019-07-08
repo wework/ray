@@ -10,7 +10,7 @@ See the [getting started docs](https://ray.wework.com/getting-started/).
 
 ## Development
 
-See [DEVELOP.md](./DEVELOP.md) for documentation.
+See https://ray.wework.com/contributing for documentation.
 
 ## [Release](https://github.com/wework/ray/releases) (WeWork staff)
 
