@@ -51,27 +51,19 @@ export default class SideNav extends React.Component {
 
   render() {
     return (
-      <>
-        <button
-          className="side-nav--mobile-toggle ray-button ray-button--tertiary"
-          onClick={this.props.toggleNav}
-        >
-          {this.props.open ? '╳' : '☰'}
-        </button>
-        <nav
-          className={cn('side-nav', {
-            'side-nav--open': this.props.open
-          })}
-        >
-          <div className="side-nav__inner">
-            <div className="side-nav--items">
-              <ul role="menu" className="side-nav__nav-items">
-                {this.renderNavItems('/', navigation)}
-              </ul>
-            </div>
+      <nav
+        className={cn('side-nav', {
+          'side-nav--open': this.props.open
+        })}
+      >
+        <div className="side-nav__inner">
+          <div className="side-nav--items">
+            <ul role="menu" className="side-nav__nav-items">
+              {this.renderNavItems('/', navigation)}
+            </ul>
           </div>
-        </nav>
-      </>
+        </div>
+      </nav>
     );
   }
 }

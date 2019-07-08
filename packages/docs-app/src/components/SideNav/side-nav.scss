@@ -31,7 +31,7 @@
     position: fixed;
     left: -9999px;
     width: 300px;
-    padding-top: 4rem;
+    padding: 1.5rem 1rem;
 
     &--open {
       left: 0;
@@ -62,25 +62,6 @@
           desktop
         )}
     );
-  }
-}
-
-.side-nav--mobile-toggle {
-  position: fixed;
-  top: 1rem;
-  left: calc(#{map-get($ray-layout-grid-default-gutter, phone)} - 0.5rem);
-  cursor: pointer;
-  z-index: 7001;
-  padding: 0.5rem;
-  background-color: $ray-color-white;
-  border: 1px solid $ray-color-gray-10;
-
-  &:hover {
-    border-color: $ray-color-blue-50;
-  }
-
-  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
-    display: none;
   }
 }
 

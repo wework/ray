@@ -29,7 +29,7 @@ class Layout extends React.Component {
     return (
       <HtmlBase htmlClasses="with-fixed-nav">
         <div className="page">
-          <TopNav />
+          <TopNav toggleNav={this.toggleNav} />
           <div className="ray-page-container">
             <div className="ray-grid">
               <div className="ray-grid__cell--span-3">
