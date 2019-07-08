@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://github.com/wework/ray/compare/@wework/ray-core@1.8.3...@wework/ray-core@1.8.4) (2019-07-08)
+
+
+### Bug Fixes
+
+* **card:** fixes border-radius on card rows ([#158](https://github.com/wework/ray/issues/158)) ([e573914](https://github.com/wework/ray/commit/e573914))
+
+
+
+
+
 ## [1.8.3](https://github.com/wework/ray/compare/@wework/ray-core@1.8.2...@wework/ray-core@1.8.3) (2019-07-02)
 
 
