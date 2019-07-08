@@ -104,11 +104,21 @@
 
         .#{$ray-class-prefix}card__image {
           &:first-child {
-            border-top-right-radius: 0;
+            border-radius: $ray-border-radius 0 0 $ray-border-radius;
           }
 
           &:last-child {
-            border-bottom-left-radius: 0;
+            border-radius: 0 $ray-border-radius $ray-border-radius 0;
+          }
+
+          [dir='rtl'] & {
+            &:first-child {
+              border-radius: 0 $ray-border-radius $ray-border-radius 0;
+            }
+
+            &:last-child {
+              border-radius: $ray-border-radius 0 0 $ray-border-radius;
+            }
           }
         }
       }
