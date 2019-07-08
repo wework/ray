@@ -36,7 +36,7 @@ We encourage the use of the Sass source files as they give access to Ray variabl
 import { Select } from '@wework/ray-core';
 ```
 
-### CDN
+## CDN
 
 Ray can also be installed via CDN for rapid prototyping.
 
@@ -73,7 +73,7 @@ Ray can also be installed via CDN for rapid prototyping.
 
 `@wework/ray-core` is structured as follows:
 
-```
+```txt
 .
 ├── es/
 │   ├── index.js
@@ -101,7 +101,7 @@ Ray can also be installed via CDN for rapid prototyping.
 └── README.md
 ```
 
-### Fonts
+## Fonts
 
 You will also need to install the fonts, which can be done via WeWork's CDN. See instructions in the [fonts documentation](/foundations/fonts/).
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SideNav from '../SideNav';
-import Search from '../Search';
+import TopNav from '../TopNav';
 import HtmlBase from './html';
 
 class Layout extends React.Component {
@@ -27,8 +27,9 @@ class Layout extends React.Component {
     const { children } = this.props;
 
     return (
-      <HtmlBase>
+      <HtmlBase htmlClasses="with-fixed-nav">
         <div className="page">
+          <TopNav toggleNav={this.toggleNav} />
           <div className="ray-page-container">
             <div className="ray-grid">
               <div className="ray-grid__cell--span-3">
@@ -40,13 +41,7 @@ class Layout extends React.Component {
                 />
               </div>
 
-              <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-9-desktop">
-                <div
-                  className="ray-page-container"
-                  style={{ marginTop: '1.5rem' }}
-                >
-                  <Search />
-                </div>
+              <div className="ray-grid__cell ray-grid__cell--span-8-tablet ray-grid__cell--span-8-desktop ray-grid__cell--push-1-desktop">
                 <main className="main-content">{children}</main>
               </div>
             </div>

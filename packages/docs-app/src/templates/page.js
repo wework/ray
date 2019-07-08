@@ -113,7 +113,7 @@ const renderAst = new RehypeReact({
 export default ({ data }) => {
   const post = data.markdownRemark;
 
-  const classNames = classnames('page-content ray-page-container', {
+  const classNames = classnames('page-content', {
     'page-content--component': post.frontmatter.label === 'Component'
   });
 

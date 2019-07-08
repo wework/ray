@@ -12,13 +12,14 @@
   display: flex;
   flex-direction: column;
   z-index: 7000;
-  height: 100vh;
+  height: calc(100vh - #{$top-nav-height});
   background-color: $ray-color-white;
   padding-top: 2rem;
   padding-bottom: 3rem;
   transition: left 0.15s ease; // stylelint-disable-line property-blacklist
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 999;
+  border-right: 1px solid $ray-color-gray-10;
 
   ul {
     list-style-type: none;
@@ -30,7 +31,7 @@
     position: fixed;
     left: -9999px;
     width: 300px;
-    padding-top: 4rem;
+    padding: 1.5rem 1rem;
 
     &--open {
       left: 0;
@@ -40,7 +41,7 @@
   // sticky
   @include ray-breakpoint(desktop) {
     position: sticky;
-    top: 0;
+    top: $top-nav-height;
     align-self: flex-start;
     margin-left: calc(
       -1 * #{map-get($ray-layout-grid-default-margin, desktop)}
@@ -64,33 +65,12 @@
   }
 }
 
-.side-nav--mobile-toggle {
-  position: fixed;
-  top: 1rem;
-  left: calc(#{map-get($ray-layout-grid-default-gutter, phone)} - 0.5rem);
-  cursor: pointer;
-  z-index: 7001;
-  padding: 0.5rem;
-  background-color: $ray-color-white;
-  border: 1px solid $ray-color-gray-10;
-
-  &:hover {
-    border-color: $ray-color-blue-50;
-  }
-
-  @media (min-width: map-get($ray-layout-grid-breakpoints, desktop)) {
-    display: none;
-  }
-}
-
 .side-nav__item {
   a {
-    @include nav-h-padding;
     padding-top: 6px;
     padding-bottom: 6px;
     display: block;
     color: $ray-color-blue-50;
-    border-radius: $ray-border-radius 0 0 $ray-border-radius;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
     margin-bottom: 1px;
@@ -100,7 +80,6 @@
     }
 
     &.active {
-      background-color: $ray-color-gray-10;
       text-decoration: none;
     }
   }
@@ -111,10 +90,10 @@
 }
 
 .side-nav__item--heading {
-  @include nav-h-padding;
   padding-top: 4px;
   padding-bottom: 4px;
-  margin-top: $ray-spacing-xl;
+  margin-top: $ray-spacing-2xl;
+  margin-bottom: $ray-spacing-xs;
   color: black;
   display: flex;
   align-items: center;
@@ -128,33 +107,6 @@
 .side-nav--header {
   margin-bottom: 1.25rem;
   @include nav-h-padding;
-}
-
-.side-nav__heading {
-  @extend .ray-text--h3;
-  display: inline-block;
-  color: $ray-color-text-dark;
-  text-decoration: none;
-  line-height: 1.2;
-  margin: 0 0 0.25rem;
-  white-space: nowrap;
-
-  &:hover {
-    color: $ray-color-blue-50;
-    text-decoration: none;
-  }
-
-  &:focus {
-    outline: none;
-    text-decoration: none;
-    color: $ray-color-blue-60;
-  }
-
-  .side-nav__version {
-    font-size: 1rem;
-    color: $ray-color-text-light;
-    font-weight: 400;
-  }
 }
 
 .side-nav__github {
