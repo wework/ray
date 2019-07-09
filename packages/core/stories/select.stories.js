@@ -62,6 +62,23 @@ storiesOf('Select', module)
       </div>
     );
   })
+  .add('select, with an overflowing value', () => {
+    setTimeout(init);
+
+    return (
+      <div className="ray-select" style={{ width: '100px' }}>
+        <select className="ray-select__input">
+          <option value="" disabled selected data-ray-placeholder />
+          <option value="Pikatchu">Pikatchu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Charmander">Charmander</option>
+        </select>
+        <label className="ray-select__label">
+          {"What's your favorite Pokémon?"}
+        </label>
+      </div>
+    );
+  })
   .add('select, required', () => {
     setTimeout(init);
 

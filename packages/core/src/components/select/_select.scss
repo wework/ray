@@ -72,7 +72,7 @@
       font-size: $ray-field-label-size;
       display: block;
       background-color: transparent;
-      padding: 0 $ray-field-h-spacing;
+      padding: 0 1.75rem 0 $ray-field-h-spacing;
       outline: 0;
       border: 0;
       cursor: pointer;
@@ -80,6 +80,10 @@
 
       &::-ms-expand {
         display: none;
+      }
+
+      [dir='rtl'] & {
+        padding: 0 $ray-field-h-spacing 0 1.75rem;
       }
     }
 
