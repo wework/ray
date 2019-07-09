@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.5](https://github.com/wework/ray/compare/@wework/ray-core@1.8.4...@wework/ray-core@1.8.5) (2019-07-09)
+
+
+### Bug Fixes
+
+* **select:** add space around arrow so doesn't overlap ([#164](https://github.com/wework/ray/issues/164)) ([8bb6381](https://github.com/wework/ray/commit/8bb6381))
+
+
+
+
+
 ## [1.8.4](https://github.com/wework/ray/compare/@wework/ray-core@1.8.3...@wework/ray-core@1.8.4) (2019-07-08)
 
 
