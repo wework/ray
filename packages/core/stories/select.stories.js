@@ -12,7 +12,7 @@ storiesOf('Select', module)
     setTimeout(init);
 
     return (
-      <div className="ray-select">
+      <div className="ray-select" style={{ width: '100px' }}>
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
           <option value="Pikatchu">Pikatchu</option>
