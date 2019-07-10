@@ -25,5 +25,7 @@ module.exports = {
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
     })
-  ]
+  ],
+  // peer dependencies
+  external: ['react', 'react-dom']
 };
