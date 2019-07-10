@@ -4,10 +4,10 @@
       "conventionalCommits": true
     },
     "version": {
-      "message": "chore(release): publish",
+      "message": "chore(release): publish %s",
       "conventionalCommits": true,
       "gitHubRelease": true,
-      "allowBranch": "master"
+      "allowBranch": "*"
     }
   },
   "packages": ["packages/*"],

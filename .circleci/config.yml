@@ -38,6 +38,12 @@ commands:
             - packages/core/node_modules
             - packages/docs-app/node_modules
             - packages/rehype-react/node_modules
+  npm_authenticate:
+    description: 'Adding npm authentication'
+    steps:
+      - run:
+          name: 'Add NPM config with authToken to machine'
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 
 jobs:
   checkout-code:
@@ -81,7 +87,7 @@ jobs:
           name: Run visual regression tests
           command: yarn lerna run chromatic --scope="@wework/ray-core" --parallel
 
-  build:
+  build_and_release_review_app:
     executor:
       name: docker-config
     steps:
@@ -91,6 +97,10 @@ jobs:
       - run:
           name: 'Build packages'
           command: yarn build
+      - npm_authenticate
+      - run:
+          name: 'Publish canary release to NPM registry'
+          command: yarn lerna:publish --canary --preid="review"
 
   build_and_release:
     executor:
@@ -108,12 +118,10 @@ jobs:
       - run:
           name: 'Configure github user details for publish commit'
           command: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
+      - npm_authenticate
       - run:
-          name: 'Add NPM config with authToken to machine'
-          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run:
-          name: 'Publish to NPM registry and commit release to GitHub'
-          command: yarn lerna:publish
+          name: 'Publish canary release to NPM registry'
+          command: yarn lerna:publish --canary
 
 workflows:
   version: 2
