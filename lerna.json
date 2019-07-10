@@ -7,7 +7,7 @@
       "message": "chore(release): publish",
       "conventionalCommits": true,
       "gitHubRelease": true,
-      "allowBranch": "master"
+      "allowBranch": "*"
     }
   },
   "packages": ["packages/*"],
