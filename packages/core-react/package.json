@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "description": "A React wrapper component library for the Ray design system",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "build": "npx gulp scripts:es scripts:umd scripts:compiled",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "storybook": "start-storybook -p 6007",
     "prebuild": "rm -rf dist/",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/core-react/storybook -s ./stories/static"
@@ -42,7 +41,7 @@
     "rollup-plugin-replace": "^2.2.0"
   },
   "publishConfig": {
-    "access": "private"
+    "access": "public"
   },
   "keywords": [
     "wework",
@@ -55,7 +54,6 @@
     "LICENSE",
     "README.md"
   ],
-  "preid": "next",
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
