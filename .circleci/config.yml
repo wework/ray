@@ -134,7 +134,7 @@ workflows:
       - test-visual-regression:
           requires:
             - checkout-code
-      - build:
+      - build_and_release_review_app:
           requires:
             - checkout-code
           filters:
