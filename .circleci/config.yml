@@ -100,7 +100,7 @@ jobs:
       - npm_authenticate
       - run:
           name: 'Publish canary release to NPM registry'
-          command: yarn lerna:publish --canary --preid="review"
+          command: yarn lerna:publish --canary --preid="review" --dist-tag="review"
 
   build_and_release:
     executor:
