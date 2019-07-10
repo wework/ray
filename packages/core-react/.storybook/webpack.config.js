@@ -1,9 +1,8 @@
 const path = require('path');
 
-module.exports = ({ config, mode }) => {
-  // config.target = 'node';
-  // config.node = { fs: 'empty' };
+const SRC_PATH = path.resolve(__dirname, '../src');
 
+module.exports = function({ config }) {
   // Add SCSS support, since Ray Design System needs it
   config.module.rules.push({
     test: /\.scss$/,
@@ -12,8 +11,8 @@ module.exports = ({ config, mode }) => {
 
   // Make root imports from `src/` work in storybooks
   config.resolve.alias = {
-    ...(config.resolve.alias || {}),
-    src: path.resolve(__dirname, '../src')
+    ...config.resolve.alias,
+    src: SRC_PATH
   };
 
   return config;
