@@ -2,7 +2,8 @@
   "name": "@wework/ray-core-react",
   "version": "0.0.0",
   "description": "A React wrapper component library for the Ray design system",
-  "main": "index.js",
+  "main": "dist/umd/index.js",
+  "module": "dist/es/index.js",
   "scripts": {
     "build": "npx gulp scripts:es scripts:umd scripts:compiled",
     "test": "echo \"Error: no test specified\"",
