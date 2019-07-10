@@ -5,8 +5,8 @@
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
   "scripts": {
-    "build": "npx gulp scripts:es scripts:umd scripts:compiled",
-    "test": "echo \"Error: no test specified\"",
+    "build": "gulp scripts:es scripts:umd scripts:compiled",
+    "test": "jest",
     "storybook": "start-storybook -p 6007",
     "prebuild": "rm -rf dist/",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/core-react/storybook -s ./stories/static"
