@@ -11,10 +11,15 @@
     "prebuild": "rm -rf dist/",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/core-react/storybook -s ./stories/static"
   },
-  "author": "Adam Raider <adam.raider@wework.com>",
+  "author": "WeWork Companies Inc.",
   "license": "Apache-2.0",
   "dependencies": {
     "@wework/ray-core": "^1.8.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wework/ray.git",
+    "directory": "packages/core-react"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
