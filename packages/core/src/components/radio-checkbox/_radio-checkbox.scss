@@ -25,6 +25,7 @@
         content: '';
         background-color: $ray-color-white;
         border: $ray-radio-checkbox-border-width solid $ray-color-black;
+        min-width: $ray-radio-checkbox-size;
         width: $ray-radio-checkbox-size;
         height: $ray-radio-checkbox-size;
         position: relative;
