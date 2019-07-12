@@ -87,7 +87,7 @@ jobs:
           name: Run visual regression tests
           command: yarn lerna run chromatic --scope="@wework/ray-core" --parallel
 
-  build_and_release_review_app:
+  build:
     executor:
       name: docker-config
     steps:
@@ -97,10 +97,6 @@ jobs:
       - run:
           name: 'Build packages'
           command: yarn build
-      - npm_authenticate
-      - run:
-          name: 'Publish canary release to NPM registry'
-          command: yarn lerna:publish --canary --preid="review" --dist-tag="review"
 
   build_and_release:
     executor:
@@ -134,7 +130,7 @@ workflows:
       - test-visual-regression:
           requires:
             - checkout-code
-      - build_and_release_review_app:
+      - build:
           requires:
             - checkout-code
           filters:
