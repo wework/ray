@@ -302,6 +302,10 @@
     ol {
       @extend .#{$ray-class-prefix}list;
     }
+
+    i {
+      font-style: italic;
+    }    
   }
 
   @if global-variable-exists(ray-assign-typography-styles-natively) ==
