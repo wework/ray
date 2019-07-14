@@ -17,7 +17,8 @@ class ComponentExample extends Component {
     variation: PropTypes.string,
     hideViewFullRender: PropTypes.bool,
     codepenSlug: PropTypes.string,
-    experimental: PropTypes.string
+    experimental: PropTypes.string,
+    background: PropTypes.string
   };
 
   static _initHandles = new WeakMap();
@@ -112,7 +113,8 @@ class ComponentExample extends Component {
 
     const liveBackgroundClasses = classnames(
       'component-example__live',
-      `component-example__live--${component}`
+      `component-example__live--${component}`,
+      { 'component-example__live--dark': this.props.background === 'dark' }
     );
 
     const componentLink = `https://codepen.io/team/wework/full/${codepenSlug}/`;
