@@ -22,6 +22,7 @@
     "@babel/plugin-proposal-class-properties": "7.4.4",
     "@babel/preset-env": "7.3.4",
     "babel-eslint": "10.0.1",
+    "babel-jest": "^24.8.0",
     "commitizen": "^3.0.7",
     "coveralls": "3.0.3",
     "cz-conventional-changelog": "2.1.0",
@@ -47,10 +48,11 @@
     "test": "jest",
     "build": "npx lerna run build",
     "clean": "rm -rf .out",
+    "lerna:test": "npx lerna run test --parallel",
     "lerna:clean": "npx lerna run clean",
     "lerna:publish": "npx lerna publish --yes",
     "lerna:version": "npx lerna version --yes",
-    "netlify:build": "yarn clean && yarn build && npx lerna run netlify:build --parallel"
+    "netlify:build": "yarn clean && yarn build && npx lerna run netlify:build"
   },
   "dependencies": {},
   "husky": {
