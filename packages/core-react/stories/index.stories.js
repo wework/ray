@@ -21,62 +21,62 @@ storiesOf('Button', module)
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <Button isCompact>Hiya</Button>
-        <Button isCompact disabled>
+        <Button compact>Hiya</Button>
+        <Button compact disabled>
           Hiya
         </Button>
-        <Button isCompact type="secondary">
+        <Button compact type="secondary">
           Hiya
         </Button>
-        <Button isCompact type="secondary" disabled>
+        <Button compact type="secondary" disabled>
           Hiya
         </Button>
-        <Button isCompact type="tertiary">
+        <Button compact type="tertiary">
           Hiya
         </Button>
-        <Button isCompact type="tertiary" disabled>
+        <Button compact type="tertiary" disabled>
           Hiya
         </Button>
       </div>
     </>
   ))
-  .add('danger noodle', () => (
+  .add('danger', () => (
     <>
       <div style={{ marginBottom: '1rem' }}>
-        <Button isDanger>Hiya</Button>
-        <Button isDanger disabled>
+        <Button danger>Hiya</Button>
+        <Button danger disabled>
           Hiya
         </Button>
-        <Button isDanger type="secondary">
+        <Button danger type="secondary">
           Hiya
         </Button>
-        <Button isDanger type="secondary" disabled>
+        <Button danger type="secondary" disabled>
           Hiya
         </Button>
-        <Button isDanger type="tertiary">
+        <Button danger type="tertiary">
           Hiya
         </Button>
-        <Button isDanger type="tertiary" disabled>
+        <Button danger type="tertiary" disabled>
           Hiya
         </Button>
       </div>
       <div style={{ marginBottom: '1rem' }}>
-        <Button isDanger isCompact>
+        <Button danger compact>
           Hiya
         </Button>
-        <Button isDanger isCompact disabled>
+        <Button danger compact disabled>
           Hiya
         </Button>
-        <Button isDanger isCompact type="secondary">
+        <Button danger compact type="secondary">
           Hiya
         </Button>
-        <Button isDanger isCompact type="secondary" disabled>
+        <Button danger compact type="secondary" disabled>
           Hiya
         </Button>
-        <Button isDanger isCompact type="tertiary">
+        <Button danger compact type="tertiary">
           Hiya
         </Button>
-        <Button isDanger isCompact type="tertiary" disabled>
+        <Button danger compact type="tertiary" disabled>
           Hiya
         </Button>
       </div>
