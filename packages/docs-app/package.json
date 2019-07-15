@@ -67,7 +67,7 @@
     "fs-extra": "^7.0.1",
     "gatsby-remark-static-images": "^1.0.0",
     "html-loader": "^0.5.5",
-    "lodash": "4.17.11",
+    "lodash": "^4.17.14",
     "node-sass": "^4.10.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

@@ -43,7 +43,7 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-uglify": "3.0.2",
     "gulp-util": "3.0.8",
-    "lodash": "4.17.11",
+    "lodash": "^4.17.14",
     "mini-css-extract-plugin": "0.6.0",
     "nanohtml": "1.6.1",
     "node-sass": "4.11.0",
