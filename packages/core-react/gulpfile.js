@@ -9,7 +9,7 @@ const rollupConfig = require('./config/rollup.config');
 const babelConfig = require('./babel.config');
 
 const DIST_PATH = 'dist';
-const SRC_FILES = ['./src/**/*.js'];
+const SRC_FILES = ['./src/**/!(*.test).js '];
 
 gulp.task('scripts:umd', () => {
   return gulp
