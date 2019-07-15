@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 export default function Button({
-  Tag = 'button',
+  Tag,
   children,
   type,
   isCompact,
@@ -35,6 +35,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  Tag: 'button',
   type: 'primary',
   isCompact: false,
   isDanger: false

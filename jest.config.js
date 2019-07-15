@@ -1,13 +1,11 @@
 module.exports = {
   testPathIgnorePatterns: ['node_modules/*', '.cache/*'],
   projects: [
+    '<rootDir>/packages/core/jest.config.js',
+    '<rootDir>/packages/core-react/jest.config.js',
     {
-      displayName: '@wework/ray-core',
-      testMatch: ['<rootDir>/packages/core/**/*.test.js']
-    },
-    {
-      displayName: '@wework/ray-core-react',
-      testMatch: ['<rootDir>/packages/core-react/**/*.test.js']
+      displayName: '@wework/rehype-react',
+      testMatch: ['<rootDir>/packages/rehype-react/**/*.test.js']
     }
   ]
 };

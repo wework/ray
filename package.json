@@ -45,7 +45,6 @@
     "dev:docs": "lerna run dev --scope=\"ray-website-gatsby\" --parallel",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "bootstrap": "npx lerna bootstrap",
-    "#": "TODO: Each package should be reponsible for their own test suite",
     "test": "jest",
     "build": "npx lerna run build",
     "clean": "rm -rf .out",
