@@ -14,7 +14,8 @@
   "author": "WeWork Companies Inc.",
   "license": "Apache-2.0",
   "dependencies": {
-    "@wework/ray-core": "^1.8.5"
+    "@wework/ray-core": "^1.8.5",
+    "clsx": "^1.0.4"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,6 @@
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "babel-loader": "^8.0.6",
-    "clsx": "^1.0.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "gulp": "^4.0.2",
