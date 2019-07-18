@@ -10,7 +10,11 @@ module.exports = {
     name: 'Ray.CoreReact',
     file: 'dist/index.bundle.js',
     format: 'umd',
-    sourcemap: true
+    sourcemap: true,
+    globals: {
+      react: 'React',
+      clsx: 'clsx'
+    }
   },
   plugins: [
     resolve(),
