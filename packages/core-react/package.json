@@ -5,6 +5,7 @@
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
   "scripts": {
+    "dev": "yarn storybook",
     "build": "gulp scripts:es scripts:umd scripts:compiled",
     "test": "jest",
     "storybook": "start-storybook -p 6007",
