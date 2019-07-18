@@ -5,7 +5,12 @@ import TextField from '.';
 
 describe('TextField', () => {
   test('it renders a text field', () => {
-    const wrapper = mount(<TextField />);
-    expect(wrapper.find('.ray-text-field').length).toBe(1);
+    const wrapper = mount(<TextField id="email" />);
+    expect(wrapper.find('input[type="text"]').length).toBe(1);
+  });
+
+  test('it renders a text field with a label', () => {
+    const wrapper = mount(<TextField id="email" label="email address" />);
+    expect(wrapper.find('label').length).toBe(1);
   });
 });
