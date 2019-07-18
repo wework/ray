@@ -14,7 +14,15 @@ const SRC_FILES = ['./src/**/!(*.test).js '];
 gulp.task('scripts:umd', () => {
   return gulp
     .src(SRC_FILES)
-    .pipe(babel(babelConfig))
+    .pipe(
+      babel({
+        ...babelConfig,
+        plugins: [
+          ...babelConfig.plugins,
+          ['@babel/plugin-transform-modules-umd']
+        ]
+      })
+    )
     .pipe(gulp.dest(`${DIST_PATH}/umd`));
 });
 
