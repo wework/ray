@@ -40,3 +40,7 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
     color: $ray-color-white;
   }
 }
+
+.#{$ray-class-prefix}chip--micro {
+  padding: 0 0.75rem;
+}

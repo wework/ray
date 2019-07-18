@@ -17,3 +17,12 @@ storiesOf('Chip', module).add('default', () => {
     </>
   );
 });
+storiesOf('Chip', module).add('micro', () => {
+  setTimeout(initChip);
+  return (
+    <>
+      <div className="ray-chip ray-chip--micro">Offices</div>
+      <div className="ray-chip ray-chip--micro ray-chip--active">Offices</div>
+    </>
+  );
+});
