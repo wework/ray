@@ -2,7 +2,9 @@ class Chip {
   static instances = new WeakMap();
 
   static get cssClasses() {
-    return {};
+    return {
+      ACTIVE: 'ray-chip--active'
+    };
   }
 
   static get strings() {
@@ -28,11 +30,14 @@ class Chip {
 
   constructor(root, options) {
     this._root = root;
+    this._options = options;
 
     this.constructor.instances.set(this._root, this);
 
     this.state = {
-      active: options.active
+      active:
+        options.active ||
+        this._root.classList.contains(this.constructor.cssClasses.ACTIVE)
     };
 
     this._bindEventListeners();
@@ -45,10 +50,15 @@ class Chip {
 
   assignClasses() {
     if (this.state.active) {
-      this._root.classList.add('ray-chip--active');
+      this._root.classList.add(this.constructor.cssClasses.ACTIVE);
     } else {
-      this._root.classList.remove('ray-chip--active');
+      this._root.classList.remove(this.constructor.cssClasses.ACTIVE);
     }
+  }
+
+  setState(newState) {
+    this.state = Object.assign({}, this.state, newState);
+    this.assignClasses();
   }
 
   onMousedown = () => {
