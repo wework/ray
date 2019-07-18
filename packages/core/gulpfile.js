@@ -9,6 +9,10 @@ const concat = require('gulp-concat');
 const del = require('del');
 const rollup = require('rollup');
 const rollupConfig = require('./config/rollup.config');
+const babelConfig = require('./babel.config');
+
+const SRC_FILES = ['./src/**/*.js'];
+const SASS_SRC_FILES = './src/**/*.scss';
 
 gulp.task('clean', () =>
   del([
@@ -22,6 +26,10 @@ gulp.task('clean', () =>
     'storybook-static'
   ])
 );
+
+gulp.task('sass:source', () => {
+  return gulp.src(SASS_SRC_FILES).pipe(gulp.dest('scss'));
+});
 
 gulp.task('sass:compiled', () => {
   function buildStyles(prod) {
@@ -65,58 +73,22 @@ gulp.task('sass:compiled', () => {
   return Promise.all([buildStyles(), buildStyles(true)]);
 });
 
-gulp.task('sass:source', () => {
-  const srcFiles = './src/**/*.scss';
-
-  return gulp.src(srcFiles).pipe(gulp.dest('scss'));
-});
-
-gulp.task('html:source', () => {
-  const srcFiles = './src/**/*.html';
-
-  return gulp.src(srcFiles).pipe(gulp.dest('html'));
-});
-
-/**
- * JavaScript Tasks
- */
-
 gulp.task('scripts:umd', () => {
-  const srcFiles = ['./src/**/*.js'];
   const babelOpts = {
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          modules: false
-        }
-      ]
-    ],
-    plugins: ['@babel/plugin-transform-modules-umd']
+    ...babelConfig,
+    plugins: [...babelConfig.plugins, '@babel/plugin-transform-modules-umd']
   };
 
   return gulp
-    .src(srcFiles)
+    .src(SRC_FILES)
     .pipe(babel(babelOpts))
     .pipe(gulp.dest('umd/'));
 });
 
 gulp.task('scripts:es', () => {
-  const srcFiles = ['./src/**/*.js'];
-  const babelOpts = {
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          modules: false
-        }
-      ]
-    ]
-  };
-
   return gulp
-    .src(srcFiles)
-    .pipe(babel(babelOpts))
+    .src(SRC_FILES)
+    .pipe(babel(babelConfig))
     .pipe(gulp.dest('es/'));
 });
 
@@ -126,17 +98,19 @@ gulp.task('scripts:rollup', () => {
   });
 });
 
+gulp.task('scripts:rollup:minify', () => {
+  const srcFile = './scripts/ray-core.js';
+
+  return gulp
+    .src(srcFile)
+    .pipe(sourcemaps.init())
+    .pipe(rename('ray-core.min.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('scripts'));
+});
+
 gulp.task(
   'scripts:compiled',
-  gulp.series('scripts:rollup', () => {
-    const srcFile = './scripts/ray-core.js';
-
-    return gulp
-      .src(srcFile)
-      .pipe(sourcemaps.init())
-      .pipe(rename('ray-core.min.js'))
-      .pipe(uglify())
-      .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('scripts'));
-  })
+  gulp.series('scripts:rollup', 'scripts:rollup:minify')
 );
