@@ -3,7 +3,8 @@
 @import '../../global/mixins/exports';
 
 $tabs-border-size: 1px;
-@include exports('ray-table') {
+
+@include exports('ray-tabs') {
   .#{$ray-class-prefix}tabs {
     border-bottom: $tabs-border-size solid $ray-color-blue-50;
     display: flex;
