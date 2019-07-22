@@ -1,36 +1,41 @@
-.#{$ray-class-prefix}table {
-  width: 100%;
-  border-collapse: collapse;
+@import '../../global/variables';
+@import '../../global/mixins/exports';
 
-  thead {
+@include exports('ray-table') {
+  .#{$ray-class-prefix}table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        border-bottom: 1px solid $ray-color-blue-50;
+      }
+    }
+
+    th {
+      font-size: 12px;
+      font-weight: 400;
+      font-family: $ray-font-stack-mono;
+      color: $ray-color-gray-60;
+      text-align: left;
+      text-transform: uppercase;
+      padding: 1rem 0;
+
+      [dir='rtl'] & {
+        text-align: right;
+      }
+    }
+
     tr {
-      border-bottom: 1px solid $ray-color-blue-50;
+      border-bottom: 1px solid $ray-color-gray-10;
     }
-  }
 
-  th {
-    font-size: 12px;
-    font-weight: 400;
-    font-family: $ray-font-stack-mono;
-    color: $ray-color-gray-60;
-    text-align: left;
-    text-transform: uppercase;
-    padding: 1rem 0;
+    td {
+      padding: 1rem 0;
 
-    [dir='rtl'] & {
-      text-align: right;
-    }
-  }
-
-  tr {
-    border-bottom: 1px solid $ray-color-gray-10;
-  }
-
-  td {
-    padding: 1rem 0;
-
-    &:not(:last-child) {
-      padding-right: 1rem;
+      &:not(:last-child) {
+        padding-right: 1rem;
+      }
     }
   }
 }

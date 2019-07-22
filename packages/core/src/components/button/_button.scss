@@ -1,4 +1,6 @@
+@import '../../global/variables';
 @import '../../global/mixins/exports';
+@import '../../global/mixins/breakpoints';
 
 @include exports('ray-button') {
   $ray-button-border-radius: $ray-border-radius;
