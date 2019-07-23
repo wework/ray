@@ -25,10 +25,6 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
   &:focus {
     box-shadow: $ray-box-shadow-focus-state;
   }
-
-  &:active {
-    background-color: $ray-color-blue-20;
-  }
 }
 
 .#{$ray-class-prefix}chip--active {
@@ -39,8 +35,31 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
     background-color: $ray-color-blue-50;
     color: $ray-color-white;
   }
+
+  .#{$ray-class-prefix}chip__icon {
+    vertical-align: middle;
+    display: none;
+  }
+
+  .#{$ray-class-prefix}chip__icon--active {
+    display: inline-block;
+  }
+}
+
+.#{$ray-class-prefix}chip__icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.#{$ray-class-prefix}chip__icon--active {
+  display: none;
+  vertical-align: middle;
 }
 
 .#{$ray-class-prefix}chip--micro {
   padding: 0 0.75rem;
+}
+
+.#{$ray-class-prefix}chip__text {
+  margin-left: 10px;
 }
