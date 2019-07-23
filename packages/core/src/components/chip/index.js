@@ -31,13 +31,10 @@ class Chip {
   constructor(root, options) {
     this._root = root;
     this._options = options;
-
     this.constructor.instances.set(this._root, this);
 
     this.state = {
-      active:
-        options.active ||
-        this._root.classList.contains(this.constructor.cssClasses.ACTIVE)
+      active: this._root.classList.contains(this.constructor.cssClasses.ACTIVE)
     };
 
     this._bindEventListeners();
@@ -45,7 +42,7 @@ class Chip {
   }
 
   _bindEventListeners() {
-    this._root.addEventListener('mousedown', this.onMousedown);
+    this._root.addEventListener('mousedown', this.onClick);
   }
 
   assignClasses() {
@@ -61,7 +58,7 @@ class Chip {
     this.assignClasses();
   }
 
-  onMousedown = () => {
+  onClick = () => {
     this.state.active = !this.state.active;
     this.assignClasses();
   };
@@ -69,7 +66,7 @@ class Chip {
   destroy() {
     // Implement this method to release any resources / deregister any listeners they have
     // attached. An example of this might be deregistering a resize event from the window object.
-    this._root.removeEventListener('mousedown', this.onMousedown);
+    this._root.removeEventListener('mousedown', this.onClick);
 
     this.constructor.instances.delete(this._root);
   }
