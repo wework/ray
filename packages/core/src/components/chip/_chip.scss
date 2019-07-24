@@ -22,9 +22,18 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
     }
   }
 
-  &:hover {
-    background-color: $ray-color-blue-10;
-    color: $ray-color-blue-50;
+  @media (hover: hover) {
+    &:hover {
+      background-color: $ray-color-blue-10;
+      color: $ray-color-blue-50;
+    }
+  }
+
+  @include ray-breakpoint(desktop) {
+    &:hover {
+      background-color: $ray-color-blue-10;
+      color: $ray-color-blue-50;
+    }
   }
 
   &:focus {
