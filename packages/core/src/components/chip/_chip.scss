@@ -40,25 +40,11 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
     background-color: $ray-color-blue-50;
     color: $ray-color-white;
   }
-
-  .#{$ray-class-prefix}chip__icon {
-    vertical-align: middle;
-    display: none;
-  }
-
-  .#{$ray-class-prefix}chip__icon--active {
-    display: inline-block;
-  }
 }
 
 .#{$ray-class-prefix}chip__icon-wrapper {
   display: flex;
   align-items: center;
-}
-
-.#{$ray-class-prefix}chip__icon--active {
-  display: none;
-  vertical-align: middle;
 }
 
 .#{$ray-class-prefix}chip--micro {
