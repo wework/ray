@@ -43,6 +43,7 @@ class Chip {
 
   _bindEventListeners() {
     this._root.addEventListener('mousedown', this.onClick);
+    this._root.addEventListener('keyup', this.onSpace);
   }
 
   assignClasses() {
@@ -56,6 +57,13 @@ class Chip {
   onClick = () => {
     this.state.active = !this.state.active;
     this.assignClasses();
+  };
+
+  onSpace = e => {
+    if (e.code === 'Space') {
+      this.state.active = !this.state.active;
+      this.assignClasses();
+    }
   };
 
   destroy() {

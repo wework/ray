@@ -12,8 +12,12 @@ storiesOf('Chip', module).add('default', () => {
   setTimeout(initChip);
   return (
     <>
-      <div className="ray-chip">Neighborhoods</div>
-      <div className="ray-chip ray-chip--active">Offices</div>
+      <div tabIndex="1" className="ray-chip">
+        Neighborhoods
+      </div>
+      <div tabIndex="1" className="ray-chip ray-chip--active">
+        Offices
+      </div>
     </>
   );
 });
@@ -21,8 +25,12 @@ storiesOf('Chip', module).add('micro', () => {
   setTimeout(initChip);
   return (
     <>
-      <div className="ray-chip ray-chip--micro">Offices</div>
-      <div className="ray-chip ray-chip--micro ray-chip--active">Offices</div>
+      <div tabIndex="1" className="ray-chip ray-chip--micro">
+        Offices
+      </div>
+      <div tabIndex="1" className="ray-chip ray-chip--micro ray-chip--active">
+        Offices
+      </div>
     </>
   );
 });
@@ -30,7 +38,7 @@ storiesOf('Chip', module).add('with icon', () => {
   setTimeout(initChip);
   return (
     <div>
-      <div className="ray-chip">
+      <div tabIndex="1" className="ray-chip">
         <div className="ray-chip__icon-wrapper">
           <svg width="10" height="10" viewBox="0 0 10 10">
             <rect
@@ -44,7 +52,7 @@ storiesOf('Chip', module).add('with icon', () => {
           <span className="ray-chip__text">Furnished</span>
         </div>
       </div>
-      <div className="ray-chip ray-chip--active">
+      <div tabIndex="1" className="ray-chip ray-chip--active">
         <div className="ray-chip__icon-wrapper">
           <svg width="10" height="10" viewBox="0 0 10 10">
             <rect
@@ -65,8 +73,12 @@ storiesOf('Chip', module).add('micro', () => {
   setTimeout(initChip);
   return (
     <div>
-      <div className="ray-chip ray-chip--micro">Offices</div>
-      <div className="ray-chip ray-chip--micro ray-chip--active">Offices</div>
+      <div tabIndex="1" className="ray-chip ray-chip--micro">
+        Offices
+      </div>
+      <div tabIndex="1" className="ray-chip ray-chip--micro ray-chip--active">
+        Offices
+      </div>
     </div>
   );
 });
