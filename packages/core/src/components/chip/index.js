@@ -43,7 +43,7 @@ class Chip {
 
   _bindEventListeners() {
     this._root.addEventListener('mousedown', this.onClick);
-    this._root.addEventListener('keyup', this.onSpace);
+    this._root.addEventListener('keydown', this.onSpace);
   }
 
   assignClasses() {
@@ -60,7 +60,7 @@ class Chip {
   };
 
   onSpace = e => {
-    if (e.code === 'Space') {
+    if (e.code === 'Space' || e.keyCode === 32) {
       this.state.active = !this.state.active;
       this.assignClasses();
     }

@@ -9,7 +9,7 @@ function triggerEvent(el, type) {
 
 function getFixture() {
   return html`
-    <div class="ray-chip">
+    <div tabindex="1" class="ray-chip">
       Furnished
     </div>
   `;
@@ -56,6 +56,25 @@ describe('Chip', () => {
 
     triggerEvent(chipEl, 'mousedown');
     triggerEvent(chipEl, 'mousedown');
+    expect(chipEl.classList).not.toContain('ray-chip--active');
+    chip.destroy();
+  });
+
+  test('it sets active class on spacebar press', () => {
+    const { chip, chipEl } = setupTest();
+    const event = new KeyboardEvent('keydown', { keyCode: 32 });
+
+    chipEl.dispatchEvent(event);
+    expect(chipEl.classList).toContain('ray-chip--active');
+    chip.destroy();
+  });
+
+  test('it removes active class on double spacebar press', () => {
+    const { chip, chipEl } = setupTest();
+    const event = new KeyboardEvent('keydown', { keyCode: 32 });
+
+    chipEl.dispatchEvent(event);
+    chipEl.dispatchEvent(event);
     expect(chipEl.classList).not.toContain('ray-chip--active');
     chip.destroy();
   });
