@@ -62,7 +62,7 @@ describe('Chip', () => {
 
   test('it sets active class on spacebar press', () => {
     const { chip, chipEl } = setupTest();
-    const event = new KeyboardEvent('keydown', { keyCode: 32 });
+    const event = new KeyboardEvent('keydown', { key: ' ' });
 
     chipEl.dispatchEvent(event);
     expect(chipEl.classList).toContain('ray-chip--active');
@@ -71,7 +71,7 @@ describe('Chip', () => {
 
   test('it removes active class on double spacebar press', () => {
     const { chip, chipEl } = setupTest();
-    const event = new KeyboardEvent('keydown', { keyCode: 32 });
+    const event = new KeyboardEvent('keydown', { key: ' ' });
 
     chipEl.dispatchEvent(event);
     chipEl.dispatchEvent(event);

@@ -60,7 +60,7 @@ class Chip {
   };
 
   onSpace = event => {
-    if (event.code === 'Space' || event.keyCode === 32) {
+    if (event.code === 'Space' || event.key === ' ') {
       this.state.active = !this.state.active;
       this.assignClasses();
     }
