@@ -15,6 +15,11 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
 
   &:not(:last-child) {
     margin-right: $ray-spacing-xs;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: $ray-spacing-xs;
+    }
   }
 
   &:hover {
@@ -61,5 +66,10 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
 }
 
 .#{$ray-class-prefix}chip__text {
-  margin-left: 10px;
+  margin-left: $ray-spacing-xs;
+
+  [dir='rtl'] & {
+    margin-right: $ray-spacing-xs;
+    margin-left: 0;
+  }
 }

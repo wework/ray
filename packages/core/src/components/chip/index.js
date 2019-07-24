@@ -53,11 +53,6 @@ class Chip {
     }
   }
 
-  setState(newState) {
-    this.state = Object.assign({}, this.state, newState);
-    this.assignClasses();
-  }
-
   onClick = () => {
     this.state.active = !this.state.active;
     this.assignClasses();
