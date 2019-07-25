@@ -66,7 +66,11 @@ class Select {
 
   set(value) {
     this._inputElement.value = value;
-    this._inputElement.dispatchEvent(new Event('change'));
+
+    // IE11 fix: can't use new Event()
+    const event = document.createEvent('HTMLEvents');
+    event.initEvent('change', true, true);
+    this._inputElement.dispatchEvent(event);
   }
 
   onFocus = () => {
