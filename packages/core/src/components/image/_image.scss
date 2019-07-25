@@ -1,3 +1,5 @@
+@import '../../global/variables';
+@import '../../global/typography';
 @import '../../global/mixins/exports';
 
 $ray-image-ratio-map: (
@@ -41,42 +43,43 @@ $ray-image-ratio-map: (
   overflow: hidden;
   border-radius: $ray-border-radius;
 }
+@include exports('ray-image') {
+  .#{$ray-class-prefix}caption {
+    @include ray-body-x-small;
 
-.#{$ray-class-prefix}caption {
-  @include ray-body-x-small;
+    max-height: 2.5rem;
+    color: $ray-color-gray-60;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    text-align: right;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: $ray-spacing-xs;
 
-  max-height: 2.5rem;
-  color: $ray-color-gray-60;
-  overflow: hidden;
-  text-overflow: -o-ellipsis-lastline;
-  text-overflow: ellipsis;
-  text-align: right;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  margin-top: $ray-spacing-xs;
-
-  [dir='rtl'] & {
-    text-align: left;
-  }
-}
-
-.#{$ray-class-prefix}image {
-  @include image;
-
-  @each $ratio, $value in $ray-image-ratio-map {
-    &--#{$ratio} {
-      padding-bottom: $value;
+    [dir='rtl'] & {
+      text-align: left;
     }
   }
-}
 
-.#{$ray-class-prefix}bg {
-  @include background;
+  .#{$ray-class-prefix}image {
+    @include image;
 
-  @each $ratio, $value in $ray-image-ratio-map {
-    &--#{$ratio} {
-      padding-bottom: $value;
+    @each $ratio, $value in $ray-image-ratio-map {
+      &--#{$ratio} {
+        padding-bottom: $value;
+      }
+    }
+  }
+
+  .#{$ray-class-prefix}bg {
+    @include background;
+
+    @each $ratio, $value in $ray-image-ratio-map {
+      &--#{$ratio} {
+        padding-bottom: $value;
+      }
     }
   }
 }

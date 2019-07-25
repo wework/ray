@@ -31,6 +31,32 @@ gulp.task('sass:source', () => {
   return gulp.src(SASS_SRC_FILES).pipe(gulp.dest('scss'));
 });
 
+gulp.task('components:sass:compiled', () => {
+  return gulp
+    .src('./src/components/**/_*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(
+      rename(filePath => {
+        // removes leading underscore denoting a partial
+        // eslint-disable-next-line no-param-reassign
+        filePath.basename = filePath.basename.replace(/^_/, '');
+      })
+    )
+    .pipe(sass())
+    .pipe(
+      autoprefixer({
+        browsers: ['> 1%', 'last 2 versions']
+      })
+    )
+    .pipe(
+      sourcemaps.write('.', {
+        includeContent: false,
+        sourceRoot: '../src'
+      })
+    )
+    .pipe(gulp.dest('css/components'));
+});
+
 gulp.task('sass:compiled', () => {
   function buildStyles(prod) {
     const scssSources = ['src/ray-core.scss'];

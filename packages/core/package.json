@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "yarn storybook",
     "storybook": "start-storybook -p 6006  -s ./stories/static",
-    "build": "gulp sass:source sass:compiled scripts:es scripts:umd scripts:compiled",
+    "build": "gulp sass:source sass:compiled components:sass:compiled scripts:es scripts:umd scripts:compiled",
     "clean": "gulp clean",
     "prebuild": "yarn clean",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/storybook -s ./stories/static",
