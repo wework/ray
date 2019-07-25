@@ -36,7 +36,7 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
     }
   }
 
-  &:focus {
+  .#{$ray-accessibility-class} &:focus {
     box-shadow: $ray-box-shadow-focus-state;
   }
 }
