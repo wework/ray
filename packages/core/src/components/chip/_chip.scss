@@ -1,0 +1,71 @@
+@import '../../global/variables';
+
+$ray-chip-border-width: 1px;
+$ray-chip-height: $ray-spacing-xs * 2 + 1rem;
+
+.#{$ray-class-prefix}chip {
+  @include no-select;
+  border: $ray-chip-border-width solid $ray-color-blue-50;
+  background-color: $ray-color-white;
+  padding: $ray-spacing-xs $ray-spacing-md;
+  border-radius: $ray-chip-height;
+  color: $ray-color-blue-50;
+  display: inline-block;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: $ray-spacing-xs;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: $ray-spacing-xs;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $ray-color-blue-10;
+      color: $ray-color-blue-50;
+    }
+  }
+
+  @include ray-breakpoint(desktop) {
+    &:hover {
+      background-color: $ray-color-blue-10;
+      color: $ray-color-blue-50;
+    }
+  }
+
+  .#{$ray-accessibility-class} &:focus {
+    box-shadow: $ray-box-shadow-focus-state;
+    outline: 0;
+  }
+}
+
+.#{$ray-class-prefix}chip--active {
+  background-color: $ray-color-blue-50;
+  color: $ray-color-white;
+
+  &:hover {
+    background-color: $ray-color-blue-50;
+    color: $ray-color-white;
+  }
+}
+
+.#{$ray-class-prefix}chip__icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.#{$ray-class-prefix}chip--micro {
+  padding: 0 0.75rem;
+}
+
+.#{$ray-class-prefix}chip__text {
+  margin-left: $ray-spacing-xs;
+
+  [dir='rtl'] & {
+    margin-right: $ray-spacing-xs;
+    margin-left: 0;
+  }
+}
