@@ -57,12 +57,14 @@ class Chip {
   onClick = () => {
     this.state.active = !this.state.active;
     this.assignClasses();
+    this.emitChange();
   };
 
   onSpace = event => {
     if (event.code === 'Space' || event.key === ' ') {
       this.state.active = !this.state.active;
       this.assignClasses();
+      this.emitChange();
     }
   };
 
@@ -72,6 +74,17 @@ class Chip {
     this._root.removeEventListener('mousedown', this.onClick);
 
     this.constructor.instances.delete(this._root);
+  }
+
+  emitChange() {
+    const newEvent = document.createEvent('HTMLEvents');
+    newEvent.initEvent('change', true, true);
+    this._root.dispatchEvent(newEvent);
+  }
+
+  set(isActive) {
+    this.state.active = isActive;
+    this.assignClasses();
   }
 }
 
