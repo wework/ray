@@ -85,6 +85,7 @@ class Chip {
   set(isActive) {
     this.state.active = isActive;
     this.assignClasses();
+    this.emitChange();
   }
 }
 
