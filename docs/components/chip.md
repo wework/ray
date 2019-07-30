@@ -42,7 +42,7 @@ chip.destroy();
 | `Chip.createAll`         | `HTMLElement:Object` | create all instances in document      |
 | `Chip.create`            | `HTMLElement:Object` | create an instance                    |
 | `Chip.prototype.destroy` |                      | destroy the instance                  |
-| `Chip.prototype.set`     |                      | sets the active state of the instance |
+| `Chip.prototype.set`     | `Boolean`            | sets the active state of the instance |
 
 ## Modifiers
 
