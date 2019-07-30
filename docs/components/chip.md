@@ -46,7 +46,7 @@ chip.destroy();
 
 ## Modifiers
 
-Use these modifiers with `.ray-select` class.
+Use these modifiers with `.ray-chip` class.
 
 | Selector            | Description                              |
 | ------------------- | ---------------------------------------- |
