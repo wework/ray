@@ -78,4 +78,21 @@ describe('Chip', () => {
     expect(chipEl.classList).not.toContain('ray-chip--active');
     chip.destroy();
   });
+
+  test('it sets active to true', () => {
+    const { chip, chipEl } = setupTest();
+
+    chip.set(true);
+    expect(chipEl.classList).toContain('ray-chip--active');
+    chip.destroy();
+  });
+
+  test('it sets active to false', () => {
+    const { chip, chipEl } = setupTest();
+
+    triggerEvent(chipEl, 'mousedown');
+    chip.set(false);
+    expect(chipEl.classList).not.toContain('ray-chip--active');
+    chip.destroy();
+  });
 });
