@@ -52,8 +52,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-ga": "^2.5.5",
     "react-helmet": "^5.2.0",
-    "react-router": "^5.0.0",
-    "yarn": "1.16.0"
+    "react-router": "^5.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.0.5",
