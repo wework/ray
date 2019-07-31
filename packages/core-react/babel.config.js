@@ -6,7 +6,9 @@ module.exports = {
         targets: {
           node: 'current'
         },
-        modules: false
+        ...(process.env.NODE_ENV === 'test'
+          ? { modules: 'auto' }
+          : { modules: false })
       }
     ],
     '@babel/preset-react'
