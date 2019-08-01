@@ -71,6 +71,15 @@ Our documentation is built with GastbyJS, with content sourced from the markdown
 
 Open up `localhost:8000` to find the docs site.
 
+## Guidelines
+
+- All components should be right-to-left (RTL) compatible
+- Strive to document all component permutations in storybook so they're visually tested
+- Keep HTML examples simple and follow best practices such as using proper [a11y attributes](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) where applicable
+- Keep SVGs in HTML examples simple so they code can be easily scanned
+- Put focus states and keyboard navigation effects behind the `$ray-accessibility-class` variable, search the codebase for examples
+- All custom JavaScript/CSS API must be documented
+
 [node]: https://nodejs.org/
 [npm]: https://docs.npmjs.com/cli/install
 [lerna]: https://lerna.js.org/
