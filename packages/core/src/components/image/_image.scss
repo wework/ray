@@ -2,14 +2,6 @@
 @import '../../global/typography';
 @import '../../global/mixins/exports';
 
-$ray-image-ratio-map: (
-  4by3: calc(100% / (4 / 3)),
-  3by4: calc(100% / (3 / 4)),
-  1by1: calc(100% / 1),
-  16by9: calc(100% / (16 / 9)),
-  cinema: calc(100% / 2.4)
-);
-
 @mixin image {
   display: block;
   width: 100%;
