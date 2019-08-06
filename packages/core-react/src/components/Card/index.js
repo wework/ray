@@ -40,7 +40,7 @@ Card.propTypes = {
   body: PropTypes.node,
   img: PropTypes.node,
   row: PropTypes.bool,
-  aspectRatio: PropTypes.oneOf(aspectRatios),
+  aspectRatio: PropTypes.oneOf(ASPECT_RATIOS),
   className: PropTypes.string
 };
 
