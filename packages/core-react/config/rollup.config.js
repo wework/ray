@@ -20,7 +20,14 @@ module.exports = {
   },
   plugins: [
     scss({
-      includePaths: [path.resolve(__dirname, '..', 'node_modules')],
+      includePaths: [
+        path.resolve(
+          __dirname,
+          '../../..',
+          'node_modules',
+          '@wework/ray-core/scss'
+        )
+      ],
       output: false,
       failOnError: true
     }),
