@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import rayExports from '@wework/ray-core/scss/ray-exports.scss';
 
-const aspectRatios = (rayExports['ray-image-aspect-ratios'] || '').split(' ');
+const ASPECT_RATIOS = (rayExports['ray-image-aspect-ratios'] || '').split(' ');
 
 export default function Card({
   heading,
