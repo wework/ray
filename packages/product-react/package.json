@@ -1,0 +1,71 @@
+{
+  "name": "@wework/ray-product-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/umd/index.js",
+  "module": "dist/es/index.js",
+  "scripts": {
+    "dev": "yarn storybook",
+    "build": "gulp scripts:es scripts:umd scripts:compiled",
+    "test": "jest",
+    "storybook": "start-storybook -p 6007",
+    "prebuild": "rm -rf dist/",
+    "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/product-react/storybook -s ./stories/static"
+  },
+  "author": "WeWork Companies Inc.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/preset-typescript": "^7.3.3",
+    "@wework/ray-core": "^1.8.5",
+    "clsx": "^1.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wework/ray.git",
+    "directory": "packages/product-react"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^24.8.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.16.7",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "wework",
+    "react",
+    "design-system"
+  ],
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
