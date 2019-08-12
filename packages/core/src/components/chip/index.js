@@ -65,6 +65,7 @@ class Chip {
       this.state.active = !this.state.active;
       this.assignClasses();
       this.emitChange();
+      event.preventDefault();
     }
   };
 
