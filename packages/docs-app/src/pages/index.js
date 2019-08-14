@@ -39,7 +39,7 @@ class Homepage extends React.Component {
                   opacity: 0.7
                 }}
               >
-                Resources for building user interfaces
+                A CSS/JS library for building web applications
                 <br />
                 with the WeWork design language.
               </div>
@@ -65,6 +65,8 @@ class Homepage extends React.Component {
                 <a
                   href="https://www.npmjs.com/package/@wework/ray-core"
                   className="ray-button ray-button--tertiary ray-text--monospace"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   yarn add @wework/ray-core
                 </a>

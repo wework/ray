@@ -11,14 +11,9 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-
-  @include ray-breakpoint(desktop) {
-    padding-top: 0;
-    padding-bottom: 0;
-    height: $top-nav-height;
-  }
+  padding-top: 0;
+  padding-bottom: 0;
+  height: $top-nav-height;
 }
 
 .top-nav__heading {
