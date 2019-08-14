@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-export default function TextField({
+export default function TextArea({
   id,
   type,
   placeholder,
@@ -16,21 +16,21 @@ export default function TextField({
   ...rest
 }) {
   const wrapperClass = clsx(
-    'ray-text-field',
+    'ray-text-area',
     {
-      'ray-text-field--has-value': value,
-      'ray-text-field--error': error,
-      'ray-text-field--disabled': disabled,
-      'ray-text-field--required': required,
-      'ray-text-field--compact': compact
+      'ray-text-area--has-value': value,
+      'ray-text-area--error': error,
+      'ray-text-area--disabled': disabled,
+      'ray-text-area--required': required,
+      'ray-text-area--compact': compact
     },
     className
   );
 
   return (
     <div className={wrapperClass}>
-      <input
-        className="ray-text-field__input"
+      <textarea
+        className="ray-text-area__input"
         id={id}
         type={type}
         value={value}
@@ -39,7 +39,7 @@ export default function TextField({
         {...rest}
       />
       {label && (
-        <label className="ray-text-field__label" htmlFor={id}>
+        <label className="ray-text-area__label" htmlFor={id}>
           {label}
         </label>
       )}
@@ -47,7 +47,7 @@ export default function TextField({
   );
 }
 
-TextField.propTypes = {
+TextArea.propTypes = {
   id: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
@@ -60,6 +60,6 @@ TextField.propTypes = {
   className: PropTypes.string
 };
 
-TextField.defaultProps = {
+TextArea.defaultProps = {
   type: 'text'
 };
