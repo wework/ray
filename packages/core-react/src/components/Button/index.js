@@ -9,15 +9,21 @@ export default function Button({
   compact,
   danger,
   disabled,
+  className,
   ...props
 }) {
   return (
     <Tag
       {...props}
-      className={clsx('ray-button', `ray-button--${type}`, {
-        'ray-button--compact': compact,
-        'ray-button--danger': danger
-      })}
+      className={clsx(
+        'ray-button',
+        `ray-button--${type}`,
+        {
+          'ray-button--compact': compact,
+          'ray-button--danger': danger
+        },
+        className
+      )}
       disabled={disabled}
     >
       {children}
@@ -31,7 +37,8 @@ Button.propTypes = {
   danger: PropTypes.bool,
   children: PropTypes.node,
   Tag: PropTypes.oneOf(['button', 'a']),
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string
 };
 
 Button.defaultProps = {
