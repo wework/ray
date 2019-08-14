@@ -20,4 +20,4 @@ See [RELEASING.md](./RELEASING.md) for documentation.
 
 This repository is maintained by Demand Generation of Growth Tech at WeWork.
 
-Its lead maintainer is [Adam Raider](https://github.com/adamraider), please either [submit an issue](https://github.com/wework/ray/issues/new) or reach out to Adam at [adam.raider@wework.com](mailto:adam.raider@wework.com) for questions or concerns.
+Its lead maintainer is [Adam Raider](https://github.com/adamraider), please either [submit an issue](https://github.com/wework/ray/issues/new) or reach out to the team at [ray@wework.com](mailto:ray@wework.com) for questions or concerns.
