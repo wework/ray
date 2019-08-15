@@ -50,6 +50,6 @@ export default function Image({ className, src, aspect, bg, ...rest }) {
 Image.propTypes = {
   className: PropTypes.string,
   src: PropTypes.string,
-  aspect: PropTypes.oneOf(Object.keys(ASPECT_RATIOS)),
+  aspect: PropTypes.oneOf(ASPECT_RATIOS),
   bg: PropTypes.bool
 };
