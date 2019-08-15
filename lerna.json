@@ -4,14 +4,14 @@
       "conventionalCommits": true
     },
     "version": {
-      "message": "chore(release): %s",
+      "message": "chore(release): publish",
       "conventionalCommits": true,
       "gitHubRelease": true,
-      "allowBranch": "master"
+      "allowBranch": "*"
     }
   },
   "packages": ["packages/*"],
-  "version": "1.8.5",
+  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true
 }
