@@ -1,7 +1,7 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 
-import '@wework/ray-core/scss/ray-core.scss';
+import '@wework/ray-core/css/ray-core.css';
 
 const req = require.context('../stories', true, /.stories.js$/);
 
