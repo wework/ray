@@ -15,7 +15,7 @@ storiesOf('Select', module)
       <div className="ray-select">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>
@@ -34,7 +34,7 @@ storiesOf('Select', module)
           <option value="" disabled selected data-ray-placeholder>
             {"Hi, I'm a placeholder"}
           </option>
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>
@@ -50,7 +50,7 @@ storiesOf('Select', module)
     return (
       <div className="ray-select">
         <select className="ray-select__input">
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle" selected>
             Squirtle
           </option>
@@ -69,7 +69,7 @@ storiesOf('Select', module)
       <div className="ray-select" style={{ width: '100px' }}>
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>
@@ -86,7 +86,7 @@ storiesOf('Select', module)
       <div className="ray-select">
         <select className="ray-select__input" required>
           <option value="" disabled selected data-ray-placeholder />
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>
@@ -103,7 +103,7 @@ storiesOf('Select', module)
       <div className="ray-select ray-select--error">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>
@@ -120,7 +120,7 @@ storiesOf('Select', module)
       <div className="ray-select ray-select--disabled">
         <select className="ray-select__input" disabled>
           <option value="" disabled selected data-ray-placeholder />
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>
@@ -137,7 +137,7 @@ storiesOf('Select', module)
       <div className="ray-select ray-select--compact">
         <select className="ray-select__input">
           <option value="" disabled selected data-ray-placeholder />
-          <option value="Pikatchu">Pikatchu</option>
+          <option value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>
@@ -156,7 +156,7 @@ storiesOf('Select', module)
           <div className="ray-select">
             <select className="ray-select__input">
               <option value="" disabled selected data-ray-placeholder />
-              <option value="Pikatchu">Pikatchu</option>
+              <option value="Pikachu">Pikachu</option>
               <option value="Squirtle">Squirtle</option>
               <option value="Charmander">Charmander</option>
             </select>
@@ -172,7 +172,7 @@ storiesOf('Select', module)
           <div className="ray-select ray-select--error">
             <select className="ray-select__input">
               <option value="" disabled selected data-ray-placeholder />
-              <option value="Pikatchu">Pikatchu</option>
+              <option value="Pikachu">Pikachu</option>
               <option value="Squirtle">Squirtle</option>
               <option value="Charmander">Charmander</option>
             </select>
@@ -187,7 +187,7 @@ storiesOf('Select', module)
           <div className="ray-select ray-select--compact">
             <select className="ray-select__input">
               <option value="" disabled selected data-ray-placeholder />
-              <option value="Pikatchu">Pikatchu</option>
+              <option value="Pikachu">Pikachu</option>
               <option value="Squirtle">Squirtle</option>
               <option value="Charmander">Charmander</option>
             </select>
@@ -203,7 +203,7 @@ storiesOf('Select', module)
           <div className="ray-select ray-select--compact ray-select--error">
             <select className="ray-select__input">
               <option value="" disabled selected data-ray-placeholder />
-              <option value="Pikatchu">Pikatchu</option>
+              <option value="Pikachu">Pikachu</option>
               <option value="Squirtle">Squirtle</option>
               <option value="Charmander">Charmander</option>
             </select>
