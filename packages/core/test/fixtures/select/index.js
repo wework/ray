@@ -5,7 +5,7 @@ export function selectFixture() {
     <div class="ray-select">
       <select class="ray-select__input">
         <option value="" disabled selected data-ray-placeholder></option>
-        <option value="Pikatchu">Pikatchu</option>
+        <option value="Pikachu">Pikachu</option>
         <option value="Squirtle">Squirtle</option>
         <option value="Charmander">Charmander</option>
       </select>
@@ -22,7 +22,7 @@ export function selectFixtureRequired() {
     <div class="ray-select">
       <select class="ray-select__input" required>
         <option value="" disabled selected data-ray-placeholder></option>
-        <option value="Pikatchu">Pikatchu</option>
+        <option value="Pikachu">Pikachu</option>
         <option value="Squirtle">Squirtle</option>
         <option value="Charmander">Charmander</option>
       </select>
@@ -51,7 +51,7 @@ export function selectFixtureWithPlaceholder() {
         <option value="" disabled selected data-ray-placeholder
           >Hi im a placeholder</option
         >
-        <option value="Pikatchu">Pikatchu</option>
+        <option value="Pikachu">Pikachu</option>
         <option value="Squirtle">Squirtle</option>
         <option value="Charmander">Charmander</option>
       </select>
