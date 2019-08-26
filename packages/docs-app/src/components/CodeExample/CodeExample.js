@@ -12,7 +12,7 @@ class CodeExample extends Component {
   state = {
     copied: false,
     showBtn: false,
-    expandedCode: false
+    expandedCode: true
   };
 
   componentDidMount = () => {
