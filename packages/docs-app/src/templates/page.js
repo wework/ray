@@ -14,6 +14,7 @@ import ColorTable from '../components/ColorTable';
 import GridDocumentation from '../components/GridDocumentation';
 import BreakpointsDocumentation from '../components/BreakpointsDocumentation';
 import SpaceExample from '../components/SpaceExample';
+import TypographyTable from '../components/TypographyTable';
 
 // Custom Markdown
 import { ul, ol, PageIntro, FlexGroup } from '../components/markdown/Markdown';
@@ -104,7 +105,8 @@ const renderAst = new RehypeReact({
     'color-table': ColorTable,
     component: ComponentCode,
     'grid-documentation': GridDocumentation,
-    'breakpoints-documentation': BreakpointsDocumentation
+    'breakpoints-documentation': BreakpointsDocumentation,
+    'typography-table': TypographyTable
   }
 }).Compiler;
 /* eslint-enable react/prop-types */

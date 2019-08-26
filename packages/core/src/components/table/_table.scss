@@ -24,6 +24,10 @@
       [dir='rtl'] & {
         text-align: right;
       }
+
+      &:not(:last-child) {
+        padding-right: 1rem;
+      }
     }
 
     tr {

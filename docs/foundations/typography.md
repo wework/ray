@@ -117,6 +117,10 @@ A mono-spaced font only has a single weight.
 
 `$ray-color-text-light` – A tertiary text color is need for the system to convey placeholder for example.
 
+# Full Scale
+
+<typography-table></typography-table>
+
 # Typography Mixins
 
 These mixins can be useful for responsively assigning typography styles.
