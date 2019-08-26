@@ -1,4 +1,9 @@
-@import 'global/variables';
+@import './global/variables';
+
+$aspect-ratios: ();
+@each $ratio, $value in $ray-image-ratio-map {
+  $aspect-ratios: append($aspect-ratios, $ratio);
+}
 
 :export {
   @each $key, $value in $ray-layout-grid-breakpoints {
@@ -48,4 +53,9 @@
   ray-color-gray-30: $ray-color-gray-30;
   ray-color-gray-50: $ray-color-gray-50;
   ray-color-gray-60: $ray-color-gray-60;
+
+  ray-image-aspect-ratios: $aspect-ratios;
+  @each $ratio, $value in $ray-image-ratio-map {
+    ray-image-aspect-ratio-#{$ratio}: $value;
+  }
 }

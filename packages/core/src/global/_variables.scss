@@ -83,3 +83,11 @@ $ray-layout-grid-max-width: (
 ) !default;
 
 $ray-layout-grid-default-column-span: 4 !default;
+
+$ray-image-ratio-map: (
+  4by3: calc(100% / (4 / 3)),
+  3by4: calc(100% / (3 / 4)),
+  1by1: calc(100% / 1),
+  16by9: calc(100% / (16 / 9)),
+  cinema: calc(100% / 2.4)
+);

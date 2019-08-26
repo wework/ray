@@ -1,7 +1,9 @@
+const path = require('path');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const babel = require('rollup-plugin-babel');
 const replace = require('rollup-plugin-replace');
+const scss = require('rollup-plugin-scss');
 const babelConfig = require('../babel.config');
 
 module.exports = {
@@ -17,6 +19,18 @@ module.exports = {
     }
   },
   plugins: [
+    scss({
+      includePaths: [
+        path.resolve(
+          __dirname,
+          '../../..',
+          'node_modules',
+          '@wework/ray-core/scss'
+        )
+      ],
+      output: false,
+      failOnError: true
+    }),
     resolve(),
     commonjs({
       include: /node_modules/
