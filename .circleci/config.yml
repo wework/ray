@@ -116,8 +116,16 @@ jobs:
           command: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
       - npm_authenticate
       - run:
-          name: 'Publish canary release to NPM registry'
-          command: yarn lerna:publish --canary
+          name: 'Publish release to NPM registry'
+          command: yarn lerna:publish
+
+  graduate_master_to_production:
+    executor:
+      name: docker-config
+    steps:
+      - run:
+          name: 'Deploy'
+          command: git push origin master:production
 
 workflows:
   version: 2
@@ -141,6 +149,13 @@ workflows:
           requires:
             - test-unit
             - test-visual-regression
+          filters:
+            branches:
+              only:
+                - master
+      - graduate_master_to_production:
+          requires:
+            - build_and_release
           filters:
             branches:
               only:
