@@ -123,6 +123,7 @@ jobs:
     executor:
       name: docker-config
     steps:
+      - checkout
       - run:
           name: 'Deploy'
           command: git push origin master:production
