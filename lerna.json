@@ -11,7 +11,7 @@
     }
   },
   "packages": ["packages/*"],
-  "version": "independent",
+  "version": "1.8.5",
   "npmClient": "yarn",
   "useWorkspaces": true
 }
