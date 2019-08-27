@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-product-react",
-  "version": "0.0.0",
+  "version": "1.9.0",
   "description": "",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
@@ -16,7 +16,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@babel/preset-typescript": "^7.3.3",
-    "@wework/ray-core": "^1.8.5",
+    "@wework/ray-core": "^1.9.0",
     "clsx": "^1.0.4"
   },
   "repository": {

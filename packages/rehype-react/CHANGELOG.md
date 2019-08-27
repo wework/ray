@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.9.0 (2019-08-27)
+
+
+### Bug Fixes
+
+* typography running text margins ([#43](https://github.com/wework/ray/issues/43)) ([fef06de](https://github.com/wework/ray/commit/fef06de))
+
+
+
+
+
 ## [3.1.5](https://github.com/wework/ray/compare/rehype-react@3.1.4...rehype-react@3.1.5) (2019-05-03)
 
 **Note:** Version bump only for package rehype-react
