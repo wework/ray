@@ -19,7 +19,7 @@ Design is led by WeWork designers, [Dana Ballasy] and [Brannon Wellington]. Deve
 
 If you are a WeWork employee, you can join our slack channel [#ray-design-system]. Otherwise, you can get involved on our [GitHub issues].
 
-If you have a a security or legal concern please email [ray@wework.com](mailto:ray@wework.com).
+If you have a security or legal concern please email [ray@wework.com](mailto:ray@wework.com).
 
 ### What is the purpose of having a [storybook] and a documentation website?
 
