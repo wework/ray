@@ -132,13 +132,25 @@ workflows:
   version: 2
   'ray-ci-cd':
     jobs:
-      - checkout-code
+      - checkout-code:
+          filters:
+            branches:
+              ignore:
+                - production
       - test-unit:
           requires:
             - checkout-code
+          filters:
+            branches:
+              ignore:
+                - production
       - test-visual-regression:
           requires:
             - checkout-code
+          filters:
+            branches:
+              ignore:
+                - production
       - build:
           requires:
             - checkout-code
@@ -146,6 +158,7 @@ workflows:
             branches:
               ignore:
                 - master
+                - production
       - build_and_release:
           requires:
             - test-unit
