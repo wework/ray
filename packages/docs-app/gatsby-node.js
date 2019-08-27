@@ -50,7 +50,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 // Method that creates the pages for our website
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: `/about/`,
+    isPermanent: false,
+    redirectInBrowser: true,
+    toPath: `/faq/`
+  });
 
   return graphql(`
     {
