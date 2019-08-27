@@ -116,8 +116,8 @@ jobs:
           command: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
       - npm_authenticate
       - run:
-          name: 'Publish canary release to NPM registry'
-          command: yarn lerna:publish --canary
+          name: 'Publish release to NPM registry'
+          command: yarn lerna:publish
 
 workflows:
   version: 2
