@@ -3,8 +3,6 @@ label: Meta
 title: FAQ
 ---
 
-<page-intro>Named after Ray Eames, the Ray Design System aims to simplify and unify design across [WeWork](https://wework.com).</page-intro>
-
 ### What is Ray?
 
 Ray is a user-interface library for WeWork.com and auxiliary properties. Our mission is to create a beautiful and accessible kit of UI/UX tools with incredible developer experience.
@@ -17,7 +15,7 @@ The technology team at WeWork has developed many design systems over the years. 
 
 Design is led by WeWork designers, [Dana Ballasy] and [Brannon Wellington]. Development is led by [Adam Raider]. With engineering support from Growth Tech and Core Platform.
 
-### I have a question, where can I get help?
+### Where can I get help?
 
 If you are a WeWork employee, you can join our slack channel [#ray-design-system]. Otherwise, you can get involved on our [GitHub issues].
 
