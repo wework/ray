@@ -19,9 +19,9 @@ Design is led by WeWork designers, [Dana Ballasy] and [Brannon Wellington]. Deve
 
 ### I have a question, where can I get help?
 
-If you are a WeWork employee, you can join our slack channel [#ray-design-system](https://wework.slack.com/messages/CFLL3QWQ5). Otherwise, you can get involved on our [GitHub issues](https://github.com/wework/ray/issues)
+If you are a WeWork employee, you can join our slack channel [#ray-design-system]. Otherwise, you can get involved on our [GitHub issues].
 
-If you have a a security or legal concern please email [ray@wework.com](mailto:ray@wework.com)
+If you have a a security or legal concern please email [ray@wework.com](mailto:ray@wework.com).
 
 ### What is the purpose of having a [storybook] and a documentation website?
 
@@ -31,3 +31,5 @@ The storybook acts as a workshop for developers to iterate on features. The docu
 [brannon wellington]: mailto:brannon.wellington@wework.com
 [dana ballasy]: mailto:dana.ballasy@wework.com
 [adam raider]: mailto:adam.raider@wework.com
+[github issues]: https://github.com/wework/ray/issues
+[#ray-design-system]: https://wework.slack.com/messages/CFLL3QWQ5
