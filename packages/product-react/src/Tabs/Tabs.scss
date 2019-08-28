@@ -1,0 +1,70 @@
+$easing: cubic-bezier(0.694, 0.0482, 0.335, 1);
+$ray-color-black: black;
+$ray-color-blue-50: blue;
+$hover-border-size: 2px;
+$hover-animation-time: 0.33s;
+
+@mixin tab-border($border-size, $color) {
+  content: '';
+  position: absolute;
+  top: 100%;
+  height: $border-size;
+  left: 0;
+  width: 100%;
+  background-color: $color;
+}
+
+@mixin underline-hover(
+  $border-size,
+  $transition-timing,
+  $inner-element-bottom-padding: false
+) {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    @include tab-border($border-size, $ray-color-black);
+
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform $transition-timing $easing;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      animation: scaleUp $transition-timing $easing;
+      transform: none;
+    }
+  }
+}
+
+.ray-tabs__wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.ray-tabs__button-wrapper {
+  position: relative;
+  flex: 1;
+
+  @include underline-hover($hover-border-size, $hover-animation-time);
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  & button {
+    width: 100%;
+  }
+}
+
+.ray-tabs__button-wrapper--active {
+  &::after {
+    @include tab-border($hover-border-size, $ray-color-blue-50);
+    transition: unset;
+    animation: unset;
+    transform: none;
+  }
+}
