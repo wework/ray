@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/wework/ray/compare/v1.9.0...v1.10.0) (2019-08-28)
+
+
+### Features
+
+* **core-react:** adding typings for TextField ([#208](https://github.com/wework/ray/issues/208)) ([6d347d8](https://github.com/wework/ray/commit/6d347d8))
+
+
+
+
+
 # 1.9.0 (2019-08-27)
 
 
