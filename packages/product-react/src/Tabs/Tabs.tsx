@@ -1,7 +1,10 @@
 import classnames from 'classnames';
 import * as React from 'react';
-import { Button } from '../';
+// import { Button } from '../';
+import { Button } from '@wework/ray-core-react';
 import { TabContext } from './context';
+
+// console.log({ stuff });
 
 import './Tabs.scss';
 
