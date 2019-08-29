@@ -2,19 +2,20 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
-export default function Button({
-  Tag,
-  children,
-  type,
-  compact,
-  danger,
-  disabled,
-  className,
-  ...props
-}) {
+const Button = React.forwardRef((props, ref) => {
+  const {
+    Tag,
+    children,
+    type,
+    compact,
+    danger,
+    disabled,
+    className,
+    ...rest
+  } = props;
   return (
     <Tag
-      {...props}
+      {...rest}
       className={clsx(
         'ray-button',
         `ray-button--${type}`,
@@ -25,11 +26,12 @@ export default function Button({
         className
       )}
       disabled={disabled}
+      ref={ref}
     >
       {children}
     </Tag>
   );
-}
+});
 
 Button.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
@@ -47,3 +49,7 @@ Button.defaultProps = {
   compact: false,
   danger: false
 };
+
+Button.displayName = 'Button';
+
+export default Button;
