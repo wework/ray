@@ -4531,6 +4531,14 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
+"@wework/ray-core-react@^1.10.1":
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/@wework/ray-core-react/-/ray-core-react-1.10.1.tgz#26207e672116a5b5cb4a7c9bc8b7b800dc08a283"
+  integrity sha512-KKnGzBJhhRrD85H64bV35zXJqnIItlRZog56GCyLmDo/VKDhf3ce4wkv+650/pzHavuAbFHe4mSx31jrBOtjqQ==
+  dependencies:
+    "@wework/ray-core" "^1.9.0"
+    clsx "^1.0.4"
+
 "@wework/ray-core@file:packages/core":
   version "1.9.0"
 

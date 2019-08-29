@@ -16,6 +16,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@wework/ray-core": "^1.9.0",
+    "@wework/ray-core-react": "^1.10.1",
     "clsx": "^1.0.4"
   },
   "repository": {
