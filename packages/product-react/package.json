@@ -18,6 +18,7 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.3.3",
     "@wework/ray-core": "^1.9.0",
+    "@wework/ray-core-react": "^1.10.1",
     "clsx": "^1.0.4"
   },
   "repository": {

@@ -4531,14 +4531,6 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@wework/ray-core-react@^1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@wework/ray-core-react/-/ray-core-react-1.10.1.tgz#26207e672116a5b5cb4a7c9bc8b7b800dc08a283"
-  integrity sha512-KKnGzBJhhRrD85H64bV35zXJqnIItlRZog56GCyLmDo/VKDhf3ce4wkv+650/pzHavuAbFHe4mSx31jrBOtjqQ==
-  dependencies:
-    "@wework/ray-core" "^1.9.0"
-    clsx "^1.0.4"
-
 "@wework/ray-core@file:packages/core":
   version "1.9.0"
 
@@ -23955,6 +23947,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
+  integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
 
 typescript@^3.6.2:
   version "3.6.2"
