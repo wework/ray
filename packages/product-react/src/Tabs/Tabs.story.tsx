@@ -4,7 +4,7 @@ import { Tabs, TabView } from './';
 
 const TestView: React.FC<{ header: string; imageSrc: string }> = ({
   header,
-  imageSrc,
+  imageSrc
 }) => (
   <div style={{ borderTop: '1px solid rgba(245, 245, 245)', padding: 10 }}>
     <h1>{header}</h1>
@@ -46,7 +46,7 @@ storiesOf('Core Comps | Tabs', module)
         tabs={[
           { id: 'test-1', ariaLabel: 'Test', label: 'Test 1' },
           { id: 'test-2', ariaLabel: 'Test', label: 'Test 2' },
-          { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' },
+          { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' }
         ]}
       >
         <Views />
@@ -59,9 +59,24 @@ storiesOf('Core Comps | Tabs', module)
         tabs={[
           { id: 'test-1', ariaLabel: 'Test', label: 'Test 1' },
           { id: 'test-2', ariaLabel: 'Test', label: 'Test 2' },
-          { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' },
+          { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' }
         ]}
         defaultActiveTab="test-3"
+      >
+        <Views />
+      </Tabs>
+    );
+  })
+  .add('compact', () => {
+    return (
+      <Tabs
+        tabs={[
+          { id: 'test-1', ariaLabel: 'Test', label: 'Test 1' },
+          { id: 'test-2', ariaLabel: 'Test', label: 'Test 2' },
+          { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' }
+        ]}
+        defaultActiveTab="test-3"
+        compact
       >
         <Views />
       </Tabs>

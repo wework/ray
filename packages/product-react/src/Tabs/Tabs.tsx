@@ -19,10 +19,11 @@ export interface IProps {
   tabs: ITab[];
   defaultActiveTab?: string;
   onSelect?: (selectedTabId: string) => void;
+  compact?: boolean;
 }
 
-export const Tabs: React.FC<IProps> = (props) => {
-  const { tabs, onSelect } = props;
+export const Tabs: React.FC<IProps> = props => {
+  const { tabs, onSelect, compact } = props;
   const [firstTab] = tabs;
   const defaultTab = props.defaultActiveTab || firstTab.id;
   const [selectedTabId, setSelectedTabId] = React.useState<string>(defaultTab);
@@ -41,7 +42,7 @@ export const Tabs: React.FC<IProps> = (props) => {
   const { tabRefs, focusedTab } = useFocusManager({
     tabs,
     firstFocusedId: defaultTab,
-    buttonsFocused,
+    buttonsFocused
   });
 
   React.useEffect(() => {
@@ -55,14 +56,14 @@ export const Tabs: React.FC<IProps> = (props) => {
   return (
     <TabContext.Provider value={{ selectedTab: selectedTabId, tabs }}>
       <div className="ray-tabs__wrapper" role="tablist">
-        {tabs.map((tab) => {
+        {tabs.map(tab => {
           const tabIsActive = tab.id === selectedTabId;
 
           return (
             <div
               key={tab.id}
               className={classnames('ray-tabs__button-wrapper', {
-                'ray-tabs__button-wrapper--active': tabIsActive,
+                'ray-tabs__button-wrapper--active': tabIsActive
               })}
             >
               <Button
@@ -77,6 +78,7 @@ export const Tabs: React.FC<IProps> = (props) => {
                 data-testid="tab-button"
                 onFocus={onButtonFocus}
                 onBlur={onButtonBlur}
+                compact={compact}
               >
                 {tab.label}
               </Button>
@@ -134,7 +136,7 @@ function useFocusManager(props: IFocusManager) {
   };
 
   const focusNextTab = () => {
-    setFocusedTab((currentFocused) => {
+    setFocusedTab(currentFocused => {
       const currentIndex = getTabIndex(tabs, currentFocused);
 
       if (currentIndex === getLastIndex(tabs)) {
@@ -146,7 +148,7 @@ function useFocusManager(props: IFocusManager) {
   };
 
   const focusPreviousTab = () => {
-    setFocusedTab((currentFocused) => {
+    setFocusedTab(currentFocused => {
       const currentIndex = getTabIndex(tabs, currentFocused);
 
       if (currentIndex === 0) {
@@ -188,7 +190,7 @@ function useFocusManager(props: IFocusManager) {
 
   return {
     tabRefs,
-    focusedTab,
+    focusedTab
   };
 }
 

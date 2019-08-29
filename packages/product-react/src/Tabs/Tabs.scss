@@ -27,7 +27,7 @@ $hover-animation-time: 0.33s;
 
     transform-origin: center;
     transform: scaleX(0);
-    transition: transform $transition-timing $easing;
+    transition: transform $transition-timing $easing; // stylelint-disable-line property-blacklist
   }
 
   &:hover {
@@ -51,10 +51,6 @@ $hover-animation-time: 0.33s;
 
   @include underline-hover($hover-border-size, $hover-animation-time);
 
-  & + & {
-    margin-left: 10px;
-  }
-
   & button {
     width: 100%;
   }
@@ -63,7 +59,7 @@ $hover-animation-time: 0.33s;
 .ray-tabs__button-wrapper--active {
   &::after {
     @include tab-border($hover-border-size, $ray-color-blue-50);
-    transition: unset;
+    transition: unset; // stylelint-disable-line property-blacklist
     animation: unset;
     transform: none;
   }

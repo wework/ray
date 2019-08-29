@@ -1,9 +1,10 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 
-import '@wework/ray-core/scss/ray-core.scss';
+import '@wework/ray-core/src/ray-core.scss';
 
-const req = require.context('../stories', true, /.stories.js$/);
+// automatically import all files matching the given regex
+const req = require.context('../src', true, /.story.tsx?$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

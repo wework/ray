@@ -21,6 +21,11 @@
     "@babel/core": "7.4.4",
     "@babel/plugin-proposal-class-properties": "7.4.4",
     "@babel/preset-env": "7.3.4",
+    "@types/classnames": "^2.2.9",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.18",
+    "@types/react-dom": "^16.9.0",
+    "@types/storybook__react": "^4.0.2",
     "babel-eslint": "10.0.1",
     "babel-jest": "^24.8.0",
     "commitizen": "^3.0.7",
@@ -37,7 +42,8 @@
     "lerna": "3.13.4",
     "lint-staged": "8.1.4",
     "prettier": "1.16.4",
-    "stylelint": "^9.10.1"
+    "stylelint": "^9.10.1",
+    "typescript": "^3.6.2"
   },
   "scripts": {
     "dev": "lerna run dev --parallel",
