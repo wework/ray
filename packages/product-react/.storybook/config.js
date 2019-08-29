@@ -3,7 +3,6 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 
 import '@wework/ray-core/src/ray-core.scss';
 
-// automatically import all files matching the given regex
 const req = require.context('../src', true, /.story.tsx?$/);
 
 function loadStories() {

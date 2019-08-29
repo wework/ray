@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Button should match snapshot and styles for default props 1`] = `
-"<ForwardRef onClick={[Function: mockConstructor]} compact={false} danger={false} disabled={false} type=\\"primary\\">
-  <button className=\\"ray-button ray-button--primary\\" disabled={false} tabIndex={[undefined]} onClick={[Function: mockConstructor]} />
-</ForwardRef>"
-`;
