@@ -2,12 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-export default function Container({ className, ...props }) {
+export default function Container({ className, Tag, ...props }) {
   const classes = clsx('ray-page-container', className);
 
-  return <div className={classes} {...props} />;
+  return <Tag className={classes} {...props} />;
 }
 
+Container.defaultProps = {
+  Tag: 'div'
+};
+
 Container.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  Tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 };

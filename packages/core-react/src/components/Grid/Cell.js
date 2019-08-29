@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 const BREAKPOINTS = ['phone', 'tablet', 'desktop'];
 
-export default function Cell({ className, push, span, ...props }) {
+export default function Cell({ className, push, span, Tag, ...props }) {
   const breakpointClasses = BREAKPOINTS.reduce((memo, breakpointName) => {
     const spanKey = `span-${breakpointName}`;
     if (props[spanKey]) {
@@ -29,11 +29,16 @@ export default function Cell({ className, push, span, ...props }) {
     className
   );
 
-  return <div className={classes} {...props} />;
+  return <Tag className={classes} {...props} />;
 }
+
+Cell.defaultProps = {
+  Tag: 'div'
+};
 
 Cell.propTypes = {
   className: PropTypes.string,
   span: PropTypes.number,
-  push: PropTypes.number
+  push: PropTypes.number,
+  Tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 };
