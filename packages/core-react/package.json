@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core-react",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "A React wrapper component library for the Ray design system",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
