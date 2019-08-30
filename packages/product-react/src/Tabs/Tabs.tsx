@@ -67,6 +67,7 @@ export const Tabs: React.FC<IProps> = props => {
               })}
             >
               <Button
+                className="ray-product__button"
                 type="tertiary"
                 aria-label={tab.ariaLabel}
                 aria-selected={tabIsActive}

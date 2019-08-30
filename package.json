@@ -42,8 +42,7 @@
     "lerna": "3.13.4",
     "lint-staged": "8.1.4",
     "prettier": "1.16.4",
-    "stylelint": "^9.10.1",
-    "typescript": "^3.6.2"
+    "stylelint": "^9.10.1"
   },
   "scripts": {
     "dev": "lerna run dev --parallel",

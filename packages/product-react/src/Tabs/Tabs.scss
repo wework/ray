@@ -51,7 +51,7 @@ $hover-animation-time: 0.33s;
 
   @include underline-hover($hover-border-size, $hover-animation-time);
 
-  & button {
+  & .ray-product__button {
     width: 100%;
   }
 }
