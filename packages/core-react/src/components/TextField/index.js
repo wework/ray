@@ -10,6 +10,7 @@ export default function TextField({
   required,
   value,
   error,
+  success,
   compact,
   label,
   className,
@@ -20,6 +21,7 @@ export default function TextField({
     {
       'ray-text-field--has-value': value,
       'ray-text-field--error': error,
+      'ray-text-field--success': success,
       'ray-text-field--disabled': disabled,
       'ray-text-field--required': required,
       'ray-text-field--compact': compact
@@ -53,9 +55,10 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
+  error: PropTypes.bool,
+  success: PropTypes.bool,
   compact: PropTypes.bool,
   value: PropTypes.string,
-  error: PropTypes.string,
   label: PropTypes.string,
   className: PropTypes.string
 };
