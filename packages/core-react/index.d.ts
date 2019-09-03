@@ -16,7 +16,7 @@ export type ButtonProps = {
   danger?: boolean;
   disabled?: boolean;
   className?: string;
-};
+} & React.HTMLProps<HTMLButtonElement>;
 
 declare const Button: React.FC<ButtonProps>;
 
