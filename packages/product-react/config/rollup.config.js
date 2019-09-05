@@ -5,7 +5,7 @@ const replace = require('rollup-plugin-replace');
 const babelConfig = require('../babel.config');
 
 module.exports = {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: {
     name: 'Ray.ProductReact',
     file: 'dist/index.bundle.js',
