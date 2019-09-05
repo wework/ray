@@ -1,6 +1,6 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
-
+import { withA11y } from '@storybook/addon-a11y';
 import '@wework/ray-core/src/ray-core.scss';
 
 const req = require.context('../src', true, /.story.tsx?$/);
@@ -9,7 +9,6 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-// wrap every view in some spacing padding
 addDecorator(story => (
   <div
     style={{
@@ -19,6 +18,8 @@ addDecorator(story => (
     {story()}
   </div>
 ));
+
+addDecorator(withA11y);
 
 addParameters({
   options: {
