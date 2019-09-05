@@ -9,10 +9,10 @@ export type TextFieldProps = {
 declare const TextField: React.FC<TextFieldProps>;
 
 export type RadioProps = {
-  className?: string,
-  id: string,
-  label?: React.ReactNode
-  name?: string,
+  className?: string;
+  id?: string;
+  label?: React.ReactNode;
+  name?: string;
 } & React.HTMLProps<HTMLInputElement>;
 
 declare const Radio: React.FC<RadioProps>;
