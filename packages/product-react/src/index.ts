@@ -1,3 +1,3 @@
 import '@wework/ray-core/scss/ray-core.scss';
 
-export * from './Tabs';
+export * from './components/Tabs';
