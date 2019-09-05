@@ -1,3 +1,4 @@
+const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const babel = require('rollup-plugin-babel');
@@ -17,9 +18,10 @@ module.exports = {
     }
   },
   plugins: [
+    typescript(),
     resolve(),
     commonjs({
-      include: /node_modules/
+      include: '/node_modules/'
     }),
     babel({
       babelrc: false,
