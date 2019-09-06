@@ -46,10 +46,50 @@ export type ButtonProps = {
 
 declare const Button: React.FC<ButtonProps>;
 
+export type TextAreaProps = {
+  id?: string.isRequired;
+  type?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  required?: boolean;
+  compact?: boolean;
+  value?: string;
+  error?: string;
+  label?: React.ReactNode;
+  className?: string;
+} & React.HTMLProps<HTMLTextAreaElement>;
+
+declare const TextArea: React.FC<TextAreaProps>;
+
+export type CheckboxProps = {
+  className?: string;
+  id?: string;
+  label?: React.ReactNode;
+  name?: string;
+} & React.HTMLProps<HTMLInputElement>;
+
+declare const Checkbox: React.FC<CheckboxProps>;
+
+export type SelectProps = {
+  className?: string;
+  id?: string;
+  name?: string;
+  label?: React.ReactNode;
+  compact?: boolean;
+  disabled?: boolean;
+  placeholder?: string;
+  children?: React.ReactNode;
+} & React.HTMLProps<HTMLSelectElement>;
+
+declare const Select: React.FC<SelectProps>;
+
 export { 
   Button, 
+  Checkbox,
   Container, 
   Grid, 
   Radio,
   TextField, 
+  TextArea,
+  Select
 };
