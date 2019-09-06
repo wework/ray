@@ -8,6 +8,25 @@ export type TextFieldProps = {
 
 declare const TextField: React.FC<TextFieldProps>;
 
+export type CardProps = {
+  body?: React.ReactNode;
+  className?: string;
+  heading?: React.ReactNode;
+  img?: React.ReactNode;
+  row?: boolean;
+};
+
+declare const Card: React.FC<CardProps>;
+
+export type RadioProps = {
+  className?: string;
+  id?: string;
+  label?: React.ReactNode;
+  name?: string;
+} & React.HTMLProps<HTMLInputElement>;
+
+declare const Radio: React.FC<RadioProps>;
+
 export type ContainerProps = {
   Tag?: React.ElementType<any>;
 } & React.HTMLProps<HTMLElement>;
@@ -61,4 +80,27 @@ export type CheckboxProps = {
 
 declare const Checkbox: React.FC<CheckboxProps>;
 
-export { Button, Container, Grid, TextField, TextArea, Checkbox };
+export type SelectProps = {
+  className?: string;
+  id?: string;
+  name?: string;
+  label?: React.ReactNode;
+  compact?: boolean;
+  disabled?: boolean;
+  placeholder?: string;
+  children?: React.ReactNode;
+} & React.HTMLProps<HTMLSelectElement>;
+
+declare const Select: React.FC<SelectProps>;
+
+export {
+  Button,
+  Card,
+  Checkbox,
+  Container,
+  Grid,
+  Radio,
+  Select,
+  TextArea,
+  TextField
+};
