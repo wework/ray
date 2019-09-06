@@ -52,4 +52,20 @@ export type TextAreaProps = {
 
 declare const TextArea: React.FC<TextAreaProps>;
 
-export { Button, Container, Grid, TextField, TextArea };
+export type CheckboxProps = {
+  className?: string,
+  id?: string,
+  label?: React.ReactNode
+  name?: string,
+} & React.HTMLProps<HTMLInputElement>;
+
+declare const Checkbox: React.FC<CheckboxProps>;
+
+export { 
+  Button, 
+  Container, 
+  Grid, 
+  TextField, 
+  TextArea,
+  Checkbox
+};
