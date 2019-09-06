@@ -8,6 +8,16 @@ export type TextFieldProps = {
 
 declare const TextField: React.FC<TextFieldProps>;
 
+export type CardProps = {
+  body?: React.ReactNode;
+  className?: string;
+  heading?: React.ReactNode;
+  img?: React.ReactNode;
+  row?: boolean;
+};
+
+declare const Card: React.FC<CardProps>;
+
 export type RadioProps = {
   className?: string;
   id?: string;
@@ -47,7 +57,7 @@ export type ButtonProps = {
 declare const Button: React.FC<ButtonProps>;
 
 export type TextAreaProps = {
-  id?: string.isRequired;
+  id?: string;
   type?: string;
   placeholder?: string;
   disabled?: boolean;
@@ -85,11 +95,12 @@ declare const Select: React.FC<SelectProps>;
 
 export { 
   Button, 
+  Card,
   Checkbox,
   Container, 
   Grid, 
   Radio,
-  TextField, 
+  Select,
   TextArea,
-  Select
+  TextField, 
 };
