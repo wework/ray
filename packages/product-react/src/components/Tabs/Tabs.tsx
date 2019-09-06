@@ -160,18 +160,31 @@ function useFocusManager(props: IFocusManager) {
     });
   };
 
-  const focusRoving = ({ key }: { key: string }) => {
+  const focusRoving = (e: KeyboardEvent) => {
+    const KeyEvents = {
+      ArrowLeft: 'ArrowLeft',
+      ArrowRight: 'ArrowRight',
+      Home: 'Home',
+      End: 'End'
+    };
+
+    const { key } = e;
+
+    if (getObjectValues(KeyEvents).includes(key)) {
+      e.preventDefault();
+    }
+
     switch (key) {
-      case 'ArrowLeft':
+      case KeyEvents.ArrowLeft:
         focusPreviousTab();
         break;
-      case 'ArrowRight':
+      case KeyEvents.ArrowRight:
         focusNextTab();
         break;
-      case 'Home':
+      case KeyEvents.Home:
         focusFirstTab();
         break;
-      case 'End':
+      case KeyEvents.End:
         focusLastTab();
         break;
     }
@@ -215,4 +228,8 @@ function getLastIndex(arr: any[]) {
 
 function getIdAt(tabs: ITab[], index: number) {
   return tabs[index].id;
+}
+
+function getObjectValues(obj: { [index: string]: any }) {
+  return Object.keys(obj).map(key => obj[key]);
 }
