@@ -38,7 +38,7 @@ export type ButtonProps = {
 declare const Button: React.FC<ButtonProps>;
 
 export type TextAreaProps = {
-  id?: string.isRequired;
+  id?: string;
   type?: string;
   placeholder?: string;
   disabled?: boolean;
@@ -53,19 +53,12 @@ export type TextAreaProps = {
 declare const TextArea: React.FC<TextAreaProps>;
 
 export type CheckboxProps = {
-  className?: string,
-  id?: string,
-  label?: React.ReactNode
-  name?: string,
+  className?: string;
+  id?: string;
+  label?: React.ReactNode;
+  name?: string;
 } & React.HTMLProps<HTMLInputElement>;
 
 declare const Checkbox: React.FC<CheckboxProps>;
 
-export { 
-  Button, 
-  Container, 
-  Grid, 
-  TextField, 
-  TextArea,
-  Checkbox
-};
+export { Button, Container, Grid, TextField, TextArea, Checkbox };
