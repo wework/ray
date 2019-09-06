@@ -37,9 +37,19 @@ export type ButtonProps = {
 
 declare const Button: React.FC<ButtonProps>;
 
+export type CheckboxProps = {
+  className?: string,
+  id?: string,
+  label?: React.ReactNode
+  name?: string,
+} & React.HTMLProps<HTMLInputElement>;
+
+declare const Checkbox: React.FC<CheckboxProps>;
+
 export { 
   Button, 
   Container, 
   Grid, 
   TextField, 
+  Checkbox
 };
