@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.2](https://github.com/wework/ray/compare/v1.11.1...v1.11.2) (2019-09-06)
+
+**Note:** Version bump only for package @wework/ray-core-react
+
+
+
+
+
+## [1.11.1](https://github.com/wework/ray/compare/v1.11.0...v1.11.1) (2019-09-05)
+
+
+### Bug Fixes
+
+* **core-react:** Exporting existing components for use! ([#210](https://github.com/wework/ray/issues/210)) ([92dc4ce](https://github.com/wework/ray/commit/92dc4ce))
+
+
+
+
+
+# [1.11.0](https://github.com/wework/ray/compare/v1.10.2...v1.11.0) (2019-09-04)
+
+
+### Features
+
+* **core-react:** add typings to index.d.ts for Container, Grid, & Cell ([#218](https://github.com/wework/ray/issues/218)) ([792916c](https://github.com/wework/ray/commit/792916c))
+
+
+
+
+
 ## [1.10.2](https://github.com/wework/ray/compare/v1.10.1...v1.10.2) (2019-09-04)
 
 **Note:** Version bump only for package @wework/ray-core-react

@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
-import { Tabs, TabView } from './';
+import { Tabs, TabView } from '../src/components/Tabs';
 
 const TestView: React.FC<{ header: string; imageSrc: string }> = ({
   header,
