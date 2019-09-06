@@ -19,6 +19,6 @@
     "useBabel": true,
     "babelCore": "@babel/core"
   },
-  "include": ["packages", "packages/**/*.d.ts"],
-  "exclude": ["node_modules", "packages/**/dist"]
+  "include": ["src/**/*", "src/**/*d.ts"],
+  "exclude": []
 }
