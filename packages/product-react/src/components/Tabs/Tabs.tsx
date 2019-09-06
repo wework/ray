@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import clsx from 'clsx';
 import * as React from 'react';
 import { Button } from '@wework/ray-core-react';
 import { TabContext } from './context';
@@ -62,7 +62,7 @@ export const Tabs: React.FC<IProps> = props => {
           return (
             <div
               key={tab.id}
-              className={classnames('ray-tabs__button-wrapper', {
+              className={clsx('ray-tabs__button-wrapper', {
                 'ray-tabs__button-wrapper--active': tabIsActive
               })}
             >
