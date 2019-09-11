@@ -7,26 +7,43 @@ storiesOf('Select', module)
   .add('default', () => {
     return (
       <Select id="select-test" label="henlo">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value={1}>WeWork</option>
+        <option value={2}>WeLive</option>
+        <option value={3}>WeGrow</option>
+        <option value={4}>WeTech</option>
+      </Select>
+    );
+  })
+  .add('default w/ placeholder', () => {
+    return (
+      <Select
+        id="select-test"
+        label="henlo"
+        placeholder="Please select a value"
+      >
+        <option value="1">WeWork</option>
+        <option value="2">WeLive</option>
+        <option value="3">WeGrow</option>
+        <option value="4">WeTech</option>
       </Select>
     );
   })
   .add('compact', () => {
     return (
       <Select id="select-test" compact={true} label="henlo">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value={1}>WeWork</option>
+        <option value={2}>WeLive</option>
+        <option value={3}>WeGrow</option>
+        <option value={4}>WeTech</option>
       </Select>
     );
   })
   .add('select w/ error', () => (
     <Select label="name" error={true} value={1}>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
+      <option value={1}>WeWork</option>
+      <option value={2}>WeLive</option>
+      <option value={3}>WeGrow</option>
+      <option value={4}>WeTech</option>
     </Select>
   ))
   .add('select w/ icon start', () => (
@@ -41,9 +58,10 @@ storiesOf('Select', module)
         </svg>
       }
     >
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
+      <option value={1}>WeWork</option>
+      <option value={2}>WeLive</option>
+      <option value={3}>WeGrow</option>
+      <option value={4}>WeTech</option>
     </Select>
   ))
   .add('select w/ icon end', () => (
@@ -58,9 +76,10 @@ storiesOf('Select', module)
         </svg>
       }
     >
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
+      <option value={1}>WeWork</option>
+      <option value={2}>WeLive</option>
+      <option value={3}>WeGrow</option>
+      <option value={4}>WeTech</option>
     </Select>
   ))
   .add('select w/ icon prepend', () => (
@@ -80,9 +99,10 @@ storiesOf('Select', module)
         </svg>
       }
     >
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
+      <option value={1}>WeWork</option>
+      <option value={2}>WeLive</option>
+      <option value={3}>WeGrow</option>
+      <option value={4}>WeTech</option>
     </Select>
   ))
   .add('select w/ icon end prepend', () => (
@@ -102,8 +122,9 @@ storiesOf('Select', module)
         </svg>
       }
     >
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
+      <option value={1}>WeWork</option>
+      <option value={2}>WeLive</option>
+      <option value={3}>WeGrow</option>
+      <option value={4}>WeTech</option>
     </Select>
   ));

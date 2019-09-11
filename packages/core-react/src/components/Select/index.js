@@ -20,7 +20,7 @@ export default function Select({
   active = false,
   error = false,
   prepend = false,
-  iconPosition = 'iconstart',
+  iconPosition,
   icon,
   value = '',
   children,
@@ -46,11 +46,19 @@ export default function Select({
       setValue(value);
     }
   }, []);
+  let iconStart;
+  let iconEnd;
 
-  const iconStart = iconPosition === 'iconstart';
-  const iconEnd = iconPosition === 'iconend';
+  if (iconPosition) {
+    iconStart = iconPosition === 'iconstart';
+    iconEnd = iconPosition === 'iconend';
+  } else {
+    iconStart = false;
+    iconEnd = false;
+  }
+
   return (
-    <div dir={iconStart ? '' : 'rtl'}>
+    <div dir={iconEnd ? 'rtl' : ''}>
       <div
         className={clsx(
           'ray-select',
@@ -78,7 +86,9 @@ export default function Select({
             value={currValue}
             {...rest}
           >
-            <option disabled>{placeholder}</option>
+            <option value="" disabled selected data-ray-placeholder>
+              {placeholder}
+            </option>
             {children}
           </select>
 
