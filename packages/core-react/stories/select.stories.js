@@ -23,7 +23,7 @@ storiesOf('Select', module)
   .add('select w/ icon start', () => (
     <Select
       label="name"
-      iconPosition={'iconstart'}
+      iconPosition="iconstart"
       icon={
         <svg className="ray-select__icon--start" viewBox="0 0 25 25">
           <g id="budicon-profile-picture">
@@ -40,7 +40,7 @@ storiesOf('Select', module)
   .add('select w/ icon end', () => (
     <Select
       label="name"
-      iconPosition={'iconend'}
+      iconPosition="iconend"
       icon={
         <svg className="ray-select__icon--start" viewBox="0 0 25 25">
           <g id="budicon-profile-picture">
@@ -58,7 +58,7 @@ storiesOf('Select', module)
     <Select
       label="name"
       prepend={true}
-      iconPosition={'iconstart'}
+      iconPosition="iconstart"
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ storiesOf('Select', module)
     <Select
       label="name"
       prepend={true}
-      iconPosition={'iconend'}
+      iconPosition="iconend"
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"

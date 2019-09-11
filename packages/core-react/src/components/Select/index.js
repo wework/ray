@@ -108,7 +108,7 @@ Select.propTypes = {
   value: PropTypes.number,
   error: PropTypes.bool,
   prepend: PropTypes.bool,
-  iconPosition: PropTypes.string,
+  iconPosition: PropTypes.oneOf(['iconstart', 'iconend']),
   icon: PropTypes.node
 };
 
