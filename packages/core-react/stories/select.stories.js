@@ -6,6 +6,15 @@ import '../src/components/Select/Select.scss';
 storiesOf('Select', module)
   .add('default', () => {
     return (
+      <Select id="select-test" label="henlo">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </Select>
+    );
+  })
+  .add('compact', () => {
+    return (
       <Select id="select-test" compact={true} label="henlo">
         <option value="1">1</option>
         <option value="2">2</option>

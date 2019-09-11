@@ -49,46 +49,42 @@ export default function Select({
 
   const iconStart = iconPosition === 'iconstart';
   const iconEnd = iconPosition === 'iconend';
-
   return (
     <div dir={iconStart ? '' : 'rtl'}>
-      <div className="ray-form-item">
-        <div
-          className={clsx(
-            'ray-select',
-            {
-              'ray-select--active': activeClass,
-              'ray-select--has-value': placeholder || currValue,
-              'ray-select--compact': compact,
-              'ray-select--disabled': disabled,
-              'ray-select--error': error,
-              'ray-select--with-prepend': prepend,
-              'ray-select--with-icon-start': iconStart,
-              'ray-select--with-icon-end': iconEnd
-            },
-            className
-          )}
-        >
-          <InputIcon icon={icon} prepend={prepend} />
-          <div className="ray-select__wrapper">
-            <select
-              className="ray-select__input"
-              name={name}
-              disabled={disabled}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              onFocus={handleFocus}
-              value={currValue}
-              {...rest}
-            >
-              <option disabled>{placeholder}</option>
-              {children}
-            </select>
+      <div
+        className={clsx(
+          'ray-select',
+          {
+            'ray-select--active': activeClass,
+            'ray-select--has-value': placeholder || currValue,
+            'ray-select--compact': compact,
+            'ray-select--disabled': disabled,
+            'ray-select--error': error,
+            'ray-select--with-prepend': prepend,
+            'ray-select--with-icon-start': iconStart || iconEnd
+          },
+          className
+        )}
+      >
+        <InputIcon icon={icon} prepend={prepend} />
+        <div className="ray-select__wrapper">
+          <select
+            className="ray-select__input"
+            name={name}
+            disabled={disabled}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            onFocus={handleFocus}
+            value={currValue}
+            {...rest}
+          >
+            <option disabled>{placeholder}</option>
+            {children}
+          </select>
 
-            <label className="ray-select__label" htmlFor={id}>
-              {label}
-            </label>
-          </div>
+          <label className="ray-select__label" htmlFor={id}>
+            {label}
+          </label>
         </div>
       </div>
     </div>
