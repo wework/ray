@@ -95,6 +95,7 @@ export type SelectProps = {
   error?:boolean,
   active?:boolean,
   iconPosition?: IconPositions;
+  onChange?:void;
   children?: React.ReactNode;
 } & React.HTMLProps<HTMLSelectElement>;
 

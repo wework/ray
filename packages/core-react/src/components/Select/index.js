@@ -24,6 +24,7 @@ export default function Select({
   icon,
   value = '',
   children,
+  onChange,
   ...rest
 }) {
   const [activeClass, setActiveState] = React.useState(active);
@@ -39,6 +40,7 @@ export default function Select({
 
   const handleChange = event => {
     setValue(event.target.value);
+    onChange(event);
   };
 
   React.useEffect(() => {
@@ -115,7 +117,8 @@ Select.propTypes = {
   error: PropTypes.bool,
   prepend: PropTypes.bool,
   iconPosition: PropTypes.oneOf(['iconstart', 'iconend']),
-  icon: PropTypes.node
+  icon: PropTypes.node,
+  onChange: PropTypes.func
 };
 
 InputIcon.propTypes = {
