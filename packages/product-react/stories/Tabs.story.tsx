@@ -81,4 +81,24 @@ storiesOf('Core Comps | Tabs', module)
         <Views />
       </Tabs>
     );
+  })
+  .add('scrolling', () => {
+    return (
+      <Tabs
+        tabs={Array(20)
+          .fill(null)
+          .map((_, i) => ({
+            id: String(i),
+            ariaLabel: 'testing',
+            label: `Tab ${i}`
+          }))}
+      >
+        <TabView id="0">
+          <TestView
+            header="Test 1"
+            imageSrc="http://cdn.akc.org/content/article-body-image/siberian_husky_cute_puppies.jpg"
+          />
+        </TabView>
+      </Tabs>
+    );
   });

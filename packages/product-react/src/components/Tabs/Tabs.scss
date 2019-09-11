@@ -3,6 +3,7 @@
 $easing: cubic-bezier(0.694, 0.0482, 0.335, 1);
 $hover-border-size: 2px;
 $hover-animation-time: 0.33s;
+$hover-border-color: #ccccff;
 
 @mixin tab-border($border-size, $color) {
   content: '';
@@ -23,7 +24,7 @@ $hover-animation-time: 0.33s;
   text-decoration: none;
 
   &::after {
-    @include tab-border($border-size, $ray-color-black);
+    @include tab-border($border-size, $hover-border-color);
 
     transform-origin: center;
     transform: scaleX(0);
@@ -42,13 +43,14 @@ $hover-animation-time: 0.33s;
 
 .ray-tabs__wrapper {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
+  overflow: auto;
 }
 
 .ray-tabs__button-wrapper {
   position: relative;
   flex: 1;
+  flex-basis: 50px;
 
   @include underline-hover($hover-border-size, $hover-animation-time);
 
