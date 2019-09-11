@@ -93,12 +93,22 @@ export type SelectProps = {
 
 declare const Select: React.FC<SelectProps>;
 
+export type ImageProps = {
+  className?: string;
+  src: string;
+  aspect: '16by9' | '1by1' | '3by4' | '4by3' | 'cinema';
+  bg?: boolean;
+} & React.HTMLProps<HTMLImageElement>;
+
+declare const Image: React.FC<ImageProps>;
+
 export {
   Button,
   Card,
   Checkbox,
   Container,
   Grid,
+  Image,
   Radio,
   Select,
   TextArea,

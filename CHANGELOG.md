@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/wework/ray/compare/v1.11.5...v1.12.0) (2019-09-10)
+
+
+### Features
+
+* **core-react:** add types for image ([#228](https://github.com/wework/ray/issues/228)) ([b345596](https://github.com/wework/ray/commit/b345596))
+
+
+
+
+
 ## [1.11.5](https://github.com/wework/ray/compare/v1.11.4...v1.11.5) (2019-09-06)
 
 **Note:** Version bump only for package root
