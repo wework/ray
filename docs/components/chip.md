@@ -48,6 +48,7 @@ chip.destroy();
 
 Use these modifiers with `.ray-chip` class.
 
-| Selector            | Description                              |
-| ------------------- | ---------------------------------------- |
-| `.ray-chip--active` | Selector for applying active chip styles |
+| Selector              | Description                                |
+| --------------------- | ------------------------------------------ |
+| `.ray-chip--active`   | Selector for applying active chip styles   |
+| `.ray-chip--disabled` | Selector for applying disabled chip styles |

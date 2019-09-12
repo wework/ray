@@ -3,7 +3,8 @@ class Chip {
 
   static get cssClasses() {
     return {
-      ACTIVE: 'ray-chip--active'
+      ACTIVE: 'ray-chip--active',
+      DISABLED: 'ray-chip--disabled'
     };
   }
 
@@ -17,7 +18,10 @@ class Chip {
     return this.instances.get(element) || new this(element, options);
   }
 
-  static createAll(target = document, _options = { active: false }) {
+  static createAll(
+    target = document,
+    _options = { active: false, disabled: false }
+  ) {
     // Finds all instances of select on the document or within a given element and instantiates them.
     const options = {
       initSelector: this.strings.INIT_SELECTOR,
@@ -34,7 +38,10 @@ class Chip {
     this.constructor.instances.set(this._root, this);
 
     this.state = {
-      active: this._root.classList.contains(this.constructor.cssClasses.ACTIVE)
+      active: this._root.classList.contains(this.constructor.cssClasses.ACTIVE),
+      disabled: this._root.classList.contains(
+        this.constructor.cssClasses.DISABLED
+      )
     };
 
     this._bindEventListeners();
@@ -49,23 +56,29 @@ class Chip {
   assignClasses() {
     if (this.state.active) {
       this._root.classList.add(this.constructor.cssClasses.ACTIVE);
+    } else if (this.state.disabled) {
+      this._root.classList.add(this.constructor.cssClasses.DISABLED);
     } else {
       this._root.classList.remove(this.constructor.cssClasses.ACTIVE);
     }
   }
 
   onClick = () => {
-    this.state.active = !this.state.active;
-    this.assignClasses();
-    this.emitChange();
-  };
-
-  onSpace = event => {
-    if (event.code === 'Space' || event.key === ' ') {
+    if (!this.state.disabled) {
       this.state.active = !this.state.active;
       this.assignClasses();
       this.emitChange();
-      event.preventDefault();
+    }
+  };
+
+  onSpace = event => {
+    if (!this.state.disabled) {
+      if (event.code === 'Space' || event.key === ' ') {
+        this.state.active = !this.state.active;
+        this.assignClasses();
+        this.emitChange();
+        event.preventDefault();
+      }
     }
   };
 
@@ -85,6 +98,12 @@ class Chip {
 
   set(isActive) {
     this.state.active = isActive;
+    this.assignClasses();
+    this.emitChange();
+  }
+
+  disable(isDisabled) {
+    this.state.disabled = isDisabled;
     this.assignClasses();
     this.emitChange();
   }

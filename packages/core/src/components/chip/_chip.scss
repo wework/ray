@@ -56,6 +56,16 @@ $ray-chip-height: $ray-spacing-xs * 2 + 1rem;
     }
   }
 
+  .#{$ray-class-prefix}chip--disabled {
+    color: $ray-color-gray-30 !important;
+    border-color: $ray-color-gray-30 !important;
+
+    &:hover {
+      background-color: $ray-color-white !important;
+      color: $ray-color-gray-30 !important;
+    }
+  }
+
   .#{$ray-class-prefix}chip__icon-wrapper {
     display: flex;
     align-items: center;
