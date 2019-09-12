@@ -19,6 +19,8 @@ export default function Select({
   value = '',
   children,
   onChange,
+  onFocus,
+  onBlur,
   ...rest
 }) {
   const [activeClass, setActiveState] = React.useState(active);
@@ -26,10 +28,16 @@ export default function Select({
 
   const handleFocus = () => {
     setActiveState(true);
+    if (onFocus) {
+      onFocus();
+    }
   };
 
   const handleBlur = () => {
     setActiveState(false);
+    if (onBlur) {
+      onBlur();
+    }
   };
 
   const handleChange = event => {
@@ -114,5 +122,14 @@ Select.propTypes = {
   prepend: PropTypes.bool,
   iconPosition: PropTypes.oneOf(['iconstart', 'iconend']),
   icon: PropTypes.node,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func
+};
+
+Select.defaultProps = {
+  active: false,
+  compact: false,
+  error: false,
+  prepend: false
 };
