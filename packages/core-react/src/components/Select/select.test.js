@@ -60,6 +60,11 @@ describe('Select', () => {
       component.setProps({ prepend: true });
       expect(component.props().prepend).toEqual(true);
     });
+
+    it('has value property that can be set (:number)', () => {
+      component.setProps({ value: 4 });
+      expect(component.props().value).toEqual(4);
+    });
   });
 
   describe('Classes & Composed Classes', () => {
