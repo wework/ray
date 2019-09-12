@@ -1,13 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-
-export const InputIcon = ({ prepend, icon }) => {
-  if (prepend) {
-    return <div className="ray-select__prepend">{icon}</div>;
-  }
-  return <div>{icon}</div>;
-};
+import Icon from '../Common/Icon';
 
 export default function Select({
   className,
@@ -40,7 +34,9 @@ export default function Select({
 
   const handleChange = event => {
     setValue(event.target.value);
-    onChange(event);
+    if (onChange) {
+      onChange(event);
+    }
   };
 
   React.useEffect(() => {
@@ -76,7 +72,7 @@ export default function Select({
           className
         )}
       >
-        <InputIcon icon={icon} prepend={prepend} />
+        <Icon icon={icon} prepend={prepend} />
         <div className="ray-select__wrapper">
           <select
             className="ray-select__input"
@@ -85,10 +81,10 @@ export default function Select({
             onChange={handleChange}
             onBlur={handleBlur}
             onFocus={handleFocus}
-            value={currValue}
+            value={currValue || ''}
             {...rest}
           >
-            <option value="" disabled selected data-ray-placeholder>
+            <option value="" disabled data-ray-placeholder>
               {placeholder}
             </option>
             {children}
@@ -119,9 +115,4 @@ Select.propTypes = {
   iconPosition: PropTypes.oneOf(['iconstart', 'iconend']),
   icon: PropTypes.node,
   onChange: PropTypes.func
-};
-
-InputIcon.propTypes = {
-  prepend: PropTypes.bool,
-  icon: PropTypes.node
 };
