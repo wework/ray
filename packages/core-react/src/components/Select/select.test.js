@@ -45,18 +45,18 @@ describe('Select', () => {
       expect(component.props().error).toEqual(true);
     });
 
-    it('has default "ICONSTART" property that can be set (:boolean)', () => {
+    it('has default "ICONSTART" property that can be set (:string)', () => {
       component.setProps({ iconPosition: 'iconstart' });
       expect(component.find('.ray-select--with-icon-start')).toHaveLength(1);
     });
 
-    it('has default "ICONEND" property that can be set (:any)', () => {
+    it('has default "ICONEND" property that can be set (:string)', () => {
       expect(component.find('.ray-select--with-icon-start')).toHaveLength(0);
       component.setProps({ iconPosition: 'iconend' });
       expect(component.find('.ray-select--with-icon-start')).toHaveLength(1);
     });
 
-    it('has default "ICONPREPEND" property that can be set (:any)', () => {
+    it('has default "prepend" property that can be set (:true)', () => {
       component.setProps({ prepend: true });
       expect(component.props().prepend).toEqual(true);
     });
