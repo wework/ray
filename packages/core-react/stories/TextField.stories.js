@@ -26,7 +26,7 @@ storiesOf('TextField', module)
   .add('compact', () => (
     <TextField id="example" value="worlds" placeholder="hello" compact />
   ))
-  .add('Email Input w/ Hint', () => {
+  .add('Input w/ Hint', () => {
     return (
       <TextField
         label="Email Address"
@@ -37,7 +37,7 @@ storiesOf('TextField', module)
       />
     );
   })
-  .add('Email Input w/ Hint Error', () => {
+  .add('TextField w/ Hint Error', () => {
     return (
       <TextField
         label="Email Address"
@@ -48,7 +48,7 @@ storiesOf('TextField', module)
       />
     );
   })
-  .add('Email Input w/ Hint Success', () => {
+  .add('TextField w/ Hint Success', () => {
     return (
       <TextField
         label="Email Address"
@@ -59,7 +59,7 @@ storiesOf('TextField', module)
       />
     );
   })
-  .add('Text Input w/ Icon Start', () => {
+  .add('TextField w/ Icon Start', () => {
     return (
       <TextField
         label="Email Address"
@@ -77,7 +77,7 @@ storiesOf('TextField', module)
       />
     );
   })
-  .add('Text Input w/ Icon End', () => {
+  .add('TextField w/ Icon End', () => {
     return (
       <TextField
         label="Email Address"
@@ -95,14 +95,14 @@ storiesOf('TextField', module)
       />
     );
   })
-  .add('Text Input w/ Icon Start w/ Prepend', () => {
+  .add('TextField w/ Icon Start w/ Prepend', () => {
     return (
       <TextField
         label="Email Address"
         id="unique456"
         type="email"
         placeholder="arya.stark@winterfell.org"
-        // iconPrepend={true}
+        // prepend={true}
         icon={
           <svg
             xmlns="http://www.w3.org/2000/svg"

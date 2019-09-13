@@ -19,10 +19,12 @@ export default function TextField({
   onBlur,
   onKeyUp,
   hint,
-  iconPrepend,
   hintSuccess,
   hintError,
   className,
+  iconStart,
+  iconEnd,
+  prepend,
   ...rest
 }) {
   const [inputValue, setInputValue] = React.useState(value);
@@ -36,7 +38,10 @@ export default function TextField({
       'ray-text-field--success': success,
       'ray-text-field--disabled': disabled,
       'ray-text-field--required': required,
-      'ray-text-field--compact': compact
+      'ray-text-field--compact': compact,
+      'ray-text-field--with-icon-start': iconStart,
+      'ray-text-field--with-icon-end': iconEnd,
+      'ray-text-field--with-prepend': prepend
     },
     className
   );
@@ -117,7 +122,9 @@ TextField.propTypes = {
   hint: PropTypes.string,
   hintSuccess: PropTypes.string,
   hintError: PropTypes.string,
-  iconPrepend: PropTypes.bool
+  prepend: PropTypes.bool,
+  iconStart: PropTypes.bool,
+  iconEnd: PropTypes.bool
 };
 
 TextField.defaultProps = {
@@ -129,6 +136,6 @@ TextField.defaultProps = {
   hint: '',
   hintError: '',
   hintSuccess: '',
-  iconPrepend: false,
+  prepend: false,
   success: false
 };

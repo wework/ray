@@ -39,5 +39,27 @@ describe('TextField', () => {
       component.setProps({ hintError: 'This is a red hint.' });
       expect(component.props().hintError).toEqual('This is a red hint.');
     });
+
+    it('has default "ICONSTART" property that can be set (:boolean)', () => {
+      expect(component.find('.ray-text-field--with-icon-start')).toHaveLength(
+        0
+      );
+      component.setProps({ iconStart: true });
+      expect(component.find('.ray-text-field--with-icon-start')).toHaveLength(
+        1
+      );
+    });
+
+    it('has default "ICONEND" property that can be set (:boolean)', () => {
+      expect(component.find('.ray-text-field--with-icon-end')).toHaveLength(0);
+      component.setProps({ iconEnd: true });
+      expect(component.find('.ray-text-field--with-icon-end')).toHaveLength(1);
+    });
+
+    it('has default "ICONPREPEND" property that can be set (:boolean)', () => {
+      expect(component.props().prepend).toEqual(false);
+      component.setProps({ prepend: true });
+      expect(component.props().prepend).toEqual(true);
+    });
   });
 });
