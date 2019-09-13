@@ -63,7 +63,6 @@ describe('Select', () => {
 
     it('has value property that can be set (:number)', () => {
       component.setProps({ value: 4 });
-      // component.state(inputValue).toBe(4);
       expect(component.props().value).toEqual(4);
     });
   });
@@ -87,7 +86,7 @@ describe('Select', () => {
     });
   });
 
-  describe('Functions', () => {
+  describe('Functions events', () => {
     it('onFocus', () => {
       component = mount(
         <Select onFocus={fauxCallback}>
@@ -97,8 +96,31 @@ describe('Select', () => {
           <option value={4}>WeTech</option>
         </Select>
       );
-
       component.find('select').simulate('focus');
+    });
+
+    it('onBlur', () => {
+      component = mount(
+        <Select onFocus={fauxCallback}>
+          <option value={1}>WeWork</option>
+          <option value={2}>WeLive</option>
+          <option value={3}>WeGrow</option>
+          <option value={4}>WeTech</option>
+        </Select>
+      );
+      component.find('select').simulate('blur');
+    });
+
+    it('onChange', () => {
+      component = mount(
+        <Select onFocus={fauxCallback}>
+          <option value={1}>WeWork</option>
+          <option value={2}>WeLive</option>
+          <option value={3}>WeGrow</option>
+          <option value={4}>WeTech</option>
+        </Select>
+      );
+      component.find('select').simulate('change');
     });
   });
 });
