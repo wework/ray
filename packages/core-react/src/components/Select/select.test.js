@@ -63,6 +63,7 @@ describe('Select', () => {
 
     it('has value property that can be set (:number)', () => {
       component.setProps({ value: 4 });
+      // component.state(inputValue).toBe(4);
       expect(component.props().value).toEqual(4);
     });
   });
@@ -96,7 +97,8 @@ describe('Select', () => {
           <option value={4}>WeTech</option>
         </Select>
       );
-      component.find('select').prop('onFocus');
+
+      component.find('select').simulate('focus');
     });
   });
 });
