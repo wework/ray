@@ -62,7 +62,14 @@ describe('Select', () => {
     });
 
     it('has value property that can be set (:number)', () => {
-      component.setProps({ value: 4 });
+      component = mount(
+        <Select value={4}>
+          <option value={1}>WeWork</option>
+          <option value={2}>WeLive</option>
+          <option value={3}>WeGrow</option>
+          <option value={4}>WeTech</option>
+        </Select>
+      );
       expect(component.props().value).toEqual(4);
     });
   });
