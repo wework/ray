@@ -101,7 +101,7 @@ describe('Select', () => {
 
     it('onBlur', () => {
       component = mount(
-        <Select onFocus={fauxCallback}>
+        <Select onBlur={fauxCallback}>
           <option value={1}>WeWork</option>
           <option value={2}>WeLive</option>
           <option value={3}>WeGrow</option>
@@ -113,7 +113,7 @@ describe('Select', () => {
 
     it('onChange', () => {
       component = mount(
-        <Select onFocus={fauxCallback}>
+        <Select onChange={fauxCallback}>
           <option value={1}>WeWork</option>
           <option value={2}>WeLive</option>
           <option value={3}>WeGrow</option>
