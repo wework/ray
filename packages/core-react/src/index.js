@@ -7,5 +7,5 @@ export { default as Select } from './components/Select';
 export { default as TextField } from './components/TextField';
 export { default as TextArea } from './components/TextArea';
 export { default as Type } from './components/Type';
-
+export { default as Icon } from './components/Common/Icon';
 export * from './components/Grid';

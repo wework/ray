@@ -109,6 +109,13 @@ export type ImageProps = {
 
 declare const Image: React.FC<ImageProps>;
 
+export type IconProps = {
+  prepend?: boolean;
+  icon: React.ReactNode;
+} & React.HTMLProps<HTMLImageElement>;
+
+declare const Icon: React.FC<IconProps>;
+
 export {
   Button,
   Card,
