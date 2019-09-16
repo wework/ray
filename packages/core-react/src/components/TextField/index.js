@@ -45,7 +45,7 @@ export default function TextField({
   const wrapperClass = clsx(
     'ray-text-field',
     {
-      'ray-text-field--has-value': inputValue,
+      'ray-text-field--has-value': placeholder || inputValue,
       'ray-text-field--error': error,
       'ray-text-field--success': success,
       'ray-text-field--disabled': disabled,

@@ -5,18 +5,22 @@ import TextField from '../src/components/TextField';
 storiesOf('TextField', module)
   .add('default', () => <TextField id="example" placeholder="hello" />)
   .add('required', () => (
-    <TextField id="example" value={undefined} placeholder="hello" required />
+    <TextField id="example" value={undefined} label="hello hello" required />
+  ))
+  .add('placeholder', () => (
+    <TextField id="example" value={undefined} placeholder="hello wework" />
   ))
   .add('error', () => (
     <TextField
       id="example"
       value={undefined}
       placeholder="hello"
+      label="error"
       error="something went wrong"
     />
   ))
   .add('with value', () => (
-    <TextField id="example" value="worlds" placeholder="hello" />
+    <TextField id="example" placeholder="hello" value="9999999" />
   ))
   .add('disabled', () => (
     <TextField id="example" value="worlds" placeholder="hello" disabled />
