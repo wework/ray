@@ -1,6 +1,7 @@
 export { default as Button } from './components/Button';
 export { default as Card } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
+export { default as Icon } from './components/Common/Icon';
 export { default as Image } from './components/Image';
 export { default as Radio } from './components/Radio';
 export { default as Select } from './components/Select';
