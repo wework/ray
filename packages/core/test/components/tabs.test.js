@@ -82,13 +82,15 @@ describe('Tabs', () => {
   });
 
   test('it sets active class on spacebar press', () => {
-    const { tabs, tabsEl, tabItems } = setupTest();
+    const { tabs, tabsEl, tabItems, contentItems } = setupTest();
     const tabEvent = new KeyboardEvent('keydown', { key: 'tab' });
     const spaceEvent = new KeyboardEvent('keydown', { key: ' ' });
     const firstTab = tabItems[0];
+    const firstContentItem = contentItems[0];
     tabsEl.dispatchEvent(tabEvent);
     firstTab.dispatchEvent(spaceEvent);
     expect(firstTab.classList).toContain('ray-tabs__item--active');
+    expect(firstContentItem.classList).toContain('ray-tabs__content--active');
     tabs.destroy();
   });
 });

@@ -44,6 +44,7 @@ tabs.destroy();
 
 Use these modifiers with `.ray-chip` class.
 
-| Selector                  | Description                             |
-| ------------------------- | --------------------------------------- |
-| `.ray-tabs__item--active` | Selector for applying active tab styles |
+| Selector                     | Description                                 |
+| ---------------------------- | ------------------------------------------- |
+| `.ray-tabs__item--active`    | Selector for applying active tab styles     |
+| `.ray-tabs__content--active` | Selector for applying active content styles |
