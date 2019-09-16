@@ -1,7 +1,29 @@
-<div dir="rtl">
-  <ul class="ray-tabs">
-    <li tabindex="1" class="ray-tabs__item">Desktop</li>
-    <li tabindex="1" class="ray-tabs__item">Tablet</li>
-    <li tabindex="1" class="ray-tabs__item ray-tabs__item--active">Mobile</li>
+<div class="ray-tabs" dir="rtl">
+  <ul class="ray-tabs__list">
+    <li tabindex="1" data-tab-order="1" class="ray-tabs__item">
+      Desktop
+    </li>
+    <li tabindex="1" data-tab-order="2" class="ray-tabs__item">
+      Tablet
+    </li>
+    <li
+      tabindex="1"
+      data-tab-order="3"
+      class="ray-tabs__item ray-tabs__item--active"
+    >
+      Mobile
+    </li>
   </ul>
+  <div class="ray-tabs__content" data-content-order="1">
+    <h2><span class="ray-text--display-2">Desktop content</span></h2>
+  </div>
+  <div class="ray-tabs__content" data-content-order="2">
+    <h2><span class="ray-text--display-2">Tablet content</span></h2>
+  </div>
+  <div
+    class="ray-tabs__content ray-tabs__content--active"
+    data-content-order="3"
+  >
+    <h2><span class="ray-text--display-2">Mobile content</span></h2>
+  </div>
 </div>

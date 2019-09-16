@@ -3,7 +3,8 @@ class Tabs {
 
   static get cssClasses() {
     return {
-      ACTIVE: 'ray-tabs__item--active'
+      ACTIVE: 'ray-tabs__item--active',
+      ACTIVE_CONTENT: 'ray-tabs__content--active'
     };
   }
 
@@ -33,6 +34,9 @@ class Tabs {
     this.constructor.instances.set(this._root, this);
 
     this.tabItems = Array.from(this._root.querySelectorAll('.ray-tabs__item'));
+    this.contentItems = Array.from(
+      this._root.querySelectorAll('.ray-tabs__content')
+    );
 
     this._bindEventListeners();
   }
@@ -45,10 +49,25 @@ class Tabs {
   }
 
   assignClasses(event) {
+    this.assignTabClasses(event);
+    this.assignTabContentClasses(event);
+  }
+
+  assignTabClasses(event) {
     this.tabItems.forEach(tab => {
       tab.classList.remove(this.constructor.cssClasses.ACTIVE);
     });
-    event.target.classList.add(this.constructor.cssClasses.ACTIVE);
+    event.currentTarget.classList.add(this.constructor.cssClasses.ACTIVE);
+  }
+
+  assignTabContentClasses(event) {
+    const tabNumber = event.currentTarget.getAttribute('data-tab-order');
+    this.contentItems.forEach(contentItem => {
+      contentItem.classList.remove(this.constructor.cssClasses.ACTIVE_CONTENT);
+    });
+    this._root
+      .querySelector(`[data-content-order="${tabNumber}"]`)
+      .classList.add(this.constructor.cssClasses.ACTIVE_CONTENT);
   }
 
   onClick = event => {

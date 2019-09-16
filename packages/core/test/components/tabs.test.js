@@ -9,11 +9,35 @@ function triggerEvent(el, type) {
 
 function getFixture() {
   return html`
-    <ul class="ray-tabs">
-      <li tabindex="1" class="ray-tabs__item">Desktop</li>
-      <li tabindex="1" class="ray-tabs__item">Tablet</li>
-      <li tabindex="1" class="ray-tabs__item ray-tabs__item--active">Mobile</li>
-    </ul>
+    <div class="ray-tabs">
+      <ul class="ray-tabs__list">
+        <li tabindex="1" data-tab-order="1" class="ray-tabs__item">
+          Desktop
+        </li>
+        <li tabindex="1" data-tab-order="2" class="ray-tabs__item">
+          Tablet
+        </li>
+        <li
+          tabindex="1"
+          data-tab-order="3"
+          class="ray-tabs__item ray-tabs__item--active"
+        >
+          Mobile
+        </li>
+      </ul>
+      <div class="ray-tabs__content" data-content-order="1">
+        <h2><span class="ray-text--display-2">Desktop content</span></h2>
+      </div>
+      <div class="ray-tabs__content" data-content-order="2">
+        <h2><span class="ray-text--display-2">Tablet content</span></h2>
+      </div>
+      <div
+        class="ray-tabs__content ray-tabs__content--active"
+        data-content-order="3"
+      >
+        <h2><span class="ray-text--display-2">Mobile content</span></h2>
+      </div>
+    </div>
   `;
 }
 
@@ -22,8 +46,8 @@ function setupTest(fixture = getFixture()) {
   document.body.appendChild(fixture);
   const tabsEl = document.querySelector('.ray-tabs');
   const tabs = Tabs.create(tabsEl);
-  const { tabItems } = tabs;
-  return { tabs, tabsEl, tabItems };
+  const { tabItems, contentItems } = tabs;
+  return { tabs, tabsEl, tabItems, contentItems };
 }
 
 describe('Tabs', () => {
@@ -48,10 +72,12 @@ describe('Tabs', () => {
   });
 
   test('it sets active class on click', () => {
-    const { tabs, tabItems } = setupTest();
+    const { tabs, tabItems, contentItems } = setupTest();
     const firstTab = tabItems[0];
+    const firstContentItem = contentItems[0];
     triggerEvent(firstTab, 'mousedown');
     expect(firstTab.classList).toContain('ray-tabs__item--active');
+    expect(firstContentItem.classList).toContain('ray-tabs__content--active');
     tabs.destroy();
   });
 

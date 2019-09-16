@@ -6,8 +6,10 @@ $tabs-border-size: 1px;
 
 @include exports('ray-tabs') {
   .#{$ray-class-prefix}tabs {
-    border-bottom: $tabs-border-size solid $ray-color-gray-10;
-    display: flex;
+    &__list {
+      border-bottom: $tabs-border-size solid $ray-color-gray-10;
+      display: flex;
+    }
 
     &__item {
       font-size: 1rem;
@@ -32,13 +34,21 @@ $tabs-border-size: 1px;
         border-bottom: 1px solid $ray-color-blue-50;
       }
 
-      &--active {
-        border-bottom: 1px solid $ray-color-blue-50;
-      }
-
       .#{$ray-accessibility-class} &:focus {
         box-shadow: $ray-box-shadow-focus-state;
         outline: 0;
+      }
+
+      &--active {
+        border-bottom: 1px solid $ray-color-blue-50;
+      }
+    }
+
+    &__content {
+      display: none;
+
+      &--active {
+        display: block;
       }
     }
   }
