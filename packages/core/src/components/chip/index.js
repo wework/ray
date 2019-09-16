@@ -25,7 +25,7 @@ class Chip {
     };
 
     const chips = Array.from(target.querySelectorAll(options.initSelector));
-    chips.forEach(select => this.create(select, options));
+    chips.forEach(chip => this.create(chip, options));
   }
 
   constructor(root, options) {

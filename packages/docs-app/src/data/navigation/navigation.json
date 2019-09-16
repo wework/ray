@@ -80,6 +80,9 @@
       "table": {
         "title": "Table"
       },
+      "tabs": {
+        "title": "Tabs"
+      },
       "tag": {
         "title": "Tag"
       }
