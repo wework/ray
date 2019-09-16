@@ -3,7 +3,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import '@wework/ray-core/src/ray-core.scss';
 
-const req = require.context('../stories', true, /.stories.js$/);
+const req = require.context('../stories', true, /.story.tsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
