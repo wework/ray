@@ -80,6 +80,8 @@ export type CheckboxProps = {
 
 declare const Checkbox: React.FC<CheckboxProps>;
 
+declare type IconPositions = 'iconstart' | 'iconend';
+
 export type SelectProps = {
   className?: string;
   id?: string;
@@ -88,6 +90,11 @@ export type SelectProps = {
   compact?: boolean;
   disabled?: boolean;
   placeholder?: string;
+  prepend?: boolean,
+  icon?: React.ReactNode,
+  error?:boolean,
+  active?:boolean,
+  iconPosition?: IconPositions;
   children?: React.ReactNode;
 } & React.HTMLProps<HTMLSelectElement>;
 
@@ -101,6 +108,13 @@ export type ImageProps = {
 } & React.HTMLProps<HTMLImageElement>;
 
 declare const Image: React.FC<ImageProps>;
+
+export type IconProps = {
+  prepend?: boolean;
+  icon: React.ReactNode;
+} & React.HTMLProps<HTMLImageElement>;
+
+declare const Icon: React.FC<IconProps>;
 
 export {
   Button,
