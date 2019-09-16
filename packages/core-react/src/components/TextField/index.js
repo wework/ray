@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-// import Icon from '../Common/Icon';
+import Icon from '../Common/Icon';
 
 export default function TextField({
   id,
@@ -18,29 +18,40 @@ export default function TextField({
   onFocus,
   onBlur,
   onKeyUp,
+  onChange,
   hint,
   hintSuccess,
   hintError,
   className,
-  iconStart,
-  iconEnd,
+  iconPosition,
+  icon,
   prepend,
   ...rest
 }) {
   const [inputValue, setInputValue] = React.useState(value);
   const [activeClass, setActiveState] = React.useState(active);
 
+  let iconStart;
+  let iconEnd;
+
+  if (iconPosition) {
+    iconStart = iconPosition === 'iconstart';
+    iconEnd = iconPosition === 'iconend';
+  } else {
+    iconStart = false;
+    iconEnd = false;
+  }
+
   const wrapperClass = clsx(
     'ray-text-field',
     {
-      'ray-text-field--has-value': value,
+      'ray-text-field--has-value': inputValue,
       'ray-text-field--error': error,
       'ray-text-field--success': success,
       'ray-text-field--disabled': disabled,
       'ray-text-field--required': required,
       'ray-text-field--compact': compact,
-      'ray-text-field--with-icon-start': iconStart,
-      'ray-text-field--with-icon-end': iconEnd,
+      'ray-text-field--with-icon-start': iconStart || iconEnd,
       'ray-text-field--with-prepend': prepend
     },
     className
@@ -65,28 +76,40 @@ export default function TextField({
     setActiveState(textvalue);
   };
 
+  const handleChange = event => {
+    setInputValue(event.target.value);
+    if (onChange) {
+      onChange(event);
+    }
+  };
+
   return (
     <div>
-      <div className={wrapperClass}>
-        {/* <Icon icon={icon} prepend={prepend} /> */}
-        <div className="ray-text-field__wrapper">
-          <input
-            className="ray-text-field__input"
-            id={id}
-            type={type}
-            value={inputValue}
-            placeholder={placeholder}
-            disabled={disabled}
-            onFocus={onFocusAction(!activeClass)}
-            onBlur={onBlurAction(!activeClass)}
-            onKeyUp={onKeyUpAction()}
-            {...rest}
-          />
-          {label && (
-            <label className="ray-text-field__label" htmlFor={id}>
-              {label}
-            </label>
-          )}
+      <div dir={iconEnd ? 'rtl' : ''}>
+        <div className="ray-form-item">
+          <div className={wrapperClass}>
+            <Icon icon={icon} prepend={prepend} />
+            <div className="ray-text-field__wrapper">
+              <input
+                className="ray-text-field__input"
+                id={id}
+                type={type}
+                value={inputValue || ''}
+                placeholder={placeholder}
+                disabled={disabled}
+                onFocus={onFocusAction(!activeClass)}
+                onBlur={onBlurAction(!activeClass)}
+                onKeyUp={onKeyUpAction()}
+                onChange={handleChange}
+                {...rest}
+              />
+              {label && (
+                <label className="ray-text-field__label" htmlFor={id}>
+                  {label}
+                </label>
+              )}
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -119,12 +142,13 @@ TextField.propTypes = {
   onFocus: PropTypes.func,
   onKeyUp: PropTypes.func,
   onBlur: PropTypes.func,
+  onChange: PropTypes.func,
   hint: PropTypes.string,
   hintSuccess: PropTypes.string,
   hintError: PropTypes.string,
   prepend: PropTypes.bool,
-  iconStart: PropTypes.bool,
-  iconEnd: PropTypes.bool
+  iconPosition: PropTypes.oneOf(['iconstart', 'iconend']),
+  icon: PropTypes.node
 };
 
 TextField.defaultProps = {

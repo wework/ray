@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import TextField from '.';
 
 describe('TextField', () => {
-  // const fauxCallback = jest.fn();
+  const fauxCallback = jest.fn();
   let component = '';
 
   beforeEach(() => {
@@ -44,22 +44,48 @@ describe('TextField', () => {
       expect(component.find('.ray-text-field--with-icon-start')).toHaveLength(
         0
       );
-      component.setProps({ iconStart: true });
+      component.setProps({ iconPosition: 'iconstart' });
       expect(component.find('.ray-text-field--with-icon-start')).toHaveLength(
         1
       );
     });
 
     it('has default "ICONEND" property that can be set (:boolean)', () => {
-      expect(component.find('.ray-text-field--with-icon-end')).toHaveLength(0);
-      component.setProps({ iconEnd: true });
-      expect(component.find('.ray-text-field--with-icon-end')).toHaveLength(1);
+      expect(component.find('.ray-text-field--with-icon-start')).toHaveLength(
+        0
+      );
+      component.setProps({ iconPosition: 'iconend' });
+      expect(component.find('.ray-text-field--with-icon-start')).toHaveLength(
+        1
+      );
     });
 
     it('has default "ICONPREPEND" property that can be set (:boolean)', () => {
       expect(component.props().prepend).toEqual(false);
       component.setProps({ prepend: true });
       expect(component.props().prepend).toEqual(true);
+    });
+  });
+
+  describe('Functions events', () => {
+    it('onFocus', () => {
+      component = mount(<TextField id="name" onFocus={fauxCallback} />);
+      component.find('input').simulate('focus');
+    });
+
+    it('onBlur', () => {
+      component = mount(<TextField id="name" onBlur={fauxCallback} />);
+      component.find('input').simulate('blur');
+    });
+
+    it('onKeyUp', () => {
+      component = mount(<TextField id="name" onKeyUp={fauxCallback} />);
+      component.find('input').simulate('keyup');
+    });
+
+    it('onChange', () => {
+      component = mount(<TextField id="name" onChange={fauxCallback} />);
+      component.find('input').simulate('change');
     });
   });
 });
