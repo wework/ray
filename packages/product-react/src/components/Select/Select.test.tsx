@@ -8,7 +8,7 @@ describe('Select', () => {
 
 
   beforeEach(() => {
-  let  component =  Enzyme.mount(
+  component =  Enzyme.mount(
       <Select>
         <option value={1}>WeWork</option>
         <option value={2}>WeLive</option>
