@@ -69,7 +69,9 @@ jobs:
       - checkout
       - attach_workspace: { at: '.' }
       - get_npm_packages_cache
-      - bootstrap
+      - run:
+          name: Build packages
+          command: yarn build
       - run:
           name: Run unit tests
           command: yarn test --coverage
