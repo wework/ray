@@ -1,9 +1,6 @@
-import Enzyme, { configure, mount, ReactWrapper } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount, ReactWrapper } from 'enzyme';
 import * as React from 'react';
 import { Container } from './Container';
-
-configure({ adapter: new Adapter() });
 
 describe('Container', () => {
   let component: ReactWrapper<any>;

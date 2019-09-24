@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import { Container } from '../src/components/Container';
-import '../src/components/Container/Container.scss'; // TO DO THIS IS A WEIRD PLACE
 import { Grid } from '../src/components/Grid';
 
 storiesOf('Core Comps | Grid', module)

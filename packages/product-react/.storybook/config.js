@@ -2,6 +2,7 @@ import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import '@wework/ray-core/src/ray-core.scss';
+import '../src/components/Container/Container.scss';
 
 const req = require.context('../stories', true, /.story.tsx$/);
 
