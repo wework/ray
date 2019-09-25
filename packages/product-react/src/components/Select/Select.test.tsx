@@ -6,9 +6,8 @@ describe('Select', () => {
   const fauxCallback = jest.fn();
   let component: Enzyme.ReactWrapper<any>;
 
-
   beforeEach(() => {
-  component =  Enzyme.mount(
+    component = Enzyme.mount(
       <Select>
         <option value={1}>WeWork</option>
         <option value={2}>WeLive</option>
@@ -19,15 +18,19 @@ describe('Select', () => {
   });
 
   test('it renders a select', () => {
-    const wrapper =  Enzyme.mount(<Select>hello world</Select>);
+    const wrapper = Enzyme.mount(<Select>hello world</Select>);
     expect(wrapper.find('.ray-select').length).toBe(1);
   });
 
   test('it supports a custom class', () => {
-    const wrapper =  Enzyme.mount(
-      <Select className="some-custom-class" id="selecttest" label="henlo" />
-    );
-    expect(wrapper.find('.ray-select.some-custom-class').length).toBe(1);
+    component.setProps({
+      active: true,
+      className: 'some-custom-class',
+      id: 'selecttest',
+      label: 'henlo'
+    });
+
+    expect(component.find('.ray-select.some-custom-class').length).toBe(1);
   });
 
   describe('Default Properties', () => {
@@ -63,7 +66,7 @@ describe('Select', () => {
     });
 
     it('has value property that can be set (:number)', () => {
-      component =  Enzyme.mount(
+      component = Enzyme.mount(
         <Select value={4}>
           <option value={1}>WeWork</option>
           <option value={2}>WeLive</option>
@@ -96,7 +99,7 @@ describe('Select', () => {
 
   describe('Functions events', () => {
     it('onFocus', () => {
-      component =  Enzyme.mount(
+      component = Enzyme.mount(
         <Select onFocus={fauxCallback}>
           <option value={1}>WeWork</option>
           <option value={2}>WeLive</option>
@@ -108,7 +111,7 @@ describe('Select', () => {
     });
 
     it('onBlur', () => {
-      component =  Enzyme.mount(
+      component = Enzyme.mount(
         <Select onBlur={fauxCallback}>
           <option value={1}>WeWork</option>
           <option value={2}>WeLive</option>
@@ -120,7 +123,7 @@ describe('Select', () => {
     });
 
     it('onChange', () => {
-      component =  Enzyme.mount(
+      component = Enzyme.mount(
         <Select onChange={fauxCallback}>
           <option value={1}>WeWork</option>
           <option value={2}>WeLive</option>
