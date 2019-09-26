@@ -21,7 +21,7 @@ storiesOf('Core Comps | Toast', module)
     return [1, 2, 3].map((x, index) => (
       <Toast
         key={index}
-        label="hey there,I am Grant Component Toast I am Grant Component ToastI am Grant Component Toast" 
+        label="hey there,I am Grant Component Toast I am Grant Component ToastI am Grant Component Toast kjlshfkljsdhfkhjsd skjhfksljahfkjshdf fshljkfhskjfhjskdfhjksdhfjkhsdfkhksjdlfhjsfhjshdfkl  byuyuuttutyut " 
         variant="success"
         index={index}
         onClick={undoAction}
@@ -29,10 +29,10 @@ storiesOf('Core Comps | Toast', module)
     ));
   })
   .add('Multi toast success and action lallal', () => {
-    return [1, 2, 3].map((x, index) => (
+    return [1].map((x, index) => (
       <Toast
         key={index}
-        label="hey there,I am Grant ToastI  Toast"
+        label="hey there,I am Grant ToastI  Toast khfksjhfjks kjhfklsjahfjhaf lsajkfsjfs    sdjfkljflksjaf kjfhjsg skjhsdagkjhs gkjshgjkadhsg "
         variant="success"
         index={index}
         onClick={undoAction}

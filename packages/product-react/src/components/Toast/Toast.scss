@@ -65,4 +65,8 @@
   font-family: 'Apercu';
   rotate: 0;
   line-height: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
 }
