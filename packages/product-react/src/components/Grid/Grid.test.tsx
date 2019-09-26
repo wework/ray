@@ -1,9 +1,6 @@
-import Enzyme, { configure, mount, ReactWrapper } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount, ReactWrapper } from 'enzyme';
 import * as React from 'react';
 import { Grid } from './Grid';
-
-configure({ adapter: new Adapter() });
 
 describe('Grid', () => {
   let component: ReactWrapper<any>;
