@@ -25,7 +25,7 @@ export const Toast: React.FC<TagProps> = ({
   ...rest
 }) => {
   const offsetStyle = {
-    transform: `translateY(calc(50vh - 30px - (${index}*100px)))`
+    transform: `translateY(calc(50vh - 30px - (${index}*65px)))`
   };
   const [dropin, setAnimationDropIn] = React.useState(true);
   const [offset, setOffsetstyle] = React.useState(offsetStyle);
@@ -46,7 +46,7 @@ export const Toast: React.FC<TagProps> = ({
         };
     setOffsetstyle(offsetStyle);
       },
-      index !== undefined ? index * 1000 : 1000
+      index !== undefined ? index * 100000 : 1000
     );
     return () => clearTimeout(timeout);
   }, []);
