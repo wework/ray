@@ -1,40 +1,40 @@
-$lucia-container-margin-1: 0 12px;
-$lucia-container-padding-1: 0 40px;
-$lucia-container-padding-2: 0 64px;
-$lucia-container-fixed-margin-right: 52px;
-$lucia-container-cell-width-fixed: 280px;
+$dieter-container-margin-1: 0 12px;
+$dieter-container-padding-1: 0 40px;
+$dieter-container-padding-2: 0 64px;
+$dieter-container-fixed-margin-right: 52px;
+$dieter-container-cell-width-fixed: 280px;
 
 /* Overrides */
 
 /* tablet */
 @media (max-width: 1194px) and (min-width: 600px) {
   .ray-page-container {
-    padding: $lucia-container-padding-1;
+    padding: $dieter-container-padding-1;
   }
 }
 
 /* > 1440px */
 @media screen and (min-width: 1195px) {
   .ray-page-container {
-    padding: $lucia-container-padding-1;
+    padding: $dieter-container-padding-1;
   }
 }
 
 /* > 1920 */
 @media screen and (min-width: 1695px) {
   .ray-page-container {
-    padding: $lucia-container-padding-2;
+    padding: $dieter-container-padding-2;
   }
 }
 
-/* Lucia Specific for Fixed Left Column */
-.lucia-page-container-fixed-left {
+/* dieter Specific for Fixed Left Column */
+.dieter-page-container-fixed-left {
   /* > 1440px */
   @media screen and (min-width: 1195px) {
     .ray-grid__cell:first-child,
     .ray-grid__cell:nth-child(10n) {
-      margin-right: $lucia-container-fixed-margin-right;
-      width: $lucia-container-cell-width-fixed;
+      margin-right: $dieter-container-fixed-margin-right;
+      width: $dieter-container-cell-width-fixed;
     }
 
     .ray-grid__cell--span-1 {
@@ -45,20 +45,20 @@ $lucia-container-cell-width-fixed: 280px;
   /* > 1680px */
   @media screen and (min-width: 1380px) {
     .ray-grid__cell:first-child {
-      margin-right: $lucia-container-fixed-margin-right;
-      width: $lucia-container-cell-width-fixed;
+      margin-right: $dieter-container-fixed-margin-right;
+      width: $dieter-container-cell-width-fixed;
     }
 
     .ray-grid__cell--span-1,
     .ray-grid__cell:nth-child(10n) {
-      margin: $lucia-container-margin-1;
+      margin: $dieter-container-margin-1;
       width: calc(8.3333% - 45px);
     }
   }
 
   /* > 1920px */
   @media (min-width: 1695px) {
-    padding: $lucia-container-padding-2;
+    padding: $dieter-container-padding-2;
 
     .ray-grid__cell--span-1 {
       width: calc(9.2% - 57px);
@@ -66,7 +66,7 @@ $lucia-container-cell-width-fixed: 280px;
   }
 }
 
-/* Lucia Debug ( debug={true} ) */
+/* dieter Debug ( debug={true} ) */
 .ray-page-container--debug {
   &.ray-page-container {
     background: yellow;
