@@ -21,6 +21,7 @@
     "@babel/core": "7.4.4",
     "@babel/plugin-proposal-class-properties": "7.4.4",
     "@babel/preset-env": "7.3.4",
+    "@babel/preset-typescript": "^7.6.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.18",
     "@types/react-dom": "^16.9.0",

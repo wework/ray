@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid should match snapshot and styles 1`] = `
+<Grid
+  as="div"
+>
+  <div
+    className="ray-grid"
+  />
+</Grid>
+`;

@@ -92,7 +92,7 @@ describe('Tabs', () => {
 
     const simulateKeyDown = (key: string) => {
       act(() => {
-        windowEvents.keydown({ key });
+        windowEvents.keydown({ key, preventDefault(){} });
       });
     };
 

@@ -70,6 +70,9 @@ jobs:
       - attach_workspace: { at: '.' }
       - get_npm_packages_cache
       - run:
+          name: Build packages
+          command: yarn build
+      - run:
           name: Run unit tests
           command: yarn test --coverage
       - run:
