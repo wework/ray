@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/wework/ray/compare/v1.12.4...v1.13.0) (2019-10-01)
+
+
+### Features
+
+* **grid:** add product grid to ray product ([#234](https://github.com/wework/ray/issues/234)) ([7d8b4c9](https://github.com/wework/ray/commit/7d8b4c9))
+
+
+
+
+
 ## [1.12.4](https://github.com/wework/ray/compare/v1.12.3...v1.12.4) (2019-09-18)
 
 **Note:** Version bump only for package @wework/ray-product-react
