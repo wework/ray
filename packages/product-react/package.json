@@ -36,6 +36,8 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
