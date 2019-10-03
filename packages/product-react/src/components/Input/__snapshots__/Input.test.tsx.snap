@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should match snapshot and styles for default props 1`] = `
+<RTLWrapper>
+  <FormItemWrapper>
+    <div
+      className="ray-text-field"
+    >
+      <IconWrapper
+        renderWrapper={false}
+      />
+      <TextFieldWrapper
+        renderWrapper={false}
+      >
+        <input
+          className="ray-text-field__input"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          type="text"
+        />
+      </TextFieldWrapper>
+    </div>
+  </FormItemWrapper>
+</RTLWrapper>
+`;
