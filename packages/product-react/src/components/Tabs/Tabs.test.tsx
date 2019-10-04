@@ -161,5 +161,15 @@ describe('Tabs', () => {
 
       expect(wrapper.find('[data-testid="test-3"]').exists()).toBe(true);
     });
+
+    test('test tabs with length 0', () => {
+      const props = {
+        tabs: []
+      };
+      const wrapper = Enzyme.mount(
+        <Tabs {...props} defaultActiveTab="test-2" />
+      );
+      expect(wrapper.props().tabs).toEqual([]);
+    });
   });
 });
