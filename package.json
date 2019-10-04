@@ -77,8 +77,7 @@
     "*.{js}": [
       "eslint --fix",
       "git add"
-    ],
-    "*.{test,story}.{ts,tsx}": "yarn run lint:ts-test --fix"
+    ]
   },
   "config": {
     "commitizen": {
