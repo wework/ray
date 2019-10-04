@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import { Select } from './Select';
+import { IconPosition, Select } from './Select';
 
 describe('Select', () => {
   const fauxCallback = jest.fn();
@@ -52,19 +52,33 @@ describe('Select', () => {
     });
 
     it('has default "ICONSTART" property that can be set (:string)', () => {
-      component.setProps({ iconPosition: 'iconstart' });
+      component.setProps({
+        iconPosition: IconPosition.Start,
+        icon: (
+          <svg className="ray-select__icon--start" viewBox="0 0 25 25">
+            <g id="budicon-profile-picture">
+              <path d="M12.5,4A4.5,4.5,0,1,0,17,8.5,4.5,4.5,0,0,0,12.5,4Zm0,8A3.5,3.5,0,1,1,16,8.5,3.504,3.504,0,0,1,12.5,12Zm0-12A12.4886,12.4886,0,0,0,5.0007,22.4834v0a12.4325,12.4325,0,0,0,14.9983,0v0q.5-.3761.9593-.7988l0,0A12.4869,12.4869,0,0,0,12.5,0Zm0,24a11.4432,11.4432,0,0,1-7.3931-2.7041,7.4887,7.4887,0,0,1,14.7863,0A11.4432,11.4432,0,0,1,12.5,24Zm8.25-3.5061a8.4871,8.4871,0,0,0-16.5,0,11.5,11.5,0,1,1,16.5,0Z" />
+            </g>
+          </svg>
+        )
+      });
       expect(component.find('.ray-select--with-icon-start')).toHaveLength(1);
     });
 
     it('has default "ICONEND" property that can be set (:string)', () => {
-      expect(component.find('.ray-select--with-icon-start')).toHaveLength(0);
-      component.setProps({ iconPosition: 'iconend' });
-      expect(component.find('.ray-select--with-icon-start')).toHaveLength(1);
-    });
-
-    it('has default "prepend" property that can be set (:true)', () => {
-      component.setProps({ prepend: true });
-      expect(component.props().prepend).toEqual(true);
+      expect(component.find('.ray-select--with-icon-end')).toHaveLength(0);
+      component.setProps({
+        iconPosition: IconPosition.End,
+        rtl: true,
+        icon: (
+          <svg className="ray-select__icon--start" viewBox="0 0 25 25">
+            <g id="budicon-profile-picture">
+              <path d="M12.5,4A4.5,4.5,0,1,0,17,8.5,4.5,4.5,0,0,0,12.5,4Zm0,8A3.5,3.5,0,1,1,16,8.5,3.504,3.504,0,0,1,12.5,12Zm0-12A12.4886,12.4886,0,0,0,5.0007,22.4834v0a12.4325,12.4325,0,0,0,14.9983,0v0q.5-.3761.9593-.7988l0,0A12.4869,12.4869,0,0,0,12.5,0Zm0,24a11.4432,11.4432,0,0,1-7.3931-2.7041,7.4887,7.4887,0,0,1,14.7863,0A11.4432,11.4432,0,0,1,12.5,24Zm8.25-3.5061a8.4871,8.4871,0,0,0-16.5,0,11.5,11.5,0,1,1,16.5,0Z" />
+            </g>
+          </svg>
+        )
+      });
+      expect(component.find('.ray-select--with-icon-end')).toHaveLength(1);
     });
 
     it('has value property that can be set (:number)', () => {
@@ -76,7 +90,6 @@ describe('Select', () => {
   describe('Classes & Composed Classes', () => {
     it('contains DEFAULT', () => {
       expect(component.find('.ray-select')).toHaveLength(1);
-      expect(component.find('.ray-select__wrapper')).toHaveLength(1);
       expect(component.find('select').hasClass('ray-select__input')).toEqual(
         true
       );
@@ -86,13 +99,14 @@ describe('Select', () => {
     });
 
     it('contains specific class if select is in focus/blur (aka "active"/"inactive")', () => {
+      component.setProps({ active: true });
       expect(component.find('.ray-select--active')).toHaveLength(0);
       component.find('select').simulate('focus');
       expect(component.find('.ray-select--active')).toHaveLength(1);
     });
   });
 
-  describe('Functions events', () => {
+   describe('Functions events', () => {
     it('onFocus', () => {
       component.setProps({ onFocus: fauxCallback });
       component.find('select').simulate('focus');
@@ -107,5 +121,5 @@ describe('Select', () => {
       component.setProps({ onChange: fauxCallback });
       component.find('select').simulate('change');
     });
-  });
+   });
 });

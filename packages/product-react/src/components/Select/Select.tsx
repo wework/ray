@@ -20,6 +20,7 @@ export interface ISelectProps extends React.HTMLProps<HTMLSelectElement> {
   disabled?: boolean;
   rtl?: boolean;
   formItem?: boolean;
+  className?: string;
   icon?: React.ReactNode;
   iconPosition?: IconPosition;
   options: Option[];
@@ -39,6 +40,7 @@ export const Select: React.FC<ISelectProps> = ({
   disabled,
   error,
   placeholder,
+  className,
   options,
   rtl,
   formItem,
@@ -75,16 +77,21 @@ export const Select: React.FC<ISelectProps> = ({
     onChange && onChange(event);
   };
 
-  const wrapperClass = clsx('ray-select', {
-    'ray-select--compact': compact,
-    'ray-select--disabled': disabled,
-    'ray-select--error': error,
-    'ray-select--has-value': placeholder || currValue,
-    'ray-select--active': activeClass,
-    'ray-select--with-icon-start': iconPosition === IconPosition.Start && icon,
-    'ray-select--with-icon-end': iconPosition === IconPosition.End && icon,
-    'ray-select--with-prepend': iconPosition === IconPosition.Prepend && icon
-  });
+  const wrapperClass = clsx(
+    'ray-select',
+    {
+      'ray-select--compact': compact,
+      'ray-select--disabled': disabled,
+      'ray-select--error': error,
+      'ray-select--has-value': placeholder || currValue,
+      'ray-select--active': activeClass,
+      'ray-select--with-icon-start':
+        iconPosition === IconPosition.Start && icon,
+      'ray-select--with-icon-end': iconPosition === IconPosition.End && icon,
+      'ray-select--with-prepend': iconPosition === IconPosition.Prepend && icon
+    },
+    className
+  );
 
   if (options.length > 0) {
     optionItems = options.map((element: Option, index: number) => {
@@ -103,9 +110,7 @@ export const Select: React.FC<ISelectProps> = ({
   return (
     <RTLWrapper renderWrapper={rtl}>
       <FormItemWrapper renderWrapper={formItem}>
-        <div
-          className={wrapperClass}
-        >
+        <div className={wrapperClass}>
           <IconWrapper
             renderWrapper={iconPosition === IconPosition.Prepend}
             iconClass="ray-select__prepend"
