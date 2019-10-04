@@ -5,15 +5,16 @@ import { act } from 'react-dom/test-utils';
 import { Tabs } from './Tabs';
 import { TabView } from './TabView';
 
-configure({ adapter: new Adapter() });
-
 describe('Tabs', () => {
   const defaultProps = {
     tabs: [
       { id: 'test-1', ariaLabel: 'Test', label: 'Test 1' },
       { id: 'test-2', ariaLabel: 'Test', label: 'Test 2' },
-      { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' },
+      { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' }
     ],
+    onSelect() {
+      return;
+    }
   };
 
   test('starts with first tab active', () => {
@@ -25,7 +26,7 @@ describe('Tabs', () => {
         <TabView id="test-2">
           <div>test-2</div>
         </TabView>
-      </Tabs>,
+      </Tabs>
     );
 
     expect(wrapper.find('[data-testid="test-1"]').exists()).toBe(true);
@@ -40,7 +41,7 @@ describe('Tabs', () => {
         <TabView id="test-2">
           <div>test-2</div>
         </TabView>
-      </Tabs>,
+      </Tabs>
     );
 
     wrapper
@@ -60,7 +61,7 @@ describe('Tabs', () => {
         <TabView id="test-2">
           <div>test-2</div>
         </TabView>
-      </Tabs>,
+      </Tabs>
     );
 
     expect(wrapper.find('[data-testid="test-2"]').exists()).toBe(true);
@@ -86,13 +87,13 @@ describe('Tabs', () => {
           <TabView id="test-3">
             <div>test-3</div>
           </TabView>
-        </Tabs>,
+        </Tabs>
       );
     });
 
     const simulateKeyDown = (key: string) => {
       act(() => {
-        windowEvents.keydown({ key, preventDefault(){} });
+        windowEvents.keydown({ key, preventDefault() {} });
       });
     };
 
