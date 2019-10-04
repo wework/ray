@@ -1,48 +1,64 @@
-import React from 'react';
 import clsx from 'clsx';
-import Icon from '../Common/Icon';
+import React from 'react';
+import IconWrapper from '../Common/IconWrapper';
+import RTLWrapper from '../Common/RTLWrapper';
+import FormItemWrapper from '../Common/FormItemWrapper';
+import FieldWrapper from '../Common/FieldWrapper';
+
 import './Select.scss';
 
-type IconPositions = 'iconstart' | 'iconend';
+export enum IconPosition {
+  Prepend = 'PREPEND',
+  End = 'END',
+  Start = 'START'
+}
 
-interface ISelectProps extends React.HTMLProps<HTMLSelectElement> {
+export interface ISelectProps extends React.HTMLProps<HTMLSelectElement> {
   active?: boolean;
   compact?: boolean;
   error?: boolean;
   disabled?: boolean;
-  id?: string;
-  placeholder?: string;
+  rtl?: boolean;
+  formItem?: boolean;
   icon?: React.ReactNode;
-  iconPosition?: IconPositions;
-  prepend?: boolean;
-  children: React.ReactNode;
-  onChange?(event: React.ChangeEvent<HTMLSelectElement>): void;
-  onFocus?(event: React.FocusEvent<HTMLSelectElement>): void;
-  onBlur?(event: React.FocusEvent<HTMLSelectElement>): void;
+  iconPosition?: IconPosition;
+  options: Option[];
+}
+
+interface Option {
+  value: number | string;
+  label: string;
+  disabled?: boolean;
 }
 
 export const Select: React.FC<ISelectProps> = ({
-  className,
   id,
-  name,
+  active,
+  label,
   compact,
   disabled,
+  error,
   placeholder,
-  label,
-  active = false,
-  error = false,
-  prepend = false,
-  iconPosition,
+  options,
+  rtl,
+  formItem,
   icon,
-  value = '',
-  children,
+  iconPosition,
   onChange,
   onFocus,
   onBlur,
+  value,
   ...rest
 }) => {
+  let optionItems: React.ReactNode[] = [];
   const [activeClass, setActiveState] = React.useState(active);
   const [currValue, setValue] = React.useState(value);
+
+  React.useEffect(() => {
+    if (value) {
+      setValue(value);
+    }
+  }, []);
 
   const handleFocus = (event: React.FocusEvent<HTMLSelectElement>) => {
     setActiveState(true);
@@ -59,63 +75,67 @@ export const Select: React.FC<ISelectProps> = ({
     onChange && onChange(event);
   };
 
-  React.useEffect(() => {
-    if (value) {
-      setValue(value);
-    }
-  }, []);
-  let iconStart;
-  let iconEnd;
+  const wrapperClass = clsx('ray-select', {
+    'ray-select--compact': compact,
+    'ray-select--disabled': disabled,
+    'ray-select--error': error,
+    'ray-select--has-value': placeholder || currValue,
+    'ray-select--active': activeClass,
+    'ray-select--with-icon-start': iconPosition === IconPosition.Start && icon,
+    'ray-select--with-icon-end': iconPosition === IconPosition.End && icon,
+    'ray-select--with-prepend': iconPosition === IconPosition.Prepend && icon
+  });
 
-  if (iconPosition) {
-    iconStart = iconPosition === 'iconstart';
-    iconEnd = iconPosition === 'iconend';
-  } else {
-    iconStart = false;
-    iconEnd = false;
+  if (options.length > 0) {
+    optionItems = options.map((element: Option, index: number) => {
+      return (
+        <option key={index} value={element.value} disabled={element.disabled}>
+          {element.label}
+        </option>
+      );
+    });
   }
-
+  optionItems.unshift(
+    <option key={''} value="" disabled data-ray-placeholder>
+      {placeholder}
+    </option>
+  );
   return (
-    <div dir={iconEnd ? 'rtl' : ''}>
-      <div
-        className={clsx(
-          'ray-select',
-          {
-            'ray-select--active': activeClass,
-            'ray-select--has-value': placeholder || currValue,
-            'ray-select--compact': compact,
-            'ray-select--disabled': disabled,
-            'ray-select--error': error,
-            'ray-select--with-prepend': prepend,
-            'ray-select--with-icon-start': iconStart || iconEnd
-          },
-          className
-        )}
-      >
-        <Icon icon={icon} prepend={prepend} />
-        <div className="ray-select__wrapper">
-          <select
-            className="ray-select__input"
-            name={name}
-            disabled={disabled}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            onFocus={handleFocus}
-            value={currValue || ''}
-            {...rest}
+    <RTLWrapper renderWrapper={rtl}>
+      <FormItemWrapper renderWrapper={formItem}>
+        <div
+          className={wrapperClass}
+        >
+          <IconWrapper
+            renderWrapper={iconPosition === IconPosition.Prepend}
+            iconClass="ray-select__prepend"
           >
-            <option value="" disabled data-ray-placeholder>
-              {placeholder}
-            </option>
-            {children}
-          </select>
+            {icon}
+          </IconWrapper>
+          <FieldWrapper
+            renderWrapper={iconPosition === IconPosition.Prepend}
+            fieldClass="ray-select__wrapper"
+          >
+            <select
+              className="ray-select__input"
+              name={name}
+              disabled={disabled}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              onFocus={handleFocus}
+              value={currValue || ''}
+              {...rest}
+            >
+              {optionItems}
+            </select>
 
-          <label className="ray-select__label" htmlFor={id}>
-            {label}
-          </label>
+            <label className="ray-select__label" htmlFor={id}>
+              {label}
+            </label>
+          </FieldWrapper>
         </div>
-      </div>
-    </div>
+      </FormItemWrapper>
+    </RTLWrapper>
   );
 };
 
@@ -123,5 +143,5 @@ Select.defaultProps = {
   active: false,
   compact: false,
   error: false,
-  prepend: false
+  iconPosition: IconPosition.Start
 };

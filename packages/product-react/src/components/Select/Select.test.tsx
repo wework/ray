@@ -8,17 +8,19 @@ describe('Select', () => {
 
   beforeEach(() => {
     component = Enzyme.mount(
-      <Select>
-        <option value={1}>WeWork</option>
-        <option value={2}>WeLive</option>
-        <option value={3}>WeGrow</option>
-        <option value={4}>WeTech</option>
-      </Select>
+      <Select
+        options={[
+          { value: 1, label: 'Wework ' },
+          { value: 2, label: 'WeLive ' },
+          { value: 3, label: 'WeGrow ' },
+          { value: 4, label: 'WeTech ' }
+        ]}
+      />
     );
   });
 
   test('it renders a select', () => {
-    const wrapper = Enzyme.mount(<Select>hello world</Select>);
+    const wrapper = component;
     expect(wrapper.find('.ray-select').length).toBe(1);
   });
 
@@ -66,14 +68,7 @@ describe('Select', () => {
     });
 
     it('has value property that can be set (:number)', () => {
-      component = Enzyme.mount(
-        <Select value={4}>
-          <option value={1}>WeWork</option>
-          <option value={2}>WeLive</option>
-          <option value={3}>WeGrow</option>
-          <option value={4}>WeTech</option>
-        </Select>
-      );
+      component.setProps({ value: 4 });
       expect(component.props().value).toEqual(4);
     });
   });
@@ -99,38 +94,17 @@ describe('Select', () => {
 
   describe('Functions events', () => {
     it('onFocus', () => {
-      component = Enzyme.mount(
-        <Select onFocus={fauxCallback}>
-          <option value={1}>WeWork</option>
-          <option value={2}>WeLive</option>
-          <option value={3}>WeGrow</option>
-          <option value={4}>WeTech</option>
-        </Select>
-      );
+      component.setProps({ onFocus: fauxCallback });
       component.find('select').simulate('focus');
     });
 
     it('onBlur', () => {
-      component = Enzyme.mount(
-        <Select onBlur={fauxCallback}>
-          <option value={1}>WeWork</option>
-          <option value={2}>WeLive</option>
-          <option value={3}>WeGrow</option>
-          <option value={4}>WeTech</option>
-        </Select>
-      );
+      component.setProps({ onBlur: fauxCallback });
       component.find('select').simulate('blur');
     });
 
     it('onChange', () => {
-      component = Enzyme.mount(
-        <Select onChange={fauxCallback}>
-          <option value={1}>WeWork</option>
-          <option value={2}>WeLive</option>
-          <option value={3}>WeGrow</option>
-          <option value={4}>WeTech</option>
-        </Select>
-      );
+      component.setProps({ onChange: fauxCallback });
       component.find('select').simulate('change');
     });
   });

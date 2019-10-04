@@ -48,6 +48,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "husky": "^3.0.8",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "prop-types": "^15.7.2",

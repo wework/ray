@@ -1,54 +1,36 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {Select} from '../src/components/Select'
+import React from 'react';
+import { IconPosition, Select } from '../src/components/Select/Select';
 
-storiesOf('Select', module)
-  .add('default', () => {
-    return (
-      <Select id="select-test" label="henlo">
-        <option value={1}>WeWork</option>
-        <option value={2}>WeLive</option>
-        <option value={3}>WeGrow</option>
-        <option value={4}>WeTech</option>
-      </Select>
-    );
-  })
-  .add('default w/ placeholder', () => {
-    return (
-      <Select
-        id="select-test"
-        label="henlo"
-        placeholder="Please select a value"
-      >
-        <option value="1">WeWork</option>
-        <option value="2">WeLive</option>
-        <option value="3">WeGrow</option>
-        <option value="4">WeTech</option>
-      </Select>
-    );
-  })
-  .add('compact', () => {
-    return (
-      <Select id="select-test" compact={true} label="henlo">
-        <option value={1}>WeWork</option>
-        <option value={2}>WeLive</option>
-        <option value={3}>WeGrow</option>
-        <option value={4}>WeTech</option>
-      </Select>
-    );
-  })
+storiesOf('Core Comps | Select', module)
+  .add('select', () => (
+    <Select label="name" options={[{ value: 9, label: 'Wework ' }]} />
+  ))
+  .add('select w/ placeholder', () => (
+    <Select
+      label="name"
+      options={[
+        { value: '9', label: 'Wework ' },
+        { value: '8', label: 'WeGrow ' }
+      ]}
+      placeholder="Select Value"
+    />
+  ))
+  .add('select compact', () => (
+    <Select
+      label="name"
+      options={[{ value: 9, label: 'Wework ' }, { value: 8, label: 'WeGrow' }]}
+      compact={true}
+    />
+  ))
   .add('select w/ error', () => (
-    <Select label="name" error={true} value={1}>
-      <option value={1}>WeWork</option>
-      <option value={2}>WeLive</option>
-      <option value={3}>WeGrow</option>
-      <option value={4}>WeTech</option>
-    </Select>
+    <Select label="name" options={[]} error={true} />
   ))
   .add('select w/ icon start', () => (
     <Select
       label="name"
-      iconPosition="iconstart"
+      options={[{ value: 9, label: 'Wework ' }]}
+      iconPosition={IconPosition.Start}
       icon={
         <svg className="ray-select__icon--start" viewBox="0 0 25 25">
           <g id="budicon-profile-picture">
@@ -56,17 +38,14 @@ storiesOf('Select', module)
           </g>
         </svg>
       }
-    >
-      <option value={1}>WeWork</option>
-      <option value={2}>WeLive</option>
-      <option value={3}>WeGrow</option>
-      <option value={4}>WeTech</option>
-    </Select>
+    />
   ))
   .add('select w/ icon end', () => (
     <Select
       label="name"
-      iconPosition="iconend"
+      options={[{ value: 9, label: 'Wework ' }]}
+      rtl={true}
+      iconPosition={IconPosition.End}
       icon={
         <svg className="ray-select__icon--start" viewBox="0 0 25 25">
           <g id="budicon-profile-picture">
@@ -74,18 +53,13 @@ storiesOf('Select', module)
           </g>
         </svg>
       }
-    >
-      <option value={1}>WeWork</option>
-      <option value={2}>WeLive</option>
-      <option value={3}>WeGrow</option>
-      <option value={4}>WeTech</option>
-    </Select>
+    />
   ))
-  .add('select w/ icon prepend', () => (
+  .add('select w/ Icon Start Prepend', () => (
     <Select
       label="name"
-      prepend={true}
-      iconPosition="iconstart"
+      options={[{ value: 9, label: 'Wework ' }]}
+      iconPosition={IconPosition.Prepend}
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -97,18 +71,14 @@ storiesOf('Select', module)
           </g>
         </svg>
       }
-    >
-      <option value={1}>WeWork</option>
-      <option value={2}>WeLive</option>
-      <option value={3}>WeGrow</option>
-      <option value={4}>WeTech</option>
-    </Select>
+    />
   ))
-  .add('select w/ icon end prepend', () => (
+  .add('select w/ icon End Prepend', () => (
     <Select
       label="name"
-      prepend={true}
-      iconPosition="iconend"
+      options={[{ value: 9, label: 'Wework ' }]}
+      rtl={true}
+      iconPosition={IconPosition.Prepend}
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -120,10 +90,5 @@ storiesOf('Select', module)
           </g>
         </svg>
       }
-    >
-      <option value={1}>WeWork</option>
-      <option value={2}>WeLive</option>
-      <option value={3}>WeGrow</option>
-      <option value={4}>WeTech</option>
-    </Select>
+    />
   ));
