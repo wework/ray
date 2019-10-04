@@ -63,7 +63,7 @@ storiesOf('Core Comps | Input', module)
         label="Full Name"
         id="unique123"
         type="text"
-        placeholder="Arya Stark"
+        placeholder="Please select a value"
         compact={true}
       />
     );

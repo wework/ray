@@ -3,7 +3,7 @@ import React from 'react';
 import IconWrapper from '../Common/IconWrapper';
 import RTLWrapper from '../Common/RTLWrapper';
 import FormItemWrapper from '../Common/FormItemWrapper';
-import TextFieldWrapper from '../Common/TextFieldWrapper';
+import FieldWrapper from '../Common/FieldWrapper';
 
 export enum IconPosition {
   Prepend = 'PREPEND',
@@ -73,11 +73,12 @@ export const Input: React.FC<InputProps> = ({
     <RTLWrapper renderWrapper={rtl}>
       <FormItemWrapper renderWrapper={formItem}>
         <div className={wrapperClass}>
-          <IconWrapper renderWrapper={iconPosition === IconPosition.Prepend}>
+          <IconWrapper renderWrapper={iconPosition === IconPosition.Prepend} iconClass='ray-text-field__prepend'>
             {icon}
           </IconWrapper>
-          <TextFieldWrapper
+          <FieldWrapper
             renderWrapper={iconPosition === IconPosition.Prepend}
+            fieldClass="ray-text-field__wrapper"
           >
             <input
               id={id}
@@ -93,7 +94,7 @@ export const Input: React.FC<InputProps> = ({
                 {label}
               </label>
             )}
-          </TextFieldWrapper>
+          </FieldWrapper>
         </div>
         {(formItem || hint) && (
           <div
