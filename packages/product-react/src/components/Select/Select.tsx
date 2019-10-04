@@ -56,7 +56,7 @@ export const Select: React.FC<ISelectProps> = ({
   let optionItems: React.ReactNode[] = [];
   const [currValue, setValue] = React.useState(value);
   const [activeClass, setActiveState] = React.useState(active);
-  
+
   React.useEffect(() => {
     if (value) {
       setValue(value);
@@ -134,7 +134,6 @@ export const Select: React.FC<ISelectProps> = ({
             >
               {optionItems}
             </select>
-
             <label className="ray-select__label" htmlFor={id}>
               {label}
             </label>
@@ -149,5 +148,5 @@ Select.defaultProps = {
   active: false,
   compact: false,
   error: false,
-  iconPosition: IconPosition.Start,
+  iconPosition: IconPosition.Start
 };

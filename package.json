@@ -74,10 +74,11 @@
       "prettier --write",
       "git add"
     ],
-    "*.js": [
+    "*.{js}": [
       "eslint --fix",
       "git add"
-    ]
+    ],
+    "{apps,packages}/**/*.{test,story}.{ts,tsx}": "yarn run lint:ts-test --fix"
   },
   "config": {
     "commitizen": {
