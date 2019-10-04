@@ -81,8 +81,18 @@ describe('Select', () => {
       expect(component.find('.ray-select--with-icon-end')).toHaveLength(1);
     });
 
-    it('has value property that can be set (:number)', () => {
-      component.setProps({ value: 4 });
+    it('has value property that can be set (:number || string)', () => {
+      const component = Enzyme.mount(
+        <Select
+          value={4}
+          options={[
+            { value: 1, label: 'Wework ' },
+            { value: 2, label: 'WeLive ' },
+            { value: 3, label: 'WeGrow ' },
+            { value: 4, label: 'WeTech ' }
+          ]}
+        />
+      );
       expect(component.props().value).toEqual(4);
     });
   });
@@ -106,7 +116,7 @@ describe('Select', () => {
     });
   });
 
-   describe('Functions events', () => {
+  describe('Functions events', () => {
     it('onFocus', () => {
       component.setProps({ onFocus: fauxCallback });
       component.find('select').simulate('focus');
@@ -121,5 +131,5 @@ describe('Select', () => {
       component.setProps({ onChange: fauxCallback });
       component.find('select').simulate('change');
     });
-   });
+  });
 });

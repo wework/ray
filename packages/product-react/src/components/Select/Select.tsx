@@ -22,6 +22,7 @@ export interface ISelectProps extends React.HTMLProps<HTMLSelectElement> {
   formItem?: boolean;
   className?: string;
   icon?: React.ReactNode;
+  value?: number | string;
   iconPosition?: IconPosition;
   options: Option[];
 }
@@ -53,9 +54,9 @@ export const Select: React.FC<ISelectProps> = ({
   ...rest
 }) => {
   let optionItems: React.ReactNode[] = [];
-  const [activeClass, setActiveState] = React.useState(active);
   const [currValue, setValue] = React.useState(value);
-
+  const [activeClass, setActiveState] = React.useState(active);
+  
   React.useEffect(() => {
     if (value) {
       setValue(value);
@@ -148,5 +149,5 @@ Select.defaultProps = {
   active: false,
   compact: false,
   error: false,
-  iconPosition: IconPosition.Start
+  iconPosition: IconPosition.Start,
 };

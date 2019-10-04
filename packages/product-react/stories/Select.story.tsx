@@ -4,7 +4,7 @@ import { IconPosition, Select } from '../src/components/Select/Select';
 
 storiesOf('Core Comps | Select', module)
   .add('select', () => (
-    <Select label="name" options={[{ value: 9, label: 'Wework ' }]} />
+    <Select label="name" value={9} options={[{ value: 9, label: 'Wework ' }]} />
   ))
   .add('select w/ placeholder', () => (
     <Select
