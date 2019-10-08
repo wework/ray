@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
+import FieldWrapper from '../Common/FieldWrapper';
+import FormItemWrapper from '../Common/FormItemWrapper';
 import IconWrapper from '../Common/IconWrapper';
 import RTLWrapper from '../Common/RTLWrapper';
-import FormItemWrapper from '../Common/FormItemWrapper';
-import FieldWrapper from '../Common/FieldWrapper';
 
 import './Select.scss';
 
@@ -57,12 +57,6 @@ export const Select: React.FC<ISelectProps> = ({
   const [currValue, setValue] = React.useState(value);
   const [activeClass, setActiveState] = React.useState(active);
 
-  React.useEffect(() => {
-    if (value) {
-      setValue(value);
-    }
-  }, []);
-
   const handleFocus = (event: React.FocusEvent<HTMLSelectElement>) => {
     setActiveState(true);
     onFocus && onFocus(event);
@@ -87,8 +81,8 @@ export const Select: React.FC<ISelectProps> = ({
       'ray-select--has-value': placeholder || currValue,
       'ray-select--active': activeClass,
       'ray-select--with-icon-start':
-        iconPosition === IconPosition.Start && icon,
-      'ray-select--with-icon-end': iconPosition === IconPosition.End && icon,
+        iconPosition === IconPosition.Start ||
+        (iconPosition === IconPosition.End && icon),
       'ray-select--with-prepend': iconPosition === IconPosition.Prepend && icon
     },
     className
