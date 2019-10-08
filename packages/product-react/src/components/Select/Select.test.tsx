@@ -66,7 +66,6 @@ describe('Select', () => {
     });
 
     it('has default "ICONEND" property that can be set (:string)', () => {
-      expect(component.find('.ray-select--with-icon-end')).toHaveLength(0);
       component.setProps({
         iconPosition: IconPosition.End,
         rtl: true,
@@ -78,7 +77,7 @@ describe('Select', () => {
           </svg>
         )
       });
-      expect(component.find('.ray-select--with-icon-end')).toHaveLength(1);
+      expect(component.find('.ray-select--with-icon-start')).toHaveLength(1);
     });
 
     it('has value property that can be set (:number || string)', () => {
