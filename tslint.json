@@ -17,7 +17,7 @@
     "max-classes-per-file": false,
     "forin": [false],
     "no-console": [true],
-    "no-implicit-dependencies": true,
+    "no-implicit-dependencies": [true, "dev"],
     "no-submodule-imports": false,
     "no-namespace": false,
     "interface-name": false,

@@ -1,18 +1,15 @@
 import clsx from 'clsx';
 import React from 'react';
+import FieldWrapper from '../Common/FieldWrapper';
+import FormItemWrapper from '../Common/FormItemWrapper';
 import IconWrapper from '../Common/IconWrapper';
 import RTLWrapper from '../Common/RTLWrapper';
-import FormItemWrapper from '../Common/FormItemWrapper';
-import FieldWrapper from '../Common/FieldWrapper';
 
 export enum IconPosition {
   Prepend = 'PREPEND',
   End = 'END',
   Start = 'START'
 }
-
-// TODO: if label is passed in then the id is required
-// RTL & form item should probably live in its own component
 
 type InputProps = React.HTMLProps<HTMLInputElement> & {
   active?: boolean;
@@ -73,7 +70,10 @@ export const Input: React.FC<InputProps> = ({
     <RTLWrapper renderWrapper={rtl}>
       <FormItemWrapper renderWrapper={formItem}>
         <div className={wrapperClass}>
-          <IconWrapper renderWrapper={iconPosition === IconPosition.Prepend} iconClass='ray-text-field__prepend'>
+          <IconWrapper
+            renderWrapper={iconPosition === IconPosition.Prepend}
+            iconClass="ray-text-field__prepend"
+          >
             {icon}
           </IconWrapper>
           <FieldWrapper
@@ -110,10 +110,3 @@ export const Input: React.FC<InputProps> = ({
     </RTLWrapper>
   );
 };
-
-Input.defaultProps = {
-  iconPosition: IconPosition.Start,
-  type: 'text'
-};
-
-export default Input;
