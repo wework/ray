@@ -37,12 +37,16 @@
     "eslint-plugin-import": "2.17.2",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.13.0",
-    "husky": "2.3.0",
+    "husky": "^3.0.8",
     "jest": "24.8.0",
     "lerna": "3.13.4",
     "lint-staged": "8.1.4",
     "prettier": "1.16.4",
-    "stylelint": "^9.10.1"
+    "stylelint": "^9.10.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "tslint-react": "4.1.0"
   },
   "scripts": {
     "dev": "lerna run dev --parallel",
@@ -57,7 +61,8 @@
     "lerna:clean": "npx lerna run clean",
     "lerna:publish": "npx lerna publish --yes",
     "lerna:version": "npx lerna version --yes",
-    "netlify:build": "yarn clean && yarn build && npx lerna run netlify:build"
+    "netlify:build": "yarn clean && yarn build && npx lerna run netlify:build",
+    "lint:ts": "tslint --config tslint.json 'packages/**/*.{test,story}.ts{,x}'"
   },
   "dependencies": {},
   "husky": {
@@ -76,6 +81,10 @@
     ],
     "*.js": [
       "eslint --fix",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix",
       "git add"
     ]
   },
