@@ -44,6 +44,7 @@ storiesOf('TextArea', module)
       placeholder="hello"
       disabled
       label="im a label"
+      onChange={() => 'Hello world!'}
     />
   ))
   .add('compact', () => (
@@ -53,5 +54,6 @@ storiesOf('TextArea', module)
       placeholder="hello"
       compact
       label="im a label"
+      onChange={() => 'Hello world!'}
     />
   ));
