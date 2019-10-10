@@ -3,7 +3,7 @@ import React from 'react';
 
 export interface ICheckboxProps extends React.HTMLProps<HTMLInputElement> {
   className?: string;
-  id?: string;
+  id: string;
   label?: string;
   name?: string;
 }

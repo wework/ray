@@ -7,6 +7,7 @@ describe('Checkbox', () => {
   test('it renders a checkbox', () => {
     const wrapper = Enzyme.mount(<Checkbox label="hello world" />);
     expect(wrapper.find('.ray-checkbox').length).toBe(1);
+    expect(wrapper.find('input[type="checkbox"]').length).toBe(1);
   });
 
   test('it supports a custom class', () => {
