@@ -1,5 +1,5 @@
-import React from 'react';
 import Enzyme from 'enzyme';
+import React from 'react';
 import { IconPosition, Select } from './Select';
 
 describe('Select', () => {
@@ -53,7 +53,7 @@ describe('Select', () => {
 
     it('has default "ICONSTART" property that can be set (:string)', () => {
       component.setProps({
-        iconPosition: IconPosition.Start,
+        iconPosition: IconPosition.START,
         icon: (
           <svg className="ray-select__icon--start" viewBox="0 0 25 25">
             <g id="budicon-profile-picture">
@@ -67,7 +67,7 @@ describe('Select', () => {
 
     it('has default "ICONEND" property that can be set (:string)', () => {
       component.setProps({
-        iconPosition: IconPosition.End,
+        iconPosition: IconPosition.END,
         rtl: true,
         icon: (
           <svg className="ray-select__icon--start" viewBox="0 0 25 25">
@@ -119,16 +119,19 @@ describe('Select', () => {
     it('onFocus', () => {
       component.setProps({ onFocus: fauxCallback });
       component.find('select').simulate('focus');
+      expect(component.find('.ray-select--active').exists()).toBe(true);
     });
 
     it('onBlur', () => {
       component.setProps({ onBlur: fauxCallback });
       component.find('select').simulate('blur');
+      expect(component.find('.ray-select--active').exists()).toBe(false);
     });
 
     it('onChange', () => {
-      component.setProps({ onChange: fauxCallback });
+      component.setProps({ onChange: fauxCallback, value: 4 });
       component.find('select').simulate('change');
+      expect(fauxCallback).toHaveBeenCalled();
     });
   });
 });

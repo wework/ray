@@ -8,9 +8,9 @@ import RTLWrapper from '../Common/RTLWrapper';
 import './Select.scss';
 
 export enum IconPosition {
-  Prepend = 'PREPEND',
-  End = 'END',
-  Start = 'START'
+  PREPEND = 'PREPEND',
+  END = 'END',
+  START = 'START'
 }
 
 export interface ISelectProps extends React.HTMLProps<HTMLSelectElement> {
@@ -81,12 +81,14 @@ export const Select: React.FC<ISelectProps> = ({
       'ray-select--has-value': placeholder || currValue,
       'ray-select--active': activeClass,
       'ray-select--with-icon-start':
-        iconPosition === IconPosition.Start ||
-        (iconPosition === IconPosition.End && icon),
-      'ray-select--with-prepend': iconPosition === IconPosition.Prepend && icon
+        iconPosition === IconPosition.START ||
+        (iconPosition === IconPosition.END && icon),
+      'ray-select--with-prepend': iconPosition === IconPosition.PREPEND && icon
     },
     className
   );
+
+  // console.log('mimimim',value);
 
   if (options.length > 0) {
     optionItems = options.map((element: Option, index: number) => {
@@ -106,14 +108,16 @@ export const Select: React.FC<ISelectProps> = ({
     <RTLWrapper renderWrapper={rtl}>
       <FormItemWrapper renderWrapper={formItem}>
         <div className={wrapperClass}>
-          <IconWrapper
-            renderWrapper={iconPosition === IconPosition.Prepend}
-            iconClass="ray-select__prepend"
-          >
-            {icon}
-          </IconWrapper>
+          {icon && (
+            <IconWrapper
+              renderWrapper={iconPosition === IconPosition.PREPEND}
+              iconClass="ray-select__prepend"
+            >
+              {icon}
+            </IconWrapper>
+          )}
           <FieldWrapper
-            renderWrapper={iconPosition === IconPosition.Prepend}
+            renderWrapper={iconPosition === IconPosition.PREPEND}
             fieldClass="ray-select__wrapper"
           >
             <select
@@ -141,6 +145,5 @@ export const Select: React.FC<ISelectProps> = ({
 Select.defaultProps = {
   active: false,
   compact: false,
-  error: false,
-  iconPosition: IconPosition.Start
+  error: false
 };

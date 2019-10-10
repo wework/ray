@@ -120,7 +120,7 @@ storiesOf('Core Comps | Input', module)
         id="unique456"
         type="email"
         placeholder="arya.stark@winterfell.org"
-        iconPosition={IconPosition.Start}
+        iconPosition={IconPosition.START}
         icon={
           <svg className="ray-text-field__icon--start" viewBox="0 0 25 25">
             <g id="budicon-profile-picture">
@@ -138,7 +138,7 @@ storiesOf('Core Comps | Input', module)
         id="unique456"
         type="email"
         placeholder="arya.stark@winterfell.org"
-        iconPosition={IconPosition.End}
+        iconPosition={IconPosition.END}
         icon={
           <svg className="ray-text-field__icon--end" viewBox="0 0 25 25">
             <g id="budicon-profile-picture">
@@ -156,7 +156,7 @@ storiesOf('Core Comps | Input', module)
         id="unique456"
         type="email"
         placeholder="arya.stark@winterfell.org"
-        iconPosition={IconPosition.Prepend}
+        iconPosition={IconPosition.PREPEND}
         icon={
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@ storiesOf('Core Comps | Input', module)
         id="unique456"
         type="email"
         placeholder="arya.stark@winterfell.org"
-        iconPosition={IconPosition.Prepend}
+        iconPosition={IconPosition.PREPEND}
         rtl={true}
         icon={
           <svg

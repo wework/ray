@@ -6,9 +6,9 @@ import IconWrapper from '../Common/IconWrapper';
 import RTLWrapper from '../Common/RTLWrapper';
 
 export enum IconPosition {
-  Prepend = 'PREPEND',
-  End = 'END',
-  Start = 'START'
+  PREPEND = 'PREPEND',
+  END = 'END',
+  START = 'START'
 }
 
 type InputProps = React.HTMLProps<HTMLInputElement> & {
@@ -52,10 +52,10 @@ export const Input: React.FC<InputProps> = ({
     'ray-text-field--has-value': value,
     'ray-text-field--active': active || focus,
     'ray-text-field--with-icon-start':
-      iconPosition === IconPosition.Start && icon,
-    'ray-text-field--with-icon-end': iconPosition === IconPosition.End && icon,
-    'ray-text-field--with-prepend':
-      iconPosition === IconPosition.Prepend && icon
+      iconPosition === IconPosition.START && icon,
+    'ray-text-field--with-icon-end': iconPosition === IconPosition.END && icon,
+    'ray-text-field--with-PREPEND':
+      iconPosition === IconPosition.PREPEND && icon
   });
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
     setFocus(true);
@@ -70,14 +70,16 @@ export const Input: React.FC<InputProps> = ({
     <RTLWrapper renderWrapper={rtl}>
       <FormItemWrapper renderWrapper={formItem}>
         <div className={wrapperClass}>
-          <IconWrapper
-            renderWrapper={iconPosition === IconPosition.Prepend}
-            iconClass="ray-text-field__prepend"
-          >
-            {icon}
-          </IconWrapper>
+          {icon && (
+            <IconWrapper
+              renderWrapper={iconPosition === IconPosition.PREPEND}
+              iconClass="ray-text-field__prepend"
+            >
+              {icon}
+            </IconWrapper>
+          )}
           <FieldWrapper
-            renderWrapper={iconPosition === IconPosition.Prepend}
+            renderWrapper={iconPosition === IconPosition.PREPEND}
             fieldClass="ray-text-field__wrapper"
           >
             <input

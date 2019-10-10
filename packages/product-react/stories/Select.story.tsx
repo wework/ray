@@ -30,7 +30,7 @@ storiesOf('Core Comps | Select', module)
     <Select
       label="name"
       options={[{ value: 9, label: 'Wework ' }]}
-      iconPosition={IconPosition.Start}
+      iconPosition={IconPosition.START}
       icon={
         <svg className="ray-select__icon--start" viewBox="0 0 25 25">
           <g id="budicon-profile-picture">
@@ -45,7 +45,7 @@ storiesOf('Core Comps | Select', module)
       label="name"
       options={[{ value: 9, label: 'Wework ' }]}
       rtl={true}
-      iconPosition={IconPosition.End}
+      iconPosition={IconPosition.END}
       icon={
         <svg className="ray-select__icon--start" viewBox="0 0 25 25">
           <g id="budicon-profile-picture">
@@ -59,7 +59,7 @@ storiesOf('Core Comps | Select', module)
     <Select
       label="name"
       options={[{ value: 9, label: 'Wework ' }]}
-      iconPosition={IconPosition.Prepend}
+      iconPosition={IconPosition.PREPEND}
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ storiesOf('Core Comps | Select', module)
       label="name"
       options={[{ value: 9, label: 'Wework ' }]}
       rtl={true}
-      iconPosition={IconPosition.Prepend}
+      iconPosition={IconPosition.PREPEND}
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"

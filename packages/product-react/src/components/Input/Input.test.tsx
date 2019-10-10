@@ -11,7 +11,7 @@ describe('Input', () => {
     id: 'unique123',
     type: 'text',
     placeholder: 'Arya Stark',
-    iconPosition: IconPosition.Start,
+    iconPosition: IconPosition.START,
     onChange(evt: React.ReactNode) {
       return;
     }
@@ -23,7 +23,7 @@ describe('Input', () => {
 
   test('it renders a input', () => {
     const wrapper = component;
-    expect(wrapper.find('.ray-text-field').length).toBe(1);
+    expect(wrapper.find('input').length).toBe(1);
   });
 
   describe('Default Properties', () => {
@@ -44,7 +44,7 @@ describe('Input', () => {
 
     it('has default "ICONSTART" property that can be set (:string)', () => {
       component.setProps({
-        iconPosition: IconPosition.Start,
+        iconPosition: IconPosition.START,
         icon: (
           <svg className="ray-text-field__icon--start" viewBox="0 0 25 25">
             <g id="budicon-profile-picture">
@@ -60,7 +60,7 @@ describe('Input', () => {
 
     it('has default "ICONEND" property that can be set (:string)', () => {
       component.setProps({
-        iconPosition: IconPosition.End,
+        iconPosition: IconPosition.END,
         icon: (
           <svg className="ray-text-field__icon--end" viewBox="0 0 25 25">
             <g id="budicon-profile-picture">
@@ -79,14 +79,16 @@ describe('Input', () => {
   });
 
   describe('Functions events', () => {
-    it('onFocus', () => {
+    it('should call onFocus prop on input focus', () => {
       component.setProps({ onFocus: fauxCallback });
       component.find('input').simulate('focus');
+      expect(component.find('.ray-text-field--active').exists()).toBe(true);
     });
 
-    it('onBlur', () => {
+    it('should call onBlur prop on input blur', () => {
       component.setProps({ onBlur: fauxCallback });
       component.find('input').simulate('blur');
+      expect(component.find('.ray-text-field--active').exists()).toBe(false);
     });
   });
 });
