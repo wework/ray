@@ -88,8 +88,6 @@ export const Select: React.FC<ISelectProps> = ({
     className
   );
 
-  // console.log('mimimim',value);
-
   if (options.length > 0) {
     optionItems = options.map((element: Option, index: number) => {
       return (
