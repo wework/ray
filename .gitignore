@@ -2,6 +2,7 @@
 dist
 .env
 node_modules/
+.vscode
 
 # Logs
 logs

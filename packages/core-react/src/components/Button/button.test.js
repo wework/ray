@@ -16,14 +16,14 @@ describe('Button', () => {
     expect(wrapper.find('.ray-button.some-custom-class')).toHaveLength(1);
   });
 
-  test('it supports type & kind attributes', () => {
+  test('it supports type & variant attributes', () => {
     const wrapper = mount(
-      <Button kind="secondary" type="submit">
+      <Button variant="secondary" type="submit">
         Submit Button
       </Button>
     );
     const buttonWrapper = wrapper.find(Button);
     expect(buttonWrapper.props().type).toEqual('submit');
-    expect(buttonWrapper.props().kind).toEqual('secondary');
+    expect(buttonWrapper.props().variant).toEqual('secondary');
   });
 });
