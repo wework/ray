@@ -9,7 +9,7 @@
     "dev": "yarn storybook",
     "build": "gulp scripts:es scripts:umd scripts:compiled",
     "test": "jest",
-    "tdd": "jest --watch",
+    "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6007",
     "prebuild": "rm -rf dist/",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/core-react/storybook -s ./stories/static"
