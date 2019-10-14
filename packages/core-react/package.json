@@ -70,8 +70,5 @@
     "LICENSE",
     "README.md",
     "index.d.ts"
-  ],
-  "jest": {
-    "testEnvironment": "node"
-  }
+  ]
 }
