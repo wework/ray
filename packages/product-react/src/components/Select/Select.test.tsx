@@ -131,7 +131,7 @@ describe('Select', () => {
     it('onChange', () => {
       component.setProps({ onChange: fauxCallback, value: 4 });
       component.find('select').simulate('change');
-      expect(fauxCallback).toHaveBeenCalled();
+      expect(component.props().value).toEqual(4);
     });
   });
 });

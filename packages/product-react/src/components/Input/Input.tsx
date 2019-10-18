@@ -98,6 +98,7 @@ export const Input: React.FC<InputProps> = ({
             )}
           </FieldWrapper>
         </div>
+
         {(formItem || hint) && (
           <div
             className={clsx('ray-form-item__hint', {

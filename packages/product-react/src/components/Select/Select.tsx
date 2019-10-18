@@ -35,6 +35,7 @@ interface Option {
 
 export const Select: React.FC<ISelectProps> = ({
   id,
+  name,
   active,
   label,
   compact,

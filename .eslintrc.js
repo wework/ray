@@ -5,9 +5,11 @@ module.exports = {
     jest: true
   },
   extends: [
-    'airbnb-base',
     'plugin:prettier/recommended',
-    'plugin:react/recommended'
+    'prettier/@typescript-eslint',
+    'plugin:react/recommended',
+    'plugin:import/typescript',
+    'react-app'
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -28,5 +30,18 @@ module.exports = {
     ],
     'no-use-before-define': 'off',
     'no-script-url': 'off'
-  }
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
+  overrides: [
+    {
+      files: ['*.tsx'],
+      rules: {
+        'react/prop-types': 'off'
+      }
+    }
+  ]
 };
