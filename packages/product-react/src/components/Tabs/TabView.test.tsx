@@ -74,6 +74,7 @@ describe('TabView', () => {
       "Invalid id passed to TabView. Valid id's include: test-1, test-2"
     );
   });
+
   test('renders null if there is no context', () => {
     const wrapper = Enzyme.mount(
       <>
