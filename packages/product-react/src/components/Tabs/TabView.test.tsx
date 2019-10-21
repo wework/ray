@@ -11,12 +11,12 @@ interface IContextProviderProps {
   children: React.ReactNode;
 }
 
-const ContextProvider: React.FC<IContextProviderProps> = (props) => {
+const ContextProvider: React.FC<IContextProviderProps> = props => {
   const { children, selectedTab } = props;
 
   const tabs = [
     { id: 'test-1', ariaLabel: 'Test', label: 'Test 1' },
-    { id: 'test-2', ariaLabel: 'Test', label: 'Test 2' },
+    { id: 'test-2', ariaLabel: 'Test', label: 'Test 2' }
   ];
 
   return (
@@ -36,7 +36,7 @@ describe('TabView', () => {
         <TabView id="test-2">
           <div>test2</div>
         </TabView>
-      </ContextProvider>,
+      </ContextProvider>
     );
 
     expect(wrapper.find('[data-testid="test-1"]').exists()).toBe(true);
@@ -51,7 +51,7 @@ describe('TabView', () => {
         <TabView id="test-2">
           <div>test2</div>
         </TabView>
-      </ContextProvider>,
+      </ContextProvider>
     );
 
     expect(wrapper.find('[data-testid="test-2"]').exists()).toBe(false);
@@ -68,10 +68,23 @@ describe('TabView', () => {
           <TabView id="test-2">
             <div>test2</div>
           </TabView>
-        </ContextProvider>,
+        </ContextProvider>
       );
     }).toThrowError(
-      "Invalid id passed to TabView. Valid id's include: test-1, test-2",
+      "Invalid id passed to TabView. Valid id's include: test-1, test-2"
     );
+  });
+  test('renders null if there is no context', () => {
+    const wrapper = Enzyme.mount(
+      <>
+        <TabView id="test-1">
+          <div>test1</div>
+        </TabView>
+        <TabView id="test-2">
+          <div>test2</div>
+        </TabView>
+      </>
+    );
+    expect(wrapper.find('[data-testid="test-2"]').exists()).toBe(false);
   });
 });
