@@ -85,4 +85,24 @@ describe('Card', () => {
     });
     expect(component.find('a').length).toBe(1);
   });
+
+  it('"Card with children"  (:Object)', () => {
+    const component = Enzyme.mount(
+      <Card>
+        <button>Child</button>
+      </Card>
+    );
+
+    component.setProps({
+      image: (
+        <img
+          src="https://source.unsplash.com/random/800x450?minimalist"
+          alt="card graphic"
+        />
+      ),
+      header: 'Header',
+      content: 'Content'
+    });
+    expect(component.find('button').length).toBe(1);
+  });
 });
