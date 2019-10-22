@@ -18,7 +18,7 @@ export interface ILink extends React.HTMLProps<HTMLAnchorElement> {
   className?: string;
 }
 
-export interface IProps extends React.HTMLProps<HTMLDivElement> {
+export interface ICardProps extends React.HTMLProps<HTMLDivElement> {
   image?: React.ReactNode;
   header?: string;
   content?: string;
@@ -29,7 +29,7 @@ export interface IProps extends React.HTMLProps<HTMLDivElement> {
   linkProps?: ILink;
 }
 
-export const Card: FC<IProps> = ({
+export const Card: FC<ICardProps> = ({
   image,
   header,
   content,
@@ -42,16 +42,7 @@ export const Card: FC<IProps> = ({
   linkProps,
   ...rest
 }) => {
-  // const wrapperClass = clsx(
-  //   {
-  //     'ray-card--row': row,
-  //     'lucia-card--compact': compact,
-  //     'lucia-card--inactive': inactive
-  //   },
-  //   className
-  // );
-
-  return (
+   return (
     <LINKWrapper props={linkProps}>
       <RTLWrapper renderWrapper={rtl}>
         <div
@@ -65,7 +56,6 @@ export const Card: FC<IProps> = ({
             className
           )}
           {...rest}
-          style={{ maxWidth: '400px' }}
         >
           {image && (
             <div className="ray-card__image ray-image ray-image--16by9">
