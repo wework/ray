@@ -50,8 +50,8 @@ export const Card: FC<ICardProps> = ({
             'ray-card',
             {
               'ray-card--row': row,
-              'lucia-card--compact': compact,
-              'lucia-card--inactive': inactive
+              'ray-card--compact': compact,
+              'ray-card--inactive': inactive
             },
             className
           )}
@@ -65,7 +65,7 @@ export const Card: FC<ICardProps> = ({
           <div
             className={clsx(
               'ray-card__content',
-              { 'lucia-card--compact': compact },
+              { 'ray-card--compact': compact },
               className
             )}
           >
