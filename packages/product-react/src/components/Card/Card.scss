@@ -1,13 +1,19 @@
-.lucia-card--compact {
-  padding: 1rem;
-}
+$card-compact-padding: 1rem;
+$card-compact-div: 0;
+$card-compact-inactive: #666;
 
-.lucia-card--compact > div {
-  margin-bottom: 0;
-}
+.lucia-card {
+  &--compact {
+    padding: $card-compact-padding;
+  }
 
-.lucia-card--inactive {
-  color: #666;
+  &--compact > div {
+    margin-bottom: $card-compact-div;
+  }
+
+  &--inactive {
+    color: $card-compact-inactive;
+  }
 }
 
 .ray-card__content {

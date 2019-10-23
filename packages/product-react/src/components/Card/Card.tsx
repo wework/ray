@@ -3,7 +3,7 @@ import React, { FC, CSSProperties } from 'react';
 import RTLWrapper from '../Common/RTLWrapper';
 import './Card.scss';
 
-const LINKWrapper: React.FC<{ props?: ILink }> = ({ children, props }) =>
+const LinkWrapper: React.FC<{ props?: ILink }> = ({ children, props }) =>
   props ? <a {...props}>{children}</a> : <>{children}</>;
 
 export interface ILink extends React.HTMLProps<HTMLAnchorElement> {
@@ -43,7 +43,7 @@ export const Card: FC<ICardProps> = ({
   ...rest
 }) => {
    return (
-    <LINKWrapper props={linkProps}>
+     <LinkWrapper props={linkProps}>
       <RTLWrapper renderWrapper={rtl}>
         <div
           className={clsx(
@@ -75,7 +75,7 @@ export const Card: FC<ICardProps> = ({
           </div>
         </div>
       </RTLWrapper>
-    </LINKWrapper>
+     </LinkWrapper>
   );
 };
 
