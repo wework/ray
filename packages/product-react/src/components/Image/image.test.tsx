@@ -20,13 +20,12 @@ describe('Image', () => {
     });
   });
 
-   describe('bg', () => {
+  describe('Image', () => {
     test('it renders a background image', () => {
-      const wrapper = Enzyme.mount(<Image src="/test_image.jpg" bg />);
-
-      const element = wrapper.find('.ray-bg').instance();
-      element.style
-      expect(element.style.backgroundImage).toBe('url(/test_image.jpg)');
+      const wrapper = Enzyme.mount(
+        <Image aspect="16by9" src="/test_image.jpg" bg />
+      );
+      expect(wrapper.props()).toHaveProperty('src','/test_image.jpg');
     });
   });
 });
