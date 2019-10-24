@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { TextArea } from '../src/components/TextArea';
 
-storiesOf('TextArea', module)
+storiesOf('Core Comps | TextArea', module)
   .add('default', () => (
     <TextArea
       id="example"

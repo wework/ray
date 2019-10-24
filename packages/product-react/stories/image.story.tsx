@@ -1,19 +1,19 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Image from '../src/components/Image';
+import { Image } from '../src/components/Image/Image';
 
-function ExampleImageWrapper(props) {
-  // eslint-disable-next-line react/prop-types
+function ExampleImageWrapper(props: any) {
   return <div style={{ maxWidth: '300px' }}>{props.children}</div>;
 }
 
-storiesOf('Image', module)
+storiesOf('Core Comps | Image', module)
   .add('16by9', () => (
     <ExampleImageWrapper>
       <Image
         src="https://source.unsplash.com/random/800x450?minimalist"
         aspect="16by9"
+        width="350px"
       />
     </ExampleImageWrapper>
   ))
@@ -56,6 +56,7 @@ storiesOf('Image', module)
         src="https://source.unsplash.com/random/800x450?minimalist"
         aspect="16by9"
         bg
+        width="350px"
       />
     </ExampleImageWrapper>
   ))
@@ -92,6 +93,15 @@ storiesOf('Image', module)
         src="https://source.unsplash.com/random/800x450?minimalist"
         aspect="1by1"
         bg
+      />
+    </ExampleImageWrapper>
+  ))
+  .add('16by9 caption', () => (
+    <ExampleImageWrapper>
+      <Image
+        src="https://source.unsplash.com/random/800x450?minimalist"
+        aspect="16by9"
+        caption="Wework Waltz"
       />
     </ExampleImageWrapper>
   ));

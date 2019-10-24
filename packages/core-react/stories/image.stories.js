@@ -14,6 +14,7 @@ storiesOf('Image', module)
       <Image
         src="https://source.unsplash.com/random/800x450?minimalist"
         aspect="16by9"
+       
       />
     </ExampleImageWrapper>
   ))

@@ -1,108 +1,82 @@
-
 import clsx from 'clsx';
 import React from 'react';
 
-function ratioToPercentageString(ratio:any) {
-  return `${100 / ratio}%`;
-}
+import './Image.scss';
 
-export enum SizeVariations {
-  by9 = ratioToPercentageString(16 / 9),
-  medium = 'medium',
-  large = 'large',
-}
-
-const AspectRatios = {
-  '16by9': ratioToPercentageString(16 / 9),
-  '1by1': ratioToPercentageString(1),
-  '3by4': ratioToPercentageString(3 / 4),
-  '4by3': ratioToPercentageString(4 / 3),
-  cinema: ratioToPercentageString(2.4)
-};
-
-const ASPECT_RATIOS = Object.keys(AspectRatios);
-
-// export default function Image({ className, src, aspect, bg, ...rest }) {
-//   if (bg) {
-//     return (
-//       <div
-//         className={clsx(
-//           'ray-bg',
-//           {
-//             [`ray-bg--${aspect}`]: aspect
-//           },
-//           className
-//         )}
-//         {...rest}
-//         style={{
-//           ...rest.style,
-//           backgroundImage: `url(${src})`
-//         }}
-//       />
-//     );
-//   }
-
-//   return (
-//     <div
-//       className={clsx('ray-image', {
-//         [`ray-image--${aspect}`]: aspect
-//       })}
-//     >
-//       <img className={className} src={src} {...rest} />
-//     </div>
-//   );
-// }
-
-// Image.propTypes = {
-//   className: PropTypes.string,
-//   src: PropTypes.string,
-//   aspect: PropTypes.oneOf(ASPECT_RATIOS),
-//   bg: PropTypes.bool
-// };
-
+export type SizeVariations = '16by9' | '1by1' | '3by4' | '4by3' | 'cinema';
 
 export interface IImageProps extends React.HTMLProps<HTMLImageElement> {
   className?: string;
-  src?: string;
+  src: string;
   aspect: SizeVariations;
-  //  ?, bg, ...rest
-
+  bg?: boolean;
   alt?: string;
-  crossOrigin?: "anonymous" | "use-credentials" | "";
-  decoding?: "async" | "auto" | "sync";
   height?: number | string;
-  sizes?: string;
-
+  width?: number | string;
   srcSet?: string;
   useMap?: string;
-  width?: number | string;
-
-
-
-
+  caption?: string;
+  decoding?: 'async' | 'auto' | 'sync';
 }
 
 export const Image: React.FC<IImageProps> = ({
   className,
-  id,
-  name,
-  label,
+  src,
+  aspect,
+  alt,
+  bg,
+  height,
+  width,
+  srcSet,
+  useMap,
+  decoding,
+  caption,
   ...rest
 }) => {
-  return (
-    <div className={clsx('ray-checkbox', className)}>
-      <input
-        className="ray-checkbox__input"
-        id={id}
-        name={name}
+  if (bg) {
+    return (
+      <div
+        className={clsx(
+          'ray-bg',
+          {
+            [`ray-bg--${aspect}`]: aspect
+          },
+          className
+        )}
         {...rest}
+        style={{
+          ...rest.style,
+          backgroundImage: `url(${src})`
+        }}
       />
-      <label className="ray-checkbox__label" htmlFor={id}>
-        {label}
-      </label>
-    </div>
+    );
+  }
+
+  return (
+    <>
+      <div
+        className={clsx('ray-image', {
+          [`ray-image--${aspect}`]: aspect
+        })}
+      >
+        <img
+          className={className}
+          src={src}
+          alt={alt}
+          height={height}
+          width={width}
+          srcSet={srcSet}
+          useMap={useMap}
+          decoding={decoding}
+        />
+      </div>
+      {caption && <div className="ray-caption">{caption}</div>}
+    </>
   );
 };
 
-export default Image;
+Image.defaultProps = {
+  caption: ''
+};
 
+export default Image;
