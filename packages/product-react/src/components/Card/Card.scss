@@ -1,0 +1,22 @@
+$card-compact-padding: 1rem;
+$card-compact-div: 0;
+$card-compact-inactive: #666;
+$card-card-content: break-word;
+
+.ray-card {
+  &--compact {
+    padding: $card-compact-padding;
+  }
+
+  &--compact > div {
+    margin-bottom: $card-compact-div;
+  }
+
+  &--inactive {
+    color: $card-compact-inactive;
+  }
+
+  &__content {
+    overflow-wrap: $card-card-content;
+  }
+}
