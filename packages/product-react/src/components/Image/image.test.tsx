@@ -11,12 +11,22 @@ describe('Image', () => {
     expect(wrapper.find('.ray-image').length).toBe(1);
   });
 
-  describe('bg', () => {
+  describe('Image with caption', () => {
     test('it renders a background image', () => {
       const wrapper = Enzyme.mount(
-        <Image aspect="16by9" src="/test_image.jpg" bg />
+        <Image aspect="16by9" src="/test_image.jpg" caption="Wework Waltz" />
       );
-      expect(wrapper.props()).toHaveProperty('src', '/test_image.jpg');
+      expect(wrapper.props()).toHaveProperty('caption', 'Wework Waltz');
+    });
+  });
+
+   describe('bg', () => {
+    test('it renders a background image', () => {
+      const wrapper = Enzyme.mount(<Image src="/test_image.jpg" bg />);
+
+      const element = wrapper.find('.ray-bg').instance();
+      element.style
+      expect(element.style.backgroundImage).toBe('url(/test_image.jpg)');
     });
   });
 });
