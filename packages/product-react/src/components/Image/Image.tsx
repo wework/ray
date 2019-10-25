@@ -17,6 +17,7 @@ export interface IImageProps extends React.HTMLProps<HTMLImageElement> {
   useMap?: string;
   caption?: string;
   decoding?: 'async' | 'auto' | 'sync';
+  style?: React.CSSProperties;
 }
 
 export const Image: React.FC<IImageProps> = ({
@@ -31,6 +32,7 @@ export const Image: React.FC<IImageProps> = ({
   useMap,
   decoding,
   caption,
+  style,
   ...rest
 }) => {
   if (bg) {
@@ -45,7 +47,7 @@ export const Image: React.FC<IImageProps> = ({
         )}
         {...rest}
         style={{
-          ...rest.style,
+          ...style,
           backgroundImage: `url(${src})`
         }}
       />

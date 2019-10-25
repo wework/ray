@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FC, CSSProperties } from 'react';
+import React from 'react';
 import RTLWrapper from '../Common/RTLWrapper';
 import './Card.scss';
 
@@ -14,7 +14,7 @@ export interface ILink extends React.HTMLProps<HTMLAnchorElement> {
   rel?: string;
   target?: string;
   type?: string;
-  style?: CSSProperties;
+  style?: React.CSSProperties;
   className?: string;
 }
 
@@ -29,7 +29,7 @@ export interface ICardProps extends React.HTMLProps<HTMLDivElement> {
   linkProps?: ILink;
 }
 
-export const Card: FC<ICardProps> = ({
+export const Card: React.FC<ICardProps> = ({
   image,
   header,
   content,
