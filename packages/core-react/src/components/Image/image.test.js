@@ -13,7 +13,6 @@ describe('Image', () => {
   describe('bg', () => {
     test('it renders a background image', () => {
       const wrapper = mount(<Image src="/test_image.jpg" bg />);
-
       const element = wrapper.find('.ray-bg').instance();
       expect(element.style.backgroundImage).toBe('url(/test_image.jpg)');
     });
