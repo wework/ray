@@ -3,6 +3,6 @@ import React from 'react';
 
 import { Checkbox } from '../src/components/Checkbox';
 
-storiesOf('Checkbox', module).add('default', () => (
+storiesOf('Core Comps | Checkbox', module).add('default', () => (
   <Checkbox id="checkboxtest" label="henlo" />
 ));

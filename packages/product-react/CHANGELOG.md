@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.7](https://github.com/wework/ray/compare/v1.13.6...v1.13.7) (2019-10-25)
+
+**Note:** Version bump only for package @wework/ray-product-react
+
+
+
+
+
+## [1.13.6](https://github.com/wework/ray/compare/v1.13.5...v1.13.6) (2019-10-24)
+
+**Note:** Version bump only for package @wework/ray-product-react
+
+
+
+
+
+## [1.13.5](https://github.com/wework/ray/compare/v1.13.4...v1.13.5) (2019-10-21)
+
+**Note:** Version bump only for package @wework/ray-product-react
+
+
+
+
+
 ## [1.13.4](https://github.com/wework/ray/compare/v1.13.3...v1.13.4) (2019-10-15)
 
 **Note:** Version bump only for package @wework/ray-product-react
