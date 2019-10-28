@@ -671,6 +671,270 @@ storiesOf('Text Field', module)
       </div>
     );
   })
+  .add('Text field, with append', () => {
+    setTimeout(initTextField);
+    setTimeout(initSelect);
+
+    return (
+      <>
+        <div className="ray-form-item">
+          <div className="ray-text-field ray-text-field--with-append">
+            <div className="ray-text-field__wrapper">
+              <input
+                type="text"
+                className="ray-text-field__input"
+                id="input2"
+                placeholder="Few people are aware..."
+              />
+              <label className="ray-text-field__label" htmlFor="input2">
+                Fun fact about Ray Eames
+              </label>
+            </div>
+            <div className="ray-text-field__append">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+                style={{ height: '1rem' }}
+              >
+                <g id="budicon-profile-picture">
+                  <path d="M12.5,4A4.5,4.5,0,1,0,17,8.5,4.5,4.5,0,0,0,12.5,4Zm0,8A3.5,3.5,0,1,1,16,8.5,3.504,3.504,0,0,1,12.5,12Zm0-12A12.4886,12.4886,0,0,0,5.0007,22.4834v0a12.4325,12.4325,0,0,0,14.9983,0v0q.5-.3761.9593-.7988l0,0A12.4869,12.4869,0,0,0,12.5,0Zm0,24a11.4432,11.4432,0,0,1-7.3931-2.7041,7.4887,7.4887,0,0,1,14.7863,0A11.4432,11.4432,0,0,1,12.5,24Zm8.25-3.5061a8.4871,8.4871,0,0,0-16.5,0,11.5,11.5,0,1,1,16.5,0Z" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>{' '}
+        <div className="ray-form-item">
+          <div className="ray-text-field ray-text-field--disabled ray-text-field--with-append">
+            <div className="ray-text-field__wrapper">
+              <input
+                type="text"
+                className="ray-text-field__input"
+                id="input"
+                placeholder="Few people are aware..."
+                disabled
+              />
+              <label className="ray-text-field__label" htmlFor="input">
+                Fun fact about Ray Eames
+              </label>
+            </div>
+            <div className="ray-text-field__append">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+                style={{ height: '1rem' }}
+              >
+                <g id="budicon-profile-picture">
+                  <path d="M12.5,4A4.5,4.5,0,1,0,17,8.5,4.5,4.5,0,0,0,12.5,4Zm0,8A3.5,3.5,0,1,1,16,8.5,3.504,3.504,0,0,1,12.5,12Zm0-12A12.4886,12.4886,0,0,0,5.0007,22.4834v0a12.4325,12.4325,0,0,0,14.9983,0v0q.5-.3761.9593-.7988l0,0A12.4869,12.4869,0,0,0,12.5,0Zm0,24a11.4432,11.4432,0,0,1-7.3931-2.7041,7.4887,7.4887,0,0,1,14.7863,0A11.4432,11.4432,0,0,1,12.5,24Zm8.25-3.5061a8.4871,8.4871,0,0,0-16.5,0,11.5,11.5,0,1,1,16.5,0Z" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>{' '}
+        <div
+          style={{ backgroundColor: '#f7f7f7', padding: '2rem 1.5rem 1.5rem' }}
+        >
+          <div className="ray-form-item">
+            <div className="ray-text-field">
+              <div className="ray-text-field__wrapper">
+                <input
+                  type="text"
+                  className="ray-text-field__input"
+                  id="input-name"
+                  placeholder="John Doe"
+                  required
+                />
+                <label className="ray-text-field__label" htmlFor="input-name">
+                  Full name
+                </label>
+              </div>
+            </div>
+          </div>
+          <div className="ray-form-item">
+            <div className="ray-text-field">
+              <div className="ray-text-field__wrapper">
+                <input
+                  type="text"
+                  className="ray-text-field__input"
+                  id="input-email"
+                  placeholder="john@example.com"
+                  required
+                />
+                <label className="ray-text-field__label" htmlFor="input-email">
+                  Email Adress
+                </label>
+              </div>
+            </div>
+          </div>
+          <div className="ray-form-item">
+            <div className="ray-text-field ray-text-field--with-append">
+              <div className="ray-text-field__wrapper">
+                <input
+                  type="text"
+                  className="ray-text-field__input"
+                  id="input-phone"
+                  placeholder="1-212-555-1212"
+                  required
+                />
+                <label className="ray-text-field__label" htmlFor="input-phone">
+                  Phone number
+                </label>
+              </div>
+              <div className="ray-text-field__append">
+                <div className="ray-select ray-select--has-value ray-select--simple">
+                  <select
+                    className="ray-select__input ray-select--simple__input"
+                    required
+                  >
+                    <optgroup label="">
+                      <option value="US" selected>
+                        🇺🇸 United States
+                      </option>
+                      <option value="UK">🇬🇧 United Kingdom</option>
+                    </optgroup>
+                    <optgroup label="---------------------">
+                      <option>🇦🇫 Afghanistan (‫افغانستان‬‎)</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  })
+  .add('Text field, with append (RTL)', () => {
+    setTimeout(initTextField);
+    setTimeout(initSelect);
+
+    return (
+      <div dir="rtl">
+        <div className="ray-form-item">
+          <div className="ray-text-field ray-text-field--with-append">
+            <div className="ray-text-field__wrapper">
+              <input
+                type="text"
+                className="ray-text-field__input"
+                id="input2"
+                placeholder="Few people are aware..."
+              />
+              <label className="ray-text-field__label" htmlFor="input2">
+                Fun fact about Ray Eames
+              </label>
+            </div>
+            <div className="ray-text-field__append">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+                style={{ height: '1rem' }}
+              >
+                <g id="budicon-profile-picture">
+                  <path d="M12.5,4A4.5,4.5,0,1,0,17,8.5,4.5,4.5,0,0,0,12.5,4Zm0,8A3.5,3.5,0,1,1,16,8.5,3.504,3.504,0,0,1,12.5,12Zm0-12A12.4886,12.4886,0,0,0,5.0007,22.4834v0a12.4325,12.4325,0,0,0,14.9983,0v0q.5-.3761.9593-.7988l0,0A12.4869,12.4869,0,0,0,12.5,0Zm0,24a11.4432,11.4432,0,0,1-7.3931-2.7041,7.4887,7.4887,0,0,1,14.7863,0A11.4432,11.4432,0,0,1,12.5,24Zm8.25-3.5061a8.4871,8.4871,0,0,0-16.5,0,11.5,11.5,0,1,1,16.5,0Z" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>{' '}
+        <div className="ray-form-item">
+          <div className="ray-text-field ray-text-field--disabled ray-text-field--with-append">
+            <div className="ray-text-field__wrapper">
+              <input
+                type="text"
+                className="ray-text-field__input"
+                id="input"
+                placeholder="Few people are aware..."
+                disabled
+              />
+              <label className="ray-text-field__label" htmlFor="input">
+                Fun fact about Ray Eames
+              </label>
+            </div>
+            <div className="ray-text-field__append">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+                style={{ height: '1rem' }}
+              >
+                <g id="budicon-profile-picture">
+                  <path d="M12.5,4A4.5,4.5,0,1,0,17,8.5,4.5,4.5,0,0,0,12.5,4Zm0,8A3.5,3.5,0,1,1,16,8.5,3.504,3.504,0,0,1,12.5,12Zm0-12A12.4886,12.4886,0,0,0,5.0007,22.4834v0a12.4325,12.4325,0,0,0,14.9983,0v0q.5-.3761.9593-.7988l0,0A12.4869,12.4869,0,0,0,12.5,0Zm0,24a11.4432,11.4432,0,0,1-7.3931-2.7041,7.4887,7.4887,0,0,1,14.7863,0A11.4432,11.4432,0,0,1,12.5,24Zm8.25-3.5061a8.4871,8.4871,0,0,0-16.5,0,11.5,11.5,0,1,1,16.5,0Z" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>{' '}
+        <div
+          style={{ backgroundColor: '#f7f7f7', padding: '2rem 1.5rem 1.5rem' }}
+        >
+          <div className="ray-form-item">
+            <div className="ray-text-field">
+              <div className="ray-text-field__wrapper">
+                <input
+                  type="text"
+                  className="ray-text-field__input"
+                  id="input-name"
+                  placeholder="John Doe"
+                  required
+                />
+                <label className="ray-text-field__label" htmlFor="input-name">
+                  Full name
+                </label>
+              </div>
+            </div>
+          </div>
+          <div className="ray-form-item">
+            <div className="ray-text-field">
+              <div className="ray-text-field__wrapper">
+                <input
+                  type="text"
+                  className="ray-text-field__input"
+                  id="input-email"
+                  placeholder="john@example.com"
+                  required
+                />
+                <label className="ray-text-field__label" htmlFor="input-email">
+                  Email Adress
+                </label>
+              </div>
+            </div>
+          </div>
+          <div className="ray-form-item">
+            <div className="ray-text-field ray-text-field--with-append">
+              <div className="ray-text-field__wrapper">
+                <input
+                  type="text"
+                  className="ray-text-field__input"
+                  id="input-phone"
+                  placeholder="1-212-555-1212"
+                  required
+                />
+                <label className="ray-text-field__label" htmlFor="input-phone">
+                  Phone number
+                </label>
+              </div>
+              <div className="ray-text-field__append">
+                <div className="ray-select ray-select--has-value ray-select--simple">
+                  <select
+                    className="ray-select__input ray-select--simple__input"
+                    required
+                  >
+                    <optgroup label="">
+                      <option value="US" selected>
+                        United States 🇺🇸
+                      </option>
+                      <option value="UK">United Kingdom 🇬🇧</option>
+                    </optgroup>
+                    <optgroup label="---------------------">
+                      <option>🇦🇫 Afghanistan (‫افغانستان‬‎)</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  })
   .add('Text field, active, textarea - compact', () => (
     <div className="ray-text-area ray-text-area--active ray-text-area--compact">
       <textarea

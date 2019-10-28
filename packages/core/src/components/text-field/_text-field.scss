@@ -6,6 +6,7 @@
     @include required-support('text-field');
     @include icon-support('text-field');
     @include prepend-support('text-field');
+    @include append-support('text-field');
   }
 
   .#{$ray-class-prefix}text-area {
