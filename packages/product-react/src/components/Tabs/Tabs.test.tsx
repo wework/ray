@@ -12,6 +12,7 @@ describe('Tabs', () => {
       { id: 'test-2', ariaLabel: 'Test', label: 'Test 2' },
       { id: 'test-3', ariaLabel: 'Test', label: 'Test 3' }
     ],
+    defaultActiveTab:'test-1',
     onSelect() {
       return;
     }
