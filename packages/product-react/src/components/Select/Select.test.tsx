@@ -131,4 +131,19 @@ describe('Select', () => {
       component.find('select').simulate('change');
     });
   });
+
+  it('has value options length that can be set (Array:)', () => {
+    const component = Enzyme.mount(
+      <Select
+        value={4}
+        options={[
+          { value: 1, label: 'Wework ' },
+          { value: 2, label: 'WeLive ' },
+          { value: 3, label: 'WeGrow ' },
+          { value: 4, label: 'WeTech ' }
+        ]}
+      />
+    );
+    expect(component.props().options.length).toEqual(4);
+  });
 });
