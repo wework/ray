@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactHTML, ReactNode } from 'react';
 
-export type ITypeProps = {
+export type ITypeStyleProps = {
   as?: keyof ReactHTML;
   children?: ReactNode;
   className?: string;
@@ -20,13 +20,13 @@ export type ITypeProps = {
     | 'display-2';
 } & typeof defaultProps;
 
-export const Type = ({
+export const TextStyle = ({
   as: Tag,
   children,
   style,
   className,
   ...rest
-}: ITypeProps) => {
+}: ITypeStyleProps) => {
   const classes = clsx(className, `ray-text--${style}`);
   return (
     <Tag className={classes} {...rest}>
@@ -39,4 +39,4 @@ const defaultProps = {
   as: 'div'
 };
 
-Type.defaultProps = defaultProps;
+TextStyle.defaultProps = defaultProps;

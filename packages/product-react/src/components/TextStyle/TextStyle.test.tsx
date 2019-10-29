@@ -1,21 +1,21 @@
 import React from 'react';
 import Enzyme from 'enzyme';
 
-import { Type } from './Type';
+import { TextStyle } from './TextStyle';
 
 const SAMPLE_TEXT = 'All their equipment and instruments are alive.';
 
-describe('Type', () => {
-  test('should renders type with ray body class', () => {
-    const wrapper = Enzyme.mount(<Type>{SAMPLE_TEXT}</Type>);
-    expect(wrapper.find(Type).length).toBe(1);
+describe('TextStyle', () => {
+  test('should renders TextStyle with ray body class', () => {
+    const wrapper = Enzyme.mount(<TextStyle>{SAMPLE_TEXT}</TextStyle>);
+    expect(wrapper.find(TextStyle).length).toBe(1);
   });
 
-  test('should renders type with added attributes', () => {
+  test('should renders TextStyle with added attributes', () => {
     const wrapper = Enzyme.mount(
-      <Type className="custom-class" data-stuff="hello" style="body">
+      <TextStyle className="custom-class" data-stuff="hello" style="body">
         {SAMPLE_TEXT}
-      </Type>
+      </TextStyle>
     );
 
     expect(wrapper.html()).toBe(
@@ -23,19 +23,21 @@ describe('Type', () => {
     );
   });
 
-  test('should renders type with a style', () => {
-    const wrapper = Enzyme.mount(<Type style="h3">{SAMPLE_TEXT}</Type>);
+  test('should renders TextStyle with a style', () => {
+    const wrapper = Enzyme.mount(
+      <TextStyle style="h3">{SAMPLE_TEXT}</TextStyle>
+    );
 
     expect(wrapper.html()).toBe(
       '<div class="ray-text--h3">All their equipment and instruments are alive.</div>'
     );
   });
 
-  test('should renders type with a custom tag', () => {
+  test('should renders TextStyle with a custom tag', () => {
     const wrapper = Enzyme.mount(
-      <Type as="h1" style="display-1">
+      <TextStyle as="h1" style="display-1">
         {SAMPLE_TEXT}
-      </Type>
+      </TextStyle>
     );
     expect(wrapper.html()).toBe(
       '<h1 class="ray-text--display-1">All their equipment and instruments are alive.</h1>'
