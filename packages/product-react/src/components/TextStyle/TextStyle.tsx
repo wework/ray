@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactHTML, ReactNode } from 'react';
 
-export type ITypeStyleProps = {
+export type ITextStyleProps = {
   as?: keyof ReactHTML;
   children?: ReactNode;
   className?: string;
@@ -26,7 +26,7 @@ export const TextStyle = ({
   style,
   className,
   ...rest
-}: ITypeStyleProps) => {
+}: ITextStyleProps) => {
   const classes = clsx(className, `ray-text--${style}`);
   return (
     <Tag className={classes} {...rest}>

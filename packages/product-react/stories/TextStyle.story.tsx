@@ -17,13 +17,13 @@ const styles: Array<any> = [
   'display-2'
 ];
 
-storiesOf('Type', module).add('default', () => (
+storiesOf('TestStyle', module).add('default', () => (
   <>
     {styles.map(style => {
       return (
-        <TypeStyle key={style} style={style}>
+        <TextStyle key={style} style={style}>
           All their equipment and instruments are alive.
-        </TypeStyle>
+        </TextStyle>
       );
     })}
   </>
