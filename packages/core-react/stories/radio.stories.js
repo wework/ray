@@ -4,5 +4,8 @@ import { storiesOf } from '@storybook/react';
 import Radio from '../src/components/Radio';
 
 storiesOf('Radio', module).add('default', () => (
-  <Radio id="test" label="henlo" />
+  <div>
+    <Radio id="test" label="WeWork" />
+    <Radio id="test" label="WeWaltz" />
+  </div>
 ));

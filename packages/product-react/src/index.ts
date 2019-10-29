@@ -7,3 +7,5 @@ export * from './components/Card';
 export * from './components/Select';
 export * from './components/Checkbox';
 export * from './components/TextArea';
+export * from './components/Radio';
+
