@@ -24,7 +24,7 @@ storiesOf('Core Comps | Select', module)
     />
   ))
   .add('select w/ error', () => (
-    <Select label="name" options={[]} error={true} />
+    <Select label="name" options = { [{ value: 9, label: 'Wework ' }, { value: 8, label: 'WeGrow' }]} error={true} />
   ))
   .add('select w/ icon start', () => (
     <Select

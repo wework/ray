@@ -145,5 +145,5 @@ describe('Select', () => {
       />
     );
     expect(component.props().options.length).toEqual(4);
-  });
+   });
 });
