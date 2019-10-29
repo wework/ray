@@ -1,9 +1,11 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactHTML, ReactNode } from 'react';
 
-export interface ITypeProps {
-  Tag?: keyof React.ReactHTML;
-  style:
+export type ITypeProps = {
+  as?: keyof ReactHTML;
+  children?: ReactNode;
+  className?: string;
+  style?:
     | 'h1'
     | 'h2'
     | 'h3'
@@ -16,17 +18,15 @@ export interface ITypeProps {
     | 'body-x-small'
     | 'display-1'
     | 'display-2';
-  className?: string;
-  children?: React.ReactNode;
-}
+} & typeof defaultProps;
 
-export const Type: React.FC<ITypeProps> = ({
-  Tag,
+export const Type = ({
+  as: Tag,
+  children,
   style,
   className,
-  children,
   ...rest
-}) => {
+}: ITypeProps) => {
   const classes = clsx(className, `ray-text--${style}`);
   return (
     <Tag className={classes} {...rest}>
@@ -36,8 +36,7 @@ export const Type: React.FC<ITypeProps> = ({
 };
 
 const defaultProps = {
-  Tag: 'div',
-  style: 'body'
+  as: 'div'
 };
 
-export default Type;
+Type.defaultProps = defaultProps;

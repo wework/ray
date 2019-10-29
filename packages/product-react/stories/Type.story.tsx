@@ -1,9 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { Type } from '../src/components/Type';
 
-import { ITypeProps, Type } from '../src/components/Type';
-
-const styles = [
+const styles: Array<any> = [
   'h1',
   'h2',
   'h3',
@@ -21,14 +20,11 @@ const styles = [
 storiesOf('Type', module).add('default', () => (
   <>
     {styles.map(style => {
-     console.log('style>>>>>>>',style,'typeof>>>',typeof(style))
-     
-     return(
-      <Type key={style} style='h1'>
-        All their equipment and instruments are alive.
-      </Type>)
-   
-   
-   })}
+      return (
+        <Type key={style} style={style}>
+          All their equipment and instruments are alive.
+        </Type>
+      );
+    })}
   </>
 ));

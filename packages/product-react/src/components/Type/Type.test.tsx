@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme from 'enzyme';
 
-import {Type} from './Type';
+import { Type } from './Type';
 
 const SAMPLE_TEXT = 'All their equipment and instruments are alive.';
 
@@ -11,9 +11,9 @@ describe('Type', () => {
     expect(wrapper.find(Type).length).toBe(1);
   });
 
-  test('should renders type wshouldh added attributes', () => {
+  test('should renders type with added attributes', () => {
     const wrapper = Enzyme.mount(
-      <Type className="custom-class" data-stuff="hello">
+      <Type className="custom-class" data-stuff="hello" style="body">
         {SAMPLE_TEXT}
       </Type>
     );
@@ -33,14 +33,12 @@ describe('Type', () => {
 
   test('should renders type with a custom tag', () => {
     const wrapper = Enzyme.mount(
-      <Type Tag="h1" style="display-1">
+      <Type as="h1" style="display-1">
         {SAMPLE_TEXT}
       </Type>
     );
-
     expect(wrapper.html()).toBe(
       '<h1 class="ray-text--display-1">All their equipment and instruments are alive.</h1>'
     );
   });
-
 });
