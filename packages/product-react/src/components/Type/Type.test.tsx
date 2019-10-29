@@ -6,7 +6,7 @@ import { Type } from './Type';
 const SAMPLE_TEXT = 'All their equipment and instruments are alive.';
 
 describe('Type', () => {
-  test('should renders type wshouldh ray body class', () => {
+  test('should renders type with ray body class', () => {
     const wrapper = Enzyme.mount(<Type>{SAMPLE_TEXT}</Type>);
     expect(wrapper.find(Type).length).toBe(1);
   });
@@ -23,7 +23,7 @@ describe('Type', () => {
     );
   });
 
-  test('should renders type wshouldh a style', () => {
+  test('should renders type with a style', () => {
     const wrapper = Enzyme.mount(<Type style="h3">{SAMPLE_TEXT}</Type>);
 
     expect(wrapper.html()).toBe(
