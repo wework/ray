@@ -892,7 +892,7 @@ storiesOf('Text Field', module)
                   required
                 />
                 <label className="ray-text-field__label" htmlFor="input-email">
-                  Email Adress
+                  Email Address
                 </label>
               </div>
             </div>
