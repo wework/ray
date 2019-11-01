@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/wework/ray/compare/v1.13.10...v1.14.0) (2019-11-01)
+
+**Note:** Version bump only for package @wework/ray-core-react
+
+
+
+
+
 ## [1.13.8](https://github.com/wework/ray/compare/v1.13.7...v1.13.8) (2019-10-28)
 
 **Note:** Version bump only for package @wework/ray-core-react

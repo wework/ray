@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/wework/ray/compare/v1.13.10...v1.14.0) (2019-11-01)
+
+
+### Features
+
+* **core:** add support for append add-on which similar to prepend ([#246](https://github.com/wework/ray/issues/246)) ([60f5de2](https://github.com/wework/ray/commit/60f5de2))
+
+
+
+
+
 ## [1.12.3](https://github.com/wework/ray/compare/v1.12.2...v1.12.3) (2019-09-17)
 
 
