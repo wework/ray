@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/wework/ray/compare/v1.14.0...v1.15.0) (2019-11-01)
+
+
+### Features
+
+* **core-react:** change "type" to "variant" on Button ([#241](https://github.com/wework/ray/issues/241)) ([1d47fd4](https://github.com/wework/ray/commit/1d47fd4))
+
+
+
+
+
 # [1.14.0](https://github.com/wework/ray/compare/v1.13.10...v1.14.0) (2019-11-01)
 
 **Note:** Version bump only for package @wework/ray-core-react
