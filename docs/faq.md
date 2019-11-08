@@ -13,7 +13,7 @@ The technology team at WeWork has developed many design systems over the years. 
 
 ### Who maintains Ray?
 
-Design is led by WeWork designers, [Dana Ballasy] and [Brannon Wellington]. Development is led by [Adam Raider]. With engineering support from Growth Tech and Core Platform.
+Design is led by WeWork designers, [Dana Ballasy]. Engineering lead by Growth Tech and Core Platform.
 
 ### Where can I get help?
 
@@ -28,6 +28,5 @@ The storybook acts as a workshop for developers to iterate on features. The docu
 [storybook]: /storybook
 [brannon wellington]: mailto:brannon.wellington@wework.com
 [dana ballasy]: mailto:dana.ballasy@wework.com
-[adam raider]: mailto:adam.raider@wework.com
 [github issues]: https://github.com/wework/ray/issues
 [#ray-design-system]: https://wework.slack.com/messages/CFLL3QWQ5
