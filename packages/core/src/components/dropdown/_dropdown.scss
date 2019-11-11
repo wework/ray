@@ -10,8 +10,42 @@ $dropdown-compact-option-size: 2rem;
 @include exports($ray-class-prefix+$component-name) {
   .#{$ray-class-prefix}#{$component-name} {
     @include required-support($component-name);
-    @include icon-support($component-name);
     @include prepend-support($component-name);
+    @include append-support($component-name);
+    @include icon-support($component-name);
+
+    &--with-icon-left,
+    &--with-icon-start {
+      .#{$ray-class-prefix}#{$component-name}__wrapper {
+        padding-left: calc(
+          #{$ray-field-h-spacing} + #{$ray-field-icon-width}
+        );
+
+        [dir='rtl'] & {
+          padding-left: auto;
+          padding-right: calc(
+            #{$ray-field-h-spacing} + #{$ray-field-icon-width}
+          );
+        }
+      }
+    }
+
+    &--with-icon-right,
+    &--with-icon-end {
+      .#{$ray-class-prefix}#{$component-name}__wrapper {
+        padding-right: calc(
+          #{$ray-field-h-spacing} + #{$ray-field-icon-width}
+        );
+
+        [dir='rtl'] & {
+          padding-right: auto;
+          padding-left: calc(
+            #{$ray-field-h-spacing} + #{$ray-field-icon-width}
+          );
+        }
+      }
+    }
+
 
     border: $ray-border-width solid $ray-color-gray-60;
     background-color: $ray-color-white;
@@ -44,6 +78,7 @@ $dropdown-compact-option-size: 2rem;
     &__wrapper {
       position: relative;
       flex: 1;
+      z-index: 4;
     }
 
     &__label {
@@ -118,6 +153,10 @@ $dropdown-compact-option-size: 2rem;
       align-items: center;
       margin: $list-item-gap;
       cursor: pointer;
+      &[disabled] {
+        pointer-events: none;
+        color: rgba($ray-color-gray-60, 0.4);
+      }
       &:hover {
         background-color: rgba($ray-color-blue-10, .5);
         box-shadow: 0 0 0 $list-item-gap rgba($ray-color-blue-10, .5);
@@ -135,13 +174,28 @@ $dropdown-compact-option-size: 2rem;
       &--selected {
         color: $ray-color-blue-50;
       }
+      &--group-label {
+        text-indent: $ray-field-h-spacing + $list-item-gap;
+        pointer-events: none;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        color: $ray-color-gray-60;
+        height: $dropdown-option-size;
+        line-height: $dropdown-option-size;
+        border-bottom: 1px solid $ray-color-gray-10;
+        & ~ .#{$ray-class-prefix}#{$component-name}__option {
+          text-indent: $ray-field-h-spacing;
+        }
+      }
       &-container {
         position: absolute;
         visibility: hidden;
+        z-index: 4;
         top: 100%;
         left: -1px;
         right: -1px;
-        margin-top: -1px;
         height: 0;
         background-color: $ray-color-white;
         border: $ray-border-width solid $ray-color-gray-60;
@@ -159,7 +213,6 @@ $dropdown-compact-option-size: 2rem;
     }
 
     &--open {
-      border-bottom-color: transparent;
       border-radius: $ray-border-radius $ray-border-radius 0 0;
       .#{$ray-class-prefix}#{$component-name}__option-container {
         height: auto;
@@ -247,6 +300,11 @@ $dropdown-compact-option-size: 2rem;
 
       .#{$ray-class-prefix}#{$component-name}__option:not(.#{$ray-class-prefix}#{$component-name}__option--separator) {
         height: $dropdown-compact-option-size;
+      }
+
+      .#{$ray-class-prefix}#{$component-name}__option--group-label {
+        height: $dropdown-compact-option-size;
+        line-height: $dropdown-compact-option-size;
       }
     }
 

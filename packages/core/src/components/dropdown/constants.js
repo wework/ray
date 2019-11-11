@@ -15,6 +15,7 @@ export const CLASSNAMES = {
   separator: `${ROOT}__option--separator`,
   placeholder: `${ROOT}__option--placeholder`,
   optionSelected: `${ROOT}__option--selected`,
+  groupLabel: `${ROOT}__option--group-label`,
   OPEN: `${ROOT}--open`,
   ACTIVE: `${ROOT}--active`,
   REQUIRED: `${ROOT}--required`,
@@ -93,6 +94,18 @@ export const optionTpl = ({ label, id, idx, selected, disabled }) => {
     ${label}
   </li>
 `;
+};
+
+export const groupLabelTpl = ({ label, disabled }) => {
+  return `
+    <li
+      role="option"
+      ${disabled ? 'disabled' : ''}
+      class="${CLASSNAMES.groupLabel}"
+    >
+      ${label}
+    </li>
+  `;
 };
 
 export const markupTemplates = [bodyTpl, listTpl];

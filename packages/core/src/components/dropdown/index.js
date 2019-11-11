@@ -4,9 +4,19 @@ import {
   markupTemplates,
   separatorTpl,
   placeholderTpl,
+  groupLabelTpl,
   optionTpl
 } from './constants';
 import { validateNodeType } from '../../global/js/util';
+
+const defaults = {
+  renderOption: null,
+  renderSelected: null
+};
+
+function isFunc(func) {
+  return typeof func === 'function';
+}
 
 function tryAndPass(cond, str) {
   if (!cond) {
@@ -46,8 +56,8 @@ class Dropdown {
     return SELECTORS;
   }
 
-  static create(element) {
-    return this.instances.get(element) || new this(element);
+  static create(element, options) {
+    return this.instances.get(element) || new this(element, options);
   }
 
   static createAll(target = document, { initSelector, ...options } = {}) {
@@ -80,7 +90,12 @@ class Dropdown {
     emitEvent(this._inputElement, 'change');
   }
 
-  constructor(root) {
+  constructor(root, options) {
+    this.settings = {
+      ...defaults,
+      ...options
+    };
+
     this._root = root;
 
     const el = tryAndPass(
@@ -115,6 +130,8 @@ class Dropdown {
     this._processLabel();
     this._setAriaProps();
     this._fillOptionsList();
+
+    this._setSelectedLabel();
 
     if (!this._inputElement.disabled) {
       this._bindEventListeners();
@@ -161,6 +178,13 @@ class Dropdown {
     );
   }
 
+  _setSelectedLabel() {
+    const { renderSelected } = this.settings;
+    this._selectedValue.innerHTML = isFunc(renderSelected)
+      ? renderSelected(this._selectedOption)
+      : this._selectedOption.innerHTML;
+  }
+
   _processLabel() {
     this._label = this._getEl('label');
     if (this._label) {
@@ -172,22 +196,54 @@ class Dropdown {
 
   _fillOptionsList() {
     let placeholder = '';
-    const optionsList = this._options.map((option, idx) => {
-      if (option.dataset.raySeparator) {
-        return separatorTpl;
-      }
-      if (option.dataset.rayPlaceholder) {
-        placeholder = placeholderTpl;
-        return '';
-      }
-      return optionTpl({
-        label: option.innerHTML,
-        id: this._id,
-        idx,
-        selected: this.selectedIndex === idx,
-        disabled: option.getAttribute('disabled')
+    let idx = 0;
+    const { renderOption } = this.settings;
+    const { _id, selectedIndex } = this;
+    const optionsRenderer = isFunc(renderOption) && renderOption;
+
+    function traverseOptions(options, disabled) {
+      return options.map(option => {
+        let result;
+        if (option.tagName === 'OPTGROUP') {
+          result = traverseOptions(
+            Array.from(option.children),
+            option.disabled
+          );
+          result.unshift(
+            groupLabelTpl({
+              label: option.getAttribute('label'),
+              disabled: option.disabled
+            })
+          );
+          result = result.join('');
+        } else {
+          if (option.dataset.raySeparator) {
+            result = separatorTpl;
+          } else if (option.dataset.rayPlaceholder) {
+            placeholder = placeholderTpl;
+            result = '';
+          } else {
+            result = optionTpl({
+              label: optionsRenderer
+                ? optionsRenderer(option)
+                : option.innerHTML,
+              id: _id,
+              idx,
+              selected: selectedIndex === idx,
+              disabled: disabled || option.disabled
+            });
+          }
+
+          idx += 1;
+        }
+        return result;
       });
-    });
+    }
+
+    const optionsList = traverseOptions(
+      Array.from(this._inputElement.children)
+    );
+
     optionsList.unshift(placeholder);
     this._list.innerHTML = optionsList.join('');
   }
@@ -251,7 +307,7 @@ class Dropdown {
   };
 
   onChange = () => {
-    this._selectedValue.innerHTML = this._selectedOption.innerHTML;
+    this._setSelectedLabel();
     Array.from(this._list.children).forEach((el, idx) => {
       switchClassName(el, 'optionSelected', idx === this.selectedIndex);
     });
@@ -274,6 +330,7 @@ class Dropdown {
   };
 
   onOptionClick = e => {
+    if (e.target.hasAttribute('disabled') || !e.target.dataset.rayIdx) return;
     this.set(this._options[e.target.dataset.rayIdx].value);
   };
 
