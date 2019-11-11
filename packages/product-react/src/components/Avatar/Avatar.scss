@@ -1,0 +1,68 @@
+$avatar-background-color: #e6e6e6;
+$avatar-fill-color: #b3b3b3;
+$avatar-iconSize: (
+  small: 32px,
+  medium: 40px,
+  large: 148px
+);
+
+@mixin avatar-size($size) {
+  height: map-get($avatar-iconSize, $size);
+  width: map-get($avatar-iconSize, $size);
+}
+
+.lucia-avatar {
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+
+  img {
+    border-radius: 50%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  span {
+    float: left;
+    left: 50%;
+    position: relative;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--small {
+    @include avatar-size(small);
+  }
+
+  &--medium {
+    @include avatar-size(medium);
+  }
+
+  &--large {
+    @include avatar-size(large);
+  }
+}
+
+.lucia-no-avatar {
+  background-color: $avatar-background-color;
+}
+
+.lucia-avatar--action {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  svg {
+    background-color: $avatar-fill-color;
+    border-radius: 50%;
+    bottom: 0;
+    fill: $avatar-fill-color;
+    height: 48px;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    width: 48px;
+  }
+}
