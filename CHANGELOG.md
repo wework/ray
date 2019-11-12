@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.15.1](https://github.com/wework/ray/compare/v1.15.0...v1.15.1) (2019-11-12)
+
+
+### Bug Fixes
+
+* change release email ([d232f4e](https://github.com/wework/ray/commit/d232f4e))
+* **core:** update docs, simulate release ([665732e](https://github.com/wework/ray/commit/665732e))
+
+
+
+
+
 # [1.15.0](https://github.com/wework/ray/compare/v1.14.0...v1.15.0) (2019-11-01)
 
 
