@@ -70,6 +70,9 @@ jobs:
       - attach_workspace: { at: '.' }
       - get_npm_packages_cache
       - run:
+          name: Build packages
+          command: yarn build
+      - run:
           name: Run unit tests
           command: yarn test --coverage
       - run:
@@ -113,7 +116,7 @@ jobs:
           command: yarn build
       - run:
           name: 'Configure github user details for publish commit'
-          command: git config --global user.email "adam.raider@wework.com" && git config --global user.name "adamraider"
+          command: git config --global user.email "dg-engineering@wework.com" && git config --global user.name "Ray Bot"
       - npm_authenticate
       - run:
           name: 'Publish release to NPM registry'

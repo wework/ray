@@ -75,6 +75,20 @@ title: Text Field
     >
 </component>
 
+<component
+    name="Text field with append"
+    component="text-field"
+    variation="text-field-with-append"
+    >
+</component>
+
+<component
+    name="Text field with append (RTL)"
+    component="text-field"
+    variation="rtl-text-field-with-append"
+    >
+</component>
+
 ## Adding hints
 
 Use these modifiers with `.ray-form-item__hint` class.

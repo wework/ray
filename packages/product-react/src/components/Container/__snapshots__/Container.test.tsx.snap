@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container should match snapshot and styles 1`] = `
+<Container
+  as="div"
+>
+  <div
+    className="ray-page-container"
+  />
+</Container>
+`;

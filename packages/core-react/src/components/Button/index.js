@@ -6,7 +6,7 @@ const Button = React.forwardRef((props, ref) => {
   const {
     Tag,
     children,
-    type,
+    variant,
     compact,
     danger,
     disabled,
@@ -18,7 +18,7 @@ const Button = React.forwardRef((props, ref) => {
       {...rest}
       className={clsx(
         'ray-button',
-        `ray-button--${type}`,
+        `ray-button--${variant}`,
         {
           'ray-button--compact': compact,
           'ray-button--danger': danger
@@ -34,7 +34,7 @@ const Button = React.forwardRef((props, ref) => {
 });
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   compact: PropTypes.bool,
   danger: PropTypes.bool,
   children: PropTypes.node,
@@ -45,7 +45,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   Tag: 'button',
-  type: 'primary',
+  variant: 'primary',
   compact: false,
   danger: false
 };

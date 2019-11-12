@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core-react",
-  "version": "1.12.2",
+  "version": "1.15.0",
   "description": "A React wrapper component library for the Ray design system",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
@@ -9,20 +9,25 @@
     "dev": "yarn storybook",
     "build": "gulp scripts:es scripts:umd scripts:compiled",
     "test": "jest",
+    "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6007",
     "prebuild": "rm -rf dist/",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/core-react/storybook -s ./stories/static"
   },
   "author": "WeWork Companies Inc.",
   "license": "Apache-2.0",
-  "dependencies": {
-    "@wework/ray-core": "^1.9.0",
-    "clsx": "^1.0.4"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:wework/ray.git",
     "directory": "packages/core-react"
+  },
+  "dependencies": {
+    "@wework/ray-core": "^1.14.0",
+    "clsx": "^1.0.4"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
@@ -65,9 +70,5 @@
     "LICENSE",
     "README.md",
     "index.d.ts"
-  ],
-  "peerDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  }
+  ]
 }

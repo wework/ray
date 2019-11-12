@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should match snapshot and styles 1`] = `
+<Avatar
+  add={false}
+  edit={false}
+  size="medium"
+>
+  <div
+    className="lucia-avatar lucia-avatar--medium lucia-no-avatar"
+  />
+</Avatar>
+`;
