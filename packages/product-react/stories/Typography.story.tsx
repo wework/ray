@@ -17,7 +17,7 @@ const styles: Array<any> = [
   'display-2'
 ];
 
-storiesOf('Typography', module).add('default', () => (
+storiesOf('Core Comps | Typography', module).add('default', () => (
   <>
     {styles.map(style => {
       return (

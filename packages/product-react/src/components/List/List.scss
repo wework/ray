@@ -1,53 +1,51 @@
 @import url('https://www-static.wework.com/apercu/apercu.css');
 @import url('https://www-static.wework.com/apercu/apercu_mono.css');
 
+$list-font-family: 'Apercu';
+$list-font-weight: normal;
+$list-block-display: block;
+$list-inline-block-display: inline-block;
+$list-vertical-align: middle;
+
 .ray-list-item {
-  font-family: 'Apercu';
-  font-weight: normal;
-  border-radius: 0;
-  background-color: #fff;
+  font-family: $list-font-family;
+  font-weight: $list-font-weight;
+  border-radius: 4px;
+  background-color: rgb(247, 247, 247);
 }
 
 .ray-list-item__header {
-  width: 100%;
   color: rgb(0, 0, 0);
-  font-family: 'Apercu';
+  font-family: $list-font-family;
   font-size: 16px;
-  font-weight: normal;
-  height: 20px;
-  line-height: 16px;
-  display: inline-block;
-  vertical-align: middle;
+  font-weight: $list-font-weight;
+  display: $list-block-display;
+  vertical-align: $list-vertical-align;
   line-height: 1;
 }
 
 .ray-list-item__content {
   color: rgb(102, 102, 102);
-  font-family: 'Apercu';
+  font-family: $list-font-family;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: $list-font-weight;
   height: 16px;
-  line-height: 16px;
-  width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
+  display: $list-block-display;
+  vertical-align: $list-vertical-align;
+  line-height: 2;
 }
 
 .container {
-  display: inline-block;
-  vertical-align: middle;
+  display: $list-inline-block-display;
+  vertical-align: $list-vertical-align;
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 1;
 }
 
 .icon-block {
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  display: inline-block;
-  vertical-align: middle;
+  display: $list-inline-block-display;
+  vertical-align: $list-vertical-align;
   line-height: 1;
   margin: 12px 16px 12px 12px;
 }

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should match snapshot and styles 1`] = `
+<List
+  items={
+    Array [
+      Object {
+        "content": "content",
+        "header": "header",
+      },
+    ]
+  }
+  listItemComponent={[Function]}
+>
+  <ListItem
+    className="ray-list-item"
+    items={
+      Array [
+        Object {
+          "content": "content",
+          "header": "header",
+        },
+      ]
+    }
+  >
+    <ul>
+      <li
+        className="ray-list-item"
+        key="0"
+      >
+        <p
+          className="container"
+        >
+          <span
+            className="ray-list-item__header"
+          >
+            header
+          </span>
+          <span
+            className="ray-list-item__content"
+          >
+            content
+          </span>
+        </p>
+      </li>
+    </ul>
+  </ListItem>
+</List>
+`;

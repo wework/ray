@@ -5,7 +5,7 @@ import '../src/components/Container/Container.scss';
 
 
 
-storiesOf('Cell', module)
+storiesOf('Core Comps | Cell', module)
   .add('default', () => {
     return <Grid.Cell>This is in a cell</Grid.Cell>;
   })
