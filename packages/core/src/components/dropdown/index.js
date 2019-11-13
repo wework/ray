@@ -40,9 +40,16 @@ function emitEvent(target, event) {
   target.dispatchEvent(instance);
 }
 
+function getClassName(cn) {
+  return CLASSNAMES[cn] || cn;
+}
+
 function switchClassName(target, classname, condition = true) {
   const method = condition ? 'add' : 'remove';
-  target.classList[method](CLASSNAMES[classname] || classname);
+  const args = Array.isArray(classname)
+    ? classname.map(getClassName)
+    : [getClassName(classname)];
+  target.classList[method](...args);
 }
 
 class Dropdown {
@@ -85,8 +92,10 @@ class Dropdown {
   }
 
   set _value(value) {
+    const isNotEmpty = value && value !== '';
     this._inputElement.value = value;
-    this._setValueRelatedClasses(value);
+    switchClassName(this._root, 'HAS_VALUE', isNotEmpty);
+    switchClassName(this._root, 'PLACEHOLDER_MODE', !isNotEmpty);
     emitEvent(this._inputElement, 'change');
   }
 
@@ -137,7 +146,7 @@ class Dropdown {
       this._bindEventListeners();
     }
 
-    this._setValueRelatedClasses(this._value);
+    this._value = this._inputElement.value;
 
     this.constructor.instances.set(this._root, this);
   }
@@ -268,12 +277,6 @@ class Dropdown {
     this._inputElement.removeEventListener('change', this.onChange);
   }
 
-  _setValueRelatedClasses(value) {
-    switchClassName(this._root, 'DISABLED', this._inputElement.disabled);
-    switchClassName(this._root, 'HAS_VALUE', value !== '');
-    switchClassName(this._root, 'PLACEHOLDER_MODE', value === '');
-  }
-
   isRequired() {
     return this._inputElement.required;
   }
@@ -288,41 +291,45 @@ class Dropdown {
 
   disable() {
     this._inputElement.setAttribute('disabled', 'true');
-    emitEvent(this._inputElement, 'change');
+    switchClassName(this._root, 'DISABLED', true);
     this._removeEventListeners();
   }
 
   enable() {
     this._inputElement.removeAttribute('disabled');
+    switchClassName(this._root, 'DISABLED', false);
     this._bindEventListeners();
-    emitEvent(this._inputElement, 'change');
   }
 
-  clear = () => {
-    this.set('');
+  open = async () => {
+    await setTimeout(() => {
+      switchClassName(this._root, ['ACTIVE', 'OPEN'], true);
+    });
   };
 
-  onFocus = el => {
-    switchClassName(this._root, 'ACTIVE', el.type === 'focus');
+  clear = () => {
+    this._value = '';
+  };
+
+  onFocus = e => {
+    switchClassName(this._root, 'ACTIVE', e.type === 'focus');
   };
 
   onChange = () => {
     this._setSelectedLabel();
     Array.from(this._list.children).forEach((el, idx) => {
-      switchClassName(el, 'optionSelected', idx === this.selectedIndex);
+      switchClassName(el, 'optionSelected', idx === this._selectedIndex);
     });
     switchClassName(this._root, 'OPEN', false);
     emitEvent(this._root, 'focus');
   };
 
-  onClick = el => {
-    const isClickInside = this._root.contains(el.target);
+  onClick = e => {
+    const isClickInside = this._root.contains(e.target);
     switchClassName(
       this._root,
       'OPEN',
-      isClickInside &&
-        !el.target.dataset.rayIdx &&
-        !el.target.dataset.rayClearBtn
+      isClickInside && !e.target.dataset.rayIdx && !e.target.dataset.rayClearBtn
     );
     if (!isClickInside) {
       emitEvent(this._root, 'blur');
@@ -331,7 +338,7 @@ class Dropdown {
 
   onOptionClick = e => {
     if (e.target.hasAttribute('disabled') || !e.target.dataset.rayIdx) return;
-    this.set(this._options[e.target.dataset.rayIdx].value);
+    this._value = this._options[e.target.dataset.rayIdx].value;
   };
 
   destroy() {

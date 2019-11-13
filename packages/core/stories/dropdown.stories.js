@@ -61,24 +61,88 @@ storiesOf('Dropdown', module)
   .add('Dropdown with optgroups', () => {
     init();
     return (
+      <>
+        <div className="ray-form-item">
+          <div className="ray-dropdown">
+            <div className="ray-dropdown__wrapper">
+              <select
+                className="ray-dropdown__input"
+                id="test-example"
+                value=""
+              >
+                <optgroup label="Ash">
+                  <option value="Pikachu">Pikachu</option>
+                  <option value="Charmander">Charmander</option>
+                  <option value="Squirtle">Squirtle</option>
+                </optgroup>
+                <optgroup label="R Team">
+                  <option value="Meowt">Meowt</option>
+                  <option value="Wobbuffet">Wobbuffet</option>
+                  <option value="Magikarp">Magikarp</option>
+                </optgroup>
+                <optgroup label="Others" disabled>
+                  <option value="Slowpoke">Slowpoke</option>
+                  <option value="Sonichu">Sonichu</option>
+                </optgroup>
+              </select>
+            </div>
+            <label className="ray-dropdown__label" htmlFor="test-example">
+              Pokemon
+            </label>
+          </div>
+        </div>
+        <div className="ray-form-item" dir="rtl">
+          <div className="ray-dropdown">
+            <div className="ray-dropdown__wrapper">
+              <select
+                className="ray-dropdown__input"
+                id="test-example"
+                value=""
+              >
+                <optgroup label="Ash">
+                  <option value="Pikachu">Pikachu</option>
+                  <option value="Charmander">Charmander</option>
+                  <option value="Squirtle">Squirtle</option>
+                </optgroup>
+                <optgroup label="R Team">
+                  <option value="Meowt">Meowt</option>
+                  <option value="Wobbuffet">Wobbuffet</option>
+                  <option value="Magikarp">Magikarp</option>
+                </optgroup>
+                <optgroup label="Others" disabled>
+                  <option value="Slowpoke">Slowpoke</option>
+                  <option value="Sonichu">Sonichu</option>
+                </optgroup>
+              </select>
+            </div>
+            <label className="ray-dropdown__label" htmlFor="test-example">
+              Pokemon
+            </label>
+          </div>
+        </div>
+      </>
+    );
+  })
+  .add('Dropdown with default value', () => {
+    init();
+    return (
       <div className="ray-form-item">
         <div className="ray-dropdown">
           <div className="ray-dropdown__wrapper">
-            <select className="ray-dropdown__input" id="test-example" value="">
-              <optgroup label="Ash">
-                <option value="Pikachu">Pikachu</option>
-                <option value="Charmander">Charmander</option>
-                <option value="Squirtle">Squirtle</option>
-              </optgroup>
-              <optgroup label="R Team">
-                <option value="Meowt">Meowt</option>
-                <option value="Wobbuffet">Wobbuffet</option>
-                <option value="Magikarp">Magikarp</option>
-              </optgroup>
-              <optgroup label="Others" disabled>
-                <option value="Slowpoke">Slowpoke</option>
-                <option value="Sonichu">Sonichu</option>
-              </optgroup>
+            <select
+              className="ray-dropdown__input"
+              id="test-example"
+              value="Charmander"
+            >
+              <option value="" data-ray-placeholder>
+                Choose pokemon?
+              </option>
+              <option value="Slowpoke">Slowpoke</option>
+              <option disabled data-ray-separator />
+              <option value="Pikachu">Pikachu</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Charmander">Charmander</option>
+              <option value="Sonichu">Sonichu</option>
             </select>
           </div>
           <label className="ray-dropdown__label" htmlFor="test-example">
@@ -88,10 +152,10 @@ storiesOf('Dropdown', module)
       </div>
     );
   })
-  .add('Dropdown with default value', () => {
+  .add('Dropdown with overflowing value', () => {
     init();
     return (
-      <div className="ray-form-item">
+      <div className="ray-form-item" style={{ width: '110px' }}>
         <div className="ray-dropdown">
           <div className="ray-dropdown__wrapper">
             <select
@@ -225,9 +289,6 @@ storiesOf('Dropdown', module)
                 required
                 aria-required="true"
               >
-                <option value="" data-ray-placeholder>
-                  Choose pokemon?
-                </option>
                 <option value="Slowpoke">Slowpoke</option>
                 <option disabled data-ray-separator />
                 <option value="Pikachu">Pikachu</option>
@@ -576,25 +637,20 @@ storiesOf('Dropdown', module)
       const inst = getInst();
       inst.open();
     }
-    function closeDrop(e) {
-      e.preventDefault();
-      const inst = getInst();
-      inst.close();
-    }
-    function focusDrop(e) {
-      e.preventDefault();
-      const inst = getInst();
-      inst.focus();
-    }
-    function blurDrop(e) {
-      e.preventDefault();
-      const inst = getInst();
-      inst.blur();
-    }
     function setDrop(e) {
       e.preventDefault();
       const inst = getInst();
       inst.set('Charmander');
+    }
+    function enableDrop(e) {
+      e.preventDefault();
+      const inst = getInst();
+      inst.enable();
+    }
+    function disableDrop(e) {
+      e.preventDefault();
+      const inst = getInst();
+      inst.disable();
     }
     return (
       <>
@@ -645,23 +701,63 @@ storiesOf('Dropdown', module)
           </button>
           <button
             className="ray-button ray-button--primary ray-button--compact"
-            onClick={closeDrop}
+            onClick={enableDrop}
           >
-            Close
+            Enable
           </button>
           <button
             className="ray-button ray-button--primary ray-button--compact"
-            onClick={focusDrop}
+            onClick={disableDrop}
           >
-            Focus
-          </button>
-          <button
-            className="ray-button ray-button--primary ray-button--compact"
-            onClick={blurDrop}
-          >
-            Blur
+            Disable
           </button>
         </div>
       </>
+    );
+  })
+  .add('Dropdown as TextField prepend', () => {
+    init();
+    return (
+      <div className="ray-form-item">
+        <div className="ray-text-field ray-text-field--with-prepend">
+          <div className="ray-text-field__prepend">
+            <div className="ray-dropdown ray-dropdown--simple">
+              <div className="ray-dropdown__wrapper">
+                <select
+                  className="ray-dropdown__input"
+                  id="test-example"
+                  value="Charmander"
+                  required
+                  aria-required="true"
+                >
+                  <option value="USD">USD</option>
+                  <option disabled data-ray-separator />
+                  <option value="AUD">AUD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="EUR">EUR</option>
+                  <option value="JPY">JPY</option>
+                  <option value="CHF">CHF</option>
+                  <option disabled data-ray-separator />
+                  <option value="ALL">ALL</option>
+                  <option value="AFN">AFN</option>
+                  <option value="ARS">ARS</option>
+                  <option value="AWG">AWG</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div className="ray-text-field__wrapper">
+            <input
+              type="text"
+              className="ray-text-field__input"
+              id="input2"
+              placeholder="Numeric amount..."
+            />
+            <label className="ray-text-field__label" htmlFor="input2">
+              Expected profit
+            </label>
+          </div>
+        </div>
+      </div>
     );
   });

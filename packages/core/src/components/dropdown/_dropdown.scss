@@ -77,7 +77,8 @@ $dropdown-compact-option-size: 2rem;
 
     &__wrapper {
       position: relative;
-      flex: 1;
+      flex: 1 1 auto;
+      max-width: 100%;
       z-index: 4;
     }
 
@@ -125,13 +126,13 @@ $dropdown-compact-option-size: 2rem;
     }
 
     &__selected {
-      flex: 1 1 auto;
-      display: flex;
-      justify-content: space-between;
-      &:focus {
-        outline: none;
-      }
+      flex: 0 1 auto;
+      max-width: 100%;
       &-value {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         line-height: $dropdown-clear-btn-size;
       }
       &-clear {
@@ -214,6 +215,11 @@ $dropdown-compact-option-size: 2rem;
 
     &--open {
       border-radius: $ray-border-radius $ray-border-radius 0 0;
+
+      .#{$ray-class-prefix}#{$component-name}__label {
+        @include label--active;
+      }
+
       .#{$ray-class-prefix}#{$component-name}__option-container {
         height: auto;
         // height: round($dropdown-max-height * 1.5);
@@ -336,18 +342,20 @@ $dropdown-compact-option-size: 2rem;
       background-color: transparent;
       border-radius: 0;
 
-      &__input {
-        font-size: ($ray-field-label-size * 1.2);
-        width: rem(69px);
-        padding-right: 3 * $ray-field-h-spacing;
-
-        [dir='rtl'] & {
-          padding-right: $ray-field-h-spacing;
-          padding-left: 3 * $ray-field-h-spacing;
-        }
-
-        &::-ms-expand {
-          display: none;
+      .#{$ray-class-prefix}#{$component-name} {
+        &__input, &__body {
+          font-size: ($ray-field-label-size * 1.2);
+          width: rem(89px);
+          padding-right: 3 * $ray-field-h-spacing;
+  
+          [dir='rtl'] & {
+            padding-right: $ray-field-h-spacing;
+            padding-left: 3 * $ray-field-h-spacing;
+          }
+  
+          &::-ms-expand {
+            display: none;
+          }
         }
       }
     }
