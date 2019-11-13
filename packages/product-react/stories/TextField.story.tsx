@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import { IconPosition, Input } from '../src/components/Input/Input';
+import { IconPosition, TextField } from '../src/components/TextField/TextField';
 
-storiesOf('Core Comps | Input', module)
-  .add('Text Input', () => {
+storiesOf('Core Comps | TextField', module)
+  .add('Text TextField', () => {
     return (
-      <Input
+      <TextField
         label="Full Name"
         id="unique123"
         type="text"
@@ -13,9 +13,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input Required', () => {
+  .add('Text TextField Required', () => {
     return (
-      <Input
+      <TextField
         required={true}
         label="Full Name"
         id="unique123"
@@ -24,9 +24,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input Disabled', () => {
+  .add('Text TextField Disabled', () => {
     return (
-      <Input
+      <TextField
         disabled
         label="Full Name"
         id="unique123"
@@ -35,9 +35,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input Error', () => {
+  .add('Text TextField Error', () => {
     return (
-      <Input
+      <TextField
         error={true}
         label="Full Name"
         id="unique123"
@@ -46,9 +46,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input Success', () => {
+  .add('Text TextField Success', () => {
     return (
-      <Input
+      <TextField
         success={true}
         label="Full Name"
         id="unique123"
@@ -57,9 +57,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input Compact', () => {
+  .add('Text TextField Compact', () => {
     return (
-      <Input
+      <TextField
         label="Full Name"
         id="unique123"
         type="text"
@@ -68,9 +68,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Email Input', () => {
+  .add('Email TextField', () => {
     return (
-      <Input
+      <TextField
         label="Email Address"
         id="unique456"
         type="email"
@@ -78,9 +78,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Email Input w/ Hint', () => {
+  .add('Email TextField w/ Hint', () => {
     return (
-      <Input
+      <TextField
         label="Email Address"
         id="unique456"
         type="email"
@@ -89,9 +89,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Email Input w/ Hint Error', () => {
+  .add('Email TextField w/ Hint Error', () => {
     return (
-      <Input
+      <TextField
         error
         label="Email Address"
         id="unique456"
@@ -101,9 +101,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Email Input w/ Hint Success', () => {
+  .add('Email TextField w/ Hint Success', () => {
     return (
-      <Input
+      <TextField
         success
         label="Email Address"
         id="unique456"
@@ -113,9 +113,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input w/ Icon Start', () => {
+  .add('Text TextField w/ Icon Start', () => {
     return (
-      <Input
+      <TextField
         label="Email Address"
         id="unique456"
         type="email"
@@ -131,9 +131,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input w/ Icon End', () => {
+  .add('Text TextField w/ Icon End', () => {
     return (
-      <Input
+      <TextField
         label="Email Address"
         id="unique456"
         type="email"
@@ -149,9 +149,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input w/ Icon Start w/ Prepend', () => {
+  .add('Text TextField w/ Icon Start w/ Prepend', () => {
     return (
-      <Input
+      <TextField
         label="Email Address"
         id="unique456"
         type="email"
@@ -171,9 +171,9 @@ storiesOf('Core Comps | Input', module)
       />
     );
   })
-  .add('Text Input w/ Icon End w/ Prepend', () => {
+  .add('Text TextField w/ Icon End w/ Prepend', () => {
     return (
-      <Input
+      <TextField
         label="Email Address"
         id="unique456"
         type="email"

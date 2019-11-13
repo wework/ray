@@ -1,8 +1,8 @@
 import Enzyme from 'enzyme';
 import React from 'react';
-import { IconPosition, Input } from './Input';
+import { IconPosition, TextField } from './TextField';
 
-describe('Input', () => {
+describe('TextField', () => {
   const fauxCallback = jest.fn();
   let component: Enzyme.ReactWrapper<any>;
 
@@ -18,10 +18,10 @@ describe('Input', () => {
   };
 
   beforeEach(() => {
-    component = Enzyme.mount(<Input {...defaultProps} />);
+    component = Enzyme.mount(<TextField {...defaultProps} />);
   });
 
-  test('it renders a input', () => {
+  test('it renders a TextField', () => {
     const wrapper = component;
     expect(wrapper.find('input').length).toBe(1);
   });
@@ -91,19 +91,19 @@ describe('Input', () => {
     });
 
     it('has value property that can be set (:number || string)', () => {
-      const component = Enzyme.mount(<Input value={4} {...defaultProps} />);
+      const component = Enzyme.mount(<TextField value={4} {...defaultProps} />);
       expect(component.props().value).toEqual(4);
     });
   });
 
   describe('Functions events', () => {
-    it('should call onFocus prop on input focus', () => {
+    it('should call onFocus prop on TextField focus', () => {
       component.setProps({ onFocus: fauxCallback });
       component.find('input').simulate('focus');
       expect(component.find('.ray-text-field--active').exists()).toBe(true);
     });
 
-    it('should call onBlur prop on input blur', () => {
+    it('should call onBlur prop on TextField blur', () => {
       component.setProps({ onBlur: fauxCallback });
       component.find('input').simulate('blur');
       expect(component.find('.ray-text-field--active').exists()).toBe(false);

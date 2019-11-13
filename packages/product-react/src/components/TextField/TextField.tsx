@@ -11,7 +11,7 @@ export enum IconPosition {
   START = 'START'
 }
 
-type InputProps = React.HTMLProps<HTMLInputElement> & {
+type TextFieldProps = React.HTMLProps<HTMLInputElement> & {
   active?: boolean;
   compact?: boolean;
   error?: boolean;
@@ -23,7 +23,7 @@ type InputProps = React.HTMLProps<HTMLInputElement> & {
   iconPosition?: IconPosition;
 };
 
-export const Input: React.FC<InputProps> = ({
+export const TextField: React.FC<TextFieldProps> = ({
   id,
   active,
   compact,
