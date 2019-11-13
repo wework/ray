@@ -53,6 +53,9 @@
       "select": {
         "title": "Select"
       },
+      "dropdown": {
+        "title": "Dropdown"
+      },
       "text-field": {
         "title": "Text Field"
       },
