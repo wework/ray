@@ -25,6 +25,7 @@ export const CLASSNAMES = {
 };
 
 export const SELECTORS = {
+  INIT_SELECTOR: `.${ROOT}`,
   root: `.${CLASSNAMES.root}`,
   inputElement: `.${CLASSNAMES.inputElement}`,
   wrapper: `.${CLASSNAMES.wrapper}`,
