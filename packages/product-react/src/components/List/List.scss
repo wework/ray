@@ -21,7 +21,7 @@ $list-vertical-align: middle;
   font-weight: $list-font-weight;
   display: $list-block-display;
   vertical-align: $list-vertical-align;
-  line-height: 1;
+  line-height: 20px;
 }
 
 .ray-list-item__content {
@@ -32,7 +32,7 @@ $list-vertical-align: middle;
   height: 16px;
   display: $list-block-display;
   vertical-align: $list-vertical-align;
-  line-height: 2;
+  line-height: 16px;
 }
 
 .container {
