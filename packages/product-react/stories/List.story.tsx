@@ -35,6 +35,9 @@ const customListItem: React.FC<IListProps> = ({
 const fauxAvatarImage =
   'https://pbs.twimg.com/profile_images/624249118114881536/qxn_I_oR_400x400.jpg';
 
+const fauxBrokenAvatarImage =
+  'https://pbs.twimg.com3333/profile_images/624249118114881536/qxn_I_oR_400x400.jpg';
+
 storiesOf('Core Comps | List', module)
   .add('default', () => {
     return <List items={[{ header: '', content: '' }]} />;
@@ -42,6 +45,7 @@ storiesOf('Core Comps | List', module)
   .add('ListItem with icon', () => {
     return (
       <List
+        showAvatar={true}
         items={[
           {
             header: 'Sammy Lawson',
@@ -104,6 +108,54 @@ storiesOf('Core Comps | List', module)
             header: 'Michael Jordan',
             content: 'Product Designer',
             icon: fauxAvatarImage
+          }
+        ]}
+      />
+    );
+  })
+  .add('ListItem with empty icons', () => {
+    return (
+      <List
+        showAvatar={true}
+        items={[
+          {
+            header: 'Sammy Lawson',
+            content: 'Product Designer',
+            icon: ''
+          },
+          {
+            header: 'Arnold Schwarzenegger',
+            content: 'Product Designer',
+            icon: fauxAvatarImage
+          },
+          {
+            header: 'Michael Jordan',
+            content: 'Product Designer',
+            icon: ''
+          }
+        ]}
+      />
+    );
+  })
+  .add('ListItem with broken icons', () => {
+    return (
+      <List
+        showAvatar={true}
+        items={[
+          {
+            header: 'Sammy Lawson',
+            content: 'Product Designer',
+            icon: fauxBrokenAvatarImage
+          },
+          {
+            header: 'Arnold Schwarzenegger',
+            content: 'Product Designer',
+            icon: fauxAvatarImage
+          },
+          {
+            header: 'Michael Jordan',
+            content: 'Product Designer',
+            icon: fauxBrokenAvatarImage
           }
         ]}
       />

@@ -4,30 +4,37 @@ import { Avatar } from '../Avatar';
 import './List.scss';
 
 export interface IItems {
-  header?: React.ReactNode;
-  content?: React.ReactNode;
-  icon?: React.ReactNode;
+  header?: string;
+  content?: string;
+  icon?: string;
 }
 
 export interface IListProps extends React.HTMLProps<HTMLLIElement> {
   items: IItems[];
   listItemComponent?: any;
+  showAvatar?: boolean;
   onClick?(event: React.MouseEvent<HTMLLIElement>): void;
 }
 
-const ListItem: React.FC<IListProps> = ({ items, className, ...rest }) => {
+const ListItem: React.FC<IListProps> = ({
+  items,
+  showAvatar,
+  className,
+  ...rest
+}) => {
   let listItems: React.ReactNode[];
   listItems = items.map((item: IItems, index: number) => {
     return (
       <li className={className} {...rest} key={index}>
-        {item.icon && (
+        {showAvatar && (
           <Avatar
-            className="icon-block"
-            image={String(item.icon)}
+            className="ray-list-item__icon-block"
+            image={item.icon}
             size="medium"
+            name={item.header}
           />
         )}
-        <p className={'container'}>
+        <p className="ray-list-item__container">
           <span className="ray-list-item__header">{item.header}</span>
           <span className="ray-list-item__content">{item.content}</span>
         </p>

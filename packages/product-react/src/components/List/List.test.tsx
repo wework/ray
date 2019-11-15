@@ -14,33 +14,7 @@ describe('List', () => {
 
   test('should match snapshot and styles', () => {
     expect(
-      mount(<List items={[{ header: 'header', content: 'content' }]} />),
+      mount(<List items={[{ header: 'header', content: 'content' }]} />)
     ).toMatchSnapshot();
-  });
-
-  describe('Functions', () => {
-    it('onFocus', () => {
-      component = Enzyme.mount(
-        <List
-          items={[
-            {
-              header: 'Sammy Lawson',
-              content: 'Product Designer',
-              icon: 'laalalalaaal',
-            },
-            {
-              header: 'Arnold Schwarzenegger',
-              content: 'Product Designer',
-              icon: 'laalalalaaal',
-            },
-            {
-              header: 'Michael Jordan',
-              content: 'Product Designer',
-              icon: 'laalalalaaallaalalalaaal',
-            },
-          ]}
-        />,
-      );
-    });
   });
 });

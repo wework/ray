@@ -8,7 +8,7 @@ const fauxAvatarImage =
 
 storiesOf('Core Comps | Avatar', module)
   .add('no avatar - small', () => {
-    return <Avatar size="small" name='small' />;
+    return <Avatar size="small" name="small" />;
   })
   .add('no avatar - medium (default size)', () => {
     return <Avatar />;
@@ -38,7 +38,7 @@ storiesOf('Core Comps | Avatar', module)
     return <Avatar size="large" image={fauxAvatarImage} edit />;
   })
   .add('no avatar - small w/ initial', () => {
-    return <Avatar size="small" name="Patrick Stewart" />;
+    return <Avatar size="small" name="SPatrick Stewart" />;
   })
   .add('no avatar - medium (default size) w/ initial', () => {
     return <Avatar name="Patrick Stewart" />;

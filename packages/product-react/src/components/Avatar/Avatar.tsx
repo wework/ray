@@ -31,6 +31,10 @@ export const Avatar: FC<AvatarProps> = ({
   className,
   ...rest
 }) => {
+  const [imageLoadingError, setimageLoadingError] = React.useState<boolean>(
+    false
+  );
+
   const wrapperClass = clsx(
     'lucia-avatar',
     {
@@ -58,6 +62,7 @@ export const Avatar: FC<AvatarProps> = ({
   ): void => {
     onAddImageClick && onAddImageClick();
   };
+
   return (
     <div className={wrapperClass} {...rest}>
       {size === SizeVariations.large && (
@@ -67,7 +72,11 @@ export const Avatar: FC<AvatarProps> = ({
         </div>
       )}
       {image ? (
-        <img src={image} alt={alt} />
+        <img
+          src={!imageLoadingError ? image : ''}
+          alt={alt}
+          onError={() => setimageLoadingError(true)}
+        />
       ) : (
         name && <span className={getInitialFontSize(size)}>{name[0]} </span>
       )}
