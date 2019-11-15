@@ -33,16 +33,24 @@ $dropdown-compact-option-size: 2rem;
 
     &--with-icon-right,
     &--with-icon-end {
+      .#{$ray-class-prefix}#{$component-name}__icon--end {
+        right: (($ray-field-h-spacing * 2) + $ray-field-icon-width);
+      }
       .#{$ray-class-prefix}#{$component-name}__wrapper {
         padding-right: calc(
           #{$ray-field-h-spacing} + #{$ray-field-icon-width}
         );
+      }
 
-        [dir='rtl'] & {
+      [dir="rtl"] & {
+        .#{$ray-class-prefix}#{$component-name}__wrapper {
           padding-right: auto;
           padding-left: calc(
             #{$ray-field-h-spacing} + #{$ray-field-icon-width}
           );
+        }
+        .#{$ray-class-prefix}#{$component-name}__icon--end {
+          left: (($ray-field-h-spacing * 2) + $ray-field-icon-width);
         }
       }
     }
@@ -80,7 +88,6 @@ $dropdown-compact-option-size: 2rem;
       position: relative;
       flex: 1 1 auto;
       max-width: 100%;
-      z-index: 4;
     }
 
     &__label {
@@ -194,7 +201,7 @@ $dropdown-compact-option-size: 2rem;
       &-container {
         position: absolute;
         visibility: hidden;
-        z-index: 4;
+        z-index: 5;
         top: 100%;
         left: -1px;
         right: -1px;
@@ -208,9 +215,6 @@ $dropdown-compact-option-size: 2rem;
         transition-duration: 0.25s;
         transition-timing-function: ease-in;
         transition-property: height, max-height;
-      }
-      &-list {
-
       }
     }
 

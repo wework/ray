@@ -14,16 +14,14 @@ storiesOf('Dropdown', module)
     return (
       <div className="ray-form-item">
         <div className="ray-dropdown">
-          <div className="ray-dropdown__wrapper">
-            <select className="ray-dropdown__input" id="test-example">
-              <option value="Slowpoke">Slowpoke</option>
-              <option disabled data-ray-separator />
-              <option value="Pikachu">Pikachu</option>
-              <option value="Squirtle">Squirtle</option>
-              <option value="Charmander">Charmander</option>
-              <option value="Sonichu">Sonichu</option>
-            </select>
-          </div>
+          <select className="ray-dropdown__input" id="test-example">
+            <option value="Slowpoke">Slowpoke</option>
+            <option disabled data-ray-separator />
+            <option value="Pikachu">Pikachu</option>
+            <option value="Squirtle">Squirtle</option>
+            <option value="Charmander">Charmander</option>
+            <option value="Sonichu">Sonichu</option>
+          </select>
           <label className="ray-dropdown__label" htmlFor="test-example">
             Pokemon
           </label>
@@ -634,6 +632,7 @@ storiesOf('Dropdown', module)
     }
     function openDrop(e) {
       e.preventDefault();
+      e.stopPropagation();
       const inst = getInst();
       inst.open();
     }

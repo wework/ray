@@ -25,9 +25,16 @@ function tryAndPass(cond, str) {
   return cond;
 }
 
+function htmlToElement(html) {
+  const template = document.createElement('template');
+  template.innerHTML = html.trim();
+  return template.content.firstChild;
+}
+
 function wrap(el, wrapper) {
-  el.parentNode.insertBefore(wrapper, el);
-  wrapper.appendChild(el);
+  const parsedWrapper = htmlToElement(wrapper);
+  el.parentNode.insertBefore(parsedWrapper, el);
+  parsedWrapper.appendChild(el);
 }
 
 function insertMarkup(_node, pos, string) {
@@ -94,6 +101,7 @@ class Dropdown {
   set _value(value) {
     const isNotEmpty = value && value !== '';
     this._inputElement.value = value;
+    this._setSelectedLabel();
     switchClassName(this._root, 'HAS_VALUE', isNotEmpty);
     switchClassName(this._root, 'PLACEHOLDER_MODE', !isNotEmpty);
     emitEvent(this._inputElement, 'change');
@@ -139,8 +147,6 @@ class Dropdown {
     this._processLabel();
     this._setAriaProps();
     this._fillOptionsList();
-
-    this._setSelectedLabel();
 
     if (!this._inputElement.disabled) {
       this._bindEventListeners();
@@ -226,9 +232,9 @@ class Dropdown {
           );
           result = result.join('');
         } else {
-          if (option.dataset.raySeparator) {
+          if (option.dataset.raySeparator !== undefined) {
             result = separatorTpl;
-          } else if (option.dataset.rayPlaceholder) {
+          } else if (option.dataset.rayPlaceholder !== undefined) {
             placeholder = placeholderTpl;
             result = '';
           } else {
@@ -301,10 +307,13 @@ class Dropdown {
     this._bindEventListeners();
   }
 
-  open = async () => {
-    await setTimeout(() => {
-      switchClassName(this._root, ['ACTIVE', 'OPEN'], true);
-    });
+  open = () => {
+    switchClassName(this._root, ['ACTIVE', 'OPEN'], true);
+  };
+
+  update = () => {
+    this._fillOptionsList();
+    this._value = this._inputElement.value;
   };
 
   clear = () => {
@@ -316,7 +325,6 @@ class Dropdown {
   };
 
   onChange = () => {
-    this._setSelectedLabel();
     Array.from(this._list.children).forEach((el, idx) => {
       switchClassName(el, 'optionSelected', idx === this._selectedIndex);
     });
@@ -325,6 +333,8 @@ class Dropdown {
   };
 
   onClick = e => {
+    e.stopPropagation();
+    e.preventDefault();
     const isClickInside = this._root.contains(e.target);
     switchClassName(
       this._root,
@@ -332,6 +342,7 @@ class Dropdown {
       isClickInside && !e.target.dataset.rayIdx && !e.target.dataset.rayClearBtn
     );
     if (!isClickInside) {
+      switchClassName(this._root, 'ACTIVE', false);
       emitEvent(this._root, 'blur');
     }
   };
