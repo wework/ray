@@ -7,10 +7,12 @@ exports[`List should match snapshot and styles 1`] = `
       Object {
         "content": "content",
         "header": "header",
+        "icon": "",
       },
     ]
   }
   listItemComponent={[Function]}
+  showAvatar={true}
 >
   <ListItem
     className="ray-list-item"
@@ -19,15 +21,36 @@ exports[`List should match snapshot and styles 1`] = `
         Object {
           "content": "content",
           "header": "header",
+          "icon": "",
         },
       ]
     }
+    showAvatar={true}
   >
     <ul>
       <li
         className="ray-list-item"
         key="0"
       >
+        <Avatar
+          add={false}
+          className="ray-list-item__icon-block"
+          edit={false}
+          image=""
+          name="header"
+          size="medium"
+        >
+          <div
+            className="lucia-avatar lucia-avatar--medium ray-list-item__icon-block"
+          >
+            <span
+              className="ray-text--body"
+            >
+              h
+               
+            </span>
+          </div>
+        </Avatar>
         <p
           className="ray-list-item__container"
         >

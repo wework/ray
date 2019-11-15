@@ -33,7 +33,7 @@ describe('Avatar', () => {
         component
           .find('img')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(false);
     });
     it('has no default "add/edit" icon', () => {
@@ -43,32 +43,32 @@ describe('Avatar', () => {
         component
           .find('.lucia-avatar--action')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(false);
     });
     it('has initial of name when specified', () => {
       component.setProps({
-        name: 'Patrick Stewart',
+        name: 'Patrick Stewart'
       });
       expect(component.find('img').exists()).toEqual(false);
       expect(
         component
           .find('span')
           .at(0)
-          .contains('P'),
+          .contains('P')
       ).toEqual(true);
     });
     it('defaults to display image avatar if both image and name is specified', () => {
       component.setProps({
         image:
           'https://pbs.twimg.com/profile_images/624249118114881536/qxn_I_oR_400x400.jpg',
-        name: 'Patrick Stewart',
+        name: 'Patrick Stewart'
       });
       expect(
         component
           .find('span')
           .at(0)
-          .contains('P'),
+          .contains('P')
       ).toEqual(false);
       expect(component.find('img').exists()).toEqual(true);
     });
@@ -80,7 +80,7 @@ describe('Avatar', () => {
         component
           .find('.lucia-avatar')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(true);
     });
     it('contains nested "add" icon (ONLY for size="large")', () => {
@@ -88,28 +88,28 @@ describe('Avatar', () => {
         component
           .find('.lucia-avatar--action')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(false);
       component.setProps({ add: true });
       expect(
         component
           .find('.lucia-avatar--action')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(false);
       component.setProps({ add: true, size: 'small' });
       expect(
         component
           .find('.lucia-avatar--action')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(false);
       component.setProps({ add: true, size: 'large' });
       expect(
         component
           .find('.lucia-avatar--action')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(true);
     });
     it('contains nested image', () => {
@@ -117,25 +117,71 @@ describe('Avatar', () => {
         component
           .find('.lucia-avatar--action')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(false);
       component.setProps({
         image:
-          'https://pbs.twimg.com/profile_images/624249118114881536/qxn_I_oR_400x400.jpg',
+          'https://pbs.twimg.com/profile_images/624249118114881536/qxn_I_oR_400x400.jpg'
       });
       expect(
         component
           .find('img')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(true);
     });
+
+    it(' has empty image avatar with name props and size small', () => {
+      component.setProps({
+        image: '',
+        name: 'Patrick Stewart',
+        size: 'small'
+      });
+      expect(
+        component
+          .find('span')
+          .at(0)
+          .contains('P')
+      ).toEqual(true);
+      expect(component.find('img').exists()).toEqual(false);
+    });
+    it(' has empty image avatar with name props and size large', () => {
+      component.setProps({
+        image: '',
+        name: 'Patrick Stewart',
+        size: 'large'
+      });
+      expect(
+        component
+          .find('span')
+          .at(0)
+          .contains('P')
+      ).toEqual(true);
+      expect(component.find('img').exists()).toEqual(false);
+    });
+
+    it(' has broken image avatar with name props and size large', () => {
+      component.setProps({
+        image:
+          'https://pbs.22222222twimg.com/profile_images/624249118114881536/qxn_I_oR_400x400.jpg',
+        name: 'Patrick Stewart',
+        size: 'large'
+      });
+      expect(
+        component
+          .find('span')
+          .at(0)
+          .contains('P')
+      ).toEqual(false);
+      expect(component.find('img').exists()).toEqual(true);
+    });
+
     it('contains correct class for "size" variant ', () => {
       expect(
         component
           .find('.lucia-avatar--small')
           .at(0)
-          .exists(),
+          .exists()
       ).toEqual(false);
       component.setProps({ size: 'small' });
       expect(component.find('.lucia-avatar--small').exists()).toEqual(true);
@@ -155,7 +201,7 @@ describe('Avatar', () => {
       component.setProps({
         onAddImageClick: fauxCallback,
         add: true,
-        size: 'large',
+        size: 'large'
       });
       component.find('.lucia-avatar--action').simulate('click');
       expect(fauxCallback.mock.calls.length).toEqual(1);

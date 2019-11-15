@@ -14,7 +14,12 @@ describe('List', () => {
 
   test('should match snapshot and styles', () => {
     expect(
-      mount(<List items={[{ header: 'header', content: 'content' }]} />)
+      mount(
+        <List
+          showAvatar={true}
+          items={[{ header: 'header', content: 'content', icon: '' }]}
+        />
+      )
     ).toMatchSnapshot();
   });
 });
