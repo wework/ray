@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import { Radio } from '../src/components/Radio';
 
-storiesOf('Radio', module)
+storiesOf('Core Comps | Radio', module)
   .add('Default', () => (
     <div>
       <Radio id="test" label="WeWork" />
