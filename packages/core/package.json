@@ -13,7 +13,9 @@
     "clean": "gulp clean",
     "prebuild": "yarn clean",
     "netlify:build": "NODE_ENV=production build-storybook -c .storybook -o ../../.out/storybook -s ./stories/static",
-    "chromatic": "CHROMATIC_APP_CODE=r0jc387xrba ./tools/build_chromatic.sh --exit-zero-on-changes"
+    "chromatic": "CHROMATIC_APP_CODE=r0jc387xrba ./tools/build_chromatic.sh --exit-zero-on-changes",
+    "dsm-storybook:publish": "dsm-storybook publish",
+    "dsm-storybook:preview": "dsm-storybook preview"
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -21,13 +23,13 @@
     "@babel/plugin-transform-modules-umd": "7.2.0",
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@storybook/addon-actions": "^5.0.5",
-    "@storybook/addon-links": "^5.0.5",
-    "@storybook/addon-options": "5.0.5",
-    "@storybook/addon-viewport": "5.0.5",
-    "@storybook/addons": "^5.0.5",
-    "@storybook/core": "^5.0.6",
-    "@storybook/react": "^5.0.5",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addon-options": "^5.2.6",
+    "@storybook/addon-viewport": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/core": "^5.2.6",
+    "@storybook/react": "^5.2.6",
     "babel-loader": "8.0.5",
     "color": "^3.1.1",
     "css-loader": "1.0.1",
@@ -88,5 +90,8 @@
     "css",
     "js",
     "design-system"
-  ]
+  ],
+  "dependencies": {
+    "@invisionapp/dsm-storybook": "^0.0.119"
+  }
 }

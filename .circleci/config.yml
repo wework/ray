@@ -90,6 +90,17 @@ jobs:
           name: Run visual regression tests
           command: yarn lerna run chromatic --scope="@wework/ray-core" --parallel
 
+  publish-dsm:
+    executor:
+      name: docker-config
+    steps:
+      - checkout
+      - attach_workspace: { at: '.' }
+      - get_npm_packages_cache
+      - run:
+          name: Publish to DSM
+          command: yarn lerna run dsm-storybook:publish --scope="@wework/ray-core" --parallel
+
   build:
     executor:
       name: docker-config
@@ -163,6 +174,14 @@ workflows:
                 - master
                 - production
       - build_and_release:
+          requires:
+            - test-unit
+            - test-visual-regression
+          filters:
+            branches:
+              only:
+                - master
+      - publish-dsm:
           requires:
             - test-unit
             - test-visual-regression
