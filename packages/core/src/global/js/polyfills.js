@@ -1,4 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import 'core-js/modules/es6.array.from';
-import 'core-js/modules/es6.string.includes';
+import 'core-js/modules/es.array.from';
+import 'core-js/modules/es.string.includes';
 /* eslint-enable import/no-extraneous-dependencies */

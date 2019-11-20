@@ -5151,6 +5151,7 @@
   version "1.14.0"
   dependencies:
     "@invisionapp/dsm-storybook" "^0.0.119"
+    core-js "^3.4.1"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"

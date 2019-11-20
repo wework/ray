@@ -92,6 +92,7 @@
     "design-system"
   ],
   "dependencies": {
-    "@invisionapp/dsm-storybook": "^0.0.119"
+    "@invisionapp/dsm-storybook": "^0.0.119",
+    "core-js": "^3.4.1"
   }
 }

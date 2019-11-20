@@ -10,9 +10,7 @@
       "allowBranch": "master"
     }
   },
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "version": "1.15.2",
   "npmClient": "yarn",
   "useWorkspaces": true
