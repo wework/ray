@@ -1,0 +1,7 @@
+{
+  "authToken": "SJzSKQm2B",
+  "dsmHost": "weworkdesign.invisionapp.com",
+  "organization": "we-work",
+  "outputDir": ".dsm",
+  "storyPath": "stories/**/*.stories.js"
+}

@@ -6,50 +6,58 @@ const Divider = () => (
 );
 
 storiesOf('Button', module)
-  .add('primary', () => (
-    <>
-      <button className="ray-button ray-button--primary">Click me</button>
-      <Divider />
-      <a
-        href="https://wework.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="ray-button ray-button--primary"
-      >
-        Click me anchor
-      </a>
-      <Divider />
-      <button className="ray-button ray-button--primary" disabled>
-        Click me disabled
-      </button>
-      <Divider />
-      <button className="ray-button ray-button--primary ray-button--compact">
-        Compact click me
-      </button>
-      <Divider />
-      <button
-        className="ray-button ray-button--primary ray-button--compact"
-        disabled
-      >
-        Compact Disabled
-      </button>
-      <Divider />
-      <button className="ray-button ray-button--primary ray-button--danger">
-        Click me danger
-      </button>
-      <Divider />
-      <button className="ray-button ray-button--primary ray-button--compact ray-button--danger">
-        Compact click me danger
-      </button>
-      <Divider />
-      <button
-        className="ray-button ray-button--primary ray-button--compact ray-button--danger"
-        disabled
-      >
-        Compact click me danger disabled
-      </button>
-    </>
-  ))
+  .add(
+    'primary',
+    () => (
+      <>
+        <button className="ray-button ray-button--primary">Click me</button>
+        <Divider />
+        <a
+          href="https://wework.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ray-button ray-button--primary"
+        >
+          Click me anchor
+        </a>
+        <Divider />
+        <button className="ray-button ray-button--primary" disabled>
+          Click me disabled
+        </button>
+        <Divider />
+        <button className="ray-button ray-button--primary ray-button--compact">
+          Compact click me
+        </button>
+        <Divider />
+        <button
+          className="ray-button ray-button--primary ray-button--compact"
+          disabled
+        >
+          Compact Disabled
+        </button>
+        <Divider />
+        <button className="ray-button ray-button--primary ray-button--danger">
+          Click me danger
+        </button>
+        <Divider />
+        <button className="ray-button ray-button--primary ray-button--compact ray-button--danger">
+          Compact click me danger
+        </button>
+        <Divider />
+        <button
+          className="ray-button ray-button--primary ray-button--compact ray-button--danger"
+          disabled
+        >
+          Compact click me danger disabled
+        </button>
+      </>
+    ),
+    {
+      'in-dsm': {
+        id: '5d4360360dcc4e690cf9178f'
+      }
+    }
+  )
   .add('secondary', () => (
     <>
       <button className="ray-button ray-button--secondary">Click me</button>
