@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core-react",
-  "version": "1.15.0",
+  "version": "1.15.3",
   "description": "A React wrapper component library for the Ray design system",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
@@ -22,7 +22,7 @@
     "directory": "packages/core-react"
   },
   "dependencies": {
-    "@wework/ray-core": "^1.14.0",
+    "@wework/ray-core": "^1.15.3",
     "clsx": "^1.0.4"
   },
   "peerDependencies": {
