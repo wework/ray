@@ -59,7 +59,9 @@
     "lerna:version": "npx lerna version --yes",
     "netlify:build": "yarn clean && yarn build && npx lerna run netlify:build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "core-js": "^3.4.1"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
