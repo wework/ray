@@ -271,9 +271,6 @@ class Dropdown {
     this._getEl('option', true).forEach(el => {
       el.addEventListener('click', this.onOptionClick);
     });
-    if (this._clear) {
-      this._clear.addEventListener('click', this.clear);
-    }
   }
 
   _removeEventListeners() {
@@ -313,7 +310,7 @@ class Dropdown {
 
   update = () => {
     this._fillOptionsList();
-    this._value = this._inputElement.value;
+    this._value = '';
   };
 
   clear = () => {
@@ -335,11 +332,12 @@ class Dropdown {
   onClick = e => {
     e.stopPropagation();
     e.preventDefault();
-    const isClickInside = this._root.contains(e.target);
+    const isClickInside =
+      this._root === e.target || this._root.contains(e.target);
     switchClassName(
       this._root,
       'OPEN',
-      isClickInside && !e.target.dataset.rayIdx && !e.target.dataset.rayClearBtn
+      isClickInside && !e.target.dataset.rayIdx
     );
     if (!isClickInside) {
       switchClassName(this._root, 'ACTIVE', false);
