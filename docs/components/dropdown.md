@@ -110,23 +110,23 @@ dropdown.destroy();
 dropdown.open();
 ```
 
-| Method                     | Params               | Description                          |
-| -------------------------- | -------------------- | ------------------------------------ |
-| `Select.createAll`         | `HTMLElement:Object` | create all instances in document     |
-| `Select.create`            | `HTMLElement:Object` | create an instance                   |
-| `Select.prototype.destroy` |                      | destroy the instance                 |
-| `Select.prototype.set`     | `value:string`       | sets the value of the instance       |
-| `Select.prototype.clear`   |                      | clear the value of the instance      |
-| `Select.prototype.enable`  |                      | makes instance enabled (active)      |
-| `Select.prototype.disable` |                      | makes instance disabled (inactive)   |
-| `Select.prototype.open`    |                      | opens dropdown list programmatically |
+| Method                       | Params               | Description                          |
+| ---------------------------- | -------------------- | ------------------------------------ |
+| `Dropdown.createAll`         | `HTMLElement:Object` | create all instances in document     |
+| `Dropdown.create`            | `HTMLElement:Object` | create an instance                   |
+| `Dropdown.prototype.destroy` |                      | destroy the instance                 |
+| `Dropdown.prototype.set`     | `value:string`       | sets the value of the instance       |
+| `Dropdown.prototype.clear`   |                      | clear the value of the instance      |
+| `Dropdown.prototype.enable`  |                      | makes instance enabled (active)      |
+| `Dropdown.prototype.disable` |                      | makes instance disabled (inactive)   |
+| `Dropdown.prototype.open`    |                      | opens dropdown list programmatically |
 
 ## Modifiers
 
 Use these modifiers with `.ray-dropdown` class.
 
-| Selector                 | Description                                   |
-| ------------------------ | --------------------------------------------- |
-| `.ray-dropdown--compact` | Selector for applying compact dropdown styles |
-| `.ray-dropdown--error`   | Selector for applying error styles            |
+| Selector                 | Description                                                               |
+| ------------------------ | ------------------------------------------------------------------------- |
+| `.ray-dropdown--compact` | Selector for applying compact dropdown styles                             |
+| `.ray-dropdown--error`   | Selector for applying error styles                                        |
 | `.ray-dropdown--simple`  | Selector for applying removing styles when Dropdown is in prepend section |
