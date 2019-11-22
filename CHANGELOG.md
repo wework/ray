@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/wework/ray/compare/v1.15.4...v1.16.0) (2019-11-22)
+
+
+### Features
+
+* **core:** add dropdown component ([#252](https://github.com/wework/ray/issues/252)) ([59b89b5](https://github.com/wework/ray/commit/59b89b5))
+
+
+
+
+
 ## [1.15.4](https://github.com/wework/ray/compare/v1.15.3...v1.15.4) (2019-11-20)
 
 **Note:** Version bump only for package root
