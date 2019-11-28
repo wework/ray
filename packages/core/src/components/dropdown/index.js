@@ -311,7 +311,21 @@ class Dropdown {
     switchClassName(this._root, ['ACTIVE', 'OPEN'], true);
   };
 
-  update = () => {
+  update = options => {
+    if (options) {
+      this.settings = {
+        ...defaults,
+        ...options
+      };
+    }
+    markupTemplates.forEach(template => {
+      const { tpl, elements, position } = template({
+        value: this._selectedOption.innerHTML,
+        id: this._id
+      });
+      insertMarkup(this._inputElement, position, tpl);
+      this._cacheEl(elements);
+    });
     this._fillOptionsList();
     this._value = '';
   };
