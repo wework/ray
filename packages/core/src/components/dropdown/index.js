@@ -358,7 +358,7 @@ class Dropdown {
   };
 
   onOptionClick(plugin) {
-    return function onClickListener() {
+    return function onClickListener(e) {
       if (this.hasAttribute('disabled') || !this.dataset.rayIdx) return;
       plugin._value = plugin._options[this.dataset.rayIdx].value; //eslint-disable-line
     };
