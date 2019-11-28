@@ -268,11 +268,8 @@ class Dropdown {
     this._body.addEventListener('focus', this.onFocus);
     this._body.addEventListener('blur', this.onFocus);
     this._inputElement.addEventListener('change', this.onChange);
-    const { onOptionClick } = this;
     this._getEl('option', true).forEach(el => {
-      el.addEventListener('click', function onClick() {
-        onOptionClick(this);
-      });
+      el.addEventListener('click', this.onOptionClick(this));
     });
   }
 
@@ -360,10 +357,12 @@ class Dropdown {
     }
   };
 
-  onOptionClick = target => {
-    if (target.hasAttribute('disabled') || !target.dataset.rayIdx) return;
-    this._value = this._options[target.dataset.rayIdx].value;
-  };
+  onOptionClick(plugin) {
+    return function onClickListener(e) {
+      if (this.hasAttribute('disabled') || !this.dataset.rayIdx) return;
+      plugin._value = plugin._options[this.dataset.rayIdx].value; //eslint-disable-line
+    };
+  }
 
   destroy() {
     this._removeEventListeners();
