@@ -5,5 +5,7 @@ import boot from './global/js/boot';
 boot();
 attachAccessibilityEvents();
 
+// test
+
 export * from './components';
 export { default as settings } from './global/js/settings';
