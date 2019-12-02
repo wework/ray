@@ -8,7 +8,7 @@
   "homepage": "https://ray.wework.com/",
   "scripts": {
     "dev": "yarn storybook",
-    "storybook": "start-storybook -p 6006  -s ./stories/static",
+    "storybook": "start-storybook -p 6006 -s ./stories/static",
     "build": "gulp sass:source sass:compiled components:sass:compiled scripts:es scripts:umd scripts:compiled",
     "clean": "gulp clean",
     "prebuild": "yarn clean",
