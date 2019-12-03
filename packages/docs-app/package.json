@@ -2,7 +2,7 @@
   "name": "ray-website-gatsby",
   "description": "Ray Design System website",
   "private": true,
-  "version": "1.16.0",
+  "version": "1.16.1",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -67,8 +67,8 @@
     "html-loader": "^0.5.5",
     "lodash": "^4.17.14",
     "node-sass": "^4.10.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sass-loader": "^7.1.0"
   },
   "eslintConfig": {

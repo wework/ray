@@ -1,6 +1,6 @@
 {
   "name": "@wework/ray-core",
-  "version": "1.16.0",
+  "version": "1.16.1",
   "main": "umd/index.js",
   "module": "es/index.js",
   "style": "css/ray-core.min.css",
@@ -8,7 +8,7 @@
   "homepage": "https://ray.wework.com/",
   "scripts": {
     "dev": "yarn storybook",
-    "storybook": "start-storybook -p 6006  -s ./stories/static",
+    "storybook": "start-storybook -p 6006 -s ./stories/static",
     "build": "gulp sass:source sass:compiled components:sass:compiled scripts:es scripts:umd scripts:compiled",
     "clean": "gulp clean",
     "prebuild": "yarn clean",
