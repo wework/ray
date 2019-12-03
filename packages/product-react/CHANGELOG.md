@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/wework/ray/compare/v1.16.0...v1.16.1) (2019-12-03)
+
+
+### Bug Fixes
+
+* **docs-deploy:** update how core-js is imported ([#256](https://github.com/wework/ray/issues/256)) ([4b238ba](https://github.com/wework/ray/commit/4b238ba))
+
+
+
+
+
 # [1.16.0](https://github.com/wework/ray/compare/v1.15.4...v1.16.0) (2019-11-22)
 
 **Note:** Version bump only for package @wework/ray-product-react
