@@ -136,21 +136,11 @@ class Dropdown {
     this._id = id;
     this._inputElement = el;
 
-    markupTemplates.forEach(template => {
-      const { tpl, elements, position } = template({
-        value: this._selectedOption.innerHTML,
-        id: this._id
-      });
-      insertMarkup(this._inputElement, position, tpl);
-      this._cacheEl(elements);
-    });
+    this._renderMarkup();
     this._processLabel();
     this._setAriaProps();
     this._fillOptionsList();
-
-    if (!this._inputElement.disabled) {
-      this._bindEventListeners();
-    }
+    this._bindEventListeners();
 
     this._value = this._inputElement.value;
 
@@ -167,6 +157,17 @@ class Dropdown {
   _cacheEl(elements) {
     elements.forEach(el => {
       this[`_${el}`] = this._getEl(el);
+    });
+  }
+
+  _renderMarkup() {
+    markupTemplates.forEach(template => {
+      const { tpl, elements, position } = template({
+        value: this._selectedOption.innerHTML,
+        id: this._id
+      });
+      insertMarkup(this._inputElement, position, tpl);
+      this._cacheEl(elements);
     });
   }
 
@@ -264,6 +265,7 @@ class Dropdown {
   }
 
   _bindEventListeners() {
+    if (this._inputElement.disabled) return;
     window.addEventListener('click', this.onClick);
     this._body.addEventListener('focus', this.onFocus);
     this._body.addEventListener('blur', this.onFocus);
@@ -315,15 +317,9 @@ class Dropdown {
         ...options
       };
     }
-    markupTemplates.forEach(template => {
-      const { tpl, elements, position } = template({
-        value: this._selectedOption.innerHTML,
-        id: this._id
-      });
-      insertMarkup(this._inputElement, position, tpl);
-      this._cacheEl(elements);
-    });
+    this._removeEventListeners();
     this._fillOptionsList();
+    this._bindEventListeners();
     this._value = '';
   };
 
@@ -346,11 +342,8 @@ class Dropdown {
   onClick = e => {
     const isClickInside =
       this._root === e.target || this._root.contains(e.target);
-    switchClassName(
-      this._root,
-      'OPEN',
-      isClickInside && !e.target.dataset.rayIdx
-    );
+    const isOptionClick = this._list.contains(e.target);
+    switchClassName(this._root, 'OPEN', isClickInside && !isOptionClick);
     if (!isClickInside) {
       switchClassName(this._root, 'ACTIVE', false);
       emitEvent(this._root, 'blur');
@@ -358,7 +351,7 @@ class Dropdown {
   };
 
   onOptionClick(plugin) {
-    return function onClickListener(e) {
+    return function onClickListener() {
       if (this.hasAttribute('disabled') || !this.dataset.rayIdx) return;
       plugin._value = plugin._options[this.dataset.rayIdx].value; //eslint-disable-line
     };
