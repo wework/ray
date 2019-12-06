@@ -651,6 +651,30 @@ storiesOf('Dropdown', module)
       const inst = getInst();
       inst.disable();
     }
+    function updateDrop(e) {
+      e.preventDefault();
+      const input = document.getElementById('test-example');
+      const label = document.getElementById('test-example-label');
+      const inst = getInst();
+      label.innerHTML = 'Currency';
+      input.innerHTML = `
+        <option value="USD">USD|United states dollar</option>
+        <option disabled data-ray-separator />
+        <option value="GBP">GBP|Great Britain Pound</option>
+        <option value="EUR">EUR|Euro</option>
+        <option value="JPY">JPY|Japaneese Yen</option>
+      `;
+      inst.update({
+        renderSelected: option => {
+          const [symbol] = option.innerHTML.split('|');
+          return `<b>${symbol}</b>`;
+        },
+        renderOption: option => {
+          const [symbol, name] = option.innerHTML.split('|');
+          return `<b>${symbol}</b><em>${name}</em>`;
+        }
+      });
+    }
     return (
       <>
         <div className="ray-form-item">
@@ -709,6 +733,12 @@ storiesOf('Dropdown', module)
             onClick={disableDrop}
           >
             Disable
+          </button>
+          <button
+            className="ray-button ray-button--primary ray-button--compact"
+            onClick={updateDrop}
+          >
+            Update
           </button>
         </div>
       </>

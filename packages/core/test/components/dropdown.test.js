@@ -128,8 +128,14 @@ describe('Select', () => {
   test('#update should reset value and update option list e.g. adopt chagnges to original select', () => {
     const { select, selectEl } = setupTest();
     selectEl.querySelector('select').innerHTML = newOptionsFixture;
-    select.update();
+    select.update({
+      renderOption: option => {
+        const [symbol, name] = option.innerHTML.split('|');
+        return `<b class="this-is-option">${symbol}</b><em>${name}</em>`;
+      }
+    });
     expect(select.value()).toEqual('');
+    expect(selectEl.querySelector('.this-is-option')).toBeTruthy();
     select.destroy();
   });
 
