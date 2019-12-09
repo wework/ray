@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.2](https://github.com/wework/ray/compare/v1.16.1...v1.16.2) (2019-12-09)
+
+
+### Bug Fixes
+
+* **storybook:** update storybook to 5.2.8 ([#257](https://github.com/wework/ray/issues/257)) ([40941e4](https://github.com/wework/ray/commit/40941e4))
+
+
+
+
+
 ## [1.16.1](https://github.com/wework/ray/compare/v1.16.0...v1.16.1) (2019-12-03)
 
 
