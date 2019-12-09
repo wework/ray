@@ -47,39 +47,39 @@ $ray-radio-pill-h-spacing: rem(12px) - $ray-border-width;
 $ray-radio-pill-h-spacing-compact: rem(8px) - $ray-border-width;
 
 $ray-layout-grid-breakpoints: (
-  desktop: 1195px,
+  phone: 0px,
   tablet: 600px,
-  phone: 0px
+  desktop: 1195px
 ) !default;
 
 $ray-layout-grid-columns: (
-  desktop: 12,
+  phone: 4,
   tablet: 8,
-  phone: 4
+  desktop: 12
 ) !default;
 
 $ray-layout-grid-default-margin: (
-  desktop: 60px,
+  phone: 16px,
   tablet: 48px,
-  phone: 16px
+  desktop: 60px
 ) !default;
 
 $ray-layout-grid-default-gutter: (
-  desktop: 24px,
+  phone: 16px,
   tablet: 24px,
-  phone: 16px
+  desktop: 24px
 ) !default;
 
 $ray-layout-grid-column-width: (
-  desktop: 72px,
+  phone: 72px,
   tablet: 72px,
-  phone: 72px
+  desktop: 72px
 ) !default;
 
 $ray-layout-grid-max-width: (
-  desktop: 1440px,
+  phone: 100%,
   tablet: 100%,
-  phone: 100%
+  desktop: 1440px
 ) !default;
 
 $ray-layout-grid-default-column-span: 4 !default;
