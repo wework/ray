@@ -74,7 +74,7 @@ jobs:
           command: yarn build
       - run:
           name: Run unit tests
-          command: yarn test --coverage
+          command: yarn test --coverage --maxWorkers=2
       - run:
           name: Ship test coverage report to coveralls
           command: yarn coveralls
