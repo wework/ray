@@ -26,9 +26,9 @@ function tryAndPass(cond, str) {
 }
 
 function htmlToElement(html) {
-  const template = document.createElement('template');
+  const template = document.createElement('div');
   template.innerHTML = html.trim();
-  return template.content.firstChild;
+  return template.firstChild;
 }
 
 function wrap(el, wrapper) {
@@ -196,9 +196,13 @@ class Dropdown {
 
   _setSelectedLabel() {
     const { renderSelected } = this.settings;
-    this._selectedValue.innerHTML = isFunc(renderSelected)
-      ? renderSelected(this._selectedOption)
-      : this._selectedOption.innerHTML;
+    if (!this._selectedOption) {
+      this._selectedValue.innerHTML = '';
+    } else {
+      this._selectedValue.innerHTML = isFunc(renderSelected)
+        ? renderSelected(this._selectedOption)
+        : this._selectedOption.innerHTML;
+    }
   }
 
   _processLabel() {
