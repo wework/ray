@@ -26,9 +26,9 @@ function tryAndPass(cond, str) {
 }
 
 function htmlToElement(html) {
-  const template = document.createElement('template');
+  const template = document.createElement('div');
   template.innerHTML = html.trim();
-  return template.content.firstChild;
+  return template.firstChild;
 }
 
 function wrap(el, wrapper) {
@@ -102,6 +102,7 @@ class Dropdown {
     const isNotEmpty = value && value !== '';
     this._inputElement.value = value;
     this._setSelectedLabel();
+    console.log(this._selectedIndex);
     switchClassName(this._root, 'HAS_VALUE', isNotEmpty);
     switchClassName(this._root, 'PLACEHOLDER_MODE', !isNotEmpty);
     emitEvent(this._inputElement, 'change');
@@ -196,9 +197,13 @@ class Dropdown {
 
   _setSelectedLabel() {
     const { renderSelected } = this.settings;
-    this._selectedValue.innerHTML = isFunc(renderSelected)
-      ? renderSelected(this._selectedOption)
-      : this._selectedOption.innerHTML;
+    if (!this._selectedOption) {
+      this._selectedValue.innerHTML = '';
+    } else {
+      this._selectedValue.innerHTML = isFunc(renderSelected)
+        ? renderSelected(this._selectedOption)
+        : this._selectedOption.innerHTML;
+    }
   }
 
   _processLabel() {
