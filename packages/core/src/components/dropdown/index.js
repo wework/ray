@@ -102,6 +102,7 @@ class Dropdown {
     const isNotEmpty = value && value !== '';
     this._inputElement.value = value;
     this._setSelectedLabel();
+    console.log(this._selectedIndex);
     switchClassName(this._root, 'HAS_VALUE', isNotEmpty);
     switchClassName(this._root, 'PLACEHOLDER_MODE', !isNotEmpty);
     emitEvent(this._inputElement, 'change');
