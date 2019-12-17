@@ -6,7 +6,7 @@ export function dropdownFixture() {
       <div class="ray-dropdown__wrapper">
         <select class="ray-dropdown__input" id="test">
           <option value="" data-ray-placeholder></option>
-          <option value="Pikachu">Pikachu</option>
+          <option selected value="Pikachu">Pikachu</option>
           <option value="Squirtle">Squirtle</option>
           <option value="Charmander">Charmander</option>
         </select>

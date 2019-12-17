@@ -196,7 +196,7 @@ class Dropdown {
 
   _setSelectedLabel() {
     const { renderSelected } = this.settings;
-    if (!this._selectedOption) {
+    if (this._selectedOption > 0 || this._selectedOption === undefined) {
       this._selectedValue.innerHTML = '';
     } else {
       this._selectedValue.innerHTML = isFunc(renderSelected)
