@@ -196,7 +196,11 @@ class Dropdown {
 
   _setSelectedLabel() {
     const { renderSelected } = this.settings;
-    if (this._selectedOption > 0 || this._selectedOption === undefined) {
+    if (
+      this._selectedOption > 0 ||
+      this._selectedOption === undefined ||
+      this._value === ''
+    ) {
       this._selectedValue.innerHTML = '';
     } else {
       this._selectedValue.innerHTML = isFunc(renderSelected)
@@ -356,8 +360,9 @@ class Dropdown {
 
   onOptionClick(plugin) {
     return function onClickListener() {
-      if (this.hasAttribute('disabled') || !this.dataset.rayIdx) return;
-      plugin._value = plugin._options[this.dataset.rayIdx].value; //eslint-disable-line
+      if (!this.hasAttribute('disabled') && this.dataset.rayIdx) {
+        plugin._value = plugin._options[this.dataset.rayIdx].value; //eslint-disable-line
+      }
     };
   }
 
