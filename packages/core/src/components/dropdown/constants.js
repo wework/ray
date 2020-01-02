@@ -41,18 +41,17 @@ export const SELECTORS = {
   placeholder: `.${ROOT}__option--placeholder`
 };
 
-export const bodyTpl = ({ value, clear }) => {
+export const bodyTpl = ({ value }) => {
   return {
     position: 'beforebegin',
     tpl: `
       <div class="${CLASSNAMES.body}" tabindex="0">
         <div class="${CLASSNAMES.selected}">
           <span class="${CLASSNAMES.selectedValue}">${value}</span>
-          ${clear ? `<span class="${CLASSNAMES.clear}">×</span>` : ''}
         </div>
       </div>
     `,
-    elements: ['body', 'selectedValue', 'clear']
+    elements: ['body', 'selectedValue']
   };
 };
 

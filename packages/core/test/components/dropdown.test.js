@@ -101,6 +101,18 @@ describe('Select', () => {
     select.destroy();
   });
 
+  test('If for some reason selected index undefined or negative should not render selected option', () => {
+    const { select, selectEl } = setupTest();
+
+    selectEl.querySelector('select').selectedIndex = -1;
+    select.set('');
+    expect(
+      selectEl.querySelector('.ray-dropdown__selected-value').innerHTML
+    ).toEqual('');
+
+    select.destroy();
+  });
+
   test('#enable makes select active again', () => {
     const { select, selectEl } = setupTest();
 
