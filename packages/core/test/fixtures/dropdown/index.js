@@ -130,6 +130,55 @@ export function dropdownFixtureWithPlaceholder() {
   `;
 }
 
+export function dropdownFixtureWithExceedingMarkup() {
+  return html`
+    <div class="ray-dropdown">
+      <div class="ray-dropdown__wrapper">
+        <div class="ray-dropdown__body" tabindex="0">
+          <div class="ray-dropdown__selected">
+            <span class="ray-dropdown__selected-value">Squirtle</span>
+          </div>
+        </div>
+        <select class="ray-dropdown__input" id="test">
+          <option value="" data-ray-placeholder>Hi im a placeholder</option>
+          <option value="Pikachu">Pikachu</option>
+          <option value="Squirtle">Squirtle</option>
+          <option value="Charmander">Charmander</option>
+        </select>
+        <div class="ray-dropdown__option-container" aria-expanded="false">
+          <ul
+            role="listbox"
+            class="ray-dropdown__option-list"
+            id="test-example-list"
+            aria-labelledby="test-example-label"
+          >
+            <li
+              role="option"
+              data-ray-idx="0"
+              id="test-example-option-0"
+              class="ray-dropdown__option"
+            >
+              Slowpoke
+            </li>
+            <li
+              role="option"
+              data-ray-idx="5"
+              id="test-example-option-5"
+              class="ray-dropdown__option"
+            >
+              Sonichu
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <label class="ray-dropdown__label">
+        What's your favorite Pokémon?
+      </label>
+    </div>
+  `;
+}
+
 export const newOptionsFixture = `
 <option value="" data-ray-placeholder></option>
 <option value="HTML">HTML</option>

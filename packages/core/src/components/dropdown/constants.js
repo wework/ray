@@ -44,6 +44,7 @@ export const SELECTORS = {
 export const bodyTpl = ({ value }) => {
   return {
     position: 'beforebegin',
+    selector: SELECTORS.body,
     tpl: `
       <div class="${CLASSNAMES.body}" tabindex="0">
         <div class="${CLASSNAMES.selected}">
@@ -58,6 +59,7 @@ export const bodyTpl = ({ value }) => {
 export const listTpl = ({ id }) => {
   return {
     position: 'afterend',
+    selector: SELECTORS.container,
     tpl: `
       <div class="${CLASSNAMES.container}" aria-expanded="false">
         <ul
