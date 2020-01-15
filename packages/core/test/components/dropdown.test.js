@@ -5,6 +5,7 @@ import {
   dropdownFixtureNoWrapper,
   dropdownFixtureRequired,
   dropdownFixtureWithPlaceholder,
+  dropdownFixtureWithExceedingMarkup,
   dropdownFixtureOptGroups,
   dropdownFixtureNoInput,
   dropdownFixtureSeparator,
@@ -79,6 +80,19 @@ describe('Select', () => {
 
     expect(select.value()).toBe('Charmander');
 
+    select.destroy();
+  });
+
+  test('Check that if markup already in place. It got reused not duplicated', () => {
+    const { select } = setupTest(dropdownFixtureWithExceedingMarkup());
+
+    expect(document.querySelectorAll('.ray-dropdown__body').length).toEqual(1);
+    expect(
+      document.querySelectorAll('.ray-dropdown__option-container').length
+    ).toEqual(1);
+    expect(document.querySelectorAll('.ray-dropdown__option').length).toEqual(
+      4
+    );
     select.destroy();
   });
 

@@ -37,8 +37,14 @@ function wrap(el, wrapper) {
   parsedWrapper.appendChild(el);
 }
 
-function insertMarkup(_node, pos, string) {
-  _node.insertAdjacentHTML(pos, string);
+function insertMarkup(_node, pos, string, selector) {
+  const existing = _node.parentElement.querySelector(selector);
+  if (existing) {
+    const newEl = htmlToElement(string);
+    existing.parentElement.replaceChild(newEl, existing);
+  } else {
+    _node.insertAdjacentHTML(pos, string);
+  }
 }
 
 function emitEvent(target, event) {
@@ -162,11 +168,11 @@ class Dropdown {
 
   _renderMarkup() {
     markupTemplates.forEach(template => {
-      const { tpl, elements, position } = template({
+      const { tpl, elements, position, selector } = template({
         value: this._selectedOption.innerHTML,
         id: this._id
       });
-      insertMarkup(this._inputElement, position, tpl);
+      insertMarkup(this._inputElement, position, tpl, selector);
       this._cacheEl(elements);
     });
   }
