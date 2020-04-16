@@ -7,9 +7,6 @@ import settings from '../src/global/js/settings';
 const viewports = Object.values(settings.breakpointsInPixels).filter(Boolean);
 
 storiesOf('Card', module)
-  .addParameters({
-    chromatic: { viewports }
-  })
   .add('card, link, image on top', () => (
     <a
       href="https://wework.com"

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.5](https://github.com/wework/ray/compare/v1.16.4...v1.16.5) (2020-04-16)
+
+**Note:** Version bump only for package @wework/ray-core
+
+
+
+
+
 ## [1.16.4](https://github.com/wework/ray/compare/v1.16.3...v1.16.4) (2020-01-15)
 
 **Note:** Version bump only for package @wework/ray-core

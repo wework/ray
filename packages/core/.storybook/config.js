@@ -1,7 +1,6 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { initDsm } from '@invisionapp/dsm-storybook';
-import 'storybook-chromatic';
 
 import '../stories/styles/index.scss';
 import '../src/';
