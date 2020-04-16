@@ -86,9 +86,6 @@ jobs:
       - checkout
       - attach_workspace: { at: '.' }
       - get_npm_packages_cache
-      - run:
-          name: Run visual regression tests
-          command: yarn lerna run chromatic --scope="@wework/ray-core" --parallel
 
   publish-dsm:
     executor:
