@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField } from '@wework/ray-core';
+import { TextField } from '../../../../core/src/components/index';
 
 export default class Search extends React.Component {
   state = {

@@ -5,9 +5,6 @@ import settings from '../src/global/js/settings';
 const viewports = Object.values(settings.breakpointsInPixels).filter(Boolean);
 
 storiesOf('Typography', module)
-  .addParameters({
-    chromatic: { viewports }
-  })
   .add('all', () =>
     [
       'ray-text--display-1',
