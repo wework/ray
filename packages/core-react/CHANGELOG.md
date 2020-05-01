@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.6](https://github.com/wework/ray/compare/v1.16.5...v1.16.6) (2020-05-01)
+
+**Note:** Version bump only for package @wework/ray-core-react
+
+
+
+
+
 ## [1.16.5](https://github.com/wework/ray/compare/v1.16.4...v1.16.5) (2020-04-16)
 
 **Note:** Version bump only for package @wework/ray-core-react
