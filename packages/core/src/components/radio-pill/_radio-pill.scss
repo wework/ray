@@ -10,6 +10,7 @@
   .#{$ray-class-prefix}radio-pill {
     display: flex;
     flex-grow: 1;
+    flex-basis: 0;
     text-align: center;
     align-items: center;
     min-width: 0;
@@ -62,30 +63,36 @@
     z-index: -99999;
 
     &:checked + .#{$ray-class-prefix}radio-pill__label {
-      background-color: $ray-color-blue-20;
+      border: 1px solid $ray-color-blue-50;
+      background-color: $ray-color-blue-03;
+      color: $ray-color-blue-50;
+      z-index: 1;
     }
 
     &:not(:checked) {
       &:hover + .#{$ray-class-prefix}radio-pill__label {
-        background-color: $ray-color-blue-10;
+        color: $ray-color-blue-50;
+        border: 1px solid $ray-color-blue-50;
+        background-color: $ray-color-white;
+        z-index: 1;
       }
     }
 
     &:focus {
       & + .#{$ray-class-prefix}radio-pill__label {
         box-shadow: $ray-box-shadow-focus-state;
-        z-index: 1;
+        z-index: 2;
       }
     }
   }
 
   .#{$ray-class-prefix}radio-pill__label {
     cursor: pointer;
-    color: $ray-color-blue-50;
+    color: $ray-color-black;
     background-color: $ray-color-white;
     flex-grow: 1;
     padding: $ray-radio-pill-v-spacing-compact $ray-radio-pill-h-spacing-compact;
-    border: $ray-border-width solid $ray-color-blue-50;
+    border: $ray-border-width solid $ray-color-gray-31;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
