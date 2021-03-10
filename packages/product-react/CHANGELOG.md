@@ -3,96 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.16.6](https://github.com/wework/ray/compare/v1.16.5...v1.16.6) (2020-05-01)
+## [1.16.7](https://github.com/wework/ray/compare/v1.16.6...v1.16.7) (2021-03-10)
 
 **Note:** Version bump only for package @wework/ray-product-react
 
+## [1.16.6](https://github.com/wework/ray/compare/v1.16.5...v1.16.6) (2020-05-01)
 
-
-
+**Note:** Version bump only for package @wework/ray-product-react
 
 ## [1.16.5](https://github.com/wework/ray/compare/v1.16.4...v1.16.5) (2020-04-16)
 
 **Note:** Version bump only for package @wework/ray-product-react
 
-
-
-
-
 ## [1.16.4](https://github.com/wework/ray/compare/v1.16.3...v1.16.4) (2020-01-15)
 
 **Note:** Version bump only for package @wework/ray-product-react
-
-
-
-
 
 ## [1.16.3](https://github.com/wework/ray/compare/v1.16.2...v1.16.3) (2020-01-02)
 
 **Note:** Version bump only for package @wework/ray-product-react
 
-
-
-
-
 ## [1.16.2](https://github.com/wework/ray/compare/v1.16.1...v1.16.2) (2019-12-09)
 
 **Note:** Version bump only for package @wework/ray-product-react
 
-
-
-
-
 ## [1.16.1](https://github.com/wework/ray/compare/v1.16.0...v1.16.1) (2019-12-03)
-
 
 ### Bug Fixes
 
-* **docs-deploy:** update how core-js is imported ([#256](https://github.com/wework/ray/issues/256)) ([4b238ba](https://github.com/wework/ray/commit/4b238ba))
-
-
-
-
+- **docs-deploy:** update how core-js is imported ([#256](https://github.com/wework/ray/issues/256)) ([4b238ba](https://github.com/wework/ray/commit/4b238ba))
 
 # [1.16.0](https://github.com/wework/ray/compare/v1.15.4...v1.16.0) (2019-11-22)
 
 **Note:** Version bump only for package @wework/ray-product-react
 
-
-
-
-
 ## [1.15.4](https://github.com/wework/ray/compare/v1.15.3...v1.15.4) (2019-11-20)
 
 **Note:** Version bump only for package @wework/ray-product-react
-
-
-
-
 
 ## [1.15.3](https://github.com/wework/ray/compare/v1.15.2...v1.15.3) (2019-11-20)
 
 **Note:** Version bump only for package @wework/ray-product-react
 
-
-
-
-
 ## [1.15.2](https://github.com/wework/ray/compare/v1.15.1...v1.15.2) (2019-11-15)
 
 **Note:** Version bump only for package @wework/ray-product-react
 
-
-
-
-
 ## [1.15.1](https://github.com/wework/ray/compare/v1.15.0...v1.15.1) (2019-11-12)
 
 **Note:** Version bump only for package @wework/ray-product-react
-
-
-
-
 
 # [1.15.0](https://github.com/wework/ray/compare/v1.14.0...v1.15.0) (2019-11-01)
 
