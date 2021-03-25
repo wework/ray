@@ -1,4 +1,6 @@
 class Chip {
+  // test comment, remove later
+
   static instances = new WeakMap();
 
   static get cssClasses() {
