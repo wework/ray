@@ -22,7 +22,7 @@ class Chip {
     target = document,
     _options = { active: false, disabled: false }
   ) {
-    // Finds all instances of select on the document or within a given element and instantiates them.
+    // Finds all instances of select on the document or within a given element and instantiates them
     const options = {
       initSelector: this.strings.INIT_SELECTOR,
       ..._options

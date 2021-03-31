@@ -79,25 +79,6 @@ jobs:
           name: Ship test coverage report to coveralls
           command: yarn coveralls
 
-  test-visual-regression:
-    executor:
-      name: docker-config
-    steps:
-      - checkout
-      - attach_workspace: { at: '.' }
-      - get_npm_packages_cache
-
-  publish-dsm:
-    executor:
-      name: docker-config
-    steps:
-      - checkout
-      - attach_workspace: { at: '.' }
-      - get_npm_packages_cache
-      - run:
-          name: Publish to DSM
-          command: yarn lerna run dsm-storybook:publish --scope="@wework/ray-core" --parallel
-
   build:
     executor:
       name: docker-config
@@ -155,13 +136,6 @@ workflows:
             branches:
               ignore:
                 - production
-      - test-visual-regression:
-          requires:
-            - checkout-code
-          filters:
-            branches:
-              ignore:
-                - production
       - build:
           requires:
             - checkout-code
@@ -173,15 +147,6 @@ workflows:
       - build_and_release:
           requires:
             - test-unit
-            - test-visual-regression
-          filters:
-            branches:
-              only:
-                - master
-      - publish-dsm:
-          requires:
-            - test-unit
-            - test-visual-regression
           filters:
             branches:
               only:

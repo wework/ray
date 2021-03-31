@@ -13,7 +13,7 @@ The technology team at WeWork has developed many design systems over the years. 
 
 ### Who maintains Ray?
 
-Design is led by WeWork designers, [Dana Ballasy]. Engineering lead by Growth Tech and Core Platform.
+Design is led by WeWork designer [Dana Ballasy]. Engineering is led by the Consumer Web team of Product Engineering.
 
 ### Where can I get help?
 
