@@ -18,6 +18,6 @@ See [RELEASING.md](./RELEASING.md) for documentation.
 
 ## Ownership
 
-This repository is maintained by Demand Generation of Growth Tech at WeWork.
+This repository is maintained by the Consumer Web team of Product Engineering at WeWork.
 
 Reach out to the team at [ray@wework.com](mailto:ray@wework.com) for questions or concerns.
