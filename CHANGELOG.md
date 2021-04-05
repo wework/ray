@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.9](https://github.com/wework/ray/compare/v1.16.8...v1.16.9) (2021-04-05)
+
+
+### Bug Fixes
+
+* update docs and test publish scripts ([#287](https://github.com/wework/ray/issues/287)) ([deaf307](https://github.com/wework/ray/commit/deaf307))
+
+
+
+
+
 ## [1.16.8](https://github.com/wework/ray/compare/v1.16.7...v1.16.8) (2021-03-30)
 
 **Note:** Version bump only for package root
