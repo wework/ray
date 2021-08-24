@@ -143,7 +143,7 @@ jobs:
           name: 'Deploy static site to gh-pages'
           command: |
             git checkout gh-pages
-            git rm docs
+            git rm -r docs
             mv -v .out docs
             git add docs
             git commit -m "Updated static site to version $CIRCLE_SHA1"
