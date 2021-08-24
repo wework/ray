@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  node: circleci/node@4.5.1
+
 machine:
   pre:
     - mkdir ~/.yarn-cache
@@ -125,8 +128,8 @@ jobs:
       name: docker-config
     steps:
       - checkout
-      - attach_workspace: { at: '.' }
-      - get_npm_packages_cache
+      - node/install-packages:
+          pkg-manager: yarn
       - run:
           name: 'Build static site'
           command: yarn site:build
