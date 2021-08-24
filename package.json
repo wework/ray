@@ -57,7 +57,7 @@
     "lerna:clean": "npx lerna run clean",
     "lerna:publish": "npx lerna publish --yes",
     "lerna:version": "npx lerna version --yes",
-    "netlify:build": "yarn clean && yarn build && npx lerna run netlify:build"
+    "site:build": "yarn clean && yarn build && npx lerna run site:build"
   },
   "dependencies": {},
   "husky": {
