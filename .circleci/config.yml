@@ -194,5 +194,4 @@ workflows:
           filters:
             branches:
               only:
-                - change-hosting
                 - production
