@@ -110,17 +110,17 @@ export default function TextField({
               )}
             </div>
           </div>
+          <div
+            className={clsx(
+              'ray-form-item__hint',
+              { 'ray-form-item__hint': hint },
+              { 'ray-form-item__hint--success': hintSuccess },
+              { 'ray-form-item__hint--error': hintError }
+            )}
+          >
+            {hint || (hintSuccess || hintError)}
+          </div>
         </div>
-      </div>
-      <div
-        className={clsx(
-          'ray-form-item__hint',
-          { 'ray-form-item__hint': hint },
-          { 'ray-form-item__hint--success': hintSuccess },
-          { 'ray-form-item__hint--error': hintError }
-        )}
-      >
-        {hint || (hintSuccess || hintError)}
       </div>
     </div>
   );
